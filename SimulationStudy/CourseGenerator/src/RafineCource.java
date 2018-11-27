@@ -441,6 +441,19 @@ public class RafineCource {
 //
 //		}
 //	}
+	
+	/**
+	 * List all actions 
+	 */
+	
+	private void createContnets() {
+		for(int i = 0; i < NUM_VIDEO_ACTION; i++ ) {
+			
+			
+		}
+	}
+	
+	
 	/**
 	 *  assign contents(VIDEO|QUIZ) to each page.
 	 *  PAGECONTENTS{pagenumber} -> {num_video_inpage,num_quiz_inpage,VIDEOID,VIDEOID,..,QUIZID,QUIZID,....}
