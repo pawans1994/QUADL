@@ -44,7 +44,7 @@ public class RafineCource {
 
 	//The min (inclusive) and max (exclusive)　number of transaction in a page
 	private int MIN_NUM_TRANSACTION_INPAGE = MIN_NUM_VIDEO_INPAGE + MIN_NUM_QUIZ_INPAGE;
-	private int MAX_NUM_TRANSACTION_INPAGE = 8;
+	private int MAX_NUM_TRANSACTION_INPAGE = MAX_NUM_VIDEO_INPAGE + MAX_NUM_QUIZ_INPAGE;
 
 	//The min (inclusive) and max (exclusive)　number of transaction in  a whole cource
 	private int MIN_NUM_TRANSACTION_ASWHOLE = 10;
@@ -123,6 +123,7 @@ public class RafineCource {
 	public static void main(String[] argv) {
 		String filename = argv[0];
 		int version = Integer.parseInt(argv[1]);
+		
 		new RafineCource(/*a, b, c, d, e, f*/version).run(filename);
 	}
 
@@ -465,11 +466,24 @@ public class RafineCource {
 
 
 	}
+	
+	private void setContentsInpages_random() {
+		int page = genRandomNum(NUM_PAGES);
+		for (allcontnets) {
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
 
 	/**
 	 * set this.logit_increase ...parameters
 	 */
-	public void setparameters(double a, double b, double c,double d,double e, double f,double g, double h,double i) {
+	public void setparameters(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, double n,double o ) {
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT = a;
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT = b;
 		this.LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT = c;
@@ -481,8 +495,11 @@ public class RafineCource {
 		this.MAX_NUM_VIDEO_INPAGE = i;
 		this.MIN_NUM_QUIZ_INPAGE = j;
 		this.MAX_NUM_QUIZ_INPAGE = k;
-		this.MIN_NUM_TRANSACTION_INPAGE = l;
-		this.MIN
+		this.MIN_NUM_TRANSACTION_ASWHOLE = l;
+		this.MAX_NUM_TRANSACTION_ASWHOLE = m;
+		this.VIDEO_ACTION_QUALITY_RATIO = n;
+		this.QUIZ_ACTION_QUALITY_RATIO = o;
+	
 		System.out.println(this.INIT_LOGIT_HIGH);
 	}
 
