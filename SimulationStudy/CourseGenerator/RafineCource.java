@@ -469,15 +469,24 @@ public class RafineCource {
 	/**
 	 * set this.logit_increase ...parameters
 	 */
-	public void setparameters(double a, double b, double c,double d,double e, double f) {
+	public void setparameters(double a, double b, double c,double d,double e, double f,double g, double h,double i) {
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT = a;
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT = b;
 		this.LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT = c;
 		this.LOGIT_INCREASE_LOW_QUALITY_FOR_LOW_COMPETENT = d;
 		this.INIT_LOGIT_HIGH = e;
 		this.INIT_LOGIT_LOW = f;
+		this.NUM_PAGES = g;
+		this.MIN_NUM_VIDEO_INPAGE = h;
+		this.MAX_NUM_VIDEO_INPAGE = i;
+		this.MIN_NUM_QUIZ_INPAGE = j;
+		this.MAX_NUM_QUIZ_INPAGE = k;
+		this.MIN_NUM_TRANSACTION_INPAGE = l;
+		this.MIN
 		System.out.println(this.INIT_LOGIT_HIGH);
 	}
+
+
 
 	/**
 	 *  Returns, based on pre-defined ration of high competent students, if the given 'studentID' is
