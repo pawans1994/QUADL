@@ -691,7 +691,7 @@ public class RafineCource {
 		case QUIZ:
 			actionQualityRatio = QUIZ_ACTION_QUALITY_RATIO;
 		case HINT:
-			actionQualityRatio = HINT_ACTION_QUALITY_RATIO;
+			actionQualityRatio = QUIZ_ACTION_QUALITY_RATIO;
 		}
 
 		return actionQualityRatio;
