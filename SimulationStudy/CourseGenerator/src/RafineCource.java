@@ -41,6 +41,8 @@ public class RafineCource {
 	private int MAX_NUM_VIDEO_INPAGE = 4;
 	private int MIN_NUM_QUIZ_INPAGE = 1;
 	private int MAX_NUM_QUIZ_INPAGE = 3;
+	
+
 
 	//The min (inclusive) and max (exclusive)　number of transaction in a page
 	private int MIN_NUM_TRANSACTION_INPAGE = MIN_NUM_VIDEO_INPAGE + MIN_NUM_QUIZ_INPAGE;
@@ -50,6 +52,16 @@ public class RafineCource {
 	private int MIN_NUM_TRANSACTION_ASWHOLE = 10;
 	private int MAX_NUM_TRANSACTION_ASWHOLE = 15;
 
+	// Number of different actions (e.g., different videos to watch) in each action category
+	private int NUM_VIDEO_ACTION = 20;
+	private int NUM_PAGEVIEW_ACTION = 20;
+	private int NUM_QUIZ_ACTION = 10;
+	private int NUM_HINT_ACTION = NUM_QUIZ_ACTION;
+	
+	//
+	private int NUM_CONTENTS_INPAGE =(NUM_VIDEO_ACTION + NUM_QUIZ_ACTION)/ NUM_PAGES;
+	private int NUM_VIDEO_INPAGE = NUM_VIDEO_ACTION / NUM_PAGES;
+	private int NUM_QUIZ_INPAGE = NUM_QUIZ_ACTION / NUM_PAGES;
 
 	//The ratio of high-quality action contents for each type
 	//
@@ -90,6 +102,17 @@ public class RafineCource {
 	private int transactionInPage;
 
 	private int VERSION;
+	
+	//List of contents
+	private ArrayList<String> videoList = new ArrayList<String>();
+	private ArrayList<String> quizList = new ArrayList<String>();
+	
+	private boolean QuizFailed = false;
+	
+	//indicates student's last transaction is whether quiz or not
+	private boolean LastAtmtQuiz = false;
+	private String lastQuizFailed ;
+	
 
 	// 'contentsHistVector' shows what contents the student watched.
 	// contentsHistVector{pagenumber} -> 0(not watched) OR 1 (watched)
@@ -101,15 +124,18 @@ public class RafineCource {
 	// Constructor
 	// - - - - - - - - - -
 
-	public RafineCource(/*double a, double b, double c,double d,double e,double f*/int version) {
-
-
-		// set Contents in pages
-		setContentsInPages();
+	public RafineCource(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, int n,int o, double p , double q, int version) {
 
 		//this.LOGIT_INCREASE ant INIT_LIGIT parameters are initialized
-//		setparameters(a,b,c,d,e,f);
+		setparameters(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q);
 
+		//Create Contents
+		createContents();
+		
+		// set Contents in pages
+		setContentsInpage();
+
+		//set Version
 		setVersion(version);
 
 		// this.probabilityCorrect must be initialized
@@ -124,7 +150,26 @@ public class RafineCource {
 		String filename = argv[0];
 		int version = Integer.parseInt(argv[1]);
 		
-		new RafineCource(/*a, b, c, d, e, f*/version).run(filename);
+		//see setparameters() for each arguments
+		double a = Double.parseDouble(argv[2]);
+		double b = Double.parseDouble(argv[3]);
+		double c = Double.parseDouble(argv[4]);
+		double d = Double.parseDouble(argv[5]);
+		double e = Double.parseDouble(argv[6]);
+		double f = Double.parseDouble(argv[7]);
+		int g = Integer.parseInt(argv[8]);
+		int h = Integer.parseInt(argv[9]);
+		int i = Integer.parseInt(argv[10]);
+		int j = Integer.parseInt(argv[11]);
+		int k = Integer.parseInt(argv[12]);
+		int l = Integer.parseInt(argv[13]);
+		int m = Integer.parseInt(argv[14]);
+		int n = Integer.parseInt(argv[15]);
+		int o = Integer.parseInt(argv[16]);
+		double p = Double.parseDouble(argv[17]);
+		double q = Double.parseDouble(argv[18]);
+		
+		new RafineCource(a, b, c, d, e, f,g,h,i,j,k,l,m,n,o,p,q,version).run(filename);
 	}
 
 	// - - - - - - - - - -
@@ -167,6 +212,7 @@ public class RafineCource {
 		int pageNumber = 0;
 		int pageNumberPrevious;
 		int numTransaction = genRandomNum(MIN_NUM_TRANSACTION_ASWHOLE, MAX_NUM_TRANSACTION_ASWHOLE);
+		this.QuizFailed = false;
 
 		for(int j = 0; j< numTransaction;j++) {
 
@@ -206,7 +252,13 @@ public class RafineCource {
 		}
 
 	}
-
+	/**
+	 * 
+	 */
+	private void genTransactionInpageWhenAnsfailed() {
+		
+	}
+	
 	/**
 	 * generate transition in the current pagenumber.
 	 * @param pagenumber -> current pagenumber
@@ -216,28 +268,60 @@ public class RafineCource {
 	private void genTransactionInPage(int pageNumberPrevious,int pageNumber, int studentID) {
 
 		transactionInPage++;
-
-		// select which action to take in the current page.
-		int index = selectIndex(pageNumber);
-
-		//'actionName' shows a unique ID for the action taken
-		String actionName = GetActionName(pageNumber,index);
-
+		
+		String outcome = "n/a";
+		
+		String actionName = "n/a";
+		
+		//when student failed the quiz in the previous transaction
+		if(this.QuizFailed) {
+			//generate Hint transaction only
+			//take same quiz until they answer correctly
+			if(this.LastAtmtQuiz) {
+				String quizID = this.lastQuizFailed.substring(4);
+				actionName = "Hint" + quizID;
+			}
+			//else his last attmpt was Hint, try quiz again
+			else {
+				actionName = this.lastQuizFailed;
+			}
+		}
+		//when student didn't failed to answer the quiz
+		else{
+			// select which action to take in the current page.
+			int index = selectIndex(pageNumber);
+			
+			//'actionName' shows a unique ID for the action taken
+			actionName = GetActionName(pageNumber,index);
+		}
+		
 		// 'actionType' is either {VIDEO|QUIZ}
 		ActionType actionType = GetActionType(actionName);
 
 		// 'actionQuality' is either high or low showing the quality of the action taken
 		// actionQuality for actions in a policy tend to have high quality
 		String actionQuality = lookupActionQuality(actionType,actionName);
-
-		String outcome = "n/a";
-
+		
 		if(actionType == ActionType.QUIZ) {
+			this.LastAtmtQuiz = true;
 			// The correctness of the quiz, i.e., outcome, is a function of the student.
 			// I.e., a good student is more likely make it correct
 			outcome = spinOutcome(studentID);
+			if(outcome == "INCORRECT") {
+				this.QuizFailed = true;
+				this.lastQuizFailed = actionName;
+			}
+			else {
+				this.QuizFailed = false;
+			}
+		}
+		else {
+			this.LastAtmtQuiz = false;
 		}
 
+		
+		
+		
 		// update data which contents the student watched .
 		// contentsHistVector{ID}=0 --> contentsHistVector{ID}=1
 //		ContentsVector contentsVector = updateVector(actionName);
@@ -328,7 +412,8 @@ public class RafineCource {
 	}
 
 	private int selectIndex(int pagenumber) {
-		int index = genRandomNum(2, PAGECONTENTS.get(pagenumber).size());
+		
+		int index = genRandomNum(PAGECONTENTS.get(pagenumber).size());
 		return index;
 
 	}
@@ -446,10 +531,18 @@ public class RafineCource {
 	 * List all actions 
 	 */
 	
-	private void createContnets() {
+	private void createContents() {  
 		for(int i = 0; i < NUM_VIDEO_ACTION; i++ ) {
-			
-			
+			int j = i+1;
+			String index = INDEX_FILLER + j;
+			String action = "Video" +  index;
+			this.videoList.add(action);
+		}
+		for(int i = 0 ; i < NUM_QUIZ_ACTION; i++) {
+			int j = i+1;
+			String index = INDEX_FILLER + j;
+			String action = "Quiz" +  index;
+			this.quizList.add(action);
 		}
 	}
 	
@@ -460,43 +553,58 @@ public class RafineCource {
 	 *  TEMPrally manually assign contents
 	 */
 
-	private void setContentsInPages() {
-
-		//Manually put the contents data
-		//TODO Randomly assign contents to the pages.
-		ArrayList<String> values = new ArrayList<>();
-		Collections.addAll(values, new String[]{"3", "2", "Video0001","Video0005","Video0008","Quiz0003","Quiz0005"});
-		PAGECONTENTS.put(0, values);
-
-
-		ArrayList<String> values1=new ArrayList<>();
-		Collections.addAll(values1, new String[]{"3","3","Video0002","Video0004","Video0007","Quiz0001","Quiz0002","Quiz0008"});
-		PAGECONTENTS.put(1, values1);
-
-		ArrayList<String> values2 =new ArrayList<>();
-		Collections.addAll(values2, new String[] {"2","3","Video0003","Video0006","Quiz0004","Quiz0006","Quiz0007"});
-		PAGECONTENTS.put(2, values2);
-
-
-	}
+//	private void setContentsInPages() {
+//
+//		//Manually put the contents data
+//		//TODO Randomly assign contents to the pages.
+//		ArrayList<String> values = new ArrayList<>();
+//		Collections.addAll(values, new String[]{"3", "2", "Video0001","Video0005","Video0008","Quiz0003","Quiz0005"});
+//		PAGECONTENTS.put(0, values);
+//
+//
+//		ArrayList<String> values1=new ArrayList<>();
+//		Collections.addAll(values1, new String[]{"3","3","Video0002","Video0004","Video0007","Quiz0001","Quiz0002","Quiz0008"});
+//		PAGECONTENTS.put(1, values1);
+//
+//		ArrayList<String> values2 =new ArrayList<>();
+//		Collections.addAll(values2, new String[] {"2","3","Video0003","Video0006","Quiz0004","Quiz0006","Quiz0007"});
+//		PAGECONTENTS.put(2, values2);
+//
+//
+//	}
 	
-	private void setContentsInpages_random() {
-		int page = genRandomNum(NUM_PAGES);
-		for (allcontnets) {
-			
+	/*
+	 * set Quiz and Video to each page
+	 */
+	private void setContentsInpage() {
+		int numVideoInPage = this.NUM_VIDEO_ACTION / this.NUM_PAGES;
+		int numQuizinPage =  this.NUM_QUIZ_ACTION / this.NUM_PAGES;
+		ArrayList<String> values = new ArrayList<>();
+		
+		ArrayList<String> shuffleVideo = this.videoList;
+		ArrayList<String> shuffleQuiz = this.quizList;
+		
+		Collections.shuffle(shuffleVideo);
+		Collections.shuffle(shuffleQuiz);
+	
+		for(int page = 0 ; page< NUM_PAGES;page++) {
+		
+			for(int j = (page*numVideoInPage) ; j < (page*numVideoInPage) + numVideoInPage ; j++) {
+				values.add(shuffleVideo.get(j));
+			}
+			for(int j = (page*numQuizinPage); j < (page*numQuizinPage)+numQuizinPage ; j++) {
+				values.add(shuffleQuiz.get(j));
+			}
+			PAGECONTENTS.put(page, values);
+			values.clear();
 		}
-		
-		
-		
-		
-		
 		
 	}
 
 	/**
 	 * set this.logit_increase ...parameters
 	 */
-	public void setparameters(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, double n,double o ) {
+	public void setparameters(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, int n,int o,double p , double q ) {
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT = a;
 		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT = b;
 		this.LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT = c;
@@ -504,15 +612,21 @@ public class RafineCource {
 		this.INIT_LOGIT_HIGH = e;
 		this.INIT_LOGIT_LOW = f;
 		this.NUM_PAGES = g;
-		this.MIN_NUM_VIDEO_INPAGE = h;
-		this.MAX_NUM_VIDEO_INPAGE = i;
-		this.MIN_NUM_QUIZ_INPAGE = j;
-		this.MAX_NUM_QUIZ_INPAGE = k;
-		this.MIN_NUM_TRANSACTION_ASWHOLE = l;
-		this.MAX_NUM_TRANSACTION_ASWHOLE = m;
-		this.VIDEO_ACTION_QUALITY_RATIO = n;
-		this.QUIZ_ACTION_QUALITY_RATIO = o;
-	
+		this.NUM_VIDEO_ACTION = h;
+		this.NUM_QUIZ_ACTION = i ;
+		this.MIN_NUM_VIDEO_INPAGE = j;
+		this.MAX_NUM_VIDEO_INPAGE = k;
+		this.MIN_NUM_QUIZ_INPAGE = l;
+		this.MAX_NUM_QUIZ_INPAGE = m;
+		this.MIN_NUM_TRANSACTION_ASWHOLE = n;
+		this.MAX_NUM_TRANSACTION_ASWHOLE = o;
+		this.VIDEO_ACTION_QUALITY_RATIO = p;
+		this.QUIZ_ACTION_QUALITY_RATIO = q;
+		
+		if(this.NUM_VIDEO_ACTION % this.NUM_PAGES != 0 || this.NUM_QUIZ_ACTION % this.NUM_PAGES != 0) {
+			System.out.println("Parameter Error. Num video and Quiz should be devided by numPages ");
+			System.exit(0);
+		}
 		System.out.println(this.INIT_LOGIT_HIGH);
 	}
 
@@ -576,6 +690,8 @@ public class RafineCource {
 			break;
 		case QUIZ:
 			actionQualityRatio = QUIZ_ACTION_QUALITY_RATIO;
+		case HINT:
+			actionQualityRatio = HINT_ACTION_QUALITY_RATIO;
 		}
 
 		return actionQualityRatio;

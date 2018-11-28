@@ -20,7 +20,7 @@ public enum ActionType {
 		// Assessment quiz
 		QUIZ ("Quiz"),
 		//hint
-		DLINK ("DLink");
+		HINT ("Hint");
 
 		// - - - - - - - - - -
 		// Constructor
