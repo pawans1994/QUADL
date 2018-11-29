@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -25,7 +26,7 @@ public class RafineCource {
 	//.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
 	//Number of the students taking the cource
-	private int NUM_STUDENTS = 10000;
+	private int NUM_STUDENTS = 10;
 
 	// Ratio of high to low competent students
 	//
@@ -35,7 +36,7 @@ public class RafineCource {
 	//
 	private int NUM_PAGES = 3;
 
-	//The min(inclusive ) and max (inclusive) Number of contents in each page
+	//The min(inclusive ) and max (inclusive) Number of contents students should so  in each page
 	//
 	private int MIN_NUM_VIDEO_INPAGE= 2;
 	private int MAX_NUM_VIDEO_INPAGE = 4;
@@ -45,8 +46,8 @@ public class RafineCource {
 
 
 	//The min (inclusive) and max (exclusive)　number of transaction in a page
-	private int MIN_NUM_TRANSACTION_INPAGE = MIN_NUM_VIDEO_INPAGE + MIN_NUM_QUIZ_INPAGE;
-	private int MAX_NUM_TRANSACTION_INPAGE = MAX_NUM_VIDEO_INPAGE + MAX_NUM_QUIZ_INPAGE;
+	private int MIN_NUM_TRANSACTION_INPAGE;
+	private int MAX_NUM_TRANSACTION_INPAGE;
 
 	//The min (inclusive) and max (exclusive)　number of transaction in  a whole cource
 	private int MIN_NUM_TRANSACTION_ASWHOLE = 10;
@@ -57,6 +58,7 @@ public class RafineCource {
 	private int NUM_PAGEVIEW_ACTION = 20;
 	private int NUM_QUIZ_ACTION = 10;
 	private int NUM_HINT_ACTION = NUM_QUIZ_ACTION;
+
 	
 	//
 	private int NUM_CONTENTS_INPAGE =(NUM_VIDEO_ACTION + NUM_QUIZ_ACTION)/ NUM_PAGES;
@@ -67,6 +69,7 @@ public class RafineCource {
 	//
 	private double VIDEO_ACTION_QUALITY_RATIO=0.70;
 	private double QUIZ_ACTION_QUALITY_RATIO=0.70;
+	private double HINT_ACTION_QUALITY_RATIO = 0.70;
 
 	// Initial probability of students with high and low competence answering a quiz correctly
 	//
@@ -77,6 +80,18 @@ public class RafineCource {
 	private double LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT=0.15;
 	private double LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT=0.03;
 	private double LOGIT_INCREASE_LOW_QUALITY_FOR_LOW_COMPETENT=0.001;
+	
+	private double LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT;
+	private double LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT;
+	private double LOGIT_INCREASE_VIDEO_HIGH_FOR_HIGH_COMPETENT;
+	private double LOGIT_INCREASE_VIDEO_HIGH_FOR_LOW_COMPETENT;
+	private double LOGIT_INCREASE_VIDEO_LOW_FOR_HIGH_COMPETENT;
+	private double LOGIT_INCREASE_VIDEO_LOW_FOR_LOW_COMPETENT;
+	private double LOGIT_INCREASE_HINT_HIGH_FOR_HIGH_COMPETENT;
+	private double LOGIT_INCREASE_HINT_HIGH_FOR_LOW_COMPETENT;
+	private double LOGIT_INCREASE_HINT_LOW_FOR_HIGH_COMPETENT;
+	private double LOGIT_INCREASE_HINT_LOW_FOR_LOW_COMPETENT;
+	
 
 	// .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.-.-
 	// System fields :: Don't change
@@ -111,7 +126,9 @@ public class RafineCource {
 	
 	//indicates student's last transaction is whether quiz or not
 	private boolean LastAtmtQuiz = false;
-	private String lastQuizFailed ;
+	private String lastQuizFailed;
+	
+	
 	
 
 	// 'contentsHistVector' shows what contents the student watched.
@@ -124,10 +141,13 @@ public class RafineCource {
 	// Constructor
 	// - - - - - - - - - -
 
-	public RafineCource(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, int n,int o, double p , double q, int version) {
+	public RafineCource(
+			double a, double b, double c,double d,double e, double f,double g, double h,double i,double j, double k, double l, 
+			int m, int n,int o,int p , int q, int r, int s, double t, double u, double v, int version)
+	{
 
 		//this.LOGIT_INCREASE ant INIT_LIGIT parameters are initialized
-		setparameters(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q);
+		setparameters(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v);
 
 		//Create Contents
 		createContents();
@@ -157,19 +177,25 @@ public class RafineCource {
 		double d = Double.parseDouble(argv[5]);
 		double e = Double.parseDouble(argv[6]);
 		double f = Double.parseDouble(argv[7]);
-		int g = Integer.parseInt(argv[8]);
-		int h = Integer.parseInt(argv[9]);
-		int i = Integer.parseInt(argv[10]);
-		int j = Integer.parseInt(argv[11]);
-		int k = Integer.parseInt(argv[12]);
-		int l = Integer.parseInt(argv[13]);
+		double g = Double.parseDouble(argv[8]);
+		double h = Double.parseDouble(argv[9]);
+		double i = Double.parseDouble(argv[10]);
+		double j = Double.parseDouble(argv[11]);
+		double k = Double.parseDouble(argv[12]);
+		double l = Double.parseDouble(argv[13]);
 		int m = Integer.parseInt(argv[14]);
 		int n = Integer.parseInt(argv[15]);
 		int o = Integer.parseInt(argv[16]);
-		double p = Double.parseDouble(argv[17]);
-		double q = Double.parseDouble(argv[18]);
+		int p = Integer.parseInt(argv[17]);
+		int q = Integer.parseInt(argv[18]);
+		int r = Integer.parseInt(argv[19]);
+		int s = Integer.parseInt(argv[20]);
+		double t =Double.parseDouble(argv[21]); 
+		double u =Double.parseDouble(argv[22]); 
+		double v = Double.parseDouble(argv[23]);
 		
-		new RafineCource(a, b, c, d, e, f,g,h,i,j,k,l,m,n,o,p,q,version).run(filename);
+		
+		new RafineCource(a, b, c, d, e, f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,version).run(filename);
 	}
 
 	// - - - - - - - - - -
@@ -252,12 +278,7 @@ public class RafineCource {
 		}
 
 	}
-	/**
-	 * 
-	 */
-	private void genTransactionInpageWhenAnsfailed() {
-		
-	}
+	
 	
 	/**
 	 * generate transition in the current pagenumber.
@@ -278,10 +299,10 @@ public class RafineCource {
 			//generate Hint transaction only
 			//take same quiz until they answer correctly
 			if(this.LastAtmtQuiz) {
-				String quizID = this.lastQuizFailed.substring(4);
+				String quizID = this.lastQuizFailed.substring(this.lastQuizFailed.length()-NUM_ACTION_INDEX);
 				actionName = "Hint" + quizID;
 			}
-			//else his last attmpt was Hint, try quiz again
+			//else his last atmpt was Hint, try quiz again
 			else {
 				actionName = this.lastQuizFailed;
 			}
@@ -295,7 +316,11 @@ public class RafineCource {
 			actionName = GetActionName(pageNumber,index);
 		}
 		
-		// 'actionType' is either {VIDEO|QUIZ}
+		/*
+		 * Action is assigned
+		 */
+		
+		// 'actionType' is either {VIDEO|QUIZ|HINT}
 		ActionType actionType = GetActionType(actionName);
 
 		// 'actionQuality' is either high or low showing the quality of the action taken
@@ -383,14 +408,26 @@ public class RafineCource {
 		// The ration of high quality actions in the given actionType
 		double qualityRatio = getActionQualityRatio(actionType);
 
-//		int numActions = getNumDifferentActions(actionType);
-		int numActions = 8;
+		int numActions = getNumDifferentActions(actionType);
 
 		String actionQuality = indexValue < numActions * qualityRatio ? HIGH_QUALITY : LOW_QUALITY;
 
 		return actionQuality;
 	}
 
+	/**
+	 * Retrive number of actions of each ActionType
+	 */
+	private int getNumDifferentActions(ActionType actionType) {
+		int numActions;
+		if(actionType == ActionType.QUIZ || actionType == ActionType.HINT) {
+			numActions = NUM_QUIZ_ACTION;
+		}
+		else {
+			numActions = NUM_VIDEO_ACTION;
+		}
+		return numActions;
+	}
 
 	private ActionType GetActionType(String actionName) {
 
@@ -414,6 +451,8 @@ public class RafineCource {
 	private int selectIndex(int pagenumber) {
 		
 		int index = genRandomNum(PAGECONTENTS.get(pagenumber).size());
+	
+		
 		return index;
 
 	}
@@ -534,16 +573,19 @@ public class RafineCource {
 	private void createContents() {  
 		for(int i = 0; i < NUM_VIDEO_ACTION; i++ ) {
 			int j = i+1;
-			String index = INDEX_FILLER + j;
+			String index = String.format("%04d",j);
 			String action = "Video" +  index;
 			this.videoList.add(action);
 		}
 		for(int i = 0 ; i < NUM_QUIZ_ACTION; i++) {
 			int j = i+1;
-			String index = INDEX_FILLER + j;
+			String index = String.format("%04d",j);
 			String action = "Quiz" +  index;
 			this.quizList.add(action);
 		}
+		
+		System.out.println(this.videoList);
+		System.out.println(this.quizList);
 	}
 	
 	
@@ -579,54 +621,94 @@ public class RafineCource {
 	private void setContentsInpage() {
 		int numVideoInPage = this.NUM_VIDEO_ACTION / this.NUM_PAGES;
 		int numQuizinPage =  this.NUM_QUIZ_ACTION / this.NUM_PAGES;
-		ArrayList<String> values = new ArrayList<>();
 		
+		ArrayList<String> contentsList = new ArrayList<>();
 		ArrayList<String> shuffleVideo = this.videoList;
 		ArrayList<String> shuffleQuiz = this.quizList;
 		
 		Collections.shuffle(shuffleVideo);
 		Collections.shuffle(shuffleQuiz);
+		
 	
 		for(int page = 0 ; page< NUM_PAGES;page++) {
-		
+			ArrayList<String> empty = new ArrayList<String>();
+			this.PAGECONTENTS.put(page,empty);
+			
 			for(int j = (page*numVideoInPage) ; j < (page*numVideoInPage) + numVideoInPage ; j++) {
-				values.add(shuffleVideo.get(j));
+//				contentsList.add(shuffleVideo.get(j));
+//				
+				this.PAGECONTENTS.get(page).add(shuffleVideo.get(j));
+//				this.PAGECONTENTS.put(page, shuffleVideo.get(j));
+				
 			}
 			for(int j = (page*numQuizinPage); j < (page*numQuizinPage)+numQuizinPage ; j++) {
-				values.add(shuffleQuiz.get(j));
+//				contentsList.add(shuffleQuiz.get(j));
+				this.PAGECONTENTS.get(page).add(shuffleQuiz.get(j));
+				
 			}
-			PAGECONTENTS.put(page, values);
-			values.clear();
+			System.out.println(page);
+			
 		}
 		
+		System.out.println(this.PAGECONTENTS);
+		
 	}
+	
+	/**
+	 * deep copy method
+	 */
+	public ArrayList<String> copy(ArrayList<String> contentsList){
+		try {
+			ArrayList<String> deepCopy = new ArrayList<String>();
+		    for (Object obj : contentsList)
+		       deepCopy.add(obj.clone());
+		    return deepCopy;
+		}catch (CloneNotSupportedException e ){
+			return null;
+			}
+      }
 
 	/**
 	 * set this.logit_increase ...parameters
 	 */
-	public void setparameters(double a, double b, double c,double d,double e, double f,int g, int h,int i,int j, int k, int l, int m, int n,int o,double p , double q ) {
-		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT = a;
-		this.LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT = b;
-		this.LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT = c;
-		this.LOGIT_INCREASE_LOW_QUALITY_FOR_LOW_COMPETENT = d;
-		this.INIT_LOGIT_HIGH = e;
-		this.INIT_LOGIT_LOW = f;
-		this.NUM_PAGES = g;
-		this.NUM_VIDEO_ACTION = h;
-		this.NUM_QUIZ_ACTION = i ;
-		this.MIN_NUM_VIDEO_INPAGE = j;
-		this.MAX_NUM_VIDEO_INPAGE = k;
-		this.MIN_NUM_QUIZ_INPAGE = l;
-		this.MAX_NUM_QUIZ_INPAGE = m;
-		this.MIN_NUM_TRANSACTION_ASWHOLE = n;
-		this.MAX_NUM_TRANSACTION_ASWHOLE = o;
-		this.VIDEO_ACTION_QUALITY_RATIO = p;
-		this.QUIZ_ACTION_QUALITY_RATIO = q;
+	public void setparameters(
+			double a, double b, double c,double d,double e, double f,double g, double h,double i,double j, double k, double l, 
+			int m, int n,int o,int p , int q, int r, int s, double t, double u, double v) 
+	{
+		this.LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT = a;
+		this.LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT = b ;
+		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_HIGH_COMPETENT = c ;
+		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_LOW_COMPETENT = d;
+		this.LOGIT_INCREASE_VIDEO_LOW_FOR_HIGH_COMPETENT = e;
+		this.LOGIT_INCREASE_VIDEO_LOW_FOR_LOW_COMPETENT = f;
+		this.LOGIT_INCREASE_HINT_HIGH_FOR_HIGH_COMPETENT = g;
+		this.LOGIT_INCREASE_HINT_HIGH_FOR_LOW_COMPETENT = h;
+		this.LOGIT_INCREASE_HINT_LOW_FOR_HIGH_COMPETENT = i;
+		this.LOGIT_INCREASE_HINT_LOW_FOR_LOW_COMPETENT = j;
+		this.INIT_LOGIT_HIGH = k;
+		this.INIT_LOGIT_LOW = l;
+		this.NUM_PAGES = m;
+		this.NUM_VIDEO_ACTION = n;
+		this.NUM_QUIZ_ACTION = o ;
+		this.MIN_NUM_TRANSACTION_INPAGE = p;
+		this.MAX_NUM_TRANSACTION_INPAGE = q;
+		this.MIN_NUM_TRANSACTION_ASWHOLE = r;
+		this.MAX_NUM_TRANSACTION_ASWHOLE = s;
+		this.VIDEO_ACTION_QUALITY_RATIO = t;
+		this.HINT_ACTION_QUALITY_RATIO = u;
+		this.QUIZ_ACTION_QUALITY_RATIO = v;
 		
 		if(this.NUM_VIDEO_ACTION % this.NUM_PAGES != 0 || this.NUM_QUIZ_ACTION % this.NUM_PAGES != 0) {
 			System.out.println("Parameter Error. Num video and Quiz should be devided by numPages ");
 			System.exit(0);
 		}
+//		if(this.MIN_NUM_TRANSACTION_ASWHOLE < this.MIN_NUM_TRANSACTION_INPAGE * this.NUM_PAGES) {
+//			System.out.println("minimum number of transaction through a course must be bigger than or equal to the nimimub number of transaction in a page ");
+//			System.exit(0);
+//		}
+//		if(this.MAX_NUM_TRANSACTION_ASWHOLE > this.MAX_NUM_TRANSACTION_INPAGE * this.NUM_PAGES) {
+//			System.out.println("Max number of transaction through a course must be  ");
+//		}
 		System.out.println(this.INIT_LOGIT_HIGH);
 	}
 
@@ -649,20 +731,42 @@ public class RafineCource {
 
 
 		double delta = 0.0;
-
-		if (actionQuality.equals(HIGH_QUALITY)) {
+		
+		if(actionType == ActionType.QUIZ) {
 			if (isHighCompetentStudent(studentID)) {
-				delta = LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT;
+				delta = LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT;
 			} else {
-				delta = LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT;
+				delta = LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT;
 			}
-		} else
-			if (isHighCompetentStudent(studentID)) {
-				delta = LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT;
-			} else {
-				delta = LOGIT_INCREASE_LOW_QUALITY_FOR_LOW_COMPETENT;
-			}
-
+		}
+		else if(actionType == ActionType.VIDEO){
+			if (actionQuality.equals(HIGH_QUALITY)) {
+				if (isHighCompetentStudent(studentID)) {
+					delta = LOGIT_INCREASE_VIDEO_HIGH_FOR_HIGH_COMPETENT;
+				} else {
+					delta = LOGIT_INCREASE_VIDEO_HIGH_FOR_LOW_COMPETENT;
+				}
+			} else
+				if (isHighCompetentStudent(studentID)) {
+					delta = LOGIT_INCREASE_VIDEO_LOW_FOR_HIGH_COMPETENT;
+				} else {
+					delta = LOGIT_INCREASE_VIDEO_LOW_FOR_LOW_COMPETENT;
+				}
+		}
+		else if(actionType == ActionType.HINT) {
+			if (actionQuality.equals(HIGH_QUALITY)) {
+				if (isHighCompetentStudent(studentID)) {
+					delta = LOGIT_INCREASE_HINT_HIGH_FOR_HIGH_COMPETENT;
+				} else {
+					delta = LOGIT_INCREASE_HINT_HIGH_FOR_LOW_COMPETENT;
+				}
+			} else
+				if (isHighCompetentStudent(studentID)) {
+					delta = LOGIT_INCREASE_HINT_LOW_FOR_HIGH_COMPETENT;
+				} else {
+					delta = LOGIT_INCREASE_HINT_LOW_FOR_LOW_COMPETENT;
+				}
+		}
 		this.competenceLogit[studentID] += delta;
 	}
 
@@ -691,7 +795,7 @@ public class RafineCource {
 		case QUIZ:
 			actionQualityRatio = QUIZ_ACTION_QUALITY_RATIO;
 		case HINT:
-			actionQualityRatio = QUIZ_ACTION_QUALITY_RATIO;
+			actionQualityRatio = HINT_ACTION_QUALITY_RATIO;
 		}
 
 		return actionQualityRatio;
