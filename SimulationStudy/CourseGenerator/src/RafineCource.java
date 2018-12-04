@@ -26,7 +26,7 @@ public class RafineCource {
 	//.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
 	//Number of the students taking the cource
-	private int NUM_STUDENTS = 10;
+	private int NUM_STUDENTS = 10000;
 
 	// Ratio of high to low competent students
 	//
