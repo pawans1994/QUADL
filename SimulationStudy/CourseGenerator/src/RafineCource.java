@@ -253,24 +253,33 @@ public class RafineCource {
 
 				//randomly returns "pagechange"(move other page) OR "pagestill(stay in the same page)"
 				//true => pagechange, false- => pagestill
-				Boolean move = genRandomBoolean();
-				if(move) {
-					//Randomly returns page number except for current page number
-					pageNumberPrevious = pageNumber;
-					pageNumber = genRandomNum(0,NUM_PAGES,pageNumber);
-					transactionInPage = 0;
+				
+				if(QuizFailed) {
+					Boolean move = genRandomBoolean();
+					if(move) {
+						//Randomly returns page number except for current page number
+						pageNumberPrevious = pageNumber;
+						pageNumber = genRandomNum(0,NUM_PAGES,pageNumber);
+						transactionInPage = 0;
+					}
+					else {
+						pageNumberPrevious = pageNumber;
+					}
+					genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
 				}
+				//if QUIZFIALEd = true
 				else {
 					pageNumberPrevious = pageNumber;
+					genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
 				}
-				genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
-
 			}
 			//Students don't do too many contents in the same page.
 			else {
 				pageNumberPrevious = pageNumber;
 				pageNumber = genRandomNum(0,NUM_PAGES,pageNumber);
 				transactionInPage=0;
+				//Even if the student cannot answer the quiz, they must move to other page.
+				QuizFailed = false;
 				genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
 
 			}
@@ -653,20 +662,7 @@ public class RafineCource {
 		System.out.println(this.PAGECONTENTS);
 		
 	}
-	
-	/**
-	 * deep copy method
-	 */
-	public ArrayList<String> copy(ArrayList<String> contentsList){
-		try {
-			ArrayList<String> deepCopy = new ArrayList<String>();
-		    for (Object obj : contentsList)
-		       deepCopy.add(obj.clone());
-		    return deepCopy;
-		}catch (CloneNotSupportedException e ){
-			return null;
-			}
-      }
+
 
 	/**
 	 * set this.logit_increase ...parameters
