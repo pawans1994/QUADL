@@ -76,10 +76,10 @@ public class RafineCource {
 	private double INIT_LOGIT_HIGH=-0.85;
 	private double INIT_LOGIT_LOW=-1.4;
 
-	private double LOGIT_INCREASE_HIGH_QUALITY_FOR_HIGH_COMPETENT=0.20;
-	private double LOGIT_INCREASE_HIGH_QUALITY_FOR_LOW_COMPETENT=0.15;
-	private double LOGIT_INCREASE_LOW_QUALITY_FOR_HIGH_COMPETENT=0.03;
-	private double LOGIT_INCREASE_LOW_QUALITY_FOR_LOW_COMPETENT=0.001;
+	private double LOGIT_INCREASE_CORRECT_FOR_HIGH_COMPETENT=0.20;
+	private double LOGIT_INCREASE_CORRECT_FOR_LOW_COMPETENT=0.15;
+	private double LOGIT_INCREASE_INCORRECT_FOR_HIGH_COMPETENT=0.03;
+	private double LOGIT_INCREASE_INCORRECT_FOR_LOW_COMPETENT=0.001;
 	
 	private double LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT;
 	private double LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT;
@@ -142,12 +142,13 @@ public class RafineCource {
 	// - - - - - - - - - -
 
 	public RafineCource(
-			double a, double b, double c,double d,double e, double f,double g, double h,double i,double j, double k, double l, 
-			int m, int n,int o,int p , int q, int r, int s, double t, double u, double v, int version)
+			double q1, double q2, double q3, double q4, double v1,double v2,double v3, double v4,double h1, double h2,double h3,double h4, double initial_high, double initial_low, 
+			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high, int version)
 	{
 
 		//this.LOGIT_INCREASE ant INIT_LIGIT parameters are initialized
-		setparameters(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v);
+		setparameters(q1,q2,q3, q4, v1,v2,v3, v4,h1, h2,h3, h4, initial_high, initial_low, 
+				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high);
 
 		//Create Contents
 		createContents();
@@ -171,31 +172,34 @@ public class RafineCource {
 		int version = Integer.parseInt(argv[1]);
 		
 		//see setparameters() for each arguments
-		double a = Double.parseDouble(argv[2]);
-		double b = Double.parseDouble(argv[3]);
-		double c = Double.parseDouble(argv[4]);
-		double d = Double.parseDouble(argv[5]);
-		double e = Double.parseDouble(argv[6]);
-		double f = Double.parseDouble(argv[7]);
-		double g = Double.parseDouble(argv[8]);
-		double h = Double.parseDouble(argv[9]);
-		double i = Double.parseDouble(argv[10]);
-		double j = Double.parseDouble(argv[11]);
-		double k = Double.parseDouble(argv[12]);
-		double l = Double.parseDouble(argv[13]);
-		int m = Integer.parseInt(argv[14]);
-		int n = Integer.parseInt(argv[15]);
-		int o = Integer.parseInt(argv[16]);
-		int p = Integer.parseInt(argv[17]);
-		int q = Integer.parseInt(argv[18]);
-		int r = Integer.parseInt(argv[19]);
-		int s = Integer.parseInt(argv[20]);
-		double t =Double.parseDouble(argv[21]); 
-		double u =Double.parseDouble(argv[22]); 
-		double v = Double.parseDouble(argv[23]);
+		double q1 = Double.parseDouble(argv[2]);
+		double q2 = Double.parseDouble(argv[3]);
+		double q3 = Double.parseDouble(argv[4]);
+		double q4 = Double.parseDouble(argv[5]);
+		double v1 = Double.parseDouble(argv[6]);
+		double v2 = Double.parseDouble(argv[7]);
+		double v3 = Double.parseDouble(argv[8]);
+		double v4 = Double.parseDouble(argv[9]);
+		double h1 = Double.parseDouble(argv[10]);
+		double h2 = Double.parseDouble(argv[11]);
+		double h3 = Double.parseDouble(argv[12]);
+		double h4 = Double.parseDouble(argv[13]);
+		double initial_high = Double.parseDouble(argv[14]);
+		double initial_low = Double.parseDouble(argv[15]);
+		int pages = Integer.parseInt(argv[16]);
+		int videos = Integer.parseInt(argv[17]);
+		int quiz = Integer.parseInt(argv[18]);
+		int xact_minPage = Integer.parseInt(argv[19]);
+		int xact_maxPage = Integer.parseInt(argv[20]);
+		int xact_minTotal = Integer.parseInt(argv[21]);
+		int xact_maxTotal = Integer.parseInt(argv[22]);
+		double r_video_high =Double.parseDouble(argv[23]); 
+		double r_hint_high =Double.parseDouble(argv[24]); 
 		
 		
-		new RafineCource(a, b, c, d, e, f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,version).run(filename);
+		
+		new RafineCource(q1,q2,q3, q4, v1,v2,v3, v4,h1, h2,h3, h4, initial_high, initial_low, 
+				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high,version).run(filename);
 	}
 
 	// - - - - - - - - - -
@@ -254,7 +258,12 @@ public class RafineCource {
 				//randomly returns "pagechange"(move other page) OR "pagestill(stay in the same page)"
 				//true => pagechange, false- => pagestill
 				
+				//when student failed to answer question, do not move the page				
 				if(QuizFailed) {
+					pageNumberPrevious = pageNumber;
+					genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
+				}
+				else {
 					Boolean move = genRandomBoolean();
 					if(move) {
 						//Randomly returns page number except for current page number
@@ -265,11 +274,6 @@ public class RafineCource {
 					else {
 						pageNumberPrevious = pageNumber;
 					}
-					genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
-				}
-				//if QUIZFIALEd = true
-				else {
-					pageNumberPrevious = pageNumber;
 					genTransactionInPage(pageNumberPrevious,pageNumber,studentID);
 				}
 			}
@@ -334,6 +338,7 @@ public class RafineCource {
 
 		// 'actionQuality' is either high or low showing the quality of the action taken
 		// actionQuality for actions in a policy tend to have high quality
+		
 		String actionQuality = lookupActionQuality(actionType,actionName);
 		
 		if(actionType == ActionType.QUIZ) {
@@ -410,22 +415,29 @@ public class RafineCource {
 	 *  This method returns the quality of the given 'actionName' (e.g., Quiz023')
 	 */
 	private String lookupActionQuality(ActionType actionType, String actionName) {
+		
+		if(actionType == ActionType.QUIZ) {
+			String actionQuality = "n/a";
+			return actionQuality;
+			
+		}
+		else {
+			String index = actionName.substring(actionName.length()-NUM_ACTION_INDEX);
+			int indexValue = Integer.valueOf(index);
 
-		String index = actionName.substring(actionName.length()-NUM_ACTION_INDEX);
-		int indexValue = Integer.valueOf(index);
+			// The ration of high quality actions in the given actionType
+			double qualityRatio = getActionQualityRatio(actionType);
 
-		// The ration of high quality actions in the given actionType
-		double qualityRatio = getActionQualityRatio(actionType);
+			int numActions = getNumDifferentActions(actionType);
 
-		int numActions = getNumDifferentActions(actionType);
-
-		String actionQuality = indexValue < numActions * qualityRatio ? HIGH_QUALITY : LOW_QUALITY;
-
-		return actionQuality;
+			String actionQuality = indexValue < numActions * qualityRatio ? HIGH_QUALITY : LOW_QUALITY;
+			return actionQuality;
+		}
+	
 	}
 
 	/**
-	 * Retrive number of actions of each ActionType
+	 * Retrieve number of actions of each ActionType
 	 */
 	private int getNumDifferentActions(ActionType actionType) {
 		int numActions;
@@ -668,31 +680,34 @@ public class RafineCource {
 	 * set this.logit_increase ...parameters
 	 */
 	public void setparameters(
-			double a, double b, double c,double d,double e, double f,double g, double h,double i,double j, double k, double l, 
-			int m, int n,int o,int p , int q, int r, int s, double t, double u, double v) 
+			double q1, double q2, double q3, double q4, double v1,double v2,double v3, double v4,double h1, double h2,double h3,double h4, double initial_high, double initial_low, 
+			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high) 
 	{
-		this.LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT = a;
-		this.LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT = b ;
-		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_HIGH_COMPETENT = c ;
-		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_LOW_COMPETENT = d;
-		this.LOGIT_INCREASE_VIDEO_LOW_FOR_HIGH_COMPETENT = e;
-		this.LOGIT_INCREASE_VIDEO_LOW_FOR_LOW_COMPETENT = f;
-		this.LOGIT_INCREASE_HINT_HIGH_FOR_HIGH_COMPETENT = g;
-		this.LOGIT_INCREASE_HINT_HIGH_FOR_LOW_COMPETENT = h;
-		this.LOGIT_INCREASE_HINT_LOW_FOR_HIGH_COMPETENT = i;
-		this.LOGIT_INCREASE_HINT_LOW_FOR_LOW_COMPETENT = j;
-		this.INIT_LOGIT_HIGH = k;
-		this.INIT_LOGIT_LOW = l;
-		this.NUM_PAGES = m;
-		this.NUM_VIDEO_ACTION = n;
-		this.NUM_QUIZ_ACTION = o ;
-		this.MIN_NUM_TRANSACTION_INPAGE = p;
-		this.MAX_NUM_TRANSACTION_INPAGE = q;
-		this.MIN_NUM_TRANSACTION_ASWHOLE = r;
-		this.MAX_NUM_TRANSACTION_ASWHOLE = s;
-		this.VIDEO_ACTION_QUALITY_RATIO = t;
-		this.HINT_ACTION_QUALITY_RATIO = u;
-		this.QUIZ_ACTION_QUALITY_RATIO = v;
+		
+		this.LOGIT_INCREASE_CORRECT_FOR_HIGH_COMPETENT =q1;
+		this.LOGIT_INCREASE_CORRECT_FOR_LOW_COMPETENT = q2;
+		this.LOGIT_INCREASE_INCORRECT_FOR_HIGH_COMPETENT = q3;
+		this.LOGIT_INCREASE_INCORRECT_FOR_LOW_COMPETENT = q4;
+		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_HIGH_COMPETENT = v1 ;
+		this.LOGIT_INCREASE_VIDEO_HIGH_FOR_LOW_COMPETENT = v2;
+		this.LOGIT_INCREASE_VIDEO_LOW_FOR_HIGH_COMPETENT = v3;
+		this.LOGIT_INCREASE_VIDEO_LOW_FOR_LOW_COMPETENT = v4;
+		this.LOGIT_INCREASE_HINT_HIGH_FOR_HIGH_COMPETENT = h1;
+		this.LOGIT_INCREASE_HINT_HIGH_FOR_LOW_COMPETENT = h2;
+		this.LOGIT_INCREASE_HINT_LOW_FOR_HIGH_COMPETENT = h3;
+		this.LOGIT_INCREASE_HINT_LOW_FOR_LOW_COMPETENT = h4;
+		this.INIT_LOGIT_HIGH = initial_high;
+		this.INIT_LOGIT_LOW = initial_low;
+		this.NUM_PAGES = pages;
+		this.NUM_VIDEO_ACTION = videos;
+		this.NUM_QUIZ_ACTION = quiz ;
+		this.MIN_NUM_TRANSACTION_INPAGE = xact_minPage;
+		this.MAX_NUM_TRANSACTION_INPAGE = xact_maxPage;
+		this.MIN_NUM_TRANSACTION_ASWHOLE = xact_minTotal;
+		this.MAX_NUM_TRANSACTION_ASWHOLE = xact_maxTotal;
+		this.VIDEO_ACTION_QUALITY_RATIO = r_video_high;
+		this.HINT_ACTION_QUALITY_RATIO = r_hint_high;
+		
 		
 		if(this.NUM_VIDEO_ACTION % this.NUM_PAGES != 0 || this.NUM_QUIZ_ACTION % this.NUM_PAGES != 0) {
 			System.out.println("Parameter Error. Num video and Quiz should be devided by numPages ");
@@ -730,9 +745,20 @@ public class RafineCource {
 		
 		if(actionType == ActionType.QUIZ) {
 			if (isHighCompetentStudent(studentID)) {
-				delta = LOGIT_INCREASE_QUIZ_FOR_HIGH_COMPETENT;
-			} else {
-				delta = LOGIT_INCREASE_QUIZ_FOR_LOW_COMPETENT;
+				if(outcome == "CORRECT") {
+					delta  = LOGIT_INCREASE_CORRECT_FOR_HIGH_COMPETENT;
+				}
+				else {
+					delta = LOGIT_INCREASE_INCORRECT_FOR_HIGH_COMPETENT;
+				} 
+			}
+			else {
+				if(outcome == "CORRECT") {
+				delta = LOGIT_INCREASE_CORRECT_FOR_LOW_COMPETENT;
+				}
+				else {
+					delta = LOGIT_INCREASE_INCORRECT_FOR_LOW_COMPETENT;
+				}	
 			}
 		}
 		else if(actionType == ActionType.VIDEO){
