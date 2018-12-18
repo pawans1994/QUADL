@@ -143,12 +143,12 @@ public class RafineCource {
 
 	public RafineCource(
 			double q1, double q2, double q3, double q4, double v1,double v2,double v3, double v4,double h1, double h2,double h3,double h4, double initial_high, double initial_low, 
-			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high, int version)
+			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high, double high_comp_ratio,int version)
 	{
 
 		//this.LOGIT_INCREASE ant INIT_LIGIT parameters are initialized
 		setparameters(q1,q2,q3, q4, v1,v2,v3, v4,h1, h2,h3, h4, initial_high, initial_low, 
-				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high);
+				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high,high_comp_ratio);
 
 		//Create Contents
 		createContents();
@@ -194,12 +194,13 @@ public class RafineCource {
 		int xact_minTotal = Integer.parseInt(argv[21]);
 		int xact_maxTotal = Integer.parseInt(argv[22]);
 		double r_video_high =Double.parseDouble(argv[23]); 
-		double r_hint_high =Double.parseDouble(argv[24]); 
+		double r_hint_high =Double.parseDouble(argv[24]);
+		double high_comp_ratio = Double.parseDouble(argv[25]);
 		
 		
 		
 		new RafineCource(q1,q2,q3, q4, v1,v2,v3, v4,h1, h2,h3, h4, initial_high, initial_low, 
-				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high,version).run(filename);
+				pages, videos,quiz,xact_minPage,xact_maxPage, xact_minTotal,xact_maxTotal, r_video_high,r_hint_high,high_comp_ratio,version).run(filename);
 	}
 
 	// - - - - - - - - - -
@@ -567,6 +568,7 @@ public class RafineCource {
 
 		for (int i = 0; i < NUM_STUDENTS; i++) {
 			this.competenceLogit[i] = isHighCompetentStudent(i) ? INIT_LOGIT_HIGH : INIT_LOGIT_LOW;
+			
 		}
 	}
 
@@ -681,7 +683,7 @@ public class RafineCource {
 	 */
 	public void setparameters(
 			double q1, double q2, double q3, double q4, double v1,double v2,double v3, double v4,double h1, double h2,double h3,double h4, double initial_high, double initial_low, 
-			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high) 
+			int pages, int videos,int quiz,int xact_minPage , int xact_maxPage, int xact_minTotal, int xact_maxTotal, double r_video_high, double r_hint_high, double high_comp_ratio) 
 	{
 		
 		this.LOGIT_INCREASE_CORRECT_FOR_HIGH_COMPETENT =q1;
@@ -707,6 +709,7 @@ public class RafineCource {
 		this.MAX_NUM_TRANSACTION_ASWHOLE = xact_maxTotal;
 		this.VIDEO_ACTION_QUALITY_RATIO = r_video_high;
 		this.HINT_ACTION_QUALITY_RATIO = r_hint_high;
+		this.HIGH_COMPETENT_STUDENT_RATIO = high_comp_ratio;
 		
 		
 		if(this.NUM_VIDEO_ACTION % this.NUM_PAGES != 0 || this.NUM_QUIZ_ACTION % this.NUM_PAGES != 0) {
@@ -731,6 +734,7 @@ public class RafineCource {
 	 */
 	private boolean isHighCompetentStudent(int studentID) {
 		return studentID < NUM_STUDENTS * HIGH_COMPETENT_STUDENT_RATIO;
+		
 	}
 
 	/**
