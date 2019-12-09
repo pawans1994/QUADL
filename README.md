@@ -2,7 +2,7 @@
 #Code for PASTEL
 
 
-* Simulation data geneerator
+* Simulation data geneerator  
 [./SimulationStudy/Coursegenerator_1](./SimulationStudy/Coursegenerator_1/src)  
 code is also in onedrive:
 
