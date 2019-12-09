@@ -2,4 +2,5 @@
 #Code for PASTEL
 
 
-* [Simulation study/]
+* [Coursegenerator](./SimulationStudy/Coursegenerator_1)
+* [compute convrese policy](./SimulationStudy/value iteration)
