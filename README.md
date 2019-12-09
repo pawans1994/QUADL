@@ -1,5 +1,5 @@
 # PASTEL
-## Code for PASTEL
+## Code for RAFINE
 
 
 * Simulation data geneerator  
