@@ -79,3 +79,9 @@ pip install networkx
 pip install pattern
 ```
 
+
+### Acknowledgments
+We are really thankful to Dr. Norman Bier, Director of the Open
+Learning Initiative (OLI) at Carnegie Mellon University (CMU) for
+providing us with the database of this course. We are also thankful
+to him for sharing their Analysis data from DataShop. 

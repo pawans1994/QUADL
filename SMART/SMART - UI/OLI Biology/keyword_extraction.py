@@ -1,17 +1,14 @@
-"""
-Extract Keywords from Clusters
-
-"""
-
 from summa import keywords
 
 
 def extract_keywords(clusters):
     cluster_labels = []
     for cluster in clusters:
-        if not cluster.encode('utf-8') or len(cluster.split()) < 20:
+        if not cluster.encode('utf-8') or len(cluster.split()) < 25:
             cluster_labels.append([''])
             continue
+
+        print cluster
         words = keywords.keywords(cluster.encode("utf-8"))
         keyword = words.split("\n")
         cluster_labels.append(keyword)

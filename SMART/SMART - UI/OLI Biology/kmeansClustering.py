@@ -1,5 +1,5 @@
 """
-Perform K means Clustering on the Text Items
+Perform K means clustering on clusters of textbook items
 
 """
 
@@ -9,11 +9,9 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from keyword_extraction import *
-import csv
-import os
 
 
-def clustering_docs(workbook, num_clusters, num_iterations):
+def clustering_docs(workbook, num_clusters, create_cluster_file):
     new_num_clusters = 0
     flag = False
     while new_num_clusters != num_clusters:
@@ -29,12 +27,12 @@ def clustering_docs(workbook, num_clusters, num_iterations):
         # Performing K means clustering
         print "\nCreating " + str(num_clusters) + " clusters for you now...."
         print "Please wait...."
-        km = KMeans(n_clusters = num_clusters, max_iter = num_iterations, init = 'k-means++')
+        km = KMeans(n_clusters = num_clusters, max_iter = 50000, init = 'k-means++')
 
         clusterofdocs = defaultdict(lambda: " ")
 
         X = km.fit_transform(workbook_tdidf)
-        text_skill_mapping = []
+
         # Creating clusters of text of docs (workbooks)
         for i in range(X.shape[0]):
             minindex = np.argmin(X[i])
@@ -55,18 +53,13 @@ def clustering_docs(workbook, num_clusters, num_iterations):
         for cluster in clusterkeywords:
             clusternames.append(cluster[0])
 
-        text_skill_mapping = []
-        # Creating clusters of text of docs (workbooks)
-        for i in range(X.shape[0]):
-            minindex = np.argmin(X[i])
-            text_skill_mapping.append([workbook[i].encode('utf-8'), clusternames[minindex]])
-
         flag = True
-    dirname = os.path.split(os.path.abspath(__file__))
 
-    with open(dirname[0]+'/Results/text_skill.csv', 'wb') as f:
-        writer = csv.writer(f)
-        writer.writerows(text_skill_mapping)
-
-
+    if create_cluster_file:
+        for index, cluster in enumerate(clusters):
+            with open('Results/clusters/clusters.txt', 'a') as f:
+                f.write(str(index+1)+'. '+clusternames[index])
+                f.write("\n")
+                f.write(clusters[index].encode('utf-8'))
+                f.write("\n\n")
     return clusters, clusternames
