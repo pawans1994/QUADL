@@ -62,8 +62,8 @@ with open ('tagged_sentences.csv','w') as fp:
         module = um[1]
         for ans,sentences in ans_sentences.items():
             for sen in sentences:
-                start = sen.index(ans)#ans comes first
-                end = start + len(ans) - 1 
+                start = sen.index(ans) - 1 #ans comes first. when "this is acids" and acides is the answer, start shoud be 7 (index of the space in front of the answer)
+                end = start + len(ans)
                 outlist = [unit,module,sen,ans,start,end]
                 wr.writerow(outlist)
             
