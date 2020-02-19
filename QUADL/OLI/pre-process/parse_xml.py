@@ -40,7 +40,9 @@ def parse_csv(filename):
                                 answer_text = answer_text+ch[option[str(correct_ans)]]
                             if answer_text is not None and answer_text not in mc:
                                 mc.insert(4, ' '.join(answer_text.split()))
-                    #print(mc)
+                    for i in range(0,len(mc)-1):
+                        if not mc[i]:
+                            mc.remove(mc[i])
                     with open("/Users/pawan/Documents/newfile.csv", "a", newline='\n') as fp:
                          mc = [val.replace(',',';') for val in mc]
                          print(','.join(mc), file=fp)
