@@ -44,9 +44,10 @@ def parse_csv(filename):
                         if not mc[i]:
                             mc.remove(mc[i])
                     #print(mc)
-                    with open("/Users/pawan/Documents/multiple_choice.csv", "a", newline='\n') as fp:
-                         mc = [val.replace(',',';') for val in mc]
-                         print(','.join(mc), file=fp)
+                    if len(mc)>2:
+                        with open("/Users/pawan/Documents/multiple_choice.csv", "a", newline='\n') as fp:
+                             mc = [val.replace(',',';') for val in mc]
+                             print(','.join(mc), file=fp)
                 elif elem.tag == "objectives":
                     lo = []
                     i = 1;
