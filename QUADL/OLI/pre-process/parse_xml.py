@@ -50,18 +50,17 @@ def parse_csv(filename):
                              print(','.join(mc), file=fp)
                 elif elem.tag == "objectives":
                     lo = []
-                    i = 1;
                     lo.insert(0, ''.join(filename.split("/")[8]))
                     lo.insert(1, ''.join(filename.split("/")[9]))
-                    ob=""
                     for obj in elem.iter():
+                        ob = ""
                         if obj.tag == "objective":
-                            ob=ob+str(i)+": "+obj.text+'\n'
-                            i += 1
-                    lo.insert(3,' '.join(ob.split()))
-                    with open("/Users/pawan/Documents/learning_objectives.csv", "a", newline='\n') as fp:
-                        lo = [val.replace(',', ';') for val in lo]
-                        print(','.join(lo), file=fp)
+                            ob=ob+obj.text+'\n'
+                            lo.append(' '.join(ob.split()))
+                            with open("/Users/pawan/Documents/learning_objectives.csv", "a", newline='\n') as fp:
+                                lo = [val.replace(',', ';') for val in lo]
+                                print(','.join(lo), file=fp)
+                            lo.pop()
 
     except ET.ParseError:
         print("Exception occured for"+filename)
