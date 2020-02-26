@@ -12,7 +12,6 @@ from xblockutils.studio_editable import StudioEditableXBlockMixin
 
 
 import MySQLdb
-import pymysql
 import datetime
 import time
 loader = ResourceLoader(__name__)
@@ -106,6 +105,10 @@ class TextXBlock(XBlock):
     setBorderColor = Integer(default=0, scope=Scope.content, help='Help studio view to see if there is any skillname missing')
     
 
+    
+    ip = String(default="172.20.0.5")
+
+
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
         data = pkg_resources.resource_string(__name__, path)
@@ -122,7 +125,6 @@ class TextXBlock(XBlock):
             context = {}
         
         context.update({'self': self})
-
 
         html = Template(self.resource_string("static/html/text.html")).render(Context(context))
         frag = Fragment(html.format(self=self))
@@ -183,7 +185,7 @@ class TextXBlock(XBlock):
         print('*' + xblock_id + '*')
         print( '*' + clicktype + '*')
         try:
-            db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp")
+            db = MySQLdb.connect(self.ip, "root", "", "edxapp")
             db.autocommit(True)
             cursor = db.cursor()
             sql = """select * from edxapp.courseware_studentmodule where student_id=""" + student_id + """ and module_id='""" + xblock_id + """'"""
@@ -226,7 +228,7 @@ class TextXBlock(XBlock):
         
         # Mysql database access here:
         
-        db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp_csmh");
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh");
         cursor = db.cursor();
         sql = """INSERT INTO edxapp_csmh.coursewarehistoryextended_studentmodulehistoryextended(state, created, student_module_id)
          VALUES ('""" + state + """','""" + timestamp + """', '""" + str(student_module_id) + """')"""
@@ -265,7 +267,7 @@ class TextXBlock(XBlock):
         print(hintCount)
         
         try:
-            db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp")
+            db = MySQLdb.connect(self.ip, "root", "", "edxapp")
             db.autocommit(True)
             cursor = db.cursor()
             sql = """select * from edxapp.student_anonymoususerid where anonymous_user_id='""" + self.runtime.anonymous_student_id + """'"""
@@ -306,7 +308,7 @@ class TextXBlock(XBlock):
         
         
         skillname = str(self.kc)
-        xblock_id = str(unicode(self.scope_ids.usage_id))
+        xblock_id = str(self.scope_ids.usage_id)
         url = str(data.get('location_id'))
         paragraph_id = str(self.scope_ids.usage_id.block_id).replace("course", "block")
         # if we want to use <jump_to_id> method then we need to know the course_id and paragraph_id. Format: /jump_to_id/location_id#paragraph_id
@@ -315,7 +317,7 @@ class TextXBlock(XBlock):
         #full_url = str(data.get('full_url'))[:-1] + "#" + paragraph_id
         #start saving it in the database, target table: skill_mapping
         location_id = course_id + "$" + url + "$" + paragraph_id
-        db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp_csmh");
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh");
         cursor = db.cursor();
         sql = """INSERT INTO edxapp_csmh.module_skillname(xblock_id, type, skillname, location) VALUES (%s, %s, %s, %s)"""
 
@@ -369,14 +371,14 @@ class TextXBlock(XBlock):
     @XBlock.json_handler
     def get_border_color(self, data, suffix=''):
         # start to save the XBlock related information in the database:
-        db = pymysql.connect("127.0.0.1:3306", "root", "", "edxapp_csmh")
-        cursor = db.cursor()
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+        cursor = db.cursor();
         
-        """course_id = str(self.scope_ids.usage_id.course_key)
-        skillname = self.kc"""
+        course_id = str(self.scope_ids.usage_id.course_key)
+        skillname = self.kc
         #for select the same course to see if there is any other xblock type have the same id
-        #sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE (type_of_xblock = "MultipleChoiceQuestion" OR type_of_xblock = "TextBoxQuestion") AND course_id = %s AND skillname = %s"""
-        """try:
+        sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE (type_of_xblock = "MultipleChoiceQuestion" OR type_of_xblock = "TextBoxQuestion") AND course_id = %s AND lower(skillname) = lower(%s)"""
+        try:
             cursor.execute(sql2, (course_id, skillname))
             result1 = cursor.fetchone()
             if not cursor.rowcount:
@@ -390,8 +392,7 @@ class TextXBlock(XBlock):
             print(e)
             db.rollback()
         finally:
-            db.close()"""
-        HtmlSetBorderColor = 0
+            db.close()
         return {"setBorderColor": HtmlSetBorderColor}
     
     @XBlock.json_handler
@@ -407,7 +408,7 @@ class TextXBlock(XBlock):
         self.image_size=data['imageSize']
         
         course_id = str(self.scope_ids.usage_id.course_key)
-        xblock_id = str(unicode(self.scope_ids.usage_id))
+        xblock_id = str(self.scope_ids.usage_id)
         type_of_xblock = "TextParagraph"
         title = data['textTitle']
         sub_title = data['textSubTitle']
@@ -415,7 +416,7 @@ class TextXBlock(XBlock):
         image_url = str(self.image_url)
         skillname = str(self.kc)
         # start to save the XBlock related information in the database:
-        db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp_csmh", charset='utf8');
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
         cursor = db.cursor();
         #for select the unique xblock
         sql0 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE xblock_id = '%s'"""
@@ -426,7 +427,7 @@ class TextXBlock(XBlock):
         #for select the same course to see if there is any other xblock type have the same id
         sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE (type_of_xblock = "MultipleChoiceQuestion" OR type_of_xblock = "TextBoxQuestion") AND course_id = %s AND skillname = %s"""
         try:
-            cursor.execute(sql0 % str(unicode(self.scope_ids.usage_id)))
+            cursor.execute(sql0 % str(self.scope_ids.usage_id))
             result = cursor.fetchone()
             if not cursor.rowcount:
                 print("No any results(paragraph) found, insert a new entry to paragraph for this xblock:")
@@ -503,7 +504,7 @@ class TextXBlock(XBlock):
     def delete_xbock(self, data, suffix=''):
         xblock_id = str(data.get("xblock_id"))
         print("Start to delete xblock_id")
-        db = MySQLdb.connect("127.0.0.1", "root", "", "edxapp_csmh", charset='utf8');
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
         cursor = db.cursor();
         sql = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE xblock_id = '%s' """
         sql1 = """DELETE FROM edxapp_csmh.export_course_content_and_skill_validation WHERE id = '%s' """
