@@ -396,7 +396,7 @@ class McqsXBlock(XBlock):
             db.rollback()
                 
             print("Database rollback!")
-            return {}
+            return {"result": "There has been a rollback while inserting"}
         
         sql1 = """select * from edxapp_csmh.module_skillname where id = (select max(id) from edxapp_csmh.module_skillname where type='text' and skillname=%s and id< (select id from edxapp_csmh.module_skillname where xblock_id=%s));"""
         
@@ -499,7 +499,7 @@ class McqsXBlock(XBlock):
         course_id = str(self.scope_ids.usage_id.course_key)
         skillname = self.kc
         #for select the same course to see if there is any other xblock type have the same id
-        sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE type_of_xblock = "TextParagraph" AND course_id = %s AND skillname = %s"""
+        sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE type_of_xblock = "TextParagraph" AND course_id = %s AND lower(skillname) = lower(%s)"""
         try:
             cursor.execute(sql2, (course_id, skillname))
             result1 = cursor.fetchone()

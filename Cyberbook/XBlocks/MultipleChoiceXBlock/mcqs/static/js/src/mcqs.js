@@ -50,8 +50,6 @@ function McqsXBlockInitView(runtime, element) {
                 xblock_id = data.xblock_id;
                 xblock_code = data.xblock_code;
                 $("div[data-usage-id='" + xblock_id + "'] span[id='hint']").attr("id", xblock_code);
-                console.log("Init 1.1 - "+xblock_id);
-                console.log("Init 1.2 - "+xblock_code);
             }
         }); 
         
