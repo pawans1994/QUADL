@@ -49,8 +49,9 @@ function McqsXBlockInitView(runtime, element) {
             success: function(data) {
                 xblock_id = data.xblock_id;
                 xblock_code = data.xblock_code;
-                $("div[data-id='" + xblock_id + "'] span[id='hint']").attr("id", xblock_code);
-                
+                $("div[data-usage-id='" + xblock_id + "'] span[id='hint']").attr("id", xblock_code);
+                console.log("Init 1.1 - "+xblock_id);
+                console.log("Init 1.2 - "+xblock_code);
             }
         }); 
         
@@ -66,7 +67,7 @@ function McqsXBlockInitView(runtime, element) {
                 userChoice = data.userChoice;
                 //==========testing===============
                 if(countTimes >= 1 && userChoice > 0) {
-                    var selectedCheck = $("div[data-id='" + xblock_id + "'] input[type='radio'][checked]");
+                    var selectedCheck = $("div[data-usage-id='" + xblock_id + "'] input[type='radio'][checked]");
                     if(correctOrNot) {
 
                         selectedCheck.parent().addClass('correct');
@@ -243,7 +244,7 @@ $( document ).on( "pagecreate", function() {
                                            var probability = data['probability'];
 
                                            if(parseFloat(probability) > 0.95) {
-                                                 $("div[data-id='" + xblock_id + "']").remove();
+                                                 $("div[data-usage-id='" + xblock_id + "']").remove();
                                            }
                                     }
 
@@ -322,7 +323,6 @@ $( document ).on( "pagecreate", function() {
         removeBorderColor();
         addBorderColor();
         
-        
         /* temporary table: temporary_probability (now we don't need it anymore)
         $.ajax({
             url: runtime.handlerUrl(element, 'save_temporary_probability_method'),
@@ -361,8 +361,8 @@ $( document ).on( "pagecreate", function() {
         }
         //alert("hint message should show at the right place.");
         //alert(xblock_id);
-        if(!$("div[data-id='" + xblock_id + "'] span[title='Get Hint']").hasClass("help-tip")) {
-            $("div[data-id='" + xblock_id + "'] span[title='Get Hint']").addClass("help-tip");
+        if(!$("div[data-usage-id='" + xblock_id + "'] span[title='Get Hint']").hasClass("help-tip")) {
+            $("div[data-usage-id='" + xblock_id + "'] span[title='Get Hint']").addClass("help-tip");
         }
         $("#" + xblock_code).html(hint_array[count]);
         
@@ -400,7 +400,7 @@ $( document ).on( "pagecreate", function() {
     
     // check answer button
     function checkAnswer() {
-        var selectedCheck = $("div[data-id='" + xblock_id + "'] input[name='choice']:checked");
+        var selectedCheck = $("div[data-usage-id='" + xblock_id + "'] input[name='choice']:checked");
         //alert(selectedCheck.val());
         // ==========================================================
         var setStatusWhenRefresh = runtime.handlerUrl(element, 'set_status_when_refresh');
@@ -418,12 +418,12 @@ $( document ).on( "pagecreate", function() {
         console.log("user selected: " + answerId);
         
         //alert("user selected: " + answerId);
-        $("div[data-id='" + xblock_id + "'] input[name='choice']").not(selectedCheck).removeAttr('checked');
+        $("div[data-usage-id='" + xblock_id + "'] input[name='choice']").not(selectedCheck).removeAttr('checked');
         selectedCheck.attr("checked", "checked");
         // remove class and <i> tag if there are any exist:
-        $("div[data-id='" + xblock_id + "'] label").attr('class', '');
-        $("div[data-id='" + xblock_id + "'] i").remove(".tick");
-        $("div[data-id='" + xblock_id + "'] i").remove(".ballot");
+        $("div[data-usage-id='" + xblock_id + "'] label").attr('class', '');
+        $("div[data-usage-id='" + xblock_id + "'] i").remove(".tick");
+        $("div[data-usage-id='" + xblock_id + "'] i").remove(".ballot");
         
         //alert("dada: " + userSelected + ", changed?:" + answerId);
         
@@ -439,24 +439,25 @@ $( document ).on( "pagecreate", function() {
                 //$("#question-block").attr("id", xblock_id + "question-block");
                 //$("#question-block", element).addClass('attempted');
                 
-                
                 if(data.correct == true){
+
                     selectedCheck.parent().addClass('correct');
                     selectedCheck.parent().append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
                     // save student data for probability  !hasBeenSent
                     if(!hasBeenSent) {
-                        saveStudentDataForProbability(1);
+                        //saveStudentDataForProbability(1);
                         hasBeenSent = true;
                     }
                     
                     
                 }else{
+
                     // indicate correct and incorrect
                     selectedCheck.parent().addClass('incorrect');
                     selectedCheck.parent().append("<i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>");
                     // save student data for probability
                     if(!hasBeenSent) {
-                        saveStudentDataForProbability(0);
+                        //saveStudentDataForProbability(0);
                         hasBeenSent = true;
                     }
                     
@@ -473,11 +474,12 @@ $( document ).on( "pagecreate", function() {
                             var paragraph_id = data['paragraph_id'];
                             var location_id = data['location_id'];
                             
-                            if($("div[data-id='" + xblock_id + "'] div[id='navigate_id']").length > 0 || $("div[data-id='" + xblock_id + "'] div[id='navigate_id']").html() != "") {
-                                $("div[data-id='" + xblock_id + "'] div[id='navigate_id']").remove();
+                            if($("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").length > 0 || $("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").html() != "") {
+                                $("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").remove();
                             }
                             
-                            $("div[data-id='" + xblock_id + "'] div[class='hint-block']").append("<div id='navigate_id'>Please click the <a href='http://" + hostname + course_id + "/jump_to_id/" + location_id + "#" + paragraph_id + "'>link</a> here to review the course content again.");
+                            $("div[data-usage-id='" + xblock_id + "'] div[class='hint-block']").append("<div id='navigate_id'>Please click the <a href='http://" + hostname + course_id + "/jump_to_id/" + location_id + "#" + paragraph_id + "'>link</a> here to review the course content again.");
+                            console.log(hostname +' | '+course_id+' | '+location_id+' | '+paragraph_id);
                             
                         }
                     });

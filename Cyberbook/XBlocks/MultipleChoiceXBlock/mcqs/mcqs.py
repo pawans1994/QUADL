@@ -480,8 +480,6 @@ class McqsXBlock(XBlock):
         else:
             self.correct = False
             response['correct_choice'] = False
-         
-        
         return response
     
     @XBlock.json_handler
