@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 import sys
-
+import re
+import nltk
+import csv
 def parse_csv(filename):
 
     try:
@@ -8,6 +10,49 @@ def parse_csv(filename):
         with open(filename) as open_file:
             tree = ET.parse(open_file)
             for elem in tree.iter():
+                if elem.tag=="workbook_page":
+                    #print(p.text)
+                    unit=''.join(filename.split("/")[8])
+                    module = ''.join(filename.split("/")[9])
+                   # print(unit)
+                    #print(module)
+                    for i in elem.iter():
+                        if i.tag=="body":
+                            it = 0
+                            for j in i.iter():
+                                para = ""
+                                if j.tag=="tr":
+                                    table_row=[unit,module]
+                                    for k in j.iter():
+                                        if k.text is not None:
+                                            para=para+k.text+" "
+                                            stri=' '.join(para.split())
+                                    table_row.append(stri)
+                                    with open('/Users/pawan/Documents/paragraph.csv','a') as fp:
+                                        wr=csv.writer(fp,dialect='excel')
+                                        wr.writerow(table_row)
+                                        table_row.pop()
+                            stri = ""
+                            for tags in i.findall('.//'):
+                                # stri=""
+                                i = 0
+                                if tags.text and tags.tail:
+                                    stri = stri + tags.text + tags.tail
+                            text = re.sub('\s+', ' ', stri)
+                            # new_text=re.findall(r'(?<!\d)\.(?!\d) | \.(?!\d)',text)
+                            new_text = nltk.sent_tokenize(text)
+                            with open('/Users/pawan/Documents/paragraph.csv', 'a') as fp:
+                                wr = csv.writer(fp, dialect='excel')
+                                text_list = []
+                                text_list.append(unit)
+                                text_list.append(module)
+                                for s in range(0, len(new_text) - 1):
+                                    text_list.append(new_text[s])
+                                    wr.writerow(text_list)
+                                    text_list.pop()
+                            break
+                                    #it+=1
+                           # new_text=[]
                 if elem.tag=="multiple_choice":
                     mc = []
                     mc.insert(0, ''.join(filename.split("/")[8]))
