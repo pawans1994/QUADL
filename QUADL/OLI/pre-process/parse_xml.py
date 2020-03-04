@@ -6,7 +6,6 @@ import csv
 def parse_csv(filename):
 
     try:
-        option={'A':1,'B':2,'C':3,'D':4,'E':5}
         with open(filename) as open_file:
             tree = ET.parse(open_file)
             root=tree.getroot()
@@ -33,7 +32,7 @@ def parse_csv(filename):
                                             para=para+k.text+" "
                                             stri=' '.join(para.split())
                                     table_row.append(stri)
-                                    with open('/Users/pawan/Documents/paragraph.csv','a') as fp:
+                                    with open('/Users/pawan/Documents/paragraph.csv','a', encoding="utf-8-sig") as fp:
                                         wr=csv.writer(fp,dialect='excel')
                                         wr.writerow(table_row)
                                         table_row.pop()
@@ -44,7 +43,7 @@ def parse_csv(filename):
                                     stri = stri + tags.text + tags.tail
                             text = re.sub('\s+', ' ', stri)
                             new_text = nltk.sent_tokenize(text)
-                            with open('/Users/pawan/Documents/paragraph.csv', 'a') as fp:
+                            with open('/Users/pawan/Documents/paragraph.csv', 'a', encoding="utf-8-sig") as fp:
                                 wr = csv.writer(fp, dialect='excel')
                                 text_list = []
                                 text_list.append(unit)
@@ -55,19 +54,19 @@ def parse_csv(filename):
                                     text_list.pop()
                             break
                 if elem.tag=="question":
-
                     mc = []
                     mc.insert(0, ''.join(filename.split("/")[8]))
                     mc.insert(1, ''.join(filename.split("/")[9]))
                     for q in elem.iter():
                         ques = ""
                         choices=""
+                        answer_text = ""
                         if q.tag=="body":
-                            if q.text is not None:
+                            if q.text is not None and q.tail is not None:
                                 ques=ques+q.text
                             for e in q.findall('.//'):
-                                if e.text is not None:
-                                    ques=ques+e.text
+                                if e.text is not None or e.tail is not None:
+                                    ques=ques+str(e.text)+str(e.tail)
                             if ques and ques not in mc:
                                  mc.insert(2, ' '.join(ques.split()))
                         elif q.tag=="multiple_choice":
@@ -93,7 +92,7 @@ def parse_csv(filename):
                                 else:
                                     mc.insert(3, choices)
                         elif q.tag=="response":
-                            answer_text = ""
+
                             if type_ques == 'm_c':
                                 if 'score' in q.attrib:
                                     if (int(q.attrib['score']) > 0):
@@ -103,16 +102,19 @@ def parse_csv(filename):
                                             if cc in ch:
                                                 answer_text = answer_text + ch[cc]+"\n"
                                 if answer_text is not None and answer_text not in mc:
-                                    mc.insert(4, ' '.join(answer_text.split()))
+                                    if len(mc) == 5:
+                                        mc[4] = mc[4] + answer_text
+                                    else:
+                                        mc.insert(4, answer_text)
                             elif type_ques == 'f_i_b':
                                 if 'score' in q.attrib:
                                     option=q.attrib['input']
                                     answer_text=answer_text+q.attrib['name']+"\n"
-                                    answer_text=option+": "+answer_text
+                                    #answer_text="answer_text
                                     if len(mc)==5:
                                         mc[4]=mc[4]+answer_text
                                     else:
-                                        mc.insert(4, answer_text)
+                                        mc.insert(4, ' '.join(answer_text.split()))
                         elif q.tag =='explanation':
                             if type_ques =='s_a':
                                 for sub_tag in q.iter():
@@ -123,15 +125,15 @@ def parse_csv(filename):
                         if not mc[i]:
                             mc.remove(mc[i])
                     if type_ques=='m_c':
-                        with open('/Users/pawan/Documents/multiple_choice.csv', "a") as fp:
+                        with open('/Users/pawan/Documents/multiple_choice.csv', "a", encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
                     elif type_ques == 'f_i_b':
-                        with open('/Users/pawan/Documents/fill_in_the_blanks.csv', "a") as fp:
+                        with open('/Users/pawan/Documents/fill_in_the_blanks.csv', "a", encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
                     elif type_ques=='s_a':
-                        with open('/Users/pawan/Documents/short_answer.csv', "a") as fp:
+                        with open('/Users/pawan/Documents/short_answer.csv', "a", encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
                 if elem.tag=="multiple_choice":
@@ -169,7 +171,7 @@ def parse_csv(filename):
                         if not mc[i]:
                             mc.remove(mc[i])
                     if len(mc)>2:
-                        with open("/Users/pawan/Documents/multiple_choice.csv", "a", newline='\n') as fp:
+                        with open("/Users/pawan/Documents/multiple_choice.csv", "a", newline='\n', encoding="utf-8-sig") as fp:
                              mc = [val.replace(',',';') for val in mc]
                              print(','.join(mc), file=fp)
                 elif elem.tag == "objectives":
@@ -181,7 +183,7 @@ def parse_csv(filename):
                         if obj.tag == "objective":
                             ob=ob+obj.text+'\n'
                             lo.append(' '.join(ob.split()))
-                            with open("/Users/pawan/Documents/learning_objectives.csv", "a", newline='\n') as fp:
+                            with open("/Users/pawan/Documents/learning_objectives.csv", "a", newline='\n', encoding="utf-8-sig") as fp:
                                 lo = [val.replace(',', ';') for val in lo]
                                 print(','.join(lo), file=fp)
                             lo.pop()
