@@ -71,7 +71,7 @@ class McqsXBlock(XBlock):
         scope=Scope.content
     )
     image_url = String(
-        default="image_url",
+        default="",
         scope=Scope.content
     )
     image_size = String(default="50%", scope=Scope.content)
@@ -398,7 +398,7 @@ class McqsXBlock(XBlock):
             print("Database rollback!")
             return {"result": "There has been a rollback while inserting"}
         
-        sql1 = """select * from edxapp_csmh.module_skillname where id = (select max(id) from edxapp_csmh.module_skillname where type='text' and skillname=%s and id< (select id from edxapp_csmh.module_skillname where xblock_id=%s));"""
+        sql1 = """select * from edxapp_csmh.module_skillname where id = (select max(id) from edxapp_csmh.module_skillname where type='text' and lower(skillname)=lower(%s) and id< (select id from edxapp_csmh.module_skillname where xblock_id=%s));"""
         
         sql2 = """INSERT INTO edxapp_csmh.skill_mapping(assessment_id, location) VALUES (%s, %s)"""
         try: 
@@ -694,7 +694,7 @@ class McqsXBlock(XBlock):
     
     @XBlock.json_handler
     def get_studentId_and_skillname(self, data, suffix=''):
-        return {"student_id": str(self.pastel_student_id), "skillname": self.kc, "question_id": self.problemId, "correctness": self.correct}
+        return {"student_id": str(self.pastel_student_id), "skillname": self.kc, "question_id": self.problemId, "correctness": self.correct, "course" : str(self.scope_ids.usage_id.course_key)}
     
     @XBlock.json_handler
     def delete_xbock(self, data, suffix=''):

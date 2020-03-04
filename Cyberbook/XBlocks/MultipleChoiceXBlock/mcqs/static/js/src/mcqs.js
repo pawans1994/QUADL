@@ -374,18 +374,20 @@ $( document ).on( "pagecreate", function() {
             type: "POST",
             data: JSON.stringify({"getStudent_id": true}),
             success: function(data) {
+                var course = data['course'];
                 var student_id = data['student_id'];
                 var skillname = data['skillname'];
                 var question_id = data['question_id'];
                 
                 $.ajax({
-                    url: "http://127.0.0.1:8080/callandsaveBKT",
+                    url: "http://10.153.52.138:8080/callandsaveBKT", //IP address of the ALP running machine
                     type: "GET",
-                    data: "student_id=" + student_id + "&skillname=" + skillname.split(' ').join('_') + "&correctness=" + correctness + "&question_id=" + question_id,
+                    data: "student_id=" + student_id + "&skillname=" + skillname.split(' ').join('_') + "&correctness=" + correctness + "&question_id=" + question_id+"&course="+course,
                     dataType: 'jsonp',
                     jsonp: 'callback',
                     //jsonpCallback: "callback",
                     anysc: false,
+                    crossDomain:true,
                     success: function(data) {
                         
                     }
@@ -443,7 +445,7 @@ $( document ).on( "pagecreate", function() {
                     selectedCheck.parent().append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
                     // save student data for probability  !hasBeenSent
                     if(!hasBeenSent) {
-                        //saveStudentDataForProbability(1);
+                        saveStudentDataForProbability(1);
                         hasBeenSent = true;
                     }
                     
@@ -455,7 +457,7 @@ $( document ).on( "pagecreate", function() {
                     selectedCheck.parent().append("<i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>");
                     // save student data for probability
                     if(!hasBeenSent) {
-                        //saveStudentDataForProbability(0);
+                        saveStudentDataForProbability(0);
                         hasBeenSent = true;
                     }
                     
@@ -552,7 +554,7 @@ $( document ).on( "pagecreate", function() {
             data: JSON.stringify({'hintCount': count, 'type': 'hintbutton'}),
             url: userUrl,
             success: function(data) {
-                console.log("User Id : " + data.user);
+                console.log("User Id : " + data.user_id);
                 console.log("Xblock Id :" + data.xblock_id);
             }
         });
