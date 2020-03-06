@@ -1,6 +1,6 @@
 # Cyberbook v0.1
 
-THIS PROJECT IS NOT COMPLETE YET
+THIS PROJECT IS STILL IN DEVELOPMENT
 
 This document contains instructions on setting up and installing a deployment or a development environment for the components present in github
 To get a better overview and the entire installation and usage guide please go to the [google drive document](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit)
@@ -58,7 +58,7 @@ Please follow the below instructions to deploy a working version of the Cyberboo
       And start it again.
 8. Open your browser and enter the url `http://localhost:8080/SimStudentServlet`
 
-On more information on how to use SimStudentServlet follow this document https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit
+On more information on how to use SimStudentServlet follow this [document](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit)
 
 
 #### AdaptiveLessonPlanner
