@@ -648,7 +648,7 @@ class McqsXBlock(XBlock):
 
         db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
         cursor = db.cursor();
-        sql = """INSERT INTO edxapp_csmh.temporary_probability(student_id, question_id, skillname) VALUES (%s, %s, %s)"""
+        sql = """INSERT INTO edxapp_csmh.temporary_probability(student_pastel_id, question_id, skillname) VALUES (%s, %s, %s)"""
         
         try:
             cursor.execute(sql, (self.pastel_student_id, self.problemId, self.kc))
@@ -665,7 +665,7 @@ class McqsXBlock(XBlock):
     def get_temporary_probability_method(self, data, suffix=''):
         db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
         cursor = db.cursor();
-        sql = """select * from edxapp_csmh.temporary_probability where question_id = %s and student_id= %s;"""
+        sql = """select * from edxapp_csmh.temporary_probability where question_id = %s and student_pastel_id= %s;"""
         
         try:
             cursor.execute(sql ,(self.problemId, str(self.runtime.user_id)))
@@ -726,7 +726,7 @@ class McqsXBlock(XBlock):
     def get_probability(self, data, suffix=''):
         db = MySQLdb.connect(self.ip, "root", "", "edxapp", charset='utf8');
         cursor = db.cursor();
-        sql = """SELECT * FROM edxapp_csmh.temporary_probability where skillname = %s and student_id = %s order by id DESC limit 1;"""
+        sql = """SELECT * FROM edxapp_csmh.temporary_probability where skillname = %s and student_pastel_id = %s order by id DESC limit 1;"""
 
         try:
             cursor.execute(sql ,(str(data.get('skillname')), str(data.get('student_id'))))

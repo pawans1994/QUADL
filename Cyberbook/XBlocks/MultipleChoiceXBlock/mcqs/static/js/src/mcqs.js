@@ -217,47 +217,52 @@ $( document ).on( "pagecreate", function() {
         
         
         // for testing propose only, get student_pastel_id from DB.
-        $.ajax({
-            url: runtime.handlerUrl(element, 'get_pastel_student_id'),
-            type: "POST",
-            data: JSON.stringify({"get_pastel_student_id": true}),
-            success: function(data){
-                //alert(data['hasBeenSent']);
-                if(data['hasBeenSent'] == 'false') {
-                    $.ajax({
-                        url: runtime.handlerUrl(element, "get_studentId_and_skillname"),
-                        type: "POST",
-                        data: JSON.stringify({"getStudent_id": true}),
-                        success: function(data) {
+        var view = $("div[data-usage-id='" + xblock_id + "']")[0].getAttribute('data-runtime-class');
+        console.log("View "+view);
+        if(view == 'LmsRuntime') {
+            console.log("Inside If");
+            $.ajax({
+                url: runtime.handlerUrl(element, 'get_pastel_student_id'),
+                type: "POST",
+                data: JSON.stringify({"get_pastel_student_id": true}),
+                success: function(data){
+                    //alert(data['hasBeenSent']);
+                    if(data['hasBeenSent'] == 'false') {
+                        $.ajax({
+                            url: runtime.handlerUrl(element, "get_studentId_and_skillname"),
+                            type: "POST",
+                            data: JSON.stringify({"getStudent_id": true}),
+                            success: function(data) {
 
-                            var student_id = data['student_id'];
-                            var skillname = data['skillname'];
+                                var student_id = data['student_id'];
+                                var skillname = data['skillname'];
 
-                            $.ajax({
-                                url: runtime.handlerUrl(element, 'get_probability'),
-                                type: "POST",
-                                data: JSON.stringify({"skillname": skillname, "student_id": student_id}),
-                                success: function(data) {
-                                    if(data != null) {
-                                           var probability = data['probability'];
+                                $.ajax({
+                                    url: runtime.handlerUrl(element, 'get_probability'),
+                                    type: "POST",
+                                    data: JSON.stringify({"skillname": skillname, "student_id": student_id}),
+                                    success: function(data) {
+                                        console.log(data);
+                                        if(data != null) {
+                                            var probability = data['probability'];
 
-                                           if(parseFloat(probability) > 0.95) {
-                                                 $("div[data-usage-id='" + xblock_id + "']").remove();
-                                           }
+                                            if(parseFloat(probability) > 0.95) {
+                                                    $("div[data-usage-id='" + xblock_id + "']").remove();
+                                            }
+                                        }
+
                                     }
-
-                                }
-                            });
+                                });
 
 
-                        }
-                    });
-                }
+                            }
+                        });
+                    }
+                        
                     
-                
-            }
-        });
-        
+                }
+            });
+        }
         
         
     });
@@ -379,6 +384,9 @@ $( document ).on( "pagecreate", function() {
                 var skillname = data['skillname'];
                 var question_id = data['question_id'];
                 
+                console.log("Testing");
+                console.log(data);
+
                 $.ajax({
                     url: "http://10.153.52.138:8080/callandsaveBKT", //IP address of the ALP running machine
                     type: "GET",
