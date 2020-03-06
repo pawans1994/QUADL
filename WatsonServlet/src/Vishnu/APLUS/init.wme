@@ -1,0 +1,38 @@
+(require* wmeTypes "wmeTypes.clp")
+;;;; CTAT components assertions.
+(bind ?var1 (assert (MAIN::table (name dorminTable1))))
+(bind ?var2 (assert (MAIN::table (name dorminTable2))))
+(bind ?var3 (assert (MAIN::button (name hint))))
+(bind ?var4 (assert (MAIN::table (name dorminTable3))))
+(bind ?var5 (assert (MAIN::button (name done))))
+
+
+;;;; Table configuration for dorminTable1
+(bind ?var6 (assert (MAIN::cell (name dorminTable1_C0R0) (row-number 0) (column-number 0))))
+(bind ?var7 (assert (MAIN::cell (name dorminTable1_C0R1) (row-number 1) (column-number 0))))
+(bind ?var8 (assert (MAIN::cell (name dorminTable1_C0R2) (row-number 2) (column-number 0))))
+(bind ?var9 (assert (MAIN::cell (name dorminTable1_C0R3) (row-number 3) (column-number 0))))
+(bind ?var10 (assert (MAIN::cell (name dorminTable1_C0R4) (row-number 4) (column-number 0))))
+(bind ?var11 (assert (MAIN::column (name dorminTable1_Column0) (position 0) (cells ?var6 ?var7 ?var8 ?var9 ?var10 ))))
+(modify ?var1  (name dorminTable1)(columns ?var11 ))
+
+;;;; Table configuration for dorminTable2
+(bind ?var12 (assert (MAIN::cell (name dorminTable2_C0R0) (row-number 0) (column-number 0))))
+(bind ?var13 (assert (MAIN::cell (name dorminTable2_C0R1) (row-number 1) (column-number 0))))
+(bind ?var14 (assert (MAIN::cell (name dorminTable2_C0R2) (row-number 2) (column-number 0))))
+(bind ?var15 (assert (MAIN::cell (name dorminTable2_C0R3) (row-number 3) (column-number 0))))
+(bind ?var16 (assert (MAIN::cell (name dorminTable2_C0R4) (row-number 4) (column-number 0))))
+(bind ?var17 (assert (MAIN::column (name dorminTable2_Column0) (position 0) (cells ?var12 ?var13 ?var14 ?var15 ?var16 ))))
+(modify ?var2  (name dorminTable2)(columns ?var17 ))
+
+;;;; Table configuration for dorminTable3
+(bind ?var18 (assert (MAIN::cell (name dorminTable3_C0R0) (row-number 0) (column-number 0))))
+(bind ?var19 (assert (MAIN::cell (name dorminTable3_C0R1) (row-number 1) (column-number 0))))
+(bind ?var20 (assert (MAIN::cell (name dorminTable3_C0R2) (row-number 2) (column-number 0))))
+(bind ?var21 (assert (MAIN::cell (name dorminTable3_C0R3) (row-number 3) (column-number 0))))
+(bind ?var22 (assert (MAIN::cell (name dorminTable3_C0R4) (row-number 4) (column-number 0))))
+(bind ?var23 (assert (MAIN::column (name dorminTable3_Column0) (position 0) (cells ?var18 ?var19 ?var20 ?var21 ?var22 ))))
+(modify ?var4  (name dorminTable3)(columns ?var23 ))
+
+;;;; Interface configuration
+(bind ?var24 (assert (MAIN::problem (name problem) (interface-elements ?var5 ?var1 ?var2 ?var4 ?var3 ))))

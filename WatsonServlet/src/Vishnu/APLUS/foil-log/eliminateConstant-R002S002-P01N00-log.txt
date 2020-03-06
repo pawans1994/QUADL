@@ -1,0 +1,70 @@
+FOIL 6.4   [January 1996]
+--------
+
+    Options:
+	minimum clause accuracy -1.91466e+09%
+
+Relation eliminateConstant
+
+Relation *HasVarTerm
+
+Relation *IsNumeratorOf
+
+Relation *IsFractionTerm
+
+Relation *IsAVarTerm
+
+Relation *IsSkillAdd
+
+Relation *IsLastConstTermNegative
+
+Relation *HasCoefficient
+
+Relation *IsConstant
+
+Relation *IsPolynomial
+
+Relation *IsDenominatorOf
+
+Relation *HasParentheses
+
+Relation *IsSkillSubtract
+
+Relation *IsSkillMultiply
+
+Relation *Homogeneous
+
+Relation *NotNull
+
+Relation *Monomial
+
+Relation *HasConstTerm
+
+Relation *IsSkillDivide
+
+----------
+eliminateConstant:
+
+State (1/9, 7.0 bits available)
+
+	Save clause ending with HasVarTerm(A) (cover 1, accuracy 33%)
+
+	Save IsConstant(B) (1,3 value 1.3)
+	Save IsPolynomial(A) (1,3 value 1.3)
+	Save not(Homogeneous(A)) (1,3 value 1.3)
+	Save not(Monomial(A)) (1,3 value 1.3)
+
+Best literal HasVarTerm(A) (5.9 bits)
+
+State (1/3, 1.1 bits available)
+
+No literals
+
+Clause 0: eliminateConstant(A,B) :- HasVarTerm(A).
+
+***  Warning: the following definition
+***  matches 2 tuples not in the relation
+
+eliminateConstant(A,B) :- HasVarTerm(A).
+
+Time 0.0 secs

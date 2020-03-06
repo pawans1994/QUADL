@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<div id="tutor" align="center">
+			<!-- src must be "/SimStudentServlet/WebAuthoring/"+getUserName()+"/"+getTutorName()"/"+getHTML() -->
+			<iframe id="tutorInterface" src="WebAuthoring/Sam/toy/toy.html" align="center" width="550" height="550">
+			</iframe>
+			<br> <br> <br>
+			<div  align="center">
+				<button class="btn btn-primary" id="startStateButton">Start</button>
+				<button class="btn btn-primary" id="doNextStepButton">Do the
+					next step</button>
+				<button class="btn btn-primary" id="newProblemButton">Clear the interface</button>
+				<br> <br> <br>
+			</div>
+			<textarea class="form-control" id="textFieldSS" rows="5" cols="0"></textarea>
+			<br> <br>
+
+			<button class="btn btn-primary" id="yesButton">Yes</button>
+			<button class="btn btn-primary" id="noButton">No</button>
+			<input type="text" id="textFieldSkill" hidden="true">
+</div>
+

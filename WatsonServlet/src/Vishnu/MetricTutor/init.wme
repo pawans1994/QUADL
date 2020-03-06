@@ -1,0 +1,12 @@
+(require* wmeTypes "wmeTypes.clp")
+;;;; CTAT components assertions.
+(bind ?var1 (assert (MAIN::textField (name input))))
+(bind ?var2 (assert (MAIN::textField (name answer))))
+(bind ?var3 (assert (MAIN::textField (name input2))))
+(bind ?var4 (assert (MAIN::button (name hint))))
+(bind ?var5 (assert (MAIN::textField (name copyinput))))
+(bind ?var6 (assert (MAIN::button (name done))))
+
+
+;;;; Interface configuration
+(bind ?var7 (assert (MAIN::problem (name problem) (interface-elements ?var6 ?var3 ?var1 ?var5 ?var2 ?var4 ))))

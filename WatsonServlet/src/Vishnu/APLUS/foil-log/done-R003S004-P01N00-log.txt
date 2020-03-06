@@ -1,0 +1,73 @@
+FOIL 6.4   [January 1996]
+--------
+
+    Options:
+	minimum clause accuracy -1.94052e+08%
+
+Relation done
+
+Relation *HasVarTerm
+
+Relation *IsNumeratorOf
+
+Relation *IsFractionTerm
+
+Relation *IsAVarTerm
+
+Relation *IsSkillAdd
+
+Relation *IsLastConstTermNegative
+
+Relation *HasCoefficient
+
+Relation *IsConstant
+
+Relation *IsPolynomial
+
+Relation *IsDenominatorOf
+
+Relation *HasParentheses
+
+Relation *IsSkillSubtract
+
+Relation *IsSkillMultiply
+
+Relation *Homogeneous
+
+Relation *NotNull
+
+Relation *Monomial
+
+Relation *HasConstTerm
+
+Relation *IsSkillDivide
+
+----------
+done:
+
+State (1/25, 10.2 bits available)
+
+	Save clause ending with IsAVarTerm(A) (cover 1, accuracy 20%)
+
+	Save not(HasConstTerm(A)) (1,5 value 2.1)
+
+Best literal IsAVarTerm(A) (5.9 bits)
+
+State (1/5, 4.3 bits available)
+
+	Save clause ending with A<>B (cover 1, accuracy 25%)
+
+Best literal A<>B (4.9 bits)
+
+State (1/4, 0.4 bits available)
+
+No literals
+
+Clause 0: done(A,B) :- IsAVarTerm(A), A<>B.
+
+***  Warning: the following definition
+***  matches 3 tuples not in the relation
+
+done(A,B) :- IsAVarTerm(A), A<>B.
+
+Time 0.0 secs

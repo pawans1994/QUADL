@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Training SimStudent</title>
+
+<link rel="stylesheet" href = "bootstrap.min.css">
+<link  href="custom.css" rel="stylesheet">
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
+<script src="bootstrap.min.js"></script>
+
+</head>
+<body>
+	<h1 align="center">Web based SimStudent Tutoring </h1><br>
+	<div id="tutor" align="center">
+	<iframe id="tutorInterface" src="/SimStudentServlet/APLUS/SimStudent.html" align="center" width="550" height="550">
+	</iframe><br><br><br>
+	<div class = "btn-toolbar">
+	<button class="btn-primary" id="newProblemButton" > New Problem</button>
+	<button class="btn-primary"  id="startStateButton"> Create start state</button>
+	<button class="btn-primary" id="doNextStepButton"> Do the next step</button>
+	<button class="btn-primary" id="done"> Done</button><br><br><br>
+	</div>
+	<textarea class="form-control" id="textFieldSS" rows="5" cols="2">
+	</textarea><br><br>
+	
+	<button class="btn-primary" id="yesButton">Yes </button>
+	<button class="btn-primary" id="noButton">No</button>
+	<input type="text" id="textFieldSkill" hidden="true">
+	</div>
+	<script >
+	var hostname = $(location).attr('protocol');
+	var selection = null;
+	var input = null;
+	var eventHandler = "";
+	
+		$(".btn-primary").click(function(){
+			//alert("Button clicked");
+			eventHandler = this.id;
+			//console.log(" doc : " +$("#tutorInterface").contents().find("dorminTable3.R0C0").html());
+
+			if(this.id.includes("newProblemButton"))
+				  $("#tutorInterface").contents().find(".CTAT-text").val("");
+			
+			 $.ajax({
+		             async: true,
+		             crossDomain: true,
+		             url: hostname+"/SimStudentServlet/serv",
+		             method: "POST",
+		             dataType: "text",
+		  			 data: "<message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType>"+
+		  			 "<transaction_id>235f276d-5772-3c22-e64d-4c51ab6427ac</transaction_id><Selection><value>"+this.id+
+		  			 "</value></Selection><Action><value>ButtonPressed</value></Action><Input><value><![CDATA[-1]]></value></Input><session_id>803da443-b605-3a62-ff2d-85ca5ae1162c</session_id></properties></message>"
+		            }).done(requestResponseFromSimSt);
+			 
+			 if(this.id.includes("done")){
+				 $("#textFieldSkill").val("");
+    	    	 $("#textFieldSkill").show();
+			 }
+		});
+		
+		function parseResponse(element){
+			
+		}
+		
+		
+		function requestResponseFromSimSt(){
+			 var xmlDoc;
+			 
+			 $.ajax({
+	             async: true,
+	             crossDomain: true,
+	             url: hostname+"/SimStudentServlet/serv",
+	             method: "GET",
+	             dataType: "text",
+	  			 data: "session_id=803da443-b605-3a62-ff2d-85ca5ae1162c",
+	             success: function(data){
+            	    	   var wellData = "<MessageBundle>"+data+"</MessageBundle>";
+	            	       console.log("Response : "+wellData);
+	           	    	   xmlDoc = $.parseXML(wellData);
+	           	    	   console.log(" XML : "+xmlDoc);
+	           	    	   $(xmlDoc).find("MessageBundle message properties").each(function(){
+	    			    	 var selection = "#"+$(this).find("Selection").text();     
+	    		    		 var inputRes = $(this).find("Input").text();
+	    		    		 if(!selection.includes("dorminTable"))
+	    		    		     $(selection).val("SimSt : "+inputRes);
+	    		    		 else{
+	    		    			  var id = selection.substring(1,13)+".R"+(parseInt(selection.substring(17,18))-1)+"C"+(parseInt(selection.substring(15,16))-1);
+	    		    			  window.frames['tutorInterface'].contentDocument.getElementById(id).getElementsByTagName('textarea')[0].value = inputRes;    			  	    		    		 
+	    			         if(inputRes.includes("Please specify the skill")){
+	    			        	 $("#textFieldSkill").val("");
+	    			   	    	 $("#textFieldSkill").show();
+	    			            }
+	    		    	      }
+	                    });
+	               }
+	             });
+		       
+		}
+		
+		$("#textFieldSkill").on('keydown', function(event){
+			if(event.which == 13){
+				var value = $("#textFieldSkill").val();
+				$.ajax({
+		             async: true,
+		             crossDomain: true,
+		             url: hostname+"/SimStudentServlet/serv",
+		             method: "POST",
+		             dataType: "text",
+		  			 data: "<message><verb>NotePropertySet</verb><properties><MessageType>InterfaceAction</MessageType>"+
+		  			 "<transaction_id>235f276d-5772-3c22-e64d-4c51ab6427ac</transaction_id><Selection><value>"+this.id+
+		  			 "</value></Selection><Action><value>UpdateTextField</value></Action><Input><value>"+value+"</value></Input><session_id>803da443-b605-3a62-ff2d-85ca5ae1162c</session_id></properties></message>",
+		             success: function(data) {
+		             	console.log("Response "+data);
+		             }
+		            }).done(requestResponseFromSimSt);
+				 $("#textFieldSkill").hide();
+			}
+		});
+
+		
+</script>
+<script data-silex-static="true" type="text/javascript" src="/SimStudentServlet/SimStWebTutor/ctatloader.js"></script>
+<script data-silex-static="true" type="text/javascript" src="/SimStudentServlet/SimStWebTutor/ctat.min.js"></script>
+<script data-silex-static="true" type="text/javascript" src="/SimStudentServlet/SimStWebTutor/externalScript.js"></script>
+
+</body>
+</html>

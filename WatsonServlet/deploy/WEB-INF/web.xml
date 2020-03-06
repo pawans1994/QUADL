@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <display-name>SimStudentBaseServlet</display-name>
+    <servlet-name>SimStudentBaseServlet</servlet-name>
+    <servlet-class>servlet.SimStudentBaseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimStudentBaseServlet</servlet-name>
+    <url-pattern>/serv</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>servlet.SimStudentBaseServlet</listener-class>
+  </listener>
+  <context-param>
+    <param-name>folderPath</param-name>
+    <param-value>/Users/simstudent/Documents/Watson</param-value>
+  </context-param>
+  <context-param>
+    <param-name>database</param-name>
+    <param-value>localhost</param-value>
+  </context-param>
+  <context-param>
+    	<param-name>jarFolder</param-name>
+		<param-value>/Users/simstudent/Desktop/SimStudentGithub/SimStudent-master/APLUS/java/lib</param-value>
+    </context-param>
+</web-app>
