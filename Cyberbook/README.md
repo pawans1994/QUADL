@@ -48,9 +48,9 @@ Please follow the below instructions to deploy a working version of the Cyberboo
 6. Paste it inside the SimStudentServlet in your tomcat installation in the below path
   `TOMCAT_HOME/webapps/SimStudentServlet/WEB-INF/lib`
     If the file already exists, replace it. This will ensure you are running the lates build of ModelTracer
-7. Open the terminal and run the below commands
-  1. `cd TOMCAT_HOME/bin/`
-  2. `sudo ./startup.sh`
+7. Open the terminal and run the below commands  
+`cd TOMCAT_HOME/bin/`  
+`sudo ./startup.sh`
   3.  At the time of writing this document SimStudentServlet required Port 8080 to run
       You can try to run SimStudentServlet on the default tomcat port
       If it does not work check out this [Stack Overflow answer](https://stackoverflow.com/questions/18415578/how-to-change-tomcat-port-number) to configure your tomcat installation on port 8080.
@@ -89,7 +89,7 @@ Follow the below steps to set up a development environment for the Cyberbook pro
     If you are using a different version you will have to figure out how to import a project to eclipse for your version.
     Below are the locations of the ModelTracer and SimStudentServlet projects
 
-    ModelTracer - `PASTEL/Cyberbook/ModelTracer/Project`
+    ModelTracer - `PASTEL/Cyberbook/ModelTracer/Project`  
     SimStudentServlet - `PASTEL/Cyberbook/SimStudentServlet/Project`
 
 3. Once the projects have been imported you can begin making your own changes.
@@ -122,7 +122,7 @@ All the Xblocks required for the Cyberbook installation to work correctly is ava
   `make studio-shell`  
   `pip install xblocks/TextXBlock/`  
   `exit`  
-  `make lms-shell`
+  `make lms-shell`  
   `pip install xblocks/TextXBlock/`  
   `exit`
   `make studio-restart && make lms-restart`
