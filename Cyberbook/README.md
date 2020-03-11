@@ -124,7 +124,7 @@ All the Xblocks required for the Cyberbook installation to work correctly is ava
   `exit`  
   `make lms-shell`  
   `pip install xblocks/TextXBlock/`  
-  `exit`
+  `exit`  
   `make studio-restart && make lms-restart`
 4. After the Servers restart navigate to the studio and add the XBlocks to your course in the OpenEdx studio. You will find instructions for that [here](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit).
 
