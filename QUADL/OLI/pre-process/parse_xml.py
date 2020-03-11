@@ -3,7 +3,7 @@ import sys
 import re
 import nltk
 import csv
-
+import time
 
 def parse_csv(filename):
     try:
@@ -11,6 +11,7 @@ def parse_csv(filename):
         with open(filename) as open_file:
             tree = ET.parse(open_file)
             root=tree.getroot()
+            print(filename)
             for elem in tree.iter():
                 if elem.tag=="workbook_page":
                     unit=''.join(filename.split("/")[8])
@@ -47,9 +48,10 @@ def parse_csv(filename):
                                     text_list.append(new_text[s])
                                     wr.writerow(text_list)
                                     text_list.pop()
-                            break
+                    continue
                 if elem.tag=="question":
                     type_ques = 'nv'
+                    accessTime = f'{time.time() :.20n}'
                     all_tags = elem.findall('.//')
                     for all_tags in elem.findall('.//'):
                         if all_tags.tag == 'multiple_choice':
@@ -100,7 +102,7 @@ def parse_csv(filename):
                                         # print(correct_ans)
                                         correct_choice = correct_ans.split(',')
                                         for cc in correct_choice:
-                                            print(filename)
+                                            #print(filename)
                                             answer_text = answer_text + ch[cc] + "\n"
                                         mc.insert(4, answer_text)
                         # print(mc)
@@ -150,7 +152,7 @@ def parse_csv(filename):
                                     else:
                                         response_val[q.attrib['input']]=q.attrib['match']
                         correct_resp.append(response_val)
-                        mc.insert(3, None)
+                        mc.insert(3, accessTime[11:])
                         for k, v in correct_resp[0].items():
                             mc.insert(4, k)
                             if k in option_val:
@@ -196,7 +198,9 @@ def parse_csv(filename):
                                   encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
-                    break
+                    continue
+
+
                 if elem.tag=="multiple_choice":
                     mc = []
                     mc.insert(0, ''.join(filename.split("/")[8]))
@@ -235,6 +239,9 @@ def parse_csv(filename):
                         with open("/Users/pawan/PycharmProjects/QUADL/Output Files_QUADL/multiple_choice.csv", "a", newline='\n', encoding="utf-8-sig") as fp:
                              mc = [val.replace(',',';') for val in mc]
                              print(','.join(mc), file=fp)
+
+                    continue
+
                 elif elem.tag == "objectives":
                     lo = []
                     lo.insert(0, ''.join(filename.split("/")[8]))
@@ -248,6 +255,8 @@ def parse_csv(filename):
                                 lo = [val.replace(',', ';') for val in lo]
                                 print(','.join(lo), file=fp)
                             lo.pop()
+                    continue
+
 
     except ET.ParseError:
         print("Exception occured for"+filename)
