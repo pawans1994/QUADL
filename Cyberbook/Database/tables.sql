@@ -79,3 +79,13 @@ CREATE TABLE `init_parameters_bkt` (
   `course_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `condition_course_match` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `condition_name` varchar(100) DEFAULT NULL,
+  `course_id` varchar(100) DEFAULT NULL,
+  `enable_dynamic` int(11) DEFAULT NULL,
+  `enable_hiding` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
