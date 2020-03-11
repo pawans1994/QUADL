@@ -18,4 +18,4 @@ DOWNLOADING_DIR=/Users/pawan/Documents/Project/statistics/content/
 
 python3 /Users/pawan/PycharmProjects/QUADL/create_csv.py $pathname
 walk_dir "$DOWNLOADING_DIR"
-python3 /Users/pawan/PycharmProjects/QUADL/generate_question_id.py $pathname
+#python3 /Users/pawan/PycharmProjects/QUADL/generate_question_id.py $pathname
