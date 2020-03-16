@@ -71,7 +71,39 @@ function CheckboxXBlockInitView(runtime, element) {
         
         //addBorderColor();
         
+        $.ajax({
+            url: runtime.handlerUrl(element, "get_border_color"),
+            type: "POST",
+            data: JSON.stringify({"getBorderColor": true}),
+            success: function(data) {
+                console.log("checkbox color:", data);
+                if(data.setBorderColor == 0) {
+                    // studio and lms: the structure of the html are not the same, data-usage-id is for studio use only.
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='border']").css("border", "2px solid red");
+                    
+                } else {
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='border']").removeAttr("style");
+                }
+            }
+        });
+
+
+        var locationObject = $('#seq_content').children()[1] == undefined ? undefined : $('#seq_content').children()[1].getAttribute('data-usage-id');
+        if(locationObject != undefined) {
+            var locationArray = locationObject.split("@");
+            $.ajax({
+                url: runtime.handlerUrl(element, 'module_skillname_saved'),
+                type: "POST",
+                data: JSON.stringify({"paragraph_id": xblock_code, "location_id": locationArray[locationArray.length - 1]}),
+                success: function(data) {
+                    console.log("Skillname has been saved!", data);
+                }
+            });
+        }
+
     });
+    
+    //This is to mark the correct answer
     /*
     function addBorderColor() {
         $("label").not($("label input[name='choice']:checked").parent()).hover(function() {
@@ -184,14 +216,45 @@ function CheckboxXBlockInitView(runtime, element) {
                 
                 
                 if(data.correct == true){
-                    //selectedCheck.parent().addClass('correct');
-                    //selectedCheck.parent().append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").removeClass('incorrect');
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").addClass('correct');
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices'] i[class='tick']").remove();
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices'] i[class='ballot']").remove();
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
                     console.log("The answer is correct");
                 }else{
                     // indicate correct and incorrect
-                    //selectedCheck.parent().addClass('incorrect');
-                    //selectedCheck.parent().append("<i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>");
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").removeClass('correct');
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").addClass('incorrect');
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices'] i[class='tick']").remove();
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices'] i[class='ballot']").remove();
+                    $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").append("<i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>");
                     console.log("The answer is incorrect.");
+                
+                    $.ajax({
+                        url: runtime.handlerUrl(element, "get_skill_mapping"),
+                        type: "POST",
+                        data: JSON.stringify({"getLocation": true}),
+                        anysc: false,
+                        success: function(data) {
+                            
+                            var course_id = data['course_id'];
+                            var paragraph_id = data['paragraph_id'];
+                            var location_id = data['location_id'];
+                            var hostname = $(location).attr('host') + "/courses/";
+
+                            if( paragraph_id != null && location_id != null && course_id != null){
+                                if($("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").length > 0 || $("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").html() != "") {
+                                    $("div[data-usage-id='" + xblock_id + "'] div[id='navigate_id']").remove();
+                                }
+                                
+                                $("div[data-usage-id='" + xblock_id + "'] div[class='hint-block']").append("<div id='navigate_id'>Please click the <a href='http://" + hostname + course_id + "/jump_to_id/" + location_id + "#" + paragraph_id + "'>link</a> here to review the course content again.");
+                                console.log(hostname +' | '+course_id+' | '+location_id+' | '+paragraph_id);
+                            }
+                        }
+                    });
+                
+                
                 }
                 // start to store all the user activities:
                 var userUrl = runtime.handlerUrl(element, 'get_student_id');

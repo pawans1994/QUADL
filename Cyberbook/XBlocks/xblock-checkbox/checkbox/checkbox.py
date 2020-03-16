@@ -78,7 +78,7 @@ class CheckboxXBlock(XBlock):
     hint_numbers = Integer(default=0, scope=Scope.user_state)
     # When student refresh the page, countTimes will increase one
     count_times = Integer(default=0, scope=Scope.user_state)
-
+    setBorderColor = Integer(default=0, scope=Scope.content, help='Help studio view to see if there is any skillname missing')
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -348,22 +348,127 @@ class CheckboxXBlock(XBlock):
    
 
 
-
-
-
-
-    # TO-DO: change this handler to perform your own actions.  You may need more
-    # than one handler, or you may not need any handlers at all.
     @XBlock.json_handler
-    def increment_count(self, data, suffix=''):
-        """
-        An example handler, which increments the data.
-        """
-        # Just to show data coming in...
-        assert data['hello'] == 'world'
+    def get_border_color(self, data, suffix=''):
+        # start to save the XBlock related information in the database:
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+        cursor = db.cursor();
+        
+        course_id = str(self.scope_ids.usage_id.course_key)
+        skillname = self.kc
+        #for select the same course to see if there is any other xblock type have the same id
+        sql2 = """SELECT * FROM edxapp_csmh.export_course_content_and_skill_validation WHERE type_of_xblock = "TextParagraph" AND course_id = %s AND lower(skillname) = lower(%s)"""
+        try:
+            cursor.execute(sql2, (course_id, skillname))
+            result1 = cursor.fetchone()
+            if not cursor.rowcount:
+                print("No any other xblocks have the same skillname")
+                HtmlSetBorderColor = 0
+            else:
+                print("Found xblock with the same skillname.")
+                HtmlSetBorderColor = 1
+        except Exception as e:
+            print("I am getting error when inserting - assessment.")
+            print(e)
+            db.rollback()
+        finally:
+            db.close()
+        return {"setBorderColor": HtmlSetBorderColor}
 
-        self.count += 1
-        return {"count": self.count}
+
+
+
+    #for skill mapping
+    @XBlock.json_handler
+    def module_skillname_saved(self, data, suffix=''):
+        
+        
+        skillname = str(self.kc)
+        xblock_id = str(self.scope_ids.usage_id)
+        url = str(data.get('location_id'))
+        paragraph_id = str(self.scope_ids.usage_id.block_id).replace("course", "block")
+        # if we want to use <jump_to_id> method then we need to know the course_id and paragraph_id. Format: /jump_to_id/location_id#paragraph_id
+        # now we are using full url link instead.
+        course_id = str(self.scope_ids.usage_id.course_key)
+        #full_url = str(data.get('full_url'))[:-1] + "#" + paragraph_id
+        #start saving it in the database, target table: skill_mapping
+        location_id = course_id + "$" + url + "$" + paragraph_id
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+        cursor = db.cursor();
+        sql = """INSERT INTO edxapp_csmh.module_skillname(xblock_id, type, skillname, location) VALUES (%s, %s, %s, %s)"""
+
+        try:
+            cursor.execute(sql,(xblock_id, "mcqs", skillname, location_id))
+            db.commit()
+                
+            print("Skillname has been saved in module_skillname table.")
+        except Exception as e:
+            print(e)
+            db.rollback()
+                
+            print("Database rollback!")
+            return {"result": "There has been a rollback while inserting"}
+        
+        sql1 = """select * from edxapp_csmh.module_skillname where id = (select max(id) from edxapp_csmh.module_skillname where type='text' and lower(skillname)=lower(%s) and id< (select id from edxapp_csmh.module_skillname where xblock_id=%s));"""
+        
+        sql2 = """INSERT INTO edxapp_csmh.skill_mapping(assessment_id, location) VALUES (%s, %s)"""
+        try: 
+            cursor.execute(sql1, (skillname, xblock_id))
+            match_result = cursor.fetchone()
+            db.commit()
+            if not cursor.rowcount:
+                print("No results found")
+                return {"result": "No results found."}
+        except Exception as e:
+            print(e)
+            db.rollback()
+            print("this skillname didn't have any paragraph match.")
+            return {"exception": "this skillname didn't have any paragraph match." }
+        try:
+            cursor.execute(sql2, (xblock_id, match_result[4]))
+            db.commit()
+            print("get location matching after the skillname saved.")
+        except Exception as ep:
+            print(ep)
+            db.rollback()
+            print("this skillname didn't have any paragraph match.")
+        finally:
+            db.close()
+        
+        return {"skillname": skillname, "xblock_id": xblock_id, "location_id": url, "paragraph_id": paragraph_id, "course_id": course_id, "max_id": match_result[0], "matching_location": match_result[4], "type": match_result[2], "xblock_id": match_result[1]}
+    
+
+
+    #for skill mapping
+    @XBlock.json_handler
+    def get_skill_mapping(self, data, suffix=''):
+        
+            
+        # We don't recognize this key
+        #start saving it in the database, target table: skill_mapping
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+        cursor = db.cursor();
+        sql = """SELECT location from edxapp_csmh.skill_mapping where assessment_id = '%s';"""
+        
+        try:
+            cursor.execute(sql % str(self.scope_ids.usage_id))
+            result = cursor.fetchone()
+            if not cursor.rowcount:
+                print("No results found")
+                return {"result": "No results found."}
+            url = result[0].split("$")
+            course_id = url[0]
+            location_id = url[1]
+            paragraph_id = url[2]
+            print("Got skill name from DB.", skillname)
+        except Exception as e:
+            print(e)
+            db.rollback()
+            print("Database rollback!")
+        finally:
+            db.close()
+        
+        return {'course_id': course_id, "location_id": location_id, "paragraph_id": paragraph_id}
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.

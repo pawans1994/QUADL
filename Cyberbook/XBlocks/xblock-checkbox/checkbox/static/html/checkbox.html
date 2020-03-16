@@ -1,4 +1,4 @@
-<div class="checkbox_block">
+<div class="checkbox_block" id="border">
 <!--p>CheckboxXBlock: count is now
     <span class='count'>{self.count}</span> (click me to increment).
 </p-->
@@ -7,7 +7,15 @@
 <br/>
 <form id="question-block">
     <p>{{ self.question }}</p>
-    <div id="choices">
+    <div id="choices" 
+        {%if self.user_choice is not None %}
+            {% if self.correct %}
+                class="correct"
+            {% endif %}
+            {% if self.correct is False %}
+                class="incorrect"
+            {% endif %}
+        {% endif %}>
     <fieldset role="contorlgroup" aira-label>
         {% for choice in self.choices %}
         <div>
@@ -24,6 +32,14 @@
         </div>
         {% endfor %}
         </fieldset>
+        {%if self.user_choice is not None %}
+            {% if self.correct %}
+                <i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>
+            {% endif %}
+            {% if self.correct is False %}
+                <i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>
+            {% endif %}
+        {% endif %}
     </div>
     <br/>
     <div class="hint-block">
