@@ -58,7 +58,7 @@ Please follow the below instructions to deploy a working version of the Cyberboo
       And start it again.
 8. Open your browser and enter the url `http://localhost:8080/SimStudentServlet`
 
-On more information on how to use SimStudentServlet follow this [document](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit)
+On more information on how to use SimStudentServlet and ModelTracer follow this [document](https://docs.google.com/document/d/1kJOa-lw8QvqD1BFx-wbflWlJPLjV01jZDJ-qDDLIIR4/edit#heading=h.tchay97r1yi1)
 
 
 #### AdaptiveLessonPlanner
@@ -85,7 +85,7 @@ Follow the below steps to set up a development environment for the Cyberbook pro
 #### SimStudentServlet and ModelTracer
 1. Open Eclipse and right click on the project navigation pane.
 2. Import the SimStudentServlet and ModelTracer projects to your workspace
-    * If you are using the same version of eclipse as was being used when this document was written, follow the instructions provided in this [document](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit). To import the projects
+    * If you are using the same version of eclipse as was being used when this document was written, follow the instructions provided in this [document](https://docs.google.com/document/d/1kJOa-lw8QvqD1BFx-wbflWlJPLjV01jZDJ-qDDLIIR4/edit#heading=h.tchay97r1yi1). To import the projects
     If you are using a different version you will have to figure out how to import a project to eclipse for your version.
     Below are the locations of the ModelTracer and SimStudentServlet projects
 
@@ -103,7 +103,7 @@ Follow the below steps to set up a development environment for the Cyberbook pro
 #### AdaptiveLessonPlanner
 1. Open Eclipse and right click on the project navigation pane.
 2. Import the AdaptiveLessonPlanner project to your workspace.
-    * If you are using the same version of eclipse as was being used when this document was written, follow the instructions provided in this [document](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit). To import the projects
+    * If you are using the same version of eclipse as was being used when this document was written, follow the instructions provided in this [document](https://docs.google.com/document/d/10SxFbQhuucgGtjLC4mgwT8gKi58PQRZZGii4L3kAXr4/edit#heading=h.dmkl37xo1ckl). To import the projects
     If you are using a different version you will have to figure out how to import a project to eclipse for your version.
     Below are the location of the AdaptiveLessonPlanner project.
 
@@ -117,7 +117,7 @@ All the Xblocks required for the Cyberbook installation to work correctly is ava
 
 #### Devstack
 1. Copy all the XBlocks to a location that is accessible to the OpenEdx environment. A convinient place for this would be `/edx-platform/xblocks`.
-2. Before you install the XBlocks you must install the corresponding prerequisite python libraries in the XBlock environment. Please follow [this link](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit) to get the latest updated XBlock requirements. 
+2. Before you install the XBlocks you must install the corresponding prerequisite python libraries in the XBlock environment. Please follow [this link](https://docs.google.com/document/d/1zPgNTKMdPZEK4oKrdEAyw6g4G4fQ5d_7at5RfofOmKk/edit#) to get the latest updated XBlock requirements. 
 3. Navigate to the `devstack` folder for your OpenEdx installation and run the below commands to install the XBlocks. The below commands are for installing TextXBlock (folder name).  
   `make studio-shell`  
   `pip install xblocks/TextXBlock/`  
@@ -126,7 +126,7 @@ All the Xblocks required for the Cyberbook installation to work correctly is ava
   `pip install xblocks/TextXBlock/`  
   `exit`  
   `make studio-restart && make lms-restart`
-4. After the Servers restart navigate to the studio and add the XBlocks to your course in the OpenEdx studio. You will find instructions for that [here](https://docs.google.com/document/d/1bCHC4CGaZhGRtpVYoMFpQDbG1r7d4UbzK1EzeFf0wxY/edit).
+4. After the Servers restart navigate to the studio and add the XBlocks to your course in the OpenEdx studio. You will find instructions for that [here](https://docs.google.com/document/d/1zPgNTKMdPZEK4oKrdEAyw6g4G4fQ5d_7at5RfofOmKk/edit#heading=h.90r8k33r95gj).
 
 
 #### Fullstack
