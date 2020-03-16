@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_two_independent_samples2">
+<head>
+<title>Two Independent Samples (2 of 7)</title>
+    <objref idref="carry_out_inferential_method_groups"/>
+    <objref idref="specify_hypotheses_for_groups"/>
+</head>
+<body>
+    
+<section>
+<title>The Two-Sample t-Test</title>
+<body>
+<p>Here again is the general situation which requires us to use the two-sample t-test:</p>
+<image style="block" src="../webcontent/image014.gif" alt="Sub-Population 1 has a
+Y Mean of &mu;_1, and Sub-Population 2 has a Y Mean of &mu;_2. From Sub-population 1 we take an
+SRS of size n_1, and from Sub-population 2 we take an SRS of size n_2. Both of these samples are
+independent."/>
+<p> Our goal is to compare the means μ<sub>1</sub> and μ<sub>2</sub> based on the two independent
+                    samples. </p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Step 1: Stating the Hypotheses</title>
+<body>
+<p> The hypotheses represent our goal, comparing the means: μ<sub>1</sub> and μ<sub>2</sub> . </p>
+<ul><li><p> The null hypothesis has the form:</p>
+<ul style= "none"><li><p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo> = </m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+			(which is the same as
+			<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> = </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+			)
+		</p></li></ul></li>
+<li><p> The alternative hypothesis takes one of the following three forms (depending on the context):</p>
+<ul style= "none"><li><p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> − </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo> &lt; </m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+			(which is the same as
+			<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> &lt; </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+			) (one-sided)
+		</p></li>
+<li><p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> − </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo> &gt; </m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+			(which is the same as
+			<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> &gt; </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+			) (one-sided)
+		</p></li>
+<li><p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> − </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo> ≠ </m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+			(which is the same as
+			<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>: </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo> ≠ </m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+			) (two-sided)
+		</p></li></ul></li></ul>
+<p>Note that the null hypothesis claims that there is no difference between the means, which can
+                    either represented as the difference is 0 (no difference), or as its
+                    (algebraically and conceptually) equivalent, <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (the means are equal). Either way, conceptually, H<sub>o</sub>
+                    claims that there is no relationship between the two relevant variables. </p>
+<p>The first way of writing the hypotheses (using a difference between the means) will be easier to use when (in the future) we look for a difference that is not 0.</p>
+    
+    <p>Each one of the three alternatives claims that there is a difference between the means. The two
+                    one-sided alternatives specify the nature of the difference; either negative,
+                    indicating that μ<sub>1</sub> is smaller than μ<sub>2</sub>, or positive,
+                    indicating that μ<sub>1</sub> is larger than μ<sub>2</sub>. The two-sided
+                    alternative, as usual, is more general and simply claims that a difference
+                    exists. As before, it should be clear from the context of the problem which of
+                    the three alternatives is appropriate. </p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>Note that our parameter of interest in this case (the parameter about which we are making an
+                    inference) is the difference between the means <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> , and that the null value is 0. </p>
+<example>
+
+<p>Recall that the purpose of this survey was to examine whether the opinions of females and males
+                            <em>differ </em>with respect to the importance of looks vs. personality.
+                        The hypotheses in this case are therefore:</p>
+<image style="block" src="../webcontent/image030.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,  H_a:
+&mu;_1 - &mu;_2 &ne; 0"/>
+<p>
+					where
+					μ<sub>1</sub>
+					represents the mean importance for females and
+					μ<sub>2</sub>
+					represents the mean importance for males.
+				</p>
+<p>It is important to understand that conceptually, the two hypotheses claim:</p>
+<p>H<sub>o</sub>: Score (of looks vs. personality) is not related to gender</p>
+<p>H<sub>a</sub>: Score (of looks vs. personality) is related to gender</p>
+</example>
+<!--<activity idref="_u5_m2_dig2" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p>In order to check the claim that the pregnancy length of women who smoke during pregnancy is shorter, on average, than the pregnancy length of women who do not smoke, a random sample of 35 pregnant women who smoke and a random sample of 35 pregnant women who do not smoke were chosen and their pregnancy lengths were recorded. Here is a figure of this example:
+            </p>
+            <image style="block" src="../webcontent/image156.gif" alt="The Smoking (X) variable
+gives us our two populations. These are Population 1: Pregnant women who smoke, and Pop 2: Pregnant
+Women who don't smoke. For each of these populations we have the variable Length (Y) and its mean.
+For smokers we have &mu;_1, and for non-smokers we have &mu;_2. From the population of smokers, we
+create an SRS of size 35, and from the population of non-smokers we create an SRS of 35."/>
+            <wb:inline idref="u4_m3_twosamples2_tutor1" purpose="didigetthis"/>
+        </body>
+    </section>
+    
+    <p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

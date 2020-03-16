@@ -1,0 +1,148 @@
+<!-- Created by Will McClure June 24, 1999 -->
+<HTML>
+<HEAD><TITLE>
+Bacteriorhodopsin
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+
+<TABLE WIDTH="850" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TH Colspan=2 align=left>Biochemistry I</TH>
+<TH colspan=2 align=right>Bacteriorhodopsin Structure</TH>
+<TR>
+
+ <TD>&nbsp;</TD>
+
+ <TD BGCOLOR="#eeeeee" valign=top width=500>
+ <script type="text/javascript">
+ jmolApplet([500,500],
+ "load ./jmol/pdbs/br.pdb;wireframe off;spacefill off;select protein;trace;color structure;select LIP;spacefill;color cpk;select LYR;spacefill;color purple;select hoh;wireframe 40;spacefill 120;color cpk;select atomno=5;label N;color label purple;font label 16;select atomno=3701;label C;color labels purple;font label 16;select atomno=3379;label retinal;color label purple;font label 16;rotate z 166;rotate y 15;rotate x -4;select all;set specular on","left");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background [0,0,0];color labels yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("left")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+  </td>
+  <TD BGCOLOR="#eeeeee">&nbsp;</TD>
+
+
+<TD BGCOLOR="#eeeeee" VALIGN="TOP" width=350><FONT COLOR="#000000">
+ 
+ <p>
+  <b>Bacteriorhodopsin</b> (cartoon &amp; colored structure) is shown with one layer
+  of phospholipid and several layers of water. The retinal chromophore is
+  Spacefill, colored purple.<BR><BR>
+   
+   
+&nbsp; <B>Rotate</B>: 
+ <script type="text/javascript">
+  jmolSetTarget("left") 
+ jmolRadioGroup([
+ ["move 0 90 0 0 0 0 0 0 3 60","Y 90&deg;",false],
+ ["move 0 -90 0 0 0 0 0 0 3 60","Y -90&deg;",false],
+ ["move 90 0 0 0 0 0 0 0 3 60","X 90&deg;",false],
+ ["move -90 0 0 0 0 0 0 0 3 60","X -90&deg;",false]]," ","Rotate")
+ </script>
+  
+ <BR>
+
+&nbsp; <B>Hide/Restore</B>: 
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolCheckbox("select LIP;spacefill off;wireframe off;select*","select LIP;spacefill on;wireframe off;color cpk;select*","+/- Lipids",false);
+ </script>
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolCheckbox("select hoh;spacefill off;wireframe off","select hoh;color cpk;wireframe 40;spacefill 120;select*","+/- water",false);
+ </script>
+  
+  <BR><BR>
+  &nbsp;
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolButton("set measurements ANGSTROMS;set measurements 0.3;monitor 125 433;color monitors black","","","Distance");  
+  </script>&nbsp;Distances (&Aring;): [<FONT FACE="SYMBOL">a</FONT>-Helix (22 residues)]
+  
+  <BR>
+  &nbsp; <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolButton("select hydrophobic;color green;wireframe 150;select all","","","Distance");  
+  </script>&nbsp;Hydrophobic residues (Green)
+   
+   <BR>
+    &nbsp; <script type="text/javascript">
+     jmolSetTarget("left") 
+     jmolButton("select lys,arg,glu,asp;color red;wireframe 150;select all","","","Distance");  
+    </script>&nbsp;Charged Residues (Red)
+
+<P>
+<FONT Color=#000000>These features were noted in Lecture:<font color=#000000><BR>
+ &nbsp;1. The protein has seven <FONT FACE="Symbol">a</FONT>-helices that span the bilayer.<BR>
+ &nbsp;2. The membrane-exposed surface is highly hydrophobic.<BR>
+ &nbsp;3. The charged/polar residues are at the solvent interfaces and also line the internal hydrophilic channel.
+ <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolButton("select all;color white;restrict protein;wireframe off;spacefill off;monitor off;trace;select 37,165,40,95,45,89,88,23,211,84,81,56,78,204,8,2;define chan selected;select chan and (sidechain or alpha);wireframe 80;spacefill 120;color cpk;select LYR;spacefill;color purple;restrict elemno>1","","","Distance");  
+  </script>&nbsp;Polar residues utilized for H<sup>+</sup> transport (Ball &amp; Stick).
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolCheckbox("set windowCentered off;center atomno=3320;set windowCentered on;zoomto 1.0 170","set windowCentered off;center atomno=3320;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+  </script>
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolCheckbox("select *.P43;color orange;spacefill 100;select all","select *.P43;spacefill off;select all","+/-Phos",false);
+  </script>
+  <!--
+<B>Proton Transport groups</B><BR>
+ &nbsp; <EMBED TYPE="application/x-spt" WIDTH=12 HEIGHT=12 HSPACE="3" ALIGN=BASELINE BUTTON="push" TARGET="top.document.Br"
+script ="">
+Side chains of polar residues in the channel, utilized for proton transport (Ball &amp; Stick).<BR>
+
+
+
+
+
+
+
+
+
+
+</TD></TR>
+ -->
+</TABLE>
+ <!--
+  
+  <HR>
+ 
+<P>
+Three more membrane protein structures:<BR><B>
+ &nbsp;Bacteriorhodopsin &nbsp; &nbsp; &nbsp;
+<A HREF="http://www.bio.cmu.edu/courses/03231/ProtStruc/1bl8.htm">K<SUP>+</SUP>-Channel</A> &nbsp; &nbsp; &nbsp;
+<A HREF="http://www.bio.cmu.edu/courses/03231/ProtStruc/2mpr.htm">Maltoporin</A> &nbsp; &nbsp; &nbsp;
+<A HREF="http://www.bio.cmu.edu/courses/03231/ProtStruc/7ahl.htm"><FONT FACE="Symbol">a</FONT>-Hemolysin</A>
+</B>
+-->
+
+
+<HR>
+<TT>12.28.2007</TT>
+</BODY>
+</HTML>
+

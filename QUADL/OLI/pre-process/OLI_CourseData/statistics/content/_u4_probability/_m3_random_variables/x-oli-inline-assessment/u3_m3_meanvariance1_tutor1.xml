@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance1_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Recall that the mean number of defective products in an hour for Xavier's production line
+            (the mean of X) was 1.8. Based on your observation, which of the following do you think
+            is true about the mean of Y?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">The mean of Y is greater than 1.8.</choice>
+         <choice value="Res2">The mean of Y is less than 1.8.</choice>
+         <choice value="Res3">The mean of Y is roughly equal to 1.8.</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback>Correct. The probability distribution of Y has most of the weight
+               (80%) on the larger values (3, 4), while the distribution of X has most of the weight
+               (70%) on the smaller values (0, 1, 2). Since the mean is an  average of the values
+               weighted by their probabilities, we would expect the mean of Y to be larger than the
+               mean of X, which is 1.8.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Note that the probability distribution of Y has most of the weight
+               (80%) on the larger values (3, 4), while the distribution of X has most of the weight
+               (70%) on the smaller values (0, 1, 2). Recall that the mean of a random variable is
+               an average of its values weighted by their corresponding probabilities. Please try
+               again.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Note that the probability distribution of Y has most of the weight
+               (80%) on the larger values (3, 4), while the distribution of X has most of the weight
+               (70%) on the smaller values (0, 1, 2). Recall that the mean of a random variable is
+               an average of its values weighted by the corresponding probabilities. Please try
+               again.</feedback>
+         </response>
+         <hint>Look at both distributions. Where is most of the "weight" (probability): on the
+            smaller values, or on the larger values?</hint>
+      </part>
+   </question>
+</assessment>

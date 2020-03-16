@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_two_independent_samples4">
+    <head>
+        <title>Two Independent Samples (4 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Step 3: Finding the p-value of the test</title>
+            <body>
+                <p>Since our test is called the two-sample t test ,we know that the p-values are
+                    calculated under a t distribution. Indeed, it turns out that the null
+                    distribution of our test statistic is approximately t. Figuring out which one of
+                    the t distributions (in other words, how many degrees of freedom this t
+                    distribution has) is quite involved and will not be discussed here. Instead, we
+                    use a statistics package to find that the p-value in this case is 0.</p>
+                <example>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R</title>
+                            <p>Here, again is the relevant output for our example:</p>
+                            <image style="block" src="../webcontent/image192_r.gif" alt="R output:
+            > t.test(looks$Score~looks$Gender)
+            Welch Two Sample t-test
+            data: looks$Score by looks$Gender
+            t = -4.6574, df = 182.973, p-value = 6.143e-06
+            alternative hypothesis: true difference in means is not equal to 0
+            95 percent confidence interval:
+            -3.695865  -1.496292
+            sample estimates:
+            mean in group Female 10.73333
+            mean in group Male 13.32941"/>
+                            <p>According to R the p-value of this test is so small that it is
+                                essentially 0. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost
+                                impossible to get data like that observed (or even more extreme) had
+                                the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences
+                                between females and males with respect to whether they value looks
+                                vs. personality, it would be almost impossible (probability
+                                approximately 0) to get data where the difference between the sample
+                                means of females and males is -2.6 (that difference is 10.73 - 13.33 = -2.6) or higher.
+                            </p>
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch</title>
+                            <p>Here, again is the relevant output for our example:</p>
+                            <image style="block" src="../webcontent/image192_statcrunch_2.gif" alt="Two
+Sample T - Test and CI: Score(Y),Gender (X)
+                Summary statistics for Score (Y):
+                For Gender(X) = Female: n = 150, Mean = 10.733334, Std. Dev. = 4.254751, Std. Err. = 0.347399
+                For Gender(X) = Male: n = 85, Mean = 13.3294115, Std. Dev. = 4.0189676, Std. Err. = 0.43591824
+                
+                Hypothesis test results: &mu;_1: mean of score (Y) where X = Female. &mu;_2: mean of score (Y)
+where X = Male. &mu;_1 - &mu;_2: mean difference. H_0: &mu;_1 - &mu;_2 = 0, H_A: &mu;_1 - &mu;_2 &ne; 0
+                
+                Difference: &mu;_1 - &mu;_2
+                Sample Mean: -2.5960784
+                Std. Err.: 0.55741435
+                DF: 182.97267
+                T-Stat: -4.657358
+                P-Value: &lt; 0.0001
+                
+                95% Confidence Interval Results:
+                Difference: &mu;_1 - &mu;_2
+                Sample Mean: -2.5960784
+                Std. Err.: 0.55741435
+                DF: 182.97267
+                L. Limit: -3.6958647
+                U. Limit: -1.4962921"/>
+                            <p>According to the output the p-value of this test is less than 0.0001. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost impossible to get data like that observed (or even more extreme) had the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences between females and males with respect to whether they value looks vs. personality, it would be almost impossible (probability approximately 0) to get data where the difference between the sample means of females and males is -2.596 (that difference is 10.733 - 13.329 = -2.596) or higher. </p>
+                            
+                        </alternative>
+                         <alternative value="minitab">
+                            <title>Minitab</title>
+                            <p>Here, again is the relevant output for our example:</p>
+                             <image style="block" src="../webcontent/image193.gif" alt="Two-Sample T-Test and Cl:
+Score(Y), Gender(X)
+                 Two-sample T for Score (Y)
+                 Gender (X) = Female: N = 150, Mean = 10.73, StDev = 4.25, SE Mean = 0.35
+                 Gender (X) = Male: N = 85, Mean = 13.33, StDev = 4.02, SE Mean = 0.44
+                 
+                 Difference = mu (Female) - mu (Male)
+                 Estimate for difference: -2.59608
+                 95% CI for difference: (-3.69590, -1.49625)
+                 T-Test of difference = 0 (vs not =): T-Value = -4.66 P-Value = 0.000 DF = 182"/>
+                            <p>According to the output the p-value of this test is so small that the
+                                software reports it to be 0. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost
+                                impossible to get data like that observed (or even more extreme) had
+                                the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences
+                                between females and males with respect to whether they value looks
+                                vs. personality, it would be almost impossible (probability
+                                approximately 0) to get data where the difference between the sample
+                                means of females and males is -2.6 (that difference is 10.73 - 13.33 = -2.6) or higher.
+                            </p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007</title>
+                            <p>According to Excel the p-value of this test is so small that it is
+                                essentially 0. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost
+                                impossible to get data like that observed (or even more extreme) had
+                                the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences
+                                between females and males with respect to whether they value looks
+                                vs. personality, it would be almost impossible (probability
+                                approximately 0) to get data where the difference between the sample
+                                means of females and males is -2.6 (that difference is 10.73 - 13.33 = -2.6) or higher.
+                            </p>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003</title>
+                            <p>According to Excel the p-value of this test is so small that it is
+                                essentially 0. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost
+                                impossible to get data like that observed (or even more extreme) had
+                                the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences
+                                between females and males with respect to whether they value looks
+                                vs. personality, it would be almost impossible (probability
+                                approximately 0) to get data where the difference between the sample
+                                means of females and males is -2.6 (that difference is 10.73 - 13.33 = -2.6) or higher.
+                            </p>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Calculator</title>
+                            <p>Here, again is the relevant output for our example:</p>
+                            <image style="block" src="../webcontent/image192_ti.gif" alt="2-SampTTest
+                &mu;_1; &ne; &mu;_2
+                t = -4.6574
+                p = 6.1423
+                df = 182.97
+                x-bar_1 = 10.733
+                x-bar_2 = 13.330
+                Sx_1 = 4.2548
+                Sx_2 = 4.0190
+                n_1 = 150
+                n_2 = 85"/>
+                            <p>According to the TI graphing calculator the p-value of this test is so small (6.14E-6) that it is
+                                essentially 0. How do we interpret this?</p>
+                            <p>A p-value which is practically 0 means that it would be almost
+                                impossible to get data like that observed (or even more extreme) had
+                                the null hypothesis been true.</p>
+                            <p>More specifically to our example, if there were no differences
+                                between females and males with respect to whether they value looks
+                                vs. personality, it would be almost impossible (probability
+                                approximately 0) to get data where the difference between the sample
+                                means of females and males is 2.6 (that difference is 10.73 - 13.33 = -2.6) or higher.
+                            </p>
+                        </alternative>
+                    </alternatives>
+                    <p>Comment: Note that the output tells us that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:msub>
+                                        <m:mi>y</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>−</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mover>
+                                    <m:msub>
+                                        <m:mi>y</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math> is approximately -2.6. But more importantly, we want to know if
+                        this difference is significant.  To answer this, we use the fact that this
+                        difference is 4.66 standard errors below the null value.</p>
+                </example>
+            </body>
+        </section>
+        <section>
+            <title>Step 4: Conclusion in context</title>
+            <body>
+                <p>As usual a small p-value provides evidence against H<sub>o</sub>. In our case our p-value is
+                    practically 0 (which smaller than any level of significance that we will
+                    choose). The data therefore provide very strong evidence against H<sub>o</sub> so we reject
+                    it and conclude that the mean Importance score (of looks vs personality) of
+                    males differs from that of females. In other words, males and females differ with respect
+                    to how they value looks vs. personality.</p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comments</title>
+            <body>
+                <p>You might ask yourself: "Where do we use the test statistic?"</p>
+                <p>It is true that for all practical purposes all we have to do is check that the
+                    conditions which allow us to use the two-sample t-test are met, lift the p-value
+                    from the output, and draw our conclusions accordingly.</p>
+                <p>However, we feel that it is important to mention the test statistic for two
+                reasons:</p>
+                <ol>
+               <li> <p>The test statistic is what's behind the scenes; based on its null distribution
+                    and its value, the p-value is calculated.</p></li>
+             <li>   <p>Apart from being the key for calculating the p-value, the test statistic is
+                    also itself a measure of the evidence stored in the data against H<sub>o</sub>. As we
+                    mentioned, it measures (in standard errors) how different our data is from what
+                    is claimed in the null hypothesis.</p></li></ol>
+            </body>
+        </section>
+    </body>
+</workbook_page>

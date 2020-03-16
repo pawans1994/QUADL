@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean9_tutor4">
+    <title>Tutor</title>
+    <question id="q1">
+        <body><p>To test
+                whether or not the mean circuit board thickness is 12 mm with the new process, for
+                which one of the following would <em>neither the z-test nor the t-test</em> be
+                justified?</p>
+           
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">A random sample of 9 circuit boards is tested; the only available
+                standard deviation is the one that is computed for the sample; and the histogram of
+                the data is as shown above in histogram A.</choice>
+            <choice value="B">A random sample of 40 circuit boards is tested; the only available
+                standard deviation is the one that is computed for the sample; and the histogram of
+                the data is as shown above in histogram B.</choice>
+            <choice value="C"><?oxy_insert_start author="mmyers" timestamp="20101128T104154-0500"?>A
+                <?oxy_insert_end?>random sample of 35 circuit boards is tested; the population
+                standard deviation sigma is known; and the histogram of the data is as shown above
+                in histogram C.</choice>
+            <choice value="D">A random sample of 9 circuit boards is tested; the only available
+                standard deviation is the one that is computed for the sample; and the histogram of
+                the data is as shown above in histogram D.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. In this case, although the sample size is
+                    relatively small (only 9 boards) and although sigma is unknown, notice that the
+                    population can be reasonably assumed to be
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T104232-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104232-0500" content="N"?>ormal
+                    (because the data distribution is reasonably unimodal and symmetric). So in this
+                    case, a
+                    t-<?oxy_insert_start author="mmyers" timestamp="20101128T104249-0500"?>test<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104250-0500" content="distribution"?>
+                    would be justified. </feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. In this case, although sigma is unknown, and
+                    although the population cannot be assumed to be
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T104300-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104300-0500" content="N"?>ormal
+                    in shape (since the data distribution shows severe skewness), notice that the
+                    sample size is reasonably large. So in this case, a
+                    t-<?oxy_insert_start author="mmyers" timestamp="20101128T104518-0500"?>test<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104520-0500" content="distribution"?>
+                    would be justified.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. In this case, although the population cannot be
+                    assumed to be
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T104549-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104548-0500" content="N"?>ormal
+                    in shape (since the data distribution shows severe skewness), notice that sigma
+                    is known, and notice that the sample size is greater than 30. So in this case,
+                    by the Central Limit Theorem, a z-test would be justified. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. In this case, the sample size is relatively small (only 9
+                    boards), sigma is unknown, and the population cannot be reasonably assumed to
+                    vary normally (because the data distribution is noticeably skewed). So in this
+                    case, nether the z-test nor the t-test would be justified to conduct formal
+                    statistical inference.
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T104618-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104618-0500" content="["?>A
+                    different sort of test called a
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T104623-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104623-0500" content="‘"?>non-parametric<?oxy_insert_start author="mmyers" timestamp="20101128T104626-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104626-0500" content="’"?>
+                    test might be justified, but that is beyond the scope of this
+                    course.<?oxy_insert_start author="mmyers" timestamp="20101128T104630-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104629-0500" content="]"?></feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

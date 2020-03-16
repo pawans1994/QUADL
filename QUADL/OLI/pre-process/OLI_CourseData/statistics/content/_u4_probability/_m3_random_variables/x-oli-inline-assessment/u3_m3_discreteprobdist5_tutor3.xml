@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist5_tutor3">
+    <title>Tutor</title>
+    <content><p>Data were
+            collect<?oxy_insert_start author="mmyers" timestamp="20101121T115309-0500"?>ed<?oxy_insert_end?>
+            from a survey given to graduating college seniors on the number of times they had
+            changed majors. From that
+            data<?oxy_insert_start author="mmyers" timestamp="20101121T115323-0500"?>,<?oxy_insert_end?>
+            a probability distribution was constructed. The random variable X is defined as the
+            number of times a graduating senior changed majors. It is shown below:</p> 
+    <image src="../webcontent/u4_m3_discrete_probdist5_tutor2_image1.gif"/>
+    </content>
+    <question id="q1">
+        <body>
+            <p>What is the probability that a randomly selected student changed
+                his<?oxy_insert_start author="mmyers" timestamp="20101121T115430-0500"?> or
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115430-0500" content="/"?>her
+                major at least once?</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="Res1">.12</choice>
+            <choice value="Res2">.35</choice>
+            <choice value="Res3">.37</choice>
+            <choice value="Res4">.65</choice>
+            <choice value="Res5">.72</choice>
+        </multiple_choice>
+        
+        <part>
+            <response match="Res1" score="0">
+                <feedback>Incorrect. You've found P(changed majors more than twice) or
+                    P(changed majors three or more times) Please try again.</feedback>
+            </response>
+            <response match="Res2" score="0">
+                <feedback>Incorrect.  You've found P(changed majors more than once).  We want P(changed majors <em>at least</em> once).  Please try again.</feedback>
+            </response>
+            <response match="Res3" score="0">
+                <feedback>Incorrect. You've found
+                    P(change<?oxy_insert_start author="mmyers" timestamp="20101121T115522-0500"?>d<?oxy_insert_end?>
+                    majors exactly once). We want P(changed majors <em>at least</em> once). Please
+                    try again.</feedback>
+            </response>
+            <response match="Res4" score="0">
+                <feedback>Incorrect. You've found
+                    P(change<?oxy_insert_start author="mmyers" timestamp="20101121T115531-0500"?>d<?oxy_insert_end?>
+                    majors at most once). Recall that <em>at least</em> means that number or more.
+                    Please try again.</feedback>
+            </response>
+            <response match="Res5" score="1">
+                <feedback>Correct. <em>At least once</em> means one or
+                    more<?oxy_insert_start author="mmyers" timestamp="20101121T115545-0500"?>
+                    times<?oxy_insert_end?>. So P(changed majors at least once) = P(X ≥ 1) = P(X =
+                    1) + P(X = 2) + P(X = 3) + P(X = 4) + P(X = 5). This is .37 + .23 + .09 + .02 +
+                    .01 = .72. It is a little easier using complements. P(changed majors at least
+                    once) = 1 - P(X = 0). This is 1 -
+                    .28<?oxy_insert_start author="mmyers" timestamp="20101121T115613-0500"?>,<?oxy_insert_end?>
+                    which also is .72.</feedback>
+            </response>
+        </part>
+    </question>
+    
+    <question id="q2">
+        <body><p>What is the probability that a randomly selected student changed
+                his<?oxy_delete author="mmyers" timestamp="20101121T115647-0500" content="/"?><?oxy_insert_start author="mmyers" timestamp="20101121T115647-0500"?>
+                or <?oxy_insert_end?>her major at most twice?</p></body>
+        <multiple_choice shuffle="false">
+            <choice value="Res1">.12</choice>
+            <choice value="Res2">.23</choice>
+            <choice value="Res3">.35</choice>
+            <choice value="Res4">.88</choice>
+        </multiple_choice>
+        <part>
+            <response match="Res1" score="0">
+                 <feedback>Incorrect.  You've found P(X > 2).  We want P(X is at most 2).  Please try again.</feedback>
+            </response>
+            <response match="Res2" score="0">
+                <feedback>Incorrect.  You've found P(X = 2).  We want P(X is at most 2).  Please try again.</feedback>
+            </response>
+            <response match="Res3" score="0">
+                <feedback>Incorrect. You've found P(X ≥ 2) which means at least 2.
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T115732-0500"?>We want P(X
+                    is at most 2) <?oxy_insert_end?>Please try again.</feedback>
+            </response>
+            <response match="Res4" score="1">
+                <feedback>Correct. We want P(changed majors at most twice). At most means that
+                    number or less. P(X ≤ 2) = P(X = 0) + P(X = 1) + P(X = 2) = .28 + .37 + .23 =
+                    .88. We
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T115803-0500"?>also
+                    <?oxy_insert_end?>could have
+                    <?oxy_delete author="mmyers" timestamp="20101121T115807-0500" content="also "?>used
+                    complements. The complement of at most 2 is more than 2. So, P(X ≤ 2) = 1 - P(X
+                    > 2). P(X ≤ 2) = 1 - P(X > 2) = 1 - [ P(X = 3) + P(X = 4) + P(X = 5) ]. The only
+                    advantage to using this
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T115836-0500"?>method<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115834-0500" content="instead"?>
+                    is that the numbers (.09 + .02 + .01) are easier to add.</feedback>
+            </response>
+
+        </part>
+    </question>
+    
+    <question id="q3">
+        <body><p>Given that a randomly selected person did change majors, what is the probability that
+                he<?oxy_insert_start author="mmyers" timestamp="20101121T115856-0500"?> or
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115855-0500" content="/"?>she
+                changed majors more than three times?</p> </body>
+        <multiple_choice shuffle="false">
+            <choice value="Res1">.03</choice>
+            <choice value="Res2">.04</choice>
+            <choice value="Res3">.35</choice>
+            <choice value="Res4">.72</choice>
+        </multiple_choice>
+        <part>
+            <response match="Res1" score="0">
+                <feedback>Incorrect.  You've found P(X > 3).  However, it is given that the person changed majors, so we are given that X ≥ 1.  We want P(X > 3 | X ≥ 1).  Please try again.</feedback>
+            </response>
+            <response match="Res2" score="1">
+                <feedback>Good
+                    job<?oxy_insert_start author="mmyers" timestamp="20101121T115931-0500"?>!<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115929-0500" content="."?>
+                    We want P(X > 3 | X ≥ 1) = .03 / .72
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T115943-0500"?>=<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115944-0500" content="or"?>
+                    .04.</feedback>
+            </response>
+            <response match="Res3" score="0">
+                <feedback>Incorrect.  We want P(X > 3 | X ≥ 1).  Please try again.</feedback>
+            </response>
+            <response match="Res4" score="0">
+                <feedback>Incorrect.  You found P(the person changed majors).  However, we want P(X > 3 | X ≥ 1).  Please try again.</feedback>
+            </response>
+        </part>
+    </question>
+    
+    
+    
+    
+</assessment>

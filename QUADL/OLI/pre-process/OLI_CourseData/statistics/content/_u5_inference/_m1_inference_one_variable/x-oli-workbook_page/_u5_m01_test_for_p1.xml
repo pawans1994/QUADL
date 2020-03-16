@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p1">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (1 of 13)</title>
+        <objref idref="specify_hypotheses"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Overview</title>
+            <body><p>Now that we understand the process we go through in hypothesis testing and the logic
+            behind it, we are ready to start learning about specific statistical tests (also known
+            as significance tests).</p>
+        <p>The first test we are going to learn is the test about the population proportion (p).
+                    This is test is widely known as the <em>z-test for the population proportion
+                        (p).</em> (We will understand later where the "z-test" part comes from.)</p>
+        <p>When we conduct a test about a population proportion, we are working with a categorical
+            variable. Later in the course, after we have learned a variety of hypothesis tests, we
+            will need to be able to identify which test is appropriate for which situation.
+            Identifying the variable as categorical or quantitative is an important component of
+            choosing an appropriate hypothesis test.</p>
+        <wb:inline idref="u4_m2_testprop1_tutor1" purpose="learnbydoing"/>
+                <p>Our discussion of hypothesis testing for the population proportion p follows the four steps of hypotheses testing that we introduced in our general discussion on hypothesis testing, but this time we go into more details. More specifically, we learn how the test statistic and p-value are calculated and interpreted.</p> 
+                <p>Once we learn how to carry out the test for the population proportion p, we discuss some general topics that are related to hypotheses testing. More specifically, we see what role the sample size plays and understand how hypothesis testing and interval estimation (confidence intervals) are related.</p>
+       <!-- <p>In this part of our discussion on hypothesis testing, we will go into details that we did
+                    not go into before. More specifically, we will use this test to introduce the
+                    idea of a test statistic, and details about how p-values are calculated.</p>-->
+        <p>Let's start by introducing the three examples, which will be the leading examples in our
+                    discussion. Each example is followed by a figure illustrating the information
+                    provided, as well as the question of interest.</p></body></section>
+        <example>
+            <title>1</title>
+            <p>A machine is known to produce 20% defective products, and is therefore sent for
+                repair. After the machine is repaired, 400 products produced by the machine are
+                chosen at random and 64 of them are found to be defective. Do the data provide
+                enough evidence that the proportion of defective products produced by the machine
+                (p) has been <em>reduced</em> as a result of the repair?</p>
+            <p>The following figure displays the information, as well as the question of
+                interest:</p>
+            <image style="block" src="../webcontent/image212.gif" alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The question we wish to answer is
+&quot;is p still .20 or has it been reduced?&quot; We take a sample of 400 products, represented by
+a smaller circle. We find that 64 of these are defective."/>
+            <p>The question of interest helps us formulate the null and alternative
+                hypothes<?oxy_insert_start author="mmyers" timestamp="20101126T195739-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T195738-0500" content="i"?>s
+                in terms of p, the proportion of defective products produced by the machine
+                following the repair:</p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T195857-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T195902-0500" content="Ho"?>:</em>
+                p = .20
+                (<?oxy_insert_start author="mmyers" timestamp="20101126T200133-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200133-0500" content="n"?>o
+                change<?oxy_insert_start author="mmyers" timestamp="20101126T200135-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200135-0500" content=","?>
+                the repair did not
+                help)<?oxy_insert_start author="mmyers" timestamp="20101126T200122-0500"?>.<?oxy_insert_end?></p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T195913-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T195911-0500" content="Ha"?>:</em>
+                p &lt; .20 (<?oxy_insert_start author="mmyers" timestamp="20101126T200126-0500"?>The
+                <?oxy_insert_end?>repair was
+                effective)<?oxy_insert_start author="mmyers" timestamp="20101126T200123-0500"?>.<?oxy_insert_end?></p>
+        </example>
+        <example>
+            <title>2</title>
+            <p>There are rumors that students at a certain liberal arts college are more inclined to
+                use drugs than U.S. college students in general. Suppose that in a simple random
+                sample of 100 students from the college, 19 admitted to marijuana use. Do the data
+                provide enough evidence to conclude that the proportion of marijuana users among the
+                students in the college (p) is <em>higher</em> than the national proportion, which
+                is .157? (This number is reported by the Harvard School of Public Health.)</p>
+            <p>Again, the following figure displays the information as well as the question of
+                interest:</p>
+            <image style="block" src="../webcontent/image213.gif" alt="A large circle represents
+the population Students at the college. We want to know p about this population, or what is the
+population proportion of students using marijuana. The question we wish to answer is &quot;is p
+.157 (like the national figure) or higher?&quot; We take a sample of 100 students, represented by
+a smaller circle. We find that 19 use marijuana."/>
+            <p>As before, we can formulate the null and alternative hypotheses in terms of p, the
+                proportion of students in the college who use marijuana:</p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T200030-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200028-0500" content="Ho"?>:</em>
+                p = .157 (same as among all college students in the
+                <?oxy_insert_start author="mmyers" timestamp="20101126T200042-0500"?>country<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200041-0500" content="US"?>)<?oxy_insert_start author="mmyers" timestamp="20101126T200115-0500"?>.<?oxy_insert_end?></p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T200059-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200057-0500" content="Ha"?>:</em>
+                p &gt; .157 (higher than the national
+                figure)<?oxy_insert_start author="mmyers" timestamp="20101126T200111-0500"?>.<?oxy_insert_end?></p>
+        </example>
+        <example>
+            <title>3</title>
+            <p>Polls on certain topics are conducted routinely in order to monitor changes in the
+                public's opinions over time. One such topic is the death penalty. In 2003 a poll
+                estimated that 64% of U.S. adults support the death penalty for a person convicted
+                of murder. In a
+                <?oxy_insert_start author="mmyers" timestamp="20101126T200213-0500"?>more
+                <?oxy_insert_end?>recent poll, 675 out of
+                1<?oxy_insert_start author="mmyers" timestamp="20101126T200219-0500"?>,<?oxy_insert_end?>000
+                U.S. adults chosen at random were in favor of the death penalty for convicted
+                murderers. Do the results of this poll provide evidence that the proportion of
+                U<?oxy_insert_start author="mmyers" timestamp="20101126T200241-0500"?>.<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101126T200241-0500"?>.<?oxy_insert_end?>
+                adults who support the death penalty for convicted murderers (p)<?oxy_delete author="mmyers" timestamp="20101126T200249-0500" content=" has"?>
+                <em>changed</em>
+                <?oxy_insert_start author="mmyers" timestamp="20101126T200256-0500"?>between<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200259-0500" content="since"?>
+                2003<?oxy_insert_start author="mmyers" timestamp="20101126T200304-0500"?> and the
+                later poll<?oxy_insert_end?>?</p>
+            <p>Here is
+                <?oxy_insert_start author="mmyers" timestamp="20101126T200326-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200326-0500" content="the"?>
+                figure that displays the information, as well as the question of interest:</p>
+            <image style="block" src="../webcontent/image214.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The question we wish to answer is &quot;has p changed since 2003
+(when it was .64)?&quot; We take a sample of 1000 US Adults, represented by a smaller circle. We
+find that 675 are in favor."/>
+            <p>Again, we can formulate the null and alternative hypotheses in term of p, the
+                proportion of U.S. adults who support the death penalty for convicted murderers.</p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T200354-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200351-0500" content="Ho"?>:</em>
+                p =<?oxy_insert_start author="mmyers" timestamp="20101126T200358-0500"?>
+                <?oxy_insert_end?>.64
+                (<?oxy_insert_start author="mmyers" timestamp="20101126T200403-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200403-0500" content="n"?>o
+                change from
+                2003)<?oxy_insert_start author="mmyers" timestamp="20101126T200406-0500"?>.<?oxy_insert_end?></p>
+            <p>
+                <em><?oxy_insert_start author="mmyers" timestamp="20101126T200414-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200411-0500" content="Ha"?>:</em>
+                p ≠<?oxy_insert_start author="mmyers" timestamp="20101126T200419-0500"?>
+                <?oxy_insert_end?>.64
+                (<?oxy_insert_start author="mmyers" timestamp="20101126T200422-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T200421-0500" content="s"?>ome
+                change since
+                2003)<?oxy_insert_start author="mmyers" timestamp="20101126T200425-0500"?>.<?oxy_insert_end?></p>
+        </example>
+        <!--<activity idref="_u5_m1_lbd18" purpose="learnbydoing"/>-->
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>According to the American Association of Community Colleges, 23% of community
+                    college students receive federal grants. The California Community College
+                    Chancellor’s Office anticipates that the percentage is smaller for California
+                    community college students. They collect a sample of
+                    1<?oxy_insert_start author="mmyers" timestamp="20101126T200505-0500"?>,<?oxy_insert_end?>000
+                    community college students in California and find that 210 received federal
+                    grants.</p>
+                <wb:inline idref="u4_m2_testprop1_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop1_tutor3" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop1_tutor4" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop1_tutor5" purpose="learnbydoing"/>
+                
+            </body>
+        </section>
+         <!--<activity idref="_u5_m1_dig25" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>Using data from 2008, the American Association of Community
+                    Colleges<?oxy_insert_start author="mmyers" timestamp="20101126T202300-0500"?>
+                    (AACC)<?oxy_insert_end?> reports
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T202227-0500"?>that
+                    <?oxy_insert_end?>community college students constitute 46% of all U.S.
+                    undergraduates. Given the
+                    down<?oxy_delete author="mmyers" timestamp="20101126T202253-0500" content=" "?>turn
+                    in the U.S. economy, the AACC anticipates an increase in this percentage for
+                    2010. A poll of 500 randomly chosen undergraduates taken in 2010 indicates that
+                    52% are attending a community college.</p>
+                <wb:inline idref="u4_m2_testprop1_tutor6" purpose="didigetthis"/>
+                <wb:inline idref="u4_m2_testprop1_tutor7" purpose="didigetthis"/>
+                
+            </body>
+        </section>
+        
+       </body>
+</workbook_page>

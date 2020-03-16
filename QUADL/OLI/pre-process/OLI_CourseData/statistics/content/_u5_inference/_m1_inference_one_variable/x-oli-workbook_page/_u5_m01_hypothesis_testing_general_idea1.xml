@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_hypothesis_testing_general_idea1">
+    <head>
+        <title>Overview (1 of 4)</title>
+        <objref idref="explain_hypothesis_testing"/> 
+    </head>
+<body>
+   
+        <p>The purpose of this section is to gradually build your understanding about how statistical
+            hypothesis testing works. We start by explaining the general logic behind the process of
+            hypothesis testing. Once we are confident that you understand this logic, we will add
+            some more details and terminology.</p>
+        <section>
+            <title>General Idea and Logic of Hypothesis Testing</title>
+            <body>
+                <p>To start our discussion about the idea behind statistical hypothesis testing,
+                    consider the following example:</p>
+                <example>
+                    <p>A case of suspected cheating on an exam is brought in front of the
+                        disciplinary committee at a certain university.</p>
+                    <p>There are <em>two</em> opposing <em>claims</em> in this case:</p>
+                    <ul style="none">
+                    <li><p>The <em>student's claim:</em> I did not cheat on the exam.</p></li>
+                    <li><p>The <em>instructor's claim:</em> The student did cheat on the exam.</p></li></ul>
+                    <p>Adhering to the principle
+                            <?oxy_comment_start author="mmyers" timestamp="20101126T125048-0500" comment="remove bold -- no emphasis needed"?><em>"innocent
+                            until proven guilty,"</em><?oxy_comment_end?> the committee asks the
+                        instructor for <em>evidence</em> to support his claim. The instructor
+                        explains that the exam had two versions, and shows the committee members
+                        that on three separate exam questions, the student used in his solution
+                        numbers that were given in the other version of the exam.</p>
+                    <p>The committee members all agree that
+                            <?oxy_comment_start author="mmyers" timestamp="20101126T125224-0500" comment="remove bold -- no emphasis needed"?><em>it
+                            would be extremely unlikely to get evidence like that if the student's
+                            claim of not cheating had been true.</em><?oxy_comment_end?> In other
+                        words, the committee members all agree that the instructor brought forward
+                        strong enough evidence to reject the student's claim, and conclude that the
+                        student did cheat on the exam.</p>
+                </example>
+                <p>What does this example have to do with statistics?</p>
+                <p>While it is true that this story seems unrelated to statistics, it captures all
+                    the elements of hypothesis testing and the logic behind it. Before you read on
+                    to understand why, it would be useful to read the example again. Please do so
+                    now.</p>
+                <p><em>Statistical hypothesis testing</em> is defined as:</p>
+
+                <p>
+                    <em>Assessing evidence provided by the data in favor of or against some claim
+                        about the population.</em>
+                </p>
+                <p>Here is how the process of statistical hypothesis testing works:</p>
+                <ol><li> We have <em>two claims</em> about what is going on in the population. Let's
+                    call them for now <em>claim 1</em> and <em>claim 2</em>. Much like the story
+                    above, where the student's claim is challenged by the instructor's claim, claim
+                    1 is challenged by claim 2.
+                <p> (<em>Comment:</em> as you'll see in the examples that follow, these claims are
+                    usually about the value of population parameter(s) or about the existence or
+                    nonexistence of a relationship between two variables in the population).</p></li>
+                <li> We choose a sample, collect relevant data and summarize them (this is similar
+                    to the instructor collecting evidence from the student's exam).</li>
+                <li> We figure out how likely it is to observe data like the data we got, had claim
+                    1 been true. (Note that the wording "how likely ..." implies that this step
+                    requires some kind of probability calculation). In the story, the committee
+                    members assessed how likely it is to observe the evidence like that which the
+                    instructor provided, had the student's claim of not cheating been true.</li>
+                <li> Based on what we found in the previous step, we make our decision:
+                <ul>
+                    <li>If we find that if claim 1 were true it would be extremely unlikely to
+                        observe the data that we observed, then we have strong evidence against
+                        claim 1, and we reject it in favor of claim 2.</li>
+                    <li>If we find that if claim 1 were true observing the data that we observed is
+                        not very unlikely, then we do not have enough evidence against claim 1, and
+                        therefore we cannot reject it in favor of claim 2.</li></ul></li>
+                </ol>
+                <p> In our story, the committee decided that it would be extremely unlikely to find
+                    the evidence that the instructor provided had the student's claim of not
+                    cheating been true. In other words, the members felt that it is extremely
+                    unlikely that it is just a coincidence that the student used the numbers from
+                    the other version of the exam on three separate problems. The committee members
+                    therefore decided to reject the student's claim and concluded that the student
+                    had, indeed, cheated on the exam. (Wouldn't you conclude the same?)</p>
+                <p>Hopefully this example helped you understand the logic behind hypothesis testing.
+                    To strengthen your understanding of the process of hypothesis testing and the
+                    logic behind it, let's look at three statistical examples.</p>
+                
+                <example>
+                    <title>1</title>
+                    <p>A recent study estimated that 20% of all college students in the United
+                        States smoke. The head of Health Services at Goodheart University suspects
+                        that the proportion of smokers may be lower there. In hopes of confirming
+                        her claim, the head of Health Services chooses a random sample of 400
+                        Goodheart students, and finds that 70 of them are smokers.</p>
+                    <p>Let's analyze this example using the 4 steps outlined above:</p>
+                    <ol>
+                    
+                    <li> <p> <em>Stating the claims:</em>
+                    </p>
+                    <p>There are two claims here:</p>
+                        <ul style="none">
+                    <li><p> <em>claim 1:</em> The proportion of smokers at Goodheart is .20.</p></li>
+                    <li><p> <em>claim 2:</em> The proportion of smokers at Goodheart is less than .20.</p></li></ul>
+                    <p>Claim 1 basically says "nothing special goes on in Goodheart University; the
+                        proportion of smokers there is no different from the proportion in the
+                        entire country." This claim is challenged by the head of Health Services,
+                        who suspects that the proportion of smokers at Goodheart is lower.</p></li>
+                    <li><p> <em>Choosing a sample and collecting data:</em></p><p>A sample of n = 400 was
+                        chosen, and summarizing the data revealed that the sample proportion of
+                        smokers is <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>70</m:mn>
+                                    <m:mn>400</m:mn>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>175</m:mn>
+                            </m:mrow>
+                        </m:math>.</p>
+                    <p> While it is true that .175 is less than .20, it is not clear whether this is
+                        strong enough evidence against claim 1. </p></li>
+                    <li><p> <em>Assessment of evidence:</em> </p><p>In order to assess whether the data
+                        provide strong enough evidence against claim 1, we need to ask ourselves:
+                        How surprising is it to get a sample proportion as low as <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>175</m:mn>
+                            </m:mrow>
+                        </m:math> (or lower), assuming claim 1 is true?</p>
+                    <p> In other words, we need to find how likely it is that in a random sample of
+                        size n = 400 taken from a population where the proportion of smokers is p =
+                        .20 we'll get a sample proportion as low as <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>175</m:mn>
+                            </m:mrow>
+                        </m:math> (or lower).</p>
+                    <p> It turns out that the probability that we'll get a sample proportion as low
+                        as <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>175</m:mn>
+                            </m:mrow>
+                        </m:math> (or lower) in such a sample is roughly .106 (do not worry about
+                        how this was calculated at this point).</p></li>
+                    <li><p> <em>Conclusion:</em></p>
+                    
+                    <p> Well, we found that if claim 1 were true there is a probability of .106 of
+                        observing data like that observed.</p>
+                    <p> Now you have to decide ...</p>
+                    <p> Do you think that a probability of .106 makes our data rare enough
+                        (surprising enough) under claim 1 so that the fact that we <em>did</em>
+                        observe it is enough evidence to reject claim 1?</p>
+                    <p> Or do you feel that a probability of .106 means that data like we observed
+                        are not very likely when claim 1 is true, but they are not unlikely enough
+                        to conclude that getting such data is sufficient evidence to reject claim
+                        1.</p>
+                    <p> Basically, this is your decision. However, it would be nice to have some
+                        kind of guideline about  what is generally considered surprising enough.</p></li></ol>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page  id="_u5_m3_regression04">
+<head>
+	<title>Multiple Regression Analysis</title>
+	<!---->
+	
+</head>
+<body>
+	<!--<objref idref="objective1"/>-->
+	
+	<example>
+		<p>Data was collected from 71 seventh grader students in a rural Midwestern school <cite entry="gor"></cite>.  The teacher was interested in examining how the students’ <em>GPA (Y)</em> is related to their <em>IQ level (X¬1)</em> and their <em>“self concept” (X2).</em> Students’ “self concept” was measured using the Piers-Harris Children Self-Concept Scale, a psychological test administered by the researcher. (<em style = "italic">Comment:</em> The psychological literature uses the terms “self concept”, “self esteem”, ‘self worth”, “self acceptance” interchangeably. Some aspects that are measured by the Piers-Harris test are behavior, school status, physical appearance, anxiety and happiness.</p>
+		<p>Here is part of the data:</p>
+	<image style="block" src="../webcontent/_u5_m3_img10.gif" alt="a picture of a representative portion of this dataset"></image>
+	
+		<p><em>Exploratory Data Analysis:</em></p>
+		<p>In this part of the analysis we would like to get a first “feel” for the data using graphical displays and numerical measures. As we explained in the introduction, one of the downsides of multiple regression is the fact that we no longer have a simple way to visualize the entire data. In this case, since we have only two explanatory variables, we actually <em style = "italic">can</em> visualize the entire data using the following 3D scatterplot:</p>
+		<image style="block" src="../webcontent/_u5_m3_img11.gif" alt=""></image>
+		<p>However this is not a very helpful and informative graph.</p>
+		<p>So…what do we do?</p>
+		<p>In multiple regression analysis, when we have several explanatory variables, it is useful to look at scatterplots of the response variable versus each of the k explanatory variables separately. In other words we look at the k scatterplots: Y vs. X<sub>1</sub>, Y vs. X<sub>2</sub>,…..,Y vs. X<sub>k</sub>.</p>
+		<p>In our example, we will look at the two scatterplots: GPA vs. IQ and GPA vs. SC:</p>
+		<image style="block" src="../webcontent/_u5_m3_img12.gif" alt=""></image>
+		<p>What do we learn?</p>
+		<p>The scatterplots reveal that both explanatory variables, IQ and SC have a positive relationship with the response, GPA, and both relationships appear to be linear. Furthermore, it seems like the linear relationship IQ has with GPA is stronger than that of SC, and therefore it appears that IQ is a better predictor of GPA.</p>
+		<p>We supplement the scatterplots by the <em>correlation matrix</em>. This is a summary, given in a matrix-like form, of the correlation coefficients between each pair of variables:</p>
+		<image style="block" src="../webcontent/_u5_m3_img13.gif" alt=""></image>
+		<p>We learn from the matrix that:</p>
+		<ul>
+			<li>the correlation between IQ and GPA is 0.775</li>
+			<li>the correlation between SC and GPA is 0.552, and that</li>
+			<li>the correlation between IQ and SC is 0.585</li>
+		</ul>
+		<p>The first two points confirm what we saw in the scatteplots above; both explanatory variables have a positive linear relationship with GPA, where IQ is the “stronger” predictor among the two, since it has a correlation coefficient of a larger magnitude. </p>
+		<p>The matrix provides one additional piece of information, which is new to us since we never had to deal with more than one explanatory variable so far. It tells us that there is a positive, moderately strong positive linear relationship <em>between the two explanatory variables</em>. We will later see how this correlation manifests itself in the analysis, but intuitively speaking, this correlation is not very surprising when we think about IQ and SC. It tells us that the two variables might have some “overlap” in the information they “store” for the purposes of explaining variability in GPA. We will revisit this very important point again once we conduct the multiple regression analysis.</p>
+		
+		<flash src="../../webcontent/flash/_u5_m3_mt1.swf" width="500" height="400" purpose="learnbydoing">
+			<param name="problem_name">_u5_m3_mt1</param>
+		</flash>
+	
+		<p><em>Comment:</em></p>
+		<p>Statistical software programs provide an “efficient” way to get the scatterplots of the response variable vs. each of the explanatory variables, as well as the sctterplots of each pair of explanatory variables. This is displayed in what’s known as a “matrix plot”.  Here is the matrix plot for our IQ-SC example:</p>
+		<image style="block" src="../webcontent/_u5_m3_img14.gif"></image>
+		<p>The two scatterplots at the bottom are the two scatteprlots we looked at before (the response vs. each of the explanatory variables), and in addition we get the scatterplot of IQ vs SC, which displays a positive, somewhat linear relationship as supported by the correlation matrix 
+			(r<sub>IQ,SC</sub>=.585).
+		</p>
+	</example>
+	
+	<activity idref="_u5_m3_DIGT02" purpose="didigetthis"></activity>
+	<activity idref="_u5_m3_LBD01" purpose="learnbydoing"></activity>
+</body>
+	<bib:file>
+		<bib:entry
+			id="gor"><bib:misc><bib:author>Darlene Gordon</bib:author> <bib:title>Purdue University School of education</bib:title></bib:misc></bib:entry>
+	</bib:file>
+</workbook_page>
+	
+	
+	
+	
+	

@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u4_m2_checkpoint1" max_attempts="3" recommended_attempts="1">
+    <title>Conditional Probability and Independence Checkpoint 1</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u4_m2_checkpoint1.pdf">Solution Set</link>.</p>
+    </content>-->
+    <section id="assess_05_basketball">
+        <multiple_choice id="prob2-1" select="single">
+            <body>
+                <p>Suppose a basketball team had a season of games with the following
+                    characteristics: </p>
+                <ul>
+                    <li>60% of all the games were <em style="bold">at-home</em> games. Denote this
+                        by <em style="bold">H</em> (the remaining were <em style="bold">away</em>
+                        games). </li>
+                    <li>25% of all games were <em style="bold">wins</em>. Denote this by <em
+                            style="bold">W</em> (the remaining were <em style="bold">losses</em>). </li>
+                    <li>20% of all games were at-home wins. </li>
+                </ul>
+                <p>Of the <em>at-home games</em>, we are interested in finding what proportion were
+                    wins. Which of the following probabilities do you need to find in order to
+                    determine the proportion of at-home games that were wins?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; P(H) </choice>
+                <choice value="B"> &#160;&#160; P(W) </choice>
+                <choice value="C"> &#160;&#160; P(H and W) </choice>
+                <choice value="D"> &#160;&#160; P(H | W) </choice>
+                <choice value="E"> &#160;&#160; P(W | H) </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. P (<em style="bold">H</em>) represents the proportion of
+                        games which were played at home. You should find the proportion of home
+                        games which were wins. In other words, if you look only at the home games,
+                        what proportion of them were wins?</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. P (<em style="bold">W</em>) represents the proportion of
+                        games which were wins. You should find the proportion of home games which
+                        were wins. In other words, if you look only at the home games, what
+                        proportion of them were wins?</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. P (<em style="bold">H</em> and <em style="bold">W</em>)
+                        represents the proportion of games which were played at home and were wins.
+                        You should find the proportion of home games that were <em style="italic"
+                            >wins</em>. In other words, if you look only at the home games, what
+                        proportion of them were wins?</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. P (<em style="bold">H</em> |<em style="bold">W</em>)
+                        represents the proportion of wins which were played at home. You should find
+                        the proportion of home games that were <em style="italic">wins</em>. In
+                        other words, if you look only at the home games, what proportion of them
+                        were wins?</feedback>
+                </response>
+                <response match="E" score="10">
+                    <feedback>Correct. We are limiting our interest to the home games only, so we
+                        condition on <em style="bold">H</em>. Out of the home games, we are
+                        interested in the probability of winning (<em style="bold">W</em>),
+                        therefore we are interested in P (<em style="bold">W</em> | <em style="bold"
+                            >H</em>). </feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob2-2" select="single">
+            <body>
+                <p>Suppose a basketball team had a season of games with the following
+                    characteristics: </p>
+                <ul>
+                    <li>60% of all the games were <em style="bold">at-home</em> games. Denote this
+                        by <em style="bold">H</em> (the remaining were <em style="bold">away</em>
+                        games). </li>
+                    <li>25% of all games were <em style="bold">wins</em>. Denote this by <em
+                            style="bold">W</em> (the remaining were <em style="bold">losses</em>). </li>
+                    <li>20% of all games were at-home wins. </li>
+                </ul>
+                <p>Of the at-home games, what proportion of games were wins? (Note: Some answers are
+                    rounded to two decimal places.)</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; 0.12 </choice>
+                <choice value="B"> &#160;&#160; 0.15 </choice>
+                <choice value="C"> &#160;&#160; 0.20 </choice>
+                <choice value="D"> &#160;&#160; 0.33 </choice>
+                <choice value="E"> &#160;&#160; 0.42 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. In general, P (<em style="bold">H</em> and <em style="bold"
+                            >W</em>) * P (<em style="bold">H</em>) has no useful meaning. Recall
+                        that you should be finding P (<em style="bold">W</em> | <em style="bold"
+                            >H</em>), the proportion of home games which were wins.
+                        <!--Consider the
+                        remaining options. (D) is the right answer. --></feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It seems that you have incorrectly assumed that <em
+                            style="bold">H</em> and <em style="bold">W</em> are independent events
+                        and calculated P(<em style="bold">H</em> and <em style="bold">W</em>) rather
+                        than calculating the proportion of home games which were wins, P (<em
+                            style="bold">W</em> | <em style="bold"
+                        >H</em>).<!-- Consider the remaining
+                        options. (D) is the right answer. --></feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. You have found P (<em style="bold">H</em> and <em
+                            style="bold">W</em>). Recall that you should find P(<em style="bold"
+                            >W</em> | <em style="bold">H</em>), the proportion of home games which
+                        were wins.<!-- Consider the remaining options. (D) is the right answer.-->
+                    </feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. You want to find P(<em style="bold">W</em> |<em style="bold"
+                            >H</em>). We apply the definition of conditional probability: <image
+                            style="block" src="../webcontent/5_formula1.gif"/>
+                    </feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. It appears you calculated P(W) / P (H). Recall that you
+                        should calculate P(<em style="bold">W</em> |<em style="bold">H</em>), the
+                        proportion of home games which were wins.</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob2-3" select="single">
+            <body>
+                <p>Suppose a basketball team had a season of games with the following
+                    characteristics: </p>
+                <ul>
+                    <li>60% of all the games were <em style="bold">at-home</em> games. Denote this
+                        by <em style="bold">H</em> (the remaining were <em style="bold">away</em>
+                        games). </li>
+                    <li>25% of all games were <em style="bold">wins</em>. Denote this by <em
+                            style="bold">W</em> (the remaining were <em style="bold">losses</em>). </li>
+                    <li>20% of all games were at-home wins. </li>
+                </ul>
+                <p>If the team won a game, how likely is it that this was a home game? (Note: Some
+                    answers are rounded to 2 decimal places.)</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; 0.05 </choice>
+                <choice value="B"> &#160;&#160; 0.12 </choice>
+                <choice value="C"> &#160;&#160; 0.15 </choice>
+                <choice value="D"> &#160;&#160; 0.42 </choice>
+                <choice value="E"> &#160;&#160; 0.80 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. In general, P(<em style="bold">H</em> and <em style="bold"
+                            >W</em>) * P(<em style="bold">W</em>) has no useful meaning. Recall that
+                        you want to find P (<em style="bold">H</em> | <em style="bold">W</em>), the
+                        probability that a win was a home game.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. In general, P(<em style="bold">H</em> and <em style="bold"
+                            >W</em>) * P(<em style="bold">H</em>) has no useful meaning. Recall that
+                        you should be finding P (<em style="bold">H</em> | <em style="bold">W</em>),
+                        the probability that a win was a home game.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have incorrectly assumed that <em
+                            style="bold">H</em> and <em style="bold">W</em> are independent events
+                        and calculated P(<em style="bold">H</em> and <em style="bold">W</em>) rather
+                        than calculating the proportion of wins which were home games, P(<em
+                            style="bold">H</em> |<em style="bold">W</em>).</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It appears you calculated P(W) / P (H). Recall that you
+                        should calculate the probability that a win was a home game, P(<em
+                            style="bold">H</em> | <em style="bold">W</em>).</feedback>
+                </response>
+                <response match="E" score="10">
+                    <feedback>Correct. Given that the team won the game (<em style="bold">W</em>),
+                        how likely is it that this was a home game (<em style="bold">H</em>)?
+                        Therefore, we are interested in P(<em style="bold">H</em> | <em style="bold"
+                            >W</em>). Using the definition of conditional probability: <image
+                            style="block" src="../webcontent/5_formula2.gif"/>
+                    </feedback>
+                </response>
+            </part>
+        </multiple_choice>
+    </section>
+    <multiple_choice id="prob2-4" select="single">
+        <body>
+            <p>Let A and B be two independent events. If P(A) = 0.5, what can you say about P(A |
+                B)?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; Cannot find it since P(B) is not known. </choice>
+            <choice value="B"> &#160;&#160; Cannot find it since P(A and B) is not known. </choice>
+            <choice value="C"> &#160;&#160; Cannot find it since both P(B) and P(A and B) are not
+                known. </choice>
+            <choice value="D"> &#160;&#160; It is equal to 0.5. </choice>
+            <choice value="E"> &#160;&#160; It is equal to 0.25. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that if A and B are independent, then P(A and B) = P(A)
+                    * P(B). Although you don’t know P (B), you can still use the definition of
+                    conditional probability to find the correct answer.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. If A and B events are independent, then P(A and B) = P(A) *
+                    P(B). Using the definition of conditional probability, you should be able to
+                    find the correct answer.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall the definition of conditional probability: P(A | B) =
+                    P(A and B)/P(B) . When A and B are independent, this simplifies very nicely,
+                    because P (A and B) = P(A) * P(B). Using these facts you should be able to find
+                    the correct answer.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. If two events are independent, then P(A | B) = P(A) [knowing that
+                    B occurs has no impact on the probability that A occurs]. Therefore, if we are
+                    given P(A) = 0.5, and that A and B are independent, then it must also be true
+                    that P(A | B) = 0.5. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. If A and B events are independent, then P(A and B) = P(A) *
+                    P(B). It appears you calculated 0.5 x 0.5 but you cannot assume P(B) is 0.5.
+                    However, using the definition of conditional probability, you should be able to
+                    find the correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="Prob2-5" select="single">
+        <body>
+            <p>Dogs are inbred for such desirable characteristics as blue eye color, but an
+                unfortunate by-product of such inbreeding can be the emergence of characteristics
+                such as deafness. A 1992 study of Dalmatians (by Strain and others, as reported in
+                    <em style="italic">The Dalmatians Dilemma</em>) found the following: </p>
+            <table>
+                <tr>
+                    <td> (i) </td>
+                    <td> 31% of all Dalmatians have blue eyes. </td>
+                </tr>
+                <tr>
+                    <td> (ii) </td>
+                    <td> 38% of all Dalmatians are deaf. </td>
+                </tr>
+                <tr>
+                    <td> (iii) </td>
+                    <td> 42% <em>of blue-eyed Dalmatians</em> are deaf. </td>
+                </tr>
+            </table>
+            <p>Based on the results of this study is "having blue eyes" independent of "being deaf"?
+            </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; No, since 0.31 * 0.38 is not equal to 0.42. </choice>
+            <choice value="B"> &#160;&#160; No, since 0.38 is not equal to 0.42. </choice>
+            <choice value="C"> &#160;&#160; No, since 0.31 is not equal to 0.42. </choice>
+            <choice value="D"> &#160;&#160; Yes, since 0.31 * 0.38 is not equal to 0.42. </choice>
+            <choice value="E"> &#160;&#160; Yes, since 0.38 is not equal to 0.42. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. P(blue eyes and deaf) = P(deaf | blue eyes) doesn’t tell us
+                    anything useful. Recall that having blue eyes and being deaf are independent if
+                    knowing a Dalmatian has blue eyes doesn’t change the probability that it is
+                    deaf.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Using B for blue-eyed and D for deaf , the information that was
+                    given is: P(B) = 0.31; P(D) = 0.38; and P(D | B) = 0.42. Using this information,
+                    we can say that the events B and D are not independent, since P(D) and P(D | B
+                    are not equal. In other words, knowing the Dalmatian has blue eyes changes the
+                    probability that the Dalmatian is deaf (from 0.38 to 0.42). </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Knowing that P(blue eyes) &#8800; P (deaf | blue eyes) doesn’t
+                    tell us anything. Recall that having blue eyes and being deaf are independent if
+                    knowing a Dalmatian has blue eyes doesn’t change the probability that it is
+                    deaf.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It does not make sense to compare P(blue eyes and deaf) to
+                    P(deaf | blue eyes). Recall that having blue eyes and being deaf are independent
+                    if knowing a Dalmatian has blue eyes doesn’t change the probability that it is
+                    deaf.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Knowing that a Dalmatian has blue eyes changes the probability
+                    that it is deaf. As a result, the two events cannot be independent.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    
+    <multiple_choice id="Prob2-6" select="single">
+        <body>
+            <p>Suppose your friends have the following ice cream flavor preferences: </p>
+            <ul>
+                <li> 70% of your friends like Chocolate (C). The remaining do not like
+                    Chocolate.</li>
+                <li> 40% of your friends like Sprinkles (S) topping. The remaining do not like
+                    Sprinkles.</li>
+                <li> 25% of your friends who like Chocolate (C) also like Sprinkles (S).</li>
+            </ul>
+            <p>Of the friends who like Chocolate, which of the following probabilities do you need
+                to find in order to determine the proportion of friends who like Chocolate that also
+                like Sprinkles?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; P(C)</choice>
+            <choice value="B"> &#160;&#160; P(S)</choice>
+            <choice value="C"> &#160;&#160; P(C and S)</choice>
+            <choice value="D"> &#160;&#160; P(C | S)</choice>
+            <choice value="E"> &#160;&#160; P(S | C)</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. P(C) represents the proportion of friends who like Chocolate.
+                    You should find the proportion of friends who like Chocolate and, within this
+                    group, which ones like Sprinkles. In other words, if you look only at the
+                    friends who like Chocolate, what proportion of them like Sprinkles?</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. P(S) represents the proportion of friends who like Sprinkles.
+                    You should find the proportion of friends who like Chocolate and also like
+                    Sprinkles. In other words, if you look only at the friends who like Chocolate,
+                    what proportion of them like Sprinkles? </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. P(C and S) represents the proportion of who like Chocolate and
+                    Sprinkles. You should find the proportion of friends who like Chocolate who also
+                    like Sprinkles. In other words, if you look <em style="italic">only</em> at the friends who like
+                    Chocolate, what proportion of them like Sprinkles? Consider the remaining
+                    options.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. We are limiting our interest to friends who like Chocolate only,
+                    so we condition on C. Out of the friends who like Chocolate, we are interested
+                    in the probability of liking Sprinkles (S). Therefore we are interested in P (C |
+                    S).</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. P(S | C) represents the proportion friends who like Sprinkles
+                    who also like Chocolate. You should find the proportion of friends who like
+                    Chocolate who also like Sprinkles. In other words, if you look only at the friends
+                    who like Chocolate, what is the probability of them liking Sprinkles? Therefore, we
+                    are interested in P (C | S).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+
+    <multiple_choice id="Prob2-7" select="single">
+        <body>
+            <p>Let A and B be two independent events. If P(B) = 0.5, what can you say about P(B |
+                A)? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; Cannot find it since P(A) is not known.</choice>
+            <choice value="B"> &#160;&#160; Cannot find it since P(B and A) is not known.</choice>
+            <choice value="C"> &#160;&#160; Cannot find it since both P(A) and P(B and A) are not known.</choice>
+            <choice value="D"> &#160;&#160; It is equal to 0.5.</choice>
+            <choice value="E"> &#160;&#160; It is equal to 0.25.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that if A and B are independent, then P(B and A) = P(B)
+                    * P(A). Although you don’t know P (A), you can still use the definition of
+                    conditional probability to find the correct answer.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. If A and B events are independent, then P(B and A) = P(B) *
+                    P(A). Using the definition of conditional probability, you should be able to
+                    find the correct answer. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall the definition of conditional probability: P(B | A) =
+                    P(B and A)/P(A) . When B and A are independent, this simplifies very nicely,
+                    because P (B and A) = P(B) * P(A). Using these facts you should be able to find
+                    the correct answer.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. If two events are independent, then P(B | A) = P(A) [knowing that
+                    A occurs has no impact on the probability that B occurs]. Therefore, if we are
+                    given P(B) = 0.5, and that A and B are independent, then it must also be true
+                    that P(B | A) = 0.5.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. If events B and A are independent, then P(B and A) = P(B) *
+                    P(A). It appears you calculated 0.5 x 0.5 but you cannot assume P(A) is 0.5.
+                    However, using the definition of conditional probability, you should be able to
+                    find the correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+    <multiple_choice id="Prob2-8" select="single">
+        <body>
+            <p>Suppose your friends have the following ice cream flavor preferences: </p>
+            <ul>
+                <li> 70% of your friends like Chocolate (C). The remaining do not like
+                    Chocolate.</li>
+                <li> 40% of your friends Sprinkles (S) topping. The remaining do not like
+                    Sprinkles.</li>
+                <li> 25% of your friends who like Chocolate (C) also like Sprinkles (S).</li>
+            </ul>
+            <p>Of the friends who like Sprinkles, what proportion of this group likes Chocolate?
+                (Note: Some answers are rounded to two decimal places.)</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; 0.11</choice>
+            <choice value="B"> &#160;&#160; 0.28</choice>
+            <choice value="C"> &#160;&#160; 0.36</choice>
+            <choice value="D"> &#160;&#160; 0.56</choice>
+            <choice value="E"> &#160;&#160; 0.63</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. In general, P (S and C) * P (S) has no useful meaning. Recall
+                    that you should be finding P (S | C), the proportion of friends who like
+                    Sprinkles who also like Chocolate.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have incorrectly assumed that C and S are
+                    independent events and calculated P(S and C) rather than calculating the
+                    proportion of friends who like Sprinkles who also like Chocolate, P (S |
+                    C).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You have found P (C | S). Recall that you should find P(S | C),
+                    the proportion of friends who like Chocolate who also like Sprinkles.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you calculated P(S) / P (C). Recall that you should
+                    calculate P(S | C), the proportion of friends who like Chocolate who also like
+                    Sprinkles.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. You want to find P(S | C). We apply the definition of conditional
+                    probability: P(S|C) = P (S and C)/ P(S) = 0.25/0.40 = 0.625.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="Prob2-9" select="single">
+        <body>
+            <p>Suppose your friends have the following ice cream flavor preferences: </p>
+            <ul>
+                <li> 70% of your friends like Chocolate (C). The remaining do not like
+                    Chocolate.</li>
+                <li> 40% of your friends Sprinkles (S) topping. The remaining do not like
+                    Sprinkles.</li>
+                <li> 25% of your friends who like Chocolate (C) also like Sprinkles (S).</li>
+            </ul>
+            <p>If your friend had Sprinkles, how likely is it that they also had Chocolate? (Note:
+                Some answers are rounded to 2 decimal places).</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; 0.10</choice>
+            <choice value="B"> &#160;&#160; 0.18</choice>
+            <choice value="C"> &#160;&#160; 0.28</choice>
+            <choice value="D"> &#160;&#160; 0.57</choice>
+            <choice value="E"> &#160;&#160; 0.63</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. In general, P(C and S) * P(S) has no useful meaning. Recall
+                    that you want to find P (C |S), the probability that your friend had Chocolate
+                    given that they also had Sprinkles.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. In general, P(C and S) * P(C)
+                    has no useful meaning. Recall that you should be finding P (C | S), the
+                    probability that your friend had Chocolate given that they also had
+                    Sprinkles.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems that you have incorrectly assumed that C and S are
+                    independent events and calculated P(C and S) rather than calculating the the
+                    probability that your friend had Chocolate given that they also had Sprinkles,
+                    P(C | S). </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you calculated P(S) / P (C). Recall that you should
+                    be finding P (C | S), the probability that your friend had Chocolate given that
+                    they also had Sprinkles.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Given that your friend had Sprinkles (S), how likely is it that
+                    they also had Chocolate (C)? Therefore, we are interested in P(C | S. Using the
+                    definition of conditional probability: P(C|S) = [P(C and S)] / P(S) = 0.25 /
+                    0.40 = 0.63</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="Prob2-10" select="single">
+        <body>
+            <p>Suppose that the handedness of the last fifteen US presidents is as follows: </p>
+            <ul>
+                <li> 40% were left-handed (L)</li>
+                <li> 47% were Democrats (D)</li>
+                <li> 13% were left-handed Democrats</li>
+            </ul>
+            <p>Based on this information on the last fifteen US presidents, is “being left-handed”
+                independent of “being a Democrat”?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; No, since 0.40 * 0.47 is not equal to 0.13.</choice>
+            <choice value="B"> &#160;&#160; No, since 0.47 is not equal to 0.13.</choice>
+            <choice value="C"> &#160;&#160; No, since 0.40 is not equal to 0.13.</choice>
+            <choice value="D"> &#160;&#160; Yes, since 0.40 * 0.47 is not equal to 0.13.</choice>
+            <choice value="E"> &#160;&#160; Yes, since 0.47 is not equal to 0.13.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback> Incorrect. P(L and D) = P(D | L) doesn’t tell us anything useful. Recall
+                    that left-handedness and being a Democrat are independent if being a Democrat doesn’t
+                    change the probability of being left-handed.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Given P(L) = 0.40; P(D) = 0.47; and P(D | L) = 0.42. Using this
+                    information, we can say that the events L and D are not independent, since P(D)
+                    and P(D | L) are not equal. In other words, knowing the president is Democrat
+                    changes the probability that the president will be left-handed (from 0.40 to 0.13).
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Knowing that P(L) ≠ P (D | L) doesn’t tell us anything. Recall
+                    that being left-handed and being a Democrat are independent if knowing a
+                    president is a Democrat doesn’t change the probability that he is left-handed.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It does not make sense to compare P(L and D) to P(D | L).
+                    Recall that being left-handed and being a Democrat are independent if a
+                    president being a Democrat doesn’t change the probability that he is
+                    left-handed.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The president being a Democrat changes the probability
+                    that he is left-handed. As a result, the two events cannot be
+                    independent.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+</assessment>

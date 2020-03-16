@@ -1,0 +1,69 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <item ident="stats_item" title="Put title here">
+        <hint>
+          <material>
+            <mattext texttype="text/plain"></mattext></material>
+        </hint><presentation>
+          <material>
+            <mattext texttype="text/plain">What percentage of horse pregnancies last longer than 339 days?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">16%</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">2.5%</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">50%</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">100%</mattext></material></response_label>
+              <response_label ident="Res5">
+                <material>
+                  <mattext texttype="text/plain">68%</mattext></material>
+</response_label></render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res5</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"></displayfeedback></respcondition></resprocessing>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Correct. According to the SD rule, 68% of horse pregnancies last between 336 − 3 = 333 and 336 + 3 = 339 days, which means that the remaining 32% of horse pregnancies are divided evenly between lasting less than 333 days and lasting more than 339 days. We therefore conclude that 16% of horse pregnancies last more than 339 days.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. According to the SD rule, 68% of horse pregnancies last between 336 − 3 = 333 and 336 + 3 = 339 days, which means that the remaining 32% of horse pregnancies are divided evenly between lasting less than 333 days and lasting more than 339 days.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Incorrect. According to the SD rule, 68% of horse pregnancies last between 336 − 3 = 333 and 336 + 3 = 339 days, which means that the remaining 32% of horse pregnancies are divided evenly between lasting less than 333 days and lasting more than 339 days.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. According to the SD rule, 68% of horse pregnancies last between 336 − 3 = 333 and 336 + 3 = 339 days, which means that the remaining 32% of horse pregnancies are divided evenly between lasting less than 333 days and lasting more than 339 days.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack4">
+          <material>
+            <mattext texttype="text/plain">Incorrect. According to the SD rule, 68% of horse pregnancies last between 336 − 3 = 333 and 336 + 3 = 339 days, which means that the remaining 32% of horse pregnancies are divided evenly between lasting less than 333 days and lasting more than 339 days.  </mattext></material></itemfeedback></item>

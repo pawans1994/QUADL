@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_mean_variance3">
+    <head>
+        <title>Mean and Variance of a Random Variable (3 of 5)</title>
+        <objref idref="find_mean_variance_discrete_random"/>
+    </head>
+<body>
+    
+        <p>Here is another example:</p>
+        <example><title>Life Insurance #1</title>
+            
+            <p>Suppose you work for an insurance company, and you sell a $100,000 whole-life
+                insurance policy at an annual premium of
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144249-0500"?>,<?oxy_insert_end?>200.
+                (This means that the person who bought this policy
+                pa<?oxy_insert_start author="mmyers" timestamp="20101121T144255-0500"?>ys<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144253-0500" content="id"?>
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144257-0500"?>,<?oxy_insert_end?>200
+                <?oxy_insert_start author="mmyers" timestamp="20101121T144318-0500"?>per year
+                <?oxy_insert_end?>so that in the event
+                <?oxy_insert_start author="mmyers" timestamp="20101121T144303-0500"?>that
+                <?oxy_insert_end?>he<?oxy_insert_start author="mmyers" timestamp="20101121T144310-0500"?>
+                or
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144309-0500" content="/"?>she
+                dies, <?oxy_insert_start author="mmyers" timestamp="20101121T144326-0500"?>the
+                policy<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144324-0500" content="his/her"?>
+                beneficiaries will get $100,000). Actuarial tables show that the probability of
+                death during the next year for a person of your customer's age, sex, health, etc. is
+                .005. Let the random variable X be the company's gain from such a policy.</p>
+            <p>What is the expected or mean gain (amount of money made by the company) for a policy of this type?</p>
+            <p>In other words, we need to find <m:math overflow="scroll">
+                <m:msub>
+                    <m:mi>μ</m:mi>
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                </m:msub>
+            </m:math> .</p>
+            <p>Since this is a whole-life
+                policy<?oxy_insert_start author="mmyers" timestamp="20101121T144414-0500"?>,<?oxy_insert_end?>
+                there are two possibilities here; either the customer dies
+                <?oxy_insert_start author="mmyers" timestamp="20101121T144420-0500"?>this year
+                <?oxy_insert_end?>(which you are given will happen with probability .005), or the
+                customer <?oxy_insert_start author="mmyers" timestamp="20101121T144433-0500"?>does
+                not die this
+                year<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144440-0500" content="lives"?>
+                (which<?oxy_insert_start author="mmyers" timestamp="20101121T144446-0500"?>,<?oxy_insert_end?>
+                by the complement
+                rule<?oxy_insert_start author="mmyers" timestamp="20101121T144450-0500"?>,<?oxy_insert_end?>
+                must be .995).</p>
+            <p>In both
+                cases<?oxy_insert_start author="mmyers" timestamp="20101121T144456-0500"?>,<?oxy_insert_end?>
+                the company gets the
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144500-0500"?>,<?oxy_insert_end?>200
+                premium. If the customer lives, the company just
+                gain<?oxy_insert_start author="mmyers" timestamp="20101121T144511-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144510-0500" content="ed"?>
+                the
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144504-0500"?>,<?oxy_insert_end?>200,
+                but if the customer dies, the company needs to pay $100,000 to the customer's
+                beneficiaries. Therefore, here is the probability distribution of X:</p>
+            <image style="block" src="../webcontent/image029a.gif" alt="A two row probability
+distribution table, in which the rows are labeled &quot;X&quot; and &quot;P(X=x)&quot;. 
+Here is the data in column oriented format (X: P(X=x), comment):
+                +1200: .995 (live);
+                1200-100,000: .005 (die);"/>
+            <p>Their average, or expected, gain overall is</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:msub>
+                        <m:mi>μ</m:mi>
+                        <m:mrow>
+                            <m:mi>X</m:mi>
+                        </m:mrow>
+                    </m:msub>
+                </m:math> = 1200(.995) + (1200 - 100,000)(.005) = 700 dollars.</p>
+        </example>
+        <example><title>Life Insurance #2</title>
+            
+            <p>Suppose that five years have passed and your actuarial tables indicate that the
+                probability of death during the next year for a person of your customer's current
+                age has gone up to .0075. Obviously, this change in probability should be reflected
+                in the annual premium (since it is slightly more risky for the insurance company to
+                insure the customer). </p>
+            <p>What should <?oxy_insert_start author="mmyers" timestamp="20101121T144710-0500"?>the
+                annual
+                premium<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T144717-0500" content="it"?>
+                be (instead of
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144720-0500"?>,<?oxy_insert_end?>200)
+                if the company wants to keep the same expected gain?</p>
+            <p>Now we substitute .0075 for .005, replace
+                1<?oxy_insert_start author="mmyers" timestamp="20101121T144729-0500"?>,<?oxy_insert_end?>200
+                with an unknown new premium N, and set the mean gain equal to
+                700<?oxy_insert_start author="mmyers" timestamp="20101121T144738-0500"?>,<?oxy_insert_end?>
+                as it was before:</p>
+            <image style="block" src="../webcontent/image030a.gif"  alt="A two-row probability
+distribution table, in which the rows are labeled &quot;X&quot; and &quot;P(X=x)&quot;.  Here
+is the data in column oriented format (X: P(X=x), comment):
+                N: .9925 (live);
+                N-100,000: .0075 (die);"/>
+            <p></p>
+            <table rowstyle="plain">
+                <tr><td align="left">We need to solve:</td><td align="right">700</td> <td align="center">=</td> <td align="left">(N)(.9925) + (N - 100,000)(.0075)</td></tr>
+                <tr><td align="left">Using some algebra:</td><td align="right">700</td> <td align="center">=</td> <td align="left">N - 750</td></tr>
+                <tr><td align="left">Finally</td><td align="right">N</td> <td align="center">=</td> <td align="left">1450</td></tr>
+            </table>
+            
+            <p>In order to keep the same expected gain of $700, the company should increase that
+                customer's premium to
+                $1<?oxy_insert_start author="mmyers" timestamp="20101121T144802-0500"?>,<?oxy_insert_end?>450.</p>
+        </example>
+        <!--<activity idref="_u4_m3_lbd3" purpose="learnbydoing"/>-->
+        <p>The purpose of this next activity is to give you guided practice in solving practical problems whose solution is based on the mean of random variables.</p>
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>Suppose that you work for an insurance company and you sell a $100,000 fire
+                    insurance policy at an annual premium of
+                    $1<?oxy_insert_start author="mmyers" timestamp="20101121T144851-0500"?>,<?oxy_insert_end?>350.
+                    Experience has shown that:</p>
+                <ul>
+                    <li><p> The probability of total loss (due to fire) to a house in that area and of the size of your customer's house is .002 (in which case the insurance company will pay the full $100,000 to the customer).</p></li>
+                    <li><p> The probability of 50% damage (due to fire) to a house in that area and of the size of your customer's house is .008 (in which case the insurance company will pay only $50,000 to the customer).</p></li>
+                </ul>
+                <p>For simplicity, we'll ignore any other partial losses.</p>
+                <p>Let the random variable X be the insurance company's annual gain from such a policy (i.e., the amount of money made by the insurance company from such a policy).</p>            
+                <wb:inline idref="u3_m3_meanvariance3_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m3_meanvariance3_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m3_meanvariance3_tutor3" purpose="learnbydoing"/>
+            </body>
+        </section>
+    </body>
+    </workbook_page>

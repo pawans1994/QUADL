@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m3_digtutor3b" title="_u4_m3_digtutor3b">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">The probability distribution represented in the histogram and table above may be also expressed by the formula:</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">P(X=x)=x x=1,2,3,4</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">P(X=x)=1/4  x=1,2,3,4</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">P(X=x)=x/10   x=1,2,3,4</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">P(X=x)=(5-x)/10   x=0,1,2,3</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">P(X=x)=(5-x)/10  x=1,2,3,4</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  This is not a legitimate probability distribution of X.  For example, using this formula, we'll get: P(X=2)=2, which is not a number between 0 and 1 which it should be.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  Using this formula, we'll get the following probability distribution:
+             x   |  1      2      3      4     
+       -----------|-------------------------------
+       P(X=x) | 1/4    1/4    1/4    1/4     
+Even though this is a legitimate probability distribution, this is not the one that is represented by the histogram and table above.  The values are right, but the probabilities are not. </mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect.   Using this formula, we'll get the following probability distribution: 
+             x   |  1      2      3      4     
+       -----------|-------------------------------
+       P(X=x) | .1     .2     .3     .4     
+Even though this is a legitimate probability distribution, this is not the one that is represented by the histogram and table above. The values are right, but the probabilities are not. </mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  Using this formula, we'll get the following table:
+             x   |  0     1      2      3     
+       -----------|-------------------------------
+       P(X=x) | .5    .4     .3     .2       
+The values that x can get (0,1,2,3) are the same as the ones in our distribution above.  And even more importantly, note that this is not a legitimate probability distribution since the sum of all probabilities is not 1, as it should be.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Good Job!   Using this formula, we'll get 
+P(X=1)=(5-1)/10=.4   
+P(X=2)=(5-2)/10=.3
+etc.
+to get the following probability distribution:
+             x   |  1      2      3      4     
+       -----------|-------------------------------
+       P(X=x) | .4     .3     .2     .1         
+which is exactly the one represented by the histogram above.</mattext></material></itemfeedback></item></questestinterop>

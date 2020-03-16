@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m3_digtutor6b" title="_u4_m3_digtutor6b">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">Given your answer to 1, and using the first set of rules for mean and variances, what is the mean and variance of the amount of money that is collected from a car that crosses the bridge?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">mean = $4.35, variance=$3.60</mattext></material></response_label>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">mean = $1.35, variance=$.30</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">mean =  $9.45, variance=$.30</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">mean = $4.35,  variance=$.30</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">mean = $4.35,  variance=$.60</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  While your mean is correct, the variance isn't. Your mistake is that in order to find the variance of 3+.50X you are doing: 3+.50*1.2=3.60. This is wrong. Go back and review the rule for the variance, and try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  There is a problem with your mean. It seems like what you did is: &#x03BC;&lt;font size="9"&gt;3+.50X&lt;/font&gt;=.50&#x03BC;&lt;font size="9"&gt;X&lt;/font&gt;=.50*2.7=1.35 which is wrong. What about the 3? Go back and review the rule for the mean and try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  There is a problem with your mean. It seems like your mistake is the following: &#x03BC;&lt;font size="9"&gt;cost&lt;/font&gt; = &#x03BC;&lt;font size="9"&gt;3+.50X&lt;/font&gt;= 3.50&#x03BC;&lt;font size="9"&gt;X&lt;/font&gt;=3.50*2.7=9.35. This is wrong.   Note that 3 is not multiplying X, but represents the fixed cost of 3 dollars per car. Review the rule for the mean and try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Good Job. Indeed: 
+&#x03BC;&lt;font size="9"&gt;3+.50X&lt;/font&gt;=3+.50&#x03BC;&lt;font size="9"&gt;X&lt;/font&gt;=3+.50*2.7=4.35 
+&#x03C3;&#x00B2;&lt;font size="9"&gt;3+.50X&lt;/font&gt; = .50&#x00B2; * &#x03C3;&#x00B2;&lt;font size="9"&gt;X&lt;/font&gt; =.25*1.2=.30</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  While your mean is correct, there is a problem with your variance.  It seems like your mistake is that you forgot to square the .50. In other words, what you did is: &#x03C3;&#x00B2;&lt;font size="9"&gt;3+.50X&lt;/font&gt; = .50*&#x03C3;&#x00B2;&lt;font size="9"&gt;X&lt;/font&gt; = .50*1.2=.60. This is wrong since .50 needs to be squared. Review the rule for variances again and try again.</mattext></material></itemfeedback></item></questestinterop>

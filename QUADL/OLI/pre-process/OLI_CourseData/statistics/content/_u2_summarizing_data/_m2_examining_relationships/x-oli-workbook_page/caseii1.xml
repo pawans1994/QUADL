@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="caseii1">
+    <head>
+        <title>Case C→C (1 of 2)</title>
+        <objref idref="produce_two_way_table"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Case C→C: Two Categorical Variables</title>
+            <body>
+                <p>Recall the role-type classification table for framing our discussion about the
+                    relationship between two variables: </p>
+                <image style="block" src="../webcontent/caseii1.gif" alt="It is possible
+for any type of explanatory variable to be paired with any type of response variable.
+The possible pairings are:
+Categorical Explanatory → Categorical Response (C→C),
+Categorical Explanatory → Quantitative Response (C→Q), which we have already covered,
+Quantitative Explanatory → Categorical Response (Q→C), and
+Quantitative Explanatory → Quantitative Response (Q→Q). In this section we will be working on C→C"/>
+                <p>We are done with case C→Q, and
+                    <?oxy_insert_start author="mmyers" timestamp="20101020T133321-0400"?>will now
+                    <?oxy_insert_end?>move on to case C→C, where we examine the relationship between
+                    two categorical variables.</p>
+                <p>Earlier in the course, (when we discussed the distribution of a <em>single</em>
+                    categorical variable) we examined the data obtained when a random sample of
+                    1<?oxy_insert_start author="mmyers" timestamp="20101020T145034-0400"?>,<?oxy_insert_end?>200
+                    U.S. college students were asked about their body<?oxy_insert_start author="mmyers" timestamp="20101020T145041-0400"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145040-0400" content="-"?>image
+                    (underweight, overweight, or about right.) We are now returning to this example,
+                    to address the following question:</p>
+                <p>If we had separated our sample of
+                    1<?oxy_insert_start author="mmyers" timestamp="20101020T145051-0400"?>,<?oxy_insert_end?>200
+                    U.S. college students by gender and looked at <em>males and females
+                        separately</em>, would we have found a similar distribution across
+                    body-image categories? More specifically, are men and women just as likely to
+                    think their weight is about right? Among those students who do not think their
+                    weight is about right, is there a difference between the genders in feelings
+                    about body<?oxy_insert_start author="mmyers" timestamp="20101020T145111-0400"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145115-0400" content="-"?>image?</p>
+                <p>Answering these questions requires us to <em>examine the relationship between two
+                        categorical variables</em>,
+                    <?oxy_insert_start author="mmyers" timestamp="20101020T145130-0400"?>g<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145130-0400" content="G"?>ender
+                    and <?oxy_insert_start author="mmyers" timestamp="20101020T145133-0400"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145132-0400" content="B"?>ody<?oxy_insert_start author="mmyers" timestamp="20101020T145134-0400"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145134-0400" content="-"?>image.
+                    Because the question of interest is whether there is a gender effect on body
+                    image,</p>
+                <ul>
+                    <li>the <em>explanatory</em> variable is
+                            <em><?oxy_insert_start author="mmyers" timestamp="20101020T145144-0400"?>g<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145144-0400" content="G"?>ender</em>,
+                        and</li>
+                    <li>the <em>response</em> variable is <em><?oxy_insert_start author="mmyers" timestamp="20101020T145149-0400"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145149-0400" content="B"?>ody<?oxy_insert_start author="mmyers" timestamp="20101020T145151-0400"?>
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T145152-0400" content="-"?>image</em>.</li>
+                </ul>
+                <p>Here is what the raw data look like when we include the gender of each
+                    student:</p>
+                <image style="block" src="../webcontent/caseii2.gif" alt="A table of the data. There are
+three columns, &quot;Student&quot;, &quot;Gender&quot;, and &quot;Body Image&quot;. &quot;Gender&quot; is the
+Explanatory variable, and &quot;Body Image&quot; is the Response variable.
+Some example data:
+    ... (abbreviated) ...
+    student 25, M, overweight;
+    student 26, M, about right;
+    student 27, F, underweight;
+    student 28, F, about right;
+    student 29, M, about right;
+    ... (abbreviated) ..."/>
+                <p>Once again the raw data is a long list of
+                    1<?oxy_insert_start author="mmyers" timestamp="20101020T145235-0400"?>,<?oxy_insert_end?>200
+                    genders and
+                    responses<?oxy_insert_start author="mmyers" timestamp="20101020T145240-0400"?>,<?oxy_insert_end?>
+                    and thus not very useful in that form. To start our exploration of how body
+                    image is related to gender, we need an informative display that summarizes the
+                    data. In order to summarize the relationship between two categorical variables,
+                    we create a display called a <em>two-way table</em>.</p>
+                <p>Here is the two-way table for our example: </p>
+                <image style="block" src="../webcontent/caseii3.gif" alt="A two-way table. The columns are for
+each possible category in &quot;Body Image&quot;. These categories are &quot;About Right&quot;, &quot;Overweight
+&quot;, &quot;Underweight&quot;. There is also an additional column for Total. In addition, there is a row for
+each of the categories in &quot;Gender&quot;. These are &quot;Female&quot; and &quot;Male&quot; There is also an
+additional Total row. So, overall, there are 4 columns of the names &quot;About Right&quot;, &quot;Overweight&quot;,
+&quot;Underweight&quot;, and &quot;Total&quot;. There are 3 rows, &quot;Female&quot;, &quot;Male&quot;, and
+&quot;Total&quot;.
+    Here are the values in the cells, in Row,Column: Value format:
+    Female, About Right: 560;
+    Female, Overweight: 163;
+    Female, Underweight: 37;
+    Female, Total: 760;
+    Male, About Right: 295;
+    Male, Overweight: 72;
+    Male, Underweight: 73;
+    Male, Total: 440;
+    Total, About Right: 855;
+    Total, Overweight: 235;
+    Total, Under Weight: 110;
+    Total, Total (Total # of Responses): 1200;"/>
+                <p>The table has the possible genders in the rows, and the possible responses
+                    regarding body image in the columns. At each intersection between row and
+                    column, we put the counts for how many times that combination of gender and body
+                    image occurred in the data. We sum across the rows to fill in the Total column,
+                    and we sum across the columns to fill in the Total row.</p>
+                <p>So for example,</p>
+                <wb:inline
+                    idref="u1_m2_casecc1_tutor1" purpose="learnbydoing"/>
+                <!--<flash src="../../webcontent/flash/caseii1q1.swf" width="505" height="300" purpose="learnbydoing">
+<param name="problem_name">caseii1q1</param>
+</flash>-->
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Note that from the way the two-way table is constructed, the Total row or column
+                    is a summary of one of the two categorical variables, ignoring the other. In our
+                    example: </p>
+                <ul>
+                    <li>
+                        <p>The Total row gives the summary of the categorical variable <?oxy_insert_start author="mmyers" timestamp="20101020T151214-0400"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151213-0400" content="B"?>ody<?oxy_insert_start author="mmyers" timestamp="20101020T151215-0400"?>
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151215-0400" content="-"?>image:</p>
+                        <image style="block" src="../webcontent/caseii4.gif" alt="The same table as the
+one presented previously, except that the column headings and the total row are highlighted. It indicates
+that the cells for &quot;Total, About Right&quot;, &quot;Total, Overweight&quot;, &quot;Total, Underweight
+&quot;, and &quot;Total, Total&quot; are a summary of each type of body image by showing the totals for
+each category, or in the case of the &quot;Total, Total&quot; cell, the total number of
+&quot;About Right&quot;, &quot;Overweight&quot;, and &quot;Underweight&quot; responses." />
+                        <p> (These are the same counts we got earlier in the course when we looked
+                            at the single categorical variable <?oxy_insert_start author="mmyers" timestamp="20101020T151237-0400"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151236-0400" content="B"?>ody<?oxy_insert_start author="mmyers" timestamp="20101020T151239-0400"?>
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151238-0400" content="-"?>image,
+                            and did not consider
+                            <?oxy_insert_start author="mmyers" timestamp="20101020T151242-0400"?>g<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151242-0400" content="G"?>ender<?oxy_insert_start author="mmyers" timestamp="20101020T151246-0400"?>.<?oxy_insert_end?>)</p>
+                    </li>
+                    <li>The Total column gives the summary of the categorical variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101020T151301-0400"?>g<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101020T151301-0400" content="G"?>ender:
+                        <image style="block" src="../webcontent/caseii5.gif" alt="The same table as the
+one presented previously, except that the row headings and the total row are highlighted. It indicates
+that the cells for &quot;Female, Total&quot;, &quot;Male, Total&quot;, and &quot;Total, Total&quot; are
+a summary of each type of gender by showing the totals for each, or in the case of the &quot;Total,
+Total&quot; cell, the total number of &quot;Female&quot; and &quot;Male&quot; responses."/>
+                    </li>
+                </ul>
+            </body>
+        </section>
+    </body>
+</workbook_page>

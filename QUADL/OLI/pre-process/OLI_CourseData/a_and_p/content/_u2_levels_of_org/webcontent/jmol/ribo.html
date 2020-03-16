@@ -1,0 +1,169 @@
+<HTML>
+    <HEAD><TITLE>70S Ribosome</TITLE>
+        <script src="./jmol/Jmol.js" type="text/javascript"></script>
+    </HEAD>
+<BODY BGCOLOR="#EEEEFF">
+    <script type="text/javascript">
+        jmolInitialize("./jmol");
+        jmolSetAppletColor("black");
+    </script>
+<TABLE BORDER=0 WIDTH=850 CELLPADDING=0 CELLSPACING=0>
+<TH colspan=2 align=left>Biochemistry I</TH>
+    <TH colspan=2 align=right> Bacterial Ribosome</th>
+<TR VALIGN="TOP">
+<TD>&nbsp;</TD>
+<TD WIDTH="500" BGCOLOR="#eeeeee">
+    <script type="text/javascript">
+        jmolApplet([499,499],
+        "load ./jmol/pdbs/ribo/ribo.pdb;rotate z -79.46; rotate y 24.75; rotate z 107.35;backbone 0.5;select *:A;backbone 0.6;color cyan;select *:S;backbone 0.4;color blue;select *:E,*:F;backbone 0.4;color purple;select *:L;backbone 0.4;color pink;select *:B,*:C,*:D;cpk;color yellow;select *:M;color green;backbone 0.4;select all;set specular on;set background black","ribo");
+    </script><BR>
+        <script type="text/javascript">
+            jmolSetTarget("ribo") 
+            jmolRadioGroup([
+            ["background white;color labels black","white",false],
+            ["background gray;color labels black","gray",false],
+            ["background [100,100,255];color labels black","Lt blue",false],
+            ["background [0,0,0];color label yellow","black",true]]," ","Background color")
+        </script>
+        <script type="text/javascript">
+            jmolSetTarget("ribo")
+            jmolCheckbox("spin on","spin off", "Spin", false)
+        </script>   
+</TD>
+<TD BGCOLOR="#eeeeee">&nbsp;</TD>
+    
+<TD WIDTH="350" BGCOLOR="#eeeeee"><FONT COLOR="#000000">
+<BR>
+    <B><font size=+1>Entire Ribosome:</B></font><br>
+    &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("ribo") 
+        jmolButton("zap;load ./jmol/pdbs/ribo/ribo.pdb;rotate z -79.46;rotate y 24.75; rotate z 107.35;backbone 0.5;select *:A;backbone 0.6;color cyan;select *:S;backbone 0.4;color blue;select *:E,*:F;backbone 0.4;color purple;select *:L;backbone 0.4;color pink;select *:B,*:C,*:D;cpk;color yellow;select *:M;color green;backbone 0.4;select all;set specular on;set background black","","","Ribosome");  
+    </script>&nbsp;Load Intact Ribosome<BR>
+        &nbsp;<B>Select</B>: <BR>
+    &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("ribo") 
+        jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone 0.5;restrict protein","","","Protein");  
+    </script>&nbsp;Protein
+    
+    &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("ribo") 
+        jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone off;select nucleic and not (*:D,*:C,*:B);backbone 0.5;select all","","","rRNA");  
+    </script>&nbsp;rRNA
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+       jmolSetTarget("ribo") 
+       jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone off;select (nucleic and not (*:D,*:C,*:B)),protein;backbone 0.5;select all","","","rRNA+Protein");  
+   </script>&nbsp;rRNA+Protein
+    
+    <br>
+        &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("ribo") 
+            jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone off;select *:A,*:S;backbone 200;select *:B,*:C,*:D;cpk;select *:M;dots 100;set fontsize 18;color label black;select atomno=6392 and *:D;label E;select atomno=4821 and *:C;label P;select atomno=3161 and *:B;label A;select all","","","tRNA, mRNA + 30S");  
+        </script>&nbsp;tRNA, mRNA + 30S      
+        
+        &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("ribo") 
+            jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone off;select *:B,*:C,*:D;cpk;select *:M;cpk;font label 18;color label yellow;select atomno=6392 and *:D;label E;select atomno=4821 and *:C;label P;select atomno=3161 and *:B;label A;select atomno=6400 and *:M;label mRNA;color label red;select all","","","tRNA, mRNA + 30S");  
+        </script>&nbsp;tRNA, mRNA    
+        
+        <br>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("ribo") 
+                jmolButton("select all;wireframe off;cartoons off;spacefill off;backbone off;select *:E,*:L,*:F;backbone 0.5;select *:B,*:C,*:D;cpk;select *:M;spacefill;font labels 20;color label black;select atomno=6392 and *:D;label E;select atomno=4821 and *:C;label P;select atomno=3161 and *:B;label A;select all","","","tRNA, mRNA + 50S");  
+            </script>&nbsp;tRNA, mRNA + 50S   
+            
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("ribo") 
+                jmolCheckbox("set windowCentered off;center atomno=4821 and *:C;set windowCentered on;zoomto 1.0 250;restrict within(20.0,atomno=4821 and *:C);select *:B,*:C,*:C;cpk","set windowCentered off;reset;rotate z -79.46; rotate y 24.75; rotate z 107.35;set windowCentered on;;select all;cpk off;backbone 0.5;zoomto 0.5 100","+/-Zoom",false);
+            </script>
+  <BR>
+  <B>Color Coding:</B>
+<table border=0>
+<TR>
+<TD width=30 bgcolor=purple>&nbsp;</TD><TD><font color="#000000">
+50S rRNA</TD>
+    <TD width=30 bgcolor=pink>&nbsp;</TD><TD><font color="#000000">
+50S protein</TD></TR>
+        <TD width=30 bgcolor=cyan>&nbsp;</TD><TD><font color="#000000">
+30S rRNA</TD>
+            <TD width=30 bgcolor=blue>&nbsp;</TD><TD><font color="#000000">
+30S protein</TD></TR>
+                <TD width=30 bgcolor=yellow>&nbsp;</TD><TD><font color="#000000">
+tRNA</TD>
+                    <TD width=30 bgcolor=green>&nbsp;</TD><TD><font color="#000000">
+mRNA</TD></TR></Table>
+
+<br><hl>
+
+    <b><font size=+1>Exit tunnel [50s subunit]:</font></b><br>
+&nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("ribo") 
+    jmolButton("load ./jmol/pdbs/ribo/1ffk_exHB.pdb;rotate z -2.01; rotate y 30.86; rotate z -75.71;# Crown View;select all;select protein;backbone 450;color pink;select rna;backbone 400;color purple;# Color 5S RNA;select *:9;color [255,0,255];select atomno=2770;label '5S';select atomno=4847;label 'CP';select atomno=5099;label 'L19';select atomno=4623;label 'L15';select atomno=6347;label 'L6';select atomno=3897;label 'L7';set fontsize 10;color labels yellow;# PTC Residues;select 2102,2482,2485,2486;color [238,187,34];spacefill;select 2486;label 'PTC';center 2486;select all;set specular on","","","exit tunnel");  
+</script>&nbsp;Load 50s subunit<br>
+    <b>Select:</b><br>
+    &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("ribo") 
+        jmolButton("select all;backbone 400;restrict nucleic;select all","","","exit tunnel");  
+    </script>&nbsp;rRNA only
+        &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("ribo") 
+            jmolButton("select all;backbone 400;restrict protein;select all","","","exit tunnel");  
+        </script>&nbsp;protein only<br>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("ribo") 
+                jmolButton("select all;select protein;backbone 450;color pink;select rna;backbone 400;color purple;# Color 5S RNA;select *:9;color [255,0,255];select atomno=2770;label '5S';select atomno=4847;label 'CP';select atomno=5099;label 'L19';select atomno=4623;label 'L15';select atomno=6347;label 'L6';select atomno=3897;label 'L7';set fontsize 10;color labels yellow;# PTC Residues;select 2102,2482,2485,2486;color [238,187,34];spacefill;select 2486;label 'PTC';center 2486;select all;set specular on","","","exit tunnel");  
+            </script>&nbsp;rRNA + protein<br>
+ <br>           
+                        &nbsp;&nbsp;<script type="text/javascript">
+                            jmolSetTarget("ribo") 
+                            jmolButton("load ./jmol/pdbs/ribo/1ffk_exHB.pdb;rotate z -2.01; rotate y 30.86; rotate z -75.71;# Crown View;select all;select protein;backbone 450;color pink;select rna;backbone 400;color purple;# Color 5S RNA;select *:9;color [255,0,255];select atomno=2770;label '5S';select atomno=4847;label 'CP';select atomno=5099;label 'L19';select atomno=4623;label 'L15';select atomno=6347;label 'L6';select atomno=3897;label 'L7';set fontsize 10;color labels yellow;# PTC Residues;select 2102,2482,2485,2486;color [238,187,34];spacefill;select 2486;label 'PTC';center 2486;select *:C and (56-73,74-77,84-85);define ctun selected;color yellow;select *:O and (121-129,130-135);define otun selected;color green;select *:Y and (16-21,24,27);define ytun selected;color purple;select ctun or otun or ytun;define ptun selected;select *:0 and (20-23,60,81-96,635-640,769-770,1361-1365,1427-1432,1440-1443,1684-1690,2053-2057,2073,2094-2099);define r1tun selected;color cyan;select *:0 and (1835-1838,2100-2105,2112-2113,2474-2477,2487,2538-2545);define r2tun selected;color cyan;select *:0 and (462-470,476-480,485-490,497-499,510-524,839-845,881-890,901,2613-2622,2644-2650);define r3tun selected;color cyan;select r1tun or r2tun or r3tun or ctun or otun or ytun;define rtun selected;select not (ptun or rtun);backbone 0.1;spacefill off;select *:3;backbone 400;color red;font labels 20 bold;select all","","","exit tunnel");  
+                        </script>&nbsp;Exit tunnel (red)
+     
+     &nbsp;&nbsp;<script type="text/javascript">
+         jmolSetTarget("ribo") 
+         jmolCheckbox("set windowCentered off;center atomno=6557;set windowCentered on;zoomto 1.0 200","zoomto 0.5 100","+/-Zoom",false);
+     </script>   
+     
+     &nbsp;&nbsp;<script type="text/javascript">
+         jmolSetTarget("ribo") 
+         jmolCheckbox("select *:3;define epep selected;isoSurface surf1 select(epep) ignore(not epep) molecular;color $surf1 red","isoSurface surf1 off","+/-Surface",false);
+     </script>   
+</TABLE>
+
+
+</TD>
+</TR>
+</TABLE>
+<TABLE width=850 border=0>
+    <TH>Key Points:</TH>
+    <TH>30s</TH>
+    <TH>50s</TH>
+    <TH>tRNA sites</TH>
+    <TR>
+<TD>&nbsp;</TD>
+<TD valign=top>
+<UL>
+<LI>16S rRNA
+<LI>Binds mRNA and recognizes SD sequence
+</UL>
+</TD>
+    <TD valign=top>
+<UL>
+<LI>23S and 5S rRNA
+<LI>Responsible for formation of peptide bond (Ribozyme).
+</UL>
+</TD>
+    <TD>
+<UL>
+<LI> A site: Contains amino-acyl tRNA that is to be added to chain.
+<LI> P site: Contains growing peptide attached to tRNA.
+<LI> E site: Discharged tRNA exits from here.
+</UL>
+</TR>
+</TABLE>
+Acknowledgements: Exit tunnel script from Will McClure. The coordinates of the exiting polyalanine were generously provided by Dr. Poul Nissen. The display corresponds roughly to Fig. 11 of the Nissen et al. paper.</P>
+<HR>
+<TT>1.1.2008</TT>
+</BODY>
+</HTML>
+

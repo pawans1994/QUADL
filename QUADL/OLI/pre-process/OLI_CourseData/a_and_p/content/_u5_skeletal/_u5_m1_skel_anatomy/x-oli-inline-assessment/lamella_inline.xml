@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="lamella_inline">
+   <title>Lamella-Containing Structures</title>  
+   <question id="q1">
+      <body>
+         <p><?oxy_comment_start author="mmyers" timestamp="20111211T191043-0500" comment="This material -- osteons and orientation in the direction of force, was not covered in the expository text.
+
+**This also applies to the next question -- that matierial wasn&apos;t covered either."?>Compact
+            bones contain <input_ref input="osteon"/> structures that are oriented <input_ref
+               input="direction"/>.<?oxy_comment_end?></p>
+      </body>
+      <fill_in_the_blank id="osteon">
+         <choice value="A">osteon</choice>
+         <choice value="B">trabecular</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="direction">
+         <choice value="C">randomly</choice>
+         <choice value="D">in the direction of force</choice>
+      </fill_in_the_blank>
+      
+      <part targets="osteon">
+         <response input="osteon" match="A" score="1">
+            <feedback>Correct. Compact bone contains organized tubular osteons, which contain blood
+               vessels for material transport. </feedback>
+         </response>
+         <response input="osteon" match="B" >
+            <feedback>Incorrect. Compact bone contains organized tubular osteons, which contain
+               blood vessels for material transport.  </feedback>
+         </response>
+         <hint targets="osteon">The long bones contain compact bone along their diaphysis (shaft).
+            Consider the type of stresses on these long bones and how their structure might benefit this. </hint>
+      </part>
+      <part targets="direction">
+         <response input="direction" match="C" score="0">
+            <feedback>Incorrect. Osteons are organized in the direction of force so that they can
+               resist tension and compression in the direction of force. For example, standing puts compressive
+               forces on the long bones of the legs. </feedback>
+         </response>
+         <response input="direction" match="D" score="1">
+            <feedback>Correct. Osteons are organized in the direction of force so that they can
+               resist tension and compression in the direction of force. For example, standing puts compressive
+               forces on the long bones of the legs. </feedback>
+         </response>
+         <hint targets="direction">Compact bone often supports weight or is involved in lifting of objects. 
+            The weight is generally along the long-axis of the bone.  </hint>
+      </part>
+   </question>
+   
+   <question id="q2">
+      <body>
+         <p>Spongy bone contains <input_ref input="trabecular"/> structures that are oriented <input_ref input="direction2"/>.</p>
+      </body>
+      <fill_in_the_blank id="trabecular">
+         <choice value="A">osteon</choice>
+         <choice value="B">trabecular</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="direction2">
+         <choice value="C">randomly</choice>
+         <choice value="D">direction of force</choice>
+      </fill_in_the_blank>
+      
+      <part targets="trabecular">
+         <response input="trabecular" match="B" score="1">
+            <feedback>Correct. Spongy bone contains a mesh-like structure of trabeculae plates. The
+               random orientation helps distribute forces in many directions and acts as a shock
+               absorber.. It is not completely random as greater trabecular density generally occurs 
+               in the directions experiencing the most force.</feedback>
+         </response>
+         <response input="trabecular" match="A" >
+            <feedback>Incorrect. Spongy bone contains a mesh-like structure of trabeculae.</feedback>
+         </response>
+         <hint targets="trabecular">Osteons are tubular structures that are tightly packed together. 
+            Trabeculae occur as individual supporting “struts” separated from each other.  </hint>
+      </part>
+      <part targets="direction2">
+         <response input="direction2" match="C" score="1">
+            <feedback>Correct. The random orientation helps distribute forces in many directions and
+               acts as a shock absorber. </feedback>
+         </response>
+         <response input="direction2" match="D" score="0">
+            <feedback>Incorrect. The random orientation helps distribute forces in many directions
+               and acts as a shock absorber. </feedback>
+         </response>
+             <hint targets="direction2">Spongy bone tends to experience forces from many directions. </hint>
+      </part>
+   </question>
+   
+</assessment>

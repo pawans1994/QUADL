@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_mean1_tutor3">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>In the simulation, the standard deviation for the population is 500 grams. The
+                    standard deviation of sample means is <input_ref input="A"/> 500 grams. </p>
+            </body>
+            <fill_in_the_blank id="A" shuffle="false">
+                <choice value="one">larger than</choice>
+                <choice value="two">smaller than</choice>
+                <choice value="three">about the same as</choice>
+            </fill_in_the_blank>
+            <part>
+                <response input="A" match="one">
+                    <feedback>Incorrect. There is less variability in sample means
+                        than in individual measurements. Please try again </feedback>
+                </response>
+                <response input="A" match="two" score="1">
+                    <feedback>Correct. There is less variability in sample means than in individual
+                        measurements, so the standard deviation for sample means will be smaller
+                        than 500 grams.</feedback>
+                </response>
+                <response input="A" match="three">
+                    <feedback>Incorrect. There is less variability in sample means
+                        than in individual measurements. Please try again</feedback>
+                </response>
+                <hint>Compare the two distributions above and compare their spreads.</hint>
+            </part>
+        </question>
+
+    </page>
+</assessment>

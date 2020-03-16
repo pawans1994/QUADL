@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page id="stat_printouts">
+	<head>
+		<title>How to Read Statistical Software Output</title>
+	</head>
+	<body>
+
+
+		<p>Outputs from statistical programs vary by software programs. This information should help
+			you to interpret the t-test results from the different programs. Please note that, while
+			the information will vary in setup and format from program to program, the values are
+			the same, since the same data is used for all the printouts. In addition, the format of
+			output will be different for other tests (ex. correlation, regression, ANOVA); thus,
+			this information pertains only to the output for t-tests.</p>
+		<p>As reference, here is information on the problem data that was analyzed in the
+			printouts:</p>
+		<p/>
+		<!--margo.coleman-seiffert:Hi Kim: Can this be in some type of box or offset, in some way, since it is the problem data being used for all of the printouts? Thanks!-->
+		<section>
+			<title>What is more important to you — personality or looks?</title>
+			<body>
+
+				<p>This question was asked of a random sample of 239 college students, who were to
+					answer on a scale of 1 to 25. An answer of 1 means personality has maximum
+					importance and looks no importance at all, whereas an answer of 25 means looks
+					have maximum importance and personality no importance at all. The purpose of
+					this survey was to examine whether males and females differ with respect to the
+					importance of looks vs. personality.</p>
+
+			</body>
+		</section>
+		<p><em style="bold">R Output:</em></p>
+		<p>R was used to calculate the two independent samples t-test result, using gender (Gender)
+			as the categorical explanatory/independent variable and the importance of personality
+			(looks) as the quantitative response/dependent variable. The data command used to
+			produce this output is as follows:</p>
+		<image src="../../webcontent/stat_printouts/image1.png" alt="t.test(looks$Score~looks$Gender)
+	(top line) Welch Two Sample t-test
+	(second line) looks$Score by looks$Gender
+	(third line) t = -4.6574, df = 182.973, p-value = 6.143e-06
+	(fourth line) alternative hypothesis: true differenc ein means is not equal to 0
+	(fifth line) 95 percent confidence interval:
+	(sixth line) -3.695865 -1.496292
+	(seventh line) sample estimates:
+	(eighth line) mean in group Female,  mean in group Male
+	(ninth line) 10.73333  13.32941
+	"/>
+
+		<p>The top line tells us that a two sample t-test was calculated.</p>
+		<p>The second line tell us specifically what was analyzed (ex. data:)</p>
+		<p>The third line has three values:</p>
+		<ul>
+			<li>t = -4.6574, which is the value of the t-statistic</li>
+			<li>df = 182.973, which is the degrees of freedom. It is used when determining critical
+				value.</li>
+			<li>p-value = 6.143e-06, which is the exact probability of getting this value for the
+				t-statistic. The value is written in scientific notation, which needs to be
+				converted to get the exact probability level. Since this value ends in e-06, the
+				decimal point needs to be moved 6 places to the left. Thus, 6.143e-06 equals
+				.000006143, which is very, very small. When rounded to four decimal points, the
+				P-value is .0001; thus, we can reject the null hypothesis that there is no
+				difference between the mean score of Females and the mean score of Males on the
+				importance of looks.</li>
+		</ul>
+		<p>The fourth line describes the alternative hypothesis. In this case, since the “true
+			difference in means is not equal to 0;” thus, it assessing that the claim that there is
+			a difference, but not that one group is higher or lower than the other group, which is a
+			two-sided, two independent samples t-test.</p>
+		<p>The fifth line tells us that the sixth line contains the 95% confidence interval that can
+			be used to assess the null hypothesis (H<sub>0</sub> : μ<sub>1</sub> - μ<sub>2</sub> =
+			0). Thus, the 95% confidence interval is: (-3.695865, -1.496292). Since 0 does not fall
+			within the 95% confidence interval, we can reject the null hypothesis that there is no
+			difference between the mean score of Females and the mean score of Males on the
+			importance of looks. As it should be, these results are consistent with the above
+			results, where the P-value was used.</p>
+		<p>The last three lines give us information on the samples; in this case, group means.</p>
+		<ul>
+			<li>mean personality score for females: 10.73333</li>
+			<li>mean personality score for males: 13.32941</li>
+		</ul>
+		<p><em style="bold">StatCrunch (edited) Output:</em></p>
+		<p>StatCrunch was used to produce the following three charts, with gender (Gender) as the
+			categorical explanatory/independent variable and the importance of personality (looks)
+			as the quantitative response/dependent variable.</p>
+		<ul>
+			<li>The first chart contains summary statistics for the two samples (Females and Males)
+				on the quantitative response/dependent variable (looks).</li>
+			<li>The second chart contains the (two-sided) two independent samples t-test result,
+				using gender (Gender) as the categorical explanatory/independent variable and the
+				importance of personality (looks) as the quantitative response/dependent variable
+				with the P-value method for assessing the null hypothesis.</li>
+			<li>The third chart contains the (two-sided) two independent samples t-test result,
+				using gender (Gender) as the categorical explanatory/independent variable and the
+				importance of personality (looks) as the quantitative response/dependent variable
+				with the 95% confidence interval method for assessing the null hypothesis.</li>
+		</ul>
+		<image src="../../webcontent/stat_printouts/image2.png" alt="Summary Statistics:
+		(A chart, we will be giving the data by columns, with rows separated by commas)
+		(Column 1:) Gender(x), Female, Male
+		(Column 2:) n, 150, 85
+		(Column 3:) Mean, 10.733334, 13.3294115
+		(Column 4:) Std. Dev., 4.254751, 4.0189676
+		(Column 5:) STd. Err, 0.347399, 0.43591824"/>
+
+		<p>The above chart displays information on the characteristics of the samples.</p>
+		<p>The first line gives a description of the information contained in each column, while the
+			first column tells us what information is contained in each of the rows:</p>
+		<ul>
+			<li>Column 1 contains information on the x (explanatory/independent) categorical
+				variable. In this case, there are two levels of the x variable, Gender: males and
+				females. Thus, row 2 refers only to information on the sample of Females, while row
+				3 refers only to information on the sample of Males.</li>
+			<li>Column 2 contains information on the number of observations in each sample: 150
+				Females and 85 Males.</li>
+			<li>Column 3 contains the means for each of the samples: 10.733334 for Females and
+				13.3294115 for Males.</li>
+			<li>Column 4 contains the standard deviation for each of the samples: 4.254751 for
+				Females and 4.0189676 for Males.</li>
+			<li>Column 5 contains the standard deviation of the sampling distribution (which is also
+				known as the standard error): 0.347399 for Females and 0.43591824 for Males.</li>
+		</ul>
+		<image src="../../webcontent/stat_printouts/image3.png" alt="Hypothesis test results:
+	mu_1 : mean of Female, mu_2: mean of Male; mu_1 - mu_2 : mean difference, H_0: mu_1 - mu_2 = 0,
+H_a: mu_1 - mu_2 != 0
+
+		First line of chart: (column 1) difference, (column 2) Sample mean, (column 3) Std. Err., (column 4)
+T-Stat, (column 5) P-value.
+		Second line of chart: (column 1) mu_1 - mu_2, (column 2) -2.5960784, (column 3) 0.55741435,
+(column 4) 182.97267, (column 5) -4.657358, (column 6) &lt; 0.0001"/>
+
+		<p>The above chart shows the results of the two-sided (since the alternative hypothesis is:
+				H<sub>a</sub> : μ<sub>1</sub> - μ<sub>2</sub> ≠ 0), two independent samples t-test,
+			using the P-value method.</p>
+		<p>The first line gives a description of the information contained in each column:</p>
+		<ul>
+			<li>Column 1 contains information on the difference that is being assessed:
+					μ<sub>1</sub> - μ<sub>2</sub>, where μ<sub>1 </sub>is the population mean for
+				Females and μ<sub>2 </sub>is the population mean for Males.</li>
+			<li>Column 2 contains the difference between the sample means that is being assessed in
+				the t-test. Thus, the mean from the sample of Females (10.733334) minus the mean
+				from the sample of Males (13.3294115) or 10.7333334 - 13.3294115 = -2.5960784.</li>
+			<li>Column 3 contains the standard error.</li>
+			<li>Column 4 contains the degrees of freedom, which is based on the sample sizes and is
+				used to determine the critical value for cutoff scores.</li>
+			<li>Column 5 contains the t-statistic, which is -4.657358.</li>
+			<li>Column 6 contains the P-value, which is &lt;0.0001. Thus, we can reject the null
+				hypothesis that there is no difference between the mean score of Females and the
+				mean score of Males on the importance of looks.</li>
+		</ul>
+		<image src="../../webcontent/stat_printouts/image4.png" alt="95% Confidence interval results:
+First line of chart: (column 1) difference, (column 2) Sample mean, (column 3) Std. Err., (column 4)
+DF, (column 5) L. Limit, (column 6) U. Limit.
+			Second line of chart: (column 1) mu_1 - mu_2, (column 2) -2.5960784, (column 3) 0.55741435,
+(column 4) 182.97267, (column 5) -3.6958647, (column 6) -1.4962921"/>
+
+
+		<p>The above chart shows the results of the two-sided (since the alternative hypothesis is:
+				H<sub>a</sub> : μ<sub>1</sub> - μ<sub>2</sub> ≠ 0), two independent samples t-test,
+			using 95% confidence intervals.</p>
+		<p>The first line gives a description of the information contained in each column:</p>
+		<ul>
+			<li>Column 1 contains information on the difference that is being assessed:
+					μ<sub>1</sub> - μ<sub>2</sub>, where μ<sub>1 </sub>is the population mean for
+				Females and μ<sub>2 </sub>is the population mean for Males.</li>
+			<li>Column 2 contains the difference between the sample means that is being assessed in
+				the t-test. Thus, the mean from the sample of Females (10.733334) minus the mean
+				from the sample of Males (13.3294115) or 10.7333334 - 13.3294115 = -2.5960784.</li>
+			<li>Column 3 contains the standard error.</li>
+			<li>Column 4 contains the degrees of freedom, which is based on the sample sizes and is
+				used to determine the critical value for cutoff scores.</li>
+			<li>Column 5 contains the lower limit and Column 6 contains the upper limit of the 95%
+				confidence interval that can be used to assess the null hypothesis (H0 : μ1 - μ2 =
+				0). Thus, the 95% confidence interval is: (-3.6958647, -1.4962921). Since 0 does not
+				fall within the 95% confidence interval, we can reject the null hypothesis that
+				there is no difference between the mean score of Females and the mean score of Males
+				on the importance of looks. As it should be, these results are consistent with the
+				results from the previous table, where the P-value was used.</li>
+		</ul>
+		<p><em style="bold">Minitab Output:</em></p>
+		<p>Minitab was used to calculate the two independent samples t-test result, using gender
+			(Gender) as the categorical explanatory/independent variable and the importance of
+			personality (looks) as the quantitative response/dependent variable. The below chart
+			shows the results of the two-sided (since the alternative hypothesis is: HA : μ1 - μ2 ≠
+			0), two independent sample t-test, using both the P-value and 95% confidence interval to
+			assess the null hypothesis.</p>
+
+		<image src="../../webcontent/stat_printouts/image5.png" alt="(line 1)Two-Sample T-Test and
+CI: Score (Y), Gender (X)
+		(line 2) Two-sample T for Score (Y)
+		(line 3) (column 1) Gender(X), (column 2) N, (column 3) Mean, (column 4) StDev, (column 5) SE Mean
+		(line 4) (column 1) Female, (column 2) 150, (column 3) 10.73, (column 4) 4.25, (column 5) 0.35
+		(line 5) (column 1) Male, (column 2) 85, (column 3) 13.33, (column 4) 4.02, (column 5) 0.44
+		
+		(line 6) Difference = mu (Female) - mu (Male)
+		(line 7) Estimate for difference: -2.596
+		(line 8) 95% CI for difference: (-3.696, -1.496)
+		(line 9) T-Test of difference = 0 (vs not =): T-Value = -4.66   P-Value = 0.000   DF = 182"/>
+
+
+
+		<p>The top line tells us that a two sample t-test was calculated, using score as the
+			response/dependent variable and gender as the explanatory/independent variable.</p>
+		<p>The second line tell us that the two sample t-test was calculated with score as the
+			response/dependent variable.</p>
+		<p>The third, fourth, and fifth lines, comprise a table of summary statistics for the
+			response/dependent variable. The third line gives a description of the information
+			contained in each column, while the first column tells us what information is contained
+			in each of the rows:</p>
+		<ul>
+			<li>Column 1 contains information on the x (explanatory/independent) categorical
+				variable. In this case, there are two levels of the x variable, Gender: males and
+				females. Thus, row 2 refers only to information on the sample of Females, while row
+				3 refers only to information on the sample of Males.</li>
+			<li>Column 2 contains information on the number of observations in each sample: 150
+				Females and 85 Males.</li>
+			<li>Column 3 contains the means for each of the samples: 10.73 for Females and 13.33 for
+				Males.</li>
+			<li>Column 4 contains the standard deviation for each of the samples: 4.25 for Females
+				and 4.02 for Males.</li>
+			<li>Column 5 contains the standard deviation of the sampling distribution (which is also
+				known as the standard error): 0.35 for Females and 0.44 for Males.</li>
+		</ul>
+		<p>The sixth line contains information on the difference that is being assessed: μu - μu; in
+			this case, the population mean of males is subtracted from the population mean of
+			females.</p>
+		<p>The seventh line the difference between the sample means that is being assessed in the
+			t-test. Thus, the mean from the sample of Females (10.73) minus the mean from the sample
+			of Males (13.33) or 10.73 - 13.33 = -2.596.</p>
+		<p>The eighth line contains the 95% confidence interval that can be used to assess the null
+			hypothesis (H0 : μ1 - μ2 = 0). Thus, the 95% confidence interval is: (-3.696, -1.496).
+			Since 0 does not fall within the 95% confidence interval, we can reject the null
+			hypothesis that there is no difference between the mean score of Females and the mean
+			score of Males on the importance of looks.</p>
+		<p>The ninth line has three values:</p>
+		<ul>
+			<li>T-Test of difference = 0 (vs not =): T-Value = -4.66, which tells us that this is a
+				two-sided two sample t-test, with a t-statistic value of -4.66.</li>
+			<li>P-value = 0.000, which is the exact probability of getting this value for the
+				t-statistic. Since it is not possible to have 0 probability, the last value is
+				changed to a 1, when reporting, and it shows that, with a P-value of .001, we can
+				reject the null hypothesis that there is no difference between the mean score of
+				Females and the mean score of Males on the importance of looks. As it should be,
+				these results are consistent with the results from the previous line (line 8), where
+				the 95% confidence interval was used.</li>
+			<li>DF = 182, which is the degrees of freedom. It is used when determining the critical
+				value.</li>
+		</ul>
+		<p><em style="bold">TI Calculator Output:</em></p>
+		<p>The TI calculator was used to calculate the two independent samples t-test result, using
+			gender (Gender) as the categorical explanatory/independent variable and the importance
+			of personality (looks) as the quantitative response/dependent variable. The below chart
+			shows the results of the two-sided (since the alternative hypothesis is: H<sub>A</sub> :
+				μ<sub>1</sub>≠ μ<sub>2</sub> ), two independent sample t-test, using the P-value to
+			assess the null hypothesis.</p>
+		<image src="../../webcontent/stat_printouts/image6.png" alt="Left Image:
+		(line 1) mu_1 != mu_2
+		(line 2) t = -4.657358347
+		(line 3) p = 6.1426775e-6
+		(line 4) df = 182.9726756
+		(line 5) x-bar_1 = 10.73333333
+		(line 6) x-bar_2 = 13.32941176
+		
+		Right Image:
+		(line 1) mu_1 != mu_2
+		(line 2) x-bar_2 = 13.32941176
+		(line 3) Sx_1 = 4.25475126
+		(line 4) Sx_2 = 4.01896763
+		(line 5) n_1 = 150
+		(line 6) n_2 = 85
+		"/>
+		<p/>
+		<!--margo.coleman-seiffert:Kim: These lines will depend on whether the images of the two screens are laid side-by-side, or in order.....-->
+		<p>The top lines of both the left and right images tell us that a two sample t-test was
+			calculated, while the second lines tell us that the alternative hypothesis is
+				H<sub>A</sub> : μ<sub>1</sub>≠ μ<sub>2</sub>. Thus, these are the results for a
+			two-sided two sample t-test.</p>
+		<p><em style="bold">Left Chart:</em></p>
+		<p>The third line shows the t-statistic, which is -4.657358347.</p>
+		<p>The fourth line shows the p-value = 6.1426775e-06, which is the exact probability of
+			getting this value for the t-statistic. The value is written in scientific notation,
+			which needs to be converted to get the exact probability level. Since this value ends in
+			e-06, the decimal point needs to be moved 6 places to the left. Thus, 6.143e-06 equals
+			.000006143, which is very, very small. When rounded to four decimal points, the P-value
+			is .0001; thus, we can reject the null hypothesis that there is no difference between
+			the mean score of Females and the mean score of Males on the importance of looks.</p>
+		<p>The fifth line contains the degrees of freedom, which is df = 182.9726756. It is used
+			when determining critical value.</p>
+		<p>The sixth line contains the mean for the first sample, which is Females: 10.73333333.</p>
+		<p>The seventh line contains the mean for the second sample, which is Males: 13.32941176</p>
+		<p><em style="bold">Right Chart (which is a continuation of the left chart, when viewed on
+				the calculator screen):</em></p>
+		<p>The third line contains the mean for the second sample, which is Males: 13.32941176.</p>
+		<p>The fourth line contains the standard deviation for the first sample, which is Females:
+			4.25475126.</p>
+		<p>The fifth line contains the standard deviation for the second sample, which is Males:</p>
+		<p>4.01896763.</p>
+		<p>The sixth line contains the sample size for the first sample, which is 150 Females.</p>
+		<p>The seventh line contains the sample size for the second sample, which is 85 Males.</p>
+	</body>
+</workbook_page>

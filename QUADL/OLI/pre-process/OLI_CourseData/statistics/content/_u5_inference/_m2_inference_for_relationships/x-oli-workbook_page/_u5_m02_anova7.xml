@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova7">
+    <head>
+        <title>ANOVA (7 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+    <body>
+        
+        <section>
+            <title>Final Comment</title>
+            <body>
+                <p>However, the ANOVA F-test does not provide any insight into why H<sub>0</sub> was
+                    rejected; it does not tell us in what way <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal"> μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>3</m:mn>
+                            </m:msub>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mi>k</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> are not all equal. We would like to know which pairs of ’s are not
+                    equal. As an exploratory (or visual) aid to get that insight, we may take a look
+                    at the confidence intervals for group population means<m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal"> μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>3</m:mn>
+                            </m:msub>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mi>k</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> that appears in the output. More specifically, we should look at the
+                    position of the confidence intervals and overlap/no overlap between them. </p>
+                <p>* If the confidence interval for, say,<m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> overlaps with the confidence interval for <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> , then <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> and <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> share some plausible values, which means that based on the data we
+                    have no evidence that these two ’s are different.</p>
+                <image style="block" src="../webcontent/anova/image28.png" alt="Illustrated are
+the confidence intervals for &mu;_i and &mu;_j on a number line. We see that they overlap, so
+there is an overlap in plausible values."/>
+
+                <p>* If the confidence interval for <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> does not overlap with the confidence interval for <m:math
+                        display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> , then <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> and <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> do not share plausible values, which means that the data suggest that
+                    these two ’s are different. </p>
+                <image style="block" src="../webcontent/anova/image34.png" alt="Illustrated are
+the confidence intervals for &mu;_i and &mu;_j on a number line. We see that do not overlap, so
+there is no overlap in plausible values."/>
+                <p>Furthermore, if like in the figure above the confidence interval (set of
+                    plausible values) for <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> lies entirely below the confidence interval (set of
+                    plausible values) for <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>, then the data suggest that <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>i</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is smaller than <m:math display="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mi>j</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>.</p>
+                <!--   <p>Note that when we reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T105307-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T105305-0500" content="Ho"?>
+                    in the ANOVA F-test, all we can conclude is that</p>
+                <ul>
+                    <li>not all the means <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>3</m:mn>
+                                </m:msub>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>k</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math> are equal, or </li>
+                    <li>there are some differences between the means <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>3</m:mn>
+                                </m:msub>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>,</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>k</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math> , or </li>
+                    <li>the response Y is related to explanatory X.</li>
+                </ul>
+                <p>However, the ANOVA F-test does not provide any insight into why
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110514-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110511-0500" content="Ho"?>
+                    was rejected, or in other words,
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T110528-0500"?>it does not
+                    tell us <?oxy_insert_end?>in what way<m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal"> μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>3</m:mn>
+                            </m:msub>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mi>k</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> are different. As an exploratory (or visual) aid to get that insight,
+                    we may take a look at the confidence intervals for group population means. More
+                    specifically, we
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T110607-0500"?>can<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110603-0500" content="are"?>
+                    look<?oxy_delete author="mmyers" timestamp="20101129T110610-0500" content="ing"?>
+                    at which of the confidence intervals overlap and which do not. </p>-->
+                <example>
+                    <p>Consider our first example on the level of academic frustration.</p>
+                    <image style="block" src="../webcontent/image171_excel.gif" alt="
+Business: Mean = 7.314, StDev = 2.898. The 95% Confidence Interval is about (6.5, 8.5)
+        English: Mean = 11.771, StDev = 2.088. The 95% Confidence Interval is about (11, 13)
+        Mathematics: Mean = 13.2, StDev = 2.153. The 95% Confidence Interval is about (12.5, 14.5)
+        Psychology: Mean = 14.029, StDev = 3.082. The 95% Confidence Interval is about (13, 15)"/>
+                    <!-- RS 07/28/10 Generalized to eliminate alternatives
+               <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+                <alternative value="excel">                 <title>Excel 2007 Instructions</title>
+                    
+                    <image style="block" src="../webcontent/image171_excel.gif"/>
+                </alternative>
+                <alternative value="minitab">                 <title>Minitab Instructions</title>
+                    
+                    <image style="block" src="../webcontent/image171.gif"/>
+                </alternative>
+                <alternative value="r">                 <title>R Instructions</title>
+                    
+                    <image style="block" src="../webcontent/image171_excel.gif"/>
+                </alternative>
+            <alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                    <p>Based on the small p-value, we rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T110648-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110645-0500" content="Ho"?>
+                        and concluded that not all four frustration level means are equal, or in
+                        other words that frustration level is related to the student's major. To get
+                        more insight into that
+                        relationship<?oxy_insert_start author="mmyers" timestamp="20101129T110701-0500"?>,<?oxy_insert_end?>
+                        we can look at the confidence intervals above (marked in red). The top
+                        confidence interval is the set of plausible values for <m:math
+                            overflow="scroll">
+                            <m:mi>μ</m:mi>
+                        </m:math>
+                        <sub>1</sub>, the mean frustration level of
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110716-0500"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110715-0500" content="B"?>usiness
+                        students. The confidence interval below it is the set of plausible values
+                        for <m:math overflow="scroll">
+                            <m:mi>μ</m:mi>
+                        </m:math>
+                        <sub>2</sub>, the mean frustration level of English students, etc. </p>
+                    <p>What we see is that the
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110727-0500"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110727-0500" content="B"?>usiness
+                        confidence interval is way below the other three
+                        (<?oxy_insert_start author="mmyers" timestamp="20101129T110733-0500"?>it
+                        <?oxy_insert_end?>doesn't overlap with any of them). The
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110755-0500"?>m<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110754-0500" content="M"?>ath
+                        confidence interval overlaps with both the English and the
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110806-0500"?>p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110805-0500" content="P"?>sychology
+                        confidence
+                        interval<?oxy_insert_start author="mmyers" timestamp="20101129T110811-0500"?>s<?oxy_insert_end?>;
+                        however, there is no overlap between the English and
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110824-0500"?>p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110824-0500" content="P"?>sychology
+                        confidence intervals.</p>
+                    <p>This gives us the impression that the mean frustration level of
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110838-0500"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110837-0500" content="B"?>usiness
+                        students is lower than the mean in the other three majors. Within the other
+                        three majors, we get the impression that the mean frustration of
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110846-0500"?>m<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110845-0500" content="M"?>ath
+                        students may not differ much from the mean of both English and
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110850-0500"?>p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110850-0500" content="P"?>sychology
+                        students, however the mean frustration of English students may be lower than
+                        the mean of
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T110857-0500"?>p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110857-0500" content="P"?>sychology
+                        students.</p>
+                    <p>Note that this is only an exploratory/visual way of getting an impression of
+                        why
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T110908-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T110905-0500" content="Ho"?>
+                        was rejected, not a formal one. There is a formal way of doing it
+                        <?oxy_delete author="mmyers" timestamp="20101129T110914-0500" content="which"?><?oxy_insert_start author="mmyers" timestamp="20101129T110915-0500"?>that<?oxy_insert_end?>
+                        is called "multiple
+                        comparisons<?oxy_insert_start author="mmyers" timestamp="20101129T110921-0500"?>,<?oxy_insert_end?>"
+                        which is beyond the scope of this course. An extension to this course will
+                        include this topic
+                        <?oxy_comment_start author="mmyers" timestamp="20101129T111009-0500" comment="is this still in the future? or does it exist now?"?>in
+                        the future.<?oxy_comment_end?></p>
+                </example>
+                <?oxy_delete author="mmyers" timestamp="20101129T110757-0500" content="&lt;activity idref=&quot;_u5_m2_lbd7&quot; purpose=&quot;learnbydoing&quot;/&gt;"?>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <ul>
+                    <li>The ANOVA F-test is used for comparing more than two population means when
+                        the samples (drawn from each of the populations we are comparing) are
+                        independent. We encounter this situation when we want to examine the
+                        relationship between a quantitative response
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T112628-0500"?>variable
+                        <?oxy_insert_end?>and a categorical explanatory
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T112637-0500"?>variable
+                        <?oxy_insert_end?>that has more than two values.</li>
+                    <li>The hypotheses that are being tested in the ANOVA F-test are: <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mi>H</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                        <m:mo>:</m:mo>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                    </m:mrow>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mo>=</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>k</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math>
+                        <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>H</m:mi>
+                                    <m:mi>a</m:mi>
+                                </m:msub>
+                                <m:mo>:</m:mo>
+                                <m:mi mathvariant="italic">not</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mi mathvariant="italic">all</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mi mathvariant="italic">the</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mo lspace="0px" form="infix">'</m:mo>
+                                <m:mi>s</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mi mathvariant="italic">are</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mi mathvariant="italic">equal</m:mi>
+                            </m:mrow>
+                        </m:math>
+                    </li>
+                    <li> The idea behind the ANOVA F-test is to check whether the variation among
+                        the sample means is due to true differences among the μ's or merely due to
+                        sampling variability by looking at: <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi mathvariant="italic">Variation</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">among</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">the</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">sample</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">means</m:mi>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi mathvariant="italic">Variation</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">within</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">the</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">groups</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </li>
+                    <li>Once we verify that we can safely proceed with the ANOVA F-test, we use
+                        software to carry it out.</li>
+                    <li>If the ANOVA F-test has rejected the null hypothesis we can look at the
+                        confidence intervals for the population means that are in the output to get
+                        a visual insight into why
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112736-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112726-0500" content="Ho"?>
+                        was rejected (i.e., which of the means differ).</li>
+                </ul>
+                <p> </p>
+            </body>
+        </section>
+        <activity idref="_u5_m2_anova_checkpoint1_pool" purpose="checkpoint"/>
+        <section>
+            <title>End<?oxy_insert_start author="mmyers" timestamp="20101129T112743-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112744-0500" content=" "?>of<?oxy_insert_start author="mmyers" timestamp="20101129T112745-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112746-0500" content=" "?>Lesson
+                Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m02_anova7_feedback"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

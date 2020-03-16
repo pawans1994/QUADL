@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="LigandBinding" version="2">
+    <name>&lt;b&gt;Equilibrium of MO complex formation&lt;/b&gt;</name>
+    <debugger state="on"/> 
+    <steps>      
+        <step id="createIT">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text> 
+                    </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects>
+            <actions>
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> 
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="createIT2">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text> 
+                    </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects>
+            <actions>
+                <action event="create" name="equation1" url="tools/equationMO1.swf"  x="410" y="295" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKey1.swf"  x="438" y="269" xscale=".65" yscale=".65" />
+                <action event="create" name="label1" url="tools/label.swf"  x="400" y="255" xscale="1" yscale="1" />
+                <action event="create" name="label2" url="tools/label.swf"  x="325" y="343" xscale="1" yscale="1" />
+                <action event="create" name="label3" url="tools/label.swf"  x="580" y="345" xscale="1" yscale="1" />
+                
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="createIT3">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text> 
+                    </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects>
+            <actions>
+                <action event="create" name="inputs1" url="tools/DisplayVariable09.swf"  x="436" y="317" xscale="1" yscale="1" />
+                <action event="create" name="inputs2" url="tools/DisplayVariable09.swf"  x="490" y="317" xscale="1" yscale="1" />
+                <action event="create" name="inputs3" url="tools/DisplayVariable09.swf"  x="544" y="317" xscale="1" yscale="1" />
+                
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="333" y="31" xscale="1" yscale="1" />
+                
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="userinput">
+             <objects tutor="">
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;Equilibrium state determined by protein and ligand concentrations.&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible">
+                    <text>In this example, &lt;b&gt;M&lt;/b&gt;yoglobin (the protein) is a single polypeptide chain protein that binds &lt;b&gt;O&lt;/b&gt;xygen (the ligand) to create an oxygen buffer in muscle fibers.&lt;br&gt;&lt;br&gt;This simulation will demonstrate the equilibrium of this complex formation. In the simulation you will see only a few myoglobin molecules. This represents a tiny fraction of the amount that would be in muscle fibers.&lt;br&gt;The reaction diagram to the right represents the relationship between unbound myoglobin &lt;b&gt;M&lt;/b&gt; and free oxygen &lt;b&gt;O&lt;/b&gt; establishing an equilibrium with a myoglobin-oxygen &lt;b&gt;MO&lt;/b&gt; complex. Note that between the free and bound molecules there is a set of half arrows that represent that the binding is reversible. The simulation will show you the reversibility of binding.&lt;br&gt; 
+Click "Next" to continue.
+                    </text>
+                </object>
+                <object name="equation1" state="hilight"/>
+                <object name="label1" state="hilight"/>
+            </objects>
+            <actions>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeNarrow09.swf" x="580" y="370" xscale="1" yscale="1" />  
+                <action event="create" name="therecorder" url="tools/chartRecorder08.swf"  x="325" y="368" xscale=".55" yscale="1" />
+                <action event="initialize" name="label1"  params=" " data="Myoglobin + Oxygen &lt;=&gt; [Myoglobin Oxygen]" />
+                <action event="initialize" name="label2"  params=" " data="Chart Recorder" />
+                <action event="initialize" name="label3"  params=" " data="Grapher" />
+               
+               <action event="create" name="pict1" url="swfs/simwindowMO.jpg" x="333" y="31" xscale="1" yscale="1" />
+                <action event="record light"/>
+<!--                <action event="pause"/>-->
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="show">
+             <objects tutor="">
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;Equilibrium state determined by protein and ligand concentrations.&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible" >
+                    <text>In the simulation window you will explore how the concentration of &lt;b&gt;O&lt;/b&gt; drives the formation of &lt;b&gt;MO complex&lt;/b&gt;. &lt;br&gt;You will start with 4 &lt;b&gt;M&lt;/b&gt; molecules (the red balls) and with 15 &lt;b&gt;O&lt;/b&gt; molecules (the blue balls). The white spot on &lt;b&gt;M&lt;/b&gt; indicates the binding site for &lt;b&gt;O&lt;/b&gt;. The bound &lt;b&gt;MO&lt;/b&gt; complexes are represented by the blue ball bound to the red ball.After pressing start watch the simulation window to see how the oxygen binds with the myoglobin and then releases after some time period. &lt;br&gt;&lt;br&gt;
+ Click "Start" to begin the simulation.
+                    </text>
+                </object>
+                <object name="equation1" state="visible"  />
+                <object name="pict1" state="visible"  />
+                <object name="castKey1" state="hilight" />
+            </objects>
+           <actions>
+               <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="115" xscale="1"  yscale="1"/> 
+               <action event="record light"/>
+            </actions>
+            <nextbutton text="Start" action="continue" state="1" />
+           <prevbutton text="Back" action="back" state="0"/>
+        </step>
+         <step id="Watch Simulation">
+             <objects tutor="">
+                <object name="inputs1" state="invisible" />
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;Simulation.&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible">
+                    <text>When the protein binds with the ligand, it stays bound for some constant period of time and then releases. The amount of time they stay bound defines the binding affinity for this particular pair.
+&lt;br&gt;The binding and release of the ligand is &lt;b&gt;reversible binding.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Watch the action for a short period and then click "Continue." 
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="initialize" name="box1" params="leftBorder=10,rightBorder=390,topBorder=10,bottomBorder=200,leftBorder2=10,rightBorder2=390,topBorder2=10,bottomBorder2=200">
+                    <molecules>  
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here--> 
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "40"  cast= "ligandblue"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="100" y="100" Xoffset="5" Yoffset="5"  mytype="molecule"  myID="1"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" seperateinto="productidl?3,productidm?2,productidp?4,Kd?50,k?1000,Kcat?.02"/>            
+                        <molecule numMolecules= "1"  numbound= "0" velocity= "40"  cast= "enzymeinv" angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="200" Xoffset="5" Yoffset="5"  mytype="molecule"  myID="2"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" />            
+                        <molecule numMolecules= "50"  numbound= "0" velocity= "60"  cast= "ligandblue"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="50" y="50" Xoffset="5" Yoffset="5" mytype="ligand"  myID="3"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule2.pocket1.bound,Kd?25,k?500,productidm?1"/>
+                        <molecule numMolecules=  "0"  numbound= "0" velocity= "60"  cast= "product"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="100" y="100" Xoffset="5" Yoffset="5" mytype="ligand"  myID="4"    polarity = "0,0,0,0,0,0,0,0" mybounce="true" isproduct="1" />     <!--isproduct="1"-->
+      
+                    </molecules>
+                </action>
+                <action event="initialize" name="inputs1" params="ligandID=2,simulator=box1,changeParam=M2,moleculeID=1,thevariable=M2,thevalue=1" data="0"/> 
+                <action event="initialize" name="inputs2" params="ligandID=2,simulator=box1,changeParam=M3,moleculeID=1,thevariable=M3,thevalue=2" data="0"/> 
+                <action event="initialize" name="inputs3" params="ligandID=2,simulator=box1,changeParam=M2,moleculeID=1,thevariable=M1,thevalue=3" data="0"/> 
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+         </step>  
+        
+                 <step id="Map counts to cast">
+                     <objects tutor="">
+                         <object name="inputs1" state="hilight" />
+                         <object name="inputs2" state="hilight" />
+                         <object name="inputs3" state="hilight" />
+                         <object name="title" state="visible">
+                             <text>&lt;b&gt;Simulation.&lt;/b&gt;</text>
+                         </object>
+                <object name="theexplainer" state="visible">
+                    <text>Here the value boxes are displaying the numbers of &lt;b&gt;M&lt;/b&gt;, &lt;b&gt;O&lt;/b&gt;, and &lt;b&gt;MO&lt;/b&gt; at a moment in time.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+                 </step> 
+       
+        <step id="Graphing">
+            <objects tutor="">
+                <object name="inputs1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="label3" state="visible" />    
+                <object name="therecorder" state="invisible"/>
+                <object name="thegrapher" state="hilight"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Graphing the bound Myoglobin&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>The Graph at the bottom right is recording the average number of &lt;b&gt;MO&lt;/b&gt; complexes being formed over time. &lt;br&gt;Remember this is a representation of a limited set of molecules. In a normal biological system a large number of molecules would be involved. </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="reset" name="box1" params="2"/>
+                <action event="reset" name="box1" params="1"/>
+                <action event="reset" name="box1" params="3"/>
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=2,x=100,y=160,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=10,param3=3,x=200,y=100,Xoffset=175,Yoffset=100" />
+                <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,myID=M1"  data="ymax=20,y_label=MO,graph_label="/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+        </step>
+        
+        <step id="Focus on Chart Recorder">
+            <objects tutor="ligandbinding/ligandbinding_1.xml">
+                <object name="inputs1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="label2" state="visible" />      
+                <object name="therecorder" state="hilight"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Time dependance of Concentration of  MO&lt;/b&gt;</text>
+                </object>
+                <!--<object name="theexplainer" state="visible">
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;The Chart Recorder at the bottom is recording the instantaneous number of &lt;b&gt;MO&lt;/b&gt;. As the recording tape moves to the left, the right end of the tape is capturing the instantaneous number of &lt;b&gt;MO&lt;/b&gt;.
+                    </text>
+                </object>-->
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="reset" name="box1" params="2"/>
+                <action event="reset" name="box1" params="1"/>
+                <action event="reset" name="box1" params="3"/>
+				<action event="scale" name="therecorder" x="325" y="368" xscale=".50" yscale=".95" />
+				<action event="scale" name="thegrapher" x="560" y="370" xscale=".85" yscale=".95" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=2,x=100,y=160,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=10,param3=3,x=200,y=100,Xoffset=175,Yoffset=100" />
+                <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,myID=M1"  data="ymax=20,y_label=MO,graph_label="/>
+                <action event="initialize" name="therecorder" params="chartlabel=# MO,thevariable=M1"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+        </step>
+         
+        <step id="explanation 1">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event=" record light"/> 
+               <!-- <action event="pause"  />--><!--DIANA-->
+            </actions>
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;MO complex formation is a dynamic equilibrium.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible" >
+                    <text>When the simulation first starts it takes time for the ligand to diffuse. During this time there is a rapid increase in the amount of &lt;b&gt;MO&lt;/b&gt; complex formed as you can see in the time averaged graph. After the ligand is randomly distributed, the average number of &lt;b&gt;MO&lt;/b&gt; complexes formed levels off. &lt;br&gt;&lt;br&gt;&lt;b&gt;This leveling off represents the equilibrium state.&lt;/b&gt;
+                    </text>
+                </object>
+                <object name="therecorder" state="visible" />
+                <object name="equation1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"/>
+                <object name="thegrapher" state="visible">
+                </object>
+            </objects>
+        </step>
+         <step id="explanation 2">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event=" record light"/> 
+               <!-- <action event="pause"  />--><!--DIANA-->
+            </actions>
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;MO complex formation is a dynamic equilibrium.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible" >
+                    <text>&lt;fade&gt;When the simulation first starts it takes time for the ligand to diffuse. During this time there is a rapid increase in the amount of &lt;b&gt;MO&lt;/b&gt; complex formed as you can see in the time averaged graph. After the ligand is randomly distributed, the average number of &lt;b&gt;MO&lt;/b&gt; complexes formed levels off. &lt;br&gt;&lt;br&gt;&lt;b&gt;This leveling off represents the equilibrium state.&lt;/b&gt;&lt;/fade&gt;
+You should have also noticed that the myoglobin does not bind oxygen indefinitely. Instead, the myoglobin releases the oxygen after a period of time,so that from one instant to the next, the exact number of MO complexes is not the same. Over time, the number of complexes reaches an average number as seen in the graph. 
+                    </text>
+                </object>
+                <object name="therecorder" state="visible" />
+                <object name="equation1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"/>
+                <object name="thegrapher" state="visible">
+                </object>
+            </objects>
+        </step>
+        <step id="explanation 3">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event=" record light"/> 
+               <!-- <action event="pause"  />--><!--DIANA-->
+            </actions>
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;MO complex formation is a dynamic equilibrium.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible" >
+                    <text>&lt;fade&gt;When the simulation first starts it takes time for the ligand to diffuse. During this time there is a rapid increase in the amount of &lt;b&gt;MO&lt;/b&gt; complex formed as you can see in the time averaged graph. After the ligand is randomly distributed, the average number of &lt;b&gt;MO&lt;/b&gt; complexes formed levels off. &lt;br&gt;&lt;br&gt;&lt;b&gt;This leveling off represents the equilibrium state.&lt;/b&gt;
+You should have also noticed that the myoglobin does not bind oxygen indefinitely. Instead, the myoglobin releases the oxygen after a period of time,so that from one instant to the next, the exact number of MO complexes is not the same. Over time, the number of complexes reaches an average number as seen in the graph.&lt;/fade&gt;
+&lt;br&gt;Furthermore, within that average time an individual &lt;b&gt;M&lt;/b&gt; can be found in both the bound and unbound state. This equilibrium condition remains the same although the state of individual reactants will vary. At equilibrium some &lt;b&gt;MO&lt;/b&gt; complexes come apart and others form. &lt;br&gt;&lt;br&gt;&lt;b&gt;At equilibrium the state of individual reactants is dynamic. &lt;/b&gt;              
+                    </text>
+                </object>
+                <object name="therecorder" state="visible" />
+                <object name="equation1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"/>
+                <object name="thegrapher" state="visible">
+                </object>
+            </objects>
+        </step>
+        <step id="create7">
+            <!-- Create a new ligand box with the number of oxygen specified by the student -->
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Summary.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>In the previous simulation there were small numbers of &lt;b&gt;O&lt;/b&gt; and the equilibrium value is fairly variable. How would you expect the system to react if it started with more ligand molecules? 
+&lt;br&gt;&lt;br&gt;&lt;br&gt;You will explore this in the following simulation.
+&lt;br&gt;&lt;br&gt;&lt;br&gt;When you are ready to continue click "Next."
+                    </text>
+                </object>
+                <object name="thegrapher" state="visible" />
+                <object name="userinput" state="visible"/>
+            </objects>
+            <actions>
+                <action event="unload" name="inputs2"/>
+                <action event="create" name="inputs4" url="tools/DisplayVariable.swf"  x="120" y="285" xscale="1" yscale="1" />
+
+                <action event="record light"/> 
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="show7">
+            <!--Ask the student to input the number of Oxygen -->
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;System behavior with larger amounts of O.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible" >
+                    <text>In this simulation there will be 4 &lt;b&gt;M&lt;/b&gt; molecules. &lt;red&gt;In the text box below choose a value of &lt;b&gt;O&lt;/b&gt; in the range of 30 to 80.&lt;/red&gt; 
+                        
+Watch the value of &lt;b&gt;MO&lt;/b&gt; in the reaction diagram and the time average of the number of &lt;b&gt;MO&lt;/b&gt; complexes. This curve will be plotted along with the curve from the previous simulation.
+                        
+&lt;red&gt;Enter your starting value for &lt;b&gt;O&lt;/b&gt;&lt;/red&gt;
+                        
+Click the '&lt;b&gt;Start&lt;/b&gt;' button to begin the simulation.
+                    </text>
+                </object>
+                <object name="equation1" state="visible"  />
+                <object name="box1" state="invisible"  />
+                <object name="inputs1" state="invisible" />
+                <object name="inputs4" state="hilight" />
+                <object name="inputs3" state="invisible" />
+                <object name="thegrapher" state="visible" />
+                <object name="castKey1" state="visible" />
+            </objects>
+           <actions>
+
+              <!-- <action event="pause"/>-->
+               <action event="reset" name="box1" params="2"/>
+               <action event="reset" name="box1" params="1"/>
+               <action event="reset" name="box1" params="3"/>
+               <action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=2,x=100,y=160,Xoffset=0,Yoffset=0" />
+               <action event="initialize" name="inputs4" params="ligandID=3,simulator=box1,changeParam=M*,moleculeID=2,thevariable=M3,thevalue=0" data="0"/> 
+            <!--   <action event="reset" name="box1" params="1"/>-->
+               <action event="record all"/>
+            </actions>
+            <nextbutton text="Start" action="continue" state="1" />
+           <prevbutton text="Back" action="back" state="0"/>
+        </step>
+        
+     
+        <step id="user determine equilibrium">
+            <nextbutton text="Next" action="continue" state="1" />
+            <objects tutor="ligandbinding/ligandbinding_2.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;user determine equilibrium&lt;/b&gt;</text>
+                </object>
+               <!-- <object name="theexplainer" state="visible">
+                    <text>Watch the animation paying attention to the number bound and unbound myoglobin molecules. Observe the number of &lt;b&gt;MO&lt;/b&gt; in the chart recorder and the graph of the amount of &lt;b&gt;MO&lt;/b&gt; over time.   &lt;br&gt;&lt;br&gt;When the system is at equilibrium &lt;br&gt;&lt;br&gt;click &lt;b&gt;"System at Equilibrium."&lt;/b&gt;
+                    </text>
+                </object>-->
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="thegrapher" state="visible" />
+                <object name="therecorder" state="visible" />
+            </objects>
+            <actions>
+                <!--<action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=1,x=100,y=160,Xoffset=0,Yoffset=0" />-->
+                <action event="sendmessage" name="inputs4" params="getVal=" data=""/> <!--Tells input4 to report the new value of M2 to box1-->
+                <action event="initialize" name="thegrapher" params="child=2,color=0xFF00FF,myID=M1"   data="ymax=10,y_label=M0,graph_label="/>
+                <action event="scale" name="inputs4" x="488" y="317" xscale="1" yscale="1" />
+                <action event="record all"/> 
+            </actions>
+        </step>
+        
+        <step id="Saturation">
+            <nextbutton text="Next" action="continue" state="1" />
+            <objects tutor="ligandbinding/ligandbinding_3.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Saturation&lt;/b&gt;</text>
+                </object>
+               <!-- <object name="theexplainer" state="visible">
+                    <text>
+                    </text>
+                </object>-->
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="thegrapher" state="visible" />
+                <object name="therecorder" state="visible" />
+            </objects>
+            <actions>
+                <!--<action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=1,x=100,y=160,Xoffset=0,Yoffset=0" />-->
+                <action event="sendmessage" name="inputs4" params="getVal=" data=""/> <!--Tells input4 to report the new value of M2 to box1-->
+                <!--<action event="initialize" name="thegrapher" params="child=1,color=0x00FF00,myID=M1"   data="ymax=10,y_label=ML,graph_label="/>-->
+                <!--   <action event="initialize" name="therecorder" params="chartlabel=# MO,thevariable=ML1"/>-->
+                <!--  <action event="continue"/> -->
+                <action event="record all"/> 
+            </actions>
+        </step>
+        
+        <step id="Saturation 2">
+            <nextbutton text="Next" action="continue" state="1" />
+            <objects tutor="ligandbinding/ligandbinding_4.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Saturation 2&lt;/b&gt;</text>
+                </object>
+                <!--<object name="theexplainer" state="visible">
+                    <text>
+                    </text>
+                </object>-->
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+                <object name="inputs1" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="thegrapher" state="visible" />
+                <object name="therecorder" state="visible" />
+            </objects>
+            <actions>
+                <!--<action event="sendmessage" name="box1" params="msg=changeParam,param1=M*,param2=4,param3=1,x=100,y=160,Xoffset=0,Yoffset=0" />-->
+                <action event="sendmessage" name="inputs4" params="getVal=" data=""/> <!--Tells input4 to report the new value of M2 to box1-->
+                 <!--<action event="initialize" name="thegrapher" params="child=1,color=0x00FF00,myID=M1"   data="ymax=10,y_label=ML,graph_label="/> -->
+                <!--   <action event="initialize" name="therecorder" params="chartlabel=# MO,thevariable=ML1"/>-->
+                <!--  <action event="continue"/> -->
+                <action event="record all"/> 
+            </actions>
+        </step>
+        
+      <step id="summary 1">
+            <nextbutton text="Next" />
+            <!--Here is a chance to let the student return two steps and run the simulation again  BUT NOT IMPLEMENTED YET-->
+          <objects tutor="">
+              <object name="title" state="visible">
+                  <text>&lt;b&gt;summary 1&lt;/b&gt;</text>
+              </object>
+                <object name="theexplainer" state="visible">
+                    <text>In this simulation you used a higher number of &lt;b&gt;O&lt;/b&gt; molecules. Compare the two curves on the graph. The line representing the average number of &lt;b&gt;MO&lt;/b&gt; molecules is much smoother than the previous run. In the first simulation, where there were only 15 oxygen molecules, more myoglobin molecules were found in the unbound state on average. As the number of oxygen molecules increases, the frequency of contact between the myoglobin and oxygen increases and therefore, more of the myoglobin is in the bound state on average. Again, the complex exists as a reversible, dynamic binding complex.&lt;br&gt;</text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+              <object name="inputs1" state="visible" />
+              <object name="inputs4" state="visible" />
+              <object name="inputs3" state="visible" />
+               <object name="thegrapher" state="visible" />
+              <object name="therecorder" state="visible" />
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+             <!--   <action event="continue"/>--><!--DIANA-->
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+      </step>
+     <step id="summary 2">
+            <nextbutton text="Next" />
+            <!--Here is a chance to let the student return two steps and run the simulation again  BUT NOT IMPLEMENTED YET-->
+          <objects tutor="">
+              <object name="title" state="visible">
+                  <text>&lt;b&gt;summary 2&lt;/b&gt;</text>
+              </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;In this simulation you used a higher number of &lt;b&gt;O&lt;/b&gt; molecules. Compare the two curves on the graph. The line representing the average number of &lt;b&gt;MO&lt;/b&gt; molecules is much smoother than the previous run. In the first simulation, where there were only 15 oxygen molecules, more myoglobin molecules were found in the unbound state on average. As the number of oxygen molecules increases, the frequency of contact between the myoglobin and oxygen increases and therefore, more of the myoglobin is in the bound state on average. Again, the complex exists as a reversible, dynamic binding complex.&lt;/fade&gt;
+Reversability of the complex is important. In a muscle fiber at rest, myoglobin is in an oxygen saturating environment. This is represented in the second simulation where the myoglobin spends most of the time in complex form. During extreme exercise the muscle fiber becomes oxygen deprived. As myoglobin-oxygen complexes fall apart the recently freed oxygen can be diverted to metabolism. If the binding were not reversible then myoglobin would not release oxygen to oxygen starved muscle fibers.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+              <object name="inputs1" state="visible" />
+              <object name="inputs4" state="visible" />
+              <object name="inputs3" state="visible" />
+               <object name="thegrapher" state="visible" />
+              <object name="therecorder" state="visible" />
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+             <!--   <action event="continue"/>--><!--DIANA-->
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+      </step>   
+	  <step id="summary 3">
+            <nextbutton text="Next" />
+            <!--Here is a chance to let the student return two steps and run the simulation again  BUT NOT IMPLEMENTED YET-->
+          <objects tutor="">
+              <object name="title" state="visible">
+                  <text>&lt;b&gt;summary 3&lt;/b&gt;</text>
+              </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;In this simulation you used a higher number of &lt;b&gt;O&lt;/b&gt; molecules. Compare the two curves on the graph. The line representing the average number of &lt;b&gt;MO&lt;/b&gt; molecules is much smoother than the previous run. In the first simulation, where there were only 15 oxygen molecules, more myoglobin molecules were found in the unbound state on average. As the number of oxygen molecules increases, the frequency of contact between the myoglobin and oxygen increases and therefore, more of the myoglobin is in the bound state on average. Again, the complex exists as a reversible, dynamic binding complex.&lt;br&gt;
+Reversability of the complex is important. In a muscle fiber at rest, myoglobin is in an oxygen saturating environment. This is represented in the second simulation where the myoglobin spends most of the time in complex form. During extreme exercise the muscle fiber becomes oxygen deprived. As myoglobin-oxygen complexes fall apart the recently freed oxygen can be diverted to metabolism. If the binding were not reversible then myoglobin would not release oxygen to oxygen starved muscle fibers.
+&lt;/fade&gt;&lt;br&gt;Reversible binding and equilibrium between free molecules and the complex form is a common theme in biological systems. You will find it in signal transduction across membranes such as neurotransmission and hormone binding and in transport molecules such as myoglobin and hemoglobin.
+&lt;br&gt;Click "Next" to graph binding curve.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+              <object name="inputs1" state="visible" />
+              <object name="inputs4" state="visible" />
+              <object name="inputs3" state="visible" />
+               <object name="thegrapher" state="visible" />
+              <object name="therecorder" state="visible" />
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+             <!--   <action event="continue"/>--><!--DIANA-->
+                <action event="record light"/>
+                <action event="record light"/>
+                <action event="create" name="fracsateq" url="swfs/fractionalSaturationEq.swf"  x="380" y="50" xscale="1"  yscale="1"/>
+            </actions>
+	  </step>
+        <step id="Binding Curve Formula">
+            <nextbutton text="Next" />
+            
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Binding Curve Formula&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>A binding curve is simply a plot of Y verses [L]. Where Y is the fractional saturation and L is the concentration of ligand.
+The formula to solve for the fractional saturation is located to the right. This value should vary from 0 to 1.
+Y can also be viewed as the amount of macromolcule with ligind bound divided by the total macromolecule.
+                    </text>
+                </object>
+                <object name="fracsateq" state="visible" />
+            </objects>
+            <actions>
+                <action event="unload" name="thegrapher"/>
+                <action event="unload" name="therecorder"/>
+                <action event="unload" name="box1"/>
+               <!-- <action event="unload" name="castKey1"/> -->
+                <action event="create" name="fractionSatDataTable" url="tools/fractionSatDataTable.swf"  x="400" y="150" xscale=".85" yscale=".85" />
+               
+                
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="Binding Curve Data">
+            <nextbutton text="Continue" />
+            
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Binding Curve Data&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Using the radial dials select a value for &lt;b&gt;O&lt;/b&gt;. When you have selected this value use the information from the boxes below the equation to solve for the correct &lt;b&gt;Y&lt;/b&gt; value. Once you have solved for this value place your answer in the table and select another &lt;b&gt;O&lt;/b&gt; value. 
+                        
+&lt;red&gt;Make sure to complete the entire table before hitting the "Continue" button.&lt;/red&gt;
+                    </text>
+                </object>
+                <object name="fracsateq" state="visible" />
+                <object name="fractionSatDataTable" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="inputs1" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="castKey1" state="visible" />
+            
+            </objects>
+            <actions>
+                <action event="scale" name="castKey1" x="438" y="349" xscale=".75" yscale=".75" /> 
+                <action event="scale" name="equation1" x="410" y="375" xscale="1" yscale="1" /> 
+                <action event="scale" name="inputs1" x="436" y="397" xscale="1" yscale="1" />
+                <action event="scale" name="inputs3" x="544" y="397" xscale="1" yscale="1" /> 
+                <action event="scale" name="inputs4" x="488" y="397" xscale="1" yscale="1" />
+                <action event="create" name="theplotter" url="tools/theplotter.swf" x="320" y="265" xscale=".95" yscale=".95"/>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="Bonding Curve Graph">
+            <nextbutton text="Continue" />
+            
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Bonding Curve Graph&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Using the data table you created in the previous slide plot the data on the graph.
+To graph points, select the radial dial of the point you wish to graph and place the point in the correct place. When you have placed all the points on the graph click the graph button.
+When you are happy with your graph click "Continue"
+                    </text>
+                </object>
+                <object name="theplotter" state="visible" />
+                <object name="fractionSatDataTable" state="visible"/>
+            </objects>
+            <actions>
+                <action event="unload" name="castKey1"/>
+                <action event="unload" name="box1"/>
+                <action event="unload" name="inputs1"/>
+                <action event="unload" name="inputs4"/>
+                <action event="unload" name="inputs3"/>
+                <action event="unload" name="fracsateq"/>
+                <action event="scale" name="fractionSatDataTable" x="390" y="40" xscale=".9" yscale=".9" />  
+                <action event="reset" name="box1" params="1"/>
+                <action event="reset" name="box1" params="3"/>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="Binding Curve Question 1">
+            <nextbutton text="Continue" />
+            
+            <objects tutor="ligandbinding/ligandbinding_5.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Binding Curve Question 1&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="invisible">
+                    <text>
+                    </text>
+                </object>
+                <object name="theplotter" state="visible" />
+                <object name="fractionSatDataTable" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="Binding Curve Question 2">
+            <nextbutton text="Continue" />
+            
+            <objects tutor="ligandbinding/ligandbinding_6.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Binding Curve Question 2&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="invisible">
+                    <text>
+                    </text>
+                </object>
+                <object name="theplotter" state="visible" />
+                <object name="fractionSatDataTable" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="Summary">
+            <nextbutton text="Done" />
+            
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Summary&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Now that you have a better understanding of both ligand binding the binding curves go back to your assigned book work and complete the problems assigned for these sections.
+                    </text>
+                </object>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+        </step>
+        <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+    </steps>
+</simulation>

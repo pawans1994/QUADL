@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop6_tutor4">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>From the three figures
+                above<?oxy_insert_start author="mmyers" timestamp="20101127T104633-0500"?>,<?oxy_insert_end?>
+                it is (at least visually) clear that for a given value of the test statistic z, the
+                p-value of the two-sided test (equal vs. not equal) is <input_ref input="A"/> the
+                p-value of any of the one-sided tests.</p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="half">exactly half as large as</choice>
+            <choice value="equal">equal to</choice>
+            <choice value="twice">exactly twice as large as</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" match="half">
+                <feedback>Incorrect. Ask for a hint and try again.</feedback>
+            </response>
+            <response input="A" match="equal">
+                <feedback>Incorrect. Ask for a hint and try again.</feedback>
+            </response>
+            <response input="A" match="twice" score="10">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T104710-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T104709-0500" content="J"?>ob!
+                    Indeed, for any given
+                    p<sub>o</sub><?oxy_insert_start author="mmyers" timestamp="20101127T104717-0500"?>,<?oxy_insert_end?>
+                    the p-value of the
+                    two<?oxy_insert_start author="mmyers" timestamp="20101127T104725-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T104725-0500" content=" "?>sided
+                    test: H<sub>a</sub>: p &#8800; p<sub>o</sub> is twice as large as the p-value of
+                    either one of the
+                    one<?oxy_insert_start author="mmyers" timestamp="20101127T104733-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T104733-0500" content=" "?>sided
+                    tests.</feedback>
+            </response>
+            <hint>Look at the three figures above. In each one of the figures, the p-value is
+                represented by the red area.</hint>
+        </part>
+    </question>
+</assessment>

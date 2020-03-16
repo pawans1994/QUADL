@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="pHinWeakAcids" version="2">
+    <name>&lt;b&gt;Dissociation of Weak Electrolytes&lt;/b&gt;</name>
+ <!--   <intro filename="this_intro.swf"/>-->
+    <debugger state="on"/> 
+    <steps>
+        <step id="createIT">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;The Equilibrium state.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Some molecules are weak electrolytes and exist in equilibrium between the starting molecule and its dissociated parts. For molecules that are weak electrolytes and act as acids, the ratio of the dissociated parts and the parent molecule is a constant in neutral water for each separate structure. 
+"&lt;/fade&gt;In the next few scenes we will explore just how this equilibrium behaves.
+When you are ready to continue click "Next.
+                    </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects> 
+            <actions>
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+               	<action event="create" name="beaker" url="swfs/beakerplain.swf"  x="325" y="5" xscale="2.18"  yscale="1.4"/> 
+                <action event="create" name="pKFormula" url="tools/equationpKcalcAA1.swf"  x="330" y="400" xscale="1"  yscale="1"/>            
+                <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="410" xscale="1"  yscale="1"/>  
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="333" y="31" xscale="1"  yscale="1"/>
+                <action event="create" name="equation1" url="tools/equationpH1.swf"  x="410" y="315" xscale="1" yscale="1" />
+                <action event="create" name="inputs1" url="tools/DisplayVariable09.swf"  x="436" y="342" xscale="1" yscale="1" />
+                <action event="create" name="inputs2" url="tools/DisplayVariable09.swf"  x="555" y="342" xscale="1" yscale="1" />
+                <action event="create" name="inputs3" url="tools/DisplayVariable09.swf"  x="614" y="342" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKeypHAA.swf"  x="420" y="285" xscale=".80" yscale=".8" />                
+				<action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" />
+                <action event="create" name="caption" url="swfs/caption-pH.swf"  x="410" y="333" xscale="1"  yscale="1"/> 
+              <!--  <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> -->
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+         <step id="userinput">
+             <objects tutor="">
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;The Equilibrium state.&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible">
+                    <text>Some molecules are weak electrolytes and exist in a &lt;b&gt;reversible equilibrium&lt;/b&gt; between the starting molecule and its dissociated parts. For molecules that are weak electrolytes and act as acids (&lt;b&gt;proton donors&lt;/b&gt;), the ratio of the products of the dissociated parts and the parent molecule is a constant (&lt;b&gt;K&lt;/b&gt;) in neutral water for each separate molecular structure. 
+&lt;br&gt;In the next few scenes we will explore just how this equilibrium behaves.
+&lt;br&gt;When you are ready to continue click "Next."
+                </text>
+                </object>
+                <object name="equation1" state="visible"/>
+                <object name="pKFormula" state="visible"/>
+                <object name="caption" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="pause"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+         </step>
+        
+         <step id="show">
+             <objects tutor="">
+                
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;The Equilibrium state.&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible" >
+                    <text>In the beaker at the right you can watch as the &lt;b&gt;CH3COOH&lt;/b&gt;(acetic acid) molecules dissociate into separate &lt;b&gt;H+&lt;/b&gt; (protons) with a positive charge and acetate ions containing a carboxyl functional group &lt;b&gt;CH3COO-&lt;/b&gt; (called the conjugate base) with a negative charge. Because they are in an equilibrium state, they are always binding and releasing.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;Click "Start" to begin the simulation.
+                    </text>
+                 </object>
+                <object name="beaker" state="visible" />
+                <object name="equation1" state="visible"  />
+                <object name="caption" state="visible"  />
+                <object name="castKey1" state="hilight" />
+            </objects>
+           <actions>
+               <action event="pause"  />
+               <action event="create" name="pipette" url="swfs/pipette.swf"  x="333" y="31" xscale="1"  yscale="1"/> 
+               <action event="record light"/>
+            </actions>
+            <nextbutton text="Start" action="continue" state="1" />
+           <prevbutton text="Back" action="back" state="0"/>
+         </step>
+        
+         <step id="Watch Simulation">
+             <objects tutor="">
+      
+                <object name="caption" state="visible"  />
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                 </object>
+                 <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;In the beaker at the right you can watch as the &lt;b&gt;CH3COOH&lt;/b&gt;(acetic acid) molecules dissociate into separate &lt;b&gt;H+&lt;/b&gt; (protons) with a positive charge and acetate ions containing a carboxyl functional group &lt;b&gt;CH3COO-&lt;/b&gt; (called the conjugate base) with a negative charge. Because they are in an equilibrium state, they are always binding and releasing.&lt;br&gt;&lt;br&gt;
+&lt;/fade&gt;To help you spot the acetic acid molecules a light circle will be drawn around those neutral molecules.
+&lt;br&gt;&lt;br&gt;Watch the action for a short period and then click "Continue." 
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  /> 
+                <object name="pipette" state="visible"/>
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+ 
+                <action event="initialize" name="box1" params="leftBorder=10,rightBorder=390,topBorder=10,bottomBorder=225,leftBorder2=10,rightBorder2=390,topBorder2=10,bottomBorder2=225">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here--> <!-- k/Kd-->
+                        <molecule numMolecules= "10" velocity= "80"  cast= "moleculeAAcomplete"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0"   polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"  mybounce="true" seperateinto="productidl?3,productidm?2,Kd?15,k?1000,Kcat?0" />   <!--full molecule-->          
+                        <molecule numMolecules= "0"  velocity= "80"  cast= "moleculeAA"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0" polarity = "0,0,0,0,0,0,0,0"  mytype="molecule"  myID="2"   mybounce="true" />  <!--molecule--> 
+                        <molecule numMolecules= "0"  velocity= "160"  cast= "proton"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0"  polarity = "0,0,0,0,0,0,0,0"  mytype="ligand"  myID="3"   mybounce="true" bindswith="molecule2.pocket1.bound.boundproton,Kd?15,k?1000,Kcat?0,productidm?1"  /> <!--proton--> 
+                        <molecule numMolecules= "0"  velocity= "80"  cast= "moleculeC1bound"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0"  polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="4"  mybounce="true" seperateinto="productidl?6,productidm?5,Kd?100,k?1000,Kcat?0" />           
+                        <molecule numMolecules= "0"  velocity= "80"  cast= "moleculeC1"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0" polarity = "0,0,0,0,0,0,0,0"  mytype="molecule"  myID="5"   mybounce="true" />  <!--molecule--> 
+                        <molecule numMolecules= "0"  velocity= "160"  cast= "proton"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="0"  rotation="0"  polarity = "0,0,0,0,0,0,0,0"  mytype="ligand"  myID="6"   mybounce="true" bindswith="molecule5.pocket1.bound.free,Kd?10,k?500,Kcat?0,productidm?4"  /> <!--proton--> 
+                    </molecules>
+                  
+                </action>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeMsg09.swf" x="380" y="370" xscale="1" yscale="1" />  
+                <action event="initialize" name="inputs1" params="ligandID=3,simulator=box1,changeVal=M1,moleculeID=1,thevariable=M1,thevalue=0" data="0"/> 
+               <!-- <action event="initialize" name="inputs1" params="ligandID=3,simulator=box1,changeParam=ML2,moleculeID=1,thevariable2=ML2,thevalue=0" data="0"/> -->              
+                <action event="initialize" name="inputs2" params="ligandID=3,simulator=box1,changeVal=M2,moleculeID=2,thevariable=M2,thevalue=0" data="0"/> 
+                <action event="initialize" name="inputs3" params="ligandID=3,simulator=box1,changeVal=M3,moleculeID=3,thevariable=M3,thevalue=0" data="0"/> 
+                <action event="initialize" name="pipette" params="action=play"/> 
+               <!-- <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,objectlink=inputs1.num_ES"  data="ymax=10,y_label=HA,graph_label="/>-->
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+             
+         <!--</step>  
+                 <step id="Map # acid">
+                     <objects tutor="">
+                         <object name="inputs1" state="hilight"/>
+                         <object name="inputs2" state="visible"/>
+                         <object name="inputs3" state="visible"/>
+                         <object name="title" state="visible">
+                             <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                         </object>
+                <object name="theexplainer" state="visible">
+                    <text>Looking beneath the equation on the right you will find three boxes reflecting the numbers of molecules of each type in the simulation beaker above at each moment in time.&lt;br&gt;&lt;br&gt;In this case the value in the first box represents the number of carboxyl functional groups with no (zero) charge. &gt;&gt;&gt;
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" /> 
+                 </step> 
+        
+        <step id="Map # 2">
+            <objects tutor="">
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="hilight"/>
+                <object name="inputs3" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;Looking beneath the equation on the right you will find three boxes reflecting the numbers of molecules of each type in the simulation beaker above at each moment in time.&lt;br&gt;&lt;br&gt;In this case the value in the first box represents the number of carboxyl functional groups with no (zero) charge.&lt;/fade&gt;&lt;br&gt;The value in the second box represents the number of carboxyl functional groups with a negative charge. &gt;&gt;&gt;
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" /> 
+        </step>
+        
+        <step id="Map # 3">
+            <objects tutor="">
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="visible"/>
+                <object name="inputs3" state="hilight"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;Looking beneath the equation on the right you will find three boxes reflecting the numbers of molecules of each type in the simulation beaker above at each moment in time.&lt;br&gt;&lt;br&gt;In this case the value in the first box represents the number of carboxyl functional groups with no (zero) charge.&lt;br&gt;&lt;br&gt;The value in the second box represents the number of carboxyl functional groups with a negative charge. &lt;/fade&gt;&lt;br&gt;The value in the third box represents the number of hydrogens with a positive charge. &gt;&gt;&gt;
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" />
+        </step>
+        
+        <step id="Map relations1">
+            <objects tutor="">
+                <object name="inputs1" state="hilight"/>
+                <object name="inputs2" state="hilight"/>
+                <object name="inputs3" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;In this case the value in the first box represents the number of carboxyl functional groups with no (zero) charge.&lt;br&gt;&lt;br&gt;The value in the second box represents the number of carboxyl functional groups with a negative charge. &lt;br&gt;&lt;br&gt;The value in the third box represents the number of hydrogens with a positive charge. &lt;/fade&gt;&lt;br&gt;Note that the sum of the first and second represents the total number of acetic acid molecules (10) originally placed into the beaker. &gt;&gt;&gt;
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" /> 
+        </step>
+        
+        <step id="Map relations2">
+            <objects tutor="">
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="hilight"/>
+                <object name="inputs3" state="hilight"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Simulation&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>&lt;fade&gt;In this case the value in the first box represents the number of carboxyl functional groups with no (zero) charge.&lt;br&gt;&lt;br&gt;The value in the second box represents the number of carboxyl functional groups with a negative charge. &lt;br&gt;&lt;br&gt;The value in the third box represents the number of hydrogens with a positive charge. &lt;br&gt;&lt;br&gt;Note that the sum of the first and second represents the total number of acetic acid molecules (10) originally placed into the beaker. &lt;/fade&gt;&lt;br&gt;The second and third boxes have the same values.&gt;&gt;&gt;
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"  />
+                <object name="box1" state="visible"  />
+            </objects>
+            <actions>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeMsg09.swf" x="380" y="370" xscale="1" yscale="1" />  
+               
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" /> 
+        </step>
+        
+         <step id="graphing">
+             <objects tutor="">
+                 <object name="inputs1" state="visible"/>
+                 <object name="inputs2" state="visible"/>
+                 <object name="inputs3" state="visible"/>
+                <object name="thegrapher" state="visible" />
+                 <object name="title" state="visible">
+                     <text>&lt;b&gt;Graphing&lt;/b&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible">
+                    <text>The graph at the bottom right is recording the average number of &lt;b&gt;acetic acid&lt;/b&gt; present over time. Remember this is a representation of a limited set of molecules. In a normal biological system a very large number of molecules would be involved.&lt;br&gt;
+Note that the curve levels off with time.  When the line is horizontal the system is said to be at &lt;b&gt;equilibrium&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Note that this is a dynamic process and while the numbers of each of the molecules is changing very little, the specific molecules at any given time are changing.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+                <object name="beaker" state="visible"  />
+            </objects>
+            <actions>
+                <action event="reset" name="box1" params="2"/>
+                <action event="reset" name="box1" params="3"/>
+                <action event="reset" name="box1" params="1"/>
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=1,x=160,y=125,Xoffset=120,Yoffset=80" /> 
+                <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,myID=M1"  data="ymax=10,y_label=HA,graph_label="/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Continue" /> 
+         </step>
+        
+          <step id="AGAIN">
+              <objects tutor="">
+                  <object name="inputs1" state="visible"/>
+                      <object name="inputs2" state="visible"/>
+                          object name="inputs3" state="visible"/>
+                  <object name="title" state="visible">
+                      <text>&lt;b&gt;Repeating Simulation&lt;/b&gt;</text>
+                  </object>
+                <object name="theexplainer" state="visible">
+                    <text>Let's see the whole process of reaching equilibrium for 10 acetic acid (&lt;b&gt;CH3COOH&lt;/b&gt;) molecules added to a beaker of water.
+                    </text>
+                </object>
+            </objects>
+            <actions>
+                <action event="reset" name="box1" params="2"/>
+                <action event="reset" name="box1" params="3"/>
+                <action event="reset" name="box1" params="1"/>
+                <action event="reset" name="thegrapher" params="child=0,isvisible=0"/>
+                <action event="record light"/>
+                <action event="settimer" timer='0' advance='yes' />
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/> 
+          </step>
+        
+        <step id="Watch Simulation">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Repeating Simulation&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Let's see the whole process of reaching equilibrium for 10 acetic acid (&lt;b&gt;CH3COOH&lt;/b&gt;) molecules added to a beaker of water.&lt;br&gt;&lt;br&gt;Click "Continue" to watch it all together.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="thegrapher" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible"  />
+                <object name="beaker" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="initialize" name="pipette" params="action=play"/> 
+                <action event="reset" name="thegrapher" params="child=0,isvisible=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=1,x=160,y=125,Xoffset=120,Yoffset=80" /> 
+                <action event="initialize" name="thegrapher" params="child=1,color=0xFF0000,myID=M1"  data="ymax=10,y_label=HA,graph_label="/>
+                <action event="pause"  />
+            </actions>
+            <nextbutton text="Watch Simulation" /> 
+         </step> 
+        <step id="Explanation">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="continue"  />
+                <action event=" record light"/> 
+            </actions>
+            <objects tutor="">
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;What is being represented?&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>&lt;ul&gt;&lt;li&gt;At equilibrium there is no change in the number of &lt;b&gt;CH3COOH&lt;/b&gt;, &lt;b&gt;CH3COO-&lt;/b&gt; or &lt;b&gt;H+&lt;/b&gt; molecules on average over time.  This is represented by the graph and by the numbers in the boxes below the equation.&lt;/li&gt;
+&lt;br&gt;&lt;li&gt;From the graph one knows the average number of &lt;b&gt;CH3COOH&lt;/b&gt; molecules that exist at equilibrium.&lt;/li&gt;
+&lt;br&gt;&lt;li&gt;From the boxes below the equation it is possible to determine the number of &lt;b&gt;CH3COO-&lt;/b&gt; and &lt;b&gt;H+&lt;/b&gt; molecules that exist at this equilibrium. &lt;/li&gt;
+&lt;br&gt;&lt;li&gt;Or, if one knows the number of acid molecules (&lt;b&gt;CH3COOH&lt;/b&gt;) that the experiment started with, one can calculate the number of conjugate base and protons present.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;Click the "Continue" button.
+                    </text>
+                </object>
+                <object name="box1" state="visible"  />
+                <object name="beaker" state="visible"  />
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="visible"/>
+                <object name="inputs3" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="visible" />
+            </objects> -->
+        </step>
+        <step id="Clear Casts">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="unload" name="castkey1"/> 
+                <action event="unload" name="equation1"/> 
+                 <action event="unload" name="pKFormula"/>                
+                <action event="reset" name="box1" params="2"/>
+                <action event="reset" name="box1" params="3"/>
+                <action event="reset" name="box1" params="1"/>
+                <action event="create" name="pKFormula" url="tools/equationpKcalc.swf"  x="460" y="115" xscale="1" yscale="1" />
+                <action event="create" name="equation1" url="tools/equationpH2.swf"  x="450" y="315" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKeypKHA.swf"  x="460" y="285" xscale=".80" yscale=".8" />
+                <action event="settimer" timer='2' advance='yes' resettimer='0' />
+				 
+            </actions>
+            <objects tutor="">
+                <object name="theexplainer" state="visible"  >
+                    <title>  </title>
+                    <text>
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="visible"  />
+            </objects> 
+        </step>
+        
+        <step id="Generalize">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="initialize" name="inputs1" params="ligandID=6,simulator=box1,changeVal=M4,moleculeID=4,thevariable=M4,thevalue=0" data="0"/> 
+               <!-- <action event="initialize" name="inputs1" params="ligandID=6,simulator=box1,changeParam=ML5,moleculeID=4,thevariable=ML5,thevalue=0" data="0"/> -->
+                <action event="initialize" name="inputs2" params="ligandID=6,simulator=box1,changeVal=M5,moleculeID=5,thevariable=M5,thevalue=0" data="0"/> 
+                <action event="initialize" name="inputs3" params="ligandID=6,simulator=box1,changeVal=M6,moleculeID=6,thevariable=M6,thevalue=0" data="0"/> 
+                <action event="record light"/>
+				<action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,myID=M4"  data="ymax=10,y_label=HA,graph_label="/>
+            </actions>
+            <objects tutor="">
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Generalizing.&lt;/b&gt;</text>
+                </object>                
+                <object name="theexplainer" state="visible"  >
+                    <text>To generalize what we will replace the specific molecules with generic representation where &lt;b&gt;HA&lt;/b&gt; represents any acid, &lt;b&gt;A-&lt;/b&gt; is it's conjugate base, and &lt;b&gt;H+&lt;/b&gt; is the proton.
+We will visually represent these molecules as single balls.
+&lt;br&gt;Click the "Continue" button and &lt;b&gt;&lt;red&gt;watch the simulation come to equilibrium&lt;/red&gt;&lt;/b&gt;.
+                    </text>
+                </object>
+                <object name="box1" state="visible"  />
+                <object name="beaker" state="visible"  />
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="visible"/>
+               <object name="inputs3" state="visible"/>
+               <object name="equation1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+        </step>
+        <step id="generic simulation">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=4,x=200,y=100,Xoffset=175,Yoffset=100" />  
+               
+                <action event="initialize" name="pipette" params="action=play"/> 
+                <action event="initialize" name="thegrapher" params="child=2,color=0x00FF00,myID=M4"  data="ymax=10,y_label=HA,graph_label="/>
+                <action event="record light"/> 
+            </actions>
+            <objects tutor="">
+                <object name="beaker" state="visible"  />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Generic acid.&lt;/b&gt;</text>
+                </object>   
+                <object name="theexplainer" state="visible" >
+                    <text>&lt;fade&gt;To generalize what we have learned we will replace the specific molecules with generic representation where &lt;b&gt;HA&lt;/b&gt; represents any acid, &lt;b&gt;A-&lt;/b&gt; is it's conjugate base, and &lt;b&gt;H+&lt;/b&gt; is the proton.
+We will visually represent these molecules as single balls.&lt;/fade&gt;
+&lt;br&gt;&lt;br&gt;
+After watching this simulation for a while you should recognize that the numeric and graph results are the same as in the first simulation.  In fact, at this point we no longer need to use the simulation window to determine what is happening in the system.
+&lt;br&gt;Click the "Continue" button.
+                    </text>
+                </object>
+                <object name="equation1" state="visible"  />
+                <object name="inputs1" state="visible"/>
+                <object name="inputs2" state="visible"/>
+                <object name="inputs3" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="box1" state="visible" />
+                <object name="thegrapher" state="visible">
+                </object>
+            </objects>
+        </step>  
+        <step id="Explanation2">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="continue"  />
+                <action event=" record light"/> 
+            </actions>
+            <objects tutor="">
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;What is being represented - even without viewing simulation in beaker?&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>&lt;ul&gt;&lt;li&gt;At equilibrium there is no change in the number of &lt;b&gt;HA&lt;/b&gt;, &lt;b&gt;A-&lt;/b&gt; or &lt;b&gt;H+&lt;/b&gt; molecules on average over time.  This is represented by the graph and by the numbers in the boxes below the equation.&lt;/li&gt;
+&lt;li&gt;From the graph one knows the average number of &lt;b&gt;HA&lt;/b&gt; molecules that exist at equilibrium.&lt;/li&gt;
+&lt;li&gt;From the boxes below the equation it is possible to determine the number of &lt;b&gt;A-&lt;/b&gt; and &lt;b&gt;H+&lt;/b&gt; molecules that exist at this equilibrium. &lt;/li&gt;
+&lt;li&gt;Or, if one knows the number of acid molecules (&lt;b&gt;HA&lt;/b&gt;) that the experiment started with, one can calculate the number of conjugate base and protons present.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;Click the "Continue" button.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="visible"/>
+                    <object name="inputs2" state="visible"/>
+                        <object name="inputs3" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+        </step>
+        <step id="Explanation3">
+            <nextbutton text="Continue" state="1" />
+            <actions>
+                <action event="continue"  />
+                <action event=" record light"/> 
+            </actions>
+            <objects tutor="">
+                <object name="pKFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;What is being represented at equilibrium?&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>&lt;fade&gt;&lt;ul&gt;&lt;li&gt;No change in the number of &lt;b&gt;HA&lt;/b&gt;, &lt;b&gt;A-&lt;/b&gt; or &lt;b&gt;H+&lt;/b&gt; molecules on average over time.  &lt;/li&gt;
+&lt;br&gt;&lt;li&gt;From the graph one knows the average number of &lt;b&gt;HA&lt;/b&gt; molecules that exist.&lt;/li&gt;
+&lt;br&gt;&lt;li&gt;From the boxes it is possible to determine the number of &lt;b&gt;A-&lt;/b&gt; and &lt;b&gt;H+&lt;/b&gt; molecules. &lt;/li&gt;
+&lt;br&gt;&lt;li&gt;If one knows the number of starting acid molecules, one can calculate the number of conjugate base and protons.&lt;/li&gt;
+&lt;/ul&gt;&lt;/fade&gt;
+The equation for calculating the equilibrium constant &lt;b&gt;K&lt;/b&gt; is shown at the right.&gt;&gt;&gt;
+&lt;br&gt;Click the "Continue" button.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="visible"/>
+                    <object name="inputs2" state="visible"/>
+                        <object name="inputs3" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+        </step>
+        <step id="Clear Casts2">
+            <nextbutton text=" " state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="unload" name="inputs1"/>               
+                <action event="unload" name="box1"/> 
+                <action event="unload" name="beaker"/> 
+                <action event="create" name="inputs1" url="tools/inputs1pHeq09.swf"  x="420" y="340" xscale="1" yscale="1" />
+                <action event="create" name="userinput2" url="tools/equilibrium_grid09.swf"  x="10" y="310" xscale="1" yscale="1" />
+                <action event="reset" name="thegrapher" params="child=2,isvisible=0"/>
+                <action event="settimer" timer='2' advance='yes' resettimer='0' />
+            </actions>
+            <objects tutor="">
+                <object name="theexplainer" state="visible"  >
+                    <title>  </title>
+                    <text>
+                    </text>
+                </object>
+            </objects>
+        </step>
+        <step id="Experiment setup">
+            <nextbutton text="Begin Experiment" state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="pause"/> 
+            </actions>
+            <objects tutor="">
+                <object name="pKFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Let's repeat the experiment beginning with a large concentration of HA per beaker of acid being added to neutral water. To simplify the calculations for the concentrations, you can assume each concentration is the same as the number of molecules per beaker.
+&lt;br&gt;&lt;br&gt;Using the formula for calculating &lt;b&gt;K&lt;/b&gt; at the right and the values from the boxes below the equation, calculate the equilibrium constant for HA in neutral water.
+&lt;br&gt;&lt;br&gt;&lt;b&gt;Click "Begin Experiment" to start&lt;/b&gt;.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="invisible"/>
+
+                <object name="castKey1" state="visible" />
+                <object name="userinput2" state="invisible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+        </step>
+        <step id="Experiment">
+            <nextbutton text="End Experiment" state="1" />
+            <actions>
+                <action event="initialize"  name="inputs1" params="1000,.0001" />
+                <action event="initialize"  name="userinput2" params=".0001,5000,10000"/>
+                <action event="initialize" name="thegrapher" params="child=3,color=0x0000FF,objectlink=inputs1.num_ES"  data="ymax=10000,y_label=HA,y_scale=10000&lt;br&gt;8000&lt;br&gt;6000&lt;br&gt;4000&lt;br&gt;2000&lt;br&gt;0" />
+                <action event="record light"/> 
+                <action event="continue"/> 
+				<action event="create" name="pHFormula" url="tools/equationpHcalc.swf"  x="460" y="115" xscale="1" yscale="1" />
+            </actions>
+            <objects tutor="">
+                <object name="pKFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="userinput2" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Using the formula for &lt;b&gt;K&lt;/b&gt; at the right and the values from the boxes below the equation, calculate the equilibrium constant for HA in neutral water.
+                        &lt;br&gt;&lt;br&gt;Click the "&lt;b&gt;Pause&lt;/b&gt;" button when this dissociation has reached equilibrium. &lt;b&gt;Place your answer in the K column&lt;/b&gt; and then Click the "&lt;b&gt;Check it&lt;/b&gt;" button. Click "&lt;b&gt;Repeat&lt;/b&gt;" to try another experiment.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+            </objects>
+</step>
+        <step id="pH Experiment setup">
+            <nextbutton text="Begin Experiment" state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="pause"/> 
+				<action event="unload" name="userinput2"/>
+				<action event="create" name="userinput2" url="tools/equilibrium_grid09_pH.swf"  x="10" y="310" xscale="1" yscale="1" />
+            </actions>
+            <objects tutor="">
+                <object name="pHFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible"> 
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Let's repeat the experiment beginning with a large concentration of HA per beaker of acid being added to neutral water. To simplify the calculations for the concentrations, you can assume each concentration is the same as the number of molecules per beaker.
+&lt;br&gt;&lt;br&gt;Using the formula at the right and the values from the boxes below the equation, calculate the &lt;b&gt;pH&lt;/b&gt; for HA in neutral water.
+&lt;br&gt;&lt;br&gt;&lt;b&gt;Click "Begin Experiment" to start&lt;/b&gt;.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="invisible"/>
+
+                <object name="castKey1" state="visible" />
+                <object name="userinput2" state="invisible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+	
+  </step>       
+<step id="pH Experiment">
+            <nextbutton text="End Experiment" state="1" />
+            <actions>
+                <action event="initialize"  name="inputs1" params="1000,.0001" />
+                <action event="initialize"  name="userinput2" params=".0001,5000,10000"/>
+                <action event="initialize" name="thegrapher" params="child=3,color=0x0000FF,objectlink=inputs1.num_ES"  data="ymax=10000,y_label=HA,y_scale=10000&lt;br&gt;8000&lt;br&gt;6000&lt;br&gt;4000&lt;br&gt;2000&lt;br&gt;0" />
+                <action event="record light"/> 
+                <action event="continue"/> 
+            </actions>
+            <objects tutor="">
+                <object name="pHFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="userinput2" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Using the formula for calculating pH at the right and the values from the boxes below the equation, calculate the pH value for each of the HA starting concentrations. 
+                        &lt;br&gt;&lt;br&gt;Click the "&lt;b&gt;Pause&lt;/b&gt;" button when this dissociation has reached equilibrium. &lt;b&gt;Place your answer in the pH column&lt;/b&gt; and then Click the "&lt;b&gt;Check it&lt;/b&gt;" button. Click "&lt;b&gt;Repeat&lt;/b&gt;" to try another experiment.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="inputs1" state="visible"/>
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+            </objects>
+</step>
+ <step id="Reset Screen">
+            <objects tutor="">
+			
+            </objects>    
+            <actions>
+				<action event="unload" name="userinput2"/>  
+				<action event="unload" name="pHFormula"/>  
+				<action event="unload" name="pKFormula"/>  
+				<action event="unload" name="equation1"/> 
+				<action event="unload" name="inputs1"/> 
+				<action event="unload" name="castKey1"/>
+				<action event="create" name="pHvsK" url="tools/equilibrium_grid09_tutorial.swf"  x="460" y="115" xscale="1" yscale="1" />
+                <action event="record light" />
+                <action event="settimer" timer='10' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+  
+		 <step id="pH minitutor">
+            <objects tutor="pH_09/pH_09_1.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;pH vs. K&lt;/b&gt;</text>
+                </object>               
+                <object name="theexplainer" state="invisible">
+
+                    <text></text>
+                </object>
+                <object name="pHvsK" state="visible" />
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>    
+		<step id="pH minitutor 2">
+            <objects tutor="pH_09/pH_09_2.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;pH vs. K&lt;/b&gt;</text>
+                </object>               
+                <object name="theexplainer" state="invisible">
+                    
+                    <text></text>
+                </object>
+                <object name="pHvsK" state="visible" />
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="pH vs K explination 2">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>
+From the previous slides it should be clear that as initial concentration of HA changes, pH also changes however, K remains the same.  This holds true as long as the acid and the enviroment remain the same.</text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Summation of pH vs. K&lt;/b&gt;</text>
+                </object>                  
+            </objects>
+            <actions>
+				<action event="unload" name="pHvsK"/>          
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="fraction protonated definition ">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>
+&lt;fade&gt;From the previous slides it should be clear that as initial concentration of HA changes, pH also changes however, K remains the same.  This holds true as long as the acid and the enviroment remain the same.&lt;/fade&gt;
+Now we must understand the relationship between pH and the fraction of acid protonated.  Fraction protonated is a numerical value associated with how much of the initial acid has been broken down into its deprotonated species.  </text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;fraction protonated&lt;/b&gt;</text>
+                </object>                  
+            </objects>
+            <actions>  
+				<action event="record light"/>
+				<action event="create" name="fractionprotonatedeq" url="swfs/fractionProtonatedEq.swf"  x="400" y="200" xscale="1" yscale="1" />     
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="fraction protonated equation ">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>
+&lt;fade&gt;From the previous slides it should be clear that as initial concentration of HA changes, pH also changes however, K remains the same.  This holds true as long as the acid and the enviroment remain the same.
+Now we must understand the relationship between pH and the fraction of acid protonated.  Fraction protonated is a numerical value associated with how much of the initial acid has been broken down into its deprotonated species.&lt;/fade&gt;
+The equation associated with fraction protonated is located on the right.</text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;fraction protonated equation&lt;/b&gt;</text>
+                </object>                  
+				<object name="fractionprotonatedeq" state="visible"/>
+            </objects>
+            <actions>
+				    <action event="record light"/>
+					<action event="create" name="fractionDataTable" url="tools/fractionDataTable.swf"  x="350" y="80" xscale=".85" yscale=".85" />   
+					<action event="create" name="equation2" url="tools/equationpH2.swf"  x="425" y="375" xscale="1" yscale="1" />
+					<action event="create" name="inputs1" url="tools/inputs1FractionProtonated.swf"  x="385" y="402" xscale="1" yscale="1" />  
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="fraction protonated calculation">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>In the previous simulations you learned about the equilibrium equation to the right. Using the given equation for fraction protonated of the HA, you are going to select a given pH, using the buttons to the left, and with the values in the boxes calculate the fraction protonated. Once you have calculated that value plug your answer into the appropriate location in the data table.</text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;fraction protonated calculation&lt;/b&gt;</text>
+                </object>                  
+				<object name="fractionprotonatedeq" state="visible"/>
+				<object name="fractionDataTable" state="visible"/>
+				<object name="equation2" state="visible"/>
+				<object name="inputs1" state="visible"/>
+            </objects>
+            <actions>
+				    <action event="record light"/>
+					<action event="scale" name="fractionprotonatedeq" x="440" y="30" xscale=".75" yscale=".75" />
+					<action event="create" name="theplotter" url="tools/theplotter.swf"  x="325" y="300" xscale=".85" yscale=".85" />   
+            </actions>
+            <nextbutton text="Plot Data" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="Plot Data">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>Using the data you collected in the previous slide graph each point on the graph simulator. All you need to do is select a pH and then place the point on the proper fraction protonation. 
+&lt;red&gt;Make sure you correctly placed each point before you press the “graph data” button to continue.&lt;/red&gt; </text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Plot Data&lt;/b&gt;</text>
+                </object>                  
+				<object name="fractionDataTable" state="visible"/>
+				<object name="theplotter" state="visible"/>
+            </objects>
+            <actions>
+				    <action event="record light"/>
+					<!--<action event="unload" name="fractionprotonatedeq"/>
+					<action event="unload" name="equation2"/>
+					<action event="unload" name="inputs1"/>-->
+					<!--<action event="scale" name="fractionDataTable" x="350" y="40" xscale=".75" yscale=".75" />--> 
+            </actions>
+            <nextbutton text="Graph" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+		<step id="Graph Data">
+            <objects tutor="pH_09/pH_09_3.xml">
+                <object name="theexplainer" state="invisible">
+                    <text>Mini Tutor </text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Graph Data&lt;/b&gt;</text>
+                </object>                  
+				<object name="fractionDataTable" state="visible"/>
+				<object name="theplotter" state="visible"/>
+            </objects>
+            <actions>
+				    <action event="record light"/>
+					<action event="create" name="thecorrectplotter" url="tools/theplotter.swf"  x="325" y="25" xscale=".9" yscale=".9" />  
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="graph data Answer">
+            <objects tutor="pH_09/pH_09_4.xml">
+                <object name="theexplainer" state="invisible">
+                    <text> </text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Graph Data Answer&lt;/b&gt;</text>
+                </object>                  
+				<object name="thecorrectplotter" state="visible"/>
+				<object name="theplotter" state="visible"/>
+            </objects>
+            <actions>
+				    <action event="record light"/>
+					<action event="unload" name="fractionDataTable"/>  
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="Fraction Protonated Summation">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>Through these simulations you should have learned that pH and fraction of protonated acid are directly related. As the pH increase the fraction of protonated acid will decrease. This means that if you are losing H+, increasing pH, and must be creating more of the original acid, HA.
+					
+Now lets look at a real world example.
+
+Click "Next to continue"
+	</text>
+                </object>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Fraction Protonated Summation&lt;/b&gt;</text>
+                </object>                  
+				<object name="thecorrectplotter" state="visible"/>
+				<object name="theplotter" state="visible"/>
+            </objects>
+            <actions>
+				<action event="create" name="aspirin" url="swfs/aspirin.swf"  x="350" y="115" xscale="1" yscale="1" />
+                <action event="record light"/>
+            </actions> 
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+		<step id="Asprin Intro">
+		 <objects tutor="pH_09/pH_09_5.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Asprin Intro&lt;/b&gt;</text>
+                </object>               
+                <object name="theexplainer" state="invisible">                   
+                </object>
+				<object name="aspirin" state="visible"/>
+            </objects>
+            <actions>  
+                <action event="record light"/>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+	<step id="Asprin">
+		 <objects tutor="pH_09/pH_09_6.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Asprin&lt;/b&gt;</text>
+                </object>               
+                <object name="theexplainer" state="invisible">                   
+                </object>
+				<object name="aspirin" state="visible"/>
+            </objects>
+            <actions>  
+                <action event="record light"/>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>       
+		<step id="Asprin Crossing Membrane">
+		 <objects tutor="pH_09/pH_09_7.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Asprin Crossing Membrane&lt;/b&gt;</text>
+                </object>               
+                <object name="theexplainer" state="invisible">                   
+                </object>
+				<object name="aspirin" state="visible"/>
+            </objects>
+            <actions>  
+				<action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="115" xscale="1"  yscale="1"/> 
+                <action event="record light"/>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>       
+		<step id="Asprin absorption">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <text>In fact, more aspirin is absorbed in the small intestine than in the stomach.  Suggest a reason for this. 
+	</text>
+                </object>
+				<object name="userinput" state="visible">
+				</object>
+				<object name="aspirin" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Asprin absorption&lt;/b&gt;</text>
+                </object>                  
+            </objects>
+            <actions>
+				<action event="record light"/>
+                <action event="record light"/>
+            </actions> 
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>                
+        <step id="all done">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title>ALL done</title>
+                    <text>Now that we have finished explaining how to calculate the equilibrium constant and pH along with acid strengths based on electronegativity return to your text to take the practice quiz.
+                        
+Reload the page to repeat these experiments.</text>
+                </object>
+                <object name="image" state="invisible" />
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        
+        <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+    </steps>
+</simulation>
+
+<!--<action event="reset" name="thegrapher" params="child=1" />-->
+       

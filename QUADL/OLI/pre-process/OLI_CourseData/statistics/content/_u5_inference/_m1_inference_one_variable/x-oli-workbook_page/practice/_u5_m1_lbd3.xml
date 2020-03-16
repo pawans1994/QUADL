@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd3">
+    <head>
+        <title>Confidence Intervals for the Population Mean</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to learn how to use statistical software for calculating
+            confidence intervals for μ (when σ is known). Software is particularly useful when all
+            you have are the raw data (no summary has been calculated), which is what you encounter
+            in practice. In all the examples and activities we looked at so far, the sample mean is
+            given (rather than the whole data set), in which case it will often take you less time
+            to calculate the confidence interval by hand than to launch a software program and ask
+            it to do the calculation for you.</p>
+        <p>
+            <em>Background:</em> Some studies suggest that women having their first baby at age 35
+            or older are at increased risk of having a baby with a low birth weight. A medical
+            researcher wanted to estimate μ, the mean weight of newborns who are the first child for
+            women over the age of 35. To this end, the researcher chose a random sample of 125 women
+            ages 35 and older who were pregnant with their first child and followed them through the
+            pregnancy. The datafile linked below contains the birth weight (in grams) of the 125
+            newborns (women pregnant with more than one child were excluded from the study). From
+            past research, it is assumed that the weight of newborns has a standard deviation of σ =
+            500 grams. We will estimate μ with a 99% confidence interval. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/birthweight.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R. </p>
+                    <p>The data have been loaded into the data frame <code>birthweight</code>. Enter
+                        the command <code>birthweight</code> to see the data. The variable name in
+                        the data frame is also <code>birthweight</code>. </p>
+                    <p>In R, there is no specific command to calculate a z-based confidence
+                        interval. We will use other functions in R to calculate the components of
+                        the confidence interval. </p>
+                    <p>First, we will reassign the variable of interest to the variable name
+                            <code>x</code>. </p>
+                    <ul style="none">
+                        <li><code>x=birthweight$birthweight</code></li>
+                    </ul>
+                    <p>Now we will calculate the necessary sample statistics, such as the sample
+                        mean, <code>x&#772;</code>, the sample size, <code>n</code>, and the
+                            <code>z</code> critical value:</p>
+                    <ol style="decimal">
+                        <li>Set your Confidence Level, <code>C</code>, and <code>z</code> critical
+                            value, <code>z</code>: <ul style="none">
+                                <li><code>C=0.99</code></li>
+                                <li><code>z=qnorm((1+C)/2)</code></li>
+                            </ul></li>
+                        <li>Set your Population Standard Deviation, <code>sigma</code>: <ul
+                                style="none">
+                                <li><code>sigma=500</code></li>
+                            </ul></li>
+                        <li>Calculate the sample mean, <code>xbar</code>, and sample size,
+                                <code>n</code>: <ul style="none">
+                                <li><code>n=length(x)</code></li>
+                                <li><code>xbar=mean(x)</code></li>
+                            </ul></li>
+                    </ol>
+                    <p>Now we can construct the confidence interval. </p>
+                    <ul style="none">
+                        <li>Lower Bound: </li>
+                        <li><code>&#160;&#160;&#160;&#160;xbar-z*(sigma/sqrt(n))</code></li>
+                        <li>Upper Bound:</li>
+                        <li><code>&#160;&#160;&#160;&#160;xbar+z*(sigma/sqrt(n))</code></li>
+                    </ul>
+                    <p>To calculate a confidence interval with a different confidence level, simply
+                        modify the confidence level <code>C</code> value and rerun each step of the
+                        code. To calculate a confidence interval for a new variable, simply reassign
+                            <code>x</code> and <code>sigma</code> and set <code>C</code> to the
+                        appropriate confidence level and rerun each step of the code.</p>
+
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/birthweight.RData" target="self">here</link> and
+                    choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T161009-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T161003-0500" content="&apos;"?>birthweight<?oxy_delete author="mmyers" timestamp="20101123T161012-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101123T161014-0500"?>"<?oxy_insert_end?>
+                        Enter the command <code>birthweight</code> to see the data.</p>
+                <p>We will create a function that calculates a confidence interval for a sample mean
+                    with the following parameters:</p>
+                <ul>
+                    <li>sample: x</li>
+                    <li>population standard deviation: sigma</li>
+                    <li>confidence level as a decimal: c</li>
+                </ul>
+                <p>To create the function in R, copy the following block of instructions to R and
+                    execute it:</p>
+                <code>conf.int = function(x,sigma,c)</code>
+                <code>{</code>
+                <code>n = length(x);</code>
+                <code>m = mean(x);</code>
+                <code>me = qnorm((1+c)/2)*sigma/sqrt(n)</code>
+                <code>print.noquote(paste("sample size: ",n," sample mean: ",m))</code>
+                <code>print.noquote(paste(c*100,"% confidence interval: (",m-me,",
+                    ",m+me,")"))</code>
+                <code>}</code>
+                <p>To calculate our confidence interval for the population mean based on the given
+                    sample, enter the command:</p>
+                <code>conf.int(birthweight$birthweight,500,0.99)</code>-->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor3ar"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="360">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor3ar.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor3ar</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/birthweight.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file
+                                -> on my computer.</em>
+                        </li>
+                        <li>Select "Browse" or "Choose File" (depending on which browser you're
+                            using) and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on "Load File"</li>
+                    </ul>
+                    <p> To create a confidence interval:</p>
+                    <ul style="none">
+                        <li>Choose: Stat → Z statistics → One Sample → with data </li>
+                        <li>Select Column(s): select the variable column </li>
+                        <li>Standard deviation: enter the value of σ </li>
+                        <li>Perform: select Confidence Interval for μ and enter level of confidence </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                </alternative>
+
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/birthweight.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: A dialog box will likely appear that says "A copy of the
+                        content of this file will be added to the current project"&#8212;just click
+                        "OK."</p>
+                    <p>To create a confidence interval:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1-Sample Z.</li>
+                        <li>Make sure the "samples in columns" option is selected, and enter the
+                            variable's name under it (or simply double-click on it in the panel on
+                            the left).</li>
+                        <li>Next to "Standard deviation," enter the value of σ.</li>
+                        <li>To choose the level of confidence, click on <em>Options</em> and select
+                            it.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                    <!--<wb:inline idref="u4_m1_confintmean7_lbd1_tutor1"/>-->
+                    <!--
+                        <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="641">
+                            <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor3a.xml</param>
+                            <param name="problem_name">_u5_m1_lbdtutor3a</param>
+                        </flash>
+                    -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/birthweight.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+                    <p>To create a confidence interval, we need to calculate two values: the sample
+                        mean (which is our best estimate for the population mean), and the margin of
+                        error. Excel can do both of these for us:</p>
+                    <ul>
+                        <li>To calculate the sample mean, simply take the average of all of the
+                            values of the dataset: <code style="inline"
+                            >=average(A2:A126)</code>.</li>
+
+                        <li>To calculate the margin of error, we can use an Excel function called
+                                <em>CONFIDENCE.NORM(a,s,n)</em>, where a is the alpha value, s is
+                            the population standard deviation, and n is the sample size. Note that
+                            the alpha value a = 1 - C, where C is the confidence level (in our case,
+                            0.99). In this case, we enter the formula as follows: <code
+                                style="inline">=CONFIDENCE.NORM(0.01, 500, 125)</code>, which gives
+                            us 115.19 for our margin of error.</li>
+                        <li>The confidence interval is then written as (estimate - margin of error,
+                            estimate + margin of error). For this example we would write (2996.19,
+                            3226.55) as the confidence interval.</li>
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                <title>Excel 2003 Instructions</title>
+                <p>To open Excel with the data in the worksheet, right-click <link
+                        href="../../../webcontent/excel/birthweight.xls" target="self">here</link>
+                    and choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in Excel. </p>
+                <p>To create a confidence interval, we need to calculate two values: the sample mean
+                    (which is our best estimate for the population mean), and the margin of error.
+                    Excel can do both of these for us:</p>
+                <ul>
+                    <li>To calculate the sample mean, simply take the average of all of the values
+                        of the dataset: <code style="inline">=average(A2:A126)</code>.</li>
+                    <li>To calculate the margin of error, we can use an Excel function called
+                        CONFIDENCE (a, s, n), where a is the significance level, s is the population
+                        standard deviation, and n is the sample size. Note that the significance
+                        level a = 1 - C, where C is the confidence level (in our case, 0.99). In
+                        this case, we enter the formula as follows: <code style="inline"
+                            >=CONFIDENCE(0.01, 500, 125)</code>, which gives us 115.19 for our
+                        margin of error.</li>
+                    <li>The confidence interval is then written as (estimate - margin of error,
+                        estimate + margin of error).</li>
+                </ul>
+            </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a list with the birth weight data loaded, right-click <link
+                            href="../../../webcontent/ti/birthweight.8xl" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and send it to your calculator. For instructions on how
+                        to connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+
+                    <p> The birth weight data should be loaded in L1. </p>
+                    <p>To create a confidence interval: </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/7:ZInterval </code></li>
+                        <li>Choose <code style="inline">DATA</code> by using arrows to highlight
+                                <code style="inline">DATA</code>, then pressing <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>σ: (the population standard deviation is given in the problem). </li>
+                        <li>List: Choose <code style="inline">L1 (2ND/1)</code>
+                        </li>
+                        <li>Freq:1 </li>
+                        <li>C-Level: 0.99 (the confidence level is given in the problem) </li>
+                        <li>Choose <code style="inline">CALCULATE</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m1_confintmean7_lbd1_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m1_confintmean7_lbd1_tutor2" purpose="learnbydoing"/>
+
+    </body>
+</workbook_page>

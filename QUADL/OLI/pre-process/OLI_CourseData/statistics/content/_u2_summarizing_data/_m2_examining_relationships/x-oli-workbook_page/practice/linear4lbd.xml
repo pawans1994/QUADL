@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="linear4lbd">
+    <head>
+        <title>Linear Relationships</title>
+    </head>
+    <body>
+        <p>In this activity we will: </p>
+        <ul>
+            <li>Learn how to compute the correlation (r).</li>
+            <li>Practice interpreting the value of the correlation. </li>
+            <li>See an example of how including an outlier can <em style="italic">increase</em> the
+                correlation. </li>
+        </ul>
+
+        <p>Recall the following example: The average gestation period, or time of pregnancy, of an
+            animal is closely related to its longevity&#8212;the length of its lifespan. Data on the
+            average gestation period and longevity (in captivity) of 40 different species of animals
+            have been recorded. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/animals.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>a</code>. Enter the
+                        command <code>a</code> to see the data. The variables in <code>a</code> are
+                            <code>animal</code>, <code>gestation</code>, and
+                        <code>longevity</code>.</p>
+                    <ul style="none">
+                        <li><code>animal</code>: the name of the animal species</li>
+                        <li><code>gestation</code>: the average gestation period of the species, in
+                            days</li>
+                        <li><code>longevity</code>: the average longevity of the species, in
+                            years</li>
+                    </ul>
+                    <!--                    <codeblock syntax="text">  [1] 0.5190389</codeblock>-->
+                    <p>Notice that the correlation between gestation and longevity has changed.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open the file (animals.xls) in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/animals.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next
+                        click <link href="http://www.statcrunch.com/" target="new">here</link> to
+                        open StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on "Load File."</li>
+                    </ul>
+                    <p>Our dataset contains the following variables:</p>
+                    <p>
+                        <em>animal: </em>the name of the animal species. </p>
+                    <p>
+                        <em>gestation: </em>the average gestation period of the species, in days. </p>
+                    <p>
+                        <em>longevity: </em>the average longevity of the species, in years. </p>
+                    <!--<p>To open this file in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/animals.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next
+                        click <link href="http://www.statcrunch.com/" target="new">here</link> to
+                        open StatCrunch in a separate window, and log in using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page.</li>
+                        <li>To open the data set, click on the Data button in the top row and select Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on “Load File.”</li>
+                    </ul>
+                    <p>Our dataset contains the following variables:</p>
+                    <ul>
+                        <li><em style="italic">animal:</em> the name of the animal species</li>
+                        <li><em style="italic">gestation:</em> the average gestation period of the species, in days</li>
+                        <li><em style="italic">longevity:</em> the average longevity of the species, in years</li>
+                    </ul>-->
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/animals.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click OK.</p>
+                    <p>Our dataset contains the following variables: </p>
+                    <p>
+                        <em>animal: </em>the name of the animal species. </p>
+                    <p>
+                        <em>gestation: </em>the average gestation period of the species, in days. </p>
+                    <p>
+                        <em>longevity: </em>the average longevity of the species, in years. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/animals.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>Our dataset contains the following variables: </p>
+                    <p>
+                        <em>animal: </em>the name of the animal species. </p>
+                    <p>
+                        <em>gestation: </em>the average gestation period of the species, in days. </p>
+                    <p>
+                        <em>longevity: </em>the average longevity of the species, in years. </p>
+
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/animals.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                    <p>Our dataset contains the following variables: </p>
+                    <p>
+                        <em>animal: </em>the name of the animal species. </p>
+                    <p>
+                        <em>gestation: </em>the average gestation period of the species, in days. </p>
+                    <p>
+                        <em>longevity: </em>the average longevity of the species, in years. </p>
+
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the data for the animals loaded, right-click
+                            <link href="../../../webcontent/ti/animals.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p>On the TI calculator, the dataset is displayed in lists L1-L2: </p>
+                    <ul style="none">
+                        <li>L1: Gestation&#8212;the average gestation period of the species, in
+                            days.</li>
+                        <li>L2: Longevity&#8212;the average longevity of the species, in years.
+                        </li>
+                    </ul>
+                </alternative>
+
+            </alternatives>
+
+        </pullout>
+        <p>Remember that the correlation is only an appropriate measure of the <em>linear</em>
+            relationship between two quantitative variables. First produce a scatterplot to verify
+            that gestation and longevity are nearly linear in their relationship.</p>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this in R, copy the entire command below:</p>
+                    <code>plot(a$longevity,a$gestation,xlab="Average Longevity of Species (years)",
+                        ylab="Average Gestation Period of Species (days)")</code>
+
+                    <!--<p>To do this in R, copy the command: </p>
+                    <code>plot(a$longevity,a$gestation) </code>
+                    <p><em>Note: Using
+                            R<?oxy_delete author="mmyers" timestamp="20101101T121048-0400" content=" - "?></em><?oxy_insert_start author="mmyers" timestamp="20101101T121053-0400"?>&#8212;<?oxy_insert_end?>in
+                        this
+                        example<?oxy_insert_start author="mmyers" timestamp="20101101T121110-0400"?>,<?oxy_insert_end?>
+                        the variable a consists of three lists: a$animal, a$longevity and
+                        a$gestation. The two numerical lists a$longevity and a$gestation can be
+                        combined into a single list of points. The command plot creates a
+                        scatterplot of these points, and the command
+                        <?oxy_insert_start author="mmyers" timestamp="20101101T121250-0400"?>"<?oxy_insert_end?>cor<?oxy_insert_start author="mmyers" timestamp="20101101T121251-0400"?>"<?oxy_insert_end?>
+                        (below) creates the correlation coefficient of the points. </p>-->
+
+                </alternative>
+
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Here's a reminder of how to do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose Graph → Scatter Plot</li>
+                        <li>For the X column select <em>longevity</em> and for the Y column select
+                                <em>gestation</em>.</li>
+                        <li>Press Compute! </li>
+                    </ul>
+                    <!--<p>Here is a reminder of how to do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose Graph → Scatter Plot</li>
+                        <li>For the X column, select <em style="italic">longevity</em>, and for the Y column, select <em style="italic">gestation</em></li>
+                        <li>Press Compute!</li>
+                    </ul>-->
+                </alternative>
+
+
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Here's a reminder of how to do this in Minitab: </p>
+                    <ul>
+                        <li>Choose Graph → Scatterplot → Simple. </li>
+                        <li>Enter the response variable (Y) and the explanatory variable (X).</li>
+                        <li>Click "OK." </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>Here's a reminder of how to do this in Excel: </p>
+                    <ul>
+                        <li>Select all of the data in columns B and C, and then choose <code
+                                style="inline">Scatter</code> in the <code style="inline"
+                                >Charts</code> group on the <code style="inline">Insert</code> tab
+                            (click on the picture of a scatterplot).</li>
+                        <li>Choose the first scatterplot option (Scatter with only Markers).</li>
+                    </ul>
+                </alternative>
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Here's a reminder of how to do this in Excel: </p>
+                    <ul>
+                        <li>Select all of the data in columns B and C, and then choose <code
+                                style="inline">Insert → Chart</code> from the top menu bar.</li>
+                        <li>Choose <code style="inline">XY (Scatter)</code> and then Click <code
+                                style="inline">Finish</code>.</li>
+                    </ul>
+
+
+                </alternative> -->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Scatterplot</em></p>
+                    <ul>
+                        <li>Either clear any equations you may have in your calculator by choosing
+                                <code style="inline">Y=/CLEAR</code>, or else toggle them off by
+                            choosing <code style="inline">Y=</code> and then pressing the left arrow
+                            until <code style="inline">=</code> is selected and pressing <code
+                                style="inline">ENTER</code>.</li>
+                        <li> Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li> Choose <code style="inline">4:PlotsOff</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                        <li> You should see: <image style="inline"
+                                src="../../webcontent/linear4lbd1.jpg"/></li>
+                        <li> Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li> Choose <code style="inline">1:Plot1…Off</code>. </li>
+                        <li> Turn the plot <code style="inline">ON</code> by using arrows to
+                            highlight the word <code style="inline">ON</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                        <li> Choose the <code style="inline">Type:</code> the first graph is a
+                            scatterplot. </li>
+                        <li> Choose <code style="inline">L1 (2ND/1)</code> for <code style="inline"
+                                >Xlist</code>. </li>
+                        <li> Choose <code style="inline">L2 (2ND/2)</code> for <code style="inline"
+                                >Ylist</code>. </li>
+                        <li> Choose the <code style="inline">Mark</code> you prefer. </li>
+                        <li> You should see <image style="inline"
+                                src="../../webcontent/linear4lbd2.jpg"/></li>
+                        <li> To view the scatterplot, choose <code style="inline">ZOOM/9:
+                                ZoomStat</code>. </li>
+                    </ul>
+                    <p>Note: If you prefer to set the viewing window yourself, choose <code
+                            style="inline">WINDOW</code> and set the values yourself for <code
+                            style="inline">Xmin</code>, <code style="inline">Xmax</code>, <code
+                            style="inline">Xscl</code>, <code style="inline">Ymin</code>, <code
+                            style="inline">Ymax</code>, <code style="inline">Yscl</code>. If the
+                        x-axis/y-axis show as a dark line, you can make <code style="inline"
+                            >Xscl</code>/<code style="inline">Yscl </code>larger.</p>
+
+                </alternative>
+
+            </alternatives>
+
+        </pullout>
+
+
+        <p>Observe that the relationship between gestation period and longevity is linear and
+            positive. Now we will compute the correlation between gestation period and longevity. </p>
+
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do that in R, copy the command:</p>
+                    <code>cor(a$longevity,a$gestation)</code>
+                    <p>Now return to the scatterplot that you created earlier. Notice that there is
+                        an outlier in both <code>longevity</code> (40 years) and
+                            <code>gestation</code> (645 days). <em style="italic"> Note:</em> This
+                        outlier corresponds to the longevity and gestation period of the
+                        elephant.</p>
+
+                    <!--<p>To do that in R, copy the command: </p>
+                    <code>cor(a$longevity,a$gestation)</code>-->
+                </alternative>
+
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do that in StatCrunch:</p>
+                    <ul>
+                        <li>Choose Stat → Summary Stats → Correlation. </li>
+                        <li>Select the columns <em>longevity</em> and <em>gestation</em> by pressing
+                            (Shift+click) or (Ctrl+click). </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do that in Minitab: </p>
+                    <ul>
+                        <li>Choose Stat → Basic Statistics → Correlation. This will bring up the
+                            Correlation dialog box. </li>
+                        <li>To fill in the "Variables": double-click on the two relevant variables
+                            in the left panel (gestation and longevity) </li>
+                        <li>Uncheck "Display p-values." We won't need that right now. </li>
+                        <li>Click "OK." </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>To do that in Excel: </p>
+                    <ul>
+                        <li>Click in a cell outside of the first three columns of data.</li>
+                        <li>Type <code style="inline">=correl(B2:B41,C2:C41)</code></li>
+                        <li><em>IMPORTANT:</em> Instead of typing the <em>B2:B41, C2:C41</em> inside of the
+                            parentheses, it is better to highlight the relevant cells with your
+                            mouse after typing <em>=min(</em> (by holding a left click as you highlight the
+                            cells).</li>
+                    </ul>
+
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do that in Excel: </p>
+                    <ul>
+                        <li>Click in a cell outside of the first three columns of data.</li>
+                        <li>Type <code style="inline">=correl(B2:B41,C2:C41)</code></li>
+                    </ul>
+
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Correlation</em></p>
+                    <p>Choose <code style="inline">STAT/CALC/8:LinReg(a+bx). </code></p>
+
+                    <p>You'll see: <code style="inline">LinReg(a + bx)</code></p>
+
+                    <p>Choose the <code>Xlist</code> and <code>Ylist</code>. Since the gestation
+                        data is in L1 and the longevity data is in L2, enter <code>2nd/1</code>
+                        after <code>Xlist</code>. Enter <code>2nd/2</code> after <code>Ylist</code>.
+                        Leave <code>FreqList</code> and <code>Store RegEQ</code> blank.</p>
+                    <p>Highlight <code>Calculate</code> and press <code>ENTER</code></p>
+
+
+                    <p>Once you have <code style="inline">LinReg(a+bx) L1,L2</code> then press <code
+                            style="inline">ENTER</code></p>
+
+                    <p>Note: If you don’t enter any lists, then L1,L2 is the default.</p>
+
+                    <p>You should now see:</p>
+                    <ul>
+                        <li>LinReg</li>
+                        <li>y=a+bx</li>
+                        <li>a=</li>
+                        <li>b=</li>
+                        <li>r<sup>2</sup>=</li>
+                        <li>r=</li>
+                    </ul>
+
+                    <p>If you don’t see r<sup>2</sup> and r, you need to turn <code style="inline"
+                            >DiagnosticOn</code>: Choose <code style="inline">CATALOG (2ND/0)</code>
+                        and then arrow down to choose <code style="inline">DiagnosticOn</code> (list
+                        is alphabetical). Hit <code style="inline">ENTER</code> and the screen will
+                        display <code style="inline">Done</code>. You will only have to do this once
+                        unless the TI memory gets reset. </p>
+
+                </alternative>
+
+            </alternatives>
+
+        </pullout>
+        <wb:inline idref="u1_m2_linear4_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="331">
+<param name="question_file">../../../webcontent/flash/practice_linear4q1.xml</param>
+<param name="problem_name">practice_linear4q1</param>
+</flash>-->
+        <p>Now return to the scatterplot that you created earlier. Notice that there is an outlier
+            in both longevity (40 years) and gestation (645 days). Note: This outlier corresponds to
+            the longevity and gestation period of the elephant. </p>
+        <p>What do you think will happen to the correlation if we remove this outlier?</p>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this in R, copy the following command:</p>
+                    <code>cor(a$longevity[a$animal!="elephant"],a$gestation[a$animal!="elephant"])</code>
+                    <p>Notice that the correlation between <code>gestation</code> and
+                            <code>longevity</code> has changed.</p>
+
+                    <!--<p>To do this in R, copy the following command:</p>
+                    <code>cor(a$longevity[a$animal!="elephant"],a$gestation[a$animal!="elephant"])</code>
+                    <p>Notice that the correlation between gestation and longevity has changed. </p>-->
+                    <!--<wb:inline idref="practice_linear4q2r" purpose="learnbydoing"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="421">
+        <param name="question_file">../../../webcontent/flash/practice_linear4q2r.xml</param>
+        <param name="problem_name">practice_linear4q2r</param>
+        </flash>-->
+                </alternative>
+
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do that in StatCrunch:</p>
+                    <ul>
+                        <li><p>Scroll down to row 15 of the data. You will see that this contains
+                                the values of the variables for the elephant.</p></li>
+                        <li><p>Click on the row header “15” to select the entire row of
+                            data.</p></li>
+                        <li><p>Choose Edit → Rows → Delete</p></li>
+                        <li><p>In response to “Delete 1 selected rows?” press Compute!</p></li>
+                    </ul>
+                    <p>You will see that the values for the elephant have been removed from the
+                        data.</p>
+                    <p>Recompute the correlation between gestation and longevity.</p>
+                    <!--<p>To do that in StatCrunch:</p>
+                    <ul>
+                        <li>Scroll down to row 15 of the data. You will see that this row contains the
+                            values of the variables for the elephant</li>
+                        <li>Click on the row header “15” to select the entire row of data</li>
+                        <li>Choose Edit → Rows → Delete</li>
+                        <li>In response to “Delete 1 selected rows?” press Compute!</li>
+                    </ul>
+                    <p>You will see that the values for the elephant have been removed from the
+                        data.</p>
+                    <p>Recompute the correlation between gestation and longevity.</p>-->
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Scroll down to row 15 of the data. You will see that this contains the
+                            values of the variables for the elephant. </li>
+                        <li>Click on the row header "15" to select the entire row of data. </li>
+                        <li>Choose Edit → Delete Cells. </li>
+                    </ul>
+                    <p>You will see that the values of the variables for the elephant have been
+                        removed from the data. Recompute the correlation between gestation and
+                        longevity. </p>
+                    <!--<wb:inline idref="u1_m2_linear4_lbd_tutor2" purpose="learnbydoing"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="421">
+        <param name="question_file">../../../webcontent/flash/practice_linear4q2.xml</param>
+        <param name="problem_name">practice_linear4q2</param>
+        </flash>-->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Scroll down to row 16 of the data. You will see that this contains the
+                            values of the variables for the elephant.</li>
+                        <li>Click on the row header <code style="inline">16</code> to select the
+                            entire row of data.</li>
+                        <li>Right-click and choose <code style="inline">Delete</code> from the
+                            pop-up menu to delete the row.</li>
+                    </ul>
+
+                    <p>You will see that the values of the variables for the elephant have been
+                        removed from the data. Notice also that the correlation between gestation
+                        and longevity has changed. </p>
+
+                </alternative>
+                <!--       <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Scroll down to row 16 of the data. You will see that this contains the
+                            values of the variables for the elephant.</li>
+                        <li>Click on the row header <code style="inline">16</code> to select the
+                            entire row of data.</li>
+                        <li>Right-click and choose <code style="inline">Delete</code> from the
+                            pop-up menu to delete the row.</li>
+                    </ul>
+
+                    <p>You will see that the values of the variables for the elephant have been
+                        removed from the data. Notice also that the correlation between gestation
+                        and longevity has changed. </p>
+
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Delete 645 from the gestation list (L1) and 40 from the longevity list (L2).
+                        These should be L1(15) and L2(15).</p>
+
+                    <ul>
+                        <li>Choose <code style="inline">STAT/EDIT/1:Edit...</code></li>
+                        <li>Arrow down in <code style="inline">L1</code> until you've highlighted
+                                <code style="inline">645</code>.</li>
+
+                        <li>Press <code style="inline">DEL</code>.</li>
+
+                        <li>Use the right arrow to highlight 40 in <code style="inline"
+                            >L2</code>.</li>
+
+                        <li>Press DEL.</li>
+                    </ul>
+                    <p>You will see that the values of the variables for this outlier have been
+                        removed from the data.</p>
+
+                    <p>Recalculate the correlation:</p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/CALC/8:LinReg(a+bx). </code></li>
+
+                        <li>Choose the <code>Xlist</code> and <code>Ylist</code>. Since the
+                            gestation data is in L1 and the longevity data is in L2, enter
+                                <code>2nd/1</code> after <code>Xlist</code>. Enter
+                                <code>2nd/2</code> after <code>Ylist</code>. Leave
+                                <code>FreqList</code> and <code>Store RegEQ</code> blank. Highlight
+                                <code>Calculate</code> and press <code>ENTER</code></li>
+
+
+                        <li>Once you have <code style="inline">LinReg(a+bx) L1,L2</code>, press
+                                <code style="inline">ENTER</code></li>
+                    </ul>
+                </alternative>
+
+            </alternatives>
+
+        </pullout>
+        <wb:inline idref="u1_m2_linear4_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>In the last activity, we saw an example where there was a positive linear
+                    relationship between the two variables, and including the outlier just
+                    "strengthened" it. Consider the hypothetical data displayed by the following
+                    scatterplot: </p>
+                <image style="block" src="../../webcontent/linear22.gif"/>
+                <p>In this case, the low outlier gives an "illusion" of a positive linear
+                    relationship, whereas in reality, there is no linear relationship between X and
+                    Y. </p>
+            </body>
+        </section>
+
+    </body>
+</workbook_page>

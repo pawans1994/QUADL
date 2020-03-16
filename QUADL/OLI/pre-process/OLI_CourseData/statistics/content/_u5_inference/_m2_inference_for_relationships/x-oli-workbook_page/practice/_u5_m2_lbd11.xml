@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd11">
+    <head>
+        <title>Case Q→Q</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to introduce the example that you will work on in the
+            activities of this section and to have you get a first feel for the data via exploratory
+            data analysis.</p>
+        <p>Background: A method for predicting IQ as soon as possible after birth could be important
+            for early intervention in cases such as brain abnormalities or learning disabilities. It
+            has been thought that greater infant vocalization (for instance, more crying) is
+            associated with higher IQ. In 1964, a study was undertaken to see if IQ at 3 years of
+            age is associated with amount of crying at newborn age (Karelitz, et al., "Relation of
+            Crying Activity in Early Infancy to Speech and Intellectual Development at Age Three
+            Years," <em style="italic">Child Development</em>, 1964 (35), p. 769–777. Click <link
+                href="../../../webcontent/baby-crying-IQ.pdf" target="new">here</link> to read the
+            research paper that describes this study and its results).</p>
+        <p>In the study, 38 newborns were made to cry after being tapped on the foot, and the number
+            of distinct cry vocalizations within 20 seconds was counted. The subjects were followed
+            up at 3 years of age and their IQs were measured.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/baby-crying-IQ.RData" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        R.</p>
+                    <p>The data have been loaded into the data frame <code>baby</code>. Enter the
+                        command <code>baby</code> to see the data. The two variables in the data
+                        frame are <code>cry.count</code> and <code>IQ</code>.</p>
+
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/baby-crying-IQ.RData" target="self">here</link>
+                    and choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the data frame <code>baby</code>. Enter the command
+                    <code>baby</code> to see the data. The two variables in the data frame
+                    are <code>cry.count</code> and <code>IQ</code>.</p>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file
+                                -> on my computer.</em></li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/baby-crying-IQ.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: a dialog box will likely appear that says "A copy of the
+                        content of this file will be added to the current project"&#8212;just click
+                        "OK."</p>
+                </alternative>
+
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    
+                    <p>To open the dataset, click <link
+                        href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                        >here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                </alternative>
+              <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Excel.</p>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the baby crying and IQ data loaded, right-click
+                            <link href="../../../webcontent/ti/baby-crying-IQ.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p>L1: Cry Count </p>
+                    <p>L2: IQ </p>
+                    <p> </p>
+                </alternative>  
+            </alternatives>
+        </pullout>
+        <p>As you can see, our data consist of two variables: <em>cry count</em> and
+            <em>IQ</em>.</p>
+        <wb:inline idref="u4_m4_qq2_lbd1_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="271">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor11a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor11a</param>
+                </flash>
+                
+            -->
+        <p>To get a feel for the data, conduct exploratory analysis by creating a scatterplot of the
+            data, and supplementing it with the correlation coefficient r. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Here's a reminder of how to do this in R. To create a scatterplot, enter the
+                        command:</p>
+                    <ul style="none">
+                        <li><code>plot(baby$cry.count,baby$IQ, xlab="Number of Crying Events",
+                                ylab="IQ")</code></li>
+                    </ul>
+                    <p>To compute the correlation coefficient, enter:</p>
+                    <ul style="none">
+                        <li><code>cor(baby$cry.count,baby$IQ)</code></li>
+                    </ul>
+                    <!--<p>Here's a reminder of how to do this in R. To create a scatterplot, enter the
+                    command:</p>
+                <code>plot(baby$cry.count,baby$IQ, xlab="Number of Crying Events", ylab="IQ")</code>
+                <p>To compute the correlation coefficient, enter:</p>
+                <code>cor(baby$cry.count,baby$IQ)</code>-->
+                    <!--<wb:inline idref="_u5_m2_lbdtutor11b_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="460">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor11b_r.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor11b_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p> In StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Graphics → Scatter Plot</li>
+                        <li>Under ‘X variable’, Select cry count </li>
+                        <li>Under ‘Y variable’, Select IQ </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                    <p>and for correlation coefficient r:</p>
+                    <ul>
+                        <li>Choose: Summary Stats → Correlation</li>
+                        <li>Select the columns corresponding to the variables. </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>In Minitab: </p>
+                    <ul>
+                        <li>Graph → Scatterplot. Choose "Simple" and click "OK." Enter the
+                            variables, and click "OK."</li>
+                        <li>Stat → Basic Statistics → Correlation. Enter the variables and click
+                            "OK."</li>
+                    </ul>
+                    <!--<wb:inline idref="u4_m4_qq2_lbd1_tutor2"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="460">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor11b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor11b</param>
+                    </flash>
+                -->
+                </alternative>
+
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Here's a reminder of how to do this in Excel:</p>
+                    <ul>
+                        <li>To create a scatterplot:</li>
+                        <li>Select all of the data in columns A and B, and then choose <code
+                                style="inline">Scatter</code> in the <code style="inline"
+                                >Charts</code> group on the <code style="inline">Insert</code>
+                            tab.</li>
+                        <li>Choose the first scatterplot option (Scatter with only Markers).</li>
+                        <li>Remember that if you like, you can adjust the axes to better see the
+                            data by right-clicking on an axis, choosing <code style="inline">Format
+                                Axis</code> from the pop-up menu, choosing <code style="inline">Axis
+                                Options</code> on the left in the window that comes up, and setting
+                            the minimum and maximum to something more appropriate than what Excel
+                            chose for you.</li>
+                        <li>To compute the correlation:</li>
+                        <li>Click in a cell outside of the first two columns of data.</li>
+                        <li>Type <code style="inline">=correl([range1],[range2])</code> where
+                            [range1] is the first column of data and [range2] is the second column
+                            of data.</li>
+                    </ul>
+                </alternative>
+               <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Here's a reminder of how to do this in Excel:</p>
+                    <ul>
+                        <li>To create a scatterplot:</li>
+                        <li>Select all of the data in columns A and B, and then choose <code
+                                style="inline">Insert → Chart</code> from the top menu bar.</li>
+                        <li>Choose <code style="inline">XY (Scatter)</code> and then Click <code
+                                style="inline">Finish</code>. </li>
+                        <li>Remember that if you like, you can adjust the axes to better see the
+                            data by double-clicking on an axis, choosing the tab marked <code
+                                style="inline">Scale</code>, and setting the minimum and maximum to
+                            something more appropriate than what Excel chose for you.</li>
+                        <li>To compute the correlation:</li>
+                        <li>Click in a cell outside of the first two columns of data.</li>
+                        <li>Type <code style="inline">=correl([range1],[range2])</code> where
+                            [range1] is the first column of data and [range2] is the second column
+                            of data.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Scatterplot</em></p>
+                    <ul>
+                        <li>Either clear any equations you may have in your calculator by choosing
+                                <code style="inline">Y=/CLEAR</code>, or else toggle them off by
+                            choosing <code style="inline">Y=</code> and then pressing the left arrow
+                            until <code style="inline">=</code> is selected and pressing <code
+                                style="inline">ENTER</code>.</li>
+                        <li> Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li> Choose <code style="inline">4:PlotsOff</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                        <li> You should see: <image style="inline"
+                                src="../../webcontent/image519.jpg" alt="PlotsOff Done"/></li>
+                        <li> Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li> Choose <code style="inline">1:Plot1…Off</code>. </li>
+                        <li> Turn the plot <code style="inline">ON</code> by using arrows to
+                            highlight the word <code style="inline">ON</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                        <li>
+                            <code style="inline">Type:</code> first row, first graph is a
+                            scatterplot. </li>
+                        <li>
+                            <code style="inline">Xlist:L1 (2ND/1)</code>.</li>
+                        <li>
+                            <code style="inline">Ylist:L2 (2ND/2)</code>.</li>
+                        <li> Choose the <code style="inline">Mark</code> you prefer. </li>
+                        <li> You should see <image style="inline"
+                                src="../../webcontent/image520.jpg"
+                                alt="Plot1   Plot2   Plot3
+    On Off
+    Type: (*scatterplot) (line graph) (histogram) (modified box plot) (box plot) (line graph)
+    Xlist: L_1
+    YList: L_2
+    Mark: square, + , ."
+                            /></li>
+                        <li> To view the scatterplot, choose <code style="inline">ZOOM/9:
+                                ZoomStat</code>. </li>
+                    </ul>
+                    <p>Note: If you prefer to set the viewing window yourself, choose <code
+                            style="inline">WINDOW</code> and set the values yourself for <code
+                            style="inline">Xmin</code>, <code style="inline">Xmax</code>, <code
+                            style="inline">Xscl</code>, <code style="inline">Ymin</code>, <code
+                            style="inline">Ymax</code>, <code style="inline">Yscl</code>. If the
+                        x-axis/y-axis show as a dark line, you can make <code style="inline"
+                            >Xscl</code>/<code style="inline">Yscl </code>larger.</p>
+                    <p><em>Correlation</em></p>
+                    <p>Choose <code style="inline">STAT/CALC/8:LinReg(a+bx). </code></p>
+
+                    <p>You'll see: <code style="inline">LinReg(a + bx)</code>.</p>
+
+                    <p>Before hitting the <code style="inline">ENTER</code> key, choose the <code
+                            style="inline">Xlist</code> and <code style="inline">Ylist</code>. Since
+                        the
+                        <?oxy_comment_start author="mmyers" timestamp="20101129T175932-0500" comment="these are the wrong variable descriptions -- should be IQ and cry count, but I don&apos;t know which is which."?>gestation
+                        data is in L1 and the longevity<?oxy_comment_end?> data is in L2, enter
+                            <code style="inline">L1,L2</code> after <code style="inline"
+                            >LinReg(a+bx)</code>. The comma (,) button is just above the 7
+                        button.</p>
+
+                    <p><code style="inline">LinReg(a+bx) L1,L2</code>then press <code style="inline"
+                            >ENTER</code></p>
+
+                    <p>Note: If you don’t enter any lists, then L1,L2 is the default.</p>
+
+                    <p>You should now see:</p>
+                    <ul>
+                        <li>LinReg</li>
+                        <li>y=a+bx</li>
+                        <li>a=</li>
+                        <li>b=</li>
+                        <li>r<sup>2</sup>=</li>
+                        <li>r=</li>
+                    </ul>
+
+                    <p>If you don’t see r<sup>2</sup> and r, you need to turn <code style="inline"
+                            >DiagnosticOn</code>: Choose <code style="inline">CATALOG
+                        (2ND/0)</code>. Arrow down to choose <code style="inline"
+                            >DiagnosticOn</code> (list is alphabetical). Hit <code style="inline"
+                            >ENTER</code> and the screen will display <code style="inline"
+                            >Done</code>. You will only have to do this once, unless the TI memory
+                        gets reset. </p>
+
+
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m4_qq2_lbd1_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

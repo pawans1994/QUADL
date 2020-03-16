@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_matched_pairs3">
+<head>
+<title>Matched Pairs (3 of 8)</title>
+ <objref idref="specify_hypotheses_for_groups"/>
+</head>
+<body>
+ 
+<section>
+<title>Step 1: Stating the hypotheses.</title>
+<body>
+<p>
+			Recall that in the t-test for a single mean our null hypothesis was:	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+and the alternative was one of	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>:</m:mo>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mo>&lt;</m:mo>
+<m:mi mathvariant="italic">or</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mi mathvariant="italic">or</m:mi>
+<m:mo>≠</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+. Since the paired t-test is a special case of the one-sample t-test, the hypotheses are the same except that:
+</p>
+ <ul>
+<li><p>
+			Instead of simply	μ
+we use the	notation <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>
+to denote that the parameter of interest is the mean of the differences.
+		</p></li>
+<li><p>
+			In this course our null value	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+is always 0 (although technically, it does not have to be).
+	</p></li></ul>
+<p>Therefore, in the paired t-test:</p>
+<p>The null hypothesis is always:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>and the alternative is one of :</p>
+<image style="block" src="../webcontent/image065.gif" alt="H_a: &mu;_d &lt; 0 (one-sided),
+H_a: &mu;_d &gt; 0 (one-sided), H_a: &mu;_d &ne; 0 (two-sided)"/>
+<p>depending on the context.</p>
+<p>Let's go back to our example to see how this works and why it makes sense.</p>
+<example><title>Drunk Driving</title>
+
+<p>Recall that in our "Are drivers impaired after drinking two beers?" example, our data was reduced to one sample of differences (one for each driver),</p>
+<image style="block" src="../webcontent/image066.gif" alt="A table with the rows &quot;Driver,&quot;
+&quot;Sample 1 (before),&quot; &quot;Sample 2 (after),&quot; and &quot;Differences (before -
+after).&quot; We only care about the Driver and Differences row."/>
+<p>
+					so our problem was reduced to inference about the mean of the differences	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>	.
+				</p>
+<image style="block" src="../webcontent/image067.gif" alt="For the population of all drivers,
+we are trying to find &mu;_d, which represents the mean of the difference in total reaction
+time (before 2 beers - after 2 beers). To do this, we generate a sample from the population.
+The sample consists of 20 differences."/>
+<p>As we mentioned, the null hypothesis is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+					.
+				</p>
+<p>The null hypothesis claims that the differences in reaction times are centered at (or around) 0, 
+ indicating that drinking two beers has no real impact on reaction times. In other words, 
+ drivers are not impaired after drinking two beers.</p>
+<p>In order to decide which of the alternatives is appropriate here we have to think about the context of the problem. 
+ Recall that we want to check whether drivers are impaired after drinking two beers. Thus, we want to know 
+ whether their reaction times are longer after the two beers. Since the differences were calculated before-after, 
+ longer reaction times after the beers would translate into negative differences.  These differences are: 6.25 - 6.85, 2.96 - 4.78, etc. </p>
+<p>Therefore, the appropriate alternative here is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>a</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>&lt;</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>indicating that the differences are centered at a negative number.</p>
+</example>
+<activity idref="_u5_m2_wonder1" purpose="manystudentswonder"/>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>Recall that originally, the following figure represented our problem:</p>
+<image style="block" src="../webcontent/image054.gif" alt="The X variable is whether
+the driver had 2 beers or no beers. We have two populations, population 1 of sober drivers and population 2
+of drivers who had two beers. For each population we have the Reaction Time (Y) mean, &mu;_1 for population 1
+and &mu;_2 for population 2. We use the same drivers to generate the samples for both populations. The SRS
+of size 20 is created for population 1 before the drivers have had 2 beers, and using the same drivers,
+we generate the SRS of size 20 for population 2 after giving them 2 beers."/>
+<p>Later, we reduced the problem to inference about a single mean, the mean of the differences:</p>
+<image style="block" src="../webcontent/image067.gif" alt="For the population of all drivers,
+we are trying to find &mu;_d, which represents the mean of the difference in total reaction
+time (before 2 beers - after 2 beers). To do this, we generate a sample from the population.
+The sample consists of 20 differences."/>
+<p>Some students find it helpful to know that it turns out that	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>. In other words, the difference between the means <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+in the first representation is the same as the mean of the differences,
+ <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>,in the second one. Some students find it easier to first think about the hypotheses in terms of	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>	(as we did in the two-sample case) and then represent it in terms of	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>.</p>
+<p>In our example, since we want to test whether the reaction times in population 1 are shorter, we are testing <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">vs</m:mi>
+<m:mo>.</m:mo>
+<m:mtext> </m:mtext>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo>&lt;</m:mo>
+<m:mn>0</m:mn>
+<m:mtext/>
+</m:mrow>
+</m:math>, which in the matched pairs design notation is translated to	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">vs</m:mi>
+<m:mo>.</m:mo>
+<m:mtext> </m:mtext>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>&lt;</m:mo>
+<m:mn>0</m:mn>
+<m:mtext> </m:mtext>
+</m:mrow>
+</m:math>
+					.
+				</p>
+</body>
+</section>
+<p>Here is another example:</p>
+<example>
+
+<p>Suppose the effectiveness of a low-carb diet is studied with a matched pairs design, recording each participant's weight before and after dieting. What would be the appropriate hypotheses in this case?</p>
+<p>As before,	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>
+is the mean of the differences (weight before diet)-(weight after diet). In this case, if the diet is effective and participants' weight after the diet was indeed lower, we would expect the differences to be positive, and therefore the appropriate hypotheses in this case are:	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>o</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">vs</m:mi>
+<m:mo>.</m:mo>
+<m:mtext> </m:mtext>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>&gt;</m:mo>
+<m:mn>0</m:mn>
+<m:mtext> </m:mtext>
+</m:mrow>
+</m:math>
+					.
+				</p>
+</example>
+<!--<activity idref="_u5_m2_dig4" purpose="didigetthis"/>-->
+ <section purpose="didigetthis">
+  <title>Did I Get This?</title>
+  <body>
+   <p>In each of the following cases, decide based on the context what the appropriate set of hypotheses is.
+    
+   </p>
+   <wb:inline idref="u4_m3_matchedpairs3_tutor1" purpose="didigetthis"/>
+     <wb:inline idref="u4_m3_matchedpairs3_tutor2" purpose="didigetthis"/>
+    <wb:inline idref="u4_m3_matchedpairs3_tutor3" purpose="didigetthis"/>
+   
+  </body>
+ </section>
+ 
+</body>
+</workbook_page>

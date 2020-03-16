@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_binomial3">
+    <head>
+        <title>Binomial Random Variables (3 of 4)</title>
+        <objref idref="fit_binomial_model"/>
+    </head>
+    <body>
+
+        <p>Let's look at another example:</p>
+        <example>
+            <title>Blood Type A</title>
+
+            <p>The probability of having blood type A is .4. Choose 4 people at random and let X be
+                the number with blood type A. </p>
+            <p>X is a binomial random variable with n = 4 and p = .4.</p>
+            <p>As a review, let's first find the probability distribution of X the long way:
+                construct an interim table of all possible outcomes in S, the corresponding values
+                of X, and probabilities. Then construct the probability distribution table for
+                X.</p>
+            <image style="block" src="../webcontent/image090.gif" alt="The probability distribution
+table, with three columns, &quot;S,&quot; &quot;X,&quot; and &quot;Probability.&quot; Here is the
+data in the table, given in row format (S: X, Probability):
+                NNNN: 0, .4^0 &times; .6^4;
+                NNNA: 1, .4^1 &times; .6^3;
+                NNAN: 1, .4^1 &times; .6^3;
+                NANN: 1, .4^1 &times; .6^3;
+                ANNN: 1, .4^1 &times; .6^3;
+                NNAA: 2, .4^2 &times; .6^2;
+                NANA: 2, .4^2 &times; .6^2;
+                NAAN: 2, .4^2 &times; .6^2;
+                ANNA: 2, .4^2 &times; .6^2;
+                ANAN: 2, .4^2 &times; .6^2;
+                AANN: 2, .4^2 &times; .6^2;
+                NAAA: 3, .4^3 &times; .6^1;
+                ANAA: 3, .4^3 &times; .6^1;
+                AANA: 3, .4^3 &times; .6^1;
+                AAAN: 3, .4^3 &times; .6^1;
+                AAAA: 4, .4^4 &times; .6^0;"/>
+            <p>As usual, the addition rule lets us combine probabilities for each possible value of
+                X:</p>
+            <image style="block" src="../webcontent/image091.gif" alt="A table with two columns,
+labeled &quot;X,&quot; and &quot;Probability.&quot; Here is the data, in row format (X, Probability):
+                0: (1) &times; .4^0 &times; .6^4 = .1296;
+                1: (4) &times; .4^1 &times; .6^3 = .3456;
+                2: (6) &times; .4^2 &times; .6^2 = .3456;
+                3: (4) &times; .4^3 &times; .6^1 = .1536;
+                4: (1) &times; .4^4 &times; .6^0 = .0256;"/>
+            <p>Now let's apply the formula for the probability distribution of a binomial random
+                variable, and see that by using it, we get exactly what we got the long way.</p>
+            <p>Recall<?oxy_delete author="mmyers" timestamp="20101121T203331-0500" content=","?>
+                that the general formula for the probability distribution of a binomial random
+                variable with n trials and probability of success p is:</p>
+            <!--  <p>
+                <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mi>x</m:mi>
+                            <m:mo>!</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mi>n</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mi>x</m:mi>
+                            <m:mo>)</m:mo>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:msup>
+                        <m:mi>p</m:mi>
+                        <m:mrow>
+                            <m:mi>x</m:mi>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mi>p</m:mi>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mi>n</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mi>x</m:mi>
+                            <m:mo>)</m:mo>
+                        </m:mrow>
+                    </m:msup>
+                </m:math> for x = 0, 1, 2, 3,
+                .<?oxy_delete author="mmyers" timestamp="20101121T203353-0500" content=" "?>.<?oxy_delete author="mmyers" timestamp="20101121T203355-0500" content=" "?>.
+                , n</p>-->
+            <p><m:math overflow="scroll">
+
+                    <m:mrow>
+                        <m:mi>P</m:mi>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mi>x</m:mi>
+                        <m:mo stretchy="false">)</m:mo>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mo>!</m:mo>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                                <m:mo>!</m:mo>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mi>n</m:mi>
+                                <m:mo>&minus;</m:mo>
+                                <m:mi>x</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mo>!</m:mo>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:msup>
+                            <m:mi>p</m:mi>
+                            <m:mi>x</m:mi>
+                        </m:msup>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>&minus;</m:mo>
+                        <m:mi>p</m:mi>
+                        <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mrow>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mi>n</m:mi>
+                                <m:mo>&minus;</m:mo>
+                                <m:mi>x</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                            </m:mrow>
+                        </m:msup>
+                    </m:mrow>
+                </m:math> for x = 0, 1, 2, 3, ... , n </p>
+            <p>In our case, X is a binomial random variable with n = 4 and p = .4, so its
+                probability distribution is:</p>
+            <!--   <p>
+                <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>x</m:mi>
+                    <m:mo>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mi>x</m:mi>
+                            <m:mo>!</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>x</m:mi>
+                            <m:mo>)</m:mo>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mi>x</m:mi>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo> (</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>6</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mi>x</m:mi>
+                        </m:mrow>
+                    </m:msup>
+                </m:math> for x = 0, 1, 2, 3, 4</p>-->
+            <p> <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>P</m:mi>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mi>x</m:mi>
+                        <m:mo stretchy="false">)</m:mo>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>4</m:mn>
+                                <m:mo>!</m:mo>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                                <m:mo>!</m:mo>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mn>4</m:mn>
+                                <m:mo>&minus;</m:mo>
+                                <m:mi>x</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mo>!</m:mo>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mn>0.4</m:mn>
+                        <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mi>x</m:mi>
+                        </m:msup>
+                        <m:mo stretchy="false">(</m:mo>
+                        <m:mn>0.6</m:mn>
+                        <m:msup>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mrow>
+                                <m:mn>4</m:mn>
+                                <m:mo>&minus;</m:mo>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                        </m:msup>
+                    </m:mrow>
+                </m:math> for x = 0, 1, 2, 3, 4 </p>
+            <p>Let's use this formula to find P(X = 2) and see that we get exactly what we got
+                before.</p>
+            <!--  <p>
+                <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mo>!</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo> (</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>6</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mo>(</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>)&#160; </m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>)</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>4</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo> (</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>6</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mn>4</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:mn>6</m:mn>
+                </m:math>
+            </p>-->
+            
+            <p> <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>P</m:mi>
+                    <m:mo stretchy='false'>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo stretchy='false'>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mo>!</m:mo>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>&minus;</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy='false'>)</m:mo>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <m:mo stretchy='false'>(</m:mo>
+                    <m:mn>0.4</m:mn>
+                    <m:msup>
+                        <m:mo stretchy='false'>)</m:mo>
+                        <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo stretchy='false'>(</m:mo>
+                    <m:mn>0.6</m:mn>
+                    <m:msup>
+                        <m:mo stretchy='false'>)</m:mo>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mo>&minus;</m:mo>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:msup>
+                                <m:mn>1</m:mn>
+                                <m:mo lspace='2px' rspace='2px'>&lowast;</m:mo>
+                            </m:msup>
+                            <m:msup>
+                                <m:mn>2</m:mn>
+                                <m:mo lspace='2px' rspace='2px'>&lowast;</m:mo>
+                            </m:msup>
+                            <m:msup>
+                                <m:mn>3</m:mn>
+                                <m:mo lspace='2px' rspace='2px'>&lowast;</m:mo>
+                            </m:msup>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:msup>
+                                <m:mn>1</m:mn>
+                                <m:mo lspace='2px' rspace='2px'>&lowast;</m:mo>
+                            </m:msup>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy='false'>)</m:mo>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:msup>
+                                <m:mn>1</m:mn>
+                                <m:mo lspace='2px' rspace='2px'>&lowast;</m:mo>
+                            </m:msup>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy='false'>)</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <m:mo stretchy='false'>(</m:mo>
+                    <m:mn>0.4</m:mn>
+                    <m:msup>
+                        <m:mo stretchy='false'>)</m:mo>
+                        <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo stretchy='false'>(</m:mo>
+                    <m:mn>0.6</m:mn>
+                    <m:msup>
+                        <m:mo stretchy='false'>)</m:mo>
+                        <m:mn>2</m:mn>
+                    </m:msup>
+                    <m:mo>=</m:mo>
+                    <m:mn>0.3456</m:mn>
+                </m:mrow>
+            </m:math>
+            </p>
+        </example>
+        <activity idref="binomial3_lbd1" purpose="learnbydoing"/>
+        <p>Here is another interesting example.</p>
+        <example>
+            <title>Choosing Numbers at Random</title>
+
+            <p>Do people really choose numbers at random?</p>
+            <p>Each student in a group of 15 students is asked to each pick a number from
+                <?oxy_insert_start author="mmyers" timestamp="20101121T211826-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T211824-0500" content="one"?>
+                to
+                <?oxy_insert_start author="mmyers" timestamp="20101121T211830-0500"?>20<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T211828-0500" content="twenty"?>
+                completely at random. 3 of the 15 happen to pick the number
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212123-0500"?>7<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212121-0500" content="seven"?>
+                (this is a probability of .20). Is this an improbably high proportion to choose a
+                particular number?</p>
+            <p>If the selections are truly random, then each number from
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212132-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212131-0500" content="one"?>
+                to
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212136-0500"?>20<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212134-0500" content="twenty"?>,
+                including
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212141-0500"?>7<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212139-0500" content="seven"?>,
+                has probability p = 1/20 = .05 of being selected. The number of trials is n = 15.
+                The probability of at least 3 successes in 15 trials, when each trial has
+                probability of success .05, can be found by applying the binomial formula.</p>
+            <p>To make the notation
+                easier<?oxy_insert_start author="mmyers" timestamp="20101121T211912-0500"?>,<?oxy_insert_end?>
+                we will use a shorthand
+                <?oxy_insert_start author="mmyers" timestamp="20101121T211931-0500"?>notation
+                <?oxy_insert_end?>for the number of possible outcomes with x successes out of n.
+                    <m:math overflow="scroll">
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mi>x</m:mi>
+                            <m:mo>!</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mi>n</m:mi>
+                            <m:mo>-</m:mo>
+                            <m:mi>x</m:mi>
+                            <m:mo>)</m:mo>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                </m:math> will be written as: <m:math overflow="scroll">
+                    <m:msubsup>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                            <m:mi/>
+                            <m:mn>x</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>n</m:mn>
+                        </m:mrow>
+                    </m:msubsup>
+                    <m:mo>)</m:mo>
+                </m:math> .</p>
+            
+            
+            <p>
+                <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>≥</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>3</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>4</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <m:mo lspace='0px' form='infix'>...</m:mo>
+                    <m:mtext>&nbsp;</m:mtext>
+                   <!--   <m:mo>&#160;.&#160;</m:mo>
+                    <m:mo>.&#160;</m:mo>
+                    <m:mo>.&#160;</m:mo>-->
+                    <m:mo>+</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:mo>)</m:mo>
+                     </m:math>
+                     </p>
+                     
+                     
+               <p>
+                <m:math overflow="scroll">     
+                    <m:mo>=</m:mo>
+                    <m:msubsup>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                            <m:mi/>
+                            <m:mn>&#160;3</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                        </m:mrow>
+                    </m:msubsup>
+                    <m:mo>)&#160;</m:mo>
+                    <m:mi/>
+                    <m:mo>(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>3</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>9</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:msubsup>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                            <m:mi/>
+                            <m:mn>&#160;4</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                        </m:mrow>
+                    </m:msubsup>
+                    <m:mo>)</m:mo>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>9</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>1</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <m:mo lspace='0px' form='infix'>...</m:mo>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <!--   <m:mo>&#160;.&#160;</m:mo>
+                    <m:mo>.&#160;</m:mo>
+                    <m:mo>.&#160;</m:mo>-->
+                    <m:mo>+</m:mo>
+                    <m:msubsup>
+                        <m:mo>(</m:mo>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                        </m:mrow>
+                    </m:msubsup>
+                    <m:mo>)</m:mo>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>&#160;(</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>9</m:mn>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                </m:math>
+            </p>
+            
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>       
+                        <m:mo>=</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>.</m:mo>
+                        <m:mn>0307</m:mn>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>+</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>.</m:mo>
+                        <m:mn>0049</m:mn>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>+</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>.</m:mo>
+                        <m:mn>0006</m:mn>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>+</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo lspace='0px' form='infix'>...</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>=</m:mo>
+                        <m:mtext>&nbsp;</m:mtext>
+                        <m:mo>.</m:mo>
+                        <m:mn>0362</m:mn>
+                    </m:mrow>
+                </m:math>
+            </p>
+            
+           
+            <!--  <p>= .0307 + .0049 + .0006 + . . . = .0362</p> --> 
+            <p>where all remaining terms after the first
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212008-0500"?>3<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212006-0500" content="three"?>
+                are less than .0001. The probability of at least 3 out of 15 people picking
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212100-0500"?>7<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212058-0500" content="seven"?>,
+                when choosing at random from the numbers
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212052-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212050-0500" content="one"?>
+                to
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212056-0500"?>20<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212054-0500" content="twenty"?>,
+                is only .0362. Thus, 3 out of 15 is rather improbably high. People may think they
+                are choosing at random, but in fact they tend to favor certain numbers, like the
+                number
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212109-0500"?>7<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212108-0500" content="seven"?>.</p>
+        </example>
+
+        <p>Now let's look at some truly practical applications of binomial random variables.</p>
+        <example>
+            <title>Airline Flights</title>
+            <p>Past studies have shown that 90% of the booked passengers actually arrive for a
+                flight. Suppose that a small shuttle plane has 45 seats. We will assume that
+                passengers arrive independently of each other.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212316-0500"?>(<?oxy_insert_end?>This
+                <?oxy_delete author="mmyers" timestamp="20101121T212319-0500" content="is a bit of an "?>assumption<?oxy_insert_start author="mmyers" timestamp="20101121T212256-0500"?>
+                is not really accurate,<?oxy_insert_end?> since not all people travel
+                alone<?oxy_insert_start author="mmyers" timestamp="20101121T212339-0500"?>, but
+                we'll use it for the purposes of our experiment)<?oxy_insert_end?>.</p>
+            <p>Many times airlines "<em>overbook</em>" flights. This means that the<?oxy_delete author="mmyers" timestamp="20101121T212505-0500" content="y"?>
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212508-0500"?>airline
+                <?oxy_insert_end?>sell<?oxy_insert_start author="mmyers" timestamp="20101121T212512-0500"?>s<?oxy_insert_end?>
+                more tickets than there are seats
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212413-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212412-0500" content="i"?>n
+                the plane. This is due to the fact that sometimes passengers don't show
+                up<?oxy_insert_start author="mmyers" timestamp="20101121T212525-0500"?>,<?oxy_insert_end?>
+                and
+                <?oxy_delete author="mmyers" timestamp="20101121T212533-0500" content="they fly "?>the
+                plane <?oxy_insert_start author="mmyers" timestamp="20101121T212556-0500"?>must be
+                flown <?oxy_insert_end?>with empty seats. However, if they do overbook, they run the
+                risk of having more passengers than seats. So, some passengers may be unhappy. They
+                also have the extra expense of putting
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212439-0500"?>those
+                passengers<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212438-0500" content="them"?>
+                on another flight and possibly supplying lodging.</p>
+            <p>With these risks in mind, the airline decides to sell more than 45 tickets. If they
+                wish to keep the probability of having more than 45 passengers
+                show<?oxy_delete author="mmyers" timestamp="20101121T212631-0500" content="ing"?> up
+                to <?oxy_insert_start author="mmyers" timestamp="20101121T212638-0500"?>get on the
+                flight to less
+                than<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212652-0500" content="be under"?>
+                0.05, how many tickets should they sell?</p>
+            <p>This is a binomial random variable that
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212706-0500"?>represents<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212709-0500" content="counts"?>
+                the number of passengers that show up for the flight. It has p = 0.90, and n to be
+                determined.</p>
+            <p>Suppose the<?oxy_delete author="mmyers" timestamp="20101121T212725-0500" content="y"?>
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212727-0500"?>airline
+                <?oxy_insert_end?>sell<?oxy_insert_start author="mmyers" timestamp="20101121T212731-0500"?>s<?oxy_insert_end?>
+                50 tickets. Now we have n = 50 and p = 0.90. We want to know P(X >
+                45)<?oxy_insert_start author="mmyers" timestamp="20101121T212739-0500"?>,<?oxy_insert_end?>
+                which is 1 - P(X ≤ 45) = 1 - 0.57 or 0.43. Obviously, all the details of this
+                calculation were not
+                shown<?oxy_insert_start author="mmyers" timestamp="20101121T212753-0500"?>,<?oxy_insert_end?>
+                since <?oxy_insert_start author="mmyers" timestamp="20101121T212800-0500"?>a
+                statistical <?oxy_insert_end?>technology
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212807-0500"?>package
+                <?oxy_insert_end?>was
+                used<?oxy_insert_start author="mmyers" timestamp="20101121T212811-0500"?> to
+                calculate the answer<?oxy_insert_end?>. This is certainly more than 0.05, so
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212830-0500"?>the
+                airline<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212829-0500" content="we"?>
+                must sell fewer seats. </p>
+            <p>If we reduce the number of tickets sold, we should be able to reduce this
+                probability. We have calculated the probabilities in the following table:</p>
+            <table rowstyle="alternating">
+                <tr>
+                    <th># tickets sold</th>
+                    <th>P(X > 45)</th>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>0.43</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>0.26</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>0.13</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>0.04</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>0.008</td>
+                </tr>
+            </table>
+            <p>From this
+                table<?oxy_insert_start author="mmyers" timestamp="20101121T212852-0500"?>,<?oxy_insert_end?>
+                we can see that
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212904-0500"?>by<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212908-0500" content="if we"?>
+                sell<?oxy_insert_start author="mmyers" timestamp="20101121T212911-0500"?>ing<?oxy_insert_end?>
+                47 tickets<?oxy_insert_start author="mmyers" timestamp="20101121T212915-0500"?>,<?oxy_insert_end?>
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212916-0500"?>the
+                airline<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212918-0500" content="we"?>
+                can reduce the probability that
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212924-0500"?>it<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212925-0500" content="we"?>
+                will have more passengers show up than
+                <?oxy_insert_start author="mmyers" timestamp="20101121T212932-0500"?>there are
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T212936-0500" content="we have"?>
+                seats to
+                <?oxy_delete author="mmyers" timestamp="20101121T212941-0500" content="under"?><?oxy_insert_start author="mmyers" timestamp="20101121T212942-0500"?>less
+                than<?oxy_insert_end?> 5%.</p>
+            <p>Note: For practice in finding binomial probabilities, you may wish to verify one or
+                more of the results from the table above.</p>
+        </example>
+        <activity idref="binomial3_lbd2" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">What is the 99% confidence interval for &#x03BC;? Interpret it in context.</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">R gives us:&lt;br&gt;
+&gt; conf.int(birthweight$birthweight,500,0.99)
+[1] sample size:  125  sample mean:  3111.36
+[1] 99 % confidence interval: ( 2996.16541157657,  3226.55458842343 )&lt;br&gt;
+Thus, we are 99% confident that the mean birth weight of first babies to mothers who are 35 or older is between 2996 and 3227 grams.</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

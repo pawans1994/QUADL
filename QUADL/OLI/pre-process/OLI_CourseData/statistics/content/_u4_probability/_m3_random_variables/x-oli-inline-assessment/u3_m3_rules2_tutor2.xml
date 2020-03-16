@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_rules2_tutor2">
+   <title>Tutor</title>
+
+   <question id="q1">
+      <body>
+         <p>The number of computer monitors manufactured per day by CompScreens Inc. is a random
+            variable X, with a mean &#956;<sub>x</sub> = 120 and a variance of
+               &#963;<sup>2</sup><sub>x</sub> = 36. The cost of manufacturing the monitors is $500
+            base cost plus $15 per monitor. </p>
+         <p>What is the mean total cost per day for CompScreens Inc. to manufacture computer
+            monitors? </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">$515 </choice>
+         <choice value="Res2">$1040</choice>
+         <choice value="Res3">1800</choice>
+         <choice value="Res4">$2300</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. You need to consider the mean number of computers manufactured per
+                  day, &#956;<sub>x</sub> = 120 when calculating the cost.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Remember that &#956;<sub>(a+bX)</sub> = a + b &#956;<sub>x</sub>. It
+               seems you used the variance &#963;<sup>2</sup><sub>x</sub> = 36 instead of the mean
+                  &#956;<sub>x</sub> = 120.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Remember that &#956;<sub>(a+bX)</sub> = a + b &#956;<sub>x</sub>.
+               The transformation you used was 15X. However, you forgot about the constant cost of
+               $500 to manufacture monitors. </feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. Let T be the total cost of manufacturing monitors for a day. T is
+               composed of two parts: the fixed cost of $500 (regardless of the number of monitors)
+               and $15 for every monitor made. The total cost can be written as T = 500 + 15X. To
+               find the mean of T you use the rule of means: &#956;<sub>(a+bX)</sub> = a +
+                  b &#956;<sub>x</sub> = 500 + 15(120) = 2300.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>A national park has 2 entrance gates, one at the north end and a second gate at the
+            south end of the park. Let X be the number of cars entering the North gate per hour and
+            let Y be the number of cars entering the South gate per hour. Assume that X is random
+            variable with mean &#956;<sub>x</sub> = 23 and standard deviation &#963;<sub>x</sub> =
+            3. Assume Y is a random variable with mean &#956;<sub>y</sub> = 18 and standard
+            deviation &#963;<sub>y</sub> = 4. Assume that the two gates operate independently. </p>
+         <p>What is the mean of Z, the total number of cars entering the park each hour? </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">18</choice>
+         <choice value="Res2">23</choice>
+         <choice value="Res3">41</choice>
+         <choice value="Res4">48</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+                  &#956;<sub>x</sub> + &#956;<sub>y</sub>. 18 is &#956;<sub>y</sub>. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+               &#956;<sub>x</sub> + &#956;<sub>y</sub>. 23 is &#956;<sub>x</sub>. </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+               &#956;<sub>x</sub> + &#956;<sub>y</sub> = 23 + 18 = 41.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+               &#956;<sub>x</sub> + &#956;<sub>y</sub>. It appears you included
+               the standard deviations in your sum. </feedback>
+         </response>
+      </part>
+   </question>
+
+</assessment>

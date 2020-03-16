@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_matched_pairs2">
+    <head>
+        <title>Matched Pairs (2 of 8)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+    <body>
+
+        <p>So far, we have discussed and illustrated cases in which the matched pairs design comes
+            up, and we are now ready to discuss how to carry out the test in this case. We will
+            first present the idea behind the paired t-test, and then go through the four steps in
+            the testing process.</p>
+        <section>
+            <title>The Paired t-test</title>
+            <body>
+                <section>
+                    <title>Idea</title>
+                    <body>
+                        <p>The idea behind the paired t-test is to reduce this two-sample situation,
+                            where we are comparing two means, to a single sample situation where we
+                            are doing inference on a single mean, and then use a simple t-test that
+                            we introduced in the previous module. We will first illustrate this idea
+                            using our example, and then more generally.</p>
+                        <youtube src="URPrSH0Lg_M"></youtube>
+                        
+                        <!--  <flash src="../../../webcontent/OLICamtasiaController.swf" width="510"
+                            height="364" purpose="walkthrough">
+                            <param name="movieURL">../../webcontent/flash/_u5_voiceover3.swf</param>
+                            <param name="movieFPS">5</param>
+                            <param name="LoggingLibraryPath"
+                                >../../../webcontent/OLILoggingLibrary.swf</param>
+                        </flash>-->
+                        <p>In other words, by reducing the two samples to one sample of differences,
+                            we are essentially reducing the problem from a problem where we're
+                            comparing two means (i.e., doing inference on <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>−</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>): </p>
+                        <image style="block" src="../webcontent/image054.gif"
+                            alt="The X variable is whether
+the driver had 2 beers or no beers. We have two populations, population 1 of sober drivers and population 2
+of drivers who had two beers. For each population we have the Reaction Time (Y) mean, &mu;_1 for population 1
+and &mu;_2 for population 2. We use the same drivers to generate the samples for both populations. The SRS
+of size 20 is created for population 1 before the drivers have had 2 beers, and using the same drivers,
+we generate the SRS of size 20 for population 2 after giving them 2 beers."/>
+                        <p>to a problem where we are making an inference about a single mean &#8212;
+                            the mean of the differences:</p>
+                        <image style="block" src="../webcontent/image055.gif"
+                            alt="The population of drivers is represented
+by a large circle. We are interested in &mu; for this population, which represents the mean of the
+difference in total reaction time (before 2 beers - after 2 beers). We generate a sample of size n =
+20, and get 20 differences."/>
+                        <p>In general, in every matched pairs problem, our data consist of 2 samples
+                            which are organized in n pairs:</p>
+                        <image style="block" src="../webcontent/image056.gif"
+                            alt="A set of matched pairs, numbered 1 through
+n. The first element in each pair is sample 1 and the second element in each pair is sample 2. The data
+is presented in a table which has 3 rows, labeled &quot;Pairs,&quot; &quot;Sample 1,&quot; and
+&quot;Sample 2.&quot;"/>
+                        <p>We reduce the two samples to only one by calculating for each pair the
+                            difference between the two observations (in the figure we used <m:math
+                                overflow="scroll">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>d</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>,</m:mo>
+                                    <m:msub>
+                                        <m:mi>d</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>,</m:mo>
+                                    <m:msub>
+                                        <m:mi>d</m:mi>
+                                        <m:mn>3</m:mn>
+                                    </m:msub>
+                                    <m:mo>,</m:mo>
+                                    <m:mo> . </m:mo>
+                                    <m:mo> . </m:mo>
+                                    <m:mo> . </m:mo>
+                                    <m:mo> </m:mo>
+                                    <m:mo> ,</m:mo>
+                                    <m:msub>
+                                        <m:mi>d</m:mi>
+                                        <m:mi>n</m:mi>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math> to denote the differences). </p>
+                        <image style="block" src="../webcontent/image058.gif"
+                            alt="Each pair is reduced to a difference,
+by calculating sample1 - sample2. This is shown on the table by adding an extra row labeled &quot;
+differences&quot; and for each column, adding a value in the differences row describing the pair
+represented by the column."/>
+                        <p>The paired t-test is based on this one sample of n differences,</p>
+                        <image style="block" src="../webcontent/image059.gif"
+                            alt="We can now ignore the sample 1 and
+sample 2 data in each pair and instead just focus on the differences."/>
+                        <p>and it uses those differences as data for a simple t-test on a single
+                            mean &#8212; the mean of the differences.</p>
+                        <p>This is the general idea behind the paired t-test; it is nothing more
+                            than a regular one-sample t-test for the mean of the differences. We
+                            will now go through the 4-step process of the paired t-test.</p>
+                        <p> </p>
+                        <p> </p>
+                    </body>
+                </section>
+            </body>
+        </section>
+    </body>
+</workbook_page>

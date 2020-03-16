@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+  xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+  id="_u5_m01_test_for_mu1">
+  <head>
+    <title>Hypothesis Testing for the Population Mean (1 of <!--9-->9)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+  </head>
+  <body>
+
+    <section>
+      <title>Overview</title>
+      <body>
+        <p>So far we have talked about the logic behind hypothesis testing and then illustrated how
+          this process proceeds in practice, using the z-test for the population proportion (p). We
+          are now moving on to discuss testing for the population mean (μ), in which is the
+          parameter of interest when the variable of interest is quantitative. Two comments about
+          the structure of this section:</p>
+        <p>1. The basic groundwork for carrying out hypothesis tests has already been laid in the
+          unit on tests about proportions, and therefore we can easily modify the four steps to
+          carry out tests about means instead, without going into all the little details.</p>
+        <p>2. This unit will have two parts, as we need to distinguish between cases; the case where
+          the population standard deviation (σ) is known, and the case where σ is unknown.</p>
+        <ul>
+          <li>In the first case (σ known), the test is called the <em style="italic">z-test for the
+              population mean μ</em>.</li>
+          <li>In the second case (σ unknown), the test is called the <em style="italic">t-test for
+              the population mean μ</em>.</li>
+        </ul>
+        <!--<p><?oxy_comment_start author="mmyers" timestamp="20101127T182028-0500" comment="use bullets instead of asterisks"?>
+                                    *<?oxy_comment_end?> In the first case (σ known), the test is
+                                    called the
+                                    <?oxy_comment_start author="mmyers" timestamp="20101127T182100-0500" comment="make bold to indicate terminology"?>"z-test
+                                    for the population mean μ."<?oxy_comment_end?></p>
+<p> * In the second case (σ unknown), the test is called the
+                                    <?oxy_comment_start author="mmyers" timestamp="20101127T182120-0500" comment="make bold to indicate new terminology."?>"t-test
+                                    for the population mean μ."<?oxy_comment_end?></p>-->
+        <p> The reason for the different names (z vs. t) is for exactly the same reason that the
+          test for the proportion (p) is called a z-test. In the first case, the test statistic will
+          have a standard normal (z) distribution (when H<sub>o</sub> is true), and in the second
+          case, the test statistic will have a t-distribution (when H<sub>o</sub> is true).</p>
+        <p>Let's start.</p>
+      </body>
+    </section>
+    <p>
+      <em>Tests about μ when sigma (σ) is known&#8212;The z-test for the population mean</em>
+    </p>
+    <p>In this section, we will proceed under the assumption that the population standard deviation
+      (σ) is known. We've already discussed the practicality of this assumption. In most situations,
+      the population standard deviation is not known, but in some cases, especially when the
+      variables of interest have been investigated thoroughly over the years, it would make sense to
+      assume that σ is known. Such variables are, for example, IQs and other standardized test
+      scores, or heights, weights, and other physical characteristics. </p>
+    <p>We'll start by introducing two examples that will be our leading examples for this part.</p>
+    <example>
+      <title>1</title>
+      <p>The SAT is constructed so that scores in each portion have a national average of 500 and
+        standard deviation of 100. The distribution is close to normal. The dean of students of Ross
+        College suspects that in recent years the college attracts students who are more
+        quantitatively inclined. A random sample of 4 students from a recent entering class at Ross
+        College had an average math SAT (SAT-M) score of 550. Does this provide enough evidence for
+        the dean to conclude that the mean SAT-M of all Ross college students is higher than the
+        national mean of 500? Assume that the standard deviation of 100 applies also to all Ross
+        College students.</p>
+      <p>
+        <em>Comment:</em>
+      </p>
+      <p>This is a situation where it is quite reasonable to assume that the population standard
+        deviation (σ) is known. SAT tests are constructed so that the standard deviation is 100, and
+        provided that there is nothing special about students at Ross college, we can assume that
+          <m:math overflow="scroll">
+          <m:mrow>
+            <m:mi mathvariant="normal">σ</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>100</m:mn>
+          </m:mrow>
+        </m:math> in the population of Ross college students.</p>
+      <p>Here is a figure that represents this example:</p>
+      <image style="block" src="../webcontent/image311.gif"
+        alt="A large circle represents all of the
+Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M scores,
+which has a normal distribution. The question we want to answer is &quot;is the mean SAT-M 500
+(national mean) or is it higher? (Assume: SD = 100).&quot; We take a sample from the population
+of size n = 4, represented by a smaller circle. For this sample, x-bar = 550."
+      />
+    </example>
+    <example>
+      <title>2</title>
+      <p>A certain prescription medicine is supposed to contain an average of 250 parts per million
+        (ppm) of a certain chemical. If the concentration is higher than this, the drug may cause
+        harmful side effects; if it is lower, the drug may be ineffective. The manufacturer runs a
+        check to see if the mean concentration in a large shipment conforms to the target level of
+        250 ppm or not. A simple random sample of 100 portions is tested, and the sample mean
+        concentration is found to be 247 ppm. It is assumed that the concentration standard
+        deviation in the entire shipment is <m:math overflow="scroll">
+          <m:mrow>
+            <m:mi mathvariant="normal">σ</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>12</m:mn>
+          </m:mrow>
+        </m:math> ppm.</p>
+      <p>
+        <em>Comment:</em>
+      </p>
+      <p>Here it is not that clear why the assumption that σ is known to be 12 is reasonable. If
+        shipments are checked on a regular basis, then maybe past experience has shown that indeed
+          <m:math overflow="scroll">
+          <m:mrow>
+            <m:mi mathvariant="normal">σ</m:mi>
+            <m:mo>=</m:mo>
+            <m:mn>12</m:mn>
+          </m:mrow>
+        </m:math>. In any case, we will come back to this problem and discuss this point again
+        later.</p>
+      <image style="block" src="../webcontent/image314.gif"
+        alt="A large circle represents the population,
+which is the shipment. &mu; represents the concentration of the chemical. The question we want to answer
+is &quot;is the mean concentration the required 250ppm or not? (Assume: SD = 12).&quot; Selected  from
+the population is a sample of size n=100, represented by a smaller circle. x-bar for this sample is 247."
+      />
+    </example>
+    <p>Like any other test, the z-test for the population mean follows the four-step process:</p>
+    <p>
+      <em>I</em>. Stating the hypotheses H<sub>o</sub> and H<sub>a</sub>.</p>
+    <p>
+      <em>II</em>. Collecting relevant data, checking that the data satisfy the conditions which
+      allow us to use this test, and summarizing the data using a test statistic.</p>
+    <p>
+      <em>III</em>. Finding the p-value of the test, the probability of obtaining data as extreme as
+      those collected (or even more extreme, in the direction of the alternative hypothesis),
+      assuming that the null hypothesis is true. In other words, how likely is it that the only
+      reason for getting data like those observed is sampling variability (and not because
+        H<sub>o</sub> is not true)?</p>
+    <p>
+      <em>IV</em>. Drawing conclusions, assessing the significance of the results based on the
+      p-value, and stating our conclusions in context. (Do we or don't we have evidence to reject
+        H<sub>o</sub> and accept H<sub>a</sub>?)</p>
+    <p>We will now go through the four steps specifically for the z-test for the population mean and
+      apply them to our two examples.</p>
+  </body>
+</workbook_page>

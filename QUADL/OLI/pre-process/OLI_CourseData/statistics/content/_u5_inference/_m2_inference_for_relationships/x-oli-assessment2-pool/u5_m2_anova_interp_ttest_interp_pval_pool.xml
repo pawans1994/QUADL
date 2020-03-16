@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="u5_m2_anova_interp_ttest_interp_pval_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_u5_m2_anova_interp_ttest_interp_pval">
+        <!--LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.-->
+        <body>
+            <p>To determine whether there is a relationship between the type of school attended and
+                verbal reasoning scores for Irish students, three samples with 25 students, in each
+                group, were randomly selected from data used by Raferty and Hout (1985). One group
+                of students attended secondary school, the second group of students attended
+                vocational school, and the third group consisted of students who attended only
+                primary school.</p>
+            <p><cite>Raftery, A.E. and Hout, M. (1985). Does Irish education approach the
+                    meritocratic ideal? A logistic analysis. <em style="italic">Economic and Social
+                        Review</em>, 16, 115-140.</cite></p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub> = μ<sub>3</sub></p>
+            <p>H<sub>a</sub>: μ<sub>1</sub>, μ<sub>2</sub>, μ<sub>3</sub>, are not all equal</p>
+            <p>The analysis was run on the data and the following output was obtained:</p>
+            <image src="../webcontent/chkpt_anova/image6.png" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">Fail to reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that the three mean verbal reasoning scores (representing the three types
+                of schools attended) are not all equal.</choice>
+            <choice value="B">Fail to reject H<sub>0 </sub>and conclude that the data do not provide
+                sufficient evidence that there is a relationship between the type of school attended
+                and verbal reasoning scores for Irish students.</choice>
+            <choice value="C">Reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that there is a relationship between the type of school attended and verbal
+                reasoning scores for Irish students.</choice>
+            <choice value="D">Reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that verbal reasoning scores are related to type of school in the following
+                way: the mean verbal reasoning score for Irish students who attended secondary
+                school is higher than the mean verbal reasoning score for Irish students who
+                attended vocational school, which in turn is higher than that of Irish students who
+                attended only primary school.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the conclusion is correct, since the p-value is less than
+                    0.0001, we would reject the null hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the p-value is less than 0.0001, we would reject the null
+                    hypothesis.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since the p-value is less than 0.0001, we would reject the null
+                    hypothesis and, as a result, would conclude that there is enough evidence to
+                    suggest that there is a relationship between the type of school attended and
+                    verbal reasoning scores for Irish students.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. While we would reject the null hypothesis, it is not possible,
+                    based on the information provided, to determine how the groups differ from one
+                    another.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_u5_m2_anova_interp_ttest_interp_pval">
+        <!--LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.-->
+        <body>
+            <p>A medical school admissions officer was interested in whether there is a difference
+                in MCAT test scores (the standardized test used for medical school admission)
+                between (1) biological sciences majors, (2) social science majors and (3) math
+                majors. The admissions officer randomly sampled 50 students from each of these
+                majors who applied to medical school in 2014 and recorded their MCAT score. </p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub> = μ<sub>3</sub></p>
+            <p>H<sub>a</sub>: μ<sub>1</sub>, μ<sub>2</sub>, μ<sub>3</sub>, are not all equal</p>
+            <p>The analysis was run on the data and the following output was obtained:</p>
+            <p><em style="bold">ANOVA Table</em></p>
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <th>DF</th>
+                    <th>SS</th>
+                    <th>MS</th>
+                    <th>F-Stat</th>
+                    <th>P-Value</th>
+                </tr>
+                <tr>
+                    <td>Treatments</td>
+                    <td>2</td>
+                    <td>304.11487</td>
+                    <td>152.05743</td>
+                    <td>5.1196003</td>
+                    <td>0.0071</td>
+                </tr>
+                <tr>
+                    <td>Error</td>
+                    <td>147</td>
+                    <td>4366.0523</td>
+                    <td>29.701036</td>
+                    <td />
+                    <td />
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>149</td>
+                    <td>4670.1672</td>
+                    <td />
+                    <td />
+                    <td />
+                </tr>
+            </table>
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">Fail to reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that the three mean MCAT scores (representing the three majors) are not all
+                equal.</choice>
+            <choice value="B">Fail to reject H<sub>0 </sub>and conclude that the data do not provide
+                sufficient evidence that there is a relationship between the student’s major and
+                MCAT score.</choice>
+            <choice value="C">Reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that there is a relationship between the student’s major and MCAT
+                score.</choice>
+            <choice value="D">Reject H<sub>0 </sub>and conclude that the data provide strong
+                evidence that MCAT scores are related to student majors in the following way: the
+                mean MCAT score for math majors is higher than the mean MCAT score for biological
+                sciences majors, which in turn is higher than that of social sciences
+                majors.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the conclusion is correct, since the p-value is less than
+                    0.05, we would reject the null hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the p-value is less than 0.05, we would reject the null
+                    hypothesis.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since the p-value is less than 0.05, we would reject the null
+                    hypothesis and, as a result, would conclude that there is enough evidence to
+                    suggest that there is a relationship between the student’s major and MCAT
+                    score.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. While we would reject the null hypothesis, it is not possible,
+                    based on the information provided, to determine how the groups differ from one
+                    another. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

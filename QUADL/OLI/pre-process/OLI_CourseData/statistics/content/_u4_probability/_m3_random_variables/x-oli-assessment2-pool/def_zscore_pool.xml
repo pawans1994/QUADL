@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="def_zscore_pool">
+    <title>pool</title>
+
+
+
+    <numeric id="q1_def_zscore">
+
+        <body><p>According to the Bureau of Labor Statistics, in May 2014 the mean hourly wage of a
+                social worker was $28.08 with a standard deviation of $1.97. Jeronica is a social
+                worker with an hourly wage of $31.60. What is Jeronica’s z-score? (Round your answer
+                to 2 decimal places.)</p>
+            <p><input_ref input="A" /></p>
+        </body>
+
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+
+
+        </input>
+
+
+
+        <part>
+            <response input="A" match="1.79" score="10">
+                <feedback>Correct. Recall that a z-score is calculated as (value − mean)/(standard
+                    deviation). So, (31.60 − 28.08)/1.97 = 1.79 (rounded)</feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Recall that a z-score is calculated as (value − mean)/(standard deviation)</feedback>
+            </response>
+
+        </part>
+
+    </numeric>
+
+
+    <numeric id="q2_def_zscore">
+
+        <body>The average time to complete a 10K race for a female runner is 64.61 minutes with a
+            standard deviation of 5.18 minutes. Sarah completes her first 10K race in 58.24 minutes.
+            What is Sarah’s z-score? (Round your answer to 2 decimal places.)<p />
+            <p><input_ref input="A" /></p>
+        </body>
+
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+
+
+        </input>
+
+
+
+        <part>
+            <response input="A" match="-1.23" score="10">
+                <feedback>Correct. Recall that a z-score is calculated as (value - mean) − (standard
+                    deviation). So, (58.24 − 64.61)/5.18 = −1.23 (rounded)</feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Recall that a z-score is calculated as (value − mean) − (standard deviation)</feedback>
+            </response>
+
+        </part>
+
+    </numeric>
+
+
+
+</pool>

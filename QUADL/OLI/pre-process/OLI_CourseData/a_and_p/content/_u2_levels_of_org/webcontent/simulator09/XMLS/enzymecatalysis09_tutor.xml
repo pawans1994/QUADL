@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="EnzymeCatalysis" version="1" simulatorVersion="09" date="12/15/08">
+    <name>&lt;b&gt;Enzyme Catalysis&lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="on"/> 
+    <steps>
+         <step id="create">
+            <actions>
+                <action event="record light"/>
+                <action event="create" name="theexplainer"  url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeMsg09.swf" x="350" y="375" xscale="1" yscale="1" /> 
+                <action event="create" name="beaker" url="swfs/beakerplain.swf"  x="350" y="5" xscale="2"  yscale="1.5"/> 
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="358" y="31" xscale=".8"  yscale=".8"/>
+                <action event="create" name="equation1" url="tools/equation1.swf"  x="360" y="330" xscale="1" yscale="1" />
+                <action event="create" name="equation2" url="tools/equation2.swf"  x="510" y="330" xscale="1" yscale="1" />
+                <action event="create" name="userdata" url="tools/userdataKD.swf"  x="350" y="290" xscale="1" yscale="1" />
+                <action event="create" name="inputs1" url="tools/DisplayVariable09.swf"  x="535" y="350" xscale="1" yscale="1" />
+                <action event="create" name="inputs2" url="tools/DisplayVariable09.swf"  x="585" y="350" xscale="1" yscale="1" />
+                <action event="create" name="inputs3" url="tools/DisplayVariable09.swf"  x="375" y="350" xscale="1" yscale="1" />
+                <action event="create" name="inputs4" url="tools/DisplayVariable09.swf"  x="425" y="350" xscale="1" yscale="1" />
+                <action event="create" name="inputs5" url="tools/DisplayVariable09.swf"  x="475" y="350" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKey1.swf"  x="370" y="305" xscale=".65" yscale=".65" />
+                <action event="create" name="castKey2" url="tools/castKey2.swf"  x="540" y="305" xscale=".65" yscale=".65" />
+                <action event="settimer" timer='12' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+               
+            </actions>
+             <objects tutor="">
+                 <object name="theexplainer" state="visible">
+                     <title> </title>
+                     <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Simulation of Enzyme Catalysis with a Beaker"
+                     </text>                  
+                 </object>
+            </objects>
+            <nextbutton text="next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="define equation1">
+          <actions>
+                <action event="record light"/>
+                <action event="initialize" name="opener" />
+              <!--  <action event="initialize" name="thegrapher"/>-->
+            </actions>
+          <objects tutor="">
+                <object name="opener" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible">
+                    <title>Reversible Equilibrium </title>
+                    <text>In this example, the &lt;b&gt;E&lt;/b&gt; stands for the Enzyme and &lt;b&gt;S&lt;/b&gt; is the substrate.  This enzyme will act a a catalyst to aid in the production of the product &lt;b&gt;P&lt;/b&gt;.
+                        &lt;br&gt;As in the earlier simulation, the Enzyme and Substrate are in a reversible equilibrium with the &lt;b&gt;[ES]&lt;/b&gt; complex.
+                    </text>                  
+                </object>
+                <object name="userinput" state="hilight"/>
+                <object name="slider1" state="invisible"/>
+                <object name="equation1" state="hilight" action="1" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="inputs2" capture="yes" state="invisible"/>
+                <object name="inputs1" capture="yes" state="invisible" />
+            </objects>
+          <nextbutton text="Continue" state="1"/>
+          <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="define equation2">
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <objects tutor="enzymecatalysis_1.xml">
+                <object name="opener" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="invisible">
+                    <title>Product Formation </title>
+                    <text>&lt;fade&gt;In this example, the &lt;b&gt;E&lt;/b&gt; stands for the Enzyme and &lt;b&gt;S&lt;/b&gt; is the substrate.  This enzyme will act a a catalyst to aid in the production of the product &lt;b&gt;P&lt;/b&gt;.
+                        &lt;br&gt;As in the earlier simulation, the Enzyme and Substrate are in a reversible equilibrium with the &lt;b&gt;[ES]&lt;/b&gt; complex.&lt;/fade&gt; &lt;br&gt;&lt;br&gt;Once the Product is made, the Enzyme is released and can be used again to bind with the Substrate.
+                    </text>                   
+                </object>
+                <object name="slider1" state="invisible"/>
+                <object name="equation1" state="visible" action="1" />
+                <object name="equation2" state="hilight" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="hilight" />
+                <object name="inputs2" capture="yes" state="invisible"/>
+                <object name="inputs1" capture="yes" state="invisible" />
+            </objects>
+            <nextbutton text="Continue" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="setup numbers">
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <objects tutor="">
+                <object name="opener" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible">
+                    <title>Setting Up the Simulation</title>
+                    <text>In this simutation, we will look at what happens when we use &lt;b&gt;10 Enzyme molecules&lt;/b&gt; at act as &lt;b&gt;Catalysts&lt;/b&gt; to aid in the lowering of the &lt;b&gt;Activation Energy&lt;/b&gt; to assist our &lt;b&gt;40 Substrate molecules&lt;/b&gt; in producing &lt;b&gt;P&lt;/b&gt;.
+&lt;br&gt;&lt;br&gt; &lt;red&gt;Click "Begin Simulation"  when you are ready.</text>                   
+                </object>
+                <object name="slider1" state="invisible"/>
+                <object name="equation1" state="visible" action="1" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="inputs2" capture="yes" state="visible"/>
+                <object name="inputs1" capture="yes" state="visible"/>
+                <object name="inputs3" capture="yes" state="visible"/>
+                <object name="inputs4" capture="yes" state="visible" />
+                <object name="inputs5" capture="yes" state="visible" />
+            </objects>
+            <nextbutton text="Begin Simulation" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="run">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title> </title>
+                    <text>Notice that the number of Enzymes at the beginning of the equation, and at the end are the same.  In this reaction, none of the Enzymes are being consumed.&lt;br&gt;&lt;br&gt;When you are finished  click "Done."
+                    </text>                 
+                </object>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="inputs1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs5" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="Kd" state="visible"/>
+                <object name="thegrapher" state="visible" />
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=475,topBorder=0,bottomBorder=320,leftBorder2=0,rightBorder2=475,topBorder2=0,bottomBorder2=320">
+                    <molecules>  
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here--> 
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "40"  cast= "enzymeBound"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="100" y="100" Xoffset="5" Yoffset="5"  mytype="molecule"  myID="1"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" seperateinto="productidl?3,productidm?2,productidp?4,Kd?25,k?1000,Kcat?.1"/>            
+                        <molecule numMolecules= "20"  numbound= "0" velocity= "40"  cast= "enzyme" angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="200" Xoffset="50" Yoffset="50"  mytype="molecule"  myID="2"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" />            
+                        <molecule numMolecules= "40"  numbound= "0" velocity= "60"  cast= "ligandblue"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="100" y="100" Xoffset="50" Yoffset="50" mytype="ligand"  myID="3"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule2.pocket1.free,Kd?25,k?1000,productidm?1" />   
+                        <molecule numMolecules=  "0"  numbound= "0" velocity= "60"  cast= "product"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="100" y="100" Xoffset="5" Yoffset="5" mytype="ligand"  myID="4"    polarity = "0,0,0,0,0,0,0,0" mybounce="true"  />     <!--isproduct="1"-->
+                        <!--   don't add new bindswith parameters until we completely implement the parser for this-->
+                    </molecules>
+                </action>
+                <action event="initialize" name="inputs1" params="simulator=box1,thevariable=M4,thevalue=0" data="0"/>             
+                <action event="initialize" name="inputs2" params="simulator=box1,thevariable=M2,thevalue=0" data="0"/> 
+                <action event="initialize" name="inputs3" params="simulator=box1,thevariable=M2,thevalue=0" data="0"/> 
+                <action event="initialize" name="inputs4" params="simulator=box1,thevariable=M3,thevalue=0" data="0"/> 
+                <action event="initialize" name="inputs5" params="simulator=box1,thevariable=M1,thevalue=0" data="0"/> 
+                <action event="initialize" name="Toff" data="T off" params="_root.box1.bindstrength"  />
+                <action event="initialize" name="thegrapher" params="child=0,color=0xFF0000,myID=M1"  data="ymax=20,y_label=ES,graph_label="/>
+                <action event="initialize" name="Kd" data="Kd" params="_root.box1.Kd"  />
+                <action event="initialize" name="slider1" params="L total" data="40"/>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="done">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title> </title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Reload the browser page to start again
+                    </text>              
+                </object>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="inputs1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs5" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="Kd" state="visible"/>
+                <!--   <object name="thegrapher" state="visible" />-->
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="pause"  />
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>       
+    </steps>
+</simulation>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop6_tutor2">
+    <title>Tutor</title>
+  
+    <page>
+        <question id="q1">
+            <body>
+                <p>If we are testing an alternative hypothesis of H<sub>a</sub>: p &#8800;
+                        p<sub>0</sub>, which of the following test statistics will give the smallest
+                    p-value?</p>
+                <p>z = <input_ref input="B"/></p>
+            </body>
+            <fill_in_the_blank id="B" shuffle="false">
+                <choice value="one">−0.5</choice>
+                <choice value="two">1.1</choice>
+                <choice value="three">−2</choice>
+            </fill_in_the_blank>
+            <part id="p2">
+                <response input="B" match="one">
+                    <feedback>Incorrect. For the choices given, this is the test
+                        statistic with the largest p-value. The data's p-hat is only half a standard
+                        deviation below p<sub>0</sub>. So it is very likely that p-hats
+                        from random sampling will be located more standard deviations away from
+                            p<sub>0</sub> than the observed data. This likelihood is measured by the
+                        large p-value.</feedback>
+                </response>
+                <response input="B" match="two">
+                    <feedback>Incorrect. For H<sub>a</sub>, p &#8800; p<sub>0</sub>,
+                        the larger the test statistic in magnitude, the smaller the p-value.
+                    </feedback>
+                </response>
+                <response input="B" match="three" score="1">
+                    <feedback>Correct. If z = −2, the data's p-hat is 2 standard deviations below
+                            p<sub>0</sub>. So it is very unlikely that p-hats from random
+                        sampling will be located more standard deviations away from p<sub>0</sub>
+                        than the observed data. Hence the small p-value. Click <link
+                            href="javascript:loadImage('../webcontent/1_img3.gif')">here</link> to
+                        see this illustrated using the distribution of z-scores.</feedback>
+                </response>
+                <hint>Think about p-value as an area under the normal distribution of z-scores. If
+                    the area is small, what does this say about the magnitude of the z-score that
+                    summarizes the data?</hint>
+                <hint><link href="javascript:loadImage('../webcontent/1_img2.gif')">These
+                        graphs</link> illustrate the p-values for the z-scores given. </hint>
+                <hint>The z-score with the greatest magnitude will have the smallest p-value.</hint>
+            </part>
+        </question>
+    </page>
+    
+</assessment>

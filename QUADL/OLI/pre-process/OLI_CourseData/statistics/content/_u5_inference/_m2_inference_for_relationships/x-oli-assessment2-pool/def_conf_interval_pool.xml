@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="def_conf_interval_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_def_conf_interval">
+        <!-- LO: def_conf_interval -->
+        <body>
+            <p>You are analyzing data for a research project. You have a two-sided two-sample t-test
+                with the following hypotheses being tested:</p>
+            <p>H<sub>0</sub>: μ<sub>1</sub> − μ<sub>2</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>1</sub> − μ<sub>2</sub> ≠ 0</p>
+            <p>Which of the following results for the confidence interval does <em style="bold">not</em> provide enough evidence to reject the null hypothesis?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">95% confidence interval: (−4.223, −1.989)</choice>
+            <choice value="B">95% confidence interval: (−2.945, 0.983)</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. If the null value, 0, falls outside the confidence interval,
+                        H<sub>0</sub> is rejected.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. If the null value, 0, falls inside the confidence interval,
+                        H<sub>0</sub> is not rejected.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_def_conf_interval">
+        <!-- LO: def_conf_interval -->
+        <body>
+            <p>You are analyzing data for a research project. You have a two-sided two-sample t-test
+                with the following hypotheses being tested:</p>
+            <p>H<sub>0</sub>: μ<sub>1</sub> − μ<sub>2</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>1</sub> − μ<sub>2</sub> ≠ 0</p>
+            <p>Which of the following results for the confidence interval provides enough evidence
+                to reject the null hypothesis?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">95% confidence interval: (−3.853, −0.943)</choice>
+            <choice value="B">95% confidence interval: (−0.285, 1.345)</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. If the null value, 0, falls outside the confidence interval,
+                    H<sub>0</sub> is rejected.</feedback>
+                
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. If the null value, 0, falls inside the confidence interval,
+                    H<sub>0</sub> is <em style="italic">not</em> rejected.</feedback>
+                
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

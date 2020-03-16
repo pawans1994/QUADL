@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="LigandBindingExperiment" version="1" date="3/1/06">
+    <name>&lt;b&gt; &lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+
+            <actions>
+                <action event="record light"/> 
+               <action event="create" name="button" url="tools/button.swf"  x="25" y="500" xscale="1"  yscale="1"/>
+                <action event="create" name="bilayer" url="swfs/bilayer.swf"  x="0" y="190" xscale="1.2"  yscale="1"/>
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="0" y="0" xscale="1"  yscale="1"/> 
+                <action event="create" settimer='12' advance='yes' />
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible"/>
+                 <title>Equilibrium</title>
+                 <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium"
+                 </text>
+                <object name="userinput" state="hilight"/>
+            </objects>
+                  <nextbutton text="Begin Simulation" />
+            <prevbutton text="Back" state="0"/>
+              </step>
+      
+        <step id="startmolecules">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Watch as the glucose passes through</title>
+                    <text> </text>
+                </object>
+                <object name="bilayer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="button" state="visible"/>
+            </objects>
+            <actions> 
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=250,topBorder=0,bottomBorder=300,leftBorder2=0,rightBorder2=250,topBorder2=200,bottomBorder2=170">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->  
+                        <molecule numMolecules= "1"  injectionforce= "0" velocity= "0"  cast= "moleculeC1"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="150" y="150" offset="0" rotationVelocity="0"  rotation="0"   transporter="1" polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"   mybounce="true" />             
+                        <molecule numMolecules= "6"  injectionforce= "0" velocity= "30"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="150" y="80" offset="30" rotationVelocity="0"  rotation="0"    brownian=".05" polarity = "0,0,0,0,0,0,0,0" mytype="ligand"  myID="2"   bindswith="molecule1.pocket1.bound1,Kd?5,k?500" mybounce="true" />
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "40"  cast= "moleculewater"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="150" y="100" offset="30" rotationVelocity="50"  rotation="50"  brownian=".05" polarity = "0,0,0,0,.8,1,1,.8"  mytype="molecule"  myID="3"  mybounce="true" />   
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "40"  cast= "moleculewater"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="150" y="380" offset="30" rotationVelocity="50"  rotation="50"  brownian=".05" polarity = "0,0,0,0,.8,1,1,.8"  mytype="ligand"  myID="4"  mybounce="true" />   
+                    </molecules>
+                </action>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+   
+        
+    </steps>
+</simulation>

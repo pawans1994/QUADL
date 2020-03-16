@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd15">
+    <head>
+        <title>Hypothesis Testing for the Population Mean</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in <!--going through -->the
+            process of a t-test for the population mean and to teach you how to
+            <!--carry out-->perform this test using statistical software.</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>A group of 75 college students from a certain liberal arts college were randomly sampled
+            and asked about the number of alcoholic drinks they have in a typical week. The file
+            containing the data is linked below. The purpose of this <link
+                href="http://www2.edc.org/snmrp/pr000908.html" target="new">study</link> was to
+            compare the drinking habits of the students at the college to the drinking habits of
+            college students in general. In particular, the dean of students, who initiated this
+            study, would like to check whether the mean number of alcoholic drinks that students at
+            his college have in a typical week differs from the mean of U.S. college students in
+            general, which is estimated to be 4.73. </p>
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor1" purpose="learnbydoing"/>
+
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor2" purpose="learnbydoing"/>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/drinks.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>drinks</code>. Enter the
+                        command <code>drinks</code> to see the data. The variable in the data frame
+                        is <code>drinks.per.week</code>.</p>
+                    <p>To use R to perform a t-test for the population mean using our data and the
+                        designated alternate hypotheses, enter the command:</p>
+                    <ul style="none">
+                        <li><code>t.test(drinks$drinks.per.week,mu = 4.73, alternative =
+                                "two.sided")</code></li>
+                    </ul>
+                    <p>R returns all the information you need to complete your t-test,
+                        including:</p>
+                    <ul>
+                        <li>The sample mean (mean of x)</li>
+                        <li>The t-test statistic of the sample (t)</li>
+                        <li>The degrees of freedom (df) (one less than the sample size)</li>
+                        <li>The alternative hypothesis</li>
+                        <li>The p-value of the test (p-value)</li>
+                        <li>A confidence interval (default is 95%; see note)</li>
+                    </ul>
+                    <p><em style="bold">Note:</em> Using R, the possible values for the alternative
+                        hypothesis are <code>"less"</code>, <code>"greater"</code>, and
+                            <code>"two.sided"</code>, corresponding to the three types of
+                        alternative hypotheses in a t-test. If <code>"two.sided"</code> is the
+                        alternative, then the appropriate confidence interval is returned. If
+                            <code>"less"</code> or <code>"greater"</code> is the alternative, then
+                        the returned confidence interval is what is known as a <em style="italic"
+                            >one-sided confidence interval</em>, which we have not discussed.</p>
+
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/drinks.RData" target="self">here</link> and
+                    choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable "drinks." Enter the command
+                            <code>drinks</code> to see the data.</p>
+                <p>To use R to perform a t-test for the population mean using our data and null and
+                        alternate hypotheses, enter the command:</p>
+                <code>t.test(drinks$drinks.per.week,mu = 4.73, alternative = "two.sided")</code>
+                <p>R returns all the information you need to complete your t-test, including:</p>
+                <ul>
+                    <li>the sample mean</li>
+                    <li>the t-value of the sample</li>
+                    <li>the degrees of freedom df (one less than the sample size)</li>
+                    <li>the alternative hypothesis</li>
+                    <li>the p-value of the test</li>
+                </ul>
+                <p><em>Note: Using R</em>&#8212;the possible values for the alternative hypothesis
+                        are "less," "greater" and "two.sided," corresponding to the three types of
+                        alternative hypotheses in a t-test. </p>-->
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../webcontent/m10_hypo_test_pop_mean_4/drinks.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on "Load File."</li>
+                    </ul>
+                    <p>Perform the t-test using StatCrunch.</p>
+                    <p>If raw data are given:</p>
+                    <ul>
+                        <li>Choose: Stat → T Stats → One Sample → with data. </li>
+                        <li>In Select column(s), choose the relevant column of sample data by double
+                            clicking on the column name.</li>
+                        <li>In Perform, select Hypothesis test for μ.</li>
+                        <li>Enter a null value for the population mean.</li>
+                        <li>For the alternative hypothesis, choose from the options of not equal,
+                            less than and greater than. </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>If summaries are given: </p>
+                    <ul>
+                        <li>Choose: Stat → T Stats → One Sample → With Summary. </li>
+                        <li>Enter the sample mean, sample standard deviation and sample size.</li>
+                        <li>In Perform, select Hypothesis test for μ.</li>
+                        <li>Enter a null value for the population mean. </li>
+                        <li>For the alternative hypothesis, choose from the options of not equal,
+                            less than and greater than.</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <!--<p>To open this file in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/drinks.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next,
+                        click <link href="http://www.statcrunch.com/" target="new">here </link>to
+                        open StatCrunch in a separate window, and log in using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page</li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p>Perform the t-test using StatCrunch.</p>
+                    <p>If raw data are given:</p>
+                    <ul>
+                        <li>Choose Stat → T Stats → One Sample → With Data</li>
+                        <li>In Select column(s), choose the relevant column of sample data by
+                            double-clicking on the column name</li>
+                        <li>In Perform, select Hypothesis test for μ</li>
+                        <li>Enter a null value for the population mean</li>
+                        <li>For the alternative hypothesis, choose from the options of not equal,
+                            less than, and greater than</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>If summaries are given:</p>
+                    <ul>
+                        <li>Choose: Stat → T Stats → One Sample → With Summary</li>
+                        <li>Enter the sample mean, sample standard deviation and sample size</li>
+                        <li>In Perform, select Hypothesis test for μ</li>
+                        <li>Enter a null value for the population mean</li>
+                        <li>For the alternative hypothesis, choose from the options of not equal,
+                            less than, and greater than</li>
+                        <li>Press Compute!</li>
+                    </ul>-->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/drinks.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <p>Carry out the test using Minitab (instructions below).</p>
+                    <p>Minitab instructions:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1-Sample t.</li>
+                        <li>If the raw data are given, enter the column name under "Samples in
+                            columns." If the summaries are given, enter under "Summarized Data" the
+                            sample size, sample mean and sample standard deviation.</li>
+                        <li>Next to "Test mean," enter the null value.</li>
+                        <li>Click on "Options" to select the relevant alternative.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+
+                </alternative>
+                <alternative value="excel">
+
+                    <title>Excel 2013 and 2016 Instructions</title>
+
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/drinks.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+
+                    <p>To carry out the test using Excel, we need to find the value of the test
+                        statistic (t), which we calculate using <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>t</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi>s</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Before we can do this, we first have to calculate the values for
+                        each of the variables in the equation:</p>
+                    <ul>
+                        <li>First, we need to calculate x-bar, the sample mean. To do this, we use
+                            the <code style="inline">AVERAGE</code> function in Excel&#8212;in this
+                            case, <code style="inline">=AVERAGE(A2:A76)</code>.</li>
+                        <li>Next, we calculate s, the sample standard deviation, using the <code
+                                style="inline">STDEV.S</code> function in Excel over the same range
+                            of data.</li>
+                        <li>We know &#956;<sub>o</sub> and n from reading the problem statement, so
+                            we can now calculate a value for t.</li>
+                        <li>Finally, we find our p-value using the Excel function <code
+                                style="inline">T.DIST.2T(t, degrees of freedom (n-1))</code>. We use
+                            .2T at the end of the Excel function because this is a two-tailed
+                            test.</li>
+                    </ul>
+                </alternative>
+                <!--       <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/drinks.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                    <p>To carry out the test using Excel, we need to find the value of the test
+                        statistic (t), which we calculate using <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>t</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi>s</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Before we can do this, we first have to calculate the values for
+                        each of the variables in the equation:</p>
+                    <ul>
+                        <li>First, we need to calculate x-bar, the sample mean. To do this, we use
+                            the <code style="inline">AVERAGE</code> function in Excel&#8212;in this
+                            case, <code style="inline">=AVERAGE(A2:A76)</code>.</li>
+                        <li>Next, we calculate s, the sample standard deviation, using the <code
+                                style="inline">STDEV</code> function in Excel over the same range of
+                            data.</li>
+                        <li>We know &#956;<sub>o</sub> and n from reading the problem statement, so
+                            we can now calculate a value for t.</li>
+                        <li>Finally, we find our p-value using the Excel function <code
+                                style="inline">TDIST(t, n-1, 2)</code>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a list with the alcoholic drinks data loaded, right-click <link
+                            href="../../../webcontent/ti/drinks.8xl" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p>The drinks data now should be stored in L1.</p>
+                    <p><em>One sample t-test for the mean (&#956;) </em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/2:T-Test</code>.</li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li>Choose <code style="inline">Data</code> by using arrows to highlight
+                                <code style="inline">Data</code> then pressing <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>&#956;<sub>o</sub> : Enter the test value for population mean from the
+                            null hypothesis. </li>
+                        <li>List: L1, press 2ND/1.</li>
+                        <li>Freq: 1 (the number one).</li>
+                        <li>Choose the relevant form of the alternative hypothesis (&#8800;, &lt;,
+                            &gt;). </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image512.jpg"
+                                alt="TI Calculator Output:
+        T-Test
+        Inpt: Data      Stats
+        &mu;_0: 4.73
+        List: L_1
+        Freq: 1
+        &mu;&ne;&mu;_0   &lt;&mu;   &gt;&mu;
+        Calculate   Draw"
+                            /></li>
+                        <li>Arrow down and choose <code style="inline">CALCULATE</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor4" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor5" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m2_testmean9_lbd_tutor6" purpose="learnbydoing"> </wb:inline>
+
+    </body>
+</workbook_page>

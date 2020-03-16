@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.6//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_6.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="eda_summary">
+<head>
+<title>Summary (EDA)</title>
+</head>
+<body>
+<p>This summary provides a quick recap of the material you've learned in the Exploratory Data
+   Analysis unit. Please note that this summary <em>does not provide complete coverage</em> of the
+   material, but just lists the main points. We therefore recommend that you use this summary only
+   as a checklist or a review before going on to the next unit, or before an exam.</p>
+<ul>
+<li>
+<p>The purpose of exploratory data analysis (EDA) is to convert the available <em>data</em> from their raw form to an informative one, in which the main features of the data are illuminated.
+ </p>
+</li>
+<li> When performing EDA, we should always:
+<ul>
+<li>use <em>visual displays</em> (graphs or tables) plus <em>numerical summaries</em>. </li>
+<li>describe the <em>overall pattern</em> and mention any <em>striking deviations </em>from that pattern.
+ </li>
+<li>
+<em>interpret </em>the results we got <em>in context</em>.
+</li>
+</ul>
+</li>
+<li><p>When examining the <em>distribution</em> of a single variable, we distinguish between
+ a <em>categorical </em>variable and a <em>quantitative</em> variable.</p>
+
+</li>
+<li><p>The distribution of a <em>categorical</em> variable is summarized using:</p>
+ <ul>
+<li>Display: pie-chart or bar-chart (variation: pictogram → can be misleading&#8212;beware!) </li>
+<li>Numerical summaries: category (group) percentages. </li>
+</ul>
+</li>
+<li><p>The distribution of a <em>quantitative</em> variable is summarized using:</p>
+ <ul>
+<li>Display: histogram (or stemplot, mainly for small data sets). When describing the distribution
+      as displayed by the histogram, we should describe the: <ul>
+       <li>Overall pattern → shape, center, spread. </li>
+       <li>Deviations from the pattern → outliers.</li>
+      </ul>
+     </li>
+<li>Numerical summaries: descriptive statistics (measure of center plus measure of spread): <ul>
+       <li>If distribution is symmetric with no outliers, use mean and standard deviation. </li>
+       <li>Otherwise, use the five-number summary, in particular, median and IQR (inter-quartile
+        range). </li>
+      </ul>
+     </li>
+</ul>
+</li>
+<li><p>The five-number summary and the 1.5(IQR) Criterion for detecting outliers are the ingredients we
+     need to build the <em>boxplot</em>. Boxplots are most effective when used side-by-side for
+     comparing distributions (see also case C→Q in examining relationships).</p>
+
+
+</li>
+<li><p>In the special case of a distribution having the normal shape, the <term>Standard Deviation Rule</term>
+     applies. This rule tells us approximately what percent of the observations fall within 1,2, or
+     3 standard deviations away from the mean. In particular, when a distribution is approximately
+     normal, almost all the observations (99.7%) fall within 3 standard deviations of the mean.</p>
+
+</li>
+<li><p>When examining the relationship between two variables, the first step is to classify the two relevant variables according
+ to their role and type:</p>
+
+ <image style="block" src="../webcontent/eda_summary1.gif" alt="There are explanatory categorical variables, explanatory
+ quantitative variables, response categorical variables, and response quantitative variables. It is possible
+ for any type of explanatory variable to be paired with any type of response variable. The possible pairings are:
+ Categorical Explanatory → Categorical Response (C→C),
+ Categorical Explanatory → Quantitative Response (C→Q),
+ Quantitative Explanatory → Categorical Response (Q→C), and
+ Quantitative Explanatory → Quantitative Response (Q→Q)"/>
+ and only then to determine the appropriate tools for summarizing the data. (We don't deal with case Q→C in this course).
+</li>
+<li><p>Case C→Q:</p> <p>Exploring the relationship amounts to <em>comparing the distributions</em> of the quantitative
+     response variable for each category of the explanatory variable. To do this, we use: </p>
+<ul>
+<li>Display: side-by-side boxplots. </li>
+<li>Numerical summaries: descriptive statistics of the response variable, for each value (category)
+      of the explanatory variable separately. </li>
+</ul>
+
+</li>
+<li>Case C→C: <p>Exploring the relationship amounts to <em>comparing the distributions</em> of the
+     categorical response variable, for each category of the explanatory variable. To do this, we
+     use: </p>
+    <ul>
+     <li>Display: two-way table. </li>
+     <li>Numerical summaries: conditional percentages (of the response variable for each value
+      (category) of the explanatory variable separately). </li>
+    </ul>
+   </li>
+<li>Case Q→Q: <p>We examine the relationship using: </p>
+    <ul>
+     <li>Display: scatterplot. When describing the relationship as displayed by the scatterplot, be
+      sure to consider: <!--:ERROR: Lists cannot be used within a paragraph.--><ul>
+       <li>Overall pattern → direction, form, strength.</li>
+       <li>Deviations from the pattern → outliers. </li>
+      </ul> Labeling the scatterplot (including a relevant third categorical variable in our
+      analysis), might add some insight into the nature of the relationship. </li>
+    </ul>
+    <p>In the <em>special case</em> that the scatterplot displays a <em>linear</em> relationship
+     (and only then), we supplement the scatterplot with:</p>
+    <ul>
+     <li>Numerical summaries: the correlation coefficient (r) <em>measures</em> the direction and,
+      more importantly, the <em>strength of the linear relationship</em>. The closer r is to 1 (or
+      -1), the stronger the positive (or negative) linear relationship. r is unitless, influenced by
+      outliers, and should be used only as a supplement to the scatterplot. </li>
+     <li>When the relationship is linear (as displayed by the scatterplot, and supported by the
+      correlation r), we can summarize the linear pattern using the <em>least squares regression
+       line</em>. Remember that: <ul>
+       <li>The slope of the regression line tells us the average change in the response variable
+        that results from a 1-unit increase in the explanatory variable. </li>
+       <li>When using the regression line for predictions, you should beware of extrapolation. </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+<li>When examining the relationship between two variables (regardless of the case), any <em>observed
+     relationship</em> (association) <em>does not imply causation</em>, due to the possible presence
+    of lurking variables.</li>
+<li><p>When we include a lurking variable in our analysis, we might need to rethink the direction of the relationship → <em>Simpson's paradox</em>.</p></li>
+</ul>
+</body>
+</workbook_page>

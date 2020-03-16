@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:theme="http://oli.web.cmu.edu/presentation/" id="stemplot">
+      <head>
+            <title>Stemplot</title>
+
+            <objref idref="summarize_quantitiative_distribution"/>
+
+      </head>
+      <body>
+
+            <p>The stemplot (also called stem and leaf plot) is another graphical display of the
+                  distribution of quantitative data. </p>
+            <section>
+                  <title>Idea</title>
+                  <body>
+                        <p>Separate each data point into a stem and leaf, as follows:</p>
+                        <table>
+                              <tr>
+                                    <td>The leaf is the right-most digit.</td>
+                              </tr>
+                              <tr>
+                                    <td>The stem is everything except the right-most digit.</td>
+                              </tr>
+                              <tr>
+                                    <td>So, if the data point is 34, then 3 is the stem and 4 is the
+                                          leaf.</td>
+                              </tr>
+                              <tr>
+                                    <td>If the data point is 3.41, then 3.4 is the stem and 1 is the
+                                          leaf.</td>
+                              </tr>
+                        </table>
+                  </body>
+            </section>
+            <example>
+                  <title>Best Actress Oscar Winners</title>
+                  <p>We will continue with the Best Actress Oscar winners example (To see the full
+                        dataset, <activity_link idref="bestactressdataset_2013" target="new">click
+                              here</activity_link>.)</p>
+                  <p>
+                     
+                        <formula style="block">34 34 27 37 42 41 36 32 41 33 31 74 33 49 38 61 21 41
+                              26 80 42 29 33 36 45 49 39 34 26 25 33 35 35 28 30 29 61 32 33 45 29
+                              62 22 44</formula>
+                  </p>
+                  <p>
+                        <em>To make a stemplot:</em>
+                  </p>
+                  <ol>
+                        <li> Separate each observation into a stem and a leaf.</li>
+                        <li> Write the stems in a vertical column with the smallest at the top, and
+                              draw a vertical line at the right of this column. </li>
+                        <li> Go through the data points, and write each leaf in the row to the right
+                              of its stem.</li>
+                        <li> Rearrange the leaves in an increasing order.</li>
+                  </ol>
+                  <!-- old images are stemplot1, 2 and 3 -->
+                  <image style="block" src="../webcontent/eda_examining_distributions_best_actress_stemplot.jpg" 
+                        alt="The result of steps 1, 2,
+and 3 on the given data set results in the following:
+      first row:   2|7169658992
+      second row:  3|3376231383694355023
+      third row:   4|2119124954
+      fourth row:  5|
+      fifth row:   6|112
+      sixth row:   7|4
+      seventh row: 8|0
+      
+Step 4 results in:
+      first row:   2|1256678999
+      second row:  3|0122333333445566789
+      third row:   4|1112244599
+      fourth row:  5|
+      fifth row:   6|112
+      sixth row:   7|4
+      seventh row: 8|0
+      
+Following the extra step(*):
+      first row:   2|12
+      second row:  2|56678999
+      third row:   3|012233333344
+      fourth row:  3|5566789
+      fifth row:   4|1112244
+      sixth row:   4|599
+      seventh row: 5|
+      eighth row:  5|
+      ninth row:   6|112
+      tenth row:   7|4
+      eleventh row:7|
+      twelfth row: 8|0
+"/>
+                  <p>* When some of the stems hold a large number of leaves, we can split each stem
+                        into two: one holding the leaves 0-4, and the other holding the leaves 5-9.
+                        A statistical software package will often do the splitting for you, when
+                        appropriate. </p>
+                  <p>
+                        <em>Note </em>that when rotated 90 degrees counterclockwise, the stemplot
+                        visually resembles a histogram:</p>
+                  <image style="block" src="../webcontent/eda_examining_distributions_best_actress_stemplot_rotated.jpg"
+                        alt="A rotated stem plot.
+This is the same as the last stem plot given in the previous image, but rotated so that the stems
+are at the bottom, with the leaves on top."/>
+                  <p>This orientation makes the right-skewedness of the distribution clearly
+                        visible.</p>
+            </example>
+            <p>The stemplot has additional unique features:</p>
+            <ul>
+                  <li> It preserves the original data.</li>
+                  <li> It sorts the data (which will become very useful in the next section).</li>
+            </ul>
+            <section>
+                  <title>Comment</title>
+                  <body>
+                        <p>There is another type of display that we can use to summarize a
+                              quantitative variable graphically&#8212;the <em>dotplot</em>. The
+                              dotplot, like the stemplot, shows each observation, but displays it
+                              with a dot rather than with its actual value. Here is the dotplot for
+                              the ages of Best Actress Oscar winners. </p>
+                        <image style="block" src="../webcontent/eda_examining_distributions_best_actress_dotplot.jpg"  width="800"
+                              alt="A dotplot titled
+&quot;Dotplot of Age&quot; A number line is at the bottom of the image, labeled in units of age from 24 to 80.
+At each age on the number line the a line of dots, each representing one winner of that age, appears above the
+place of that age on the number line."
+                        />
+                  </body>
+            </section>
+            <section>
+                  <title>Let's Summarize</title>
+                  <body>
+                        <p>The stemplot is a simple but useful visual display of quantitative data.
+                              Its principal virtues are:</p>
+                        <ul>
+                              <li>Easy and quick to construct for small, simple datasets.</li>
+                              <li>Retains the actual data.</li>
+                              <li>Sorts (ranks) the data.</li>
+                        </ul>
+                  </body>
+            </section>
+            <activity idref="stemplotwonder" purpose="manystudentswonder"/>
+            <section>
+                  <title>Questions</title>
+                  <body>
+                        <activity purpose="myresponse" idref="stemplot_feedback"/>
+                  </body>
+            </section>
+      </body>
+</workbook_page>

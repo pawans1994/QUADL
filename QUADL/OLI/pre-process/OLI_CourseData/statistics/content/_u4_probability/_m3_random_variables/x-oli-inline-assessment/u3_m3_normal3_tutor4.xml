@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal3_tutor4">
+   <title>Tutor</title>
+<page>
+   <question id="q1">
+      <body>
+         <p>Dan's actual score on the final is:	</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">94</choice>
+         <choice value="Res2">84.4</choice>
+         <choice value="Res3">70</choice>
+         <choice value="Res4">79.6</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect.  Dan's z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you added 2.4 standard deviations to the mean. 	</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Dan's z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you added (rather than subtracted) 2.4 points (rather than standard deviations) to the mean. </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Good
+                  <?oxy_insert_start author="mmyers" timestamp="20101122T104914-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T104913-0500" content="J"?>ob!
+                  Indeed, Dan's z-score of -2.4 indicates that his score is 2.4 standard deviations
+                  below the mean. Since the mean is 82 and each standard deviation is 5, we get that
+                  Dan's score = 82 - 2.4(5) = 70.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. Dan's z-score of -2.4 indicates that his score is 2.4 standard deviations below the mean. It seems like you subtracted 2.4 points from the mean rather than 2.4 standard deviations. </feedback>
+         </response>
+      </part>
+   </question>
+</page></assessment>

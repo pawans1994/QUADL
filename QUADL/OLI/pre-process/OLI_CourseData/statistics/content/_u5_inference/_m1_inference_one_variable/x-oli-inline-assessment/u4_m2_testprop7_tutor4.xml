@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop7_tutor4">
+    <title>Tutor</title><!--no feedback (incomplete feedbakck)-->
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>The p-value is the probability of observing a sample proportion of <input_ref
+                        input="K"/> </p> <p> or <input_ref input="L"/> in a random sample of size <input_ref
+                        input="M"/>, when the</p>  <p>true population proportion is <input_ref input="N"
+                    />.</p>
+            </body>
+            <numeric id="K" size="small"/>
+            <fill_in_the_blank id="L">
+                <choice value="one">lower</choice>
+                <choice value="two">higher</choice>
+                <choice value="three">either lower or higher</choice>
+            </fill_in_the_blank>
+            <numeric id="M" size="small"/>
+            <numeric id="N" size="small"/>
+            <part>
+                <response input="K" match="0.39" score="1">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response input="K" match="*">
+                    <feedback>Incorrect. The sample proportion is called "sample p" in
+                        the Minitab output.</feedback>
+                </response>
+                <hint>The sample proportion is called "sample p" in
+                the Minitab output.</hint>
+                <hint>The sample proportion is 0.39.</hint>
+            </part>
+            <part>
+                <response input="L" match="one" score="1">
+                    <feedback>Correct. H<sub>a</sub> has a &lt;.</feedback>
+                </response>
+                <response input="L" match="two">
+                    <feedback>Incorrect. Look at H<sub>a</sub>.</feedback>
+                </response>
+                <response input="L" match="three">
+                    <feedback>Incorrect. Look at H<sub>a</sub>.</feedback>
+                </response>
+                <hint>Look at H<sub>a</sub>.</hint>
+            </part>
+            <part>
+                <response input="M" match="100" score="1">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response input="M" match="*">
+                    <feedback>Incorrect. Sample size is labeled N in the Minitab
+                        output.</feedback>
+                </response>
+                <hint>Sample size is labeled N in the Minitab
+                output.</hint>
+                <hint>Sample size is 100.</hint>
+            </part>
+            <part>
+                <response input="N" match="0.45" score="1">
+                    <feedback>Correct. The true population proportion is the p<sub>0</sub> in the null hypothesis.</feedback>
+                </response>
+                <response input="N" match="*">
+                    <feedback>Incorrect. The true population proportion is
+                            p<sub>0</sub> in the null hypothesis.</feedback>
+                </response>
+                <hint>The true population proportion is
+                    p<sub>0</sub> in the null hypothesis.</hint>
+                <hint>The true population proportion is 0.45.</hint>
+            </part>
+        </question>
+
+    </page>
+
+</assessment>

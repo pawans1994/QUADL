@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page id="_u4_introduction1">
+    <head>
+        <title>Introduction to Probability (1 of 5)</title>
+        <objref idref="relate_probability_to_likelihood"/>
+    </head>
+    <body>
+
+        <p>Now that we understand how probability fits into the Big Picture as a key element behind
+            statistical inference, we are ready to learn more about it. Our first goal is to
+            introduce some fundamental terminology (the language) and notation that is used when
+            discussing probability. Before we do that, though, let's start with two fun examples
+            that explain the reasons for the careful treatment that we give probability in this
+            course.</p>
+        <!--  <p>What are the chances that it will rain tomorrow? What is the probability that I will win the lottery? 
+    What are the chances that a certain stock will go up? We often talk, hear, or think about probability, and therefore we've all developed some level of intuition about the concept of chance. For example, suppose I asked you
+    "What is the probability (or what are the chances) of getting 'heads' when a fair coin is tossed?"  I believe that most, if not all, of you would be able to give me the correct answer (1/2) even without learning anything about probability. In general, though,</p>
+-->
+        <p>Often, relying only on our intuition is not sufficient to determine probability, so we
+            need some tools to work with, which is exactly what we study in this section.</p>
+        <p>Here are two examples:</p>
+        <example>
+            <title>The <em style="italic">Let's Make a Deal</em> Paradox</title>
+            <p><em style="italic">Let's Make a Deal</em> was a popular television game show, which
+                first aired in the 1960s. The <em style="italic">Let's Make a Deal</em> paradox is
+                named after that show. In the show, the contestant had to choose between three
+                doors. One of the doors had a big prize behind it such as a car or a lot of cash,
+                and the other two were empty. (Actually, for entertainment's sake, each of the other
+                two doors had some stupid gift behind it, like a goat or a chicken, but we'll refer
+                to them here as empty.)</p>
+            <p>The contestant had to choose one of the three doors, but instead of revealing the
+                chosen door, the host revealed one of the two unchosen doors to be empty. At this
+                point in the game, there were two unopened doors: the door that the contestant had
+                originally chosen and the remaining unchosen door. One of them had the prize behind
+                it.</p>
+            <p>The contestant was given the option either to <em style="italic">stay</em> with the
+                door that he or she had initially chosen or <em style="italic">switch</em> to the
+                other door. </p>
+            <p>What do you think the contestant should do, stay or switch? What do you think is the
+                probability that you will win the big prize if you stay? What about if you
+                switch?</p>
+            <p>In order for you to gain a feel for this game, you can play it a few times using an
+                activity below.</p>
+            <iframe src="../../webcontent/html_activities/letsmakeadeal/letsMakeADeal.html"
+                height="700" width="750"/>
+
+            <!-- <p>In order for you to gain a feel for this game, you can play it a few times using an
+                applet. Click <link href="http://nlvm.usu.edu/en/nav/frames_asid_117_g_4_t_5.html"
+                    target="new">here</link> to launch the applet in a separate window. </p>
+               Click <link href="http://www.stat.tamu.edu/~west/applets/LetsMakeaDeal.html"
+                    target="new">here</link> to launch the applet in a separate window. </p>-->
+            <wb:inline idref="u3_m0_intro1_tutor1" purpose="learnbydoing"/>
+            <!--<flash src="../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="285" purpose="learnbydoing">
+<param name="question_file">../webcontent/flash/_u4_m0_inlinetutor1.xml</param>
+<param name="problem_name">_u4_m0_inlinetutor1</param>
+</flash>-->
+            <p>The intuition of most people is that each of the two doors is equally likely to
+                contain the prize&#8212;that there is a 50-50 chance of winning with either
+                selection. This, however, is not the case. Actually, there is a 67% chance&#8212;or
+                a probability of 2/3 (2 out of 3)&#8212;of winning by switching, and only a 33%
+                chance&#8212;or a probability of 1/3 (1 out of 3)&#8212;of winning by staying with
+                the door that was originally chosen. This means that a contestant is twice as likely
+                to win if he or she switches to the unchosen door. Isn't this a bit counterintuitive
+                and confusing? Most people think so when they are first faced with this problem. We
+                will now try to explain this paradox to you in two different ways:</p>
+          
+            <youtube src="e7c6_h0Zf6U"></youtube>
+            <!--    <flash src="../../webcontent/OLICamtasiaController.swf" width="405" height="329"
+                purpose="walkthrough">
+                <param name="movieURL">../webcontent/flash/_u4_voiceover1.swf</param>
+                <param name="movieFPS">5</param>
+                <param name="LoggingLibraryPath">../../webcontent/OLILoggingLibrary.swf</param>
+            </flash>-->
+            <p>If you are still not convinced (or even if you are), here is a different way of
+                explaining the paradox:</p>
+            <youtube src="e3cCUAGHIOI"></youtube>
+            <!--    <flash src="../../webcontent/OLICamtasiaController.swf" width="405" height="265"
+                purpose="walkthrough">
+                <param name="movieURL">../webcontent/flash/_u4_voiceover2.swf</param>
+                <param name="movieFPS">5</param>
+                <param name="LoggingLibraryPath">../../webcontent/OLILoggingLibrary.swf</param>
+            </flash>-->
+        </example>
+        <p>If this example still did not persuade you that probability is not always intuitive, the
+            next example should definitely do the trick.</p>
+    </body>
+</workbook_page>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<link href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" type="text/css" rel="stylesheet">
+
+<assessment id="_u4_m1_prob_chkpt_2" max_attempts="3" recommended_attempts="1">
+	<title> Probability Checkpoint 2</title>
+<!-- 	<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+			are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+			will ask "This will submit your answers and finish this assignment. Are you sure?",
+			click "OK" if you are ready to submit your answers for final grading. </p>
+
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+				following link:</em>
+			<link href="../webcontent/_u4_m1_prob_chkpt_2.pdf">Solution
+				Set</link>.</p>
+	</content> -->
+
+
+	<multiple_choice id="prob1-1" select="single">
+
+		<body> A fair die is rolled 12 times. Consider the following three possible outcomes: <table
+				rowstyle="plain">
+				<tr>
+					<td> (i) </td>
+					<td> 5 2 6 3 2 1 4 1 6 5 3 4 </td>
+				</tr>
+				<tr>
+					<td> (ii) </td>
+					<td> 1 1 2 2 3 3 4 4 5 5 6 6 </td>
+				</tr>
+				<tr>
+					<td> (iii) </td>
+					<td> 6 6 6 6 6 6 6 6 6 6 6 6 </td>
+				</tr>
+			</table> Which of the following is true? </body>
+		<input labels="false" shuffle="false">
+			<choice value="A">&#160;&#160; (i) is more likely than (ii) or (iii). </choice>
+			<choice value="B">&#160;&#160; (ii) is more likely than (iii). </choice>
+			<choice value="C">&#160;&#160; The three outcomes are equally likely. </choice>
+			<choice value="D">&#160;&#160; It is absolutely <em style="italic">impossible</em>
+				to get sequence (iii). </choice>
+			<choice value="E">&#160;&#160; Both (a) and (b) are true. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Not quite right. The die is fair. This means that all faces have an equal
+					probability of occurring on any given roll (1/6). Since each roll is independent
+					of the other rolls, the probability of the each of the three sequences shown is
+					the same, (1/6)<sup>12</sup>. The correct answer is (C). </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. The die is fair. This means that all faces have an equal
+					probability of occurring on any given roll (1/6). Since each roll is independent
+					of the other rolls, the probability of the each of the three sequences shown is
+					the same, (1/6)<sup>12</sup>. The correct answer is (C). </feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback> Correct. Each of the sequences is equally likely, with a probability of
+						(1/6)<sup>12</sup> (since the 12 rolls are independent).</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Incorrect. Remember that each roll of the die is independent
+					of all previous rolls of the die. Also, recall that the die is fair. This means
+					that all faces have an equal probability (1/6) of showing up on any given roll.
+					Think about the other choices. (c) is the right answer. </feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. The die is fair. This means that all faces have an equal
+					probability of occurring on any given roll (1/6). Since each roll is independent
+					of the other rolls, the probability of the each of the three sequences shown is
+					the same, (1/6)<sup>12</sup>. The correct answer is (C). </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="prob1-2" select="single">
+
+		<body>
+			<p> Let A and B be two <em style="italic">disjoint</em> events such that P(A) = .20 and
+				P(B) = .60. </p>
+			<p> What is P(A and B)? </p>
+		</body>
+		<input labels="false" shuffle="false">
+			<choice value="A">&#160;&#160; 0 </choice>
+			<choice value="B">&#160;&#160; .12 </choice>
+			<choice value="C">&#160;&#160; .68 </choice>
+			<choice value="D">&#160;&#160; .80 </choice>
+			<choice value="E">&#160;&#160; None of the above. </choice>
+		</input>
+		<part>
+			<response match="A" score="10">
+				<feedback> Correct. If two events are disjoint, then by definition, P(A and B) = 0
+					(the two events cannot happen together). </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. You may have computed P(A and B) for independent events
+					by multiplying 0.20(0.60). But A and B are not independent because they are
+					disjoint. Recall that if two events are disjoint, they cannot occur at the same
+					time, In other words, the event &#145;A and B&#8242; never occurs, so P(A and B) = 0. The
+					correct answer is (A). </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback> Not quite right. You may have computed P(A or B) instead of P(A and B).
+					Also you assumed that A and B are independent if you used the General Addition
+					Rule P(A or B) = P(A) + P(B) - P(A and B) = 0.20 + 0.80 - 0.12 = 0.68. This is
+					also incorrect since disjoint events cannot be independent. Recall that if two
+					events are disjoint, they cannot occur at the same time. In other words, the
+					event &#145;A and B&#8242; never occurs, so P(A and B) = 0. The correct answer is (A).
+				</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. You may have computed P(A or B) instead of P(A and B). To
+					calculate P(A and B) you need to determine if A and B are independent. Recall
+					that disjoint events cannot be independent. If two events are disjoint, they
+					cannot occur at the same time. So the event &#145;A and B&#8242; never occurs and P(A and
+					B) = 0. The correct answer is (A).</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. If A and B are disjoint, then A and B do not occur at the
+					same time, In other words, the event &#145;A and B&#8242; never occurs, so P(A and B) = 0.
+					The correct answer is (A). </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="prob1-3" select="single">
+
+		<!--LO:Apply probability rules in order to find the likelihood of an event.Sub-objective: rule4       Probability rule 4-->
+		<body><p>The following probabilities are based on data collected from U.S. adults during the
+				National Health Interview Survey 2005-2007. Individuals are placed into a weight
+				category based on weight, height, gender and age. </p>
+			<table>
+				<tr>
+					<td/>
+					<td>Underweight</td>
+					<td>Healthy weight</td>
+					<td>Overweight (not obese)</td>
+					<td>Obese</td>
+				</tr>
+				<tr>
+					<td>Probability</td>
+					<td>0.019</td>
+					<td>0.377</td>
+					<td>0.35</td>
+					<td>0.254</td>
+				</tr>
+			</table>
+			<p>Based on this data, what is the probability that a randomly selected U.S. adult
+				weighs more than the healthy weight range? </p></body>
+		<input shuffle="false">
+			<choice value="A">0.0889</choice>
+			<choice value="B">0.35</choice>
+			<choice value="C">0.254</choice>
+			<choice value="D">0.604</choice>
+			<choice value="E">none of these</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. Did you multiply 0.35 and 0.254? You may have been
+					thinking that we want P(overweight AND obese) since we want to include both the
+					overweight and obese people. But including both groups translates as
+					P(overweight OR obese). Since these are disjoint events, we can add the two
+					probabilities. The correct answer is (D).</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. 0.35 is the probability that the person is overweight
+					(not obese). But we want to find P(overweight or obese). Since these are
+					disjoint events, we can add the two probabilities. The correct answer is
+					(D).</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Not quite right. 0.254 is the probability that the person is obese. But we
+					want to find P(overweight or obese). Since these are disjoint events, we can add
+					the two probabilities. The correct answer is (D).</feedback>
+			</response>
+			<response match="D" score="10">
+				<feedback>Correct. We want to find P(overweight or obese). Since these are disjoint
+					events, we can add the two probabilities. 0.35 + 0.254 = 0.604</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. We want to find P(overweight or obese). Since these are
+					disjoint events, we can add the two probabilities. The correct answer is
+					(D).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+
+	<multiple_choice id="prob1-4" select="single">
+
+		<!--LO:Apply probability rules in order to find the likelihood of an event.Sub-objective: probdef        Definition of probability   -->
+		<body><p>In the population, 8% of males have had a kidney stone. Suppose a medical
+				researcher randomly selects two males.</p>
+			<p>Let A represent the event "the first male has had a kidney stone."</p>
+			<p>Let B represent the event "the second male has had a kidney stone."</p>
+			<p>Which of the following is true about the two events?</p></body>
+		<input shuffle="false">
+			<choice value="A">A and B are disjoint.</choice>
+			<choice value="B">A and B are independent.</choice>
+			<choice value="C">Both (a) and (b) are true.</choice>
+			<choice value="D">None of the above are true.</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. The sample spaces for these two events overlap. If K =
+					“had a kidney stone” and N = “no kidney stone”, then KK is in both sample
+					spaces. In this problem the events are independent since the men are randomly
+					selected from a large population, so the occurrence of A does not affect the
+					probability of B. The correct answer is (B).</feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>Correct. The occurrence of A does not affect the probability of B since
+					the men are randomly selected from a large population. So the events are
+					independent. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Not quite right. If two events are disjoint (part a is true), they must be
+					dependent (part b is not true). In this problem the events are independent since
+					the men are randomly selected from a large population. The correct answer is
+					(B).</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. The occurrence of A does not affect the probability of B
+					since the men are randomly selected from a large population. So the events are
+					independent. The correct answer is (B).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<section id="assess_04_sideeffect">
+		<content>
+			<p> <em style="italic">The next three questions refer to the following information:</em></p>
+			<p> According to the information that comes with a certain prescription drug, when
+				taking this drug, there is a 20% chance of experiencing nausea (N) and a 50% chance
+				of experiencing decreased sexual drive (D). The information also states that there
+				is a 15% chance of experiencing both side effects. </p>
+		</content>
+		<multiple_choice id="prob1-5" select="single">
+
+			<body> What is the probability of experiencing nausea <em style="italic">or</em> a
+				decrease in sexual drive? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A">&#160;&#160; .10 </choice>
+				<choice value="B">&#160;&#160; .40 </choice>
+				<choice value="C">&#160;&#160; .55 </choice>
+				<choice value="D">&#160;&#160; .70 </choice>
+				<choice value="E">&#160;&#160; .85 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Not quite right. We want to find P(N or D), which cannot be 0.10
+						because it has to be greater than either individual probability. Use the
+						General Addition Rule P(N or D) = P(N) + P(D) – P(D and N) = .20 + .50 - .15
+						= .55. The correct answer is (C). </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Not quite right. We want to find P(N or D), which cannot be 0.40
+						because it has to be greater than either individual probability. You may
+						have made a probability table and added P(D and &#145;not N) to P(&#145;not D&#8242; and N).
+						This is incorrect because P(N or D) includes the situation where both nausea
+						and decreased sexual drive occur. Add P(N or D) to your answer or use the
+						General Addition Rule P(N or D) = P(N) + P(D) – P(D and N) = .20 + .50 - .15
+						= .55. The correct answer is (C).</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback> Correct. We are given: P(N) = .20, P(D) = .50, P(N and D) = .15. We
+						need to find P(N or D). Using the General Addition Rule: P(N or D) = P(N) +
+						P(D) – P(D and N) = .20 + .50 - .15 = .55. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Not quite right. You may have treated N and D as disjoint events and
+						calculated P(N or D) = P(N) + P(D) = 0.20 + 0.50 = 0.70. But N and D are not
+						disjoint because P(N and D) = 0.15. Use the General Addition Rule P(N or D)
+						= P(N) + P(D) – P(D and N) = .20 + .50 - .15 = .55. The correct answer is
+						(C). </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Not quite right. You may have misinterpreted what we mean when we say
+						that P(N or D) is the probability of “nausea or decreased sexual drive or
+						both” because you added these three probabilities. This is incorrect because
+						P(N and D) is included in P(N) and in P(D). Use the General Addition Rule
+						P(N or D) = P(N) + P(D) – P(D and N) = .20 + .50 - .15 = .55. The correct
+						answer is (C). </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob1-6" select="single">
+
+			<!--LO:When appropriate, use tools such as Venn diagrams or probability tables as aids for finding probabilities.Sub-objective: probtools        Probability tools-->
+			<body>What is the probability of experiencing only nausea?</body>
+			<input shuffle="false">
+				<choice value="A">0.05</choice>
+				<choice value="B">0.10</choice>
+				<choice value="C">0.2</choice>
+				<choice value="D">0.35</choice>
+				<choice value="E">none of these</choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback>Correct. The probability of experiencing only nausea is P(N) - P(N
+						and D) = 0.2 - 0.15 = 0.05. You could also build a probability table to find
+						P(N and &#145;not D&#8242;). </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Not quite right. You may have correctly determined that we want P(only
+						N) = P(N and &#145;not D&#8242;), but you may have tried to calculate this probability
+						multiplying P(N) and P(not D). This does not work because these events are
+						not independent. Instead you could calculate P(only N) = P(N) - P(N and D) =
+						0.2 - 0.15 = 0.05 or build a probability table to find P(N and &#145;not D&#8242;). The
+						correct answer is (A).</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Not quite right. 0.2 is probability of experiencing nausea. P(N)
+						includes the people who experienced both side effects. The probability of
+						experiencing ONLY nausea is P(N) - P(N and D) = 0.2 - 0.15 = 0.05. You could
+						also build a probability table to find P(N and &#145;not D&#8242;). The correct answer
+						is (A).</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Not quite right. You may have added P(N) = 0.20 and P(N and D) = 0.15,
+						but this is incorrect because P(N) includes the people who experienced both
+						side effects. The probability of experiencing ONLY nausea is P(only N) =
+						P(N) - P(N and D) = 0.2 - 0.15 = 0.05. You could also build a probability
+						table to find P(N and &#145;not D&#8242;). The correct answer is (A).</feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Not quite right. The probability of experiencing ONLY nausea is P(N) -
+						P(N and D) = 0.2 - 0.15 = 0.05. You could also build a probability table to
+						find P(N and &#145;not D&#8242;). The correct answer is (A).</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+
+
+		<multiple_choice id="prob1-7" select="single">
+
+			<body> What is the probability of experiencing neither of the side effects? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A">&#160;&#160; .10 </choice>
+				<choice value="B">&#160;&#160; .40 </choice>
+				<choice value="C">&#160;&#160; .45 </choice>
+				<choice value="D">&#160;&#160; .70 </choice>
+				<choice value="E">&#160;&#160; .85 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Not quite right. You may have computed P(N and D) = P(N)*P(D). This
+						is incorrect because N and D are not independent events. Make a probability
+						table. The correct answer is (C).</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Not quite right. You may found P(exactly one side effect) = P(N and
+						&#145;not D) + P(&#145;not N&#8242; and D) = 0.05 + 0.35. In your probability table identify
+						P(&#145;not N&#8242; and &#145;not D). The correct answer is (C).</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback>Correct. You want to compute P(neither side effect) = P((not N) and
+						(not D)) = .45. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Not quite right. You may have incorrectly assumed that N and D are
+						disjoint events and computed P(N or D). You want to compute P(no side
+						effects). Try making a probability table and using it to find P(no side
+						effects) = P(&#145;not N&#8242; and &#145;not D&#8242;). The correct answer is (C). </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Not quite right. You may have interpreted “neither side effect” as {N
+						and &#145;not D, &#145;not N&#8242; and D, &#145;not N&#8242; and &#145;not D} and added these three
+						probabilities from your probability table. But the sample space for this
+						event is only (&#145;not N&#8242; and &#145;not D). The correct answer is (C). </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	<section id="assess_04_alarm">
+		<content>
+			<p>
+				<em style="italic">The next two questions refer to the following information:</em>
+			</p>
+			<p> For safety reasons, four different alarm systems were installed in the vault
+				containing the safety deposit boxes at a Beverly Hills bank. Each of the four
+				systems detects theft with a probability of .99<em style="italic"> independently
+				</em>of the others. </p>
+		</content>
+		<multiple_choice id="prob1-8" select="single">
+
+			<body>
+				<p> What is the probability that when a theft occurs, <em style="italic">all
+						four</em> systems will detect it? </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A">&#160;&#160; (.99)<sup>4</sup>
+				</choice>
+				<choice value="B">&#160;&#160; (.99) * 4 </choice>
+				<choice value="C">&#160;&#160; (.01)<sup>4</sup>
+				</choice>
+				<choice value="D">4*(0.01)*(0.99)<sup>3</sup> </choice>
+				<choice value="E">4*(0.99)*(0.01)<sup>3</sup> </choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback> Correct. P(all detect) = P(1<sup>st</sup> detects and 2<sup>nd</sup>
+						detects and 3<sup>rd</sup> detects and 4<sup>th</sup> detects). Since the
+						four systems work independently, P(all detect) = P(1<sup>st</sup> detects) *
+							P(2<sup>nd</sup> detects) * P(3<sup>rd</sup> detects) * P(4<sup>th</sup>
+						detects) = (.99)<sup>4</sup>. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Not quite right. Remember that, by definition, a probability must be
+						between 0 and 1, inclusive. We want to find P(all detect) = P(1st detects
+						and 2nd detects and 3rd detects and 4th detects). Since the alarms work
+						independently, we can multiply the individual probabilities. The correct
+						answer is (A).</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Not quite right. (0.01)<sup>4</sup> is the probability that none of the alarms
+						detects the theft. We want to find P(all detect) = P(1st detects and 2nd
+						detects and 3rd detects and 4th detects). Since the alarms work
+						independently, we can multiply the individual probabilities. The correct
+						answer is (A).</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Not quite right. 4*(0.01)*(0.99)<sup>3</sup> is the probability that exactly one
+						alarm fails to detect the theft. We want to find P(all detect) = P(1st
+						detects and 2nd detects and 3rd detects and 4th detects). Since the alarms
+						work independently, we can multiply the individual probabilities. The
+						correct answer is (A).</feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Not quite right. 4*(0.01)*(0.99)<sup>3</sup> is the probability that exactly one
+						alarm detects the theft. We want to find P(all detect) = P(1st detects and
+						2nd detects and 3rd detects and 4th detects). Since the alarms work
+						independently, we can multiply the individual probabilities. The correct
+						answer is (A).</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob1-9" select="single">
+
+			<body> The bank, obviously, is interested in the probability that when a theft
+					occurs,<em style="italic"> at least one</em> of the four systems will detect it.
+				This probability is equal to: </body>
+			<input labels="false" shuffle="false">
+				<choice value="A">&#160;&#160; (.99)<sup>4</sup>
+				</choice>
+				<choice value="B">&#160;&#160; (.01)<sup>4</sup>
+				</choice>
+				<choice value="C">&#160;&#160; 1- (.99)<sup>4</sup>
+				</choice>
+				<choice value="D">&#160;&#160; 1- (.01)<sup>4</sup>
+				</choice>
+				<choice value="E">none of these</choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>Not quite right. (0.99)<sup>4</sup> is the probability of all four systems
+						detecting a theft. We want to find the probability that “at least one system
+						detects the theft,” which is the complement of “none detect.” P(at least one
+						detects) = 1 – P(none detects) = 1 – (0.01)<sup>4</sup>. The correct answer is
+						(D).</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Not quite right. (0.01)<sup>4</sup> is the probability that none of the systems
+						detect the theft. We want to find the probability that “at least one system
+						detects the theft,” which is the complement of “none detects.” P(at least
+						one detects) = 1 – P(none detects) = 1 – (0.01)<sup>4</sup>. The correct answer is
+						(D).</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Not quite right. 1 – (0.99)<sup>4</sup> is the probability that at most three of
+						the four systems detect the theft, which is the complement of “all systems
+						detect the theft.” We want to find the probability that “at least one system
+						detects the theft,” which is the complement of “none detects.” P(at least
+						one detects) = 1 – P(none detects) = 1 – (0.01)<sup>4</sup>. The correct answer is
+						(D).</feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback>Correct. We want to find the probability that “at least one system
+						detects the theft,” which is the complement of “none detects.” P(at least
+						one detects) = 1 – P(none detects) = 1 – (0.01)<sup>4</sup>. The correct answer is
+						(D).</feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Not quite right. We want to find the probability that “at least one
+						system detects the theft,” which is the complement of “none detects.” P(at
+						least one detects) = 1 – P(none detects) = 1 – (0.01)<sup>4</sup>. The correct answer
+						is (D). </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	
+	<multiple_choice id="prob1-11" select="single">
+
+		<!--LO:When appropriate, use tools such as Venn diagrams or probability tables as aids for finding probabilities.Sub-objective: probtools        Probability tools-->
+		<body>Only 40% of the students in a certain liberal arts college are males. If two students
+			from this college are selected at random, what is the probability that they are both
+			males?</body>
+		<input shuffle="false">
+			<choice value="A">0</choice>
+			<choice value="B">0.16</choice>
+			<choice value="C">0.80</choice>
+			<choice value="D">0.64</choice>
+			<choice value="E">none of these</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Not quite right. If the probability is 0, then it would be impossible to
+					select two males. Clearly, this is not right. Let A = “the first person is a
+					male”. Let B = “second person is a male”. We want P(A and B).The events are
+					independent since the population is fairly large, so the answer is (0.4)(0.4) =
+					0.16. The correct answer is (B).</feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>Correct. Let A = “the first person is a male”. Let B = “second person is
+					a male”. We want P(A and B). Because the population is fairly large, the events
+					are independent, and we can use the Multiplication Rule for Independent
+					Events.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Not quite right. Let A = “the first person is a male”. Let B = “second
+					person is a male”. We want P(A and B). You may have added probabilities instead
+					of using the Multiplication Rule for Independent Events. The events are
+					independent because the population is fairly large, so the answer is (0.4)(0.4)
+					= 0.16. The correct answer is (B).</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. You may have interpreted the probability of selecting two
+					males as the complement of selecting two females, but the complement of two
+					females is equivalent to “at least one male.” To find the probability of
+					selecting two males, use the Multiplication Rule for Independent Events. The
+					events are independent because the population is fairly large, so the answer is
+					(0.4)(0.4) = 0.16. The correct answer is (B).</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. Let A = “the first person is a male”. Let B = “second
+					person is a male”. We want P(A and B). Because the population is fairly large,
+					the events are independent, and we can use the Multiplication Rule for
+					Independent Events. The correct answer is (B).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="prob1-12" select="single">
+		<body> Only 40% of the students in a certain liberal arts college are males. If two students
+			from this college are selected at random, what is the probability that they are of the
+			same gender? </body>
+		<input labels="false" shuffle="false">
+			<choice value="A">&#160;&#160; .96 </choice>
+			<choice value="B">&#160;&#160; .52 </choice>
+			<choice value="C">&#160;&#160; .48 </choice>
+			<choice value="D">&#160;&#160; .36 </choice>
+			<choice value="E">&#160;&#160; .16 </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Incorrect. It may help to go back and review the
+					probability rules presented in this module. Consider the remaining options. (b)
+					is the right answer. </feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>Correct. P(both of the same gender) = P(2 males or 2 females) =
+					[disjoint events] P(2 males) + P(2 females) = [random selection → independent]
+					(.40 * .40) + (.60 * .60) = .16 + .36 = .52. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Incorrect. It seems that you have calculated the
+					probability of one male and one female being selected rather than the
+					probability of both selected people being of the same gender. Consider the
+					remaining options. (b) is the right answer. </feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Incorrect. It seems that you have calculated the
+					probability of both people being female. Remember that you want to find the
+					probability of the selected people being the same gender, which means they could
+					both be male, too. Consider the remaining options. (b) is the right answer.
+				</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Incorrect. It seems that you have calculated the
+					probability of both people being male. Remember that you want to find the
+					probability of the selected people being the same gender, which means they could
+					both be female, too. Consider the remaining options. (b) is the right answer.
+				</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+
+</assessment>

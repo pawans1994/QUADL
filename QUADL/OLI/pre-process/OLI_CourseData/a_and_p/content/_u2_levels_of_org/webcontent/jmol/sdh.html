@@ -1,0 +1,135 @@
+<!--Gordon Rule-->
+<HTML>
+<HEAD><TITLE>
+Succinate Dehydrogenase
+</TITLE>
+    <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+    <script type="text/javascript">
+        jmolInitialize("./jmol");
+        jmolSetAppletColor("white");
+    </script>  
+
+<TABLE BORDER=0 WIDTH=850 CELLPADDING=0 CELLSPACING=0>
+    <TH colspan=2 align=left>&nbsp; Biochemistry I</TH>
+    <TH colspan=2 align=right>Succinate Dehydrogenase</TH>
+        
+<TR>
+<TD>&nbsp;</TD>
+        <TD bgcolor="#eeeeee" width=500>
+            <script type="text/javascript">
+                jmolApplet([500,500],
+                "load ./jmol/pdbs/sdh/1fum_ca.pdb;rotate z 14.95; rotate y 123.98; rotate z -58.38;select all;wireframe off;spacefill off;backbone 0.5;color chain;select hetero;spacefill;color cpk;select FAD:M,oaa;color cpk;wireframe 120;spacefill off;select *;set specular on","sdh");
+            </script><BR>
+                <script type="text/javascript">
+                    jmolSetTarget("sdh") 
+                    jmolRadioGroup([
+                    ["background white;color labels black","white",true],
+                    ["background gray;color labels black","gray",false],
+                    ["background [100,100,255];color labels black","Lt blue",false],
+                    ["background black;color label yellow","black",false]]," ","Background color")
+                </script>
+                <script type="text/javascript">
+                    jmolSetTarget("sdh")
+                    jmolCheckbox("spin on","spin off", "Spin", false)
+                </script>
+                </td>
+                <td bgcolor="#eeeeee" >&nbsp;</td>
+                <td bgcolor="#eeeeee"  valign="top">
+    &nbsp;<B>Electron Transport Pathway</B>:<BR>
+        &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("sdh") 
+            jmolButton("set windowCentered off;center FAD;set windowCentered on;zoomto 2.0 300;delay 0.1;backbone 0.4;delay 0.1;backbone 0.3;delay 0.1;backbone 0.2;delay 0.1;backbone 0.1;delay 0.1;backbone 0.05;spacefill off;select oaa,FAD:M;spacefill off;color cpk;wireframe 120;select *","","",""); </script>&nbsp;Suc-FAD<BR>
+                
+                &nbsp;&nbsp;<script type="text/javascript">
+                    jmolSetTarget("sdh") 
+                    jmolButton("select 244 and not *:M;spacefill;color cpk;set windowCentered off;center atomno=16785;set windowCentered on;zoomto 2.0 250;select *","","","");
+                </script>&nbsp;+ F2S
+                
+                &nbsp;&nbsp;<script type="text/javascript">
+                    jmolSetTarget("sdh") 
+                    jmolCheckbox("zoomto 2.0 500;select cys;wireframe 100;color cpk;select FES;spacefill 200","select cys;wireframe off;select *;backbone 0.1;zoomto 1.0 250","+/-Zoom",false);
+                </script><BR>
+                    
+                    &nbsp;&nbsp;<script type="text/javascript">
+                        jmolSetTarget("sdh") 
+                        jmolButton("select *;spacefill off;wireframe off;select oaa,FAD:M;color cpk;wireframe 120; select (244,245,246) and not *:M;spacefill;color cpk;set windowCentered off;center atomno=16793;set windowCentered on;zoomto 2.0 225;select elemno=6;color[150,150,150];select *","","","");
+                    </script>&nbsp;+ F4S, F3S<BR>
+                        
+                        &nbsp;&nbsp;<script type="text/javascript">
+                            jmolSetTarget("sdh") 
+                            jmolButton("select *;spacefill off;wireframe off;select oaa,FAD:M;color cpk;wireframe 120; select (244,245,246) and not *:M;spacefill;color cpk;center 246 and not*:M;select 801;wireframe 120;color cpk;set windowCentered off;center atomno=16793;set windowCentered on;zoomto 2.0 200;select *","","","");
+                        </script>&nbsp;MQ7<BR>
+                     
+                                <BR>
+                                    &nbsp;<B>FAD Binding (M Chain)</B>:<br>
+                                    &nbsp;&nbsp;<script type="text/javascript">
+                                        jmolSetTarget("sdh") 
+                                        jmolButton("zap;load ./jmol/pdbs/sdh/fad_oaa.pdb; rotate z 23.99; rotate y 133.41; rotate z -43.95;select all;wireframe off;spacefill off;backbone 0.5;select FAD,OAA;wireframe 1.0;select *","","","");
+                                    </script>&nbsp;Load subunit
+                                        
+                                        &nbsp;&nbsp;<script type="text/javascript">
+                                            jmolSetTarget("sdh") 
+                                            jmolCheckbox("load ./jmol/pdbs/sdh/fad_oaa.pdb; rotate z 23.99; rotate y 133.41; rotate z -43.95;select all;wireframe off;spacefill off;backbone 0.5;select FAD,OAA;wireframe 1.0;set windowCentered off;center atomno=16849;set windowCentered on;zoomto 2.0 250;select all;delay 0.2;backbone 0.45;delay 0.1;backbone 0.4;delay 0.1;backbone 0.35;delay 0.1;backbone 0.3;delay 0.1;backbone 0.25;delay 0.1;backbone 0.2;delay 0.1;backbone 0.15;delay 0.1;backbone 0.1","zoomto 2.0 100;backbone 0.5","+/-Zoom",false);
+                                        </script><BR>                                     
+                                        
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("sdh") 
+jmolButton("load ./jmol/pdbs/sdh/fad_oaa.pdb; rotate z 23.99; rotate y 133.41; rotate z -43.95;select all;wireframe off;spacefill off;backbone 0.5;select FAD,OAA;wireframe 1.0;set measurements ANGSTROMS;set measurements 0.2;set windowCentered off;center atomno=16849;set windowCentered on;zoomto 2.0 250;select all;backbone 0.1;select 211,37,11,12,13,45,46,50,51;wireframe 0.4;dots 50;monitor 8648 16828;monitor 8655 16826;monitor 9926 16818;monitor 8385 16809;monitor 8615 16802;monitor 8620 16852;monitor 8388 16809;set monitor 50;color labels black;wireframe 20;select *","","","");
+</script>&nbsp;FAD-protein interactions<br>
+                                            
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("sdh") 
+jmolCheckbox("set windowCentered off;center atomno=16849;set windowCentered on;zoomto 2.0 250;delay 0.2;backbone 0.45;delay 0.1;backbone 0.4;delay 0.1;backbone 0.35;delay 0.1;backbone 0.3;delay 0.1;backbone 0.25;delay 0.1;backbone 0.2;delay 0.1;backbone 0.15;delay 0.1;backbone 0.1;select within (5.0,FAD) and not (FAD,oaa);define notfad selected;isoSurface surf1 select(notfad) ignore (not notfad) molecular;isoSurface surf2 select(FAD) ignore (not FAD) molecular;color $surf1 orange;color $surf2  grey","isoSurface surf1 off;isoSurface surf2 off","+/- Surface",false);
+                                        </script>&nbsp;FAD Packing  
+                                            
+                                           
+
+<HR>
+                <img src="./jmol/pdbs/sdh/succinate.gif" width=300></img>
+                </td>
+                <td bgcolor="#eeeeee" >&nbsp;</td>
+</tr>
+</table>
+                <table width=750><tr>
+                    <td>&nbsp;</td>
+<TD>
+Succinate dehydrogenase converts succinate to fumarate as part of
+the TCA cycle. It is the only membrane bound enzyme in the TCA cycle.  This
+structure (1FUM.pdb) is the E.coli enzyme with bound FAD and an inhibitor (oxaloacetic
+acid, OAA).  The OAA has been converted to succinate in this illustration.
+<P>The enzyme complex consists of four separate poly-peptide chains:
+
+<UL>
+<LI>Chain M (dark blue) contains the bound FAD and substrate binding site.
+<LI>Chain N (Light blue) contains the three iron-sulfur centers.
+<LI>Chains O &amp; P (Green) contain the site for Coenzyme Q.
+</UL>
+Suggested viewing:
+<OL>
+<LI><b>Overall view:</b>  The green subunits are embedded in the membrane, the blue subunits will be in the mitochondrial matrix.  The bound FAD is colored cyan.
+<LI>Electron Transport Path: 
+<OL>
+<LI>Suc-FAD: A close up view of the substrate next to the FAD.
+    <LI>+FeS: Iron-sulfur center closest to the FAD. <ul><li>Zoom: The Fe<sub>2</sub>S<sub>2</sub> Cluster is attached to the enzyme via four Cys residues.</li></ul>
+<LI>+FS4,F3S: Next two iron-sulfur centers.
+<LI>Add MQ7:Coenzyme Q-lipophillic electron carrier.
+</UL>
+<LI>Details of FAD-Protein Interaction
+<OL>
+<LI>FAD+Suc: Close up view of FAD + substrate with van der Waals surface. Note close contact for electron tranfer.
+<LI>FAD Backing: The FAD is shown in stick, surrounded by the protein. Note how well the cavity fits the FAD molecule (slab mode would be useful here).
+<LI>FAD Interaction: Specific hydrogen bonds to the adenine, phosphate, and redox part of the FAD. Note the specificity of binding.
+</UL>
+</UL>
+
+</TD></TR>
+</TABLE>
+
+<P><HR ALIGN=LEFT>
+<TT>12.12.2007</TT>
+</BODY>
+</HTML>
+
+

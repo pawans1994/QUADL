@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_condprob2_tutor3">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+        <body>
+         <p>If service A has failed to deliver the document on time, what is the probability that
+               <?oxy_comment_start author="mmyers" timestamp="20101109T105551-0500" comment="Explanation: If you know service A has failed, then &quot;on time&quot; has already come and gone, thus the change of tense here."?>it <?oxy_insert_start author="mmyers" timestamp="20101109T104911-0500"?>has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T104909-0500" content="will"?>
+               <?oxy_insert_start author="mmyers" timestamp="20101109T104809-0500"?>arrived<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T104808-0500" content="be"?>
+               o<?oxy_comment_end?>n time using service B? (Again, as before, first write down the
+               conditional probability that you are asked to find, and then apply the definition of
+               conditional probability to find it.)</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We are given that the document was not delivered on time using service A (not A), and
+                  we are wondering how likely is it that it
+                  <?oxy_insert_start author="mmyers" timestamp="20101109T104953-0500"?>was<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T104952-0500" content="will be"?>
+                  delivered on time using service B. We are therefore looking for P(B | not A).</p>
+            <p>Using the definition of conditional probability and the probability table, we get
+               that:</p>
+            <p>P(B | not A) = P(not A and B) / P(not A) = .05/.1 = .50</p>
+         </explanation>
+      </part>
+   </question></page>
+</assessment>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_independence2_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Recall the delivery services example:</p>
+         <p>It is vital that a certain document reach its destination within one day. To maximize
+            the chances of on-time delivery, two copies of the document are sent using two services,
+            service A and service B, and the following probability table summarizes the chances of
+            on-time delivery:</p>
+         <image src="../webcontent/lbd001.gif" alt="probability tables of two different delivey services"/>
+         <p>Are the delivery times of the two services independent? In other words, are the events A
+            and B independent? Common sense would say that there will be some degree of dependence
+            between A and B, since the reasons that would cause one service to be delayed (like bad
+            weather, airport delays, etc), would most likely also affect the other service, and
+            cause it to be delayed too. Let's review the four possible methods that we can use to
+            check whether events A and B are independent:</p>
+         <p>Two events A and B are independent if any one of the following hold:</p>
+         <p>P(B | A) = P(B)</p>
+         <p>P(A | B) = P(A)</p>
+         <p>P(B | A) = P(B | not A)</p>
+         <p> P(A and B) = P(A) * P(B)</p>
+         <p>Use the four different methods to check whether events A and B are independent, and see that indeed all four are leading you to the same conclusion.</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>Our answer:</p>
+            <p>&#8226; P(B | A) = P(B and A) / P(A) = .75/.90 = .833 while P(B) = .8. Since the two are not equal, events A and B are not independent.</p>
+            <p>&#8226; P(A | B) = P(A and B) / P(B) = .75/.80 = .9375 while P(A) = .9. Since the two are not equal, events A and B are not independent.</p>
+            <p>&#8226; P(B | A) = P(B and A) / P(A) = .75/.90 = .833, while P(B | not A) = P(B and not A) / P(not A) = .05/.10 = .50.  Since the two are not equal, events A and B are not independent.</p>
+            <p>&#8226; P(A and B) = .75 while P(A) * P(B) = .90 * .80 = .72. Since the two are not equal, events A and B are not independent.</p>
+            <p>Note that all four methods lead us to the same conclusion.</p>
+         </explanation>
+      </part>
+   </question>
+</assessment>

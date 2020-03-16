@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial3_lbd2_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body><p>The two conditions we've outlined mean that we'll need two probabilities.  These are:</p> 
+            <p>the probability of having at least one child is <input_ref input="A"/> which is found
+                by calculating <input_ref input="B"/></p>
+        <p>the probability of having more than two children is <input_ref input="C"/> which is found
+                by calculating <input_ref input="D"/></p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="res1">P(X > 1)</choice>
+            <choice value="res2">P(X ≥ 1)</choice>
+            <choice value="res3">P(X &lt; 1)</choice>
+            <choice value="res4">P(X ≤ 1)</choice>
+        </fill_in_the_blank>
+        
+         <fill_in_the_blank id="B" shuffle="false">
+            <choice value="res1">1 - P(X > 1)</choice>
+            <choice value="res2">1 - P(X ≥ 1)</choice>
+            <choice value="res3">1 - P(X = 0)</choice>
+            <choice value="res4">1 - P(X ≤ 1)</choice>
+         </fill_in_the_blank> 
+        
+        <fill_in_the_blank id="C" shuffle="false">
+            <choice value="res1">P(X > 2)</choice>
+            <choice value="res2">P(X ≥ 2)</choice>
+            <choice value="res3">P(X &lt; 2)</choice>
+            <choice value="res4">P(X ≤ 2)</choice>
+        </fill_in_the_blank> 
+        
+        <fill_in_the_blank id="D" shuffle="false">
+            <choice value="res1">1 - P(X > 2)</choice>
+            <choice value="res2">1 - P(X ≥ 2)</choice>
+            <choice value="res3">1 - P(X &lt; 2)</choice>
+            <choice value="res4">1 - P(X ≤ 2)</choice>
+        </fill_in_the_blank> 
+        
+        
+        <part>
+            <response input="A" match="res1" name="P(X > 1)" score="0">
+                <feedback>Incorrect. We want at least one child, so having exactly one
+                    child would be acceptable. Please try again.</feedback>
+            </response>
+            <response input="A" match="res2" name="P(X ≥ 1)" score="1">
+                <feedback>Correct. At least one child means one or more.</feedback>
+            </response>
+            <response input="A" match="res3" name="P(X &lt; 1)" score="0">
+                <feedback>Incorrect. You have chosen less than one, which is no
+                    children. This is not an acceptable result. Please try again.</feedback>
+            </response>
+            <response input="A" match= "res4" name="P(X ≤ 1)" score="0">
+                <feedback>Incorrect. The symbol "<em>≤</em>" means at most one child.
+                    We want "<em>at least</em>" one child. Please try again.</feedback>
+            </response>
+            <hint>The key words are "<em>at least</em>."</hint>
+        </part>
+        
+      
+        <part>
+            <response input="B" match="res1" name="1 - P(X > 1)" score="0">
+                <feedback>Incorrect. The complement of <em>at least one</em>, is
+                        <em>less than</em> one. Please try again.</feedback>
+            </response>
+            <response input="B" match="res2" name="1 - P(X ≥ 1)" score="0">
+                <feedback>Incorrect. You are correct that to find the complement you'd
+                    use:
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T214347-0500"?>"<?oxy_insert_end?>1
+                    -
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T214344-0500"?>..."<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T214356-0500" content="."?>
+                    However, you have not taken the complement of <em>X ≥ 1</em>. Please try
+                    again.</feedback>
+            </response>
+            <response input="B" match="res3" name="1 - P(X &lt; 1)" score="1">
+                <feedback>Correct. To find P(X ≥
+                    1)<?oxy_insert_start author="mmyers" timestamp="20101121T213707-0500"?>,<?oxy_insert_end?>
+                    we must use
+                    complements<?oxy_insert_start author="mmyers" timestamp="20101121T213843-0500"?>,<?oxy_insert_end?>
+                    since technology uses only cumulative P(X ≤ x) probabilities. The complement of
+                        <em>at least one</em>, is <em>less than</em> one. However, we need less than
+                    or equal to something. Less than one is none, so we really have: 1 - P(X =
+                    0).</feedback>
+            </response>
+            <response input="B" match= "res4" name="1 - P(X ≤ 1)" score="0">
+                <feedback>Incorrect.
+                        <?oxy_delete author="mmyers" timestamp="20101121T214035-0500" content="Both "?><em>X
+                        ≤ 1</em> and <em>X ≥ 1</em><?oxy_insert_start author="mmyers" timestamp="20101121T214040-0500"?>
+                    <?oxy_insert_end?>are not complements, since they both contain X = 1. Please try
+                    again.</feedback>
+            </response>
+            <hint>Use
+                complements<?oxy_insert_start author="mmyers" timestamp="20101121T214055-0500"?>,<?oxy_insert_end?>
+                since all forms of technology use cumulative P(X ≤ x) binomial distributions to find
+                a
+                <?oxy_insert_start author="mmyers" timestamp="20101121T214726-0500"?>"<?oxy_insert_end?>greater
+                than or equal
+                to<?oxy_insert_start author="mmyers" timestamp="20101121T214728-0500"?>"<?oxy_insert_end?>
+                probability.</hint>
+        </part>
+        
+        <part>
+            <response input="C" match="res1" name="P(X > 2)" score="1">
+                <feedback>Correct. <em>More than two</em>, which is the same as greater than
+                    two.</feedback>
+            </response>
+            <response input="C" match="res2" name="P(X ≥ 2)" score="0">
+                <feedback>Incorrect. You have "<em>at least two</em>," which includes
+                    two. We want strictly more than. Please try again.</feedback>
+            </response>
+            <response input="C" match="res3" name="P(X &lt; 2)" score="0">
+                <feedback>Incorrect. You have chosen less than two, but we want
+                        <em>more than two</em>. Please try again.</feedback>
+            </response>
+            <response input="C" match= "res4" name="P(X ≤ 2)" score="0">
+                <feedback>Incorrect. The symbol "<em>≤</em>" means at most two
+                    children. We want "<em>more than</em>" two children. Please try
+                    again.</feedback>
+            </response>
+            <hint>The key words here are "<em>more than</em>."</hint>
+        </part>
+        
+        
+        <part>
+            <response input="D" match="res1" name="1 - P(X > 2)" score="0">
+                <feedback>Incorrect. You are correct that to find the complement you'd
+                    use:
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T214615-0500"?>"<?oxy_insert_end?>1
+                    -
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T214617-0500"?>..."<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T214619-0500" content="."?>
+                    However, you have not taken the complement of <em>X > 2</em>. Please try
+                    again.</feedback>
+            </response>
+            <response input="D" match="res2" name="1 - P(X ≥ 2)" score="0">
+                <feedback>Incorrect.  You need the complement of X > 2.  Please try again.</feedback>
+            </response>
+            <response input="D" match="res3" name="1 - P(X &lt; 2)" score="0">
+                <feedback>Incorrect.  Less than 2 is not the complement of greater than 2, since neither includes X = 2.  Please try again.</feedback>
+            </response>
+            <response input="D" match= "res4" name="1 - P(X ≤ 2)" score="1">
+                <feedback>Correct. To find P(X > 2) we need to use the complement, since technology
+                    finds only cumulative P(X ≤ x) probabilities. The complement of greater than two
+                    is less than or equal to two. </feedback>
+            </response>
+            <hint>Use
+                complements<?oxy_insert_start author="mmyers" timestamp="20101121T214701-0500"?>,<?oxy_insert_end?>
+                since all forms of technology use cumulative P(X ≤ x) binomial distributions to find
+                a
+                <?oxy_insert_start author="mmyers" timestamp="20101121T214710-0500"?>"<?oxy_insert_end?>greater
+                than<?oxy_insert_start author="mmyers" timestamp="20101121T214712-0500"?>"<?oxy_insert_end?>
+                probability.</hint>
+        </part>
+        
+    </question>
+    </assessment>

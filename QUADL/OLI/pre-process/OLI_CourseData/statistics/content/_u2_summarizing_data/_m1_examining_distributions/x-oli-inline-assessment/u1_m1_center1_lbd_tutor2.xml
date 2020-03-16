@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u1_m1_center1_lbd_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+<body>
+   <p>Now find the median reading level of the patients:</p>
+   <p>Note that the data are already ordered&#8212;that's good!</p>
+   <p>We have n = <input_ref input="A"/> observations of the reading level of cancer patients.</p>
+   <p>Since n is <input_ref input="B"/>, the median reading level will be the <input_ref input="C"/> in the ordered data, which in this case is the <input_ref input="D"/> ranked observation.</p>
+   <p>The median reading level is therefore <input_ref input="E"/>.</p>
+</body>
+<fill_in_the_blank id="A" shuffle="false">
+	 <choice value="one">12</choice>
+	 <choice value="two">30</choice>
+   <choice value="three">63</choice>
+   <choice value="four">93</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="B" shuffle="false">
+	 <choice value="one">even</choice>
+	 <choice value="two">odd</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="C" shuffle="false">
+	 <choice value="one">center observation</choice>
+	 <choice value="two">average of the two center observations</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="D" shuffle="false">
+	 <choice value="one">31st</choice>
+	 <choice value="two">32nd</choice>
+   <choice value="three">63rd</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="E" shuffle="false">
+	 <choice value="one">7</choice>
+	 <choice value="two">7.5</choice>
+   <choice value="three">8</choice>
+   <choice value="four">9</choice>
+</fill_in_the_blank>
+      <part>
+         <response input="A" name="12" match="one">
+            <feedback>Incorrect. 12 is the number of possible reading levels (&lt;3, 3,
+               4, ... 12, &gt;12). Ask for a hint and try again.</feedback>
+         </response>
+         <response input="A" name="30" match="two">
+            <feedback>Incorrect. 30 is the number of pamphlets that were evaluated.  Ask for a hint and try again.</feedback>
+         </response>
+         <response input="A" name="63" match="three" score="1">
+            <feedback>Correct.</feedback>
+         </response>
+         <response input="A" name="93" match="four">
+            <feedback>Incorrect.  Ask for a hint and try again.</feedback>
+         </response>
+         <hint>Read the cover story for this problem again. How many data points (or observations)
+            of the reading level of cancer patients do we have?</hint>
+      </part>
+      <part>
+         <response input="B" name="even" match="one">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <response input="B" name="odd" match="two" score="1">
+            <feedback>Correct.</feedback>
+         </response>
+		<hint>Is the number of data points we have even or odd?</hint>
+      </part>
+      <part>
+         <response input="C" name="center" match="one" score="1">
+            <feedback>Correct.</feedback>
+         </response>
+         <response input="C" name="average" match="two">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <hint>Recall that when n (the number of observations) is odd, the median is the center
+            observation in the ordered data. When n is even, the median is the average of the two
+            center observations in the ordered data.</hint>
+      </part>
+      <part>
+         <response input="D" name="31st" match="one">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <response input="D" name="32nd" match="two" score="1">
+            <feedback>Correct.</feedback>
+         </response>
+         <response input="D" name="63rd" match="three">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <hint>Recall that when n is odd, the value of the median is located at the (n + 1)/2 spot
+            in the ordered data.</hint>
+      </part>
+      <part>
+         <response input="E" name="7" match="one">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <response input="E" name="7_5" match="two">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <response input="E" name="8" match="three">
+            <feedback>Incorrect.</feedback>
+         </response>
+         <response input="E" name="9" match="four" score="1">
+            <feedback>Correct.</feedback>
+         </response>
+         <hint>Note that the data are grouped, so make sure you consider the counts.</hint>
+      </part>
+   </question>
+</assessment>

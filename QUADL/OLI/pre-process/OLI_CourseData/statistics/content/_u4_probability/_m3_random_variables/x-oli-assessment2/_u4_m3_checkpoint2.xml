@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u4_m3_checkpoint2" max_attempts="3" recommended_attempts="1">
+    <title>Random Variables Checkpoint 2</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u4_m3_checkpoint2.pdf">Solution Set</link>.</p>
+    </content>-->
+    <numeric id="prob3-5">
+        <body>
+            <p>The number of people in a car that crosses a certain bridge is represented by the
+                random variable X, which has a mean value &#x3BC;<sub>X</sub> = 2.7, and a variance
+                    &#x3C3;<sup>2</sup><sub>X</sub> = 1.2. The toll on the bridge is $3.00 per car
+                plus $0.50 per person in the car.</p>
+            <p>What is the mean of the total amount of money that is collected from a car that
+                crosses the bridge? Report your answer to two decimal places. Do NOT include a
+                dollar sign ($) when reporting your answer.</p>
+            <p><input_ref input="A"/></p>
+            <p>What is the variance of the total amount of money that is collected from a car that
+                crosses the bridge? Report your answer to two decimal places. Do NOT include a
+                dollar sign ($) when reporting your answer.</p>
+            <p><input_ref input="B"/></p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"/>
+            <choice value="B"/>
+        </input>
+        <part>
+            <response input="A" match="4.35" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of 3 dollars
+                    (regardless of the number of passengers) and $ .50 for every passenger, thus T =
+                    3 + 0.50 * X. To find the mean of T you use the rule of means:
+                        μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub> = 3 + 0.5(2.7) = 3 + 0.5(2.7) =
+                    4.35.</feedback>
+            </response>
+            <response input="A" match="1.35" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. The
+                    transformation you used was 0.5 X. However, you forgot about the constant part
+                    of the toll, which is the $3.00 that each car must pay.</feedback>
+            </response>
+            <response input="A" match="8.60" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. You
+                    used μ<sub>(a+bX)</sub> = 0.5 + 3 μ<sub>X</sub>. However, the constant part of
+                    the toll is $3.00/car and the variable part is $0.50/mile.</feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of 3 dollars
+                    (regardless of the number of passengers) and $ .50 for every passenger. Thus, T =
+                    3 + 0.50 * X. To find the mean of T, you use the rule of means:
+                        μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>.</feedback>
+            </response>
+            <response input="B" match="0.30" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of 3 dollars
+                    (regardless of the number of passengers) and $0.50 for every passenger. Thus, T =
+                    3 + 0.50 * X. To find the variance of T, you use the rule of variances:
+                        σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup> σ<sup>2</sup><sub>X</sub> =
+                    (0.5)2(1.2) = 0.25(1.2) = 0.30.</feedback>
+            </response>
+            <response input="B" match="0.60" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a + bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. The <em style="italic">a</em> represents the constant part of
+                    the toll, and the <em style="italic">b</em> represents the variable part.</feedback>
+            </response>
+            <response input="B" match="3.30" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a + bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. It appears that you used σ<sup>2</sup><sub>a +
+                        bX</sub> = a + b<sup>2</sup> σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response input="B" match="*" score="0">
+                <feedback>Incorrect. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of 3 dollars
+                    (regardless of the number of passengers) and $0.50 for every passenger. Thus, T =
+                    3 + 0.50 * X. To find the variance of T, you use the rule of variances:
+                        σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup>
+                    σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+        </part>
+    </numeric>
+    <multiple_choice id="prob3-8" select="single">
+        <body>A parking garage has two entrances. Let X
+            be the number of cars that enter the garage through door A in an
+            hour, and Y be the number of cars that enter through door B in an hour. Assuming that
+                &#956;<sub>X</sub> = 15 and &#956;<sub>Y</sub> = 25, what is the mean of Z, the
+            total number of cars that enter the garage in an hour?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; 10</choice>
+            <choice value="B"> &#160;&#160; 15</choice>
+            <choice value="C"> &#160;&#160; 25</choice>
+            <choice value="D"> &#160;&#160; 40</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+                        &#956;<sub>X</sub> + &#956;<sub>Y</sub>. 10 is &#956;<sub>Y</sub> -
+                        &#956;<sub>X</sub>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+                        &#956;<sub>X</sub> + &#956;<sub>Y</sub>. 15 is
+                    &#956;<sub>X</sub>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall that since Z = X + Y, &#956;<sub>Z</sub> =
+                        &#956;<sub>X</sub> + &#956;<sub>Y</sub>. 25 is
+                    &#956;<sub>Y</sub>.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since Z = X + Y, &#956;<sub>Z</sub> = &#956;<sub>X</sub> +
+                        &#956;<sub>Y</sub> = 15 + 25 = 40.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</assessment>

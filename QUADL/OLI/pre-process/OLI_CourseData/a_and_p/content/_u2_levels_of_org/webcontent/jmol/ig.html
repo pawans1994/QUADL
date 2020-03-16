@@ -1,0 +1,332 @@
+<HTML>
+<HEAD><TITLE>
+Immunoglobulins
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("black");
+ </script>
+
+<TABLE WIDTH="850" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<TH Colspan=2 align=left>Biochemistry I</TH>
+<TH colspan=2 align=right>Immunoglobulins</TH>
+
+<TR>
+
+<TD>&nbsp;</TD>
+
+<TD VALIGN=TOP WIDTH=425>
+ <script type="text/javascript">
+ jmolApplet([420,380],
+ "load ./jmol/pdbs/ig/Igg.pdb; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select all","left");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("left")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+</TD>
+ 
+ <TD>&nbsp;</TD>
+ <TD VALIGN=TOP WIDTH=425>
+  <script type="text/javascript">
+  jmolApplet([420,380],
+  "load ./jmol/pdbs/ig/Igg.pdb; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select all","right");
+  </script><BR>
+   <script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolRadioGroup([
+    ["background white;color labels black","white",true],
+    ["background gray;color labels black","gray",false],
+    ["background [100,100,255];color labels black","Lt blue",false],
+    ["background black;color label yellow","black",false]]," ","Background color")
+   </script>
+   <script type="text/javascript">
+    jmolSetTarget("right")
+    jmolCheckbox("spin on","spin off", "Spin", false)
+   </script>
+ </TD>
+</TR>
+
+<TR>
+<TD>&nbsp;</TD>
+<TD BGCOLOR="#eeeeee" VALIGN="TOP"><FONT COLOR="#000000">
+<B>Immunoglobulin Structure</B><BR>
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730; label ' Immunoglobulin';set fontsize 9;color labels yellow;select all","","","Complete Igg");  
+ </script>&nbsp;Igg
+
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("left") 
+ jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200]; set specular on;select atomno=1714;label ' Light Chains';set fontsize 9;color labels yellow;select *:A;backbone 200;color backbone cyan;select *:C;backbone 200;color backbone cyan;select all","","","Light Chain");  
+</script>&nbsp;Lt C
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Heavy Chains';set fontsize 9;color labels yellow;select *:b;color backbone yellow;select *:D;color backbone orange;select all","","","Heavy Chain");  
+ </script>&nbsp;Hv C
+
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("left") 
+ jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=9241;label ' Variable Regions';set fontsize 9;color labels yellow;select *:a and (1-108);color backbone purple;select *:b and (1-114);color backbone gold;select *:c and (1-108);color backbone purple; select *:d and (1-114);color backbone gold;select all","","","Hypervariable domain");  
+</script>&nbsp;Var R
+
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("left") 
+ jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=9235;label ' Hyper-variable regions';set fontsize 9;color labels yellow; select *:a and (24-34,50-56,89-97);color backbone purple; select *:b and (31-35,50-65,98-105);color backbone gold; select *:c and (24-34,50-56,89-97);color backbone purple; select *:d and (31-35,50-65,98-105);color backbone gold;select all","","","Hypervariable loops");  
+</script>&nbsp;Hpr V
+ <br>
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 1-214:A;color backbone cyan;select 1-230:B;color backbone orange;select all","","","Fab fragment");  
+ </script>&nbsp;Fab
+  
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 236-474:B;color backbone yellow; select 236-474:D;color backbone gold;select all","","","Fc fragment");  
+ </script>&nbsp;Fc
+  
+ &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 1-105:a;color backbone cyan;select 1-110:b;color backbone orange;select all","","","Fv fragment");  
+  </script>&nbsp;Fv
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/Igg_l_fv.pdb;reset; rotate z -5.47; rotate y 105.74; rotate z 178;select *;wireframe off;spacefill off;select *B;color [200,200,200];select 24-34:A,50-56:A,89-97:A,31-35:B,50-65:B,98-100:B;color yellow;select all;cartoon;select cys and (*.CA,*.CB,*.SG);wireframe 0.5;color cpk;select all","","","Fv fragment");  
+ </script>&nbsp;Ig fold
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolButton("zap;load ./jmol/pdbs/ig/Igg_cys.pdb;reset;select *;rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select *:A,*:C;color backbone cyan;select cys;wireframe 200;color [255,255,0];ssbonds 240;color ssbonds [255,255,0];select all","","","Disulfide Bonds");  
+  </script>&nbsp;S-S
+<br>
+<B>Antibody-Hapten Interactions</B><BR>
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/an02.pdb;wireframe off;backbone 100;spacefill off;color backbone [140,140,140]; select *:H;color backbone [150,150,150]; select atomno=1000;label 'L';select atomno=3119;label 'H'; select 24-34:L,50-56:L,89-97:L,31-34:H,50-65:H,98-105:H;backbone 100;color backbone yellow; select 90:L,100:H,88:L,NPP;wireframe 80;spacefill 120;set specular on;center NPP;select atomno=4079;label 'DNP ';set fontsize 10;color labels yellow;select all;zoom 150","","","Hapten Binding");  
+ </script>&nbsp;DNP+Ab
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("move 0 0 0 300 0 0 0 0 2; select npp and carbon;color [130,130,130];select all","","","Hapten Binding");  
+ </script>&nbsp;zoom
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/an02.pdb;wireframe off;spacefill off;select 90:L,100:H,88:L,NPP;wireframe 80;spacefill 120;set specular on;select all;color white;select carbon;color [150,150,150];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,255,0];select *:a;color red;select all;center NPP;select atomno=4079;label 'DNP ';set fontsize 10;color labels yellow;select all;zoom 250","","","Hapten Binding");  
+ </script>&nbsp;Interactions
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("restrict elemno>1;select npp,(90:L and sidechain and elemno>1),(100:H and sidechain and elemno>1);set dotsSelectedOnly true;dots VANDERWAALS;color dots [200,200,200];dots on;select all","","","Hapten Binding");  
+ </script>&nbsp;Dots
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/an02.pdb;rotate x 180;wireframe 100;backbone off;  select all;color white;select carbon;color [150,150,150];  select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,255,0];  center NPP;select atomno=4079;label 'DNP ';set fontsize 10;color labels yellow;restrict NPP;zoom 400;select all","","","Hapten");  
+ </script>&nbsp;DNP
+
+<B>Antibody-Antigen (Lysozyme) Interactions </B><BR>
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/1vfb.pdb;rotate y -61;wireframe off;spacefill off;backbone 200;color backbone [150,150,150];select *:c;color backbone red;select atomno=1008;label '  D1.3'  ;select atomno=2612;label ' lysozyme';set fontsize 9;color labels yellow;select all","","","Anti-lysozyme");  
+ </script>&nbsp;Complex.
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("select *:a;color backbone cyan;select all","","","Anti-lysozyme");    </script>&nbsp;Lt C.
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("select *:a;color backbone [150,150,150];select *:b;color backbone gold;select all","","","Anti-lysozyme");  
+ </script>&nbsp;Hv C.
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("select *:a,*:b;color backbone [150,150,150];select 24-34:A,50-56:A,89-97:A;color backbone cyan;select 31-35:B,50-65:B,98-105:B;color backbone gold;select atomno=2137;label 'H chain';set fontsize 9;color labels yellow;set specular on;select *:c;color backbone red;select all","","","Hypervariable loops");  
+ </script>&nbsp;HprV
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("zap;load ./jmol/pdbs/ig/1vfb.pdb;wireframe off;spacefill off;backbone 120;color backbone red;select 24-34:A,50-56:A,89-97:A;color backbone cyan;select 31-35:B,50-65:B,98-105:B;color backbone gold;select atomno=2819;label '  Lysozyme';select atomno=2137;label 'H chain';set fontsize 9;color labels yellow;select 92:A,121:C,124:C,125:C;wireframe 100;set specular on;color white;select carbon;color [150,150,150];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,255,0];select 92:A,121:C,124:C,125:C;center 92:A;zoom 200;select all","","","Interactions");  
+ </script>&nbsp;Interactions
+ <!--
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("select hoh180,hoh181,hoh200;color purple;spacefill 200;center 92:A;select all","","","Water");  
+ </script>&nbsp;Interfacial waters
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("left") 
+  jmolButton("move 0 0 0 250 0 0 0 0 2","","","Water");  
+ </script>&nbsp;zoom
+-->
+ 
+</P>
+</TD>
+<TD > &nbsp;</TD>
+
+<TD WIDTH=425 BGCOLOR="#eeeeee" VALIGN="TOP"><FONT COLOR="#000000">
+ <B>Immunoglobulin Structure</B><BR>
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730; label ' Immunoglobulin';set fontsize 9;color labels yellow;select all","","","Complete Igg");  
+  </script>&nbsp;Igg
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200]; set specular on;select atomno=1714;label ' Light Chains';set fontsize 9;color labels yellow;select *:A;backbone 200;color backbone cyan;select *:C;backbone 200;color backbone cyan;select all","","","Light Chain");  
+  </script>&nbsp;Lt C
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Heavy Chains';set fontsize 9;color labels yellow;select *:b;color backbone yellow;select *:D;color backbone orange;select all","","","Heavy Chain");  
+  </script>&nbsp;Hv C
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=9241;label ' Variable Regions';set fontsize 9;color labels yellow;select *:a and (1-108);color backbone purple;select *:b and (1-114);color backbone gold;select *:c and (1-108);color backbone purple; select *:d and (1-114);color backbone gold;select all","","","Hypervariable domain");  
+  </script>&nbsp;Var R
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=9235;label ' Hyper-variable regions';set fontsize 9;color labels yellow; select *:a and (24-34,50-56,89-97);color backbone purple; select *:b and (31-35,50-65,98-105);color backbone gold; select *:c and (24-34,50-56,89-97);color backbone purple; select *:d and (31-35,50-65,98-105);color backbone gold;select all","","","Hypervariable loops");  
+  </script>&nbsp;Hpr V
+  <br>
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 1-214:A;color backbone cyan;select 1-230:B;color backbone orange;select all","","","Fab fragment");  
+   </script>&nbsp;Fab
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 236-474:B;color backbone yellow; select 236-474:D;color backbone gold;select all","","","Fc fragment");  
+   </script>&nbsp;Fc
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("load ./jmol/pdbs/ig/Igg.pdb;select *; rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select 1-105:a;color backbone cyan;select 1-110:b;color backbone orange;select all","","","Fv fragment");  
+   </script>&nbsp;Fv
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("zap;load ./jmol/pdbs/ig/Igg_l_fv.pdb;reset; rotate z -5.47; rotate y 105.74; rotate z 178;select *;wireframe off;spacefill off;select *B;color [200,200,200];select 24-34:A,50-56:A,89-97:A,31-35:B,50-65:B,98-100:B;color yellow;select all;cartoon;select cys and (*.CA,*.CB,*.SG);wireframe 0.5;color cpk;select all","","","Fv fragment");  
+   </script>&nbsp;Ig fold
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("zap;load ./jmol/pdbs/ig/Igg_cys.pdb;reset;select *;rotate z -26.36; rotate y 116.87; rotate z 65.73;wireframe off;backbone 200;color backbone [200,200,200];set specular on;select atomno=12730;label ' Immunoglobulin';set fontsize 9;color labels yellow;select *:A,*:C;color backbone cyan;select cys;wireframe 200;color [255,255,0];ssbonds 240;color ssbonds [255,255,0];select all","","","Disulfide Bonds");  
+   </script>&nbsp;S-S<br>
+   
+&nbsp;
+<B>Antibodies in Drug Treatment</B><BR>
+ &nbsp;
+ <A href="pcp_move.html" Target="AAleft"><img src="button.gif" width=12 border=0></A>&nbsp;&nbsp; Rat Drug Studies (opens new window)
+  <BR>
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("zap;load ./jmol/pdbs/ig/pcp.pdb;color cpk;wireframe 120;set specular on;select *;color cpk;wireframe off;wireframe 100;set specular on;select all","","","PCP");  
+   </script>&nbsp;PCP
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("right") 
+    jmolButton("zap;load ./jmol/pdbs/ig/pcp_ca.pdb;reset;center {-0.73 -6.87 0.09}; rotate z 114.8; rotate y 152.3; rotate z -92.7; translate x -2.16; translate y 35.16;select all;color white;select carbon;color [150,150,150];select oxygen;color red;select nitrogen;color [120,80,255];select (not protein) and (not water);spacefill;select (not protein) and (not water) and carbon;color [200,200,200];select protein;backbone 200;select (not protein) and (not water);color [200,200,200];select 1PC;color purple;select all","","","PCP");  
+   </script>&nbsp;PCP+Fab
+   
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("right") 
+jmolButton("select *:A;color green;select *:B;color blue;select (not protein) and (not water);spacefill;color cpk;select 1PC;color purple;select all","","","Color Chains");  
+</script>&nbsp;Color Chains
+ <br>  
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("right") 
+ jmolButton("zap;load ./jmol/pdbs/ig/pcp_fv.pdb; rotate z 126.26; rotate y 124.58; rotate z -88.78;select all;wireframe off;spacefill off;select protein;cartoon;color group;select (not protein) and (not water);spacefill;color yellow;select 1PC;color purple;select all;","","","PCP");  
+</script>&nbsp;Fv
+ 
+ &nbsp;<script type="text/javascript">
+  jmolSetTarget("right") 
+  jmolButton("zap;load ./jmol/pdbs/ig/pcp_fv.pdb; rotate z 126.26; rotate y 124.58; rotate z -88.78;select all;wireframe off;spacefill off;select protein;backbone 100;select ((89,32,96,92,his27) and (*:A));wireframe 120;color cpk;select ((100,47,35,50,33) and (*:B));wireframe 120;color cpk;select (not protein) and (not water);color yellow;wireframe 100;center atomno=6646;zoom 225;select all;","","","PCP");  
+ </script>&nbsp;Hphob
+   
+   
+  
+  &nbsp;&nbsp;Surface<script type="text/javascript">
+   jmolSetTarget("right") 
+   jmolButton("load ./jmol/pdbs/ig/pcp_fv.pdb; rotate z 126.26; rotate y 124.58; rotate z -88.78;select all;wireframe off;spacefill off;select protein;backbone 100;select ((89,32,96,92,his27) and (*:A));wireframe 120;color cpk;select ((100,47,35,50,33) and (*:B));wireframe 120;color cpk;select (not protein) and (not water);color yellow;wireframe 100;center atomno=6646;zoom 225;select all;set defaultTranslucent 0.5;select 1:C;define pcp selected;isoSurface surf1 select(pcp) ignore(not pcp) molecular;color $surf1 orange;color $surf1 translucent;select within (8.0,1:C);define pocket selected;isoSurface surf2 select(pocket) ignore(pcp) molecular;color $surf2 grey","","","surface");
+   jmolCheckbox("isosurface surf1 off","isosurface surf1 on", "Surf 1 -/+", false);
+   jmolCheckbox("isosurface surf2 off","isosurface surf2 on", "Surf 2 -/+", false)
+  </script>
+  </script>
+  
+   
+  
+  </TD>
+</TR>
+ <tr><td colspan=4><B>Note:</B> Many of the Jmol commands will not work on the intact immunoglobulin structure because the coordinate file only contains Ca carbons.</tr></td>
+</TABLE>
+
+
+
+<table width=850>
+ <TR>
+ <TD>
+<HR>
+Notes:
+<OL>
+<LI>Immunoglobulin Structure
+<OL>
+<LI>Immunoglobulins contain four chains, two <B>light chains</B>, two <B>heavy chains</B>.
+<LI>Each chain has a <B>variable region</B> and a <B>constant region</B>. The variable region binds the foreign material.
+<LI>The size of the variable region is about 100 residues. Each variable region contains 3 <B>hyper-variable</B> segments (see section 3).
+<LI><B>Fab</B> fragment contains the antigen binding region. It is composed of a complete light chain and one half of a heavy chain.
+<LI>Fc fragment does not bind antigen. It is composed of two partial heavy chains (constant region).
+<LI><B>Fv</B> fragment binds antigen and just contains the variable regions of the light and heavy chain.
+<LI>The <B>immunoglobulin fold</B> is the smallest independent structural domain in immunoglobulins. Each light chain has two of these domains and each heavy chain has four.
+<LI>Both inter- and intra-chain disulfide bonds are present.
+<LI>Immunoglobulins are glycosylated (not shown here)
+</OL>
+
+<LI>Antibody-Hapten Interactions
+
+<OL>
+<LI>A <B>hapten</B> is a small molecule that is recognized by immunoglobulins. A dinitrophenyl derivative in this particular case.
+<LI>All types of favorable energetic interactions are observed, hydrophobic, hydrogen bonding, van der Waals, etc.
+</OL>
+
+<LI>Antibody-Antigen Interactions
+
+<OL>
+<LI><B>Antigens</B> are larger molecules that are recognized by immunoglobulins. Can be proteins, sugars, nucleic acids. In this example the antigen is the protein lysozyme.
+<LI><B>Epitope</B> is the surface of the antigen that binds to the antibody, usually quite large 600-900 A<sup>2</sup>
+<LI>Hypervariable regions (complementarity determining regions, CDRS) on both heavy and light chains are used to interact with antigen.
+<LI>Interface between antibody and antigen is stabilized by same interactions used to stabilize protein folding and protein-protein interactions in general.
+<LI>Interface between antibody and antigen often contains buried water molecules.
+</OL>
+
+<LI>Antibody-Drug Interactions
+<OL>
+<LI>The PCP-antibody complex is stabilized by hydrophobic interactions
+<LI>The PCP-antibody complex is also stabilized by van der Waals forces - note the very close packing between PCP and sidechains.
+</OL>
+</OL>
+</td></tr></table>
+<!-- 
+<TT>Last modified Dec, 2007.</TT>
+ -->
+</BODY>
+</HTML>

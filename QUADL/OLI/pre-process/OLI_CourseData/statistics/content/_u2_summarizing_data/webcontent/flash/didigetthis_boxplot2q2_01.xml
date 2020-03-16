@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="BoxPlot2of3q1" title="question_1">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">What percentage of the graduates will have a debt greater than $25,000?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">19%</mattext></material></response_label>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">25%</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">50%</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">75%</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">81%</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect. The boxplot indicates that $25,000 is the third quartile (Q3). What % of the data fall above Q3?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Correct. Since $25,000 is the third quartile (Q3), one-quarter of the graduates will have a debt greater than this amount.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. The boxplot indicates that $25,000 is the third quartile (Q3). What % of the data fall above Q3?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. The boxplot indicates that $25,000 is the third quartile (Q3). What % of the data fall above Q3?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Incorrect. The boxplot indicates that $25,000 is the third quartile (Q3). What % of the data fall above Q3?</mattext></material></itemfeedback></item></questestinterop>

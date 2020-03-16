@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_mean3_tutor2">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>Which distribution is a plausible representation of 100 samples, with each sample
+                    containing 50 randomly selected students? </p>
+                <image src="../webcontent/tutors/9_5_img1.gif" alt="four histograms"/>
+                <input_ref input="C"/>
+            </body>
+            <multiple_choice id="C" shuffle="false">
+                <choice value="one">A</choice>
+                <choice value="two">B</choice>
+                <choice value="three">C</choice>
+                <choice value="four">D</choice>
+            </multiple_choice>
+
+            <part>
+                <response input="C" match="one">
+                    <feedback>Incorrect. It is true that this distribution could have a mean of
+                        &#956; = 2,600, but the standard deviation looks like it is smaller than the
+                        predicted value of 70 (&#963;/√(n) = 500/√(50) &#8773;
+                        70). Using the Standard Deviation Rule,approximately 68% of the values
+                        should be between 2,530 and 2,670 (within one standard deviation of the
+                        mean.) In <link
+                            href="javascript:loadImage('../webcontent/tutors/9_5_img2.gif')">Graph
+                            A</link> this range covers more than 68% of the values, as shown. </feedback>
+                </response>
+                <response input="C" match="two" score="1">
+                    <feedback>Correct. The sampling distribution will have a mean of 2,600 and a
+                        standard deviation of 70. Using the Standard Deviation Rule, approximately
+                        68% of the values should be between 2,530 and 2,670 (within 1 standard
+                        deviation of the mean.). <link
+                            href="javascript:loadImage('../webcontent/tutors/9_5_img3.gif')">Graph
+                            B</link> looks like it could fit this description. </feedback>
+                </response>
+                <response input="C" match="three">
+                    <feedback>Incorrect. It is true that this distribution could have a mean at
+                        &#956; = 2,600, but the standard deviation looks like it is much larger than
+                        the predicted value of 70: &#963;/√(n) = 500/√(50) &#8773;
+                        70. Using the Standard Deviation Rule, approximately 68% of the values
+                        should be between 2,530 and 2,670 (within 1 standard deviation of the mean.)
+                        In <link href="javascript:loadImage('../webcontent/tutors/9_5_img4.gif')"
+                            >Graph C</link> this range covers a very small percentage of the values,
+                        as shown. </feedback>
+                </response>
+                <response input="C" match="four">
+                    <feedback>Incorrect. The sampling distribution should have a mean at &#956; =
+                        2,600.</feedback>
+                </response>
+            </part>
+        </question>
+
+    </page>
+</assessment>

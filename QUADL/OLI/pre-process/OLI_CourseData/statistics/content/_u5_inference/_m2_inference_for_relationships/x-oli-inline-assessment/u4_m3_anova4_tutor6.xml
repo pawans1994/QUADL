@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_anova4_tutor6">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>In which scenario do the data have a larger within-group variability? </p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">Scenario 1.</choice>
+            <choice value="B">Scenario 2.</choice>
+            <choice value="C">Both scenarios have the same within-group variability.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In scenario 1 we see more spread within each of the four samples
+                    (IQR roughly 30 and full range roughly 60) compared to scenario 2 (IQR roughly 3
+                    and the full range is roughly 6). </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. What is the approximate IQR in each of the samples in scenario
+                    1? What is the approximate IQR in each of the samples in scenario 2? Which one
+                    is larger? </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The two scenarios do not have the same within-group
+                    variability. What is the approximate IQR in each of the samples in scenario 1?
+                    What is the approximate IQR in each of the samples in scenario 2? Which one is
+                    larger? </feedback>
+            </response>
+            <hint>Look at the two sets of boxplots. In which scenario do we see more spread within
+                each of the groups? Look at the IQR (represented by the height of the box) as well
+                as the full range. </hint>
+        </part>
+    </question>
+    <question id="q2">
+        <body>
+            <p>In which scenario do the data have a larger F test statistic? </p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">Scenario 1.</choice>
+            <choice value="B">Scenario 2.</choice>
+            <choice value="C">Both scenarios have the same F test statistic.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that in scenario 1 we have a larger within group
+                    variability. In other words, in scenario 1 the denominator of the F test
+                    statistic is larger. Recall also that in both scenarios the numerator of the F
+                    test statistic is roughly equal (since the sample means in both scenarios are
+                    very similar). </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. In both scenarios the numerator of the F test statistic is
+                    roughly equal (since the sample means in both scenarios are very similar). Since
+                    in scenario 2 we have smaller within group variability and therefore the
+                    denominator of the F test statistic is smaller, the F test statistic is larger.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall that in scenario 1 we have a larger within group
+                    variability. In other words, in scenario 1 the denominator of the F test
+                    statistic is larger. Recall also that in both scenarios the numerator of the F
+                    test statistic is roughly equal (since the sample means in both scenarios are
+                    very similar). </feedback>
+            </response>
+            <hint>Recall that the F test statistic = (Variation between sample means)/(Variation
+                within groups) and that in both scenarios the sample means are very similar and so
+                the numerator in both scenarios is practically the same. </hint>
+        </part>
+    </question>
+    <question id="q3">
+        <body>
+            <p>In which scenario are we more likely to reject H<sub>0</sub> and conclude that the
+                four population score means are not all equal? </p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">Scenario 1.</choice>
+            <choice value="B">Scenario 2.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Scenario 2 has smaller within-group variability and therefore a
+                    larger F test statistic. Recall that the larger the F test statistic, the more
+                    evidence the data provide against the null hypothesis. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Scenario 2 has smaller within-group variability and therefore a
+                    larger F test statistic. The larger the F test statistic, the more evidence the
+                    data provide against the null hypothesis. </feedback>
+            </response>
+            <hint>Recall that the larger the F test statistic, the more evidence the data provide
+                against the null hypothesis. </hint>
+        </part>
+    </question>
+</assessment>

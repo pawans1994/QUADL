@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance1_tutor2">
+   <title>Tutor</title>
+   <content>
+      <p>Here again is the probability distribution of Y, the number of defective parts in an hour in Yves' production line:</p>
+      <image src="../webcontent/dig003.gif"/>
+   </content>
+   <question id="q1">
+      <body>
+         <p>What is the mean of Y?	</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">2</choice>
+         <choice value="Res2">.2</choice>
+         <choice value="Res3">2.7</choice>
+         <choice value="Res4">.54</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Your mistake is probably that you averaged the
+               possible values 0, 1, 2, 3, 4, rather than taking a weighted average of the values
+               <?oxy_insert_start author="mmyers" timestamp="20101121T140618-0500"?>(<?oxy_insert_end?>weighted
+               by their corresponding
+               probabilities<?oxy_insert_start author="mmyers" timestamp="20101121T140621-0500"?>)<?oxy_insert_end?>.
+               Review the definition of the mean of a random variable (on this page), and try again. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Your mistake is probably that you averaged the
+               probabilities rather than taking a weighted average of the values
+               <?oxy_insert_start author="mmyers" timestamp="20101121T140641-0500"?>(<?oxy_insert_end?>weighted
+               by their corresponding
+               probabilities<?oxy_insert_start author="mmyers" timestamp="20101121T140644-0500"?>)<?oxy_insert_end?>.
+               Review the definition of the mean of a random variable (on this page), and try
+               again.</feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101121T140653-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T140652-0500" content="J"?>ob!
+               Indeed, the mean of Y is 0(.05) + 1(.05) + 2(.10) + 3(.75) + 4(.05) = 2.7.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. Your mistake is probably that you found the weighted
+               average of the values
+               <?oxy_insert_start author="mmyers" timestamp="20101121T140708-0500"?>(<?oxy_insert_end?>weighted
+               by their corresponding probabilities<?oxy_insert_start author="mmyers" timestamp="20101121T140718-0500"?>),<?oxy_insert_end?>
+               <?oxy_delete author="mmyers" timestamp="20101121T140714-0500" content="("?>as you
+               should<?oxy_delete author="mmyers" timestamp="20101121T140724-0500" content=")"?>,
+               but then you divided it by 5, which is incorrect. The division already occurred when
+               the probabilities were determined. The mean of a random variable
+               <?oxy_comment_start author="mmyers" timestamp="20101121T140750-0500" comment="use italics rather than all caps for emphasis"?>IS<?oxy_comment_end?>
+               that weighted average. Please try again.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

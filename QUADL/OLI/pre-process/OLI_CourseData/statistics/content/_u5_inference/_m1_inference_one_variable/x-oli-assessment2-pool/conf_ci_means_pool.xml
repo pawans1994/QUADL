@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="conf_ci_means_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_conf_ci_means">
+        <!-- LO: conf_ci_means -->
+        <body>
+            <p>A study was conducted to estimate μ, the mean number of weekly hours that U.S.
+                adults use computers at home. Suppose a random sample of 81 U.S. adults gives a mean
+                weekly computer usage time of 8.5 hours and that from prior studies, the population
+                standard deviation is assumed to be σ = 3.6 hours.</p>
+            <p>We are 95% confident that the mean number of weekly hours that U.S. adults use
+                computers at home falls between which of the following intervals?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">8.1 and 8.9</choice>
+            <choice value="B">8.4 and 8.6</choice>
+            <choice value="C">7.7 and 9.3</choice>
+            <choice value="D">6.5 and 10.5</choice>
+            <choice value="E">7.3 and 9.7</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems that you have found a 68% confidence interval for the
+                    mean rather than a 95% confidence interval for the mean.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the standard deviation you should be using for
+                    this calculation is σ/√n. It appears you forgot to take the square
+                    root of n.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The 95% confidence interval for the mean, μ, is <image style="block" src="../webcontent/conf_ci_means_q1_eq.png" />.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you forgot to multiply the 95% critical value by the
+                    standard deviation (σ/√n).</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. It seems that you have found a 99.7% confidence interval for
+                    the mean rather than a 95% confidence interval for the mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_conf_ci_means">
+        <!-- LO: conf_ci_means -->
+        <body>
+            <p>A study was conducted to estimate μ, the mean commute distance that all employed
+                U.S. adults travel to work. Suppose a random sample of 49 employed U.S. adults gives
+                a mean commute distance of 22 miles and that from prior studies, the population
+                standard deviation is assumed to be σ = 8.4 miles.</p>
+            <p>We are 95% confident that the mean commute distance to work of all employed U.S.
+                adults falls between which of the following intervals?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">20.8 to 23.2</choice>
+            <choice value="B">5.2 to 38.8</choice>
+            <choice value="C">19.6 to 24.4</choice>
+            <choice value="D">18.4 to 25.6</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It appears that you found the 68% confidence interval, x̄
+                    ± 1 * σ/√n, for the mean instead of the 95% confidence
+                    interval.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It appears that you forgot to calculate the standard error of
+                    the mean (σ/√n) before computing the interval.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The 95% confidence interval for the mean, μ, is x̄ ±
+                    2 * σ/√n = 22 ± 2 * 8.4/√49 = 22 ± 2(1.2) = 22 ± 2.4
+                    = 19.6 to 24.4.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you forgot to multiply the 95% critical value by the
+                    standard deviation (σ/√n).</feedback>
+            </response>
+           
+        </part>
+    </multiple_choice>
+</pool>

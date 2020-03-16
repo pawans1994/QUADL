@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="ProteinFolding" version="2">
+    <name>&lt;b&gt;Protein Denaturization&lt;/b&gt;</name>
+    <debugger state="on"/> 
+    <steps>
+         <step id="create">
+           <objects tutor="">
+             <object name="theexplainer" state="visible">
+                  <title>The Effect of Temperature on Protein Unfolding</title>
+             </object>
+               <object>
+                  <text>In this experiment you will study the effect of temperature on protein stability. Alter the temperature using the slider bar and record the experimental fraction unfolded that is presented in the output box. From this data you need to determine the &lt;b&gt;∆S&lt;/b&gt; and &lt;b&gt;∆H&lt;/b&gt; for unfolding using van't Hoft plot
+&lt;br&gt;Use whatever tool you want - &lt;b&gt;Excel&lt;/b&gt; would be a good tool for this. &lt;b&gt;&lt;br&gt;&lt;br&gt;Please enter your last name in the box below.&lt;/b&gt;&lt;br&gt;When you are ready to continue click "Begin Simulation."
+                  </text>
+               </object>  
+               </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="410" xscale="1"  yscale="1"/>  
+                <action event="create" name="beaker" url="swfs/beakerplain.swf"  x="325" y="5" xscale="2"  yscale="1.6"/> 
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="333" y="31" xscale="1"  yscale="1"/>               
+            </actions>
+            <nextbutton text="Click to begin experiment" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="login">
+            <actions>
+                <action event="record light"/> 
+                <action event="create" name="pf_math" url="tools/pf_math.swf"  x="333" y="31" xscale=".8" yscale=".8" />
+                <action event="create" name="slider1" url="tools/thermometer.swf"  x="680" y="31" xscale="1"  yscale=".9"/>
+                <action event="create" name="input1" url="tools/DisplayValue.swf"  x="480" y="310" xscale="1"  yscale="1"/>
+                <!--  <action event="create" name="input2" url="tools/InputWithLabel.swf" state="visible" x="480" y="330" xscale="1"  yscale="1"/> --> 
+            </actions>
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                 <title>The Effect of Temperature on Protein Unfolding</title>
+                 <text>In this experiment you will study the effect of temperature on protein stability. Alter the temperature using the slider bar and record the experimental fraction unfolded that is presented in the output box. From this data you need to determine the &lt;b&gt;∆S&lt;/b&gt; and &lt;b&gt;∆H&lt;/b&gt; for unfolding using van't Hoft plot
+                     &lt;br&gt;Use whatever tool you want - &lt;b&gt;Excel&lt;/b&gt; would be a good tool for this. &lt;b&gt;&lt;br&gt;&lt;br&gt;Please enter your last name in the box below.&lt;/b&gt;&lt;br&gt;When you are ready to continue click "Begin Simulation."
+                 </text>
+             </object>
+                <object name="userinput" state="hilight"/>
+                 <object name="slider1" state="visible"/>
+            </objects>
+            <nextbutton text="Begin Simulation" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="run">
+            
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                <title>Showing Protein folding at different termeratures.</title>
+                <text>Alter the temperature using the slider bar and record the experimental fraction unfolded that is presented in the output box. From this data you need to determine the &lt;b&gt;∆S&lt;/b&gt; and &lt;b&gt;∆H&lt;/b&gt; for unfolding using van't Hoft plot
+                    &lt;br&gt;Use whatever tool you want - &lt;b&gt;Excel&lt;/b&gt; would be a good tool for this.
+                </text>
+                </object>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="input1" state="visible"/>
+                <object name="input2" state="visible"/>
+                <object name="userinput" state="visible"/>
+                <object name="slider1" state="visible"/>
+             <!--  <object name="userinput" state="hilight"/>-->
+            </objects>
+            <actions>
+                <action event="sendmessage" name="userinput" params="checkvalue" />
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=410,topBorder=0,bottomBorder=330,leftBorder2=50,rightBorder2=360,topBorder2=0,bottomBorder2=230">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule-->     
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "0"  cast= "moleculePFE"  state1="folded?2" state2="unfolded?2"  rotationVelocity="0"  rotation="0"  mytype="molecule"  myID="1"  mybounce="true" changestate="yes"/>                               
+                    </molecules>/>            
+                </action>
+                <action event="initialize" name="pf_math" params="deltaS?A-C:557|D-H:588|I-L:619|M-O:650|P-S:681|T-Z:712,deltaH?A-C:180000|D-H:190000|I-L:200000|M-O:210000|P-S:220000|T-Z:230000,experror?A-C:.025|D-H:.025|I-L:.025|M-O:.025|P-S:.025|T-Z:.025"/>
+                <action event="datainit" name="input1" label="Fraction Folded" value="1.00"  />
+                <action event="initialize" name="input1" params="thevariable=f_f,thelabel=Fraction Folded,thevalue=1.00" /> 
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=60,y=0,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=150,y=0,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=240,y=0,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=330,y=0,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=105,y=120,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=195,y=120,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=285,y=120,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=60,y=200,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=150,y=200,Xoffset=5,Yoffset=5" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=240,y=200,Xoffset=5,Yoffset=5" />
+
+                <action event="record all"/>
+             </actions>
+            <nextbutton text="Quit" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+         <step id="quit">
+            <title>Protein Folding Graphing</title>
+            <text>You should now take your data points and graph them in Excel.
+                &lt;br&gt;
+               &lt;br&gt; Click "Exit" to close this simulator.
+            </text>
+            <!--<question> My initial definition of Equilibrium is: </question>-->
+             <objects tutor="">
+                <object name="theexplainer" state="visible" action="new" instanceof="grapher"/>
+                <object name="equation1" state="visible" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="beaker" state="visible"/>
+            </objects>
+           <actions>
+                <action event="record all"/>
+                <action event=""/>
+            </actions>
+            <nextbutton text="Exit"  state="1" />
+           <prevbutton text="Back" action="back" state="0"/>
+        </step>
+             
+    </steps>
+</simulation>

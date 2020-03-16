@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m3_lbd10">
+    <head>
+        <title>Normal Random Variables</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to show you how to solve word problems involving the
+            normal distribution. Most statistical software packages, much like the normal table, are
+            set up to give answers to problems involving "less than." This means that the software
+            does the "finding z-scores and looking up the table" work for us, but we still need to
+            make sure that we pose the question in terms of "less than," and/or, if needed, adjust
+            the answer that the software gives us.</p>
+        <p>Recall that we have two types of problems that are of interest: finding probabilities
+            given values, and finding values given probabilities. Below are the instructions for
+            both types. </p>
+        <section>
+            <title>Finding Probabilities (Given Values)</title>
+            <body>
+                <p>To illustrate this we'll use an example from a previous activity: Finding P(X
+                    &gt; 700) where X is the SAT-M score which has a normal distribution with a mean
+                    of 507 and standard deviation of 111.</p>
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>One advantage of R is that it will find probabilities without first
+                                requiring you to reduce the data to z-scores. To find the
+                                probability P(X &lt; 700), start R and enter the command:</p>
+
+                            <code>pnorm(700, mean=507, sd=111)</code>
+
+                            <p>You should see that the probability is equal to 0.9589596. To
+                                calculate the probability P(X &gt; 700) = 1 - P(X &lt; 700),
+                                enter</p>
+
+                            <code>1- pnorm(700, mean=507, sd=111)</code>
+
+                            <p>Note that when we solved this problem using the table in an earlier
+                                activity, we rounded z-scores and therefore our answer was slightly
+                                different, but very close (.0409).</p>
+                            <p>Similarly, if we wanted to find P(400 &lt; X &lt; 600), we would need
+                                to do two separate calculations; one for P(X &lt; 600), and one for
+                                P(X &lt; 400), and subtract.</p>
+                            <p>Now use R to work through the following exercise:</p>
+                            <!--<wb:inline idref="_u4_m3_lbdtutor10ar"/>-->
+                            <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="650">
+                            <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor10ar.xml</param>
+                            <param name="problem_name">_u4_m3_lbdtutor10ar</param>
+                            </flash>-->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <ul>
+                                <li>Open StatCrunch.</li>
+                                <li>Choose Stat → Calculators → Normal.</li>
+                                <li>Enter the mean and standard deviation, which in this case are
+                                    507 and 111.</li>
+                                <li>Select the appropriate symbol, which in this case is "= &gt;."
+                                    (Note that for continuous random variables &gt; and ≥ have
+                                    equivalent probabilities.)</li>
+                                <li>Enter the normal value x, which in this case is 700.</li>
+                                <li>Click on Compute</li>
+                            </ul>
+                            <p>The StatCrunch result is 0.04104036.</p>
+                            <p>Note that when we solved this problem using the table in an earlier
+                                activity, we rounded z-scores and therefore our answer was slightly
+                                different but very close (0.0409).</p>
+                            <p>If we wanted to find P(400 &lt; X &lt; 600), we would need to do two
+                                separate calculations—one for P(X &lt; 600) and one for P(X &lt;
+                                400)—and subtract.</p>
+                            <p>Now use StatCrunch to work through the following exercise:</p>
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <ul>
+                                <li>Open Minitab with a new worksheet.</li>
+                                <li>Choose Calc → Probability distributions → Normal.</li>
+                                <li>Select the Cumulative probability button.</li>
+                                <li>Enter the mean and standard deviation of your normal
+                                    distribution (in this case, 507 and 111).</li>
+                                <li>Select "Input constant," and next to it enter the normal value x
+                                    (in this case 700).</li>
+                                <li>click OK.</li>
+                            </ul>
+                            <p>Here is the Minitab output:</p>
+                            <image style="block" src="../../webcontent/lbd050.gif"
+                                alt="Output:
+&quot;Normal with mean = 507 and standard deviation = 111.&quot; A table follows, one only
+one row. The column headings are: &quot;x&quot; and &quot;P( X &lt;= x).&quot; The row is:
+&quot;700                0.958960&quot;"/>
+                            <p>Minitab tells us the mean and standard deviation of the normal
+                                distribution for which the calculations are done, it tells us that
+                                the value is x = 700, and that P(X ≤ 700) = 0.958960. We need to
+                                take it from here and remember that P(X &gt; 700) is then 1 −
+                                0.95896 = 0.04104. Note that when we solved this problem using the
+                                table in an earlier activity, we rounded z-scores, and therefore our
+                                answer was slightly different, but very close (0.0409).</p>
+                            <p>Similarly, if we wanted to find P(400 &lt; X &lt; 600) we would need
+                                to do two separate calculations; one for P(X &lt; 600), and one for
+                                P(X &lt; 400), and subtract.</p>
+                            <p>Now use Minitab to work through the following exercise:</p>
+                            <!--<wb:inline idref="u3_m3_normal8_lbd_tutor1"/>-->
+                            <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="811">
+            <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor10a.xml</param>
+            <param name="problem_name">_u4_m3_lbdtutor10a</param>
+        </flash>-->
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007 Instructions</title>
+                            <ul>
+                                <li>Open Excel with a new worksheet.</li>
+                                <li>First, we'll create a table with the given values:</li>
+                                <li>To create this table, first make the row and column labels: pick
+                                    a cell and type <code style="inline">Statistic</code>. Then move
+                                    one cell to the right and type <code style="inline"
+                                    >Value</code>. </li>
+                                <li>Now, in the cell underneath <code style="inline"
+                                        >Statistic</code>, type <code style="inline">Population
+                                        Mean</code>. In the cell to the right of that, enter the
+                                    population mean (in this case, 507). </li>
+                                <li>Similarly, enter values for Population Standard Deviation and
+                                    X.</li>
+                                <li>Now we'll add two new statistics to the table we created: <code
+                                        style="inline">z-score</code> and <code style="inline">P(X =
+                                        700)</code> and calculate their values.</li>
+                                <li>To calculate the z-score, we'll use the equation z = (X −
+                                    mean)/stdev. In this case, we get z = (700 − 507)/111, or
+                                    1.738739.</li>
+                                <li>To calculate P(X = 700), we'll use an Excel function called
+                                        <code style="inline">NORMSDIST</code>, which takes a z-score
+                                    and uses it to calculate a probability. This step takes the
+                                    place of our having to look up the probability in a normal
+                                    table. In the cell next to <code style="inline">P(X =
+                                        700)</code>, type <code style="inline"
+                                        >=NORMSDIST(1.738739)</code>. Excel tells us that the
+                                    probability is 0.95896.</li>
+                            </ul>
+                            <p>We need to take it from here and remember that P(X &gt; 700) is then
+                                1 − 0.95896 = 0.04104. Note that when we solved this problem using
+                                the table in an earlier activity we rounded z-scores and therefore
+                                our answer was slightly different, but very close (0.0409).</p>
+                            <p>Similarly, if we wanted to find P(400 &lt; X &lt; 600) we would need
+                                to do two separate calculations; one for P(X &lt; 600), and one for
+                                P(X &lt; 400), and subtract.</p>
+                            <p>Now use Excel to work through the following exercise:</p>
+                        </alternative>
+                    <!--      <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <ul>
+                                <li>Open Excel with a new worksheet.</li>
+                                <li>First, we'll create a table with the given values:</li>
+                                <li>To create this table, first make the row and column labels: pick
+                                    a cell and type <code style="inline">Statistic</code>. Then move
+                                    one cell to the right and type <code style="inline"
+                                    >Value</code>. </li>
+                                <li>Now, in the cell underneath <code style="inline"
+                                        >Statistic</code>, type <code style="inline">Population
+                                        Mean</code>. In the cell to the right of that, enter the
+                                    population mean (in this case, 507). </li>
+                                <li>Similarly, enter values for Population Standard Deviation and
+                                    X.</li>
+                                <li>Now we'll add two new statistics to the table we created: <code
+                                        style="inline">z-score</code> and <code style="inline">P(X =
+                                        700)</code> and calculate their values.</li>
+                                <li>To calculate the z-score, we'll use the equation z = (X −
+                                    mean)/stdev. In this case, we get z = (700 − 507)/111, or
+                                    1.738739.</li>
+                                <li>To calculate P(X = 700), we'll use an Excel function called
+                                        <code style="inline">NORMSDIST</code>, that takes a z-score
+                                    and uses it to calculate a probability. This step takes the
+                                    place of us having to look up the probability in a normal table.
+                                    In the cell next to <code style="inline">P(X = 700)</code>, type
+                                        <code style="inline">=NORMSDIST(1.738739)</code>. Excel
+                                    tells us that the probability is 0.95896.</li>
+                            </ul>
+
+                            <p>We need to take it from here and remember that P(X &gt; 700) is then
+                                1 − 0.95896 = 0.04104. Note that when we solved this problem using
+                                the table in an earlier activity we rounded z-scores, and therefore
+                                our answer was slightly different, but very close (0.0409).</p>
+                            <p>Similarly, if we wanted to find P(400 &lt; X &lt; 600) we would need
+                                to do two separate calculations; one for P(X &lt; 600), and one for
+                                P(X &lt; 400), and subtract.</p>
+                            <p>Now use Excel to work through the following exercise:</p>
+                        </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+
+                            <ul>
+                                <li>Choose <code style="inline">DISTR (2ND/VARS)</code>. </li>
+                                <li>Select <code style="inline">2:normalcdf(</code>. </li>
+                                <li>The normal cumulative distribution function requires the
+                                    following parameters: normalcdf(lower limit, upper limit, mean,
+                                    standard deviation). </li>
+                                <li>Note: If you omit mean and standard deviation, the defaults are
+                                    mean = 0 and standard deviation = 1. </li>
+                                <li>You need to enter a lower limit and upper limit for the region
+                                    of the normal curve that you’re interested in. In this case,
+                                    there is only a lower limit of 700. So, we’re really interested
+                                    in (700, &#8734;). </li>
+                                <li>Next to <code>lower:</code> type in 700.</li>
+                                <li>The TI doesn’t represent infinity directly, so we’ll use 1*10^99
+                                    as the upper bound. You get this value on the TI as 1E99. Next
+                                    to <code>upper:</code> press 1, then <code>EE (2ND/,</code>
+                                    that’s a comma, which is the button above the 7 button). Then
+                                    press 99.</li>
+                                <li>Next to µ type in the mean of your normal distribution (in this
+                                    case, 507).</li>
+                                <li>Next to σ type in the standard deviation of your normal
+                                    distribution (in this case, 111).</li>
+                                <li>Use the down arrow to highlight <code>Paste</code> and press
+                                        <code>ENTER</code></li>
+
+                                <li>You should see: <code style="inline"
+                                        >normalcdf(700,1E99,507,111)</code>. </li>
+                                <li>Press <code style="inline">ENTER</code>. </li>
+                            </ul>
+
+                            <p>Here is the TI output: <image style="inline"
+                                    src="../../webcontent/lbd050_ti.jpg"
+                                    alt="TI calculator output: normalcdf(700, 1e99, 507,
+111) = .0410403236"
+                                />
+                            </p>
+
+                            <p>Note that when we solved this problem using the table in an earlier
+                                activity we rounded z-scores and therefore our answer was slightly
+                                different, but very close (0.0409). </p>
+                            <p>Similarly, if we wanted to find P(400 &lt; X &lt; 600) we would need
+                                to do </p>
+                            <p>normalcdf(400,600,507,111), which is approximately 0.6314: <image
+                                    style="inline" src="../../webcontent/lbd051_ti.jpg"
+                                    alt="Output: normalcdf(400, 600, 507,
+111) = .6314071749"/>
+                            </p>
+
+                            <p>Now use your TI calculator to work through the following exercise: </p>
+
+                        </alternative>
+                    </alternatives>
+                </pullout>
+
+                <wb:inline idref="u3_m3_normal8_lbd_tutor1" purpose="learnbydoing">
+                    <param name="tabPreference"><pref:value preference="statistics.package"
+                        /></param>
+                </wb:inline>
+
+            </body>
+        </section>
+        <section>
+            <title>Finding Value (Given Probability)</title>
+            <body>
+                <p>As mentioned before, <pref:label preference="statistics.package"/> is set up to
+                    find a value x that satisfies P(X &lt; x) = some given probability. To
+                    illustrate, we use an example from a previous activity: finding the value of x
+                    that satisfies P(X &gt; x) = 0.02 where X is the SAT-M score, which has a normal
+                    distribution with a mean of 507 and standard deviation of 111. Before we start,
+                    it will be useful to rephrase the problem in terms of X &lt; x; we are looking
+                    for the value of x that satisfies P(X &lt; x) = 0.98.</p>
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>To do this with R, we're going to do the inverse of the procedure we
+                                described above.</p>
+                            <p>This time, we're given the population mean and standard deviation,
+                                but instead of being given an X and asked to find the probability,
+                                we're given a probability and asked to find the corresponding X
+                                value.</p>
+                            <p>To find the X value, enter the command:</p>
+                            <code>qnorm(0.98, mean=507, sd=111)</code>
+                            <p>R tells us that the value that we are looking for (the 98th
+                                percentile) is 734.966. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding.</p>
+                            <p>Now use R to work through the following exercise:</p>
+                            <!--<wb:inline idref="_u4_m3_lbdtutor10br"/>-->
+                            <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="540">
+                            <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor10br.xml</param>
+                            <param name="problem_name">_u4_m3_lbdtutor10br</param>
+                            </flash>-->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To do this in StatCrunch we:</p>
+                            <ul>
+
+                                <li>Choose Stat → Calculators → Normal.</li>
+                                <li>Enter the mean and standard deviation, which in this case are
+                                    507 and 111.</li>
+                                <li>Change the symbol to <code>&lt; </code>. </li>
+                                <li>Enter the desired probability (.98) in the textbox after the
+                                    equals symbol.</li>
+                                <li>Click on Compute.</li>
+                            </ul>
+                            <p>StatCrunch tells us that the value we are looking for (the 98th
+                                percentile) is 734.9661. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding.</p>
+                            <p>Now use StatCrunch to work through the following exercise:</p>
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To do this in Minitab we:</p>
+                            <ul>
+
+                                <li>Choose Calc → Probability Distributions → Normal.</li>
+                                <li>Choose the "Inverse cumulative probability" button.</li>
+                                <li>Enter the mean and standard deviation of your normal
+                                    distribution (507 and 111 in this case).</li>
+                                <li>Next to "Input constant" enter the given probability (0.98 in
+                                    this case).</li>
+                                <li>Click OK.</li>
+                            </ul>
+                            <p>Here is the Minitab output:</p>
+                            <image style="block" src="../../webcontent/lbd051.gif"
+                                alt="Output:
+&quot;Normal with mean = 507 and standard deviation = 111.&quot; A table follows, one only
+one row. The column headings are: &quot;P( X &lt;= x)&quot; and &quot;x.&quot; The row is:
+&quot;0.98                734.966&quot;"/>
+                            <p>Minitab tells us that the value that we are looking for (the 98th
+                                percentile) is 734.966. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding.</p>
+                            <p>Now use Minitab to work through the following exercise:</p>
+                            <!--<wb:inline idref="u3_m3_normal8_lbd_tutor2"/>-->
+                            <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="601">
+            <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor10b.xml</param>
+            <param name="problem_name">_u4_m3_lbdtutor10b</param>
+        </flash>-->
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007 Instructions</title>
+                            <ul>
+                                <li>To do this in Excel, we can use a table similar to the one we
+                                    created above, but this time we're looking for: <code
+                                        style="inline">z-score</code> and <code style="inline"
+                                        >X</code>. Basically, we're going to do the inverse of the
+                                    procedure we described above.</li>
+                                <li>This time, we're given the population mean and standard
+                                    deviation, but instead of being given an X and asked to find the
+                                    probability, we're given a probability and asked to find the
+                                    corresponding X value.</li>
+                                <li>To calculate the z-score given a probability, we'll use another
+                                    Excel function called <code style="inline">NORMSINV</code>, that
+                                    takes a probability and uses it to calculate a z-score. This
+                                    function is the inverse of the <code style="inline"
+                                        >NORMSDIST</code> function that we used previously, and
+                                    takes the place of us having to look up the z-score in a normal
+                                    table. The formula we'll use is <code style="inline"
+                                        >=NORMSINV(0.98)</code>. Excel tells us that the z-score is
+                                    2.053748.</li>
+                                <li>To calculate the X value that corresponds to that z-score, we'll
+                                    again use the equation z = (X - mean)/stdev. In this case, we
+                                    get X = 2.053748 * 111 + 507, or 734.966.</li>
+                            </ul>
+
+                            <p>Excel tells us that the value that we are looking for (the 98th
+                                percentile) is 734.966. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding.</p>
+                            <p>Now use Excel to work through the following exercise:</p>
+                        </alternative>
+                  <!--       <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <ul>
+                                <li>To do this in Excel, we can use a table similar to the one we
+                                    created above, but this time we're looking for: <code
+                                        style="inline">z-score</code> and <code style="inline"
+                                        >X</code>. Basically, we're going to do the inverse of the
+                                    procedure we described above.</li>
+                                <li>This time, we're given the population mean and standard
+                                    deviation, but instead of being given an X and asked to find the
+                                    probability, we're given a probability and asked to find the
+                                    corresponding X value.</li>
+                                <li>To calculate the z-score given a probability, we'll use another
+                                    Excel function called <code style="inline">NORMSINV</code>, that
+                                    takes a probability and uses it to calculate a z-score. This
+                                    function is the inverse of the <code style="inline"
+                                        >NORMSDIST</code> function that we used previously, and
+                                    takes the place of us having to look up the z-score in a normal
+                                    table. The formula we'll use is <code style="inline"
+                                        >=NORMSINV(0.98)</code>. Excel tells us that the z-score is
+                                    2.053748.</li>
+                                <li>To calculate the X value that corresponds to that z-score, we'll
+                                    again use the equation z = (X - mean)/stdev. In this case, we
+                                    get X = 2.053748 * 111 + 507, or 734.966.</li>
+                            </ul>
+
+                            <p>Excel tells us that the value that we are looking for (the 98th
+                                percentile) is 734.966. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding.</p>
+                            <p>Now use Excel to work through the following exercise:</p>
+                        </alternative>--> 
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <ul>
+                                <li>Choose <code style="inline">DISTR (2ND/VARS)</code>. </li>
+                                <li>Choose <code style="inline">3:invNorm(</code> (the inverse
+                                    normal distribution function). </li>
+                                <li>Next to <code>area:</code> press 0.98.</li>
+                                <li>Next to µ type in the mean of your normal distribution (in this
+                                    case, 507).</li>
+                                <li>Next to σ type in the standard deviation of your normal
+                                    distribution (in this case, 111).</li>
+                                <li>Use the down arrow to highlight <code>Paste</code> and press
+                                        <code>ENTER</code>.</li>
+
+
+                                <li>You should see: <code style="inline"
+                                        >invNorm(0.98,507,111)</code>. </li>
+                                <li>Press <code style="inline">ENTER</code>. </li>
+                            </ul>
+                            <p>Here is the TI output: <image style="inline"
+                                    src="../../webcontent/lbd052_ti.jpg"
+                                    alt="Output: invNorm(0.98, 507, 111) = 734.9661291"/>
+                            </p>
+
+                            <p>The TI tells us that the value that we are looking for (the 98th
+                                percentile) is 734.966. Our solution in the previous activity using
+                                the table gave us the answer 734.55 due to rounding. </p>
+                            <p>Now use your TI calculator to work through the following exercise: </p>
+
+                        </alternative>
+                    </alternatives>
+                </pullout>
+
+                <wb:inline idref="u3_m3_normal8_lbd_tutor2" purpose="learnbydoing">
+                    <param name="tabPreference"><pref:value preference="statistics.package"
+                        /></param>
+                </wb:inline>
+
+            </body>
+        </section>
+    </body>
+</workbook_page>

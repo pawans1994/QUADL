@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="apply_inference_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_apply_inference">
+        <!-- LO: apply_inference -->
+        <body>
+            <p>A researcher conducted a survey of graduating college students. 350 college students
+                were randomly selected to answer the survey. One of the survey questions asked, “What
+                are your plans after graduation?” 214 students said they were planning to find a
+                job, 83 students said they were planning to attend graduate school, and 53 students
+                did not reply to the question.</p>
+            <p>What is the point estimate for the proportion of all college students who plan to
+                find a job after graduation?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">214</choice>
+            <choice value="B">83</choice>
+            <choice value="C">0.61</choice>
+            <choice value="D">0.24</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the number of sampled college students who plan to
+                    find a job after graduation. You need to find the sample proportion based on the
+                    sample size of 350.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the number of sampled college students who plan to
+                    attend graduate school. You need to find the sample proportion who plan to find
+                    a job based on the sample size of 350.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The sample proportion who plan to find a job is 214/350 = 0.61.
+                    This is the point estimator for the proportion of all college students who plan
+                    to find a job after graduation.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you found the proportion of students who said they
+                    were planning to attend graduate school (83/350 = 0.24). You need to find the
+                    sample proportion who plan to find a job based on the sample size of
+                    350.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_apply_inference">
+        <!-- LO: apply_inference -->
+        <body>
+            <p>A researcher conducted a survey of graduating college students. 350 college students
+                were randomly selected to answer the survey. One of the survey questions asked, “How
+                much do you owe in student loans?” The average student loan debt reported by
+                respondents was $42,576 with a standard deviation of $2,801.</p>
+            <p>$42,576 is the point estimate for which of the following?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The proportion of all college students who graduate college in
+                debt.</choice>
+            <choice value="B">The mean salary of all college students who graduate college.</choice>
+            <choice value="C">The mean loan debt of all college students who graduate
+                college.</choice>
+            <choice value="D">The standard deviation of loan debt of all college students who
+                graduate college.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. $42,576 is not a proportion (it is not a value between 0 and
+                    1), thus it cannot be the point estimate for the proportion of all college
+                    students who graduate college in debt.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Students were asked to report their loan debt, thus it cannot
+                    be a point estimate for the mean salary of all students who graduate
+                    college.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. $42,576 is the sample mean loan debt. This is the point estimate
+                    of the population mean loan debt for all students who graduate
+                    college.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. $42,576 is a sample mean, thus it cannot be the point estimate
+                    for the standard deviation of loan debt for all students who graduate
+                    college.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

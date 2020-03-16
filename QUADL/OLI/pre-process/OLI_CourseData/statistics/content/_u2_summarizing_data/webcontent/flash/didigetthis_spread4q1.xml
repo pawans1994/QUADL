@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <item ident="stats_item" title="didigetthis_spread4q1">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">A survey taken in a large statistics class contained the question: "What's the fastest you have driven a car (in mph)?"  The five-number summary for the 87 males surveyed is: &lt;br&gt;&lt;br&gt;min = 55    Q1 = 95    Median = 110     Q3 = 120     Max = 155 &lt;br&gt;&lt;br&gt; Should the largest observation in this data set be classified as an outlier?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">Yes</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">No</mattext></material></response_label>
+</render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+</resprocessing>
+	<itemfeedback ident="hint">
+	<hint>
+	<hintmaterial>
+          <material>
+            <mattext texttype="text/plain">Use the 1.5(IQR) criterion for detecting outliers.</mattext></material>
+        </hintmaterial>
+        </hint>
+        </itemfeedback>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. The IQR in this case is 120 − 95 = 25. Applying the 1.5(IQR) rule, we find: Q3 + 1.5(IQR) = 120 + 1.5(25) = 157.5, and therefore the largest observation, 155, should not be classified as an outlier. Note, however, that in this case, Q1 − 1.5(IQR) = 95 − 1.5(25) = 57.5, and therefore the smallest observation, 55, should be classified as an outlier.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Correct. The IQR in this case is 120 − 95 = 25. Applying the 1.5(IQR) rule, we find: Q3 + 1.5(IQR) = 120 + 1.5(25) = 157.5, and therefore the largest observation, 155, should not be classified as an outlier. Note, however, that in this case, Q1 − 1.5(IQR) = 95 − 1.5(25) = 57.5, and therefore the smallest observation, 55, should be classified as an outlier.</mattext></material></itemfeedback>
+</item>

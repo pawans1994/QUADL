@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m4_cc3_tutor2">
+  <title>Tutor</title>
+  <question id="q1">
+    <body>What is the chi-square statistic in this case?</body>
+    <multiple_choice shuffle="false">
+      <choice value="A">494.949</choice>
+      <choice value="B"
+        >1<?oxy_insert_start author="mmyers" timestamp="20101129T155008-0500"?>,<?oxy_insert_end?>000</choice>
+      <choice value="C">0.000</choice>
+    </multiple_choice>
+    <part>
+      <response match="A" score="10">
+        <feedback>Correct. Indeed, to find the test statistic, we need to add the contributions of
+          each of the 4 cells, which in this case is: 62.72 + 115.462 + 111.502 + 205.265 = 494.949
+        </feedback>
+      </response>
+      <response match="B">
+        <feedback>Incorrect. It seems like you were adding the observed counts or the expected
+          counts (both of which add up to
+          1<?oxy_insert_start author="mmyers" timestamp="20101129T155033-0500"?>,<?oxy_insert_end?>000)
+          instead of the contributions of each of the cells
+          <?oxy_insert_start author="mmyers" timestamp="20101129T155044-0500"?>to
+          <?oxy_insert_end?>the test
+          statistic<?oxy_insert_start author="mmyers" timestamp="20101129T155051-0500"?>,<?oxy_insert_end?>
+          which are the third entry in each cell. </feedback>
+      </response>
+      <response match="C">
+        <feedback>Incorrect. I think you are confused.<?oxy_insert_start author="mmyers" timestamp="20101129T155146-0500"?>
+          <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T155144-0500" content="..."?>0.000
+          is the
+          p-value<?oxy_insert_start author="mmyers" timestamp="20101129T155138-0500"?>,<?oxy_insert_end?>
+          not the chi-square test statistic. </feedback>
+      </response>
+    </part>
+  </question>
+</assessment>

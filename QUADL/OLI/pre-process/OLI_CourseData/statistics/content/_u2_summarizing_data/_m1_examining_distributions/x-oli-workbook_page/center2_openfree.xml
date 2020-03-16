@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="center2_openfree">
+ <head>
+  <title>Measures of Center (2 of 2)</title>
+  <!--   <objref idref="define_mode_median_mean"/>-->
+  <objref idref="relate_center_and_spread"/>
+ </head>
+ <body>
+  
+  
+  
+  <section>
+   <title>Comparing the Mean and the Median</title>
+   <body>
+    <p>As we have seen, mean and the median, two of the common measures of center, each describe
+     the center of a distribution of values in a different way. The mean describes the center as an
+     average value, in which the
+     <em><?oxy_comment_start author="mmyers" timestamp="20101016T202500-0400" comment="use italics for emphasis, rather than bold"?>actual
+      values<?oxy_comment_end?></em> of the data points play an important role. The median, on the
+     other hand, locates the middle value as the center, and the
+     <?oxy_comment_start author="mmyers" timestamp="20101016T202556-0400" comment="use italics for emphasis instead of bold"?><em>order</em><?oxy_comment_end?>
+     of the data is the key to finding it.</p>
+    <p>To get a deeper understanding of the differences between these two measures of center,
+     consider the following example. </p>
+    <p>Here are two datasets: </p>
+    <table>
+     <tr>
+      <td>Data set A → 64 65 66 68 70 71 <em>73</em>
+      </td>
+     </tr>
+     <tr>
+      <td>Data set B → 64 65 66 68 70 71 <em>730</em>
+      </td>
+     </tr>
+    </table>
+    <p>For dataset A, the mean is 68.1, and the median is 68. Looking at dataset B, notice that all
+     of the observations except the last one are close together. The observation 730 is very large,
+     and is certainly an outlier. In this case, the median is still 68, but the mean will be
+     influenced by the high outlier, and shifted up to 162. The message that we should take from
+     this example is:</p>
+    <p>
+     <em>The mean is very sensitive to outliers (because it factors in their magnitude), while the
+      median is resistant to outliers. </em>
+    </p>
+    <p> Therefore:</p>
+    <p> - For symmetric distributions with no outliers: <m:math overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+     </m:mrow>
+    </m:math> is approximately equal to M. </p>
+    <image style="block" src="../webcontent/center4.gif" alt="A unimodal, symmetric
+distribution. The single mode is centered around x=10. The Median=10 and the Mean=10.001"/>
+    <p> - For skewed right distributions and/or datasets with high outliers: <m:math
+     overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mtext> </m:mtext>
+      <m:mo>&gt;</m:mo>
+      <m:mi>M</m:mi>
+     </m:mrow>
+    </m:math>
+    </p>
+    <image style="block" src="../webcontent/center5.gif" alt="A skewed-right distribution,
+titled Age of best actress Oscar winners (1970-2001). The median=35, and the mean=38.5 .
+The mode is 32."/>
+    <p> - For skewed left distributions and/or datasets with low outliers: <m:math overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mtext> </m:mtext>
+      <m:mo>&lt;</m:mo>
+      <m:mi>M</m:mi>
+     </m:mrow>
+    </m:math>
+    </p>
+    <image style="block" src="../webcontent/center6.gif" alt="A skewed-left distribution. The
+mean=69, and the median=72. The mode is at about x=78."/>
+    <p>We will therefore use <m:math overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+     </m:mrow>
+    </m:math> as a measure of center for symmetric distributions with no outliers. Otherwise, the
+     median will be a more appropriate measure of the center of our data.</p>
+   </body>
+  </section>
+  <!--<activity idref="center2selfassess" purpose="didigetthis"/>-->
+  
+  <wb:inline idref="u1_m1_center2_tutor1" purpose="didigetthis"/>
+  <wb:inline idref="u1_m1_center2_tutor2" purpose="didigetthis"/>
+  <wb:inline idref="u1_m1_center2_tutor3" purpose="didigetthis"/>
+  <activity idref="center2lbd" purpose="learnbydoing"/>
+  <section>
+   <title>Let's Summarize</title>
+   <body>
+    <ul>
+     <li>The three main numerical measures for the center of a distribution are the mode, mean (<m:math
+      overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math>), and the median (M). The mode is the most frequently occurring value. The mean is the average value, while the median is the middle
+      value.</li>
+     <li>The mean is very sensitive to outliers (as it factors in their magnitude), while the median
+      is resistant to outliers.</li>
+     <li>The mean is an appropriate measure of center only for symmetric distributions with no
+      outliers. In all other cases, the median should be used to describe the center of the
+      distribution.</li>
+    </ul>
+   </body>
+  </section>
+  <p>Prior to doing the checkpoint, you might want to do some additional problems that cover how to
+   determine a median, mean, shape, relationship between a mean and median, and percentage of scores
+   for a given value(s) from a histogram.</p>
+  
+  
+  <activity idref="center3lbd" purpose="learnbydoing"/>
+ <!--<section>
+   <title><?oxy_comment_start author="mmyers" timestamp="20101016T230614-0400" comment="I was not prompted to complete this checkpoint exam online. I found the file and edited it, but didn&apos;t look at it online. I suspect that this is because I am not registered for the course, I&apos;m just &quot;peeking in&quot; but I wanted to point it out, just in case."?>Checkpoint<?oxy_comment_end?></title>
+   <body>
+    <p>This checkpoint will test your understanding of the material you have learned thus far in
+     this module.</p>
+    <p> </p>
+    
+    
+    <activity idref="_u2_m1_checkpoint1" purpose="checkpoint"/>
+   </body>
+  </section>--> 
+  
+  
+ </body>
+</workbook_page>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_discrete_probability_dist5">
+<head>
+<title>Probability Distribution (5 of 5)</title>
+    <objref idref="find_probability_distribution_discrete_random"/>
+</head>
+<body>
+    
+    <p>Here is another example
+            <?oxy_insert_start author="mmyers" timestamp="20101121T114141-0500"?>in
+            which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T114139-0500" content="where"?>
+            we’ll use a probability distribution that is associated with a random variable of
+            interest to find probabilities. What will be new in this example is the use of
+            conditional probabilities.</p>
+<!--  <p>In most situations, the probability distribution is simply provided for us, as in the next example. We may assume that the probabilities have been established according to the principle of relative frequency, for instance, 
+    to find the probability of a production line producing zero defective parts in an hour's time, one would record what proportion of hours, 
+    in the long run, resulted in no defective parts.</p>-->
+<example><title>Xavier's Production Line</title>
+
+<p>The number of defective parts produced each hour by Xavier's production line is a random variable X with the following probability distribution:</p>
+<image style="block" src="../webcontent/image012.gif" alt="A probability distribution table with two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in columns (X: P(X=x)):
+        0: .15;
+        1: .30;
+        2: .25;
+        3: .20;
+        4: .10;"/>
+<p>Using the probability distribution of a random variable, we can answer some probability questions:</p>
+<p>(a) What is the probability of at least 2 defects in a randomly chosen hour? </p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>≥</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mn>4</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>5</m:mn>
+<m:mo>+</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mn>5</m:mn>
+</m:math>
+</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101121T114248-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T114247-0500" content="["?>Note
+                that the addition principle has been
+                applied.<?oxy_insert_start author="mmyers" timestamp="20101121T114252-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T114252-0500" content="]"?></p>
+    <p></p><p>(b) Suppose it is known that more than 2 defects were produced in a particular hour. What is the probability that the number of defects was fewer than 4?</p>
+<p>We use the conditional probabilities definition<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>B</m:mi>
+    <m:mo>&#160; | &#160; </m:mo>
+<m:mi>A</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>A</m:mi>
+<m:mi/>
+<m:mi>a</m:mi>
+<m:mi>n</m:mi>
+<m:mi>d</m:mi>
+<m:mi/>
+<m:mi>B</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>A</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+</m:math> to solve:</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&lt;</m:mo>
+<m:mn>4</m:mn>
+    <m:mo> &#160;|&#160; </m:mo>
+<m:mi>X</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&lt;</m:mo>
+<m:mn>4</m:mn>
+<m:mo>)</m:mo>
+<m:mi/>
+<m:mi>a</m:mi>
+<m:mi>n</m:mi>
+<m:mi>d</m:mi>
+<m:mi/>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>3</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+<m:mn>7</m:mn>
+</m:math>
+</p>
+    <p>Note that we are substituting the event "X&#160;&lt;&#160;4" for event B, and the event "X&#160;&gt;&#160;2" for event A.</p>
+    <p>Also note that the only way that (X&#160;&lt;&#160;4) and (X&#160;&gt;&#160;2) can happen together is if X = 3.</p>
+</example>
+<!--<activity idref="_u4_m3_lbd2" purpose="learnbydoing"/>-->
+    <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101121T114504-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T114503-0500" content="is"?>
+            next activity is to give you guided practice at using the probability distribution of a
+            random variable to find probabilities of interest.</p>
+  <section purpose="learnbydoing">
+      <title>Learn By Doing</title>
+      <body>
+          <p>Recall the following
+                    example<?oxy_delete author="mmyers" timestamp="20101121T114523-0500" content=" from the last self-check"?>:</p>
+          <p>The number of sales that a telemarketing salesperson makes in an hour is a random variable X having the following probability distribution:</p>
+          <image src="../webcontent/lbd049.gif" alt="A probability distribution table with two rows, labeled &quot;x&quot; and
+&quot;P(X=x).&quot; Here is the data in columns (x: P(X=x)):
+        0: 10/50;
+        1: 12/50;
+        2: 12/50;
+        3: 10/50;
+        4: 6/50;"/>
+    <wb:inline idref="u3_m3_discreteprobdist5_tutor1" purpose="learnbydoing"/>
+          <wb:inline idref="u3_m3_discreteprobdist5_tutor2" purpose="learnbydoing"/>
+      </body>
+  </section>
+
+<wb:inline idref="u3_m3_discreteprobdist5_tutor3" purpose="didigetthis"></wb:inline>
+
+</body>
+</workbook_page>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="didigetthis_role_type2q1">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">A store asked 250 of its customers whether they were satisfied with the service. The purpose of this study was to examine the relationship between the customer's satisfaction and gender.
+			
+This study is an example of:</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">Case C→Q</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">Case C→C</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">Case Q→Q</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">Case Q→C</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+          </resprocessing>
+    <itemfeedback ident="hint">
+      <hint>
+        <hintmaterial>
+          <material>
+            <mattext texttype="text/plain">The two relevant variables here are gender and satisfaction (yes/no). Now do the role-type classification for these two variables.</mattext></material></hintmaterial>
+</hint></itemfeedback>       
+			<itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. The hint will help guide your thinking.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Correct.. Both the explanatory (gender) and response (satisfaction) variables are categorical in this case, and therefore this is an example of case C→C.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Incorrect. The hint will help guide your thinking.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. The hint will help guide your thinking.</mattext></material></itemfeedback>
+        </item></questestinterop>

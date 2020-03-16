@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page id="_u5_m3_regression05">
+<head>
+	<title>Simple Regression Analyses</title>
+	<!---->
+	
+</head>
+<body>
+	<!--<objref idref="objective1"/>-->
+	<p>Before we move on the multiple regression analysis, where we’ll analyze all the variables <em style = "italic">collectively</em>, it would be useful to conduct simple regression analyses of the response versus each of the explanatory variables separately. As you’ll see the results of these analyses will be very helpful in understanding what “really going on” when we conduct the multiple regression analysis.</p>
+	<p>Let’s go back to our example, where we’re examining how  students’ <em>GPA (Y)</em> is related to their <em>IQ level (X<sub>1</sub>)</em> and their <em>“self concept” (X<sub>2</sub>)</em>.  As explained above, what we’ll do is conduct two simple regression analyses:</p>
+<ol style="lower-roman">
+	<li><em>GPA (Y)</em>  vs. <em>IQ level (X<sub>1</sub>)</em>, and </li>
+	<li><em>GPA (Y)</em> vs. <em>“self concept” (X<sub>2</sub>)</em>.</li>
+</ol>
+	
+	<p>Here are the results of the first simple regression: </p>
+	
+	<ul style="none">
+		<title>Regression Analysis: GPA versus IQ </title>
+		<li>The regression equation is</li>
+		<li>GPA = - 2.87 + <em>0.0975**</em> IQ</li>
+	</ul>
+
+<table rowstyle="plain">
+	<tr>
+		<th>Predictor</th>
+		<th>Coef</th>
+		<th>SE Coef</th>
+		<th>T</th>
+		<th>P</th>
+	</tr>
+	<tr>
+		<th>Constant</th>
+		<td>-2.871</td>
+		<td>1.061</td>
+		<td>-2.71</td>
+		<td>0.009</td>
+	</tr>
+	<tr>
+		<th><em>IQ</em></th>
+		<td>0.097500</td>
+		<td>0.009583</td>
+		<td>10.17</td>
+		<td><em>0.000*</em></td>
+	</tr>
+</table>
+	<p>S = 1.03207   <em>R-Sq = 60.0%***</em>   R-Sq(adj) = 59.4%</p>
+	
+	<p><em>Let’s interpret the results:</em></p>
+	<ul style="none">
+		<li>*       When IQ is the only explanatory variable in the model (i.e., when Self Concept and all other possible predictors are ignored), it has a significant linear relationship  with (effect on) on GPA:</li>
+		<li>**     For every 1 unit increase in IQ, GPA increases, on average, by .0975.</li>
+		<li>***   This linear effect accounts for 60% of the variability in GPA.</li>
+	</ul>
+	
+	<p>Here are the results of the second simple regression analysis:</p>
+	
+	<ul style="none">
+		<title>Regression Analysis: GPA versus SC </title>
+		<li>The regression equation is</li>
+		<li>GPA = 3.51 + 0.0749 SC</li>
+	</ul>
+	
+	<table rowstyle="plain">
+		<tr>
+			<th>Predictor</th>
+			<th>Coef</th>
+			<th>SE Coef</th>
+			<th>T</th>
+			<th>P</th>
+		</tr>
+		<tr>
+			<th>Constant</th>
+			<td>-3.5139</td>
+			<td>0.8038</td>
+			<td>-4.37</td>
+			<td>0.000</td>
+		</tr>
+		<tr>
+			<th>SC</th>
+			<td>0.07494</td>
+			<td>0.01361</td>
+			<td>5.51</td>
+			<td>0.000</td>
+		</tr>
+	</table>
+	
+	<p>S = 1.36032   R-Sq = 30.5%   R-Sq(adj) = 29.5%</p>
+	
+	<p>Let’s interpret the results together.</p>
+	
+	<flash src="../../webcontent/flash/_u5_m3_mt2.swf" width="500" height="300" purpose="learnbydoing">
+		<param name="problem_name">_u5_m3_mt2</param>
+	</flash>
+	
+	<p>To summarize, we found that both variables, when considered as a single explanatory variable, have a significant linear relationship with the response. This result is consistent with our exploratory data analysis (EDA), where we observed that linear relationship. Furthermore, we found that IQ is a “stronger” than SC as a predictor for GPA by as evident by the R-square values (60% for IQ, vs, 30.5% for SC). Again, this is consistent with our EDA when we found that the correlation coefficient between IQ and GPA (.775) is higher than that between GPA and SC (.552).</p>
+	
+	<p>We will come back to these results once we conduct the multiple regression analysis which we are how ready to begin.</p>
+	
+	<activity idref="_u5_m3_DIGT03" purpose="didigetthis"></activity>
+	<activity idref="_u5_m3_LBD02" purpose="learnbydoing"></activity>
+	
+</body>
+	
+	
+
+</workbook_page>
+	
+	
+	
+	
+	

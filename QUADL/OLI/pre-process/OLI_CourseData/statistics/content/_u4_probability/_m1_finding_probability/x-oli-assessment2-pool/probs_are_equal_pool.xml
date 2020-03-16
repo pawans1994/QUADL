@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="probs_are_equal_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_probs_are_equal">
+        <!--LO: Find the probability of events in the case in which all outcomes are equally likely.
+		    Sub-objective: probequal        When probabilities are equal-->
+        <body>
+            <p>A family plans to have 3 children. For each birth, assume that the probability of a
+                boy is the same as the probability of a girl. What is the probability that they will
+                have at least one boy and at least one girl?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.5</choice>
+            <choice value="B">0.125</choice>
+            <choice value="C">0.75</choice>
+            <choice value="D">0.875</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. There are 8 equally likely outcomes in this sample space. In
+                    two outcomes the gender of all three children is the same (GGG, BBB). The other
+                    6 outcomes contain at least one boy and one girl.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The outcomes are equally likely, so the easiest way to work
+                    this problem is to write out the 8 outcomes in this sample space. In two
+                    outcomes the gender of all three children is the same (GGG, BBB). The other 6
+                    outcomes contain at least one boy and one girl.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The outcomes are equally likely, so the easiest way to work this
+                    problem is to write out the 8 outcomes in this sample space. In two outcomes the
+                    gender of all three children is the same (GGG, BBB). The other 6 outcomes
+                    contain at least one boy and one girl.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have calculated P(at least one girl) = 1 − (0.5) ^ 3.
+                    The outcomes are equally likely, so the easiest way to work this problem is to
+                    write out the 8 outcomes in this sample space. In two outcomes the gender of all
+                    three children is the same (GGG, BBB). The other 6 outcomes contain at least one
+                    boy and one girl.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_probs_are_equal">
+        <!--LO: Find the probability of events in the case in which all outcomes are equally likely.
+            Sub-objective: probequal        When probabilities are equal  -->
+        <body>
+            <p>Four students attempt to register online at the same time for an Introductory
+                Statistics class that is full. Two are freshmen and two are sophomores. They are put
+                on a wait list. Prior to the start of the semester, two enrolled students drop the
+                course, so the professor decides to randomly select two of the four wait list
+                students and gives them a seat in the class. </p>
+            <p>What is the probability that both students selected are freshmen?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">½</choice>
+            <choice value="B">¼</choice>
+            <choice value="C">⅙</choice>
+            <choice value="D">1/12</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You may have been thinking that half of the wait list students
+                    are freshmen. But you need to think about the sample space of this random
+                    experiment. Since order does not matter, the sample space contains six equally
+                    likely outcomes. S = {F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}.
+                    <!--Only one of the six
+                    outcomes is two freshmen. The correct answer is (C).--></feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You may have been thinking that there are four possible
+                    outcomes, {FF, FS, SF, and SS}, like when we toss a coin two times. But here the
+                    sample space contains six equally likely outcomes because there are 2 freshmen
+                    and 2 sophomores and the order in which they are chosen does not matter. S =
+                    {F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The order that the students are chosen does not matter, so F1F2
+                    and F2F1 are the same outcome. Thus, the sample space contains six equally
+                    likely outcomes. S = {F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The order that the students are chosen does not matter, so F1F2
+                    and F2F1 are the same outcome. Thus, the sample space contains only six equally
+                    likely outcomes. S = {F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_probs_are_equal">
+        <!--LO: Find the probability of events in the case in which all outcomes are equally likely.
+            Sub-objective: probequal        When probabilities are equal  -->
+        <body>
+            <p>In the last round of a chess tournament the final match is between Alice and Diego.
+                The winner is the first player to win three games [sometimes called “best of 5”].
+                Assume that they are equally matched, so that each player has an equal probability
+                of winning each game. What is the probability that the match will be finished <em style="italic">after the first 3 games are played?</em>
+            </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.50</choice>
+            <choice value="B">0.25</choice>
+            <choice value="C">0.20</choice>
+            <choice value="D">0.125</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the probability that Alice or Diego will win a game.
+                    Consider the results of the first three games that are played. You will find
+                    that there are 8 <!--12 -->equally likely outcomes in this sample space. Note
+                    that the only way for the match to be finished in these first three games is if
+                    Alice wins all three games (AAA) or Diego wins all three games (DDD).</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Considering the results of the first three games that are played,
+                    we find that there are 8 equally likely outcomes in this sample space (AAA, AAD,
+                    ADA, ADD, DDD, DDA, DAD, DAA). The only way for the match to be resolved in
+                    these first three games is if Alice wins all three games (AAA) or Diego wins all
+                    three games (DDD), so the probability is 2/8 = 0.25.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You may have focused on the fact that they might play 5 games.
+                    For this problem, we only need to consider the results of the first three games
+                    that are played. You will find that there are 8 equally likely outcomes in this
+                    sample space. Note that the only way for the match to be finished in these first
+                    three games is if Alice wins all three games (AAA) or Diego wins all three games
+                    (DDD). </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You correctly identified that there are 8 outcomes in the
+                    sample space, but this is the probability of one correct outcome. Note that
+                    there are two ways that the match can be resolved in 3 games: Either Alice wins
+                    all three games (AAA) or Diego wins all three games (DDD). </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_probs_are_equal">
+        <!--LO: Find the probability of events in the case in which all outcomes are equally likely.
+            Sub-objective: probequal        When probabilities are equal  -->
+        <body>
+            <p>For a criminal trial, 8 active and 4 alternate jurors are selected. Two of the
+                alternate jurors are male and two are female. During the trial, two of the active
+                jurors are dismissed. The judge decides to randomly select two replacement jurors
+                from the 4 available alternates. What is the probability that both jurors selected
+                are female?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">½</choice>
+            <choice value="B">¼</choice>
+            <choice value="C">⅙</choice>
+            <choice value="D">1/12</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You may have been thinking that half of the jurors are female.
+                    But you need to think about the sample space of this random experiment. Since
+                    order does not matter, the sample space contains six equally likely outcomes. S
+                    = {F1F2, F1M1, F1M2, F2M1, F2M2, M1M2}. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You may have been thinking that there are four possible
+                    outcomes, {FF, FM, MF, and MM}, like when we toss a coin two times. But here the
+                    sample space contains six equally likely outcomes because there are 2 female and
+                    2 males and the order in which they are chosen does not matter, S = {F1F2, F1M1,
+                    F1M2, F2M1, F2M2, M1M2}. </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The order that the jurors are chosen does not matter, so F1F2 and
+                    F2F1 are the same outcome. Thus, the sample space contains six equally likely
+                    outcomes. S = {F1F2, F1M1, F1M2, F2M1, F2M2, M1M2}. Only one of the six outcomes
+                    is two females. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The order that the jurors are chosen does not matter, so F1F2
+                    and F2F1 are the same outcome. Thus, the sample space contains only six equally
+                    likely outcomes. S ={F1F2, F1M1, F1M2, F2M1, F2M2, M1M2}. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <!-- added, may need to be removed if qa doesn't go through -->
+    <numeric id="q5_probs_are_equal">
+        <body>
+            <p>A True/False quiz has three questions. When guessing, the probability of getting a
+                question correct is the same as the probability of getting a question wrong. What is
+                the probability that a student that guesses gets at least 2 questions correct? (Give
+                your answer to 2 decimal places)</p>
+            <p><input_ref input="A" /></p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+
+        </input>
+        <part>
+            <response input="A" match="0.50" score="10">
+                <feedback>Correct. There are 8 equally likely outcomes in this sample space. Four of
+                    the outcomes (CCW, CWC, WCC, CCC) have at least 2 questions correct. So the
+                    probability is 4/8 = 0.5 that at least 2 questions are guessed correctly.
+                </feedback>
+            </response>
+            <response input="A" match=".50" score="10">
+                <feedback>Correct. There are 8 equally likely outcomes in this sample space. Four of
+                    the outcomes (CCW, CWC, WCC, CCC) have at least 2 questions correct. So the
+                    probability is 4/8 = 0.5 that at least 2 questions are guessed correctly.
+                </feedback>
+            </response>
+            <response input="A" match=".5" score="10">
+                <feedback>Correct. There are 8 equally likely outcomes in this sample space. Four of
+                    the outcomes (CCW, CWC, WCC, CCC) have at least 2 questions correct. So the
+                    probability is 4/8 = 0.5 that at least 2 questions are guessed correctly.
+                </feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. The outcomes are equally likely, so the easiest way to work
+                    this problem is to write out the 8 outcomes in this sample space. Four of the
+                    outcomes (CCW, CWC, WCC, CCC) have at least 2 questions correct. The remaining 4
+                    outcomes only have 0 or 1 question correct. </feedback>
+            </response>
+        </part>
+
+    </numeric>
+</pool>

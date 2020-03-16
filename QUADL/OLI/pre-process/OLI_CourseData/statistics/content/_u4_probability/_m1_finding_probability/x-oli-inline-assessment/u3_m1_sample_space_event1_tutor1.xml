@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_sample_space_event1_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>In each of the following
+                situations<?oxy_insert_start author="mmyers" timestamp="20101106T113943-0400"?>,<?oxy_insert_end?>
+                choose the correct sample space
+                <?oxy_insert_start author="mmyers" timestamp="20101106T114011-0400"?>(<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101106T114013-0400"?>)<?oxy_insert_end?>
+                for the random experiment that is described.</p>
+            <p>(a) A pair of dice is rolled, and the sum of the dots on the two faces that come up
+                is recorded: <input_ref input="A"/></p>
+            <p>(b) A coin is tossed three times, or until the first
+                "<?oxy_insert_start author="mmyers" timestamp="20101106T114203-0400"?>h<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114203-0400" content="H"?>ead"
+                appears<?oxy_insert_start author="mmyers" timestamp="20101106T114158-0400"?>.<?oxy_insert_end?>
+                (whichever occurs first): <input_ref input="B"/></p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}</choice>
+            <choice value="two">S = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}</choice>
+            <choice value="three">S = {2, 4, 6, 8, 10, 12}</choice>
+            <choice value="four">S = {1, 3, 5, 7, 9, 11}</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">S = {H, T, HT, TH, HH, TT, THH, HTH, HHT, HTT, THT, TTH, HHH,
+                TTT}</choice>
+            <choice value="two">S = {THH, HTH, HHT, HTT, THT, TTH, HHH, TTT}</choice>
+            <choice value="three">S = {H, TH, TTH}</choice>
+            <choice value="four">S = {H, TH, TTH, TTT}</choice>
+        </fill_in_the_blank>
+        <part>
+            <response input="A" name="S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}" match="one">
+                <feedback>Incorrect. The smallest outcome for any
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T114508-0400"?>single<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114514-0400" content="one"?>
+                    die is
+                    <?oxy_delete author="mmyers" timestamp="20101106T114529-0400" content="a "?>1<?oxy_insert_start author="mmyers" timestamp="20101106T114540-0400"?>,
+                    but<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114548-0400" content=". W"?><?oxy_insert_start author="mmyers" timestamp="20101106T114550-0400"?>
+                    w<?oxy_insert_end?>e are rolling two dice. Please try again.</feedback>
+            </response>
+            <response input="A" name="S = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}" match="two"
+                score="1">
+                <feedback><?oxy_insert_start author="mmyers" timestamp="20101106T114336-0400"?>Good
+                    job!<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114333-0400" content="You are correct."?>
+                    When rolling
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T114432-0400"?>two
+                    dice<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114559-0400" content="a die twice"?>,
+                    the possible outcomes are: (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (2,1) (2,2) ...
+                    (6,6). Thus, the sums can be
+                    2<?oxy_delete author="mmyers" timestamp="20101106T114616-0400" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101106T114615-0400" content=" "?>12.</feedback>
+            </response>
+            <response input="A" name="S = {2, 4, 6, 8, 10, 12}" match="three">
+                <feedback>Incorrect. Note that there are some possible outcomes that
+                    are missing. Please try again.</feedback>
+            </response>
+            <response input="A" name="S = {1, 3, 5, 7, 9, 11}" match="four">
+                <feedback>Incorrect. Note that there are some possible outcomes that
+                    are missing. Please try again.</feedback>
+            </response>
+            <hint>The sample space is the set of all possible outcomes.</hint>
+            <hint>In this situation the sample space describes all possible sums of the dots on the
+                two die. For example, if we roll a 3 and a 5, the sum is 8. So 8 is one possible
+                outcome in the sample space. What are the other possible outcomes?</hint>
+        </part>
+        <part>
+            <response input="B"
+                name="S = {H, T, HT, TH, HH, TT, THH, HTH, HHT, HTT, THT, TTH, HHH, TTT}"
+                match="one">
+                <feedback>Incorrect. Some of the outcomes
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T114825-0400"?>here<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114823-0400" content="in S"?>
+                    are not possible in this
+                    experiment<?oxy_insert_start author="mmyers" timestamp="20101106T114642-0400"?>,<?oxy_insert_end?>
+                    since the experiment ends when we get the first
+                    "<?oxy_insert_start author="mmyers" timestamp="20101106T114646-0400"?>h<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114646-0400" content="H"?>ead."
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T114727-0400"?>Each<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114728-0400" content="A"?>
+                    possible outcome must have no more than one H, and the only place it can appear
+                    is "last." Please try again.</feedback>
+            </response>
+            <response input="B" name="S = {THH, HTH, HHT, HTT, THT, TTH, HHH, TTT}" match="two">
+                <feedback>Incorrect. This is the sample space for the experiment "A
+                    coin is tossed three
+                    times<?oxy_insert_start author="mmyers" timestamp="20101106T114757-0400"?>,<?oxy_insert_end?>"
+                    which is not the case here. Please try again.</feedback>
+            </response>
+            <response input="B" name="S = {H, TH, TTH}" match="three">
+                <feedback>Incorrect. Note that one outcome is missing. It corresponds
+                    to the case
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T114956-0400"?>in which
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T114953-0400" content="where"?>
+                    we get no
+                    "<?oxy_insert_start author="mmyers" timestamp="20101106T115002-0400"?>h<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T115002-0400" content="H"?>eads."
+                    We stop the experiment anyway, since three tosses have been made. Please try
+                    again. </feedback>
+            </response>
+            <response input="B" name="S = {H, TH, TTH, TTT}" match="four" score="1">
+                <feedback><?oxy_insert_start author="mmyers" timestamp="20101106T115037-0400"?>Good
+                    job!<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T115034-0400" content="This is correct"?>.
+                    We stop the experiment when we get the first
+                    "<?oxy_insert_start author="mmyers" timestamp="20101106T115104-0400"?>h<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T115104-0400" content="H"?>ead"
+                    (H, TH, TTH), or
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T115111-0400"?>after three
+                    tosses, <?oxy_insert_end?>even
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T115119-0400"?>if
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T115121-0400" content="though "?>we
+                    didn't get any
+                    "<?oxy_insert_start author="mmyers" timestamp="20101106T115127-0400"?>h<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T115127-0400" content="H"?>eads"
+                    <?oxy_delete author="mmyers" timestamp="20101106T115133-0400" content="in the first three tosses "?>(TTT)<?oxy_delete author="mmyers" timestamp="20101106T115201-0400" content=" we stop the experiment after the third toss"?>.</feedback>
+            </response>
+            <hint>The sample space is the set of all possible outcomes.</hint>
+            <hint>In this situation the sample space describes all possible outcomes when a coin is
+                tossed 3 times or until the first “head” appears. Note that the experiment could
+                stop after 1 or 2 tosses if we get a head. Also we never toss more than 3 times.
+            </hint>
+        </part>
+    </question>
+</assessment>

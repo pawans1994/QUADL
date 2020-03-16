@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="test_intuit_m2_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_test_intuit_m2">
+        <!-- LO: test_intuit -->
+        <body>
+            <p>The mortality rate from melanoma (skin cancer) during the 1950s was recorded for each
+                of the 48 contiguous United States, plus Washington, D.C. (as reported by Fisher and
+                Van Belle (1993) and found at <link href="http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/" target="new">http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/</link></p>
+            <p>The following is the scatterplot of the data:</p>
+            <image style="block" src="../webcontent/assessment9q11image1.gif" />
+            <p>The plot shows a negative linear relationship between the latitude of the state and
+                melanoma mortality rate.</p>
+            <p>Which of the following is an appropriate interpretation of the negative relationship
+                shown in the scatterplot above?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The more southern the state, the higher the melanoma death
+                rate.</choice>
+            <choice value="B">The more northern the state, the higher the melanoma death
+                rate.</choice>
+            <choice value="C">The more southern the state, the more people that died of
+                melanoma.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. From the scatterplot we see that the lower the latitude the
+                    higher the mortality per 10 million. In other words, the more southern the
+                    state, the higher the death rate. Note that since the response variable is the
+                    mortality per 10 million, it measures the death rate rather than the number of
+                    deaths.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Notice that there is a negative linear relationship between
+                    latitude and mortality per 10 million. In other words, as latitude increases,
+                    mortality per 10 million decreases.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Notice that the variable mortality per 10 million is a rate,
+                    not an absolute count, of deaths from melanoma.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_test_intuit_m2">
+        <!-- LO: test_intuit -->
+        <body>
+            <p>Rainfall and corn crop yield reported for the 38 years from 1890 through 1927 give us
+                the scatterplot shown below with an r = 0.0426. Yield is the number of ears of corn
+                measured in metric tons per hectare, rainfall is in inches.</p>
+            <p><image style="block" src="../webcontent/crop_yield.png" /></p>
+            <p>Based on corn crop yield from Ezekiel, M. and K. A. Fox. (1959). <em style="italic">Methods of
+                Correlation and Regression Analysis</em>. Wiley: New York.</p>
+            <p>The plot shows a positive linear relationship between the inches of rainfall and the
+                size of the corn yield.</p>
+            <p>Which of the following is an appropriate interpretation of the relationship in
+                the data shown above?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The growth rate of corn is positively affected by more
+                rainfall.</choice>
+            <choice value="B">The more rain, the lower the yield of corn.</choice>
+            <choice value="C">Rainfall seems to have a positive effect on the yield of
+                corn.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Crop yield is the quantity (number of ears of corn) per area of
+                    land and does not tell us about how rainfall affects the <em style="italic">growth rate</em> of the crop.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. More rain is correlated with a <em style="italic">higher</em>
+                    yield.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. An appropriate interpretation is that rainfall seems to have a
+                    positive effect on the yield of corn.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

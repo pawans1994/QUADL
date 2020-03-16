@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="Title">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">In which situation can we not use the confidence interval that we developed?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">Situation A</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">Situation B</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">Situation C</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">Situation D</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+          </resprocessing>
+        <itemfeedback ident="FeedBack0">
+          <material>
+          	<mattext texttype="text/plain">Incorrect. The sample was selected randomly. The sample size is much larger than 30, so it does not matter whether or not the salaries are normally distributed. We can use this confidence interval.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+          	<mattext texttype="text/plain">Correct. Even though the sample was selected in a manner that is not strictly random, no bias is expected. However, the sample size is small enough (less than 30) to require that the recovery times are normally distributed. Since we do not know this, we cannot use this confidence interval.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+          	<mattext texttype="text/html">Incorrect. The sample was selected randomly. The sample size is much larger than 30, and the scores are normally distributed. We can use this confidence interval.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. The sample was selected randomly. Although the sample size is less than 30, the times vary normally. We can use this confidence interval.</mattext></material></itemfeedback>
+        </item></questestinterop>

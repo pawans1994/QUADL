@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist4_tutor2">
+    <title>Tutor</title>
+    <page>
+   
+
+    <question id="q1">
+        <body><p><?oxy_insert_start author="mmyers" timestamp="20101121T110522-0500"?><?oxy_comment_start author="mmyers" timestamp="20101121T110951-0500" comment="This was defined in the exercise above, but not here. It is necessary here, too, correct? (zero is not a possible answer)"?>A
+                    random<?oxy_comment_end?> variable X has possible values of
+                    1-6.<?oxy_insert_end?></p>
+                <p>Which is the appropriate list
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T110348-0500"?>of<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T110347-0500" content="for"?>
+                    values for X if we want no more than 3?</p></body>
+        <multiple_choice shuffle="false">
+            <choice value="res1">X = 0, 1, 2, 3</choice>
+            <choice value="res2">X = 1, 2, 3</choice>
+            <choice value="res3">X = 3, 4, 5, 6</choice>
+            <choice value="res4">X = 4, 5, 6</choice>
+        </multiple_choice>
+        
+        <part>
+            <response match="res1" score="0">
+                <feedback>Incorrect.  Note that zero is not a possible value for X.  Please try again.</feedback>
+            </response>
+            <response match="res2" score="1">
+                <feedback>Correct. <em>No more than</em>
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T111019-0500"?>3
+                        <?oxy_insert_end?>means 3 is the largest value for X. We want X ≤
+                        3.</feedback>
+            </response>
+            <response match="res3" score="0">
+                <feedback>Incorrect. You have chosen numbers that are 3 or larger. We
+                        want
+                            "<em><?oxy_insert_start author="mmyers" timestamp="20101121T111055-0500"?>no<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T111054-0500" content="NO"?></em><?oxy_insert_start author="mmyers" timestamp="20101121T111042-0500"?>
+                        <?oxy_insert_end?>more than 3." Please try again.</feedback>
+            </response>
+            <response match="res4" score="0">
+                <feedback>Incorrect. You have chosen numbers that are strictly larger
+                        than 3. We want
+                            "<em><?oxy_insert_start author="mmyers" timestamp="20101121T111108-0500"?>no<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T111107-0500" content="NO"?></em><?oxy_insert_start author="mmyers" timestamp="20101121T111105-0500"?>
+                        <?oxy_insert_end?>more than 3." Please try again.</feedback>
+            </response>
+            <hint><em>No more than 3</em> means that 3 is the largest number we want.</hint>
+        </part>
+    </question>
+    
+
+</page>
+
+
+
+
+</assessment>

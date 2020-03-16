@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules5_tutor4">
+    <title>Tutor</title>
+
+
+    <question id="q1">
+        <!-- LO: Apply probability rules in order to find the likelihood of an event.
+Sub-objective: probdef        Definition of probability  -->
+        <body>
+            <p>Roughly 7% of American males in U.S. have some sort of color blindness.</p>
+            <p>Suppose that a medical researcher selects one American male at random.</p>
+            <p><em style="bold">Let A represent the event ’the selected male is color
+                blind’.</em></p>
+            <p><em style="bold">Let B represent the event ’the selected male is not color
+                    blind’.</em></p>
+            <p>Determine whether A and B are disjoint or independent.</p><p>A and B are <input_ref
+                    input="A"/></p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">disjoint</choice>
+            <choice value="two">not disjoint</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="disjoint" match="one" score="10">
+                <feedback>Correct. These events are disjoint because they cannot occur at the same
+                    time. An individual male cannot be both color blind and not color blind.
+                </feedback>
+            </response>
+            <response input="A" name="not disjoint" match="two">
+                <feedback>Incorrect. These events are disjoint because they cannot occur at
+                    the same time. An individual male cannot be both color blind and not color
+                    blind. </feedback>
+            </response>
+        </part>
+    </question>
+
+    <question id="q2">
+        <!-- LO: -->
+        <body>
+            <p>A and B are <input_ref input="B"/></p>
+        </body>
+        <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">independent</choice>
+            <choice value="two">not independent</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="B" name="independent" match="one">
+                <feedback>Incorrect. The events are disjoint, so they cannot be independent.
+                    The occurrence (or not) of event A will affect the probability of B. If A
+                    occurs, the P(B) = 0. If A does not occur, then the P(B) = 1. </feedback>
+            </response>
+            <response input="B" name="not independent" match="two" score="10">
+                <feedback>Correct. The events are disjoint, so they must be dependent. The
+                    occurrence (or not) of event A will affect the probability of B. If A occurs,
+                    the P(B) = 0. If A does not occur, then the P(B) = 1. </feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

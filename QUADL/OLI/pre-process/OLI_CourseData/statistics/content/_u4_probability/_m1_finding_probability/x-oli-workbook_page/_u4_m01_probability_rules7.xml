@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules7">
+    <head>
+        <title>Probability Rules (7 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+       
+        <p>As you've seen, the last three rules that we've introduced
+            (<?oxy_insert_start author="mmyers" timestamp="20101108T201046-0500"?>the
+            <?oxy_insert_end?>Complement Rule,
+            <?oxy_insert_start author="mmyers" timestamp="20101108T201050-0500"?>the
+            <?oxy_insert_end?>Addition Rule for Disjoint Events,
+            <?oxy_insert_start author="mmyers" timestamp="20101108T201053-0500"?>and the
+            <?oxy_insert_end?>Multiplication Rule for Independent Events) are frequently used in
+            solving problems. Before we move on to our next rule,
+            <?oxy_delete author="mmyers" timestamp="20101108T201132-0500" content="t"?>here are two
+            comments that will help you use these rules in broader
+            type<?oxy_insert_start author="mmyers" timestamp="20101108T201146-0500"?>s<?oxy_insert_end?>
+            of problems and more effectively.</p>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>As we mentioned before, the Addition Rule can be extended to more than two
+                    disjoint events. Likewise, the Multiplication Rule can be extended to more than
+                    two independent events. So if A,<?oxy_insert_start author="mmyers" timestamp="20101108T201454-0500"?>
+                    <?oxy_insert_end?>B<?oxy_insert_start author="mmyers" timestamp="20101108T201459-0500"?>
+                    and
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T201458-0500" content=","?>C
+                    are three independent events, for example, then P(A and B and C) = P(A) * P(B) *
+                    P(C). These extensions are quite
+                    straightforward<?oxy_insert_start author="mmyers" timestamp="20101108T201525-0500"?>,<?oxy_insert_end?>
+                    as long as you remember that "or" requires us to add, while "and" requires us to
+                    multiply.</p>
+                <p>An example of a situation where more than two independent events naturally occur
+                    is when a random sample of more than two individuals is chosen from a large
+                    population.</p>
+                <p>Here is an example:</p>
+                <example>
+
+                    <p>Three people are chosen at random from a large population. What is the
+                        probability that all three have blood type B? We'll use the usual notation
+                        of B1, B2 and B3 for the events that
+                        <?oxy_delete author="mmyers" timestamp="20101108T201827-0500" content="the first, second and third person"?><?oxy_insert_start author="mmyers" timestamp="20101108T201827-0500"?>persons
+                        1, 2 and 3<?oxy_insert_end?> have blood type B, respectively. We need to
+                        find P(B1 and B2 and B3). Let's solve this one together:</p>
+
+
+                    <wb:inline idref="u3_m1_rules7_tutor1" purpose="learnbydoing"/>
+                    <!--<flash src="../../webcontent/flash/_u4_m1_inlinetutor5.swf" width="500" height="205" purpose="learnbydoing">
+<param name="problem_name">_u4_m1_inlinetutor5</param>
+</flash>-->
+                </example>
+                <p>Here is another example that might be quite surprising.</p>
+                <example>
+
+                    <p>A fair coin is tossed 10 times. Which of the following two outcomes is more
+                        likely? </p>
+                    <p>(a) HHHHHHHHHH </p>
+                    <p>(b) HTTHHTHTTH</p>
+
+
+                    <wb:inline idref="u3_m1_rules7_tutor2" purpose="learnbydoing"/>
+                    <!--<flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="249" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u4_m1_inlinetutor6.xml</param>
+<param name="problem_name">_u4_m1_inlinetutor6</param>
+</flash>-->
+                    <p>In fact, they are equally likely.
+                        <?oxy_delete author="mmyers" timestamp="20101108T202903-0500" content="We&apos;ll use the fact that that t"?><?oxy_insert_start author="mmyers" timestamp="20101108T202909-0500"?>T<?oxy_insert_end?>he
+                        10 tosses are independent,
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T202915-0500"?>so
+                        we'll
+                        use<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202918-0500" content="and"?>
+                        the Multiplication Rule for Independent Events:</p>
+                    <p>P(HHHHHHHHHH) = P(H) * P(H) * ... *P(H) = 1/2 * 1/2 *... * 1/2 =
+                            (1/2)<sup>10</sup>
+                    </p>
+                    <p>P(HTTHHTHTTH) = P(H) * P(T) * ... * P(H) = 1/2 * 1/2 *... * 1/2 =
+                            (1/2)<sup>10</sup>
+                    </p>
+                    <p>Here is the idea:</p>
+                    <p>My random experiment here is tossing a coin 10 times. You can imagine how
+                        huge the sample space
+                        is<?oxy_insert_start author="mmyers" timestamp="20101108T203851-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T203850-0500" content="!"?></p>
+                    <p>There are actually
+                        1<?oxy_insert_start author="mmyers" timestamp="20101108T203114-0500"?>,<?oxy_insert_end?>024
+                        possible outcomes to this experiment, all of which are equally likely.
+                        Therefore, while it is true that it is more likely to get an outcome that
+                        has 5 heads and 5 tails than an outcome that has only heads (since there is
+                        only one possible outcome of the latter kind, and many possible outcomes of
+                        the former), if I am comparing 2 <em>specific outcomes</em> as I do here,
+                        they are equally likely.</p>
+                </example>
+            </body>
+        </section>
+        <!--<activity idref="_u4_m1_dig10" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m1_rules7_tutor3" purpose="didigetthis"/>
+    </body>
+</workbook_page>

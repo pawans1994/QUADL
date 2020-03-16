@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_overview4_tutor3">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>Say that the p-value was not
+                given<?oxy_insert_start author="mmyers" timestamp="20101126T155458-0500"?>,<?oxy_insert_end?>
+                but rather, the following conclusion was advertised: "The survey does not provide
+                enough evidence to conclude that the majority of
+                U<?oxy_insert_start author="mmyers" timestamp="20101126T155506-0500"?>.<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101126T155506-0500"?>.<?oxy_insert_end?>
+                adults oppose gay marriage." Which of the following could have been the p-value that
+                led to this conclusion? </body>
+            <multiple_choice shuffle="false">
+                <choice value="A">.125</choice>
+                <choice value="B">1.96</choice>
+                <choice value="C">.045</choice>
+                <choice value="D">-1.96</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="10">
+                    <feedback>Good
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T155550-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T155550-0500" content="J"?>ob!
+                        Indeed, when the p-value is not small (in this case, above .05) our
+                        conclusion is that we don't have enough evidence to reject H<sub>o</sub>, or
+                        equivalently, that we don't have enough evidence to accept
+                        H<sub>a</sub>.</feedback>
+                </response>
+                <response match="B">
+                    <feedback>Incorrect. p-value is a probability and therefore must
+                        be between 0 and 1. </feedback>
+                </response>
+                <response match="C">
+                    <feedback>Incorrect. Recall that it is when the p-value is not
+                        small (in our case, above .05) that we conclude that we don't have enough
+                        evidence to reject H<sub>o</sub>, or equivalently, that we don't have enough
+                        information to accept H<sub>a</sub>. </feedback>
+                </response>
+                <response match="D">
+                    <feedback>Incorrect. p-value is a probability and therefore must
+                        be between 0 and 1. </feedback>
+                </response>
+                <hint>Recall that our conclusion is based on how small the p-value is. Here we're
+                    using a .05 significance level, which means that if the p-value is less than
+                    .05, we would reject the null hypothesis
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T155905-0500"?>(<?oxy_insert_end?>H<sub>o</sub><?oxy_insert_start author="mmyers" timestamp="20101126T155909-0500"?>)<?oxy_insert_end?>
+                    and accept the alternative hypothesis
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T155914-0500"?>(<?oxy_insert_end?>H<sub>a</sub><?oxy_insert_start author="mmyers" timestamp="20101126T155912-0500"?>)<?oxy_insert_end?>.</hint>
+                <hint>In this case, the conclusion we reached was that we don't have evidence to
+                    reject the null hypothesis, which means that the p-value was over .05.</hint>
+                <hint>Now that we know that the p-value was over .05, the only reasonable choice out
+                    of the ones given is .125. The .045 choice is no
+                    good<?oxy_insert_start author="mmyers" timestamp="20101126T155933-0500"?>,<?oxy_insert_end?>
+                    because it is below .05, and the two choices for 1.96 and -1.96 are no good
+                    because we know that a p-value must be between 0 and 1.</hint>
+            </part>
+        </question>
+    </page>
+ 
+</assessment>

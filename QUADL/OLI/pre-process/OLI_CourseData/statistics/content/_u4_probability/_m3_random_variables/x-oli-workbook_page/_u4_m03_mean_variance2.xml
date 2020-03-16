@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_mean_variance2">
+<head>
+<title>Mean and Variance of a Random Variable (2 of 5)</title>
+    <objref idref="find_mean_variance_discrete_random"/>
+</head>
+<body>
+    
+<section>
+<title>Applications of the Mean</title>
+<body>
+<p>Means of random variables are useful for telling us about long-run gains in
+                    sales<?oxy_insert_start author="mmyers" timestamp="20101121T141028-0500"?>,<?oxy_insert_end?>
+                    or for insurance companies.</p>
+<p>Here are two examples:</p>
+</body>
+</section>
+<example><title>Pizza Delivery #1</title>
+
+<p>Your favorite pizza place delivers only one kind of
+                pizza<?oxy_insert_start author="mmyers" timestamp="20101121T141044-0500"?>,<?oxy_insert_end?>
+                which is sold for $10, and costs the pizza place $6 to make. The pizza place has the
+                following policy regarding delivery: if the pizza takes longer than half an hour to
+                arrive, there is no charge. Let the random variable X be the pizza place's gain for
+                any one pizza.</p>
+<p>Experience has shown that
+                <?oxy_delete author="mmyers" timestamp="20101121T141113-0500" content="only 10 percent of the time, "?>delivery
+                takes longer than half an
+                hour<?oxy_insert_start author="mmyers" timestamp="20101121T141118-0500"?> only 10
+                percent of the time<?oxy_insert_end?>. </p>
+<p>Find the mean gain per pizza, <m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>.
+</p>
+<p>In order to find the mean of X, we first need to establish its probability
+                distribution<?oxy_insert_start author="mmyers" timestamp="20101121T141139-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T141137-0500" content=" - "?>the
+                possible values and their probabilities.</p>
+<p>The random variable X has two possible values: either the pizza costs them $6 to make and they
+                sell it for $10, in which case X takes the value
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141219-0500"?>$<?oxy_insert_end?>10
+                -
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141221-0500"?>$<?oxy_insert_end?>6
+                =
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141223-0500"?>$<?oxy_insert_end?>4<?oxy_delete author="mmyers" timestamp="20101121T141225-0500" content=" dollars"?>,
+                or it costs them $6 to make and they give it away, in which case X takes the value
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141237-0500"?>$<?oxy_insert_end?>0
+                -
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141239-0500"?>$<?oxy_insert_end?>6
+                =
+                -<?oxy_insert_start author="mmyers" timestamp="20101121T141242-0500"?>$<?oxy_insert_end?>6<?oxy_delete author="mmyers" timestamp="20101121T141247-0500" content=" dollars"?>.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141251-0500"?>The
+                p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T141254-0500" content="P"?>robability
+                of the latter case is given to be 10 percent, or .1, so using complements, the
+                former has probability .9. Here, then is the probability distribution of X:</p>
+<image style="block" src="../webcontent/image024a.gif" alt="A probability distribution table
+with two rows, labeled &quot;X&quot; &quot;P(X=x).&quot; Here is the data in columns (X: P(X=x)):
+        +4: .9;
+        -6: .1;
+        In other words, when pizza delivery is not longer than half an hour, X = +4, and P(X = +4) = .9 .
+When pizza delivery takes longer than half an hour, X=-6, and P(X = -6) = .1 ."/>
+<p>Therefore,</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mo>+</m:mo>
+<m:mn>4</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mo>-</m:mo>
+<m:mn>6</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mo>+</m:mo>
+<m:mn>3</m:mn>
+</m:math>.
+</p>
+<p>In the long run, the pizza place gains an average of
+                <?oxy_insert_start author="mmyers" timestamp="20101121T141329-0500"?>$<?oxy_insert_end?>3
+                <?oxy_delete author="mmyers" timestamp="20101121T141332-0500" content="dollars "?>per
+                pizza delivered.</p>
+</example>
+<example><title>Pizza Delivery #2</title>
+
+<p>If the pizza place wants to increase its mean gain per pizza to $3.90, how much should it raise the price from $10? 
+    We need to replace the original cost of 10 with an as-yet-to-be-determined new cost N, resulting in this probability distribution table:</p>
+<image style="block" src="../webcontent/image026a.gif" alt="A probability distribution table with two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; Here is the data in columns (X: P(X=x)):
+        N-6: .9;
+        -6: .1;
+        In other words, when pizza delivery is not longer than half an hour, X = N-6, and P(X = N-6) = .9 .
+When pizza delivery takes longer than half an hour, X=-6, and P(X = -6) = .1 ."/>
+<p> Next, setting <m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+</m:math> equal to +3.90 instead of +3, we solve</p>
+<p>
+<m:math overflow="scroll">
+<m:mn>3</m:mn>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mi>N</m:mi>
+<m:mo>-</m:mo>
+<m:mn>6</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mo>-</m:mo>
+<m:mn>6</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mi>N</m:mi>
+<m:mo>-</m:mo>
+<m:mn>6</m:mn>
+</m:math> or</p>
+<p>
+<m:math overflow="scroll">
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mi>N</m:mi>
+<m:mo>=</m:mo>
+<m:mn>9</m:mn>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+</m:math>
+</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101121T141451-0500"?>Therefore,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T141455-0500" content="so that"?>
+                the new price must be 11 dollars.</p>
+</example>
+    <section>
+        <title>Learn By Doing</title>
+        <body><p>We are going to look at a variation of the
+                    <?oxy_delete author="mmyers" timestamp="20101121T141520-0500" content="delivering "?>pizza
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T141524-0500"?>delivery
+                    <?oxy_insert_end?>example. Here is the scenario.</p>
+            <p>The Acme Shipping Company has learned from experience that it costs $14.80 to deliver
+                    a small package overnight. The company charges $20 for such a shipment, but
+                    guarantees
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T141630-0500"?>that they
+                    will
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T141629-0500" content="to"?>
+                    refund the $20 charge if it does not arrive within 24 hours.</p>
+        <p></p>
+        <wb:inline idref="u3_m3_meanvariance2_tutor1" purpose="learnbydoing"/>
+            <wb:inline idref="u3_m3_meanvariance2_tutor2" purpose="learnbydoing"/>
+            <wb:inline idref="u3_m3_meanvariance2_tutor3" purpose="learnbydoing"/>
+        </body>
+    </section>
+    
+    <example><title>Raffle</title>
+    <p>In order to raise
+                money<?oxy_insert_start author="mmyers" timestamp="20101121T143133-0500"?>,<?oxy_insert_end?>
+                a charity decides to raffle off some prizes. The
+                <?oxy_insert_start author="mmyers" timestamp="20101121T143148-0500"?>charity<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T143150-0500" content="raffle"?>
+                sells
+                2<?oxy_insert_start author="mmyers" timestamp="20101121T143153-0500"?>,<?oxy_insert_end?>000
+                <?oxy_insert_start author="mmyers" timestamp="20101121T143155-0500"?>raffle
+                <?oxy_insert_end?>tickets for $5 each. The prizes are:</p>
+    <ul>
+        <li>10 movie packages (two tickets plus popcorn) worth $25 each</li>
+        <li>5 dinners for two worth $50 each</li>
+        <li>2 smart phones worth $200 each</li>
+        <li>1
+                    flat<?oxy_insert_start author="mmyers" timestamp="20101121T143342-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T143342-0500" content=" "?>screen
+                    TV worth
+                    $1<?oxy_insert_start author="mmyers" timestamp="20101121T143347-0500"?>,<?oxy_insert_end?>500</li>
+    </ul>
+    <p>What is the expected gain or loss if you buy a single raffle ticket?  The expected value can be written as E(X).</p>
+    <p>There are 5 possible outcomes when you buy a ticket:  win movie package, win dinner for two, win smart phone, win TV, win nothing.</p>
+<table rowstyle= "alternating">
+    <tr><th>prize</th> <th>net gain or loss</th> <th>probability</th></tr>
+    <tr><td>movie package</td><td>25 - 5</td> <td>10 / 2000</td></tr>
+    <tr><td>dinner for two</td><td>50 - 5</td> <td>5 / 2000</td></tr>
+    <tr><td>smart phone</td><td>200 - 5</td> <td>2 / 2000</td></tr>
+    <tr><td>TV</td><td>1500 - 5</td> <td>1 / 2000</td></tr>
+    <tr><td>nothing</td><td>0 - 5</td> <td>(2000 - 10 - 5 - 2 - 1) / 2000</td></tr>
+</table>
+    <p>The previous information is summarized
+                <?oxy_insert_start author="mmyers" timestamp="20101121T143904-0500"?>below
+                <?oxy_insert_end?>in a probability distribution:</p>
+    <image src="../webcontent/image_raffle.gif" alt="A probability distribution table with
+two rows, labeled &quot;X&quot; and &quot;P(X=x).&quot; Here is the data in column oriented
+format (X: P(X=x), comment):
+        20: 10/20000 (movie package);
+        45: 5/2000 (dinner for two);
+        195: 2/2000 (smart phone);
+        1495: 1/2000 (TV);
+        -5: 1982/2000 (Nothing);"></image>
+    <p><m:math overflow="scroll">
+        <m:msub>
+        <m:mi>μ</m:mi>
+        <m:mrow>
+            <m:mi>X</m:mi>
+        </m:mrow>
+        </m:msub>
+   <m:mo>=</m:mo>
+        <m:mi>E</m:mi>
+        <m:mo>(</m:mo>
+        <m:mi>X</m:mi>
+        <m:mo>)</m:mo>
+        <m:mo>=</m:mo>
+        <m:mn>20</m:mn>
+        <m:mo>(</m:mo>
+        <m:mfrac><m:mrow><m:mn>10</m:mn></m:mrow><m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>)</m:mo>
+        <m:mo>+</m:mo>
+        <m:mn>45</m:mn>
+        <m:mo>(</m:mo>
+        <m:mfrac><m:mrow><m:mn>5</m:mn></m:mrow><m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>)</m:mo>
+        <m:mo>+</m:mo>
+        <m:mn>195</m:mn>
+        <m:mo>(</m:mo>
+        <m:mfrac><m:mrow><m:mn>2</m:mn></m:mrow><m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>)</m:mo>
+        <m:mo>+</m:mo>
+        <m:mn>1495</m:mn>
+        <m:mo>(</m:mo>
+        <m:mfrac><m:mrow><m:mn>1</m:mn></m:mrow><m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>)</m:mo>
+        <m:mo>+</m:mo>
+        <m:mo>(</m:mo>
+        <m:mn>-5</m:mn>
+        <m:mo>)</m:mo>
+        <m:mo>(</m:mo>
+        <m:mfrac><m:mrow><m:mn>1982</m:mn></m:mrow><m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>)</m:mo>
+    </m:math>
+    </p>
+    <p><m:math overflow="scroll">
+        <m:mi>E</m:mi>
+        <m:mo>(</m:mo>
+        <m:mi>X</m:mi>
+        <m:mo>)</m:mo>
+        <m:mo>=</m:mo>
+        <m:mfrac><m:mrow><m:mn>-7600</m:mn></m:mrow> <m:mrow><m:mn>2000</m:mn></m:mrow></m:mfrac>
+        <m:mo>=</m:mo>
+        <m:mn>-3.80</m:mn>
+    </m:math></p>
+    <p>Since we got a negative number, we have an expected loss of $3.80 for each raffle ticket purchased. 
+        Recall that this is based upon a long-run average. </p>
+    <p>Each raffle ticket has only 5 possible outcomes:</p>
+    <ul>
+        <li><p>$20 net gain if you win the movie package</p></li>
+        <li><p>$45 net gain if you win the dinner for two</p></li>
+        <li><p>$195 net gain if you win the smart phone</p></li>
+        <li><p>$1<?oxy_insert_start author="mmyers" timestamp="20101121T144046-0500"?>,<?oxy_insert_end?>495 net
+                        gain if you win the TV</p></li>
+        <li><p>$5 net loss if you do not win a prize</p></li>
+    </ul>
+        <p>It should not be surprising that you have an expected loss. After all, the charity's goal
+                is to raise money. If you have an expected loss of $3.80 per ticket, they will have
+                an expected gain of $3.80 per ticket. Each ticket gives the charity +5 (it was -5
+                for you). The prizes are
+                reversed<?oxy_insert_start author="mmyers" timestamp="20101121T144108-0500"?>,<?oxy_insert_end?>
+                too. For
+                example<?oxy_insert_start author="mmyers" timestamp="20101121T144113-0500"?>,<?oxy_insert_end?>
+                the movie package is -20 + 5 for the charity (it was 20 - 5 for you). </p>
+</example>
+</body>
+</workbook_page>

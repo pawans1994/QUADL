@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<link href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" type="text/css" rel="stylesheet">
+<assessment id="_u4_m1_prob_chkpt_1" max_attempts="3" recommended_attempts="1">
+
+	<title>Probability Checkpoint 1</title>
+<!-- 	<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+			are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+			will ask "This will submit your answers and finish this assignment. Are you sure?",
+			click "OK" if you are ready to submit your answers for final grading. </p>
+
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+				following link:</em>
+			<link href="../webcontent/_u4_m1_prob_chkpt_1.pdf">Solution Set</link>.</p>
+	</content> -->
+	<multiple_choice id="q1">
+		<!--LO:Find the probability of events in the case in which all outcomes are equally likely.Sub-objective: probequal        When probabilities are equal-->
+		<body>A family plans to have 3 children. For each birth, assume that the probability of a
+			boy is the same as the probability of a girl. What is the probability that they will
+			have at least one boy and at least one girl?</body>
+		<input shuffle="false">
+			<choice value="A">0.5</choice>
+			<choice value="B">0.125</choice>
+			<choice value="C">0.75</choice>
+			<choice value="D">0.875</choice>
+			<choice value="E">None of these</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. There are 8 equally likely outcomes in this sample space.
+					In two outcomes the gender of all three children is the same (GGG, BBB). The
+					other 6 outcomes contain at least one boy and one girl. So the answer is 6/8 =
+					0.75. The correct answer is (C).</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Not quite right. The outcomes are equally likely, so the easiest way to
+					work this problem is to write out the 8 outcomes in this sample space. In two
+					outcomes the gender of all three children is the same (GGG, BBB). The other 6
+					outcomes contain at least one boy and one girl. So the answer is 6/8 = 0.75. The
+					correct answer is (C).</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct. The outcomes are equally likely, so the easiest way to work this
+					problem is to write out the 8 outcomes in this sample space. In two outcomes the
+					gender of all three children is the same (GGG, BBB). The other 6 outcomes
+					contain at least one boy and one girl. So the answer is 6/8 = 0.75.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. You may have calculated P(at least one girl) = 1-(0.5)^3.
+					The outcomes are equally likely, so the easiest way to work this problem is to
+					write out the 8 outcomes in this sample space. In two outcomes the gender of all
+					three children is the same (GGG, BBB). The other 6 outcomes contain at least one
+					boy and one girl. So the answer is 6/8 = 0.75. The correct answer is
+					(C).</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. The outcomes are equally likely, so the easiest way to
+					work this problem is to write out the 8 outcomes in this sample space. In two
+					outcomes the gender of all three children is the same (GGG, BBB). The other 6
+					outcomes contain at least one boy and one girl. So the answer is 6/8 = 0.75. The
+					correct answer is (C).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q2">
+		<!--LO:Determine the sample space of a given random experiment.Sub-objective: samplespace    Identifying sample space  -->
+		<body>A person in a casino decides to play blackjack until he wins a game, but he will not
+			play more than 3 games. Let W denote a win and L denote a loss. What is the sample space
+			for this random experiment?</body>
+		<input shuffle="false">
+			<choice value="A">S = {WWW, WWL, WLW, , WLL, LWW, LWL, LLW, LLL}</choice>
+			<choice value="B">S = {W, LW, LLW}</choice>
+			<choice value="C">S = {W, LW, LLW, LLL}</choice>
+			<choice value="D">S = {W, WW, WWW}</choice>
+			<choice value="E">S = {W, WL, WWL, WWW}</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. The person stops playing when he wins or if he plays
+					three games without winning. So not all of the options in this set are outcomes
+					for this experiment (for example WWW is not possible) and other possibilities
+					are missing (for example W). The correct answer is (C).</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. One option is missing. The person could also lose all 3
+					games. The correct answer is (C).</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct. The person stops playing when he wins or if he plays three games
+					without winning.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. The person stops playing when he wins a game, so WW and
+					WWW are not outcomes for this random experiment. The correct answer is
+					(C).</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. The person stops playing when he wins a game, so W is the
+					only outcome in this set that comes from this random experiment. The correct
+					answer is (C).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q3">
+		<!--LO:Determine the sample space of a given random experiment.Sub-objective: samplespace    Identifying sample space  -->
+		<body>A person in a casino decides to play 3 games of blackjack. Let W denote a win and L
+			denote a loss. Define the event A as &#34the person wins at least one game of blackjack&#34.
+			What are the possible outcomes for this event?</body>
+		<input shuffle="false">
+			<choice value="A">{W, LW, LLW}</choice>
+			<choice value="B">{W, WW, WWW}</choice>
+			<choice value="C">{WWW, WWL, WLW, WLL, LWW, LWL, LLW, LLL}</choice>
+			<choice value="D">{WWW, WWL, WLW, WLL, LWW, LWL, LLW}</choice>
+			<choice value="E">{WWL, LWL, LLW}</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. {W, LW, LLW} does not describe outcomes for this random
+					experiment because the person decided to play 3 games (regardless of whether he
+					wins or losses), so each outcome must show the result for each of the 3 games.
+					The correct answer is (D).</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. {W, WW, WWW} does not describe outcomes for this random
+					experiment because the person decided to play 3 games, so each outcome must show
+					the result for each of the 3 games. The correct answer is (D).</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Not quite right. This is the entire sample space for the random experiment
+					in which a person plays 3 games of blackjack. The correct answer is (D).
+				</feedback>
+			</response>
+			<response match="D" score="10">
+				<feedback>Correct. Event A is all outcomes in the sample space except LLL.</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. {WLL, LWL, LLW} are the outcomes for the event &#34wins
+					EXACTLY one game of blackjack&#34. The correct answer is (D).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q4">
+		<!--LO:Find the probability of events in the case in which all outcomes are equally likely.Sub-objective: probequal        When probabilities are equal  -->
+		<body><p>Four students attempt to register online at the same time for an Introductory
+				Statistics class that is full. Two are freshmen and two are sophomores. They are put
+				on a wait list. Prior to the start of the semester, two enrolled students drop the
+				course, so the professor decides to randomly select two of the four wait list
+				students and gives them a seat in the class. </p>
+			<p>What is the probability that both students selected are freshmen?</p></body>
+		<input shuffle="false">
+			<choice value="A">1/2</choice>
+			<choice value="B">1/4</choice>
+			<choice value="C">1/6</choice>
+			<choice value="D">1/12</choice>
+			<choice value="E">it is impossible to tell because the outcomes are not equally
+				likely</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>Not quite right. You may have been thinking that half of the wait list
+					students are freshmen. But you need to think about the sample space of this
+					random experiment. Since order does not matter, the sample space contains six
+					equally likely outcomes. S={F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}. Only one of the
+					six outcomes is two freshmen. The correct answer is (C).</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Not quite right. You may have been thinking that there are four possible
+					outcomes, {FF, FS, SF, and SS}, like when we toss a coin two times. But here the
+					sample space contains six equally likely outcomes because there are 2 freshmen
+					and 2 sophomores and the order in which they are chosen does not matter.
+					S={F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}. Only one of the six outcomes is two
+					freshmen. The correct answer is (C).</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct. The order that the students are chosen does not matter, so F1F2
+					and F2F1 are the same outcome. Thus, the sample space contains six equally
+					likely outcomes. S={F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}. Only one of the six
+					outcomes is two freshmen. </feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>Not quite right. The order that the students are chosen does not matter,
+					so F1F2 and F2F1 are the same outcome. Thus, the sample space contains only six
+					equally likely outcomes. S={F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}. Only one of the
+					six outcomes is two freshmen. The correct answer is (C).</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>Not quite right. The students are chosen randomly, so the outcomes are
+					equally likely. The order that the students are chosen does not matter, so F1F2
+					and F2F1 are the same outcome. Thus, the sample space contains six equally
+					likely outcomes. S={F1F2, F1S1, F1S2, F2S1, F2S2, S1S2}. Only one of the six
+					outcomes is two freshmen. The correct answer is (C).</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+
+</assessment>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_mu7">
+    <head>
+        <title>Hypothesis Testing for the Population Mean (7 of <!--9-->9)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+<body>
+  
+        <p>Recall that we were discussing the situation of testing for a mean, in the case when
+            sigma is unknown. We’ve seen previously
+            that<?oxy_delete author="mmyers" timestamp="20101128T002536-0500" content=","?> when
+            sigma is known, the test statistic is <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>σ</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> (note the sigma
+            <?oxy_insert_start author="mmyers" timestamp="20101128T002559-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002554-0500" content="‘"?>σ<?oxy_insert_start author="mmyers" timestamp="20101128T002602-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002601-0500" content="’"?>
+            in the formula), which follows a normal distribution. But when sigma is
+            <em>unknown</em>, the test statistic in the test for a mean becomes <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> (note the use of
+            <?oxy_insert_start author="mmyers" timestamp="20101128T002618-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002617-0500" content="‘"?>s<?oxy_insert_start author="mmyers" timestamp="20101128T002620-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002619-0500" content="’"?>
+            in the formula, in place of the unknown sigma). <em>Here</em> is where the
+            t<?oxy_insert_start author="mmyers" timestamp="20101128T002637-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002637-0500" content=" "?>distribution
+            arises in the context of a test for a mean, because <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> (with
+            <?oxy_insert_start author="mmyers" timestamp="20101128T002646-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002646-0500" content="‘"?>s<?oxy_insert_start author="mmyers" timestamp="20101128T002648-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T002648-0500" content="’"?>
+            in the formula in place of
+            <?oxy_insert_start author="mmyers" timestamp="20101128T002653-0500"?>the
+            <?oxy_insert_end?>unknown sigma) follows a t distribution. </p>
+        <p>Notice the only difference between the formula for the
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003803-0500"?>Z<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003803-0500" content="z"?>
+            statistic and the formula for the t statistic: In the formula for the
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003807-0500"?>Z<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003807-0500" content="z"?>
+            statistic, sigma (the standard deviation of the population) must be known; whereas, when
+            sigma isn’t known, then
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003413-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003412-0500" content="‘"?>s<?oxy_insert_start author="mmyers" timestamp="20101128T003415-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003414-0500" content="’"?>
+            (the standard deviation of the sample data) is used in place of
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003420-0500"?>the
+            <?oxy_insert_end?>unknown sigma. That’s the change that causes the statistic to be a t
+            statistic. </p>
+        <p>Why would this single change (using
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003433-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003432-0500" content="‘"?>s<?oxy_insert_start author="mmyers" timestamp="20101128T003435-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003434-0500" content="’"?>
+            in place of
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003437-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003437-0500" content="‘"?>sigma<?oxy_insert_start author="mmyers" timestamp="20101128T003439-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003439-0500" content="’"?>)
+            result in a sampling distribution that is the t distribution instead of the standard
+            normal
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003820-0500"?>(Z)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003819-0500" content="z"?>
+            distribution? Remember that the t distribution is more appropriate in cases where there
+            is more variability. So why is there more variability when
+            <?oxy_delete author="mmyers" timestamp="20101128T003513-0500" content="‘"?>s<?oxy_delete author="mmyers" timestamp="20101128T003512-0500" content="’"?>
+            is used in place of
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003516-0500"?>the
+            <?oxy_insert_end?>unknown sigma? </p>
+        <p>Well, remember that sigma (σ) is a parameter (it’s the standard deviation of the
+            population), whose value therefore never changes. Whereas,
+            <?oxy_delete author="mmyers" timestamp="20101128T003530-0500" content="‘"?>s<?oxy_delete author="mmyers" timestamp="20101128T003532-0500" content="’"?>
+            (the standard deviation of the sample data) varies from sample to sample, and therefore
+            it’s another source of variation. So, using
+            <?oxy_delete author="mmyers" timestamp="20101128T003540-0500" content="‘"?>s<?oxy_delete author="mmyers" timestamp="20101128T003541-0500" content="’"?>
+            in place of sigma causes the sampling distribution to be the t distribution because of
+            that extra source of variation: </p>
+        <p>In the formula <m:math overflow="scroll">
+            <m:mrow>
+                <m:mi>z</m:mi>
+                <m:mo>=</m:mo>
+                <m:mfrac>
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                    <m:mfrac>
+                        <m:mi>σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mfrac>
+            </m:mrow>
+        </m:math>, the only source of variation is the sampling variability of the sample
+            mean <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> (none of the other terms in that formula vary randomly in a given study);</p>
+        <p>Whereas in the formula <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>, there are <em>two</em> sources of variation: One source is the sampling
+            variability of the sample mean <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>; The <em>other</em> source is the sampling variability of sample standard
+            deviation
+            <?oxy_insert_start author="mmyers" timestamp="20101128T003652-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T003652-0500" content="S"?>. </p>
+        <p>So, in a test for a mean, if sigma isn’t known, then
+            <?oxy_delete author="mmyers" timestamp="20101128T003658-0500" content="‘"?>s<?oxy_delete author="mmyers" timestamp="20101128T003700-0500" content="’"?>
+            is used in place of the unknown sigma and that results in the test statistic being a t
+            score. </p>
+        <p>The t score, in the context of a test for a mean, is summarized by the following figure: </p>
+        <image style="block" src="../webcontent/image365.gif" alt="The z-score is calculated with
+z = ( x-bar - &mu; ) / [ &sigma;/&radic;n ]. Note that there is only one source of variation, x-bar.
+The standard deviation of x-bar is the denominator, &sigma;/&radic;n. This Z (standard normal) distribution
+is centered at 0, bell shaped, and has a standard devation of 1. The t-score is calculated with
+t = ( x-bar - &mu;) / [ s/&radic;n ] . Note that the denominator, s/&radic;n, is the standard error
+of x-bar. Also notice that we now have two sources of variation, x-bar and s. The t-distribution (with
+n-1 d.f.) is centered at zero, bell shaped, and has a larger spread."/>
+        <p>In fact, the t score that arises in the context of a test for a mean is a t score with (n
+            – 1) degrees of freedom. Recall that each t distribution is indexed according to
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004020-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004020-0500" content="‘"?>degrees
+            of
+            freedom.<?oxy_insert_start author="mmyers" timestamp="20101128T004023-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004023-0500" content="’"?>
+            Notice that, in the context of a test for a mean, the degrees of freedom depend on the
+            sample size in the study. Remember that we said that higher degrees of freedom indicate<?oxy_delete author="mmyers" timestamp="20101128T004039-0500" content="s"?>
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004041-0500"?>that
+            <?oxy_insert_end?>the t distribution is closer to
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004047-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004046-0500" content="N"?>ormal.
+            So in the context of a test for
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004100-0500"?>the
+            <?oxy_insert_end?>mean, the <em>larger the sample size</em>, the higher the degrees of
+            freedom, and
+                <em><?oxy_delete author="mmyers" timestamp="20101128T004111-0500" content=" "?>the
+                closer the t distribution is to a normal z distribution</em>. This is summarized
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004122-0500"?>with<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004121-0500" content="by"?>
+            the notation near the bottom on the following image: </p>
+        <image style="block" src="../webcontent/image419.gif" alt="The larger the sample size n, the closer
+the t-distribution gets to the standard normal."/>
+        <p>As a result, in the context of a test for a mean, the effect of the t distribution is
+            <em>most important</em> for a study with a <em>relatively small sample size</em>. </p>
+        <!--<p>Some more facts about the t distribution:</p>
+<p>1. There are many t distributions: t(1), t(2), t(3),.... where the "index" attached to each t is called "degrees of  freedom" (abbreviated d.f). So t(1) is the notation for the t distribution with 1 d.f, t(2) is the notation for the t distribution with 2 d.f etc. The meaning of "degrees of freedom" is beyond the scope of this course, but you can think about it as some index that distinguishes among the different t distributions.</p>
+<p>2. The larger the number of d.f the t distribution has, the closer it is to Z, as the following figure suggests:</p>
+<image style="block" src="../webcontent/image364.gif"/>
+<p>3. So far we have established that <m:math overflow="scroll">
+<m:mrow>
+<m:mi>t</m:mi>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>−</m:mo>
+<m:mi mathvariant="normal">μ</m:mi>
+</m:mrow>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mfrac>
+</m:mrow>
+</m:math> has a t distribution (as opposed to a Z distribution when σ is used), but which of the t distributions does it have? It turns out that it is a t(n-1)distribution. In other words, the type of t distribution depends on the sample size.  The index (number of d.f) is 1 less than the sample size.</p>
+<p>4. If we combine facts 2 and 3 together we can say that for a large sample size, the distribution of <m:math overflow="scroll">
+<m:mrow>
+<m:mi>t</m:mi>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>−</m:mo>
+<m:mi mathvariant="normal">μ</m:mi>
+</m:mrow>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mfrac>
+</m:mrow>
+</m:math> is approximately as the distribution of z - standard normal. (Explanation: according to 3, t has a  t(n-1) distribution, which, according to 2, gets very close to Z for large n)</p>
+<p>
+<em>Comment</em>: A common rule of thumb for "large" here is n&gt;30.</p>
+<p>The following figure is a summary of the important points that were just mentioned:</p>
+<image style="block" src="../webcontent/image365.gif"/>-->
+        <p>We are now done introducing the t distribution. What are implications of all of this?</p>
+        <p>1. The null distribution of our t-test statistic: <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> is the t distribution with (n-1) d.f. In other words, when
+                <?oxy_insert_start author="mmyers" timestamp="20101128T004221-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004219-0500" content="Ho"?>
+            is true (i.e., when <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mrow>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                        </m:mrow>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>), our test statistic has a t distribution with (n-1) d.f., and this is the
+            distribution under which we find p-values.</p>
+        <p>2. For <?oxy_insert_start author="mmyers" timestamp="20101128T004233-0500"?>a
+            <?oxy_insert_end?>large sample size
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004239-0500"?>(<?oxy_insert_end?>n<?oxy_insert_start author="mmyers" timestamp="20101128T004240-0500"?>)<?oxy_insert_end?>,
+            the null distribution of the test statistic is approximately Z, so whether we use t(n<?oxy_insert_start author="mmyers" timestamp="20101128T004247-0500"?>
+            <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101128T004247-0500"?>
+            <?oxy_insert_end?>1) or Z to calculate the p-values should not make a big difference.
+            Here is another
+            <?oxy_delete author="mmyers" timestamp="20101128T004257-0500" content="more "?>practical
+            way to look at this point.
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004315-0500"?>If we have<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004318-0500" content="For"?>
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004305-0500"?>a
+            <?oxy_insert_end?>large n, our sample has more information about the population.
+            Therefore<?oxy_insert_start author="mmyers" timestamp="20101128T004327-0500"?>,<?oxy_insert_end?>
+            we can expect the sample standard deviation
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004332-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004332-0500" content="S"?>
+            to be close enough to the population standard deviation, σ, so that for practical
+            purposes we can use
+            <?oxy_insert_start author="mmyers" timestamp="20101128T004339-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004338-0500" content="S"?>
+            as the known σ, and we're back to the z-test.</p>
+    </body>
+</workbook_page>

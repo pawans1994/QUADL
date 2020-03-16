@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="casei1">
+    <head>
+        <title>Case C→Q (1 of 2) </title>
+        <objref idref="compare_quantitative_distributions"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Case C→Q: Categorical Explanatory Variable and Quantitative Response
+                Variable</title>
+            <body>
+                <p>Recall the role-type classification table for framing our discussion about the
+                    relationship between two variables:</p>
+                <image style="block" src="../webcontent/casei1.gif" alt="It is possible
+for any type of explanatory variable to be paired with any type of response variable.
+The possible pairings are:
+Categorical Explanatory → Categorical Response (C→C),
+Categorical Explanatory → Quantitative Response (C→Q),
+Quantitative Explanatory → Categorical Response (Q→C), and
+Quantitative Explanatory → Quantitative Response (Q→Q). In this section we will be working on C→Q"/>
+                <p>We are now ready to start with Case C→Q, exploring the relationship between two
+                    variables where the explanatory variable is categorical, and the response
+                    variable is quantitative. As you'll discover, exploring relationships of this
+                    type is something we've already discussed in this course, but we didn't frame
+                    the discussion this way.</p>
+            </body>
+        </section>
+        <example>
+            <title>Hot Dogs</title>
+            <p>
+                <em>Background:</em> People who are concerned about their health may prefer hot dogs
+                that are low in calories. A study was conducted by a concerned health group in which
+                54 major hot dog brands were examined, and their calorie contents recorded. In
+                addition, each brand was classified by type: beef, poultry, and meat (mostly pork
+                and beef, but up to 15% poultry meat). The purpose of the study was to examine
+                whether the <em>number of calories</em> a hot dog has is related to (or affected by)
+                its <em>type</em>. (Reference: Moore, David S., and George P. McCabe (1989). <em
+                    style="italic">Introduction to the Practice of Statistics</em>. Original source:
+                    <em style="italic">Consumer Reports</em>, June 1986, pp. 366-367.)</p>
+            <p>Answering this question requires us to examine the relationship between the
+                categorical variable, Type and the quantitative variable Calories. Because the
+                question of interest is whether the type of hot dog affects calorie content, </p>
+            <ul>
+                <li>the <em>explanatory</em> variable is <em>Type</em>, and</li>
+                <li>the <em>response</em> variable is <em>Calories</em>.</li>
+            </ul>
+            <p>Here is what the raw data look like: </p>
+            <image style="block" src="../webcontent/casei2.gif" alt="A table of the data. There are
+three columns, &quot;Brand&quot;, &quot;Type&quot;, and &quot;Calories&quot;. &quot;Type&quot; is the
+Explanatory variable, and &quot;Calories&quot; is the Response variable. Some example data:
+    Brand 1, Beef, 186;
+    Brand 2, Poultry, 129;
+    Brand 3, Beef, 181;
+    Brand 4, Meat, 183;
+    ... (abbreviated) ...
+    Brand 54, Poultry, 144"/>
+            <p>The raw data are a list of types and calorie contents, and are not very useful in
+                that form. To explore how the number of calories is related to the type of hot dog,
+                we need an informative visual display of the data that will compare the three types
+                of hot dogs with respect to their calorie content. </p>
+            <p>The visual display that we'll use is <em>side-by-side boxplots</em> (which we've seen
+                before). The side-by-side boxplots will allow us to <em>compare the
+                    distribution</em> of calorie counts within each category of the explanatory
+                variable, hot dog type:</p>
+            <image style="block" src="../webcontent/casei3.gif" alt="Three box plots. The vertical axis
+is labeled &quot;Calories&quot;. There are three box plots, one each for Beef, Other Meat, and Poultry.
+The box plot characteristics are summarized in the table below."/>
+            <p>As before, we supplement the side-by-side boxplots with the descriptive statistics of
+                the calorie content (response) for each type of hot dog separately (i.e., for each
+                level of the explanatory variable separately):</p>
+            <table title="Descriptive Statistics: Calories by Type">
+                <tr>
+                    <th>Statistic</th>
+                    <th>Beef</th>
+                    <th>Meat</th>
+                    <th>Poultry</th>
+                </tr>
+                <tr>
+                    <th>min</th>
+                    <td>111</td>
+                    <td>107</td>
+                    <td>86</td>
+                </tr>
+                <tr>
+                    <th>Q1</th>
+                    <td>139.5</td>
+                    <td>138.5</td>
+                    <td>100.5</td>
+                </tr>
+                <tr>
+                    <th>Median</th>
+                    <td>152.5</td>
+                    <td>153</td>
+                    <td>113</td>
+                </tr>
+                <tr>
+                    <th>Q3</th>
+                    <td>179.75</td>
+                    <td>180.5</td>
+                    <td>142.5</td>
+                </tr>
+                <tr>
+                    <th>Max</th>
+                    <td>190</td>
+                    <td>195</td>
+                    <td>152</td>
+                </tr>
+            </table>
+            <!--   RS 07/28/10 - replaced by table above
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<image style="block" src="../webcontent/casei4excel.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<image style="block" src="../webcontent/casei4.gif"/>
+</alternative>
+<alternative value="r">                 <title>R Instructions</title>
+<image style="block" src="../webcontent/casei4r.gif"/>
+</alternative>
+</alternatives>-->
+            <p>Let's summarize the results we got and interpret them in the context of the question
+                we posed:</p>
+            <p>By examining the three side-by-side boxplots and the numerical summaries, we see at
+                once that poultry hot dogs, as a group, contain fewer calories than those made of
+                beef or meat. The median number of calories in poultry hot dogs (113) is less than
+                the median (and even the first quartile) of either of the other two distributions
+                (medians 152.5 and 153). The spread of the three distributions is about the same, if
+                IQR is considered (all slightly above 40), but the (full) ranges vary slightly more
+                (beef: 80, meat:88, poultry: 66). The general recommendation to the health-conscious
+                consumer is to eat poultry hot dogs. It should be noted, though, that since each of
+                the three types of hot dogs shows quite a large spread among brands, simply buying a
+                poultry hot dog does not guarantee a low-calorie food.</p>
+        </example>
+        <p>What we learn from this example is that when exploring the relationship between a
+            categorical explanatory variable and a quantitative response (Case C→Q), we essentially
+                <em>compare the distributions of the quantitative response for each category of the
+                explanatory variable</em> using side-by-side boxplots supplemented by descriptive
+            statistics. Recall that we have actually done this before when we talked about the
+            boxplot and argued that boxplots are most useful when presented <activity_link
+                idref="boxplot3" target="self">side by side</activity_link> for comparing
+            distributions of two or more groups. This is exactly what we are doing here!</p>
+    </body>
+</workbook_page>

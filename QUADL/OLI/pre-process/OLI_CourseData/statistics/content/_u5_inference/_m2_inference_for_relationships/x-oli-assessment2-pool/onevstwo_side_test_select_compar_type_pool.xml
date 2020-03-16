@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="onevstwo_side_test_select_compar_type_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_onevstwo_side_test_select_compar_type">
+        <body>
+            <p>Grain is fortified with vitamins at the factory when processed. But, before the
+                product reaches the consumer, some of the vitamins may degrade due to time, heat
+                during storage, and other factors. Suppose the vitamin contents (in milligrams per pound) of five
+                bags of grain are measured at the factory before shipping and then again at the
+                retail store after shipping. The results are as shown: <image style="block" src="../webcontent/assessment9q14image1.gif" /> We wish to test whether there is
+                a statistically significant decrease in vitamin content after shipping.</p>
+            <p>Given the design of the study and the question of interest, which one of the
+                following 4 computer outputs is relevant to use?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">
+                <image style="block" src="../webcontent/assessment9q14image2.gif" />
+            </choice>
+            <choice value="B">
+                <image style="block" src="../webcontent/assessment9q14image3.gif" />
+            </choice>
+            <choice value="C">
+                <image style="block" src="../webcontent/assessment9q14image4.gif" />
+            </choice>
+            <choice value="D"><image style="block" src="../webcontent/assessment9q14image5.gif" />
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Since each of the 5 bags was measured twice (before and then
+                    after shipping), the appropriate inferential method for analyzing the data is
+                    matched pairs. This output is correct, since it tests the correct alternative.
+                    Since we would like to test whether the vitamin content decreases by the time
+                    the product reaches the consumer (i.e., before &gt; after) the correct alternative
+                    is that the mean of the differences is &gt; 0 (μ<sub>d</sub> &gt; 0).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Notice that the data are paired in the sense that the same
+                    variable was measured twice on each subject, before and after a treatment. You
+                    want to see if the final measurement is less than the initial
+                    measurement.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Notice that the alternative hypothesis should involve the
+                    initial vitamin content being larger than the final vitamin content.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Notice that the data are paired in the sense that the same
+                    variable was measured twice on each subject, before and after a treatment. You
+                    want to see if the final measurement is less than the initial
+                    measurement.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q2_onevstwo_side_test_select_compar_type">
+        <body>
+            <p>As first year residential students get familiar with campus life, some students spend
+                less time speaking with the residential advisor. Suppose individual call time (in
+                minutes) is measured in September and then later in December. The results are as
+                shown:</p>
+            <table>
+                <tr>
+                    <th>Student</th>
+                    <th>Average Weekly Call (Sept)</th>
+                    <th>Average Weekly Call (Dec)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>45</td>
+                    <td>38</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>47</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>48</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>38</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>48</td>
+                    <td>39</td>
+                </tr>
+            </table>
+            <p>We wish to test whether there is a statistically significant decrease in individual
+                call time.</p>
+            <p>Given the design of the study and the question of interest, which one of the
+                following statistics test is relevant to use?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Paired t-test and CI: Sept; Dec </choice>
+            <choice value="B">Two-sample t-test and CI: Sept; Dec </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Since each of the 5 students was measured twice (September and
+                    then December), the appropriate inferential method for analyzing the data is
+                    matched pairs.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Notice that the data are paired in the sense that the same
+                    variable was measured twice on each subject, in September and then December so a
+                    two-sample t-test is inappropriate because the samples are not independent. You
+                    want to see if the final measurement of call time is less than the initial
+                    measurement <em style="italic">for the same set of students.</em> </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+
+</pool>

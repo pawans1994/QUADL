@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_discrete_probability_dist1">
+<head>
+<title>Probability Distribution (1 of 5)</title>
+        <objref idref="find_probability_distribution_discrete_random"/>
+</head>
+<body>
+   
+<section>
+<title>Probability Distribution</title>
+<body>
+<p>When we learned how to find probabilities by applying the basic principles, we generally focused
+                    on just one particular outcome or
+                    event<?oxy_insert_start author="mmyers" timestamp="20101121T093044-0500"?>,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T093045-0500" content=" -"?>
+                    like the probability of getting exactly one tail when a coin is tossed twice, or
+                    the probability of getting a
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T093059-0500"?>5<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T093057-0500" content="five"?>
+                    when a die is rolled. Now that we have mastered the solution of individual
+                    probability problems, we'll proceed to look at the big picture by considering
+                    all the possible values of a discrete random variable, along with their
+                    associated probabilities. This list of possible values and probabilities is
+                    called the <em>probability distribution</em> of the random variable. </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>In the E<?oxy_insert_start author="mmyers" timestamp="20101121T093132-0500"?>xploratory
+                    <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101121T093142-0500"?>ata
+                    <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101121T093148-0500"?>nalysis<?oxy_insert_end?>
+                    unit of this course, we often looked at the distribution of sample values in a
+                    quantitative data set. We would display the values with a histogram, and
+                    summarize them by reporting their mean. In this section, when we look at the
+                    probability distribution of a random variable, we consider all its possible
+                    values and their overall probabilities of occurrence. Thus, we have in mind an
+                    entire population of values for a variable. When we display them with a
+                    histogram or summarize them with a mean, these are representing a population of
+                    values, not a sample. The distinction between sample and population is an
+                    essential concept in statistics, because an ultimate goal is to draw conclusions
+                    about unknown values for a population, based on what is observed in the
+                    sample.</p>
+</body>
+</section>
+  <p>Recall our first
+            example<?oxy_insert_start author="mmyers" timestamp="20101121T093243-0500"?>,<?oxy_insert_end?>
+            when we introduced the idea of a random variable. In this example we tossed a coin
+            twice. </p>  
+    <example><title>Flipping a Coin Twice</title>
+
+<p>What is the probability distribution of X, where the random variable X is the number of tails appearing in two tosses of a fair coin?</p>
+<p>We first note that since the coin is fair, each of the four outcomes HH, HT, TH, TT in the sample
+                space S is equally likely, and so each has
+                <?oxy_insert_start author="mmyers" timestamp="20101121T093312-0500"?>a
+                <?oxy_insert_end?>probability<?oxy_insert_start author="mmyers" timestamp="20101121T093315-0500"?>
+                of<?oxy_insert_end?> 1/4.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T093322-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T093322-0500" content="["?>Alternatively,
+                the multiplication principle can be applied to find the probability of each outcome
+                to be 1/2 * 1/2 =
+                1/4.<?oxy_insert_start author="mmyers" timestamp="20101121T093333-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T093334-0500" content="]"?>
+            </p>
+<image style="block" src="../webcontent/image001.gif" alt="In each outcome, the first letter
+represents the first coin toss and the second represents the second coin toss. Each of the
+outcomes HH, HT, TH, and TT have 1/4 chance of happening."/>
+<p>X takes the value 0 only for the outcome HH, so the probability that X = 0 is 1/4. </p>
+        <p>X takes the value 1 for outcomes HT or TH.  By the addition principle, the probability that X = 1 is 1/4 + 1/4 = 1/2.</p>
+ <p>   Finally, X takes the value 2 only for the outcome TT, so the probability that X = 2 is 1/4. </p>
+<image style="block" src="../webcontent/image002.gif" alt="A visual diagram for the mapping of outcomes
+to values of X."/>
+<p>The <em>probability distribution of the random variable X</em> is easily summarized in a table:</p>
+<image style="block" src="../webcontent/image003.gif" alt="This table has two rows, labeled &quot;x&quot;
+and &quot;P(X=x).&quot; The row for &quot;x&quot; represents the list of possible values, and the row for
+&quot;P(X=x)&quot; represents the probability of each value. Here is the data in the table, organized by column
+and presented in &quot;x: P(X=x)&quot; order:
+        0: &frac14;;
+        1: &frac12;;
+        2: &frac14;;" />
+</example>
+<p>As mentioned before, we write "P(X = x)" to denote "the probability that the random variable X takes the value x."</p>
+<p>The way to interpret this table is:</p>
+<p>X takes the values 0, 1, 2 and P(X = 0) = 1/4, P(X = 1) = 1/2, P(X = 2) = 1/4.</p>
+<p>Note that events of the type (X = x) are subject to the principles of probability established
+            earlier<?oxy_insert_start author="mmyers" timestamp="20101121T093533-0500"?>,<?oxy_insert_end?>
+            and will provide us with a way of systematically exploring the behavior of random
+            variables. In particular, the first two principles in the context of probability
+            distributions of random
+            variables<?oxy_delete author="mmyers" timestamp="20101121T093624-0500" content=","?>
+            will now be stated.</p>
+<p>Any probability distribution of a discrete random variable must
+            <?oxy_comment_start author="mmyers" timestamp="20101121T094054-0500" comment="Consider adding a brief explanation of the math in principle 2 below -- I don&apos;t remember what that first symbol means (and since the course is available to anyone online, I won&apos;t be the only one who is confused by it). "?>satisfy<?oxy_comment_end?>: </p>
+
+    <ol><li><p>
+<m:math overflow="scroll">
+<m:mn>0</m:mn>
+<m:mo>≤</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>≤</m:mo>
+<m:mn>1</m:mn>
+</m:math>
+</p></li>
+
+        <li><p><m:math overflow="scroll">
+<m:msub>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:math>
+        </p></li>
+        </ol>
+</body>
+</workbook_page>

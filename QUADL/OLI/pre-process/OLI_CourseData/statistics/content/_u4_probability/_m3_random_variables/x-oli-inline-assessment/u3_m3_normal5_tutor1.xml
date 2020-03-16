@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal5_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>What is the probability that a normal random variable will take a value that is less
+            than 1.05 standard deviations above its mean? In other words, what is P(Z &lt;
+            1.05)?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.8531</choice>
+         <choice value="Res2">0.1468</choice>
+         <choice value="Res3">0.9332</choice>
+         <choice value="Res4">0.0668</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback>Correct. P(Z &lt; 1.05) is just the table's entry for z = 1.05,
+               which is 0.8531. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. We are looking for P(Z &lt; 1.05), which is
+               just the normal table's entry for z = 1.05. It seems your mistake is either that
+               you looked up −1.05 or that you subtracted the table entry for 1.05 from 1. Try
+               again.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. We are looking for P(Z &lt; 1.05), which is
+               just the normal table's entry for z = 1.05. It seems that you looked up z = 1.5 in
+               the table by mistake. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. We are looking for P(Z &lt; 1.05), which is just the normal
+               table's entry for z = 1.05. It seems you looked up z = −1.5 or z = 1.5 in the
+               table by mistake. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>What is the probability that a normal random variable will take a value that is between 1.5 standard deviations below the mean and 2.5 standard deviations above the mean?  In other words, what is P(−1.5 &lt; Z &lt; 2.5)?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.9938</choice>
+         <choice value="Res2">0.0668</choice>
+         <choice value="Res3">0.9270</choice>
+         <choice value="Res4">0.0730</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. 0.9938 is just P(Z &lt; 2.5). Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. 0.0668 is just P(Z &lt; −1.5). Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b. </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. P(−1.5 &lt; Z &lt; 2.5) = P(Z &lt; 2.5) − P(Z
+               &lt; −1.5) = 0.9938 − 0.0668 = 0.9270.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. Recall that P(a &lt; Z &lt; b) = P(Z &lt; b) − P(Z &lt; a), the table entry of a subtracted from the table entry of b. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q3">
+      <body>
+         <p>What is the probability that a normal random variable will take a value that is more than 2.55 standard deviations above its mean? In other words, what is P(Z &gt; 2.55)?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.9945</choice>
+         <choice value="Res2">0.9946</choice>
+         <choice value="Res3">0.0055</choice>
+         <choice value="Res4">0.0054</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. It seems you were looking at the table entry of 2.54 instead of 2.55. Also remember that the table provides only probabilities of "less than" P(Z &lt; a), and you are asked about P(Z &gt; 2.55). Review part (c) of the last example, and try again.	</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. 0.9946 is P(Z &lt; 2.55), and we are looking for P(Z &gt; 2.55). Review part (c) of the last example and try again.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. It seems that you know what you're doing, but you looked up 2.54
+               (or −2.54) in the table instead of 2.55 (or −2.55).</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. P(Z &gt; 2.55) = P(Z &lt; −2.55) = 0.0054 or, P(Z
+               &gt; 2.55) = 1 − P(Z &lt; 2.55) = 1 − 0.9946 = 0.0054.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

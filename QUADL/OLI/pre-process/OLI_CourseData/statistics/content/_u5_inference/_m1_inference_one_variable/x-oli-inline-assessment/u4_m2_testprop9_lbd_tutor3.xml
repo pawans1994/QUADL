@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop9_lbd_tutor3">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>Now that we have established that it is safe to use the z-test for p for our problem,
+            go ahead and carry out the test. Paste the output below.</body>
+        <short_answer id="A"/>
+        <part>
+            <response input="A" match="*" score="10"/>
+            <explanation>
+                <alternatives group="statistics.package">
+                    <alternative value="r">
+                        <title>R</title>
+                        <p>Here is the R output:</p>
+                        <image
+                            src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor9c_image2.gif" alt="R output"/>
+                        <p>A lot of information is returned; let's review it item by item. The data
+                            we entered is echoed back: we have a random sample of 316 airplanes, out
+                            of which 40 were found to have contaminated water. The null hypothesis
+                            was that the proportion of planes with contaminated water is 0.035. The
+                            <?oxy_comment_start author="mmyers" timestamp="20101127T134510-0500" comment="This term has not yet been defined."?>chi-<?oxy_comment_end?>squared
+                            statistic for the test was 78.472, with one degree of freedom. The most
+                            important result is next: the p-value of the test was
+                            2.2<?oxy_comment_start author="mmyers" timestamp="20101127T135015-0500" comment="what does this &quot;e&quot; stand for? Should this be explained?"?>e<?oxy_comment_end?>
+                            - 16, which is essentially 0. The alternate hypothesis for our test was
+                            that the proportion of planes with contaminated water was greater than
+                            0.035.</p>
+                    </alternative>
+                    <alternative value="StatCrunch">
+
+                        <title>StatCrunch</title>
+                        <p>In our case, the data are summarized. We have a random sample of 316
+                            airplanes, out of which 40 were found to have contaminated water. When
+                            you enter these two values into StatCrunch, set the null value to 0.035,
+                            and choose the "greater than" alternative, you get:</p>
+                        <image
+                            src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor9c_image4.png" alt="statcrunch output"
+                        />
+                    </alternative>
+
+                    <alternative value="minitab">
+                        <title>Minitab</title>
+                        <p>In our case, the data are summarized. We have a random sample of 316
+                            airplanes, out of which 40 were found to have contaminated water. When
+                            you enter these two values into Minitab, set the null value to .035, and
+                            choose the "greater than" alternative, you get:</p>
+                        <image
+                            src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor9c_image1.jpg" alt="minitab output"
+                        />
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2007</title>
+                        <p>We have a random sample of 316 airplanes, out of which 40 were found to
+                            have contaminated water. When we calculate p-hat, we get a value of
+                            0.1266. When we use p-hat to calculate the test statistic (z), we get a
+                            value of 8.858. Using the NORMSDIST function gives a value of 1, which
+                            is the probability that p is less than or equal to the test statistic z.
+                            Since we want the probability that p is greater than the test statistic,
+                            we subtract this value from 1, giving us a p-value of 0.</p>
+                    </alternative>
+                    <!--  <alternative value="excel2003">
+                        <title>Excel 2003</title>
+                        <p>We have a random sample of 316 airplanes, out of which 40 were found to
+                            have contaminated water. When we calculate p-hat, we get a value of
+                            0.1266. When we use p-hat to calculate the test statistic
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T134701-0500"?>(<?oxy_insert_end?>z<?oxy_insert_start author="mmyers" timestamp="20101127T134703-0500"?>)<?oxy_insert_end?>,
+                            we get a value of 8.858. Using the NORMSDIST function gives a value of
+                            1, which is the probability that p is less than or equal to the test
+                            statistic
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T134809-0500"?>(<?oxy_insert_end?>z<?oxy_insert_start author="mmyers" timestamp="20101127T134810-0500"?>)<?oxy_insert_end?>.
+                            Since we want the probability that p is greater than the test statistic,
+                            we subtract this value from 1, giving us a p-value of 0.</p>
+                    </alternative> -->
+                    <alternative value="ti">
+                        <title>TI Calculator</title>
+                        <p>Here is the TI output:</p>
+                        <image
+                            src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor9c_image3.jpg" alt="ti calculator output"/>
+                        <p>A lot of information is returned; let's review it item by item. The
+                            alternate hypothesis for our test was that the proportion of planes with
+                            contaminated water was greater than 0.035. The z-score calculated was
+                            8.86. The most important result is next: the p-value of the test was
+                            4.1e - 19, which is essentially 0. We then see the sample proportion
+                            (p-hat) of .126, which was calculated by p-hat = 40 / 316 (the number of
+                            airplanes in our sample with contaminated water divided by the total
+                            number of airplanes). Finally, our n-value of 316 is echoed back. </p>
+                    </alternative>
+                </alternatives>
+            </explanation>
+        </part>
+    </question>
+</assessment>

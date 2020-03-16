@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">Based on the output,
+   (a) How many of the 1200 sampled voters were satisfied?
+   (b) What is the sample proportion p-hat of those who were satisfied?
+   (c) What is the 95% confidence interval for p? Interpret this interval?
+</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">Here is the R output:
+
+&gt; length(support[support=="satisfied"])
+[1] 142
+&gt; prop.test(length(support[support=="satisfied"]),length(support$opinion),conf.level=0.95)
+
+        1-sample proportions test with continuity correction
+        
+data:  length(support[support == "satisfied"]) out of length(support$opinion), null probability 0.5 
+X-squared = 697.6875, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: true p is not equal to 0.5 
+95 percent confidence interval:
+ 0.1008769 0.1382809 
+sample estimates:
+      p
+ 0.1183333
+ 
+(a) 142 of the 1200 sampled voters answered that they were satisfied.
+(b) The sample proportion is therefore 0.118, or roughly 12% (142/1200).
+(c) The 95% confidence interval for p is (0.10, 0.14).
+
+We are 95% certain that the proportion of US voters who are satisfied with the expiration of the federal ban on assault weapons is between 0.10 and 0.14 (or between 10% and 14%).
+</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

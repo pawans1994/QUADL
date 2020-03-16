@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_continuous_probability_dist1">
+<head>
+<title>Probability Distribution (1 of 2)</title>
+    <objref idref="explain_density_function"/>
+</head>
+<body>
+    
+<section>
+<title>The Probability Distribution of a Continuous Random Variable</title>
+<body>
+<p>In order to shift our focus from discrete to continuous random variables, let us first consider
+                    the probability histogram below for
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T224132-0500"?>the
+                    <?oxy_insert_end?>shoe size of adult males. Let X represent these shoe sizes.
+                    Thus, X is a discrete random variable, since shoe sizes can only take whole and
+                    half number values, nothing in between.</p>
+<image style="block" src="../webcontent/image100.gif" alt="A histogram for male shoe sizes. The vertical
+axis is labeled &quot;Probability&quot; and the horizontal axis is labeled &quot;Male shoe size&quot;.
+Moving from left to right across the horizontal axis, we start at size=6.5, where the probability is
+very low, below .02 . From there, the probabilities grow until size=11, where probability is at about .20
+. Then, as sizes increase, probability decreases. The axis ends at size = 15.5 . The histogram makes a
+typical normal shape."/>
+<p>Recall that in all of the previous probability histograms we've seen, the X-values were whole numbers.  
+    Thus, the width of each bar was 1. The height of each bar was the same as the probability for its corresponding X-value. 
+    Due to the principle that states the sum of probabilities of all possible outcomes in the sample space must be 1, 
+    the <em>heights</em> of all the rectangles in the histogram must sum to 1. This meant that the area was also 1. </p>
+    
+    <p>This histogram uses half-sizes. We wish to keep the area = 1, but we still want the
+                    horizontal scale to represent half-sizes. Therefore, we must adjust the vertical
+                    scale of the histogram. As is, the total area of the histogram rectangles would
+                    be .50 times the sum of the probabilities, since the width of each bar is .50.
+                    Thus, the area is .50(1) = .50. If we double the vertical scale, the area will
+                    double and be
+                    1<?oxy_insert_start author="mmyers" timestamp="20101121T224240-0500"?>,<?oxy_insert_end?>
+                    just like we want. This means we are changing the vertical scale from
+                    "Probability" to "Probability per half size." The shape and the horizontal scale
+                    remain unchanged.</p>
+<image style="block" src="../webcontent/image101.gif" alt="The same histogram as the previous one, except
+that the vertical axis has been changed. It is now labeled &quot;Probability per half size&quot;, and now
+the units are half as large, so that at size = 11, probability is .40 . We also see that the area for all
+of the bars using this new vertical axis is 1."/>
+<p> Now we can tell the probability of shoe size taking a value in any interval, just by finding the area of the rectangles over that interval. 
+    For instance, the area of the rectangles up to and including 9 shows the probability of having a shoe size less than or equal to 9.</p>
+<image style="block" src="../webcontent/image102.gif" alt="The same histogram as the previous one, but the
+bars for sizes 6.5 to 9 have been shaded. The area of the shading is the Probability of shoe size less than
+or equal to 9."/>
+<p>Recall that for a discrete random variable like shoe size, the probability is affected by whether
+                    we want strict inequality or not. For example, the
+                    area<?oxy_insert_start author="mmyers" timestamp="20101121T224336-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T224334-0500" content=" --"?>and
+                    corresponding
+                    probability<?oxy_insert_start author="mmyers" timestamp="20101121T224341-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T224339-0500" content="--"?>is
+                    reduced if we only consider shoe sizes strictly less than 9:</p>
+<image style="block" src="../webcontent/image103.gif" alt="The histogram now only has the bars for shoe
+sizes 6.5 though 8.5 shaded. The shaded area is the Probability of shoe size &lt; 9."/>
+<!--<activity idref="_u4_m3_dig11" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_contprobdist1_tutor1" purpose="didigetthis"/>
+</body> </section>
+    
+    <section>
+        <title>Transition to Continuous Random Variables</title>
+        <body>
+    
+    
+    <p>Now we are going to be making the transition from <em>discrete</em> to <em>continuous</em> random variables.  Recall that continuous random variables 
+    represent measurements and can take on any value within an interval.  </p>
+    <p>For our shoe size example, this would mean measuring shoe sizes in smaller units<?oxy_insert_start author="mmyers" timestamp="20101121T224657-0500"?>,<?oxy_insert_end?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T224701-0500"?>such
+                    as<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T224659-0500" content="like"?>
+                    tenths<?oxy_insert_start author="mmyers" timestamp="20101121T224706-0500"?>,<?oxy_insert_end?>
+                    or hundredths. As the number of intervals increases, the width of the bars
+                    becomes narrower and narrower, and the graph approaches a smooth curve. </p>
+    <p>To illustrate this, the following graphs represent two steps in this process of narrowing the widths of the intervals.  Specifically, the interval widths are 
+    .25 and .10.</p>
+      <p>
+          <image src="../webcontent/image_spacer.gif" style="inline" width="25" height="155" alt="white space"></image>
+          <image src="../webcontent/image_shoe_male1.jpg" style="inline" width="346" height="233"
+              alt="The histogram of shoe size probability with interval widths of .25 . We have twice as many bars, which more closely
+approximate a curve, since they are half as wide, and on average, the difference in probability between neighboring bars has been halved.
+An actual curve has also been drawn on top of the histogram, showing that the histogram is getting closer to being a curve."></image>
+          <image src="../webcontent/image_spacer.gif" style="inline" width="25" height="155" alt="white space"></image>
+          <image src="../webcontent/image_shoe_male2.jpg" style="inline" width="346" height="233"
+              alt="The histogram of shoe size probability with interval widths of .10 . We have many bars now, so many that the individual
+bars have small deviations from the general normal histogram shape. From a distance it the histogram almost looks like a curve, and up close,
+some bars are deviating from the normal histogram shape. For example, on the left side of the histogram, where the bars should be increasing
+in height as we go right, there is an occasional bar which is lower. However, due to the decreased bar width, this histogram more closely
+resembles a curve. An actual curve has also been drawn on top of the histogram, showing that the histogram is getting closer to being a curve."></image>
+      </p>
+            <p>We'll use these smooth curves to represent the probability distributions of continuous random variables.  This idea will be discussed 
+           in more detail on the next page.</p>
+</body>
+</section>
+</body>
+</workbook_page>

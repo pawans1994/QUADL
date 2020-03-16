@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules6">
+    <head>
+        <title>Probability Rules (6 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+       
+        <theorem type="rule">
+            <title>Rule 5: The Multiplication Rule for Independent Events</title>
+            <statement>
+                <p>
+                    <em><?oxy_delete author="mmyers" timestamp="20101108T174016-0500" content="Rule 5: The Multiplication Rule for Independent Events: "?>If
+                        A and B are two independent events, then P(A
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T183817-0500"?>and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T183815-0500" content="AND"?>
+                        B) = P(A) * P(B).</em>
+                </p>
+            </statement>
+        </theorem>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>When dealing with probabilities, the word
+                        <em>"<?oxy_insert_start author="mmyers" timestamp="20101108T184019-0500"?>and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T184017-0500" content="AND"?>"</em>
+                    will always be associated with the operation of <em>multiplication</em>; hence
+                    the name of this rule, "The Multiplication
+                    Rule<?oxy_insert_start author="mmyers" timestamp="20101108T174042-0500"?>.<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101108T174044-0500" content="."?></p>
+            </body>
+        </section>
+        <example>
+
+            <p>Recall the blood type example:</p>
+            <image style="block" src="../webcontent/image011.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+            <p>Two people are selected
+                <?oxy_insert_start author="mmyers" timestamp="20101108T184226-0500"?>simultaneously
+                and <?oxy_insert_end?>at random from all
+                <?oxy_insert_start author="mmyers" timestamp="20101108T184908-0500"?>people in the
+                United
+                States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T184903-0500" content="living humans"?>.
+                What is the probability that both have blood type O? </p>
+            <p>Let O1=
+                "<?oxy_delete author="mmyers" timestamp="20101108T184310-0500" content="the first"?><?oxy_insert_start author="mmyers" timestamp="20101108T184315-0500"?>person
+                1<?oxy_insert_end?> has blood type O" and</p>
+            <p> O2=
+                "<?oxy_delete author="mmyers" timestamp="20101108T184318-0500" content="the second"?><?oxy_insert_start author="mmyers" timestamp="20101108T184323-0500"?>person
+                2<?oxy_insert_end?> has blood type O"</p>
+            <p>We need to find P(O1 and O2)</p>
+            <p>Since
+                the<?oxy_insert_start author="mmyers" timestamp="20101108T185940-0500"?>y<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T185936-0500" content=" two"?>
+                were chosen
+                <?oxy_insert_start author="mmyers" timestamp="20101108T185944-0500"?>simultaneously
+                and <?oxy_insert_end?>at random, the blood type of one has no effect on the blood
+                type of the other. Therefore, O1 and O2 are
+                independent<?oxy_insert_start author="mmyers" timestamp="20101108T190000-0500"?>,<?oxy_insert_end?>
+                and we may apply Rule 5:</p>
+            <p>P(O1 and O2) = P(O1) * P(O2) = .44 * .44 = .1936.</p>
+        </example>
+        <!--<activity idref="_u4_m1_dig8" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m1_rules6_tutor1_1" purpose="didigetthis"/>
+        <wb:inline idref="u3_m1_rules6_tutor5" purpose="learnbydoing"/>
+        <wb:inline idref="u3_m1_rules6_tutor2_1" purpose="didigetthis"/>
+        <p>So far we have looked at examples where we have to consider and apply only one of the
+            rules. The following example is a case where both the Addition Rule for Disjoint Events
+            and the Multiplication Rule for Independent Events need to be applied in order to find
+            the desired probability.</p>
+        <example>
+
+            <p>Recall the blood types example:</p>
+            <image style="block" src="../webcontent/image011.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+            <p>Two people are chosen
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193053-0500"?>simultaneously
+                and <?oxy_insert_end?>at random. What is the probability that both have the same
+                blood type? For both to have the same blood type there are four possibilities. Both
+                have blood type O <em>or</em> both have blood type A <em>or</em> both have blood
+                type B <em>or</em> both have blood type AB.</p>
+            <image style="block" src="../webcontent/image023.gif" alt="A diagram showing the four
+possibilities."/>
+            <p> In other words, and using our regular notations,</p>
+            <p> P(same blood type) = P([O1 and O2]
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193027-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193024-0500" content="OR"?>
+                [A1 and A2]
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193031-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193030-0500" content="OR"?>
+                [B1 and B2]
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193035-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193035-0500" content="OR"?>
+                [AB1 and AB2])</p>
+            <p>Since our four possibilities of both
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193643-0500"?>people
+                <?oxy_insert_end?>having
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193522-0500"?>the
+                same<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193522-0500" content="a certain"?>
+                blood type are <em>disjoint</em>, using our <em>Addition Rule</em> we can add their
+                probabilities (i.e., replace every
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193656-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193657-0500" content="OR"?><?oxy_insert_start author="mmyers" timestamp="20101108T193659-0500"?>or"<?oxy_insert_end?>
+                with +).
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193729-0500"?>Also<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193732-0500" content="Finally"?>,
+                within each of the four possibilities, we can use the <em>Multiplication Rule</em>
+                and replace
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193749-0500"?>"and"
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193757-0500" content="by"?><?oxy_insert_start author="mmyers" timestamp="20101108T193758-0500"?>with<?oxy_insert_end?>
+                * (using the same <em>independence</em> argument as the first example
+                <?oxy_insert_start author="mmyers" timestamp="20101108T193914-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T193914-0500" content="i"?>n
+                this page). Our answer is therefore,</p>
+            <image style="block" src="../webcontent/image024.gif" alt="
+                P(O and O) = .44 * .44
+                P(B and B) = .42 * .42
+                P(B and B) = .10 * .10
+                P(AB and AB) = .04 * .04
+                P(Both having the same blood type) = P(O and O) + P(A and A) + P(B and B) + 
+P(AB and AB) = 0.3816"/>
+            <p>About 38% of the time, two randomly chosen
+                <?oxy_insert_start author="mmyers" timestamp="20101108T194034-0500"?>U.S.
+                <?oxy_insert_end?>people would have the same blood type. Note that in this example
+                we used the Addition Rule and the Multiplication Rule one after the other,
+                justifying along the way why it is appropriate to do so.</p>
+        </example>
+        
+        <wb:inline idref="u3_m1_rules6_tutor4" purpose="didigetthis"/>
+        <section>
+            <title>Comment</title>
+            <body>
+                <!--  <p>We now have an Addition Rule that says</p>
+                <p> P(A or B) = P(A) + P(B) for <em>disjoint</em> events,</p>
+                <p>and a Multiplication Rule that says</p>
+                <p> P(A and B) = P(A) * P(B) for <em>independent</em> events.</p> -->
+                <p>The purpose of this comment is to point out the magnitude of P(A or B) and of P(A
+                    and B) relative to either one of the individual probabilities. Since
+                    probabilities are never negative, the probability of one event <em>or</em>
+                    another is always at least as large as either of the individual probabilities.
+                    Since probabilities are never more than 1, the probability of one event
+                        <em>and</em> another generally involves multiplying numbers that are less
+                    than 1,
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T194211-0500"?>therefore
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194216-0500" content="and "?>can
+                    never be more than either of the individual probabilities.</p>
+                <p>Here is an example:</p>
+                <example>
+
+                    <p>Consider the event A that a randomly chosen person has blood type A. Modify
+                        it to a more general
+                        event<?oxy_insert_start author="mmyers" timestamp="20101108T194318-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194315-0500" content="---"?>that
+                        a randomly chosen person has blood type A or
+                        B<?oxy_insert_start author="mmyers" timestamp="20101108T194328-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194325-0500" content="---"?>and
+                        the probability increases. Modify it to a more specific (or restrictive)
+                        event<?oxy_insert_start author="mmyers" timestamp="20101108T194348-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194345-0500" content="---"?>that
+                        not
+                        <?oxy_delete author="mmyers" timestamp="20101108T194400-0500" content="only the first"?><?oxy_insert_start author="mmyers" timestamp="20101108T194400-0500"?>just
+                        one<?oxy_insert_end?> randomly chosen person has blood type A, but
+                        <?oxy_delete author="mmyers" timestamp="20101108T194416-0500" content="also"?>
+                        that
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T194431-0500"?>out of
+                        two simultaneously randomly chosen people, person 1 will have type A and
+                        person 2 will have type
+                        B<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194545-0500" content="the next randomly chosen person has blood type B-"?><?oxy_delete author="mmyers" timestamp="20101108T194557-0500" content="--"?><?oxy_insert_start author="mmyers" timestamp="20101108T194604-0500"?>&#8212;<?oxy_insert_end?>and
+                        the probability decreases.</p>
+                </example>
+                <p>It is important to mention this in order to root out a common misconception. The
+                    word
+                    "<?oxy_insert_start author="mmyers" timestamp="20101108T194615-0500"?>and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T194614-0500" content="AND"?>"
+                    is associated in our
+                    mind<?oxy_insert_start author="mmyers" timestamp="20101108T194830-0500"?>s<?oxy_insert_end?>
+                    with "adding more stuff."
+                    Therefore<?oxy_insert_start author="mmyers" timestamp="20101108T195545-0500"?>,<?oxy_insert_end?>
+                    some students <em>incorrectly</em> think that P(A
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T195551-0500"?>and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T195549-0500" content="AND"?>
+                    B) should be larger than either one of the individual probabilities, while it is
+                    actually
+                    smaller<?oxy_insert_start author="mmyers" timestamp="20101108T195604-0500"?>,<?oxy_insert_end?>
+                    since <?oxy_insert_start author="mmyers" timestamp="20101108T195608-0500"?>it
+                    is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T195607-0500" content="we have"?>
+                    a more specific (restrictive) event. Also, the word
+                    "<?oxy_insert_start author="mmyers" timestamp="20101108T195617-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T195616-0500" content="OR"?>"
+                    is associated in our
+                    mind<?oxy_insert_start author="mmyers" timestamp="20101108T195622-0500"?>s<?oxy_insert_end?>
+                    with "having to choose between" or "losing
+                    something<?oxy_insert_start author="mmyers" timestamp="20101108T195632-0500"?>,<?oxy_insert_end?>"
+                    and therefore some students incorrectly think that P(A or B) should be smaller
+                    than either one of the individual probabilities, while it is actually
+                    larger<?oxy_insert_start author="mmyers" timestamp="20101108T195701-0500"?>,<?oxy_insert_end?>
+                    since <?oxy_insert_start author="mmyers" timestamp="20101108T195708-0500"?>it
+                    is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T195709-0500" content="we have"?>
+                    a more general event.</p>
+                <p>Practically, you can use this comment to check yourself when solving problems.
+                    For example, if you solve a problem that involves
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T195729-0500"?>"or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T195726-0500" content="OR"?>,<?oxy_insert_start author="mmyers" timestamp="20101108T195731-0500"?>"<?oxy_insert_end?>
+                    and the resulting probability is smaller than either one of the individual
+                    probabilities, then you know you have made a mistake somewhere.</p>
+            </body>
+        </section>
+        <!--<activity idref="_u4_m1_dig9" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m1_rules6_tutor3" purpose="didigetthis"/>
+    </body>
+</workbook_page>

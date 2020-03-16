@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m1_spread4_digt_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>A survey taken of 140 sports fans asked the question:  "What is the most you have ever spent for a ticket to a sporting event?"</p>
+         <p>The five-number summary for the data collected is:</p>
+         <p>min = 85, Q1 =  130, Median = 145, Q3 = 150, Max = 250</p>
+         <p>Should the smallest observation be classified as an outlier?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">Yes</choice>
+         <choice value="Res2">No</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback>Correct.  The IQR is 150 - 130 = 20.  Using the 1.5(IQR) criterion we get 130 - 1.5(20)  = 100.  Since the smallest observation of 85 is smaller than 100, it should be considered an outlier.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>This is not correct.  The IQR is 150 - 130 = 20.  Using the 1.5(IQR) criterion we get 130 - 1.5(20)  = 100.  Since the smallest observation of 85 is smaller than 100, it should be considered an outlier.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

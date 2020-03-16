@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+
+<assessment id="_u5_m1_checkpoint2" max_attempts="3" recommended_attempts="1">
+	<title>Hypothesis Testing Checkpoint</title>
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+		
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/hypothesis_testing_checkpoint_solutions.pdf">Solution Set</link>.</p></content>-->	
+
+	<multiple_choice id="inference1-6" select="single">
+			<body>
+			<p> A study was conducted in order to estimate &#956;, the mean number of weekly hours
+				that U.S. adults use computers at home. Suppose a random sample of 81 U.S. adults
+				gives a mean weekly computer usage time of 8.5 hours and that from prior studies,
+				the population standard deviation is assumed to be &#963; = 3.6 hours. </p>
+				<p> A similar study conducted a year earlier estimated that &#956;, the mean number of weekly
+				hours that U.S. adults use computers at home, was 8 hours. We would like to test (at
+				the usual significance level of 5&#37;) whether the <em>current</em> study provides
+				significant evidence that this mean has changed since the previous year. </p>
+				<p> Using a 95% confidence interval of (7.7, 9.3), our conclusion is that: </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> the current study <em>does</em> provide significant evidence that the
+				mean number of weekly hours has changed over the past year, since 8 falls outside
+				the confidence interval. </choice>
+				<choice value="B"> the current study <em>does not</em> provide significant evidence that the
+				mean number of weekly hours has changed over the past year, since 8 falls outside
+				the confidence interval. </choice>
+				<choice value="C"> the current study <em>does</em> provide significant evidence that the
+				mean number of weekly hours has changed over the past year, since 8 falls inside the
+				confidence interval. </choice>
+				<choice value="D"> the current study <em>does not</em> provide significant evidence that the
+				mean number of weekly hours has changed over the past year, since 8 falls inside the
+				confidence interval. </choice>
+				<choice value="E"> None of the above. The only way to reach a conclusion is by finding the
+				p-value of the test. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>  Incorrect. Notice that 8 falls within the
+						confidence interval. Consider the remaining options. (D) is the correct
+						answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>  Incorrect. Notice that 8 falls within the
+						confidence interval. Consider the remaining options. (D) is the correct
+						answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Since 8 falls within the confidence interval, we would not
+					have enough evidence to suggest that the mean has changed. Consider the
+					remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback> Correct. We are interested in testing: H<sub>0</sub>: &#956; &#61; 8 vs. H<sub>a</sub>: &#956;  &#8800;
+						8. Since the 95&#37; confidence interval (7.7, 9.3), contains 8 (in other words, 8 is
+					a plausible value for &#956;), we do not have enough evidence to reject H<sub>0</sub>
+					and conclude that the mean has changed. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. The p-value will be below 5% if 8 is not within the 95&#37;
+						confidence interval and the p-value will be above 5&#37; if 8 is within the 95&#37;
+					confidence interval. Consider the remaining options. (D) is the correct answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	<multiple_choice id="inference1-7" select="single">
+		<body> Which of the following facts about the p-value of a test is correct? </body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> The p-value is calculated under the assumption that the null hypothesis is
+				true. </choice>
+			<choice value="B"> The smaller the p-value, the more evidence the data provide against
+					H<sub>0</sub>. </choice>
+			<choice value="C"> The p-value can have values between -1 and 1. </choice>
+			<choice value="D"> All of the above are correct. </choice>
+			<choice value="E"> Just (A) and (B) are correct. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Incorrect. Although it is true that the p-value is calculated under the
+					assumption that the null hypothesis is true, there is a better option. Consider
+					the remaining options. (E) is the right answer. </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Incorrect. Although it is true that the smaller the p-value, the more
+					evidence the data provide against H<sub>0</sub>, there is a better option.
+					Consider the remaining options. (E) is the right answer. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>  Incorrect. Since the p-value is a probability, it must
+					be between 0 and 1. Consider the remaining options. (E) is the right answer.
+				</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback> Incorrect. Since the p-value is a probability, it must
+					be between 0 and 1. Consider the remaining options. (E) is the right answer.
+				</feedback>
+			</response>
+			<response match="E" score="10">
+				<feedback> Correct. Since the p-value is the probability of obtaining a sample like that
+					observed (or even more extreme) assuming that H<sub>0</sub> is true, the p-value
+					is between 0 and 1 (therefore (C) is wrong). </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<section id="assess_08_cbs_times_poll">
+		<content>
+			<p> The next two questions refer to
+				the following information: </p>
+			<p> In June 2005, a CBS News/NY Times poll asked a random sample of 1,111 U.S. adults the
+				following question: "What do you think is the most important problem facing this
+				country today?" Roughly 19% of those sampled answered "the war in Iraq" (while the
+				rest answered economy/jobs, terrorism, healthcare, etc.). Exactly a year prior to
+				this poll, in June of 2004, it was estimated that roughly 1 out of every 4 U.S.
+				adults believed (at that time) that the war in Iraq was the most important problem
+				facing the country. </p>
+			<p> We would like to test whether the 2005 poll provides significant evidence that the
+				proportion of U.S. adults who believe that the war in Iraq is the most important
+				problem facing the U.S. has decreased since the prior poll. </p>
+		</content>
+		<multiple_choice id="inference1-10" select="single">
+			<body>
+				<p> Which of the following are the appropriate hypotheses in this case? </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> H<sub>0</sub>: p = .19 vs. H<sub>a</sub>: p &lt; .19 </choice>
+				<choice value="B"> H<sub>0</sub>: p = .19 vs. H<sub>a</sub>: p &gt; .19 </choice>
+				<choice value="C"> H<sub>0</sub>: p &lt; .25 vs. H<sub>a</sub>: p = .25 </choice>
+				<choice value="D"> H<sub>0</sub>: p = .25 vs. H<sub>a</sub>: p &lt; .25 </choice>
+				<choice value="E"> H<sub>0</sub>: p = .25 vs. H<sub>a</sub>: p not equal to .25 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>  Incorrect. Since you would like to test whether or
+						not the population proportion, p, has decreased from 2004, the assumed
+						population proportion should be the same as it was in 2004. Consider the
+						remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Since you would like to test whether or
+						not the population proportion, p, has decreased from 2004, the assumed
+						population proportion should be the same as it was in 2004. Consider the
+						remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. In general, the null hypothesis will assume equality and
+						the alternative hypothesis will involve an inequality. Consider the
+						remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback> Correct. We would like to test whether the proportion has decreased from what it
+						was in the previous year (when it was estimated to be .25). </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>  Incorrect. Remember that you want to test whether
+						or not the population proportion has decreased since 2004. You do not want
+						to test if the population proportion is different from 2004. Consider the
+						remaining options. (D) is the correct answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-11" select="single">
+			<body> <p>The following output is available for this test:</p> <image style="block"
+				src="../webcontent/assessment8q11image1.gif"/> <p>The output indicates that:
+					(choose the best answer) </p></body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> We have extremely strong evidence to reject H<sub>0</sub>. </choice>
+				<choice value="B"> We have extremely strong evidence to reject H<sub>a</sub>. </choice>
+				<choice value="C"> We have moderately strong evidence to reject H<sub>0</sub>. </choice>
+				<choice value="D"> There is probability of 0 that H<sub>0</sub> is correct. </choice>
+				<choice value="E"> There is probability of 0 that H<sub>a</sub> is correct.
+				</choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback> Correct. A p-value so small (that Minitab reports that it is 0)
+						indicates that it would essentially be almost impossible to obtain data like
+						those observed had H<sub>0</sub> been true. This is extremely strong
+						evidence to reject H<sub>0</sub>. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that a small p-value indicates that
+						the observed data would be rare if the null hypothesis were true. Also, we
+						generally reject the null hypothesis or fail to reject the null hypothesis.
+						Consider the remaining options. (A) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Although we do have evidence suggesting that
+						we should reject H<sub>0</sub>, the evidence is much stronger than moderate.
+						Consider the remaining options. (A) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. A p-value represents the probability of
+						obtaining data at least as extreme as the observed given that the null
+						hypothesis is true. If the p-value is low, it does not mean that the null
+						hypothesis is incorrect; it just means that the obtained data is very rare
+						if it comes from the assumed distribution. Consider the remaining options.
+						(A) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Unless you can poll the entire population,
+						there is no way to determine whether or not the alternative hypothesis is
+						true. Consider the remaining options. (A) is the right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	<section id="assess_08_autocoffee">
+		<content>
+			<p> The next three questions refer to the
+				following information: </p>
+			<p> An automatic coffee machine dispenses cups of coffee whose volume per cup varies normally
+				with the mean &#956; = 10 oz. A quality-control researcher randomly selects 8 cups
+				of coffee from the machine and finds that in this sample the mean volume is 9.92 oz.
+				and the standard deviation is 0.23 oz. </p>
+		</content>
+		<multiple_choice id="inference1-12" select="single">
+			<body>
+				<p> Do these data provide enough evidence to conclude that the mean volume per cup
+					is below the target level? </p>
+				<p> Which of the following two outputs represents the correct way to conduct this test? </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"><image style="block"
+						src="../webcontent/assessment8q12image1.gif"/></choice>
+				<choice value="B"><image style="block" src="../webcontent/assessment8q12image2.gif"/>
+				</choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback> Correct. This is a case in which the population standard deviation (σ) is unknown
+						(and is replaced by the sample standard deviation s = 0.23). The sample size
+						is only 8, however, since the variable is known to vary normally, we can
+						safely use the t-test (first output). </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>  Incorrect. The population standard deviation is
+						unknown, so a z-test cannot be used. (A) is the right answer.
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-13" select="single">
+			<body> Which of the following represents the correct conclusion we can make based on the
+				output you selected in the previous problem (and at the usual significance level of
+				.05)? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> The data provide enough evidence to reject H<sub>0</sub> and to conclude
+					that the mean volume per cup is lower than the target level of 10 oz. </choice>
+				<choice value="B"> The data provide enough evidence to accept H<sub>0</sub> and to conclude
+					that the mean volume per cup is at the target level of 10 oz. </choice>
+				<choice value="C"> The data do not provide enough evidence to reject H<sub>0</sub>, so we
+					accept it, and conclude that the mean volume per cup is at the target level of
+					10 oz. </choice>
+				<choice value="D"> The data do not provide enough evidence to reject H<sub>0</sub>, nor to
+					conclude that the mean volume per cup is lower than the target level of 10 oz. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Notice that the p-value is greater than
+						.05. This indicates that there is not enough evidence to suggest that the
+						mean amount of coffee per cup is less than 10 ounces. Consider the remaining
+						options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>  Incorrect. We never accept the null hypothesis.
+						Consider the remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>  Incorrect. We never accept the null hypothesis.
+						Consider the remaining options. (D) is the correct answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback>  Correct. Since the p-value is relatively large (p = 0.179), the
+						only conclusion that we can draw is that the data does not provide enough
+						evidence to reject H<sub>0</sub>. <em style="bold">Remember, we never accept
+							the null hypothesis. </em></feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-14" select="single">
+			<body>
+				<p> While it is important for you to know how to apply the methods that are covered
+					in this course, it is also important to be able to recognize situations when
+					none of the methods is appropriate. In this problem, we have made slight changes
+					to the "coffee machine" story. </p> Your task is to recognize in which of the
+				options below the changes are such that none of the methods covered in this course
+				can be applied for testing H<sub>0</sub>: &#956; = 10 vs. H<sub>a</sub>: &#956; &lt;
+				10. <p> </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> An automatic coffee machine dispenses cups of coffee whose volume per cup
+					varies according to a distribution with mean &#956; = 10 oz. A quality-control
+					researcher randomly selects 8 cups of coffee from the machine and finds that in
+					this sample the mean volume is 9.92 oz. and the standard deviation is 0.23 oz. </choice>
+				<choice value="B"> An automatic coffee machine dispenses cups of coffee whose volume per cup
+					varies according to a distribution with mean &#956; = 10 oz. A quality-control
+					researcher randomly selects 40 cups of coffee from the machine and finds that in
+					this sample the mean volume is 9.92 oz. and the standard deviation is 0.23 oz. </choice>
+				<choice value="C"> An automatic coffee machine dispenses cups of coffee whose volume per cup
+					varies normally with mean &#956; = 10 oz. and standard deviation &#963; = 0.23
+					oz. A quality-control researcher randomly selects 8 cups of coffee from the
+					machine and finds that in this sample the mean volume is 9.92 oz. </choice>
+				<choice value="D"> An automatic coffee machine dispenses cups of coffee whose volume per cup
+					varies according to a distribution with mean &#956; = 10 oz. and standard
+					deviation &#963; = 0.23 oz. A quality-control researcher randomly selects 8 cups
+					of coffee from the machine and finds that in this sample the mean volume is 9.92
+					oz. </choice>
+				<choice value="E"> Both (A) and (D) are cases where we cannot run the test using the methods
+					covered in this course. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>  Incorrect. Although this is a case that cannot be
+						handled by any methods you have learned, there is a better option. Consider
+						the remaining options. (E) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>  Incorrect. You are able to use a t-test for this
+						scenario because the sample size is large. Consider the remaining options.
+						(E) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>  Incorrect. You are able to use a z-test for this
+						scenario because the population distribution is normal and you are given the
+						population standard deviation. Consider the remaining options. (E) is the
+						right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>  Incorrect. Although this is a case that cannot be
+						handled by any methods you have learned, there is a better option. Consider
+						the remaining options. (E) is the right answer. </feedback>
+				</response>
+				<response match="E" score="10">
+					<feedback> Correct. Cases (A) and (D) are both cases where the sample size is small (n = 8)
+						and the population is not given to be normal. Therefore, in case (A) (where
+						the population standard deviation (σ) is unknown) it would not be safe to
+						use the t-test, and in case (D) (where σ is known), it would not be safe to
+						use the z-test. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+</assessment>

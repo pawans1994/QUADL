@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="LigandBindingExperiment" version="1" date="3/1/06">
+    <name>&lt;b&gt;Ligand Binding&lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+
+            <actions>
+                <action event="record light"/>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeMsg.swf" x="10" y="350" xscale="1" yscale="1" /> 
+                <action event="create" name="theexplainer" url="tools/text_explainer_short.swf"  x="2" y="30" xscale="1"  yscale="1"/> 
+                <action event="create" name="slider1" url="tools/sliderNEW.swf"  x="460" y="440" xscale="1"  yscale=".9"/>
+                <action event="create" name="beaker" url="swfs/beaker.swf"  x="375" y="5" xscale="1.7"  yscale="1.5"/> 
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="383" y="31" xscale=".8"  yscale=".8"/>
+                <action event="create" name="equation1" url="tools/equationML1.swf"  x="520" y="385" xscale="1" yscale="1" />
+                <action event="create" name="pause" url="tools/pause.swf"  x="700" y="320" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKey1.swf"  x="540" y="360" xscale=".65" yscale=".65" />
+<!--                <action event="create" name="L_free" url="tools/DisplayValue.swf"  x="330" y="360" xscale="1"  yscale="1"/> -->               
+                <action event="create" name="LINBag" url="tools/DisplayValue.swf"  x="260" y="380" xscale="1"  yscale="1"/> 
+            <action event="create" name="L" url="tools/DisplayValue.swf"  x="260" y="410" xscale="1"  yscale="1"/> -->            
+                <action event="create" settimer='12' advance='yes' />
+                <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="290" xscale="1"  yscale="1"/>  
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible"/>
+                 <title>Equilibrium</title>
+                 <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium"
+                 </text>
+                <object name="userinput" state="hilight"/>
+            </objects>
+            <nextbutton text="next page" state="o"/>
+            <prevbutton text="Back" state="0"/>
+              </step>
+        <step id="login">
+
+            
+            <actions>
+                <action event="record light"/>
+                <action event="initialize" name="opener" />
+            </actions>
+            <objects>
+                <object name="opener" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible">
+                    <title>Ligand Binding</title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Please insert your lastname below and click the submit button. When you are ready to continue click "Begin Simulation."
+                    </text>
+                </object>
+                <object name="userinput" state="hilight"/>
+                <object name="slider1" state="invisible"/>
+                <object name="equation1" state="visible" action="1" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="inputs2" capture="yes" state="visible"/>
+                <object name="pause" capture="yes" state="visible"/>
+            </objects>
+            <nextbutton text="Begin Simulation" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+       
+        <step id="startmolecules">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Your goal is to obtain experimental values of fractional saturation at different free ligand concentrations.</title>
+                    <text>You can change the free ligand concentration by moving the slider to the desired amount of free ligand.  Moving the slider re-initializes the display and adds the requested amount of ligand to the beaker.
+
+The output box "[L] in Bag @Equilibrium" gives the total amount of ligand in the dialysis bag when equilibrium is reached.
+
+The simulation and graph will give you a rough estimate of the amount of ligand bound. However, you should use the output box to obtain your experimental values.</text>
+                </object>
+                <object name="userinput" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="thegrapher" state="visible"/> 
+                <object name="pause" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="L_free" state="visible"/>
+                <object name="L" state="visible"/>
+                <object name="LINBag" state="visible"/>
+                <object name="ML" state="visible"/>
+                <object name="thegrapher" state="visible" >
+                    <child name="curve0" state="visible" color="#FF0000" label="S=7" />
+                </object>
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>  
+                <action event="sendmessage" name="userinput" params="checkvalue" />
+                <action event="initialize" name="LINBag" params="thevariable=M5*,thelabel=[L] in Bag @Equilibrium,thevalue=0" /> 
+                <action event="initialize" name="L" params="thevariable=M2,thelabel=product,thevalue=0" />   
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=400,topBorder=0,bottomBorder=330,leftBorder2=72,rightBorder2=328,topBorder2=0,bottomBorder2=245">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule-->     
+                        <molecule numMolecules= "5"  numbound= "0" velocity= "40"  cast= "moleculeC1"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"  mytype="molecule"  myID="1"  mybounce="true" />            
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "75"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"  mytype="ligand"  myID="5"  mybounce="true"  bindswith="molecule1.pocket1.bound1,Kd?A-J:50|K-M:20|N-S:10|T-Z:30,k?500" />   
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "75"  cast= "product"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"  mytype="ligand"  myID="2"  mybounce="true"   />   
+                        <!--   don't add new bindswith parameters until we completely implement the parser for this-->
+                    </molecules>
+                </action>
+                 <action event="initialize" name="slider1" params="label='[L] free',low=0,high=100,moleculeID=5,simulator=box1" data="0"/> <!--This is what we need to wire a slider to a simulator-->
+                <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,myID=ML1"  data="ymax=10,y_label=ML,graph_label="/>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+   
+        
+    </steps>
+</simulation>

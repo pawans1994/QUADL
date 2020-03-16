@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p11">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (11 of 13)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+<body>
+   
+        <section>
+            <title>3.
+                One-<?oxy_insert_start author="mmyers" timestamp="20101127T160930-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T160929-0500" content="s"?>ided
+                <?oxy_insert_start author="mmyers" timestamp="20101127T160923-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T160923-0500" content="a"?>lternative
+                vs<?oxy_insert_start author="mmyers" timestamp="20101127T160926-0500"?>.<?oxy_insert_end?>
+                Two-<?oxy_insert_start author="mmyers" timestamp="20101127T160934-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T160934-0500" content="s"?>ided
+                Alternative<?oxy_delete author="mmyers" timestamp="20101127T160937-0500" content="s"?></title>
+            <body>
+        <p>Recall that earlier we noticed (only visually) that for a given value of the test
+            statistic z, the p-value of the two-sided test is twice as large as the p-value of the
+            one-sided test. We will now further discuss this issue. In particular, we will use our
+            example 2 (marijuana users at a certain college) to gain better intuition about this
+            fact.</p>
+        <p>For illustration purposes, we are actually going to use example 2* (where out of a
+                        <em>sample of size 400</em>, 76 were marijuana users). Let's recall example
+                    2*, but this time give two versions of it; the original version, and a slightly
+                    changed
+                    version<?oxy_insert_start author="mmyers" timestamp="20101127T161006-0500"?>,<?oxy_insert_end?>
+                    which we'll call example 2**. The differences are highlighted.</p>
+        <example>
+            <title>2*</title>
+            <p>
+                        <em>There are rumors that students at a certain liberal arts college are
+                            more inclined to use drugs than U.S. college
+                            students<?oxy_delete author="mmyers" timestamp="20101127T161016-0500" content=" are"?>
+                            in general.</em> Suppose that in a simple random sample of 400 students
+                        from the college, 76 admitted to marijuana use. Do the data provide enough
+                        evidence to conclude that the proportion of marijuana users among the
+                        students in the college (p) is <em>higher</em> than the national
+                        proportion<?oxy_insert_start author="mmyers" timestamp="20101127T161044-0500"?>,<?oxy_insert_end?>
+                        which is .157? (This number is reported by the Harvard School of Public
+                        Health.)</p>
+        </example>
+        <example>
+            <title>2**</title>
+            <p>
+                        <em>The dean of students in a certain liberal arts college was interested in
+                            whether the proportion of students who use drugs in her college is
+                            different than the proportion among
+                            U<?oxy_insert_start author="mmyers" timestamp="20101127T161102-0500"?>.<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101127T161104-0500"?>.<?oxy_insert_end?>
+                            college students in general.</em> Suppose that in a simple random sample
+                        of 400 students from the college, 76 admitted to marijuana use. Do the data
+                        provide enough evidence to conclude that the proportion of marijuana users
+                        among the students in the college (p) <em>differs</em> from the national
+                        proportion<?oxy_insert_start author="mmyers" timestamp="20101127T161140-0500"?>,<?oxy_insert_end?>
+                        which is .157? (This number is reported by the Harvard School of Public
+                        Health.)</p>
+        </example>
+		
+        <wb:inline idref="u4_m2_testprop11_tutor1" purpose="learnbydoing"/><!--
+        <flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="379"
+            purpose="learnbydoing">
+            <param name="question_file">../../webcontent/flash/_u5_m1_inlinetutor2.xml</param>
+            <param name="problem_name">_u5_m1_inlinetutor2</param>
+        </flash>-->
+        <p>Indeed, in example 2* we suspect from the outset (based on the rumors) that the overall
+                    proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T161746-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T161747-0500"?>)<?oxy_insert_end?>
+                    of marijuana smokers at the college is <em>higher</em> than the reported
+                    national proportion of .157, and therefore the appropriate alternative is
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T161850-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T161848-0500" content="Ho"?>:<?oxy_insert_start author="mmyers" timestamp="20101127T161855-0500"?>
+                    <?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T161858-0500"?>
+                    <?oxy_insert_end?>&gt;<?oxy_insert_start author="mmyers" timestamp="20101127T161859-0500"?>
+                    <?oxy_insert_end?>.157. In example 2**, as a result of the change of wording
+                    (which eliminated the part about the rumors), we simply wonder if p is
+                        <em>different</em> (in either direction) from the reported national
+                    proportion of .157, and therefore the appropriate alternative is the two-sided
+                    test: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>≠</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>. Would switching to the two-sided alternative have an effect on our
+                    results?</p>
+        <p>Let's explore that.</p>
+        <example>
+            <title>2*</title>
+            <p>We already carried out the test for this example, and the results are summarized in
+                the following figure:</p>
+            
+            <image style="block" src="../webcontent/image293.gif" alt="A large circle
+represents the population Students at the college. We want to know p about this population, or
+what is the population proportion of students using marijuana. The hypotheses are H_0: p = .157
+and H_a: p &gt; .157 . We take a sample of 400 students, represented by a smaller circle, and
+find that 76 use marijuana. Conditions are met to use our method, so p-hat = 76/400 = .19,
+z = 1.81, and p-value = .035 . The p-value is low enough to let us conclude that we can reject
+H_0"/>
+            <p>The following figure reminds you how the p-value was found (using the test
+                statistic):</p>
+            
+            <image style="block" src="../webcontent/image294.gif" alt="A N(0,1) curve with
+z-scores of 0 and 1.81 marked on the horizontal axis. The area to the right of 1.81 under
+the curve is the p-value = .035"/>
+        </example>
+        <example>
+            <title>2**</title>
+            <p>I. Here we are testing:</p>
+            
+            <image style="block" src="../webcontent/image295.gif" alt="H_0: p = 1.57
+                H_a: p &ne; 1.57"/>
+            <p>II. Since we have the same data as in example 2* (76
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162057-0500"?>marijuana
+                        users<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162103-0500" content="smokers"?>
+                        out of 400), we have the same sample proportion and the same test
+                        statistic:</p>
+            
+            <image style="block" src="../webcontent/image296.gif" alt="p-hat = .19
+                z = 1.81"/>
+            <p>III. Since the calculation of the p-value depends on the type of alternative
+                we have, here is where things start to be different. Statistical software tells us that the
+                p-value for example 2** is 0.070. Here is a figure that reminds us how the
+                p-value was calculated (based on the test statistic):</p>
+            <!--RS 07/28/10 - Commented out to eliminate alternatives
+                <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+                <alternative value="excel">                 <title>Excel 2007 Instructions</title>
+                    <p>III. Since the calculation of the p-value depends on the type of alternative
+                        we have, here is where things start to be different. Excel tells us that the
+                        p-value for example 2** is 0.070. Here is a figure that reminds us how the
+                        p-value was calculated (based on the test statistic):</p>
+                </alternative>
+                <alternative value="minitab">                 <title>Minitab Instructions</title>
+                    <p>III. Since the calculation of the p-value depends on the type of alternative
+                        we have, here is where things start to be different. Here is the Minitab
+                        output for example 2** (with the p-value highlighted) followed by a figure
+                        that reminds us how the p-value was calculated (based on the test
+                        statistic):</p>
+                    
+                    <image style="block" src="../webcontent/image407.gif"/>
+                </alternative>
+                <alternative value="r">                 <title>R Instructions</title>
+                    <p>III. Since the calculation of the p-value depends on the type of alternative
+                        we have, here is where things start to be different. R tells us that the
+                        p-value for example 2** is 0.070. Here is a figure that reminds us how the
+                        p-value was calculated (based on the test statistic):</p>
+                </alternative>
+            <alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+            
+            <image style="block" src="../webcontent/image297.gif" alt="A N(0,1) curve with
+z-scores of -1.81, 0, and 1.81 marked on the horizontal axis. The area to the right of 1.81 under
+the curve is the .035 . The area to the left of 1.81 is also .035 . The p-value is the sum of these
+two areas, which is .07"/>
+            <p>IV. If we use the .05 level of significance, the p-value we got is not small enough (.07<?oxy_insert_start author="mmyers" timestamp="20101127T162158-0500"?>
+                        <?oxy_insert_end?>&gt;<?oxy_insert_start author="mmyers" timestamp="20101127T162200-0500"?>
+                        <?oxy_insert_end?>.05), and therefore we cannot reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T162213-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162211-0500" content="Ho"?>.
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162221-0500"?>In
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162224-0500" content="An"?>other
+                        words, the data do not provide enough evidence to conclude that the
+                        proportion of marijuana smokers in the college is different from the
+                        national proportion (.157).</p>
+        </example>
+        <p>What happened here?</p>
+        <p>It should be pretty clear what happened here numerically. The p-value of the one-sided
+                    test (example 2*) is
+                    .035<?oxy_insert_start author="mmyers" timestamp="20101127T162238-0500"?>,<?oxy_insert_end?>
+                    suggesting the results are significant at the .05 significant level. However,
+                    the p-value of the two sided-test (example 2**) is twice the p-value of the
+                    one-sided test, and is therefore 2<?oxy_insert_start author="mmyers" timestamp="20101127T162252-0500"?>
+                    <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101127T162253-0500"?>
+                    <?oxy_insert_end?>.035<?oxy_insert_start author="mmyers" timestamp="20101127T162255-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T162255-0500"?>
+                    <?oxy_insert_end?>.07<?oxy_insert_start author="mmyers" timestamp="20101127T162257-0500"?>,<?oxy_insert_end?>
+                    suggesting
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T162300-0500"?>that
+                    <?oxy_insert_end?>the results are not significant at the .05 significance
+                    level.</p>
+        <p><?oxy_insert_start author="mmyers" timestamp="20101127T162323-0500"?>Here is
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162326-0500" content="Let me try to give you also "?>a
+                    more conceptual explanation:</p>
+        <p>The idea is that in Example 2*, we began our hypothesis test with a piece of information
+                    (in the form of a rumor) about unknown population proportion
+                    p<?oxy_insert_start author="mmyers" timestamp="20101127T162343-0500"?>,<?oxy_insert_end?>
+                    which gave us a sort of head-start towards the goal of rejecting the null
+                    hypothesis.
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T162416-0500"?>We found<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162421-0500" content="Adding to "?><?oxy_insert_start author="mmyers" timestamp="20101127T162426-0500"?>
+                    <?oxy_insert_end?>that the evidence that the data provided
+                    w<?oxy_insert_start author="mmyers" timestamp="20101127T162355-0500"?>ere<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162354-0500" content="as"?>
+                    then enough to cross the finish line and reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162449-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162446-0500" content="Ho"?>.
+                    In Example 2**, we had no prior information to go on, and the data alone were
+                    not enough evidence to cross the finish line and reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162515-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162512-0500" content="Ho"?>.
+                    The following figure illustrates this
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T162547-0500" comment="use subscripts for Ha and Ho"?>idea:<?oxy_comment_end?></p>
+        
+        <image style="block" src="../webcontent/image298.gif" alt="Two 'races' which illustrate why
+in the two-sided example we could not eliminate H_0. In the first race, H_0: p = .157, H_a: p &gt; .157 .
+This is a one-sided hypothesis, so we get a head start on the race. The data gets us more progress along
+the race track, enough that we cross the 'finish-line' (being less than the significance level of .05),
+so we have enough evidence to reject H_0. In the two-sided problem where H_0: p = .157, H_a: p &ne; .157,
+we do not have a head start, since we are not given the information of which side. So, we only have the
+data to give us progress on the race, which isn't enough progress to cross the 'finish-line.'"/>
+        <p>We can summarize and say that in general it is harder to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162602-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162559-0500" content="Ho"?>
+                    against a two-sided
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162611-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162609-0500" content="Ha"?>
+                    because the p-value is twice as large. Intuitively, a one-sided alternative
+                    gives us a head-start, and on top of that we have the evidence provided by the
+                    data. When our alternative is the two-sided test, we get no head-start and all
+                    we have are the data, and therefore it is harder to cross the finish line and
+                    reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T162649-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162647-0500" content="Ho"?>.</p>
+        <!--<activity idref="_u5_m1_dig16" purpose="didigetthis"/>-->
+           <section purpose="didigetthis">
+               <title>Did I Get This?</title>
+               <body>
+                   <p>Consider the following two hypothesis testing scenarios for the population
+                            proportion
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T162659-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T162701-0500"?>)<?oxy_insert_end?>
+                            and corresponding studies:</p>
+                   <p>
+                            <em>I.</em> The UCLA Internet Report (February 2003) estimated that
+                            roughly 8.7% of
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T162709-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162709-0500" content="i"?>nternet
+                            users are extremely concerned about credit card fraud when buying
+                            online. A study was designed in order to examine whether that proportion
+                            has changed since. </p>
+                   <p>
+                            <em>II.</em><?oxy_insert_start author="mmyers" timestamp="20101127T162725-0500"?>
+                            <?oxy_insert_end?>The UCLA Internet Report (February 2003) estimated
+                            that roughly 8.7% of
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T162729-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T162729-0500" content="i"?>nternet
+                            users are extremely concerned about credit card fraud when buying
+                            online. In light of the increasing problem of spyware, a study was
+                            designed in order to examine whether that proportion has increased
+                            since. </p>
+                   <wb:inline idref="u4_m2_testprop11_tutor2" purpose="didigetthis"/>
+                   <wb:inline idref="u4_m2_testprop11_tutor3" purpose="didigetthis"/>
+               </body>
+           </section>
+                    <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

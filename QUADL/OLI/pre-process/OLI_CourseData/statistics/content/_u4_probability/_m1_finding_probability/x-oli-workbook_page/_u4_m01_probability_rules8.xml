@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules8">
+    <head>
+        <title>Probability Rules (8 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+       
+        <section>
+            <title>Comment: Finding the Probability of "At least one of<?oxy_insert_start author="mmyers" timestamp="20101108T213348-0500"?>
+                <?oxy_insert_end?>..."</title>
+            <body>
+                <p>Recall that when we talked about the Complement Rule, we mentioned that we would
+                    come back to it later and illustrate its strength. Well, the time has come
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T213200-0500"?>to
+                    do<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T213159-0500" content="for"?>
+                    that.</p>
+                <p><?oxy_insert_start author="mmyers" timestamp="20101108T213233-0500"?>Rule 3:
+                    <?oxy_insert_end?>The Complement Rule<?oxy_insert_start author="mmyers" timestamp="20101108T213301-0500"?>,<?oxy_insert_end?>
+                    <?oxy_delete author="mmyers" timestamp="20101108T213250-0500" content="(Rule 3:"?>
+                    P(A) = 1 - P(not
+                    A)<?oxy_delete author="mmyers" timestamp="20101108T213306-0500" content=")"?>,
+                    together with the Multiplication Rule, is <em>extremely</em> useful for finding
+                    the probability of events like "at least one of<?oxy_insert_start author="mmyers" timestamp="20101108T213345-0500"?>
+                    <?oxy_insert_end?>..." in several repetitions of a random experiment.</p>
+                <p>For example,</p>
+                <ul>
+                    <li>10 people were randomly chosen. Find P(at least one of the 10 has blood type
+                        O).</li>
+                    <li>A student uses a random guess to answer 10 true/false questions
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T213425-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T213424-0500" content="i"?>n
+                        a test. Find P(the student gets at least one question right).</li>
+                </ul>
+                <p>The key here is to use the fact that the complement event is much easier to deal
+                    with than the actual event of interest. Going back to our example:</p>
+                <p>The complement to <em>"at least one of</em> the 10 has blood type O" is
+                        <em>"none</em> of the 10
+                    ha<?oxy_insert_start author="mmyers" timestamp="20101108T213614-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T213613-0500" content="ve"?>
+                    blood type O."</p>
+                <p>The complement to "getting <em>at least one</em> question right" is "getting
+                        <em>none</em> of the questions right."</p>
+                <p>(Note how "at least one of" changes to "none" in the complement.)</p>
+                <p>If you feel unsure about this, go back and redo the "Did I Get This" activity
+                        <activity_link idref="_u4_m01_probability_rules2" target="self">on
+                        <?oxy_delete author="mmyers" timestamp="20101108T213827-0500" content="this "?>page<?oxy_insert_start author="mmyers" timestamp="20101108T213831-0500"?>
+                        2 of the Probability Rules section.<?oxy_insert_end?></activity_link>
+                </p>
+                <p><?oxy_delete author="mmyers" timestamp="20101108T214021-0500" content="Here is what we&apos;ll do next:"?></p>
+                <p>We'll start with a very simple example
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T213931-0500"?>in
+                    which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T213929-0500" content="where"?>
+                    it is still manageable to find P(at least one of<?oxy_insert_start author="mmyers" timestamp="20101108T213948-0500"?>
+                    <?oxy_insert_end?>..<?oxy_insert_start author="mmyers" timestamp="20101108T213938-0500"?>.<?oxy_insert_end?>)
+                    directly, without using the complement rule. Then we'll alter the example
+                    slightly and see how trying to find P(at least one of<?oxy_insert_start author="mmyers" timestamp="20101108T214040-0500"?>
+                    <?oxy_insert_end?>..<?oxy_insert_start author="mmyers" timestamp="20101108T214042-0500"?>.<?oxy_insert_end?>)
+                    directly can get
+                        <em><?oxy_comment_start author="mmyers" timestamp="20101108T214116-0500" comment="remove bold and all caps. use italics instead for emphasis"?>VERY
+                        COMPLICATED<?oxy_comment_end?></em>, and how the complement rule comes to
+                    the rescue. Finally, you'll check your understanding by attempting to solve a
+                    similar problem yourself.</p>
+            </body>
+        </section>
+        <example>
+
+            <p>Two people are selected at random. What is the probability that at least one of them
+                has blood type O? </p>
+            <p>Here is our sample space S = { (O,O) (O, not O) (not O, O) (not O, not O) }</p>
+            <p>The event "at least one
+                <?oxy_insert_start author="mmyers" timestamp="20101108T214418-0500"?>person chosen
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T214427-0500" content="of the two "?>has
+                blood type O" consists of the first
+                <?oxy_insert_start author="mmyers" timestamp="20101130T153539-0500"?>three<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101130T153538-0500" content="3"?>
+                possible
+                outcomes<?oxy_insert_start author="mmyers" timestamp="20101108T214321-0500"?>,<?oxy_insert_end?>
+                and
+                therefore<?oxy_insert_start author="mmyers" timestamp="20101108T214326-0500"?>:<?oxy_insert_end?></p>
+            <p>P(<?oxy_insert_start author="mmyers" timestamp="20101108T214434-0500"?>at
+                <?oxy_insert_end?>least one
+                <?oxy_insert_start author="mmyers" timestamp="20101108T214339-0500"?>person chosen
+                has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T214334-0500" content="of them having"?>
+                blood type O) = P((O and O) or (O and not O) or (not O and O)) = <?oxy_insert_start author="mmyers" timestamp="20101108T214517-0500"?>(<?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T214508-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T214508-0500"?>
+                <?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T214513-0500"?>)<?oxy_insert_end?>
+                + <?oxy_insert_start author="mmyers" timestamp="20101108T214521-0500"?>(<?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T214523-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T214524-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T214525-0500"?>)<?oxy_insert_end?>
+                + <?oxy_insert_start author="mmyers" timestamp="20101108T214527-0500"?>(<?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T214529-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T214530-0500"?>
+                <?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T214531-0500"?>)<?oxy_insert_end?>
+                = .6864.</p>
+        </example>
+        <p>Now we'll just alter the example slightly by randomly choosing 10 people instead of
+            2<?oxy_insert_start author="mmyers" timestamp="20101108T214814-0500"?>:<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T214813-0500" content="."?></p>
+        <example>
+
+            <p>A patient with blood type O desperately needs a blood transfusion. Since a person
+                with blood type O can receive blood only from another person who has blood type O,
+                the blood bank decides to choose 10 donors at random and hope that at least one of
+                them has blood type O. Find P(at least one of the 10 donors has blood type O). To
+                make things simpler, let's denote the event "at least one has blood type O" by L
+                (for at <em>L</em>east).</p>
+            <p>Solving this
+                <?oxy_insert_start author="mmyers" timestamp="20101108T214851-0500"?>using<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T214849-0500" content="by"?>
+                the brute force method would require a prohibitive amount of work. As before, we
+                would need to list all the possible outcomes of blood types of 10 people (using
+                either "O" or "not
+                O"<?oxy_delete author="mmyers" timestamp="20101108T214910-0500" content=" as before"?>),
+                <?oxy_insert_start author="mmyers" timestamp="20101108T214922-0500"?>but<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T214921-0500" content="only"?>
+                this time there are
+                1<?oxy_insert_start author="mmyers" timestamp="20101108T214926-0500"?>,<?oxy_insert_end?>024
+                of them! We would then need to identify those outcomes that L consists of (i.e., the
+                outcomes in which at least one of the 10 people has blood type O). Next, we would
+                need to find the probability of each of those outcomes and add those probabilities
+                up. <em>W<?oxy_insert_start author="mmyers" timestamp="20101108T215004-0500"?>hat a
+                    pain<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215009-0500" content="HAT A PAIN"?>!
+                    <?oxy_delete author="mmyers" timestamp="20101108T215021-0500" content="HELP!"?></em><?oxy_insert_start author="mmyers" timestamp="20101108T215053-0500"?>
+                There must be a better way.<?oxy_insert_end?>
+            </p>
+            <p>Instead of doing
+                <?oxy_insert_start author="mmyers" timestamp="20101108T215131-0500"?>all the work
+                listed
+                above<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215129-0500" content="that"?>,
+                we can use the Complement
+                Rule<?oxy_insert_start author="mmyers" timestamp="20101108T215140-0500"?>,
+                which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215143-0500" content=" that"?>
+                says P(L) = 1 - P(not L). As we explained before, in this case "not L" is the event
+                "none of the 10 have blood type O," or in other words that all 10 have a blood type
+                other than O. So we can simply solve (using our regular notation from this
+                module):</p>
+            <p>P(L) = 1 - P(not L) = 1 - P(not O1 <em>and</em> not O2 <em>and</em> not O3
+                    <em>and</em> not O4 <em>and</em> not O5 <em>and</em> not O6 <em>and</em> not O7
+                    <em>and</em> not O8 <em>and</em> not O9 <em>and </em>not O10). Now, using the
+                multiplication rule, = 1 - <?oxy_insert_start author="mmyers" timestamp="20101108T215257-0500"?>(<?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215258-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215258-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215300-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215301-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215302-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215303-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215304-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215304-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215305-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215306-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215307-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215308-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215309-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215310-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215311-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215311-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215312-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T215313-0500"?>
+                <?oxy_insert_end?>.56<?oxy_insert_start author="mmyers" timestamp="20101108T215316-0500"?>)<?oxy_insert_end?>
+                = 1 - .003 =
+                .997<?oxy_insert_start author="mmyers" timestamp="20101108T215325-0500"?>.<?oxy_insert_end?></p>
+            <p><?oxy_insert_start author="mmyers" timestamp="20101108T215327-0500"?>Therefore,
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215330-0500" content="I"?><?oxy_insert_start author="mmyers" timestamp="20101108T215330-0500"?>i<?oxy_insert_end?>t
+                is almost certain
+                <?oxy_delete author="mmyers" timestamp="20101108T215340-0500" content="then "?>that
+                if we choose 10
+                people<?oxy_insert_start author="mmyers" timestamp="20101108T215345-0500"?> at
+                random,<?oxy_insert_end?> we'll find that at least one of them has blood type O.
+                This result makes
+                sense<?oxy_insert_start author="mmyers" timestamp="20101108T215401-0500"?>,<?oxy_insert_end?>
+                since 44% have blood type O, and so out of 10 people it is almost certain
+                <?oxy_insert_start author="mmyers" timestamp="20101108T215416-0500"?>that
+                <?oxy_insert_end?>at least one will have blood type O.</p>
+        </example>
+        <!--<activity idref="_u4_m1_lbd7" purpose="learnbydoing"/>-->
+        <p>The purpose of th<?oxy_insert_start author="mmyers" timestamp="20101108T215446-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215444-0500" content="is"?>
+            <?oxy_insert_start author="mmyers" timestamp="20101108T215449-0500"?>following
+            <?oxy_insert_end?>activity is to guide you through another problem that involves finding
+            P(at least one of<?oxy_insert_start author="mmyers" timestamp="20101108T215437-0500"?>
+            <?oxy_insert_end?>...<?oxy_insert_start author="mmyers" timestamp="20101108T215439-0500"?>
+            <?oxy_insert_end?>).</p>
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>A quiz consists of 10
+                    multiple<?oxy_insert_start author="mmyers" timestamp="20101108T215459-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T215459-0500" content=" "?>choice
+                    questions, each with 4 possible answers, only one of which is correct. A student
+                    who does not attend lectures on a regular basis has no
+                    clue<?oxy_insert_start author="mmyers" timestamp="20101108T215522-0500"?> what
+                    the answers are<?oxy_insert_end?>, and therefore uses an independent random
+                    guess to answer each of the 10 questions. What is the probability that the
+                    student gets at least one question right?</p>
+                <p>Let's decide on some notations.</p>
+                <p>Let L be the event that the student gets at least one of the questions right.</p>
+                <p>We'll use R for getting a question right and W for getting it wrong (W is
+                    essentially "not R").</p>
+                <wb:inline idref="u3_m1_rules8_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m1_rules8_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m1_rules8_tutor3" purpose="learnbydoing"/>
+               
+            </body>
+        </section>
+        <wb:inline idref="u3_m1_rules8_tutor4" purpose="didigetthis"/>
+    </body>
+</workbook_page>

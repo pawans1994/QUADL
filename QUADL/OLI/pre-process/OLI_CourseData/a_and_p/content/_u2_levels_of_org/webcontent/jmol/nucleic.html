@@ -1,0 +1,268 @@
+<!-- Created by Will McClure January 23, 1998. Modified by G. Rule April 2006-->
+<HTML>
+<HEAD>
+ <TITLE>B-DNA Structure</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+ <BODY  BGCOLOR="#B0C4DE" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+
+<TABLE BORDER=0 WIDTH=850 CELLPADDING=0 CELLSPACING=0>
+<TH colspan=2 align=left>Biochemistry I</TH>
+ <TH colspan=2 align=right>Nucleic Acid Structures</th>
+<TR VALIGN="TOP" ALIGN="LEFT">
+<TD WIDTH="500" BGCOLOR="#eeeeee"> 
+ <script type="text/javascript">
+  jmolApplet([495,495],
+  "load ./jmol/pdbs/nucleic/1bna.pdb;rotate z -93.49; rotate y 79.83; rotate z 98.96;select nucleic;wireframe 0.2;spacefill 0.3;select atomno=1 or atomno=245;font label 20;color label purple;label `5'`;select atomno=230 or atomno=474;font label 20;color label purple;label `3'`;restrict nucleic","left");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("left")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+  </td>
+  <td  BGCOLOR="#eeeeee">&nbsp;</td>
+  <td  BGCOLOR="#eeeeee" width=350><font color ="#000000" >
+   
+   <B><font size=+1>DNA Structure.</font></B>
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("left") 
+    jmolButton("zap;load ./jmol/pdbs/nucleic/1bna.pdb;rotate z -93.49; rotate y 79.83; rotate z 98.96;select nucleic;wireframe 0.2;spacefill 0.3;select atomno=1 or atomno=245;label `5'`;select atomno=230 or atomno=474;label `3'`;set fontsize 14;color labels black;restrict nucleic","","","");  
+   </script>&nbsp;Load
+    <BR>
+   &nbsp; <B>Distances</B>: 
+    
+    &nbsp;&nbsp;<script type="text/javascript">
+     jmolSetTarget("left") 
+     jmolButton("set measurements ANGSTROMS;set monitor 0.2;color monitor purple;monitor 262 468;set fontsize 20","","","");  
+    </script>&nbsp;DNA, one turn
+    &nbsp;&nbsp;<script type="text/javascript">
+     jmolSetTarget("left") 
+     jmolButton("set measurements ANGSTROMS;set monitor 0.2;color monitor purple;monitor 123 387;set fontsize 20","","","");  
+    </script>&nbsp;DNA, diameter
+    <BR>
+     
+        &nbsp; <B>Rotate</B>: 
+      <script type="text/javascript">
+       jmolSetTarget("left") 
+       jmolRadioGroup([
+       ["move 0 90 0 0 0 0 0 0 3 60","Y 90&deg;",false],
+       ["move 0 -90 0 0 0 0 0 0 3 60","Y -90&deg;",false],
+       ["move 90 0 0 0 0 0 0 0 3 60","X 90&deg;",false],
+       ["move -90 0 0 0 0 0 0 0 3 60","X -90&deg;",false]]," ","Rotate")
+      </script>
+      <BR>
+       <BR>
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("left") 
+    jmolCheckbox("select nucleic;wireframe off;spacefill on","select nucleic;wireframe 0.2;spacefill 0.3","+/- cpk",false);
+   </script>
+  
+    
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("left") 
+    jmolCheckbox("select *.P;spacefill 1.0","select *.P;spacefill 0.3","+/- Phosphate",false);
+   </script>
+       <br><br>
+    
+    &nbsp;<b>Water</b>:
+       <script type="text/javascript">
+    jmolSetTarget("left") 
+    jmolCheckbox("select 25,26,28,30-32,36-39,43,44,49,50,52,54,55,57,58,60-63,65,68,70,74,80,81,85,91,92,97,99,101-104;color blue;spacefill 0.2;dots on","select 25,26,28,30-32,36-39,43,44,49,50,52,54,55,57,58,60-63,65,68,70,74,80,81,85,91,92,97,99,101-104;dots off;spacefill off","+/- Major groove",false);
+    jmolCheckbox("select 27,33-35,41,45-48,56,71,78,82,88,90,96,98;color cyan;spacefill 0.2;dots on","select 27,33-35,41,45-48,56,71,78,82,88,90,96,98;dots off;spacefill off","+/- Minor groove",false);
+  </script>
+ 
+        <br><br>
+ 
+    
+   
+      
+      &nbsp;<B>View an A-T or G-C base pair:</B><br>
+       
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("set measurements ANGSTROMS;set measurements 0.1;select all;reset;rotate z -93.49; rotate y 79.83; rotate z 98.96;slab off;monitors off;dots off;labels off;hbonds off;set windowCentered off;center atomno=340;set windowCentered on;zoomto 2.0 300;delay 0.3;restrict resno=8,17;wireframe 60;select atomno>=153 and atomno<=161,atomno>=335 and atomno<=344;spacefill 120;wireframe 60;select atomno=142,atomno=324;label %n%r;select 49;label 'Major groove';select 71;label 'minor groove';color labels black;set fontsize 14;monitor 152 334;color monitors black;select 8,17;delay 1.0;move 90 0 0 0 0 0 0 0 1","","","");  
+         </script>&nbsp;A-T basepair (dist. between C<SUP>1'</SUP>)
+   
+       <br>&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("left")
+    jmolCheckbox("monitors off","monitors on","+/- Dist",false);
+   </script>
+         
+         &nbsp;&nbsp;<script type="text/javascript">
+          jmolSetTarget("left")
+          jmolCheckbox("labels off;colour labels black;set fontsize 12;select atomno=153 or atomno=341;label '1';select atomno=154 or atomno=342;label '2';select atomno=156 or atomno=343;label '3';select atomno=157 or atomno=344;label '4';select atomno=159 or atomno=338;label '5';select atomno=161 or atomno=339;label '6';select atomno=337;label '7';select atomno=336;label '8';select atomno=335;label '9';select 8,17 and dna","labels off","+/- Atom number",false);
+         </script>
+        
+       <br>
+          &nbsp;&nbsp;<script type="text/javascript">
+           jmolSetTarget("left") 
+           jmolButton("reset;rotate z -93.49; rotate y 79.83; rotate z 98.96;select nucleic;wireframe 0.2;spacefill 0.3;set measurements ANGSTROMS;set measurements 0.1;select all;slab off;monitors off;dots off;labels off;spacefill off;hbonds off;delay 1.0;set windowCentered off;center atomno=319;set windowCentered on;zoomto 2.0 300;delay 0.3;restrict resno=9,16;wireframe 60;select atomno>=173 and atomno<=180,atomno>=313 and atomno<=323;spacefill 120;wireframe 60;select atomno=162,atomno=302;label %n%r;color labels black;set fontsize 12;monitor 172 312;color monitors yellow;select 9,16;delay 1.0;move 90 0 00 0 0 0 0 0 1;move 0 0 15 0 0 0 0 0 1","","","");  
+          </script>&nbsp;G-C base pair (dist. between C<SUP>1'</SUP>).
+        
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+         jmolSetTarget("left")
+         jmolCheckbox("monitors off","monitors on","+/- Dist",false);
+        </script>
+          
+          &nbsp;&nbsp;<script type="text/javascript">
+           jmolSetTarget("left")
+           jmolCheckbox("labels off;colour labels black;set fontsize 12;select atomno=173 or atomno=319;label '1';select atomno=174 or atomno=320;label '2';select atomno=176 or atomno=322;label '3';select atomno=177 or atomno=323;label '4';select atomno=179 or atomno=316;label '5';select atomno=180 or atomno=317;label '6';select atomno=315;label '7';select atomno=314;label '8';select atomno=313;label '9';select 9,16 and dna","labels off","+/- Atom number",false);
+          </script>
+          
+         <br>
+          &nbsp;&nbsp;<script type="text/javascript">
+           jmolSetTarget("left") 
+           jmolButton("reset;rotate z -93.49; rotate y 79.83; rotate z 98.96;select nucleic;wireframe 0.2;spacefill 0.3;select all;slab off;monitors off;dots off;labels off;hbonds off;delay 1.0;set windowCentered off;center atomno=340;set windowCentered on;zoomto 1.0 300;delay 0.3;restrict resno=8,17;select atomno>=153 and atomno<=161,atomno>=335 and atomno<=344;spacefill;select atomno=142,atomno=324;label %n%r;color labels black;set fontsize 12;monitor 152 334;color monitors yellow;center atomno=341;select resno=9,16;wireframe 60;select atomno=162,atomno=302;label %n%r;select resno=9 and not backbone,resno=16 and not backbone;spacefill;select atomno=172 or atomno=173;wireframe 60;select atomno=312 or atomno=313;wireframe 60;monitors off;select resno=9 and not backbone,resno=16 and not backbone;spacefill 120;wireframe 60;dots on;select 8,9,16,17","","","");  
+          </script>&nbsp;G-C bp (dots) above an A-T bp (Spacefill).
+ 
+          <BR>
+          &nbsp;&nbsp;<script type="text/javascript">
+           jmolSetTarget("left") 
+           jmolButton("reset;rotate z -93.49; rotate y 79.83; rotate z 98.96;slab off;monitors off;labels off;dots off;wireframe 0.4;spacefill 0.7;select not selected;select selected and not hoh;wireframe 0.1;spacefill 0.3","","","");  
+          </script>&nbsp;Place any of the above bp in the original helix.
+           <HR>
+            <B><font size=+1>tRNA Structure.</font></B><BR>
+            
+               &nbsp;<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("load ./jmol/pdbs/nucleic/1EHZ.pdb; rotate z 37.15; rotate y 104.59; rotate z 65.99;wireframe 0.4;restrict nucleic;spacefill 0.3;zoom 80","","","");  
+            </script>&nbsp;Load
+             
+             &nbsp;&nbsp;<script type="text/javascript">
+              jmolSetTarget("left")
+              jmolCheckbox("select 74,75,76;spacefill","select 74,75,76;wireframe 0.4;spacefill off","+/- 3'CCA",false);
+             </script>
+               
+               &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("left")
+                jmolCheckbox("select 34,35,36;spacefill","select 34,35,36;wireframe 0.4;spacefill off","+/- anti-codon",false);
+               </script><br>
+                &nbsp;<script type="text/javascript">
+                 jmolSetTarget("left")
+                 jmolCheckbox("select (510,520,530,540,550,560,570) and (not O*);spacefill","select (510,520,530,540,550,560,570) and (not O*);spacefill off","Mg<sup>+2</sup>",false);
+                </script>
+                      
+             &nbsp;<script type="text/javascript">
+             jmolSetTarget("left") 
+             jmolButton("select all;spacefill off;restrict nucleic;select 9,12,23;dots on;set windowCentered off;center atomno=256;set windowCentered on;zoomto 2.0 350;delay 0.5;select not (9,12,23);delay 0.1;wireframe 0.35;delay 0.1;wireframe 0.30;delay 0.1;wireframe 0.25;delay 0.1;wireframe 0.20;delay 0.1;wireframe 0.15;delay 0.1;wireframe 0.10;delay 0.1;wireframe 0.05;delay 0.1;wireframe 0.00;delay 0.2;move 90 0 0 0 0 0 0 0 1.0","","","");  
+            </script>&nbsp;Base-triple</sup>
+             
+             &nbsp;&nbsp;Hbonds<script type="text/javascript">
+jmolSetTarget("left")
+jmolRadioGroup([
+["monitor off;monitor 495 256;monitor 496 254;set monitor 0.2;color monitor purple","W-C",false],
+["monitor off;monitor 495 256;monitor 496 254;monitor 190 492;monitor 495 187;set monitor 0.2;color monitor purple","all",false]]," ","H-bonds")</script>
+</TD>
+</TR>
+  <tr><td colspan=4><HR></td></tr>
+</Table>
+ 
+ <table width=850 border=0>
+ <TH colspan=2>DNA</th>
+  <TH colspan=2>RNA</th>
+   <TR>
+    <TD>&nbsp;</TD>
+    <TD width=420>
+    <script type="text/javascript">
+     jmolApplet([410,410],
+     "load ./jmol/pdbs/nucleic/1bna.pdb;rotate z -91.08; rotate y 78.05; rotate z 96.13;select nucleic;wireframe 0.4;font label 20;color label purple;select atomno=1 or atomno=245;label `5'`;select atomno=230 or atomno=474;font label 20;color label purple;label `3'`;restrict nucleic","dna");
+    </script><BR>
+     <script type="text/javascript">
+      jmolSetTarget("dna") 
+      jmolRadioGroup([
+      ["background white;color labels black","white",true],
+      ["background gray;color labels black","gray",false],
+      ["background [100,100,255];color labels black","Lt blue",false],
+      ["background black;color label yellow","black",false]]," ","Background color")
+     </script>
+     <script type="text/javascript">
+      jmolSetTarget("dna")
+      jmolCheckbox("spin on","spin off", "Spin", false)
+     </script>
+     <br>
+     &nbsp;
+     <script type="text/javascript">
+      jmolSetTarget("dna") 
+      jmolCheckbox("move 90 0 0 0 0 0 0 0 3 30","move -90 0 0 0 0 0 0 0 3 30","X +/-90&deg;",false);
+     </script>
+     &nbsp;&nbsp;<script type="text/javascript">
+      jmolSetTarget("dna") 
+      jmolCheckbox("select *.P;spacefill 1.0","select *.P;spacefill 0.3","+/- Phos",false);
+     </script>
+      
+   
+      &nbsp;<script type="text/javascript">
+       jmolSetTarget("dna") 
+       jmolCheckbox("select G.O6,T.O4,A.N6,C.N4;define major selected;isoSurface surf1 select(major) ignore(not major) molecular","isoSurface surf1 off","+/- maj g",false);
+      </script>
+      &nbsp;<script type="text/javascript">
+       jmolSetTarget("dna") 
+       jmolCheckbox("select G.N2,T.O2,A.C2,C.O2;define minor selected;isoSurface surf2 select(minor) ignore(not minor) molecular;color $surf2 gray","isoSurface surf2 off","+/- min g",false);
+      </script>
+      </td>
+     </td>
+     <TD>&nbsp;</TD>
+ 
+      <!--  RNA -->    
+     <TD width=420>
+      <script type="text/javascript">
+       jmolApplet([410,410],
+       "load ./jmol/pdbs/nucleic/rna_new.pdb;rotate z -90.0; rotate y 90.0; rotate z 90.0;wireframe 0.4;restrict nucleic and elemno>1;spacefill 0.3;font label 20;color labels purple;select atomno=617;label `3'`;select atomno=641;label `5'`","rna");
+      </script><BR>
+       <script type="text/javascript">
+        jmolSetTarget("rna") 
+        jmolRadioGroup([
+        ["background white;color labels black","white",true],
+        ["background gray;color labels black","gray",false],
+        ["background [100,100,255];color labels black","Lt blue",false],
+        ["background black;color label yellow","black",false]]," ","Background color")
+       </script>
+       <script type="text/javascript">
+        jmolSetTarget("rna")
+        jmolCheckbox("spin on","spin off", "Spin", false)
+       </script>
+       <br>
+       &nbsp;
+       <script type="text/javascript">
+        jmolSetTarget("rna") 
+        jmolCheckbox("move 90 0 0 0 0 0 0 0 3 30","move -90 0 0 0 0 0 0 0 3 30","X +/-90&deg;",false);
+       </script>
+       &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("rna") 
+        jmolCheckbox("select *.P;spacefill 1.0","select *.P;spacefill 0.3","+/- Phos",false);
+       </script>
+        &nbsp;<script type="text/javascript">
+         jmolSetTarget("rna") 
+         jmolCheckbox("select G.O6,U.O4,A.N6,C.N4;define major_rna selected;isoSurface surf3 select(major_rna) ignore(not major_rna) molecular","isoSurface surf3 off","+/- deep g",false);
+        </script>
+        &nbsp;<script type="text/javascript">
+         jmolSetTarget("rna") 
+         jmolCheckbox("select G.N2,U.O2,A.C2,C.O2;define minor_rna selected;isoSurface surf4 select(minor_rna) ignore(not minor_rna) molecular;color $surf4 gray","isoSurface surf4 off","+/- shal g",false);
+        </script>
+  
+       </TD>
+   </TR>
+ </table>
+ <HR>
+ <TT>27.12.2007</TT>
+
+</BODY>
+
+</HTML>
+
+
+
+
+

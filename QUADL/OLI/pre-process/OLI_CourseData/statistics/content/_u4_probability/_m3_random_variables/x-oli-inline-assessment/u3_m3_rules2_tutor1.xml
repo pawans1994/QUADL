@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_rules2_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>The number of people in a car that crosses a certain bridge is a random variable X having a
+         mean value of 2.7 and variance of 1.2. The toll on the bridge is $3 per car plus $.50 (50
+         cents) per person in the car.</p>
+
+   </content>
+   <question id="q1">
+      <body>
+         <p>An expression for the amount of money that is collected from a car that crosses the
+            bridge is:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.50 + 3X</choice>
+         <choice value="Res2">3 + 0.50X</choice>
+         <choice value="Res3">3.50X</choice>
+         <choice value="Res4">3.50</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. You are probably confusing the two types of costs.
+               There is a $3 charge per car (regardless of the number of people in the car), plus
+               $.50 for each person in the car. </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. There is a $3 charge per car (regardless of the number of people in
+               the car), plus $.50 for each person in the car.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Note that the charge per car is $3 regardless of the number of
+               people in the car. This is a fixed cost and therefore should not be multiplied by X.
+               Only the $.50 charge is applied to each person in the car. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. According to your answer, the amount of money collected from a car
+               is fixed at $3.50, and is not a random variable. Note that this is not the case.
+               There is a fixed charge of $3 per car, but in addition there is $.50 charge for each
+               person in the car, the number of which is expressed by the random variable X. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>Given your answer to the previous question, and using the first set of rules for means
+            and variances, what is the mean and standard deviation of the amount of money that is
+            collected from a car that crosses the bridge?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res2"><image src="../webcontent/u3_m3_rules2_tutor1_dis_1.png"/></choice>
+         <choice value="Res1"><image src="../webcontent/u3_m3_rules2_tutor1_dis_2.png"/></choice>
+         <choice value="Res3"><image src="../webcontent/u3_m3_rules2_tutor1_dis_3.png"/></choice>
+         <choice value="Res4"><image src="../webcontent/u3_m3_rules2_tutor1_dis_4.png"/></choice>
+         <choice value="Res5"><image src="../webcontent/u3_m3_rules2_tutor1_dis_5.png"/></choice>
+      </multiple_choice>
+      <part>
+         <response match="Res2" score="0">
+            <feedback>Not quite right. While your mean is correct, the variance 3.60 isn’t. It appears that for σ<sup>2</sup><sub>3 + 0.50X</sub>, you calculated 3 + 0.50 * 1.2 = 3.60, but you forgot to square 0.50.<!--Your mistake
+               is that in order to find the variance of 3 + 0.50X, you are doing: 3 + 0.50 * 1.2 =
+               3.60. This is wrong. Go back and review the rule for the variance, and try
+               again.--></feedback>
+         </response>
+         <response match="Res1" score="0">
+            <feedback>Not quite right. While the variance is correct, there is a problem with your mean. It seems like what you did is &#956;<sub>3+0.50X</sub> = 0.50 * 2.7 = 1.35, but you forgot include the flat rate of $3 in the calculation of the mean. <!--There is a problem with your mean. It seems that you did the
+               following: &#956;<sub>3+0.50X</sub> = 0.50 * 2.7 = 1.35, which is wrong. What about the
+               3? Go back and review the rule for the mean and try again.--></feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Not quite right. While the variance is correct, there is a problem with your mean. It seems like your mistake is the following: μ<sub>3+0.50X</sub> = 3.50&#956;<sub>X</sub> = 3.50 * 2.7 = 9.45. Note that 3 is a flat rate and should not be summed with the price per person ($0.50) before multiplying by μX.<!--There is a problem with your mean. It seems that your mistake is
+               the following: &#956;<sub>cost</sub> = &#956;<sub>3+0.50X</sub> =
+                  3.50&#956;<sub>X</sub> = 3.50 * 2.7 = 9.35. This is wrong. Note that 3 is not
+               multiplied by X but represents the fixed cost of $3 per car. Review the rule for the
+               mean and try again.--></feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. Indeed, &#956;<sub>3+50X</sub> = 3 + 0.50 * &#956;<sub>X</sub> = 3 +
+               0.50 * 2.7 = 4.35, and &#963;<sup>2</sup><sub>3+0.50X</sub> = 0.50<sup>2</sup> *
+               &#963;<sup>2</sup><sub>X</sub> = 0.25 * 1.2 = 0.30. Therefore, the standard deviation is sqrt(0.30).
+               <!--Indeed: &#956;<sub>3+50X</sub> = 3 + 0.50 * &#956;<sub>X</sub> = 3 +
+               0.50 * 2.7 = 4.35, and &#963;<sup>2</sup><sub>3+0.50X</sub> = 0.50<sup>2</sup> *
+                  &#963;<sup>2</sup><sub>X</sub> = 0.25 * 1.2 = 0.30. Therefore, the standard
+               deviation is sqrt(0.30)--></feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Not quite right. While your mean is correct, the variance 0.60 isn’t. Your mistake is that you forgot to square the 0.50. In other words, it seems like what you did is &#956;<sup>2</sup><sub>3+0.50X</sub> = 0.50 * &#963;<sup>2</sup><sub>X</sub>
+               = 0.50 * 1.2 = 0.60.
+               <!--While your mean is correct, the variance 0.60 isn’t. Your mistake
+               is that you forgot to square the 0.50. In other words, it seems that you did the
+               following: &#956;<sup>2</sup><sub>3+0.50X</sub> = 0.50 * &#963;<sup>2</sup><sub>X</sub>
+               = 0.50 * 1.2 = 0.60. which is wrong because 0.50 needs to be squared. Review the rule
+               for variances again and try again.--></feedback>
+         </response>
+      </part>
+   </question>
+
+</assessment>

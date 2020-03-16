@@ -1,0 +1,136 @@
+<HTML>
+<HEAD><TITLE>
+Trypsin &amp; Chymotrypsin
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY  BGCOLOR="#D3DFFD" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+
+ <TABLE WIDTH="850" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR>
+
+ <TD>&nbsp;</TD>
+<TD align=center width=425><font size =+1><b>Chymotrypsin</b></font></TD>
+<TD>&nbsp;</TD>
+<TD align=center width=425><font size =+1><B>Trypsin</b></font></TD>
+</TR>
+ 
+<TR VALIGN=TOP>
+<TD>&nbsp;</TD>
+  
+ <TD bgcolor="#eeeeee" VALIGN=TOP WIDTH=425>
+ <script type="text/javascript">
+  jmolApplet([420,420],
+  "load ./jmol/pdbs/serp/7gch.pdb;center atomno=1779;rotate z -45.91; rotate y 59.65; rotate z -105.74;spacefill off;wireframe off;center 195;select *;color [150,150,150];wireframe off;backbone 0.3;select *.CA;spacefill 0.4;select cys and (not mainchain) or *.ca;wireframe 40;ssbonds 60;select cys.sg;spacefill 0.4;color cpk;select (57,102,195) and (sidechain or *.ca);define triad selected;wireframe 80;spacefill 120;select triad and *.CA;label %n%r;color labels purple;select triad and 102;color red;select triad and 57;color blue;select triad and 195;color purple;select *;set specular on","chymo");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("chymo") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("chymo")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+  </TD>
+
+  <TD>&nbsp;</TD>
+  
+<TD bgcolor="#eeeeee" width=425>
+ <script type="text/javascript">
+   jmolApplet([420,420],
+   "load ./jmol/pdbs/serp/trp.pdb;spacefill off;rotate z -23;rotate y 25;rotate x 26; center *:B;select *;color [150,150,150];wireframe off;backbone 0.3;select *.ca;spacefill 0.4;select cys and (not backbone) or *.ca;wireframe 40;ssbonds 60;select cys.sg;spacefill 150;color cpk;select *;set specular on","trp");
+  </script><BR>
+   <script type="text/javascript">
+    jmolSetTarget("trp") 
+    jmolRadioGroup([
+    ["background white;color labels black","white",true],
+    ["background gray;color labels black","gray",false],
+    ["background [100,100,255];color labels black","Lt blue",false],
+    ["background black;color label yellow","black",false]]," ","Background color")
+   </script>
+   <script type="text/javascript">
+    jmolSetTarget("trp")
+    jmolCheckbox("spin on","spin off", "Spin", false)
+   </script>
+  </TD>
+  </TR>
+  
+  <TR>
+   <TD>&nbsp;</TD>
+   <TD bgcolor="#eeeeee">
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("chymo") 
+ jmolCheckbox("select LPF;wireframe 80;spacefill 120;color cpk;select LPF;color[70,70,70];select LPF and (*.nl1,*.n3);color blue;select LPF and (*.ol1,*.on1,*.o2);color red;select atomno=1797;label 'INH';select 195 and *.O;label 'Ser195';select atomno=1391;label MET192;select atomno=1534;label VAL213;color label purple;select (192 or 213) and (sidechain or *.ca);wireframe 80;spacefill 120;color cpk;select all","select LPF;wireframe off;spacefill off;label off;dots off","+/- Inhibitor",false)  
+</script>
+    
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("chymo") 
+jmolCheckbox("set windowCentered off;center atomno=1779;set windowCentered on;zoomto 1.0 300;select ((protein and *.ca) or (cys and sidechain)) and not ((193,213) and sidechain);backbone 0.25;spacefill 0.35;delay 0.1;backbone 0.2;spacefill 0.3;delay 0.1;backbone 0.15;spacefill 0.25;delay 0.1;backbone 0.1;spacefill 0.2;delay 0.1;backbone 0.05;spacefill 0.15;","set windowCentered off;center atomno=1779;set windowCentered on;zoomto 1.0 100;select ((protein and *.ca) or (cys and sidechain)) and not ((193,213) and sidechain);backbone 0.3;spacefill 0.4","+/-Zoom",false);
+</script>
+    
+</TD>
+   
+<TD>&nbsp;</TD>
+
+   <TD bgcolor="#eeeeee">
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("trp") 
+jmolButton("zap;load ./jmol/pdbs/serp/t_c.pdb; rotate z -69.95; rotate y 126.92; rotate z 89.06;spacefill off;wireframe off;select (*:a and backbone);wireframe 50;color yellow;select *:e and backbone;wireframe 30;color green;select 57 and *:a;wireframe 50;color blue;select 102 and *:a;wireframe 50;color red;select 195 and *:a;wireframe 40;color purple;select 57 and *:e;wireframe 50;color blue;select 102 and *:e;wireframe 50;color red;select 195 and *:e;wireframe 40;color purple;select 57,102,195;select all","","","Both Enzymes");  
+    </script>&nbsp;Trp (yellow) and Chymo (green) 
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("trp") 
+jmolCheckbox("set windowCentered off;center 195;set windowCentered on;zoomto 1.0 300","set windowCentered off;center 195;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+</script>
+    
+    <br>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("trp") 
+jmolButton("zap;load ./jmol/pdbs/serp/trp.pdb; rotate z -69.95; rotate y 126.92; rotate z 89.06;center atomno=2040;select all;ssbonds off;spacefill off;wireframe off;color [150,150,150];backbone 80;select *.CA;spacefill 120;select (57,102,195) and (sidechain or *.CA) and (elemno>1);define triad selected;wireframe 80;spacefill 120;select triad and *.CA;label %n%r;color labels purple;select triad and 102;color red;select triad and 57;color blue;select triad and 195;color purple;select all","","","Catalytic Triad");
+</script>&nbsp;Trypsin&nbsp;&nbsp;&nbsp;
+   
+     <script type="text/javascript">
+      jmolSetTarget("trp")
+      jmolCheckbox("select *:B;backbone off;select *:B,(189:A and (sidechain or *.ca));wireframe 80;spacefill 120;color cpk;select *:B and (*.c or *.ca);color black;select *:B and sidechain;color [70,70,70];select *:B and (*.n or *.ne or *.nh1 or *.nh2);color blue;select *:B and *.oxt;color red;select 189 and *.ca;label ' Asp 189';select atomno=2493;label ' SUB';select *:B and *.h;color[200,200,200];select 195 and *.ca;label ' Ser 195';color labels black;select 189:A;spacefill off;select all","select *:B;label off;wireframe off;spacefill off;dots off;backbone off;select all", "+/- Substrate", false)
+     </script>
+     
+     &nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("trp") 
+jmolCheckbox("set windowCentered off;center atomno=2040;set windowCentered on;zoomto 1.0 300;select 189:A and sidechain;spacefill 0.5;select (protein and *.ca) and not ((189:A) and sidechain);backbone 0.25;spacefill 0.35;delay 0.1;backbone 0.2;spacefill 0.3;delay 0.1;backbone 0.15;spacefill 0.25;delay 0.1;backbone 0.1;spacefill 0.2;delay 0.1;backbone 0.05;spacefill 0.15;","set windowCentered off;center atomno=2040;set windowCentered on;zoomto 1.0 100;select (protein and *.ca)  and not ((189:A) and sidechain);backbone 0.3;spacefill 0.4","+/-Zoom",false);
+ </script>
+    
+  </TD></TR>
+  </table>
+  
+<Table  border=0 width=850>
+<TR>
+ <TD> &nbsp;</TD>
+<TD colspan=3>
+<P>
+<FONT color="##ff0000"> Viewing Suggestions </FONT>
+<OL>
+<LI>The button labeled "Trp (yellow)/Chymo (green) will show trypsin superimposed on chymotrypsin. How are they the same? How do they differ?
+<LI>'Trypsin': Displays Trypsin only.
+<LI>Add the inhibitor (chymotrypsin) or substrate (trypsin) and view the difference in substrate specificity. The bound inhibitor or substrate is rendered in "ball and stick" and is dark gray in color. What residues in chymotrypsin contact the sidechain of the substrate? Which in trypsin?
+</OL>
+
+</TD>
+</TR>
+
+</TABLE>
+
+<P> &nbsp; </P>
+<HR>
+
+<TT>Last modified February 22, 2006.<TT>
+
+</BODY>
+</HTML>

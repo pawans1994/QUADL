@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_mode_tutor">
+   <title>Tutor</title>
+   <!-- LO: Define and identify mode(s) for a given set of data. -->
+   <question id="q1">
+      <body>
+         <p>Here are the number of hours that 9 students spend on the computer on a typical day:
+            </p><p> 1 6 7 5 5 8 11 12 15</p>
+         <p>The mode number of hours spent on the computer is <input_ref input="A"/>.
+         </p>
+      </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">5</choice>
+         <choice value="two">5.5</choice>
+         <choice value="three">7.5</choice>
+         <choice value="four">8</choice>
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="A" name="5" match="one" score="10">
+            <feedback>Correct. Since 5 occurs twice in the sample, it is the most frequently
+               occurring score.</feedback>
+         </response>
+         <response input="A" name="5.5" match="two">
+            <feedback>Incorrect. Remember, the mode is the most frequently occurring
+               score.</feedback>
+         </response>
+         <response input="A" name="7.5" match="three">
+            <feedback>Incorrect. Remember, the mode is the most frequently occurring
+               score.</feedback>
+         </response>
+         <response input="A" name="8" match="four">
+            <feedback>Incorrect. Remember, the mode is the most frequently occurring
+               score. </feedback>
+         </response>
+      </part>
+   </question>
+
+   <question id="q2">
+      <!-- LO: Define and identify mode(s) for a given set of data. -->
+      <body>
+         
+         <p>The data from the above 9 students forms a <input_ref input="B"/> distribution.
+         </p>
+      </body>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">unimodal</choice>
+         <choice value="two">bimodal</choice>
+         <choice value="three">multimodal</choice>
+
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="B" name="unimodal" match="one" score="10">
+            <feedback>Correct. Since there is only one mode (5), it is a unimodal
+               distribution.</feedback>
+         </response>
+         <response input="B" name="bimodal" match="two">
+            <feedback>Incorrect. Bimodal distributions contain two modes. Since there is only one
+               mode, what type of distribution is it?</feedback>
+         </response>
+         <response input="B" name="multimodal" match="three">
+            <feedback>Incorrect. Multimodal distributions contain more than two modes. Since there
+               is only one mode, what type of distribution is it?</feedback>
+         </response>
+
+      </part>
+   </question>
+</assessment>

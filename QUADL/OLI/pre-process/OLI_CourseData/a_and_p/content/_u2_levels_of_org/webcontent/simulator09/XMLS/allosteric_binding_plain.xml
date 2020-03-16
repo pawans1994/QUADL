@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="AllostericBindingplain" version="1">
+    <name>&lt;b&gt;Effect of Allosteric Binding on Enzymes.&lt;/b&gt;</name>
+    <debugger state="off"/> 
+    <steps>
+        <step id="createIT">
+            <objects tutor="">
+               
+                <object name="" />
+            </objects>
+            <actions>
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> 
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <action event="create" name="Hline2" url="tools/horizontalLine.swf"  x="317" y="270" xscale="1.5"  yscale="1"/>
+                <action event="create" name="Hline" url="tools/bk.swf"  x="316" y="0" xscale="1"  yscale="1"/>
+               <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="createIT2">
+            <objects tutor="">
+                
+                <object name="" />
+            </objects>
+            <actions>
+                <action event="create" name="thegrapher" url="tools/graphPoints3.swf" x="333" y="270" xscale="1" yscale="1" /> 
+                <action event="create" name="image" url="swfs/allostericInhibitor.swf" x="333" y="50" xscale="1" yscale="1" />               
+                <action event="create" name="equation1" url="tools/equation1.swf"  x="585" y="270" xscale="1" yscale="1" />
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="createIT3">
+            <objects tutor="">
+                
+                <object name="" />
+            </objects>
+            <actions>
+              
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="316" y="0" xscale="1"  yscale="1"/>
+                <action event="create" name="inputs1" url="tools/inputs1NEW.swf"  x="433" y="315" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKeyInhibit2.swf"  x="600" y="290" xscale=".55" yscale=".55" />
+                
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="Definition NEW">
+            <objects tutor="">
+                <object name="image" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"> 
+                    <text>
+In this tutorial you will investigate the effect of Allosteric regulators of enzyme activity.
+
+Allosteric binding causes conformational changes in an enzyme that can either inhibit or activate the enzyme. In this example the conformation change is such that the substrate binding is affected.  
+
+The substrate can not bind to the enzyme while the allosteric inhibitor is bound to the enzyme.  This is an example of feedback inhibition.
+
+The substrate can bind to the enzyme when the allosteric activator is bound.
+
+&lt;b&gt;Please click on the "Next" button to continue.&lt;/b&gt;
+                    </text>
+                </object>
+            </objects>
+            <actions>
+                <action event="initialize" name="thegrapher"  data="3" params="moleculeID=,ligandID=5,productID="/> 
+                <action event="sendmessage" name="thegrapher" params="drawCurve=1" />
+                <action event="create" name="castKey1" url="tools/castKeyInhibit2.swf"  x="600" y="290" xscale=".55" yscale=".55" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+               
+        <step id="Allosteric Inhibitors">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;
+Inhibition.</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                <text>
+In this example, the allosteric molecule is binding with the enzyme.  The conformation change is such that the substrate can not bind with the enzyme while the allosteric inhibitor is bound to the enzyme.
+                        
+Click on the radio dials to experiment with various concentrations of substrate to compare the velocity of binding compared to the black line on the graph which is the velocity of the substrate with no inhibitor present.
+
+When you are finished, please click on the "Next" button.
+                    </text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible" />
+                
+                <object name="equation1" state="visible" />
+                <object name="label1" state="visible" />
+                <object name="label2" state="visible" />
+                <object name="castKey1" state="visible" />
+            </objects>
+            <actions>
+ 
+               <!-- <action event="sendmessage" name="thegrapher" params="setmyMask=off" /> -->
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=440,topBorder=0,bottomBorder=250,leftBorder2=20,rightBorder2=420,topBorder2=10,bottomBorder2=200">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->  
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "0"  cast= "moleculeC22sp"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="50"  rotation="10"  watchEnvironment= "0" brownian="0" polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"  interactions="master=pocket2,slave=pocket1,effect=inhibit" mybounce="true" />   <!--enzyme-->          
+                        <molecule numMolecules= "6"  injectionforce= "0" velocity= "60"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "0,0,0,0,0,0,0,0"  mytype="ligand"  myID="4"   bindswith="molecule1.pocket2.bound2.bound,Kd?1,k?250,Kcat?0"  mybounce="true" />  <!--inhibitor--> 
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "60"  cast= "ligand2"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="180" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "1,1,1,1,1,1,1,1"  mytype="ligand"  myID="5"   bindswith="molecule1.pocket1.bound.go2product,Kd?10,k?100,Kcat?1,productidl?6"  mybounce="false" /> <!--substrate--> 
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "60"  cast= "product4"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "1,1,1,1,1,1,1,1"  mytype="ligand"  myID="6"   isproduct="1" returnsto="5" mybounce="false" />   <!--product-->
+                    </molecules>
+                </action>
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=50,y=60,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=300,y=60,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=100,y=160,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=260,y=160,Xoffset=0,Yoffset=0" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+ <!--       <step id="tutor3B">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;
+Inhibition.</text>
+                </object>
+                <object name="box1" state="visible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+            <actions>
+                
+                <action event="record light"/>
+                <action event="sendmessage" name="thegrapher" params="drawCurve=3" />
+                <action event="sendmessage" name="thegrapher" params="setmyMask=on" /> 
+ 
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>-->
+        
+
+    <step id="Definition2">
+            <objects tutor="">
+                <object name="image" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;
+Activation.</text>
+                </object>
+                <object name="theexplainer" state="visible"> 
+                    <text>
+In this example, an Allosteric activator is binding with the enzyme causing a conformational change that allows the substrate to now bind with the enzyme.
+
+&lt;b&gt;Click "Next" to continue.&lt;/b&gt;
+                    </text>
+                </object>
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="316" y="0" xscale="1"  yscale="1"/>
+                <action event="create" name="image" url="tools/castKeyInhibit3.swf" x="333" y="50" xscale="1" yscale="1" />  
+                <action event="create" name="castKey1" url="tools/castKeyInhibit3.swf"  x="600" y="290" xscale=".55" yscale=".55" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+
+           <step id="tutor4">
+                <objects tutor="">
+                    <object name="title" state="visible">
+                        <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;
+Activation.</text>
+                    </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible" />
+                
+                <object name="equation1" state="visible" />
+                <object name="label1" state="visible" />
+                <object name="label2" state="visible" />
+                <object name="castKey1" state="visible" />
+            </objects>
+            <actions>
+                <action event="initialize" name="thegrapher"  data="4" params="moleculeID=,ligandID=5,productID="/> 
+
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=440,topBorder=0,bottomBorder=250,leftBorder2=20,rightBorder2=420,topBorder2=10,bottomBorder2=200">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->  
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "0"  cast= "moleculeC22sp2"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="50"  rotation="10"  watchEnvironment= "0" brownian="0" polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"  interactions="master=pocket2,slave=pocket1,effect=cooperate" mybounce="true" />   <!--enzyme-->          
+                        <molecule numMolecules= "6"  injectionforce= "0" velocity= "60"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "0,0,0,0,0,0,0,0"  mytype="ligand"  myID="4"   bindswith="molecule1.pocket2.bound2.bound,Kd?1,k?250,Kcat?0"  mybounce="true" />  <!--inhibitor--> 
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "60"  cast= "ligand2"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="180" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "1,1,1,1,1,1,1,1"  mytype="ligand"  myID="5"   bindswith="molecule1.pocket1.bound.go2product,Kd?10,k?100,Kcat?1,productidl?6"  mybounce="false" /> <!--substrate--> 
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "60"  cast= "product4"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="50" Yoffset="10" rotationVelocity="50"  rotation="50"  watchEnvironment= "0" brownian="0" polarity = "1,1,1,1,1,1,1,1"  mytype="ligand"  myID="6"   isproduct="1" returnsto="5" mybounce="false" />   <!--product-->
+                    </molecules>
+                </action>
+                
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=150,y=60,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=300,y=60,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=100,y=160,Xoffset=0,Yoffset=0" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=260,y=160,Xoffset=0,Yoffset=0" /> 
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+  
+        <step id="all done">
+            <objects tutor="">
+                <object name="box1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Allosteric Regulation of  Enzymes.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    
+                    <text>
+&lt;b&gt;Summary&lt;/b&gt;
+                        
+Allosteric activators/inhibitors do not bind to the active site.
+
+They are not displaced by high levels of substrate.
+
+Inhibitors reduce the concentration of active enzyme, decreasing the velocity at all substrate concentrations (green curve).
+
+Activator increase the concentration of active enzyme, increasing the velocity at all substrate concentrations (blue curve).
+                    </text>
+                </object>
+
+                <object name="thegrapher" state="visible" />
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible" />
+            </objects>
+            <actions>
+                
+                <action event="record light"/>
+                <action event="sendmessage" name="thegrapher" params="drawCurve=4" />
+                <action event="sendmessage" name="thegrapher" params="setmyMask=on" /> 
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>    
+        
+ 
+       <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="exit">
+           
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+    </steps>
+</simulation>

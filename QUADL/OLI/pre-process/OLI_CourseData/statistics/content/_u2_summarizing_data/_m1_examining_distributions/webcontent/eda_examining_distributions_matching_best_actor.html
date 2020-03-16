@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+<title>Drag and Drop</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<!--<link rel="stylesheet" type="text/css" href="matching_best_actor.css">-->
+ 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+<style>
+
+body {
+  //margin: 30px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
+  font-size: 0.9em;
+  color: #333;
+}
+ 
+#cardTable {
+  margin: 0 auto 20px auto;
+  background: white;
+  height: 360px;
+  //width: 500px;
+  //float: left;
+}
+
+#feedback {
+  margin: 20px auto 0 auto;
+  //width: 550px;
+}  
+
+/* Slots for final card positions */
+
+#cardSlots {
+  //margin: 50px auto 20px auto;
+  //background: #ddf;
+  //height: 280px;
+  width: 200px;
+  //vertical-align: top;
+  display: inline-block;
+}
+
+#cardDescriptions {
+  width: 100px;
+  //height: 280px;
+  //margin-left: 200;
+  vertical-align: top;
+  display: inline-block;
+}
+
+#cardDescriptions div {
+  width: 320px;
+  height: 46px;
+  padding: 10px;
+  padding-top: 10px;
+  text-align: left;
+}
+ 
+/* The initial pile of unsorted cards */
+ 
+#cardPile {
+  margin: 0 auto;
+  background: #ffd;
+  height: 30px;
+}
+ 
+#cardTable, #cardPile {
+  //width: 550px;
+  padding: 20px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+ 
+/* Individual cards and slots */
+ 
+#cardSlots div, #cardPile div {
+  width: 60px;
+  height: 20px;
+  //padding: 10px;
+  //padding-top: 10px;
+  padding-bottom: 6px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+ 
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 10;
+  margin-top: 0;
+}
+
+#cardSlots div.hovered {
+  background: #aaa;
+}
+ 
+#cardSlots div {
+  border-style: dashed;
+  float:top;
+  margin: 20px 0 0 10px;
+}
+ 
+#cardPile div {
+  background: #666;
+  color: #fff;
+  float: left;
+  margin: 0 0 10px 10px;
+  text-align: center;
+}
+ 
+#cardSlots div:first-child {
+	position: absolute;
+	left: 392px;
+	top: 50px;
+	//margin-left: 460px;
+	//margin-top: 135px;
+} 
+
+#cardSlots div:nth-child(2) {
+	position: absolute;
+	left: 422px;
+	top: 118px;
+} 
+ 
+#cardSlots div:nth-child(3) {
+	position: absolute;
+	left: 467px;
+	top: 190px;
+} 
+ 
+#cardSlots div:nth-child(4) {
+	position: absolute;
+	left: 467px;
+	top: 228px;
+} 
+ 
+#cardSlots div:nth-child(5) {
+	position: absolute;
+	left: 467px;
+	top: 265px;
+} 
+
+#cardSlots div:nth-child(6) {
+	position: absolute;
+	left: 422px;
+	top: 322px;
+} 
+
+#cardSlots div:nth-child(7) {
+	position: absolute;
+	left: 97px;
+	top: 100px;
+} 
+
+#cardSlots div:nth-child(8) {
+	position: absolute;
+	left: 217px;
+	top: 228px;
+} 
+
+#cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+
+ 
+/* Individually coloured cards */
+ 
+#card1.correct { background: green; opacity: 1;}
+#card2.correct { background: green; opacity: 1;}
+#card3.correct { background: green; opacity: 1;}
+#card4.correct { background: green; opacity: 1;}
+#card5.correct { background: green; opacity: 1;}
+#card6.correct { background: green; opacity: 1;}
+#card7.correct { background: green; opacity: 1;}
+#card8.correct { background: green; opacity: 1;}
+ 
+ 
+</style>
+ 
+<script type="text/javascript">
+
+var correctCards = 0;
+$( init );
+
+function init() {
+ 
+  // Hide the success message
+  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+  
+  $('#feedback').hide();
+ 
+  // Reset the game
+  correctCards = 0;
+  $('#cardPile').html( '' );
+  $('#cardSlots').html( '' );
+ 
+  // Create the pile of shuffled cards
+  var numbers = [ 1, 2, 3, 4, 5, 6, 7, 8 ];
+  //numbers.sort( function() { return Math.random() - .5 } );
+    
+  var dropWords = ['Q1', 'Q3', 'min', 'Max', 'M', 'Range', 'IQR', ''];
+  var correctNumbers = [ 5, 3, 6, 1, 4, 7, 8, 2 ];
+  
+  for ( var i=0; i<dropWords.length; i++ ) {
+    $('<div>' + dropWords[i] + '</div>').data( 'number', correctNumbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+  }
+ 
+  // Create the card slots
+  for ( var i=1; i<=dropWords.length; i++ ) {
+    $('<div></div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  }
+ 
+}
+
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' );
+  var cardNumber = ui.draggable.data( 'number' );
+
+  console.trace('cardNumber is ' + cardNumber);
+ 
+  var feedback = [[]];
+  // Max
+  feedback[1] = [];
+  feedback[1][1] = "Good job!";
+  feedback[1][2] = "Many students confuse this point on the boxplot with the Max, but since we have an outlier in this dataset, it's not the Max - it's simply the largest observation that is not an outlier.";
+  feedback[1][3] = "The maximum is the largest point in the dataset.  The point on the boxplot you've chosen is Q3.";
+  feedback[1][4] = "The maximum is the largest point in the dataset.  The point on the boxplot you've chosen is the median.";
+  feedback[1][5] = "The maximum is the largest point in the dataset.  The point on the boxplot you've chosen is Q1.";
+  feedback[1][6] = "The maximum is the largest point in the dataset.  The point on the boxplot you've chosen is the minimum.";
+  feedback[1][7] = "The maximum is the largest point in the dataset.  What you've chosen is the Range.";
+  feedback[1][8] = "The maximum is the largest point in the dataset.  What you've chosen is the IQR.";
+  // none of the above
+  feedback[2] = [];
+  feedback[2][1] = "The point on the boxplot you've chosen is the Max.";
+  feedback[2][2] = "Good job!  Many students confuse this point on the boxplot with the Max, but since we have an outlier in this dataset, it's not the Max - it's simply the largest observation that is not an outlier.";
+  feedback[2][3] = "The point on the boxplot you've chosen is Q3.";
+  feedback[2][4] = "The point on the boxplot you've chosen is the median.";
+  feedback[2][5] = "The point on the boxplot you've chosen is Q1.";
+  feedback[2][6] = "The point on the boxplot you've chosen is the minimum.";
+  feedback[2][7] = "What you've chosen is the Range.";
+  feedback[2][8] = "What you've chosen is the IQR.";
+  // Q3
+  feedback[3] = [];
+  feedback[3][1] = "Q3 is the third quartile of the distribution.  The point on the boxplot you've chosen is the Max.";
+  feedback[3][2] = "Q3 is the third quartile of the distribution.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[3][3] = "Good job!";
+  feedback[3][4] = "Q3 is the third quartile of the distribution.  The point on the boxplot you've chosen is the median.";
+  feedback[3][5] = "You might be confusing Q1 and Q3. Recall that Q1, the first quartile of the distribution, is represented by the bottom edge of the box. Q3, the third quartile of the distribution, is represented by the top edge of the box.";
+  feedback[3][6] = "Q3 is the third quartile of the distribution.  The point on the boxplot you've chosen is the minimum.";
+  feedback[3][7] = "Q3 is the third quartile of the distribution.  What you've chosen is the Range.";
+  feedback[3][8] = "Q3 is the third quartile of the distribution.  What you've chosen is the IQR.";
+  // M
+  feedback[4] = [];
+  feedback[4][1] = "M represents the median, or the middle of the dataset.  The point on the boxplot you've chosen is the Max.";
+  feedback[4][2] = "M represents the median, or the middle of the dataset.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[4][3] = "M represents the median, or the middle of the dataset.  The point on the boxplot you've chosen is Q3.";
+  feedback[4][4] = "Good job!";
+  feedback[4][5] = "M represents the median, or the middle of the dataset.  The point on the boxplot you've chosen is Q1.";
+  feedback[4][6] = "M represents the median, or the middle of the dataset.  The point on the boxplot you've chosen is the minimum.";
+  feedback[4][7] = "M represents the median, or the middle of the dataset.  What you've chosen is the Range.";
+  feedback[4][8] = "M represents the median, or the middle of the dataset.  What you've chosen is the IQR.";
+  // Q1
+  feedback[5] = [];
+  feedback[5][1] = "";
+  feedback[5][2] = "Q1 is the first quartile of the distribution.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[5][3] = "You might be confusing Q1 and Q3. Recall that Q1, the first quartile of the distribution, is represented by the bottom edge of the box. Q3, the third quartile of the distribution, is represented by the top edge of the box.";
+  feedback[5][4] = "Q1 is the first quartile of the distribution.  The point on the boxplot you've chosen is the median.";
+  feedback[5][5] = "Good job!";
+  feedback[5][6] = "Q1 is the first quartile of the distribution.  The point on the boxplot you've chosen is the minimum.";
+  feedback[5][7] = "Q1 is the first quartile of the distribution.  What you've chosen is the Range.";
+  feedback[5][8] = "Q1 is the first quartile of the distribution.  What you've chosen is the IQR.";
+  // min
+  feedback[6] = [];
+  feedback[6][1] = "The minimum is the smallest point in the dataset.  The point on the boxplot you've chosen is the Max.";
+  feedback[6][2] = "The minimum is the smallest point in the dataset.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[6][3] = "The minimum is the smallest point in the dataset.  The point on the boxplot you've chosen is Q3.";
+  feedback[6][4] = "The minimum is the smallest point in the dataset.  The point on the boxplot you've chosen is the median.";
+  feedback[6][5] = "The minimum is the smallest point in the dataset.  The point on the boxplot you've chosen is Q1.";
+  feedback[6][6] = "Good job!";
+  feedback[6][7] = "The minimum is the smallest point in the dataset.  What you've chosen is the Range.";
+  feedback[6][8] = "The minimum is the smallest point in the dataset.  What you've chosen is the IQR.";
+  // Range
+  feedback[7] = [];
+  feedback[7][1] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is the Max.";
+  feedback[7][2] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[7][3] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is Q3.";
+  feedback[7][4] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is the median.";
+  feedback[7][5] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is Q1.";
+  feedback[7][6] = "The Range represents the spread of all the data.  The point on the boxplot you've chosen is the minimum.";
+  feedback[7][7] = "Good job!";
+  feedback[7][8] = "The Range represents the spread of all the data.  What you've chosen is the IQR.";
+  // IQR
+  feedback[8] = [];
+  feedback[8][1] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is the Max.";
+  feedback[8][2] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is the largest data point that is not an outlier.";
+  feedback[8][3] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is Q3.";
+  feedback[8][4] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is the median.";
+  feedback[8][5] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is Q1.";
+  feedback[8][6] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  The point on the boxplot you've chosen is the minimum.";
+  feedback[8][7] = "The IQR, or Inter-Quartile Range, is the difference between Q1 and Q3.  What you've chosen is the Range.";
+  feedback[8][8] = "Good job!";
+
+  // If the card was dropped to the correct slot,
+  // change the card colour, position it directly
+  // on top of the slot, and prevent it being dragged
+  // again
+ 
+  $('#feedback').show();
+  var theFeedback = feedback[cardNumber][slotNumber];
+
+  if ( slotNumber == cardNumber ) {
+    $('#feedback').html('<p align="left"><font color="green">Correct: ' + theFeedback + '</font></p>');
+    ui.draggable.addClass( 'correct' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctCards++;
+  } else {
+    $('#feedback').html('<p align="left"><font color="red">Incorrect: ' + theFeedback + '</font></p>');
+  }
+   
+  // If all the cards have been placed correctly then display a message
+  // and reset the cards for another go
+ 
+  if ( correctCards == 10 ) {
+    $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '380px',
+      top: '200px',
+      width: '400px',
+      height: '100px',
+      opacity: 1
+    } );
+  }
+ 
+} 
+
+</script>
+ 
+</head>
+<body>
+
+<div id="content">
+ 
+  <div id="cardTable">
+  	<div id="cardDescriptions"> 
+  		<img src="eda_examining_distributions_matching_best_actor.png"/>
+  	</div>
+  	<div id="cardSlots"> </div>
+  </div>
+  <div id="cardPile"> </div>
+  <div id="feedback"> </div>
+   
+</div>
+
+</body>
+</html>

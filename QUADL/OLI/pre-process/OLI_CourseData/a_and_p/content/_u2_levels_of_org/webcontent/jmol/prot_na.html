@@ -1,0 +1,233 @@
+<HTML>
+  <HEAD><TITLE>Protein-Nucleic Acid Interactions</TITLE>
+    <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+  <BODY BGCOLOR="#B0C4DE">
+  <script type="text/javascript">
+    jmolInitialize("./jmol");
+    jmolSetAppletColor("white");
+  </script>
+<TABLE BORDER=0 WIDTH=850 CELLPADDING=0 CELLSPACING=0>
+<TH>&nbsp;</TH>
+  <TH align=left>Biochemistry I</TH>
+  <TH colspan=3 align=right>DNA-Protein Complexes</TH>
+<TR VALIGN="TOP">
+  <TD width="1" bgcolor="#eeeeee">&nbsp;</TD>
+
+<TD WIDTH="500" bgcolor="#ffffff"> 
+  <script type="text/javascript">
+    jmolApplet([495,495],
+    "load ./jmol/pdbs/nucleic/1eribio2.pdb;rotate z -126.27; rotate y 81.17; rotate z 85.87;wireframe off;spacefill off;select dna;colour green;wireframe 0.3;select dna and backbone;colour gray;select dna and 13 and *.O3*;label `3'`;select dna and 1 and *.O5*;label `5'`;color labels black;font label 20;select protein;wireframe off;backbone 0.3;select *:C;color cyan;select *:C and 277 and *.ca;label 'Chain C';select *:A;color redorange;select *:A and 277 and *.ca;label 'Chain A';select all;font label 18","eco");
+  </script><BR>
+    <script type="text/javascript">
+      jmolSetTarget("eco") 
+      jmolRadioGroup([
+      ["background white;color labels black","white",true],
+      ["background gray;color labels black","gray",false],
+      ["background [100,100,255];color labels black","Lt blue",false],
+      ["background black;color label yellow;color monitor yellow","black",false]]," ","Background color")
+    </script>
+    <script type="text/javascript">
+      jmolSetTarget("eco")
+      jmolCheckbox("spin on","spin off", "Spin", false)
+    </script>
+</TD>
+  <TD width="1" bgcolor="#eeeeee">&nbsp;</TD>
+  
+<TD WIDTH="350" BGCOLOR="#eeeeee"><FONT COLOR="#000000">
+<P>
+  
+  <B>Eco R1 - DNA Complex:</B>
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("eco") 
+    jmolButton("load ./jmol/pdbs/nucleic/1eribio2.pdb;rotate z -126.27; rotate y 81.17; rotate z 85.87;wireframe off;spacefill off;select dna;colour green;wireframe 0.3;select dna and backbone;colour gray;select dna and 13 and *.O3*;label `3'`;select dna and 1 and *.O5*;label `5'`;color labels black;font label 20;select protein;wireframe off;backbone 0.3;select *:C;color cyan;select *:C and 277 and *.ca;label 'Chain C';select *:A;color redorange;select *:A and 277 and *.ca;label 'Chain A';select all;font label 18","","","");  
+   </script>&nbsp;Load<br><br>
+  
+&nbsp;<B>Select</B>:
+  <script type="text/javascript">
+    jmolSetTarget("eco") 
+jmolRadioGroup([["select all;wireframe off;cartoons off;spacefill off;backbone 0.4;restrict protein","Protein",false],
+["select dna;spacefill off;backbone off;cartoons off;colour green;wireframe 0.4;select dna and backbone;colour gray;restrict dna","DNA",false],
+["select all;spacefill off;backbone off;cartoons off;wireframe off;select dna;colour green;wireframe 0.4;select dna and backbone;colour gray;select protein;backbone 0.4;select *:C;color cyan;select *:A;color redorange;select all","All",false]]," ","Background color")
+  </script>
+  
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <script type="text/javascript">
+    jmolSetTarget("eco")
+    jmolCheckbox("select all;spacefill off;backbone off;cartoons off;wireframe off;select dna;colour green;wireframe 60;select dna and backbone;colour white;select protein;backbone 60;select *:C;color cyan;select *:A;color redorange;select hoh;spacefill 120;color cpk;select all","select all;spacefill off;backbone off;cartoons off;wireframe off;select dna;colour green;wireframe 60;select dna and backbone;colour white;select protein;backbone 60;select *:C;color cyan;select *:A;color redorange;select hoh;spacefill off;color cpk;select all", "+/- H<sub>2</sub>O", false)
+  </script>
+    
+    <BR>
+      &nbsp; <B>Distances (&Aring;)</B>: 
+            &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("eco") 
+            jmolButton("set measurements ANGSTROMS;monitor 2053 2302;set monitor 0.2;color monitor purple;font monitor 20 bold","","","");  
+          </script>&nbsp;DNA.
+            
+            &nbsp;&nbsp;<script type="text/javascript">
+              jmolSetTarget("eco") 
+              jmolButton("set measurements ANGSTROMS;monitor 1962 3221;set monitor 0.2;color monitor purple;font monitor 20 bold","","","");  
+            </script>&nbsp;Protein.<BR>
+              
+              <BR>
+                &nbsp;<B>Specificity and Catalysis:</B> <BR>
+&nbsp;&nbsp;<script type="text/javascript">
+                      jmolSetTarget("eco") 
+                      jmolButton("monitor off;select all;wireframe off;backbone off;spacefill off;select protein;backbone 0.3;select *:C;color cyan;select *:A;color redorange;select dna;wireframe 0.3;select dna and 5-10;define site selected;wireframe 0.4; spacefill 0.6;color cpk;select (atomno=2138) or (atomno=2152);color bonds red;select (atomno=4516) or (atomno=4530);color bonds purple","","","");  
+                    </script>&nbsp;Highlight GAATTC
+                    
+                    &nbsp;&nbsp;
+                <script type="text/javascript">
+                  jmolSetTarget("eco")
+                  jmolCheckbox("set windowCentered off;center atomno=2152;set windowCentered on;zoomto 1.0 400;select protein;delay 0.1;backbone 0.3;delay 0.1;backbone 0.25;delay 0.1;backbone 0.20;delay 0.1;backbone 0.15;select *:A and (91,111,113);define catres selected;select catres and (sidechain or alpha);wireframe 40;spacefill 120;color cpk;select catres and alpha;label %m%r;select *:b and 5-10 and *.P;label %m%r;select *:b and (5,6);define bsite selected;trace off;select (atomno=2138) or (atomno=2152);color bonds purple;refresh","zoomto 1.0 100", "+/- Zoom", false)
+                </script>
+                  [After zooming, the cleaved bond is colored purple.]
+                
+                   
+              
+                  <BR><BR><B>&nbsp;Walk down GAATTC</B><br>Selecting each base will add the base to the previously displayed base.
+                    <P>
+                      The protein residues that interact with the bases are shown in 'ball-and-stick'.  The sidechains are colored CPK if they interact with the selected base, or are colored light gray if they are interacting with a base that has already been selected.<br>
+
+                            
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("eco") 
+jmolButton("select all;labels off;wireframe off;spacefill off;backbone off;labels off;select *:B and 5:B;wireframe 80;color cpk;center atomno=2194;zoom 300;select atomno=2130;label G5;select all","","","");  
+</script>&nbsp;G<sub>5</sub>             
+                
+                &nbsp;&nbsp;<script type="text/javascript">
+                  jmolSetTarget("eco") 
+                  jmolButton("select all;wireframe off;spacefill off;backbone off;select *:B and 5,6:B;wireframe 80;color cpk;center atomno=2194;zoom 300;select atomno=2154;label A6;select 145:A;wireframe 100;spacefill 150;color cpk;select atomno=2153,atomno=990,atomno=991,atomno=992;dots 400;select all","","","");  
+                </script>&nbsp;A<sub>6</sub>
+                      
+                  &nbsp;&nbsp;<script type="text/javascript">
+                    jmolSetTarget("eco") 
+                    jmolButton("select all;wireframe off;spacefill off;backbone off;select 5:B,6:B,7:B;wireframe 80;color cpk;center atomno=2194;zoom 300;select atomno=2175;label A7;select 145:A,142:A,141:C;wireframe 100;spacefill 150;color cpk;dots off;monitor 2189 3336;monitor 2186 989;select atomno=964,atomno=2193,atomno=2187,atomno=2186,atomno=2185;dots 300;select all","","","");  
+                  </script>&nbsp;A<sub>7</sub>
+
+                    &nbsp;&nbsp;<script type="text/javascript">
+                      jmolSetTarget("eco") 
+                      jmolButton("select all;wireframe off;spacefill off;backbone off;select 5:B,6:B,7:B,8:B;wireframe 100;color cpk;center atomno=2194;zoom 300;select atomno=2196;label T8;select 145:A,142:A,141:C;wireframe 100;spacefill 150;color[250,250,250];select 142:A;color cpk;select atomno=2212,atomno=964;dots 300;monitor 960 2210;select all","","","");  
+                    </script>&nbsp;T<sub>8</sub>
+                      
+                      &nbsp;&nbsp;<script type="text/javascript">
+                        jmolSetTarget("eco") 
+                        jmolButton("select all;wireframe off;spacefill off;backbone off;select 5:B,6:B,7:B,8:B,9:B;wireframe 80;color cpk;center atomno=2194;zoom 300;select atomno=2216;label T9;select 145:A,142:A;wireframe 100;spacefill 150;color [250,250,250];select 140:A;wireframe 100;spacefill 150;color cpk;select atomno=2232,atomno=949;dots 300;select all","","","");  
+                      </script>&nbsp;T<sub>9</sub>
+                        
+                        &nbsp;&nbsp;<script type="text/javascript">
+                          jmolSetTarget("eco") 
+                          jmolButton("select all;wireframe off;spacefill off;backbone off;select 5:B,6:B,7:B,8:B,9:B,10:B;wireframe 80;color cpk;center atomno=2194;zoom 300;select atomno=2236;label C10;select 145:A,142:A,141:C,140:A;wireframe 100;spacefill 150;color [250,250,250];select 137:A,138:A;wireframe 100;spacefill 150;color cpk;select atomno=2252,atomno=936;dots 300;monitor 2250 941;select all","","","");  
+                        </script>&nbsp;C<sub>10</sub>
+                          <br>
+                          &nbsp;&nbsp;<script type="text/javascript">
+                            jmolSetTarget("eco") 
+                            jmolButton("select 5:D,6:D,7:D,8:D,9:D,10:D;wireframe 80;color cpk;select all;zoom 300","","","");  
+                          </script>&nbsp;+ other strand
+                            
+                            &nbsp;&nbsp;<script type="text/javascript">
+                              jmolSetTarget("eco") 
+                              jmolButton("select 7:B,8:D;wireframe 0.3;spacefill 0.5;dots;color cpk;delay 1.0;select all;wireframe off;spacefill off;labels off;dots off;monitor off;backbone off;select 5:D,6:D,7:D,8:D,9:D,10:D,5:B,6:B,7:B,8:B,9:B,10:B;wireframe 0.3;color grey;select 7:B,8:D,141:C,145:A;wireframe 0.5;color cpk;select (141:C,145:A) and sidechain;spacefill 0.7;set windowCentered off;center atomno=2189;set windowCentered on;zoomto 2.5 400;delay 0.5;move 70 0 0 0 0 0 0 0 1.25;delay 0.1;backbone 0.3;delay 0.1;backbone 0.25;delay 0.1;backbone 0.20;delay 0.1;backbone 0.15;delay 0.1;backbone 0.10;delay 0.1;backbone 0.05;delay 0.1;backbone 0.0;select (((5-10) and *:D) or ((5-10) and *:B)) and not (7:B,8:D);wireframe 0.3;delay 0.1;wireframe 0.27;delay 0.1;wireframe 0.23;delay 0.1;wireframe 0.2;delay 0.1;wireframe 0.17;delay 0.1;wireframe 0.13;delay 0.1;wireframe 0.1;delay 0.1;wireframe 0.07;delay 0.1;wireframe 0.03;delay 0.1;wireframe 0.0;select atomno=3334;label Asn141;color label purple;font label 20;select atomno=992;label Arg145;color label purple;font label 20","","","");  
+                            </script>&nbsp;A7-T8:Asn 141 &amp; Arg 145<BR>
+                              <hr>
+                                
+                                <B>Lac Repressor</B>&nbsp;&nbsp;<script type="text/javascript">
+                                jmolSetTarget("eco") 
+                                jmolButton("load ./jmol/pdbs/nucleic/1lcc.pdb;rotate z -173.53; rotate y 64.54; rotate z 114.2;spacefill off;wireframe off;select protein;cartoon;color structure;set specular on;select dna;wireframe 0.3;spacefill 0.4;color grey;select dna and not backbone;color green","","","");  
+                                </script>&nbsp;Load<br>
+                                  
+                                <b>Zn<sup>2+</sup> Finger</b>&nbsp;&nbsp;<script type="text/javascript">
+                                  jmolSetTarget("eco") 
+                                  jmolButton("load ./jmol/pdbs/nucleic/1a1l.pdb; rotate z -147.76; rotate y 53.54; rotate z 174.65;spacefill off;wireframe off;select protein;cartoon;color structure;set specular on;select dna;wireframe 0.3;spacefill 0.4;color grey;select dna and not backbone;color green;select ligand;spacefill","","","");  
+                                </script>&nbsp;Load<br>
+                   
+                                    <b>Leucine zipper</b>&nbsp;&nbsp;<script type="text/javascript">
+                                      jmolSetTarget("eco") 
+                                      jmolButton("load ./jmol/pdbs/nucleic/1ysa.pdb;rotate z 55.32; rotate y 74.63; rotate z 87.57;spacefill off;wireframe off;select protein;cartoon;color structure;set specular on;select dna;wireframe 0.3;spacefill 0.4;color grey;select dna and not backbone;color green;select ligand;spacefill","","","");  
+                                    </script>&nbsp;Load
+                                    
+                                    <script type="text/javascript">
+                                      jmolSetTarget("eco")
+                                      jmolCheckbox("select leu;wireframe .4;spacefill 0.6;select leu and sidechain;color cpk;set windowCentered off;center atomno=1126;set windowCentered on;zoomto 2.0 300","select leu;wireframe off;spacefill off;select protein;cartoon;color structure;zoomto 0.5 100", "+/- Leu", false)
+                                    </script>
+                                    
+                                    <script type="text/javascript">
+                                      jmolSetTarget("eco")
+                                      jmolCheckbox("select arg;wireframe .4;spacefill 0.6;select arg and sidechain;color cpk;select *.P;color orange;set windowCentered off;center atomno=1454;set windowCentered on;zoomto 2.0 300","select leu;wireframe off;spacefill off;select protein;cartoon;color structure;zoomto 0.5 100", "+/- Arg", false)
+                                    </script>                              
+                              
+                              </td>
+                              <TD bgcolor="#eeeeee">&nbsp;</TD>
+                            
+ </tr>
+  
+  </table>
+<!--
+
+
+
+
+
+
+
+<BR>
+
+
+
+<BR>
+
+
+
+
+View a schematic diagram of the <A HREF="#"onClick="showIt('ProtDNA.html',
+'ProtDNA', 'scrollbars=yes,resizable=yes,width=330,height=400')"><B>Eco RI-DNA
+interactions</B></A> in a pop-up window. The diagram is a useful complement to
+the Chime image and <I>vice versa.</I>
+
+<TABLE>
+<TR>
+<TD>
+<P>
+
+<P>
+</TD>
+</TR>
+<TR>
+   <TD COLSPAN="2" ALIGN="LEFT"> &nbsp; </TD></TR>
+<TR>
+   <TD COLSPAN="2" ALIGN="LEFT"><B>Overall Architecture of the EcoRI dimer complex with DNA.</B><BR>
+     
+The starting display shows the DNA as sticks with white backbone and green
+bases. The 5' and 3' ends are labeled. The subunits of the EcoRI homodimer are
+labeled at their C-termini. Note the kink in the DNA at the center of the
+structure. This localized, four base pair distortion widens the major groove,
+making it fully accessible to the Eco RI recognition regions.<BR>
+
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER=0 WIDTH=760 CELLPADDING=10 CELLSPACING=0>
+<TR>
+<TD>
+<B>Walk Down GAATTC</B>:<BR>
+Selecting each base (G<sub>5</sub>-C<sub>10</sub>) will add the base to the previously displayed base, with the phosphate oxygen labeled with the base number.
+<P>
+The protein residues that interact with the bases are shown in 'ball-and-stick'.  The sidechains are colored CPK if they interact with the selected base, or are colored light gray if they are interacting with a base that has already been selected.
+<P>Electrostatic or van der Waals interaction are highlighted with dotted surfaces.  Hydrogen bonds are shown as dotted lines with the inter-atomic distance labeled.
+
+<TR>
+<TD ALIGN="LEFT"> 
+The dimer shown here is the &quot;Biological functional unit&quot; derived from the monomer coordinates (1eri.pdb). Described in Kim, Y. <I>et al.</I> (1990) &quot;Refinement of Eco RI endonuclease crystal structure: A revised protein chain tracing&quot;<A HREF="http://www.ncbi.nlm.nih.gov/htbin-post/Entrez/query?uid=2399465&form=6&db=m&Dopt=b" TARGET="_parent"><I>Science</I> <B>249</B>, 1307</A>.
+<P>
+
+</TD></TR>
+</TABLE>
+</CENTER>
+<P>
+
+<P>
+<A HREF="../../index.html">Return to <B>Home Page</B></A>.
+</P>
+-->
+</BODY>
+</HTML>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p10">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (10 of 13)</title>
+        <objref idref="apply_concepts"/>
+    </head>
+    <body>
+        
+        <section>
+            <title>More
+                <?oxy_insert_start author="mmyers" timestamp="20101127T140014-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T140014-0500" content="a"?>bout
+                Hypothesis Testing</title>
+            <body>
+                <p>The issues regarding hypothesis testing that we will discuss are:</p>
+                <p>1. The effect of sample size on hypothesis testing.</p>
+                <p>2. Statistical significance vs. practical importance. (This will be discussed in
+                    the activity following
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T140157-0500"?>number
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T140156-0500" content="#"?>1<?oxy_insert_start author="mmyers" timestamp="20101127T140121-0500"?>.<?oxy_insert_end?>)</p>
+                <p>3. One-sided alternative vs. two-sided
+                    alternative<?oxy_insert_start author="mmyers" timestamp="20101127T140105-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T140101-0500" content=" - "?>understanding
+                    what is going on.</p>
+                <p>4. Hypothesis testing and confidence
+                    intervals<?oxy_insert_start author="mmyers" timestamp="20101127T140110-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T140108-0500" content=" - "?>how
+                    are they related?</p>
+                <p>Let's start.</p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>1. The
+                <?oxy_insert_start author="mmyers" timestamp="20101127T150108-0500"?>E<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150107-0500" content="e"?>ffect
+                of
+                <?oxy_delete author="mmyers" timestamp="20101127T150111-0500" content="the s"?><?oxy_insert_start author="mmyers" timestamp="20101127T150115-0500"?>S<?oxy_insert_end?>ample
+                <?oxy_insert_start author="mmyers" timestamp="20101127T150118-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150118-0500" content="s"?>ize
+                on
+                <?oxy_insert_start author="mmyers" timestamp="20101127T150122-0500"?>H<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150121-0500" content="h"?>ypothesis
+                <?oxy_insert_start author="mmyers" timestamp="20101127T150125-0500"?>T<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150124-0500" content="t"?>esting<?oxy_delete author="mmyers" timestamp="20101127T150127-0500" content="."?></title>
+            <body>
+                <p>We have already seen the effect that the sample size has
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T150256-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150256-0500" content="i"?>n
+                    inference, when we discussed point and interval estimation for the population
+                    mean
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T150307-0500"?>(<?oxy_insert_end?>μ<?oxy_insert_start author="mmyers" timestamp="20101127T150308-0500"?>)<?oxy_insert_end?>
+                    and population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T150312-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T150313-0500"?>)<?oxy_insert_end?>. Intuitively<?oxy_insert_start author="mmyers" timestamp="20101127T150319-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150320-0500" content="."?>...</p>
+                <p>Larger sample sizes give us more information to pin down the true nature of the
+                    population. We can therefore expect
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T150355-0500" comment="remove bold -- no emphasis needed"?>the
+                        <em>sample</em> mean and <em>sample</em> p<?oxy_comment_end?>roportion
+                    obtained from a larger sample to be closer to the population mean and
+                    proportion, respectively. As a result, for the same level of confidence, we can
+                    report a smaller margin of error, and get a narrower confidence interval. What
+                    we've seen, then, is that larger sample size gives a boost to how much we trust
+                    our sample results. In hypothesis
+                    testing<?oxy_insert_start author="mmyers" timestamp="20101127T150415-0500"?>,<?oxy_insert_end?>
+                    larger sample sizes have a similar effect. The following
+                    <?oxy_delete author="mmyers" timestamp="20101127T150434-0500" content="set of "?>two
+                    examples will illustrate that
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T150444-0500"?>a
+                    <?oxy_insert_end?>larger sample size provides more convincing evidence, and how
+                    the evidence manifests itself in hypothesis testing.
+                    <?oxy_delete author="mmyers" timestamp="20101127T150529-0500" content="To see this, l"?><?oxy_insert_start author="mmyers" timestamp="20101127T150531-0500"?>L<?oxy_insert_end?>et's
+                    go back to our example 2 (marijuana use at a certain liberal arts college).
+                    <?oxy_delete author="mmyers" timestamp="20101127T150505-0500" content="Recall."?></p>
+                <example>
+                    <title>2</title>
+                    <image style="block" src="../webcontent/image276.gif" alt="A large circle represents
+the population Students at the college. We want to know p about this population, or what is the
+population proportion of students using marijuana. The hypotheses are H_0: p = .157 and H_a: p
+&gt; .157 . We take a sample of 100 students, represented by a smaller circle. We find that 19
+use marijuana. p-hat = 19/100 = .19, z = .91, and p-value = .182 . Since the p-value is too large
+we conclude that H_0 cannot be rejected."/>
+                    <p>The data <em>do not</em> provide enough evidence that the proportion of
+                        marijuana users at the college is higher than the proportion among all U.S.
+                        college students, which is .157. So far, nothing new. Let's
+                        make<?oxy_delete author="mmyers" timestamp="20101127T150650-0500" content=" a"?>
+                        small
+                        change<?oxy_insert_start author="mmyers" timestamp="20101127T150654-0500"?>s<?oxy_insert_end?>
+                        to the problem (and call it example 2*). The changes are highlighted and the
+                        problem is followed by a new figure
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T150639-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150637-0500" content="which"?>
+                        reflects the changes.</p>
+                </example>
+                <example>
+                    <title>2*</title>
+                    <p>There are rumors that students in a certain liberal arts college are more
+                        inclined to use drugs than
+                        U<?oxy_insert_start author="mmyers" timestamp="20101127T150705-0500"?>.<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101127T150705-0500"?>.<?oxy_insert_end?>
+                        college students in general. Suppose that <em>in a simple random sample of
+                            400 students from the college, 76 admitted to marijuana use</em>. Do the
+                        data provide enough evidence to conclude that the proportion of marijuana
+                        users among the students in the college (p) is <em>higher</em> than the
+                        national
+                        proportion<?oxy_insert_start author="mmyers" timestamp="20101127T150724-0500"?>,<?oxy_insert_end?>
+                        which is .157? (reported by
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T150800-0500"?>the
+                        <?oxy_insert_end?>Harvard School of Public
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T150825-0500" comment="Please use subscripts for Ho and Ha in graphic below"?>Health).</p>
+                    <?oxy_comment_end?>
+                    <image style="block" src="../webcontent/image288.gif" alt="A large circle
+represents the population Students at the college. We want to know p about this population, or
+what is the population proportion of students using marijuana. The hypotheses are H_0: p = .157
+and H_a: p &gt; .157 . We take a sample of 400 students, represented by a smaller circle, and
+find that 76 use marijuana."/>
+                    <p>We now have a larger sample (400 instead of 100), and also we changed the
+                        number of marijuana users (76 instead of 19).</p>
+                    <p>Let's carry out the test in this case.</p>
+                    <p>
+                        <em>I.</em> The question of interest did not change, so we are testing the
+                        same hypotheses:</p>
+                    <p>
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T150929-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150926-0500" content="Ho"?>:
+                        p = .157</p>
+                    <p>
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T150933-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T150930-0500" content="Ha"?>:
+                        p &gt; .157</p>
+                    <p>
+                        <em>II.</em> We select a random sample of size <em>400</em> and find that 76
+                        are marijuana users.</p>
+                    <p> (Note that the data satisfy the conditions that allow us to use this test.
+                        Verify<?oxy_insert_start author="mmyers" timestamp="20101127T151004-0500"?>
+                        this
+                        yourself<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151008-0500" content="!"?>).</p>
+                    <p> Let's summarize the
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T151055-0500" comment="remove sterisks from before two equations below"?>data:<?oxy_comment_end?></p>
+                    <image style="block" src="../webcontent/image289.gif" alt="p-hat = 76/400 = .19"/>
+                    <p>This is the same sample proportion as in the original
+                        problem<?oxy_insert_start author="mmyers" timestamp="20101127T151104-0500"?>,
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151107-0500" content="..."?>so
+                        it seems that the data give us the same evidence, but when we calculate the
+                        test
+                        statistic<?oxy_insert_start author="mmyers" timestamp="20101127T151115-0500"?>,<?oxy_insert_end?>
+                        we see that actually this is not the case:</p>
+                    <image style="block" src="../webcontent/image290.gif" alt="z = (.19 - .157) /
+&radic;[( .157 (1 - .157) )/400 ] &asymp; 1.81"/>
+                    <p>Even though the sample proportion is the same (.19), since here it is based
+                        on a larger sample
+                        (400<?oxy_delete author="mmyers" timestamp="20101127T151129-0500" content=" in"?>
+                        instead of 100), it is 1.81 standard deviations above the null value
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T151146-0500"?>of
+                        <?oxy_insert_end?>.157 (as opposed to .91 standard deviations in the
+                        original problem).</p>
+                    <p>
+                        <em>III.</em> For the p-value, we use statistical software to find p-value =
+                        0.035.</p>
+                    <!-- 07/28/10 RS Generalized to eliminate alternatives
+    <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>
+<em>III.</em> For the p-value, we use Excel to find p-value = 0.035.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>
+<em>III.</em> For the p-value, let's look at the Minitab output for this test:</p>
+<image style="block" src="../webcontent/image406.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>
+            <em>III.</em> For the p-value, we use R to find p-value = 0.035.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                    <p>The p-value here is .035 (as
+                        oppose<?oxy_insert_start author="mmyers" timestamp="20101127T151215-0500"?>d<?oxy_insert_end?>
+                        to .182 in the original problem). In other words, when
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T151226-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151220-0500" content="Ho"?>
+                        is true (i.e. when p<?oxy_insert_start author="mmyers" timestamp="20101127T151231-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T151231-0500"?>
+                        <?oxy_insert_end?>.157) it is quite unlikely (probability of .035) to get a
+                        sample proportion of .19 or higher based on a sample of size 400
+                        (probability .035), and not very unlikely when the sample size is 100
+                        (probability .182).</p>
+                    <p>
+                        <em>IV.</em>
+                    </p>
+                    <p>Our results here are significant. In other words, in
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T151301-0500"?>example
+                        2*<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151258-0500" content="this case"?>
+                        the data provide enough evidence to reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T151315-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151312-0500" content="Ho"?>
+                        and conclude that the proportion of marijuana users at the college is higher
+                        than among all U.S. students.</p>
+                    <p>Let's summarize with a
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T151348-0500" comment="please replace Ho and Ha with subscripts"?>figure:<?oxy_comment_end?></p>
+                    <image style="block" src="../webcontent/image291.gif" alt="A large circle
+represents the population Students at the college. We want to know p about this population, or
+what is the population proportion of students using marijuana. The hypotheses are H_0: p = .157
+and H_a: p &gt; .157 . We take a sample of 400 students, represented by a smaller circle, and
+find that 76 use marijuana. Conditions are met to use our method, so p-hat = 76/400 = .19,
+z = 1.81, and p-value = .035 . The p-value is low enough to let us conclude that we can reject
+H_0."/>
+                </example>
+                <p>What do we learn from these two examples?</p>
+                <p>We see that sample results
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T151414-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151413-0500" content="which"?>
+                    are based on a larger sample carry more weight. </p>
+                <p>In example
+                    2<?oxy_insert_start author="mmyers" timestamp="20101127T151422-0500"?>,<?oxy_insert_end?>
+                    we saw that a sample proportion of .19 based on a sample of size
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T151428-0500"?>of
+                    <?oxy_insert_end?>100 was not enough evidence that the proportion of marijuana
+                    users in the college is higher than .157. Recall, from our general overview of
+                    hypothesis testing, that this conclusion (not having enough evidence to reject
+                    the null hypothesis) <em style="italic">doesn't</em> mean the null hypothesis is
+                    necessarily true (so, we never “accept” the null); it only means that the
+                    particular study didn’t yield sufficient evidence to reject the null. It <em
+                        style="italic">might</em> be that the sample size was simply too small to
+                    detect a statistically significant difference.</p>
+                <p>However, in example
+                    2*<?oxy_insert_start author="mmyers" timestamp="20101127T151551-0500"?>,<?oxy_insert_end?>
+                    we saw that when the sample proportion of .19 is obtained from a sample of size
+                    400, it carries much more weight, and in particular, provides enough evidence
+                    that the proportion of marijuana users in the college is higher than .157 (the
+                    national figure). In <em style="italic">this</em> case, the sample size of 400
+                        <em style="italic">was</em> large enough to detect a statistically
+                    significant difference.</p>
+                <p>The following activity will allow you to practice the ideas and terminology
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T151628-0500"?>used in
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151630-0500" content="regarding"?>
+                    hypothesis testing when a result
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T151641-0500"?>is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151640-0500" content="was"?>
+                    not statistically significant.</p>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p><?oxy_insert_start author="mmyers" timestamp="20101127T151708-0500"?><?oxy_comment_start author="mmyers" timestamp="20101127T151940-0500" comment="Unless a specific source is cited, a year given, and the administration named, I don&apos;t recommend keeping the wording as it was. I recommend adding the elements I just mentioned, or turning this into a &quot;fake&quot; scenario by adding &quot;Suppose,&quot; as I have done."?>Suppose
+                            that
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151711-0500" content="O"?><?oxy_insert_start author="mmyers" timestamp="20101127T151712-0500"?>o<?oxy_insert_end?>nly
+                            40%<?oxy_comment_end?> of the U.S. public supported the general
+                            direction of the previous U.S.
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T151720-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T151719-0500" content="A"?>dministration's
+                            policies. To gauge whether the nationwide proportion, p, of support for
+                            the <em style="italic">current</em> administration is higher than 40%, a
+                            major polling organization conducts a random poll to test the
+                            hypotheses: </p>
+                        <p>H<sub>o</sub>: p = .40 </p>
+                        <p>H<sub>a</sub>: p &gt; .40 </p>
+                        <p> The results are reported to be <em>not statistically significant</em>,
+                            with<?oxy_insert_start author="mmyers" timestamp="20101127T152016-0500"?> a<?oxy_insert_end?>
+                            <em>p-value of .214</em>. </p>
+                        <wb:inline idref="u4_m2_testprop10_tutor1" purpose="learnbydoing"/>
+                    </body>
+                </section>
+                <p><?oxy_comment_start author="mmyers" timestamp="20101127T152937-0500" comment="I recommend adding a subhead for issue 2 above this paragraph (as was done for issue 1), and removing the bold from that phrase below."?>Now,<?oxy_comment_end?>
+                    we will
+                    <?oxy_delete author="mmyers" timestamp="20101127T152713-0500" content="move on to practice"?><?oxy_insert_start author="mmyers" timestamp="20101127T152716-0500"?>address<?oxy_insert_end?>
+                    the issue of statistical significance versus practical importance (which also
+                    involves issues of sample size). </p>
+                <p>The following activity will let you explore the effect of the sample size on the
+                    significance of the results yourself, and more importantly will discuss issue
+                        <em><?oxy_delete author="mmyers" timestamp="20101127T152733-0500" content="#"?>2:
+                        Statistical significance vs. practical importance.</em>
+                </p>
+                <activity idref="_u5_m1_lbd10" purpose="learnbydoing"/>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

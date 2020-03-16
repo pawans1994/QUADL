@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+  xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+  id="histogram1">
+  <head>
+    <title>Histogram (1 of 3)</title>
+    <objref idref="interpret_graphical_displays"/>
+  </head>
+  <body>
+
+    <section>
+      <title>Idea</title>
+      <body>
+        <p>Break the range of values into intervals and count how many observations fall into each
+          interval.</p>
+        <example>
+          <title>Exam Grades</title>
+          <p>Here are the exam grades of 15 students: <formula style="block">88, 48, 60, 51, 57, 85,
+              69, 75, 97, 72, 71, 79, 65, 63, 73</formula>
+          </p>
+          <p>We first need to break the range of values into intervals (also called "bins" or
+            "classes"). In this case, since our dataset consists of exam scores, it will make sense
+            to choose intervals that typically correspond to the range of a letter grade, 10 points
+            wide: 40–50, 50–60, ... 90–100. By counting how many of the 15 observations fall in each
+            of the intervals, we get the following table:</p>
+          <table>
+            <title>Exam Grades</title>
+            <tr>
+              <th>Score</th>
+              <th>Count</th>
+            </tr>
+            <tr>
+              <td>[40–50)</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>[50–60)</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>[60–70)</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>[70–80)</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>[80–90)</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>[90–100]</td>
+              <td>1</td>
+            </tr>
+          </table>
+
+          <p>Note: The observation 60 was counted in the 60–70 interval. See comment 1 below.</p>
+          <p>To construct the histogram from this table we plot the intervals on the X-axis, and
+            show the number of observations in each interval (frequency of the interval) on the
+            Y-axis, which is represented by the height of a rectangle located above the interval: <!-- removed for the plotly iframe below   <image style="block"
+                                                  src="../webcontent/histogram1.gif"
+                                                  alt="A histogram of the
+exam grade data."/>-->
+            <iframe src="https://plot.ly/~OLI_Stanford/64.embed?link=false" height="600" width="800"> </iframe>
+          
+            <p>The table above can also be turned into a relative frequency table using the
+              following steps:</p>
+            <ol style="decimal">
+              <li>Add a row on the bottom and include the total number of observations in the
+                dataset that are represented in the table.</li>
+              <li>Add a column, at the end of the table, and calculate the relative frequency for
+                each interval, by dividing the number of observations in each row by the total
+                number of observations.</li>
+            </ol>
+            <p>These two steps are illustrated in red in the following frequency distribution
+              table:</p>
+            <image src="../webcontent/feq_table.png" width="750"/>
+            <p>It is also possible to determine the number of scores for an interval, if you have
+              the total number of observations and the relative frequency for that interval. For
+              instance, suppose there are 15 scores (or observations) in a set of data and the
+              relative frequency for an interval is .13. To determine the number of scores in that
+              interval, multiplying the total number of observations by the relative frequency and
+              round up to the next whole number: 15*.13 = 1.95, which rounds up to 2
+              observations.</p>
+            <p>A relative frequency table, like the one above, can be used to determine the
+              frequency of scores occurring at or across intervals. Here are some examples, using
+              the above frequency table:</p>
+            <ol style="decimal">
+              <li>What is the percentage of exam scores that were 70 and up to, but not including,
+                80? To determine the answer, we look at the relative frequency associated with the
+                [70-80) interval. The relative frequency is .33; to convert to percentage, multiply
+                by 100 (.33*100= 33) or 33%.</li>
+              <li>What is the percentage of exam scores that are at least 70? To determine the
+                answer, we need to: <ul>
+                  <li>Add together the relative frequencies for the intervals that have scores of at
+                    least 70 or above. Thus, would need to add together the relative frequencies
+                    from [70-80), [80-90), and [90-100] = .33+.13+.07 = .53.</li>
+                  <li>To get the percentage, need to multiple the calculated relative frequency by
+                    100. In this case, it would be .53*100 = 53 or 53%.</li>
+                </ul></li>
+            </ol>
+          </p>
+        </example>
+        <section purpose="learnbydoing">
+          <title/>
+          <body>
+            <p>Here is the table from above, use it to answer the question.</p>
+            <table>
+              <title>Exam Grades</title>
+              <tr>
+                <th>Score</th>
+                <th>Count</th>
+              </tr>
+              <tr>
+                <td>[40–50)</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>[50–60)</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>[60–70)</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>[70–80)</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>[80–90)</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>[90–100]</td>
+                <td>1</td>
+              </tr>
+            </table>
+            <wb:inline idref="u1_m1_histogram1_tutor1" purpose="learnbydoing"/>
+          </body>
+        </section>
+
+      </body>
+    </section>
+    <section>
+      <title>Comments</title>
+      <body>
+        <ol>
+          <li>
+            <p>It is very important that each observation be counted only in one interval. For the
+              most part, it is clear which interval an observation falls in. However, in our
+              example, we needed to decide whether to include 60 in the interval 50–60, or the
+              interval 60–70, and we chose to count it in the latter. In fact, this decision is
+              captured by the way we wrote the intervals. If you scroll up and look at the table,
+              you'll see that we wrote the intervals in a peculiar way: [40–50), [50,60), [60,70),
+              and so on. The square bracket means "including," and the parenthesis means "not
+              including." For example, [50,60) is the interval from 50 to 60, including 50 and not
+              including 60; [60,70) is the interval from 60 to 70, including 60, and not including
+              70. It does not matter how you decide to set up your intervals as long as you're
+              consistent. </p>
+          </li>
+          <li>
+            <p>When data are displayed in a histogram, some information is lost. Note that by
+              looking at the histogram we <em style="italic">can</em> answer: "How many students
+              scored 70 or above?" (5 + 2 + 1 = 8) But we <em style="italic">cannot</em> answer:
+              "What was the lowest score?" All we can say is that the lowest score is somewhere
+              between 40 and 50, and therefore we can approximate that it is around 45.</p>
+          </li>
+          <li>
+            <p>Obviously, we could have chosen to break the data into intervals differently (for
+              example, 45–50, 50–55, 55–60).</p>
+            <p>To see how our choice of bins or intervals affects the histogram, you can use the
+              html activity below that lets you change the intervals dynamically. Try changing the
+              bin width by dragging the slider underneath the bin width scale.</p>
+            <iframe
+              src="../../../webcontent/html_activities/histogram_of_grades/histogram_of_grades.html"
+              height="800" width="800" id="_i_2"/>
+            <!--  <applet
+                                                  codebase="http://www.stat.sc.edu/~west/javahtml/classes"
+                                                  code="Histogram.class" width="500" height="500"
+                                                  logging="true">
+                                                  <param name="title">Histogram</param>
+                                                  <param name="data">88.0 60.0 51.0 57.0 85.0 69.0
+                                                  75.0 97.0 72.0 71.0 79.0 65.0 63.0 73.0
+                                                  47.4</param>
+                                                </applet>-->
+          </li>
+        </ol>
+      </body>
+    </section>
+    <activity idref="histogram1wonder" purpose="manystudentswonder"/>
+    <!--<activity idref="histogram1selfassess" purpose="didigetthis"/>-->
+    <wb:inline idref="u1_m1_histogram1_tutor2" purpose="didigetthis"/>
+
+    <!--   <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If
+                        not, then click the link below for some additional practice.</p>
+                <activity idref="histogram1selfassess_02" purpose="didigetthis"/> -->
+    <wb:inline idref="u1_m1_histogram1_digt_tutor1" purpose="didigetthis"/>
+    <wb:inline idref="u1_m1_histogram1_digt_tutor2" purpose="didigetthis"/>
+  </body>
+</workbook_page>

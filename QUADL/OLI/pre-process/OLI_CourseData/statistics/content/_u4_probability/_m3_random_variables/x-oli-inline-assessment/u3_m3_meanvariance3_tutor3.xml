@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance3_tutor3">
+   <title>Tutor</title>
+ <page>  
+   <question id="q1">
+   
+         <body>
+            <p>The insurance company gets information about gas leakage in several houses that use
+               the same gas provider that your customer does. In light of this new information, the
+               probabilities of total loss and 50% damage (that were originally .002 and .008,
+               respectively) are tripled (to .006 for total loss and .024 for 50% damage).
+               Obviously, this change in the probabilities should be reflected in the annual
+               premium, to account for the added risk that the insurance company is taking. What
+               should be the new annual premium (instead of
+               $1<?oxy_insert_start author="mmyers" timestamp="20101121T150116-0500"?>,<?oxy_insert_end?>350),
+               if the company wants to keep its expected gain of $750?</p>
+            <p>Guidance: Let the new premium (instead of
+               1<?oxy_insert_start author="mmyers" timestamp="20101121T150229-0500"?>,<?oxy_insert_end?>350)
+               be denoted by N, for new. Set up the new probability distribution of X using the
+               updated probabilities, and using N instead of
+               1<?oxy_insert_start author="mmyers" timestamp="20101121T150240-0500"?>,<?oxy_insert_end?>350.
+               (The answer to question 1 will help.)</p>
+            <p>The question now is: What should
+               <?oxy_delete author="mmyers" timestamp="20101121T150248-0500" content="be "?>the
+               value of N (the new
+               premium)<?oxy_insert_start author="mmyers" timestamp="20101121T150255-0500"?>
+               be<?oxy_insert_end?>, if we want the mean of X
+               <?oxy_delete author="mmyers" timestamp="20101121T150305-0500" content="still "?>to
+               <?oxy_delete author="mmyers" timestamp="20101121T150310-0500" content="be"?><?oxy_insert_start author="mmyers" timestamp="20101121T150311-0500"?>remain<?oxy_insert_end?>
+               750?</p>
+            
+            <p>Set up an equation with N as unknown, and solve for N. </p>
+         </body>
+         <short_answer id="A"/>
+         <part>
+            <response input="A" match="*" score="1"/>
+            <explanation>
+               <p>Here is the new probability distribution of X:</p>
+               <image src="../../webcontent/flash/_u4_m3_lbdtutor3c_image1.jpg"/>
+               <p>Note that we updated the probabilities of total loss and 50% damage by tripling
+                  them, and the probability of no fire has changed to 1 - .006 - .024 = .97. The
+                  company wants to keep the same annual gain from the policy ($750), and the
+                  question
+                  is<?oxy_insert_start author="mmyers" timestamp="20101121T150413-0500"?>,<?oxy_insert_end?>
+                  what should
+                  <?oxy_delete author="mmyers" timestamp="20101121T150416-0500" content="be "?>the
+                  new premium
+                  <?oxy_insert_start author="mmyers" timestamp="20101121T150421-0500"?>(<?oxy_insert_end?>N<?oxy_insert_start author="mmyers" timestamp="20101121T150423-0500"?>)
+                  be<?oxy_insert_end?> that will satisfy this? In other words, we need to solve the
+                  following equation for N:</p>
+               <p>750 = (N -
+                  100<?oxy_insert_start author="mmyers" timestamp="20101121T150450-0500"?>,<?oxy_insert_end?>000)(.006)
+                  + (N -
+                  50<?oxy_insert_start author="mmyers" timestamp="20101121T150452-0500"?>,<?oxy_insert_end?>000)(.024)
+                  + N(.97)</p>
+               <p>Thus, 750 = N - 600 -
+                  1<?oxy_insert_start author="mmyers" timestamp="20101121T150459-0500"?>,<?oxy_insert_end?>200<?oxy_insert_start author="mmyers" timestamp="20101121T150508-0500"?>,<?oxy_insert_end?>
+                  or N -
+                  1<?oxy_insert_start author="mmyers" timestamp="20101121T150522-0500"?>,<?oxy_insert_end?>800.</p>
+               <p>And therefore, N = 750 +
+                  1<?oxy_insert_start author="mmyers" timestamp="20101121T150525-0500"?>,<?oxy_insert_end?>800
+                  =
+                  2<?oxy_insert_start author="mmyers" timestamp="20101121T150527-0500"?>,<?oxy_insert_end?>550.</p>
+               <p>In order to account for the added risk that the insurance company is taking by
+                  continuing to insure the
+                  customer<?oxy_insert_start author="mmyers" timestamp="20101121T150536-0500"?>,<?oxy_insert_end?>
+                  the premium changes from
+                  $1<?oxy_insert_start author="mmyers" timestamp="20101121T150541-0500"?>,<?oxy_insert_end?>350
+                  to
+                  <?oxy_comment_start author="mmyers" timestamp="20101121T151008-0500" comment="Here&apos;s the real question: Why isn&apos;t the difference in premiums being charged to the gas company that has failed to maintain the lines rather than to the customer?  
+
+I suppose that issue belongs in a different course -- civics? ethics?  :)"?>$2<?oxy_insert_start author="mmyers" timestamp="20101121T150543-0500"?>,<?oxy_insert_end?>550.<?oxy_comment_end?></p>
+            </explanation>
+         </part>
+      </question>
+      
+   </page>
+</assessment>

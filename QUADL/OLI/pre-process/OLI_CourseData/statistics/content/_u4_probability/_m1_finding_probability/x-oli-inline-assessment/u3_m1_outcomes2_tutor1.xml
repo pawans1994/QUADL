@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u3_m1_outcomes2_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>The probability that the selection will appear to be discriminatory is therefore:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">P(D) = 1</choice>
+         <choice value="Res2">P(D) = 4/6</choice>
+         <choice value="Res3">P(D) = 6/10</choice>
+         <choice value="Res4">P(D) = 4/10</choice>
+         <choice value="Res5">P(D) = 0</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P(D) = 1 means that the random selection will choose
+               two candidates of the same gender for certain. This is not the case here. There are
+               many possible outcomes that
+               <?oxy_delete author="mmyers" timestamp="20101108T101105-0500" content="are not of this type"?><?oxy_insert_start author="mmyers" timestamp="20101108T101109-0500"?>do
+               not satisfy event D<?oxy_insert_end?>.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Rethink your denominator (6).  The hint might be helpful in guiding your thinking.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Rethink your numerator (6).  The hint might be helpful in guiding your thinking.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101108T101202-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T101201-0500" content="J"?>ob!
+               Since all the possible outcomes are equally likely, P(D) = (number of outcomes in D)
+               / (number of outcomes in S) = 4/10.</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. P(D) = 0 means that
+               <?oxy_delete author="mmyers" timestamp="20101108T101223-0500" content="the "?>random
+               selection will never
+               <?oxy_insert_start author="mmyers" timestamp="20101108T101227-0500"?>result
+               in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T101229-0500" content="choose"?>
+               two candidates of the same gender. This is not the case here. There are some possible
+               outcomes that
+               <?oxy_insert_start author="mmyers" timestamp="20101108T101245-0500"?>satisfy event
+               D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T101242-0500" content="are of this type"?>.</feedback>
+         </response>
+         <hint>Since the two were chosen at random, all the possible outcomes are equally likely, and therefore: P(D) =  (number of outcomes in D) / (number of outcomes in S).</hint>
+      </part>
+   </question>
+</assessment>

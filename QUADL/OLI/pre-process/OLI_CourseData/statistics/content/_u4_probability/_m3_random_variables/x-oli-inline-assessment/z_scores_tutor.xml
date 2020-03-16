@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="z_scores_tutor">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:Computing z-score-->
+            <body>
+                <p>The hourly salary rate for accountants at the “We are the Best Accounting Firm”
+                    follow a normal distribution, with a mean of $27 and a standard deviation of
+                    $4.</p>
+                <p>Tom earns $22.50 an hour. His z score is:</p>
+            </body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">22.50</choice>
+                <choice value="B">-1.125</choice>
+                <choice value="C">-4.50</choice>
+                <choice value="D">1.125</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. 22.50 is Tom’s raw score, or the actual
+                        amount he earns, per hour. Recall that the z-score of a normal value is
+                        (value - mean) / standard deviation. Please try again.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. Indeed, Tom's z-score = (22.50-27)/4 = -1.125</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems like you started well by calculating
+                        the difference (value - mean) = 22.50 - 27 = 4.50. Recall however that
+                        z-score is calculated: (value - mean) / standard deviation.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It seems like your mistake is that you
+                        calculated: (mean - value) / standard deviation. You switched "mean" and
+                        "value." Note that z-scores are calculated: (value - mean) / standard
+                        deviation. Please try again.</feedback>
+                </response>
+                <hint>You are trying to calculate the z score.</hint>
+                <hint>A z score is calculated by using the hourly rate of the “We are the Best
+                    Accounting Firm” and Tom’s hourly rate.</hint>
+            </part>
+        </question>
+       
+    </page>
+</assessment>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<workbook_page xmlns:bib="http://bibtexml.sf.net/" xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:theme="http://oli.web.cmu.edu/presentation/" xmlns:wb="http://oli.web.cmu.edu/activity/workbook/" id="_u5_m02_anova2">
+	<head>
+		<title>ANOVA (2 of 7)</title>
+		<objref idref="specify_hypotheses_for_groups" />
+	</head>
+	<body>
+		<section>
+			<title>The ANOVA F-test</title>
+			<body>
+				<p id="e588d3a3740e41e7bcf0bee1078f9765">Now that we understand in what kind of situations ANOVA is used, we are ready to learn how it works, or more specifically, what the idea is behind comparing more than two means. As we mentioned earlier, the test that we will present is called the ANOVA F-test, and as you&apos;ll see, this test is different in two ways from all the tests we have presented so far:</p>
+				<ul id="iee8265a716554fbaa269471fce492138">
+					<li>
+						<p id="ab132540fef794b9ba7315571e5918b76">Unlike the previous tests, where we had three possible alternative hypotheses to choose from (depending on the context of the problem), in the ANOVA F-test there is only one alternative, which actually makes life simpler.</p>
+					</li>
+					<li>
+						<p id="f5d5269f0a044f3c9d08cd293ca15912">The test statistic will not have the same structure as the test statistics we&apos;ve seen so far. In other words, it will not have the form: <m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:mfrac><m:mrow><m:mi mathvariant="italic">sample</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">statistic</m:mi><m:mo>−</m:mo><m:mi mathvariant="italic">null</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">value</m:mi></m:mrow><m:mrow><m:mi mathvariant="italic">standard</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">error</m:mi></m:mrow></m:mfrac></m:mrow></m:math>, but a different structure that captures the essence of the F-test, and clarifies where the name &quot;analysis of variance&quot; is coming from.</p>
+					</li>
+				</ul>
+				<p id="dd9d526bf4de460e8dde3b1682b078b1">Let&apos;s start.</p>
+				<p id="ea15f8fcd2544142af877660fcb5d1d3"> </p>
+			</body>
+		</section>
+		<section>
+			<title>Step 1: Stating the Hypotheses</title>
+			<body>
+				<p id="c6394fcbfee64ec79072d28975df70d6">The null hypothesis claims that there is no relationship between X and Y. Since the relationship is examined by comparing<m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math>, the means of Y in the populations defined by the values of X, no relationship would mean that all the means are equal. Therefore the null hypothesis of the F-test is: <m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mrow><m:msub><m:mi>H</m:mi><m:mn>0</m:mn></m:msub><m:mo>:</m:mo><m:mi mathvariant="normal">μ</m:mi></m:mrow><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math></p>
+				<p id="e386f5f0610646e3907aa7dc97993216">
+					As we mentioned earlier, here we have just one alternative hypothesis, which claims that there
+					<em style="italic">is</em>
+					a relationship between X and Y. In terms of the means <m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>.</m:mo><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mi>k</m:mi></m:msub></m:mrow></m:math>, it simply says the opposite of the alternative, that not all the means are equal, and we simply write:<m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi>H</m:mi><m:mi>a</m:mi></m:msub><m:mo>:</m:mo><m:mi mathvariant="italic">not</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">all</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">the</m:mi><m:mtext> </m:mtext><m:mi mathvariant="normal">μ</m:mi><m:mo lspace="0px" form="infix">'</m:mo><m:mi>s</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">are</m:mi><m:mtext> </m:mtext><m:mi mathvariant="italic">equal</m:mi></m:mrow></m:math>.
+				</p>
+				<example>
+					<title>Title</title>
+					<p id="fd758b1fb6b14c2ca92fe8fbb066dac8">Recall our &quot;Is academic frustration related to major?&quot; example:</p>
+					<image id="f7d3ce8dc64646fd8c2c7709d5263688" src="../webcontent/image100.gif" alt="The X variable is major, and it has four categories, which are Business, English, Mathematics, and Psychology. We have four populations, one for each of these categories. We are interested in the level of frustration (Y) mean for each population, so we have 4 μ, one for each population. For each population we take a sample of size 35, resulting in 4 separate samples." style="block" vertical-align="middle">
+						<caption />
+						<popout enable="false" />
+					</image>
+					<wb:inline idref="u4_m3_anova2_tutor1" purpose="learnbydoing" />
+					<p id="e97ab6ab882343d19f4861306339d7e0">The correct hypotheses for our example are:</p>
+					<image id="f77a35600bfb45e78e8fc1d4eccc3a7a" src="../webcontent/image101.gif" alt="H_0: μ_1 = μ_2 = μ_3 = μ_4, H_a: not all the μ&apos;s are equal" style="block" vertical-align="middle">
+						<caption />
+						<popout enable="false" />
+					</image>
+					<p id="bca8486bd7cf4c2b8f67ced696e983d5">Note that there are many ways for <m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>,</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> not to be all equal, and<m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>is just one of them. Another way could be<m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math> or<m:math xmlns:m="http://www.w3.org/1998/Math/MathML" overflow="scroll"><m:mrow><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>1</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>2</m:mn></m:msub><m:mo>≠</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>3</m:mn></m:msub><m:mo>=</m:mo><m:msub><m:mi mathvariant="normal">μ</m:mi><m:mn>4</m:mn></m:msub></m:mrow></m:math>. The alternative of the ANOVA F-test simply states that not all of the means are equal, and is not specific about the way in which they are different.</p>
+				</example>
+				<p id="f6694e792edf4057aa90e7bd1393da25">Before we move on to the next step (checking conditions and summarizing the data with a test statistic), we will present the idea behind the ANOVA F-test using our example.</p>
+				<p id="f77a8f47409d4dd9864c61a3468ff4eb"> </p>
+			</body>
+		</section>
+	</body>
+</workbook_page>

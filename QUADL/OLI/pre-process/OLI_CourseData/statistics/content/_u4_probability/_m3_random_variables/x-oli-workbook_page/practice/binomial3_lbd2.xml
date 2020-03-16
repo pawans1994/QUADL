@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="binomial3_lbd2">
+    <head>
+        <title>An Application of the Binomial Random Variable</title>
+
+    </head>
+    <body>
+        <section>
+            <title>Purpose</title>
+            <body>
+                <p>The purpose of this activity is to gain experience making probabilistic decisions
+                    using binomial random variables. </p>
+            </body>
+        </section>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>In vitro fertilization is becoming more and more common these days. Suppose each
+                    embryo that is implanted has a 20% chance of resulting in a pregnancy that
+                    results in delivering a baby. Also, assume that each embryo's chance of
+                    surviving and resulting in a baby is independent of the others.</p>
+                <p>It is an expensive procedure, so we want to do it only once. We wish to try to
+                    find the optimum number of embryos to implant so that the probability of at
+                    least 1 child being born is high, but the probability of more than 2 children
+                    being born is low. In other words, we want a baby, and we're willing to have
+                    twins, but we don't want triplets, quadruplets, etc.</p>
+                <p>Note that unlike the airline flight example, where we needed to control only one
+                    probability, in this case there are two probabilities that we wish to
+                    control.</p>
+            </body>
+        </section>
+
+        <wb:inline idref="u3_m3_binomial3_lbd2_tutor1" purpose="learnbydoing"/>
+
+        <p>We will let X represent the number of implanted embryos resulting in a baby. It is a
+            binomial random variable with n = number of implanted embryos and p = .20 (the
+            probability that an implanted embryo results in a baby). </p>
+        <p> It is customary to implant between n = 1 and n = 7 embryos. We have provided a table
+            that contains the two probabilities mentioned in the previous question, for values of n
+            ranging from 1 to 7.</p>
+        <table>
+            <tr>
+                <th># embryos</th>
+                <th>P(X ≥ 1)</th>
+                <th>P(X > 2)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>.20</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>.36</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>.488</td>
+                <td>.008</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>.590</td>
+                <td>.027</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>.672</td>
+                <td>.058</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>.738</td>
+                <td>.099</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>.790</td>
+                <td>.148</td>
+            </tr>
+        </table>
+        <wb:inline idref="u3_m3_binomial3_lbd2_tutor2" purpose="learnbydoing"/>
+
+    </body>
+</workbook_page>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <item ident="stats_item" title="Put title here">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">Among the children who were exposed to no light at all, what percentage developed nearsightedness?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">90.12</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">28.60</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">9.88</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">45.33</mattext></material></response_label>
+</render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+
+</resprocessing>
+<itemfeedback ident="hint">
+<hint>
+<hintmaterial>
+	<material>
+            <mattext texttype="text/plain">Look at the &lt;a href="javascript:loadImage('../../../webcontent/flash/images/practice_caseii2q2flash1.gif')"&gt;&lt;font color="#CC6666"&gt;&lt;u&gt;table of conditional percentages&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;.</mattext></material>
+    </hintmaterial>
+        </hint>
+</itemfeedback>
+<itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Use the hint and try again.</mattext>
+</material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Use the hint and try again.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Correct.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Use the hint and try again.</mattext></material></itemfeedback>
+ </item>

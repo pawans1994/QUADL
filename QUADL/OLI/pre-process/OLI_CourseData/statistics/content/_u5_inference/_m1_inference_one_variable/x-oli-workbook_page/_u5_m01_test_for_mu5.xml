@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_mu5">
+    <head>
+        <title>Hypothesis Testing for the Population Mean (5 of <!--9-->9)</title>
+        <objref idref="apply_concepts"/>
+    </head>
+<body>
+    
+        <section>
+            <title>Relating Hypothesis Tests and Confidence Intervals</title>
+            <body>
+                <p>Just as we did for proportions, we may examine a confidence interval to decide
+                    whether a proposed value of the population mean is plausible. </p>
+                <p>Suppose we want to test <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>=</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> vs. <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>≠</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> using a significance level of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi mathvariant="normal">α</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mn>05</m:mn>
+                        </m:mrow>
+                    </m:math>. An alternative way to perform this test is to find a 95% confidence
+                    interval for μ and make the following conclusions:</p>
+                <p>If <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> falls outside the confidence interval, reject H<sub>o</sub>.</p>
+                <p>If <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> falls inside the confidence interval, do not reject H<sub>o</sub>.</p>
+                <example>
+                    <p>We'll use example 2, in which the alternative was two-sided.</p>
+                    <p>Recall that we want to check whether a medication conforms to a target
+                        concentration of a chemical ingredient by testing</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>H</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                                <m:mo>:</m:mo>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>250</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>H</m:mi>
+                                    <m:mi>a</m:mi>
+                                </m:msub>
+                                <m:mo>:</m:mo>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mo>≠</m:mo>
+                                <m:mn>250</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <p>We assume that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>12</m:mn>
+                            </m:mrow>
+                        </m:math>, and in a sample of size n = 100 we obtained a sample mean of
+                            <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>247</m:mn>
+                            </m:mrow>
+                        </m:math>.</p>
+                    <p>A 95% confidence interval for μ is <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mfrac>
+                                    <m:mi mathvariant="normal">σ</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mn>247</m:mn>
+                                <m:mo>±</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mfrac>
+                                    <m:mn>12</m:mn>
+                                    <m:msqrt>
+                                        <m:mn>100</m:mn>
+                                    </m:msqrt>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mn>247</m:mn>
+                                <m:mo>±</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>4</m:mn>
+                                <m:mo>=</m:mo>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>244</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>6</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>249</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>4</m:mn>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                        </m:math>. </p>
+                    <p>Since the interval does not contain 250, we reject H<sub>o</sub> and conclude
+                        that the alternative is true: the population mean concentration differs from
+                        250. </p>
+                    <image style="block" src="../webcontent/image354.gif" alt="A number line showing
+the 95% confidence interval, which is (244.6, 249.4). 250 is also marked on the number line, and it
+isn't within the interval, so we can be confident that &mu; isn't 250. In other words, we can reject
+the hypothesis H_0:&mu; = 250"/>
+                </example>
+            </body>
+        </section>
+                <!--<activity type="x-oli-workbook_page" idref="_u5_m1_dig11" objective="selfassess" /> -->
+                <!--<activity idref="_u5_m1_dig18" purpose="didigetthis"/>-->
+                <section purpose="didigetthis">
+                    <title>Did I Get This?</title>
+                    <body>
+                        <p>One of the following is an actual Minitab output; the others were edited
+                    to be
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T224942-0500" comment="The items below are called A, B and C in the question. Please add labels here."?>incorrect.<?oxy_comment_end?></p>
+                        
+                        <image src="../webcontent/image392.gif" alt="Output: One-Sample Z: Test of mu=264
+vs not = 264
+                    The assumed standard deviation = 16
+                    N: 35
+                    Mean: 260.000
+                    SE Mean: 2.704
+                    95% CI: (254.699, 265.301)
+                    Z: -2.22
+                    P: 0.047"/>
+                        
+                        <image src="../webcontent/image393.gif" alt="Output: One-Sample Z: Test of mu=267
+vs not = 267
+                        The assumed standard deviation = 16
+                        N: 35
+                        Mean: 260.000
+                        SE Mean: 2.704
+                        95% CI: (254.699, 265.301)
+                        Z: -2.22
+                        P: 0.087"/>
+                        
+                        <image src="../webcontent/image394.gif" alt="Output: One-Sample Z: Test of mu=266
+vs not = 266
+                        The assumed standard deviation = 16
+                        N: 35
+                        Mean: 260.000
+                        SE Mean: 2.704
+                        95% CI: (254.699, 265.301)
+                        Z: -2.22
+                        P: 0.027"/>
+                        <wb:inline idref="u4_m2_testmean5_tutor1" purpose="didigetthis"/>
+                        <p><em>Did You Get It?</em> If so, then go ahead and move on. If not, then
+                    click the link below for some additional practice.</p>
+                        <activity idref="_u5_m1_dig18_02" purpose="didigetthis"/>
+                    </body>
+                </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Beyond using the confidence interval as a quick way to carry out the two-sided
+                    test, the confidence interval can provide insight into the actual value of the
+                    population mean if H<sub>o</sub> is rejected. In the concentration level
+                    example, H<sub>o</sub> was rejected, and all we could conclude about the mean
+                    concentration level of the entire shipment, μ, was that it was not 250. The 95%
+                    confidence interval for μ (244.6, 249.4) gives us an idea of what plausible
+                    values for μ would be. In particular, we can conclude that since the confidence
+                    interval lies below 250, at least a large portion of the shipment contains
+                    medication that is ineffective.</p>
+                <!--<alternatives group="statistics.package">
+                    <default><pref:value preference="statistics.package"/></default>
+                    <alternative value="excel">
+                        <title>Excel 2007 Instructions</title>
+                        <p>
+                            <!-\- nothing here -\->
+                        </p>
+                    </alternative>
+                    <alternative value="minitab">
+                        <title>Minitab Instructions</title>
+                        <p>The Minitab output of the test in this case provides this confidence
+                            interval for us:</p>
+                        <image style="block" src="../webcontent/image410.gif"/>
+                        <p>Note that Minitab provides the 95% confidence interval for μ only when
+                            the alternative is two-sided, which it is in this example. Therefore, if
+                            Ho is rejected in one of the one-sided cases, in order to get the 95%
+                            confidence interval you can either do it by hand (since the formula is
+                            quite simple) or carry out the test again, this time changing the
+                            alternative to the two-sided one, and retrieve the confidence interval
+                            from the output you get.</p>
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2007 Instructions</title>
+                        <p/>
+                    </alternative>
+                    <alternative value="r">
+                        <title>R Instructions</title>
+                        <p/>
+                    </alternative>
+                <alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                <activity idref="_u5_m1_lbd14" purpose="learnbydoing"/>
+                <p><em>Do you feel that you understand this concept?</em> If so, then go ahead and
+                    move on. If not, then click the link below for some additional practice.</p>
+                <activity idref="_u5_m1_lbd14_02" purpose="learnbydoing"/>
+                <p>We are done
+                    with the case where the population standard deviation, σ, is known. We
+                    now move on to the more common case where σ is unknown.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_discrete_probability_dist3">
+<head>
+<title>Probability Distribution (3 of 5)</title>
+    <objref idref="find_probability_distribution_discrete_random"/>
+</head>
+<body>
+    
+<p>In the previous two examples and activity, we needed to specify the probability distributions ourselves, based on the physical circumstances of the situation. In some situations, as in the following example, the probability distribution may be specified with an algebraic formula. Such a formula must be consistent with the constraints imposed by the laws of probability, so that the probability of each outcome must be between 0 and 1, and the probabilities of all possible outcomes together must sum to 1.</p>
+<example><title>Formulas to Define Random Variables</title>
+
+<p>A random variable X has <?oxy_insert_start author="mmyers" timestamp="20101121T101119-0500"?>a
+                <?oxy_insert_end?>probability
+                distribution<?oxy_insert_start author="mmyers" timestamp="20101121T101121-0500"?>
+                of<?oxy_insert_end?></p>
+<p>
+                <em>P(X = x) =
+                    <?oxy_comment_start author="mmyers" timestamp="20101121T101108-0500" comment="Where are these numbers coming from? If these are just &quot;given&quot; values, that should be stated more clearly (say, &quot;Assume that a random variable X has a  probability distribution of ...&quot; 
+
+But if the students are supposed to understand why the formula (x + 2) / 25 works fr variables with 5 values, I think more explanation is needed."?>(x
+                    + 2) / 25 for x = 1, 2, 3, 4, 5.<?oxy_comment_end?></em>
+            </p>
+<p>Show the probability distribution in a table, and verify that the above requirements are satisfied.</p>
+<p>Substituting x = 1, 2, 3, 4, and 5, respectively, into the formula for P(X = x), we have</p>
+<image style="block" src="../webcontent/image010.gif" alt="A two row probability distribution
+table, in which the rows are labeled &quot;X&quot; and &quot;P(X=x).&quot; Data is given in column
+oriented format (X: P(X=x)):
+        1: 3/25;
+        2: 4/25;
+        3: 5/25;
+        4: 6/25;
+        5: 7/25;"/>
+<p>Clearly, each probability is between 0 and 1. Also, the probabilities sum to (3 + 4 + 5 + 6 + 7) / 25 = 25/25 = 1.</p>
+</example>
+<!--<activity idref="_u4_m3_dig2" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_discreteprobdist3_tutor1" purpose="didigetthis"/>
+    
+    <section>
+        <title>Probability Histograms</title>
+        <body>
+            <p>We learned to display the distribution of sample values for a quantitative variable
+                    with a histogram<?oxy_delete author="mmyers" timestamp="20101121T101330-0500" content=","?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101343-0500"?>in which
+                    the<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101346-0500" content="whose"?>
+                    horizontal axis
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101358-0500"?>represented<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101402-0500" content="accounted for"?>
+                    the range of values in the sample. The vertical axis represented the frequency
+                    or relative frequency (sometimes given as a percentage) of sample values
+                    occurring in that interval. So the width of each rectangle in the histogram was
+                    an
+                    interval<?oxy_insert_start author="mmyers" timestamp="20101121T101420-0500"?>,<?oxy_insert_end?>
+                    or part of the possible values for the quantitative
+                    variable<?oxy_insert_start author="mmyers" timestamp="20101121T101424-0500"?>,<?oxy_insert_end?>
+                    and the height of each rectangle was the frequency (or relative frequency) for
+                    that interval.</p>
+              <p> Similarly, we can display the probability distribution of a random variable with a
+                    probability histogram. The horizontal axis
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101458-0500"?>represents<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101501-0500" content="accounts for"?>
+                    the range of all possible values of the random variable, and the vertical axis
+                    represents the probabilities of those values. </p>
+        </body>
+    </section>
+ <p>Here is the probability histogram for the previous example:</p>
+    <image src="../webcontent/image010.gif" style="inline" width="194" height="40" alt="A two row 
+probability distribution table, in which the rows are labeled &quot;X&quot; and &quot;P(X=x).&quot;
+Data is given in column oriented format (X: P(X=x)):
+        1: 3/25;
+        2: 4/25;
+        3: 5/25;
+        4: 6/25;
+        5: 7/25;"></image>
+    <image src="../webcontent/image_becomes.gif" style="inline" alt="An arrow point right"></image>
+    <image src="../webcontent/image_probdist_histo1.jpg" width="346" height="233" style="inline"
+        alt="The histogram generated from the table. The vertical axis is labeled
+&quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot;. The histogram
+contains vertical bars at which are centered on the value x for which they represent on
+the horizontal axis, and the bars are as tall as the probability P(X = x)."></image> 
+<section>
+    <title>Area of a Probability Histogram</title>
+  <body>  <p>Notice that each rectangle in the histogram has a width of
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101627-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101626-0500" content="one"?>
+                    unit. The height of each rectangle is the probability that it will occur. Thus,
+                    the area of each rectangle is base times height, which for these rectangles is 1
+                    times its probability
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101607-0500"?><?oxy_comment_start author="mmyers" timestamp="20101121T101812-0500" comment="Please double-check -- is clarification correct?"?>f<?oxy_insert_end?>or
+                    each <?oxy_insert_start author="mmyers" timestamp="20101121T101648-0500"?>value
+                    of
+                    X<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101645-0500" content="probability"?>.<?oxy_comment_end?>
+                    This means that the sum of the areas of all of the rectangles is the same as the
+                    sum of all of the probabilities. Therefore, the total area = 1. </p></body>
+</section>
+    
+<section purpose="learnbydoing">
+    <title>Learn By Doing</title>
+    <body>
+        <p>Based upon data collected in the 2000
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T101841-0500"?>United
+                    States <?oxy_insert_end?>Census and an expanded number of households, the
+                    following histogram was constructed. It shows the distribution of
+                    people<?oxy_insert_start author="mmyers" timestamp="20101121T101904-0500"?> per
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T101903-0500" content="/"?>household. </p>
+        <image style="block" src="../webcontent/image_people_household.gif" alt="A histogram in which
+the vertical axis is labeled &quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot;
+Here is the data represented by the histogram, in &quot;x: P(X=x)&quot; format.
+            1: 0.28;
+            2: 0.34;
+            3: 0.18;
+            4: 0.14;
+            5: 0.60;"/> 
+    <wb:inline idref="u3_m3_discreteprobdist3_tutor2" purpose="learnbydoing"></wb:inline>
+        
+        
+    </body>
+</section>
+  <!--  <example><title>Xavier's Defective Parts</title>  
+    <p>Draw a probability histogram for the random variable X = number of defective parts in Xavier's production line during a randomly chosen hour, whose probability distribution was given as:</p>
+    <image style="block" src="../webcontent/image012.gif"/>
+    <p>The horizontal axis allows for values of X ranging from 0 to 4, and a rectangle over each of the numbers 0 through 4 has height equal to the probability that X takes that value:</p>
+    <image style="block" src="../webcontent/image016.gif"/>
+    </example> --> 
+    
+    <!--<activity idref="_u4_m3_dig3" purpose="didigetthis"/>-->
+ <section purpose="didigetthis">
+     <title>Did I Get This?</title>
+     <body>
+         <p>The probability distribution of the random variable X is represented by the following histogram.</p>
+         <image src="../webcontent/dig001.gif" alt="A histogram in which the vertical axis is labeled
+ &quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot; Here is the data
+ represented by the histogram, in &quot;x: P(X = x)&quot; format:
+                1: 0.4;
+                2: 0.3;
+                3: 0.2;
+                4: 0.1;"/>
+    <wb:inline idref="u3_m3_discreteprobdist3_tutor3" purpose="didigetthis"/>
+         <wb:inline idref="u3_m3_discreteprobdist3_tutor4" purpose="didigetthis"/>
+         
+         
+     </body>
+ </section>
+</body>
+</workbook_page>

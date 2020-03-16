@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance2_tutor1">
+    <title>Tutor</title>
+    <page>  
+        <question id="q1">
+            <body>
+                <p>Let X be a discrete random variable representing the outcomes for the Acme Shipping Company.  What are the possible values for X?</p>  
+            </body>
+            <short_answer id="A"/>
+            <part>
+                <response input="A" match="*" score="1"/>
+                <explanation>
+                     <p>If the package is delivered within 24 hours, the net amount the company gets
+                        is the fee they charge minus their
+                        cost<?oxy_insert_start author="mmyers" timestamp="20101121T141852-0500"?>,<?oxy_insert_end?>
+                        or 20 - 14.80 = 5.20.</p>
+                    <p>If the package is not delivered within 24 hours, they must return the fee. So
+                        the net amount the company gets is 20 - 20 - 14.80 = -14.80.</p>
+                </explanation>
+            </part>
+            <hint><p>There are two outcomes: </p> 
+                <p>The package is delivered within 24 hours.</p>
+                <p>The package is not delivered within 24 hours.</p></hint>
+            <hint><p>If the package is delivered within 24 hours, their net is the fee they charge minus their cost.  </p>
+                <p>If the package is not delivered within 24 hours, they have to refund the fee, but
+                    still have
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T142023-0500"?>to pay
+                    <?oxy_insert_end?>their cost. </p> </hint>
+        </question>
+        
+    </page>
+    
+</assessment>

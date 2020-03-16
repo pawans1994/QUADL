@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_pval_m1_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_pval_m1" select="multiple">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>Which of the following facts about the p-value of a test is correct? Check all that
+                apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The p-value is calculated under the assumption that the null
+                hypothesis is true.</choice>
+            <choice value="B">The smaller the p-value, the more evidence the data provide against
+                    H<sub>0</sub>.</choice>
+            <choice value="C">The p-value can have values between −1 and 1.</choice>
+        </input>
+        <part>
+            <response match="A" score="7">
+                <feedback>Incorrect. You are correct that the p-value is calculated under the
+                    assumption that the null hypothesis is true. However, there is at least one
+                    other correct answer.</feedback>
+            </response>
+            <response match="B" score="7">
+                <feedback>Incorrect. You are correct that it is true that the smaller the p-value,
+                    the more evidence the data provide against H<sub>0</sub>. However, there is at
+                    least one other correct answer.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Since the p-value is the probability of obtaining a sample like
+                    that observed (or even more extreme) assuming that H<sub>0</sub> is true, the
+                    p-value can only have values between 0 and 1. Also, there is at least one
+                    correct answer.</feedback>
+            </response>
+            <response match="A,B" score="10">
+                <feedback>Correct. The p-value is calculated under the assumption that the null
+                    hypothesis is true. Additionally, the smaller the p-value, the more evidence the
+                    data provide against H<sub>0</sub>.</feedback>
+            </response>
+            <response match="A,C" score="3">
+                <feedback>Incorrect. You are correct that the p-value is calculated under the
+                    assumption that the null hypothesis is true. However, since the p-value is the
+                    probability of obtaining a sample like that observed (or even more extreme)
+                    assuming that H<sub>0</sub> is true, the p-value can only have values between 0
+                    and 1.</feedback>
+            </response>
+            <response match="B,C" score="3">
+                <feedback>Incorrect. You are correct that it is true that the smaller the p-value,
+                    the more evidence the data provide against H<sub>0</sub>. However, since the
+                    p-value is the probability of obtaining a sample like that observed (or even
+                    more extreme) assuming that H<sub>0</sub> is true, the p-value can only have
+                    values between 0 and 1.</feedback>
+            </response>
+            <response match="A,B,C" score="7">
+                <feedback>Incorrect. You are correct that the p-value is calculated under the
+                    assumption that the null hypothesis is true. Additionally, you are correct that
+                    it is true that the smaller the p-value, the more evidence the data provide
+                    against H<sub>0</sub>. However, since the p-value is the probability of
+                    obtaining a sample like that observed (or even more extreme) assuming that
+                        H<sub>0</sub> is true, the p-value can only have values between 0 and
+                    1.</feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_pval_m1">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>In June 2005, a <em style="italic">CBS News/NY Times</em> poll asked a random sample
+                of 1,111 U.S. adults the following question: "What do you think is the most
+                important problem facing this country today?" Roughly 19% of those sampled answered
+                "the war in Iraq" (while the rest answered economy/jobs, terrorism, healthcare,
+                etc.). Exactly a year prior to this poll, in June of 2004, it was estimated that
+                roughly 1 out of every 4 U.S. adults believed (at that time) that the war in Iraq
+                was the most important problem facing the country.</p>
+            <p>We would like to test whether the 2005 poll provides significant evidence that the
+                proportion of U.S. adults who believe that the war in Iraq is the most important
+                problem facing the U.S. has decreased since the prior poll.</p>
+            <p>The following output is available for this test: <image style="block" src="../webcontent/assessment8q11image1.gif" /></p>
+            <p>Which of the following is the best conclusion based on the output?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">We have extremely strong evidence to reject H<sub>0</sub>. </choice>
+            <choice value="B">We have extremely strong evidence to reject H<sub>a</sub>. </choice>
+            <choice value="C">We have moderately strong evidence to reject H<sub>0</sub>. </choice>
+            <choice value="D">There is a probability of 0 that H<sub>0</sub> is correct. </choice>
+            <choice value="E">There is a probability of 0 that H<sub>a</sub> is correct. </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. A p-value so small (the statistical software reports that it is
+                    0) indicates that it would essentially be almost impossible to obtain data like
+                    those observed had H<sub>0</sub> been true. This is extremely strong evidence to
+                    reject H<sub>0</sub>. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that a small p-value indicates that the observed data
+                    would be rare if the null hypothesis were true. Also, we generally reject the
+                    null hypothesis or fail to reject the null hypothesis rather than rejecting the
+                    alternative hypothesis (H<sub>a</sub>).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Although we do have evidence suggesting that we should reject
+                        H<sub>0</sub>, the evidence is much stronger than moderate.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A p-value represents the probability of obtaining data at least
+                    as extreme as the observed given that the null hypothesis is true. If the
+                    p-value is low, it does not mean that the null hypothesis is incorrect; it just
+                    means that the obtained data is very rare if it comes from the assumed
+                    distribution.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Unless you can poll the entire population, there is no way to
+                    determine whether or not the alternative hypothesis is true.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_interp_pval_m1">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>An automatic coffee machine dispenses cups of coffee whose volume per cup varies
+                normally with the mean μ = 10 oz. A quality-control researcher randomly selects
+                8 cups of coffee from the machine and finds that in this sample the mean volume is
+                9.92 oz. and the standard deviation is 0.23 oz.</p>
+            <p>Below is the output:</p>
+            <p><image style="block" src="../webcontent/assessment8q12image1.gif" /></p>
+            <p>Which of the following represents the correct conclusion we can make based on the
+                output (and at the usual significance level of 0.05)?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The data provide enough evidence to reject H<sub>0</sub> and to
+                conclude that the mean volume per cup is lower than the target level of 10 oz. </choice>
+            <choice value="B">The data provide enough evidence to accept H<sub>0</sub> and to
+                conclude that the mean volume per cup is at the target level of 10 oz. </choice>
+            <choice value="C">The data do not provide enough evidence to reject H<sub>0</sub>, so we
+                accept it, and conclude that the mean volume per cup is at the target level of 10
+                oz. </choice>
+            <choice value="D">The data do not provide enough evidence to reject H<sub>0</sub>, nor
+                to conclude that the mean volume per cup is lower than the target level of 10 oz.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value is greater than 0.05. This indicates
+                    that there is <em style="italic">not</em> enough evidence to suggest that the
+                    mean amount of coffee per cup is less than 10 ounces.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. We never accept the null hypothesis, but rather reject or fail
+                    to reject H<sub>0</sub>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You are correct that the data do not provide enough evidence
+                    but we never accept the null hypothesis, but rather reject or fail to reject
+                        H<sub>0</sub>.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since the p-value is relatively large (p = 0.179), the only
+                    conclusion that we can draw is that the data does not provide enough evidence to
+                    reject H<sub>0</sub>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_interp_pval_m1">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>Which of the following facts about the p-value of a test is correct?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">A p-value smaller than the significance level provides enough evidence
+                to reject H<sub>0</sub>.</choice>
+            <choice value="B">Regardless of the significance level, a p-value of 0.01 provides
+                enough evidence to reject H<sub>0</sub>.</choice>
+            <choice value="C">The larger the p-value, the more evidence the data provide against
+                    H<sub>0</sub>.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. You are correct that a p-value smaller than the significance
+                    level provides enough evidence to reject H<sub>0</sub>. Since the p-value is the
+                    probability of obtaining a sample like that observed (or even more extreme)
+                    assuming that H<sub>0</sub> is true, a p-value smaller than the significance
+                    level means that it is not likely that the null hypothesis is true.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A p-value of 0.01 is enough evidence to reject H<sub>0</sub>
+                    only if the significance level is greater than 0.01.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Since the p-value is the probability of obtaining a sample like
+                    that observed (or even more extreme) assuming that H<sub>0</sub> is true, if the
+                    p-value is larger than that it means that it is more likely that the null
+                    hypothesis is true.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q5_interp_pval_m1">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>Researchers at Gallup were interested in whether there was a decrease in the
+                proportion of nonretirees (in other words, people who are not yet retired) who did
+                not believe that the U.S. Social Security program will be able to pay them a
+                retirement benefit when they retire. In the summer of 2010, the Gallup poll found
+                that 60% of nonretirees thought that Social Security would not be able to pay a
+                benefit. Five years later in the summer of 2015, Gallup asked the same question to
+                1,282 nonretirees and found that 51% of respondents did not think that Social
+                Security would be able to pay a retirement benefit by the time that they retire.</p>
+            <p>We would like to test the hypothesis that in 2015 there is a lower proportion of
+                nonretirees who do not think that Social Security will be able to pay them a
+                benefit. A z-test for the population proportion showed that z = −4.29, p &lt;
+                0.001.</p>
+            <p>Which of the following is the best conclusion based on the output?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">We have extremely strong evidence to reject H<sub>0</sub>. </choice>
+            <choice value="B">We have extremely strong evidence to reject H<sub>a</sub>. </choice>
+            <choice value="C">We have moderately strong evidence to reject H<sub>0</sub>. </choice>
+            <choice value="D">There is a probability of 0 that H<sub>0</sub> is correct. </choice>
+            <choice value="E">There is a probability of 0 that H<sub>a</sub> is correct. </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. A p-value so small indicates that it would be almost impossible
+                    to obtain data like those observed had H<sub>0</sub> been true. This is
+                    extremely strong evidence to reject H<sub>0</sub>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that a small p-value indicates that the observed data
+                    would be rare if the null hypothesis were true. Also, we generally reject the
+                    null hypothesis or fail to reject the null hypothesis rather than reject the
+                    alternative hypothesis (H<sub>a</sub>).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Although we do have evidence suggesting that we should reject
+                        H<sub>0</sub>, the evidence is much stronger than moderate.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A p-value represents the probability of obtaining data at least
+                    as extreme as the observed given that the null hypothesis is true. If the
+                    p-value is low, it does not mean that the null hypothesis is incorrect; it just
+                    means that the obtained data is very rare if it comes from the assumed
+                    distribution.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Unless you can poll the entire population, there is no way to
+                    determine whether the alternative hypothesis is true.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q6_interp_pval_m1">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>A manufacturer of bedding wants to do quality control on its 400-thread-count sheets.
+                The thread count varies normally with a mean thread count μ = 400 and a standard
+                deviation σ = 8. A quality control researcher randomly selects 16 sheets and finds
+                that the mean thread count for the sample is 395.2.</p>
+            <p>We want to determine if these data provide enough evidence to conclude that the mean
+                thread count is significantly different from the target level.</p>
+            <ul style="none">
+                <li>One-sample z-test of μ = 400 vs. μ ≠ 400</li>
+                <li>Assumed standard deviation = 8</li>
+                <li>n = 16</li>
+                <li>Mean = 395.2</li>
+                <li>z-value = −2.4</li>
+                <li>Two-tailed p-value = 0.0164</li>
+                <li>95% confidence interval: (396.0801, 403.9199)</li>
+            </ul>
+            <p>Which of the following represents the correct conclusion we can make on the basis of the
+                output (and at the usual significance level of 0.05)?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The data provide enough evidence to reject H<sub>0</sub> and to
+                conclude that the mean thread count is different than the target level of
+                400.</choice>
+            <choice value="B">The data provide enough evidence to accept H<sub>0</sub> and to
+                conclude that the mean thread count is at the target level of 400.</choice>
+            <choice value="C">The data do not provide enough evidence to reject H<sub>0</sub>, so we
+                accept it, and conclude that the mean thread count is at the target level of
+                400.</choice>
+            <choice value="D">The data do not provide enough evidence to reject H<sub>0</sub> nor to
+                conclude that the mean thread count is different than the target level of
+                400.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The p-value of 0.0164 was less than the significance level of
+                    0.05, so we do have enough evidence to reject the null hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. We never accept the null hypothesis, but rather reject or fail
+                    to reject H<sub>0</sub>. Also, the p-value was 0.0164, so we do have enough
+                    evidence to reject the null hypothesis.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. We never accept the null hypothesis, but rather reject or fail
+                    to reject H<sub>0</sub>. Also, the p-value was 0.0164, so we do have enough
+                    evidence to reject the null hypothesis.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. If the p-value were greater than 0.05, we could conclude that
+                    the data does not provide enough evidence to reject H<sub>0</sub>. However, the
+                    p-value was 0.0164.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

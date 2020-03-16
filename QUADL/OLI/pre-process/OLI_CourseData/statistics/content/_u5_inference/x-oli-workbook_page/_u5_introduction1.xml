@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_introduction1">
+<head>
+<title>Introduction to Inference (1 of 2)</title>
+</head>
+<body>
+    <p>Recall again the Big Picture, the four-step process that encompasses statistics: data
+        production, exploratory data analysis, probability, and inference.</p>
+    <p>We are about to start the fourth part of the process and the final section of this course,
+            where we draw on principles learned in the other units (exploratory data analysis,
+            producing data, and probability) in order to accomplish what has been our ultimate goal
+            all along: use a sample to infer (or draw conclusions) about the population from which
+            it was drawn. The specific form of inference called
+            for depends on the type of variables involved&#8212;either a single categorical or
+            quantitative variable, or a combination of two variables whose relationship is of
+            interest.</p>
+    <image style="block" src="../webcontent/big_picture_inference.gif"  height="600" width="700" alt="The Big Picture
+        of Statistics. First, a set of data was created from subset of the population. This is the Producing
+        Data step. Then, we perform exploratory data analysis on the data. With these results, we apply
+        probability which is our first step in drawing conclusions about the population from the data. After
+        we have applied probability to the data, we can draw conclusions. This is called inference, the second
+        step in drawing conclusions. In this unit, we look at the Inference step."/>
+<!-- <p><?oxy_delete author="mmyers" timestamp="20101123T090305-0500" content="As stated before, w"?><?oxy_insert_start author="mmyers" timestamp="20101123T090311-0500"?>W<?oxy_insert_end?>e
+            are about to start the fourth and final part of
+            th<?oxy_insert_start author="mmyers" timestamp="20101123T090317-0500"?>is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T090317-0500" content="e"?>
+            course<?oxy_insert_start author="mmyers" timestamp="20101123T090335-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T090332-0500" content=" - "?>statistical
+            inference, where we draw conclusions about
+            <?oxy_insert_start author="mmyers" timestamp="20101123T090353-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T090352-0500" content="the"?>
+            population based on the data obtained from a sample chosen from it.</p> -->
+<p>The purpose of this introduction is to review how we got here and how the previous units fit
+            together to allow us to make reliable inferences. Also, we will introduce the various
+            forms of statistical inference that will be discussed in this section, and give a
+            general outline of how this section is organized.</p>
+<p>In the <em>Exploratory Data Analysis</em> unit, we learned to display and summarize data that
+            were obtained from a sample. Regardless of whether we had one variable and we examined
+            its distribution, or whether we had two variables and we examined the relationship
+            between them, it was always understood that these summaries applied <em style="italic"
+                >only</em> to the data at hand; we did not attempt to make claims about the larger
+            population from which the data were obtained.</p>
+<p>Such generalizations were, however, a long-term goal from the very beginning of the course. For
+            this reason, in the <em>Producing Data</em> unit, we took care to establish principles
+            of sampling and study design that would be essential in order for us to claim that, to
+            some extent, what is true for the sample should be also true for the larger population
+            from which the sample originated. These principles should be kept in mind throughout
+            this section on statistical inference, since the results that we will obtain will not
+            hold if there was bias in the sampling process, or flaws in the study design under which
+            variables' values were measured. </p>
+<p>Perhaps the most important principle stressed in the Producing Data unit was that of
+            randomization. Randomization is
+            essential not only because it prevents bias but also because it permits us to rely on the laws of
+            probability, which is the scientific study of random behavior.</p>
+<p>In the <em>Probability </em>unit, we established basic laws for the behavior of random variables.
+            We ultimately focused on two random variables of particular relevance: the sample mean
+                (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) and the sample proportion (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> ), and the last module of the Probability unit was devoted to exploring their
+            sampling distributions. We learned what probability theory tells us to expect from the
+            values of the sample mean and the sample proportion, given that the corresponding
+            population parameters&#8212;the population mean (μ) and the population proportion
+            (p)&#8212;are known.</p>
+<p>As we mentioned in that module, the value of such results is more theoretical than practical,
+            since in real-life situations we seldom know what is true for the entire population. All
+            we know is what we see in the sample, and we want to use this information to say
+            something concrete about the larger population. Probability theory has set the stage to
+            accomplish this: learning what to expect from the value of sample mean, given that
+            population mean takes a certain value, teaches us (as we'll soon learn) what to expect
+            from the value of
+            <?oxy_insert_start author="mmyers" timestamp="20101123T090954-0500"?>the
+            <?oxy_insert_end?>unknown population mean, given that a particular value of sample mean
+            has been observed. Similarly, since we have established how sample proportion behaves
+            relative to population proportion, we will now be able to turn this around and say
+            something about the value of population proportion, based on an observed sample
+            proportion. This
+            process<?oxy_insert_start author="mmyers" timestamp="20101123T091015-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T091011-0500" content="---"?>inferring
+            something about the population based on what is measured
+            <?oxy_insert_start author="mmyers" timestamp="20101123T091029-0500"?>in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T091027-0500" content="for"?>
+            the
+            sample<?oxy_insert_start author="mmyers" timestamp="20101123T091035-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T091032-0500" content="---"?>is
+            (as you know) called <em>statistical inference</em>.</p>
+</body>
+</workbook_page>

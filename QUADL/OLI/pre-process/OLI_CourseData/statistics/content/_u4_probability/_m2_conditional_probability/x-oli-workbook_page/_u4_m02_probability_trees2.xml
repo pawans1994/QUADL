@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_probability_trees2">
+<head>
+<title>Probability Trees (2 of 3)</title>
+    <objref idref="use_probability_trees"/>
+</head>
+<body>
+  
+<p>Now that we understand how to construct the probability tree, let's use the tree to answer some questions:</p>
+<example>
+
+<p>What is the overall probability that the sales rep
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160652-0500"?>will
+                <?oxy_insert_end?>take<?oxy_delete author="mmyers" timestamp="20101111T160655-0500" content="s"?>
+                the Bermuda vacation?</p>
+<p>Notice that a V branch can be reached by either a C or a not C branch: either the sales rep gets the commission and takes the vacation, or he does not get the commission and he takes the vacation. Symbolically, V = (C and V) or (not C and V). Thus, the overall probability of taking the vacation is</p>
+<p> P(V) = P( (C and V) or (not C and V) ). </p>
+<p>Applying the
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160732-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160731-0500" content="a"?>ddition
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160734-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160734-0500" content="r"?>ule
+                for
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160737-0500"?>D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160737-0500" content="d"?>isjoint
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160740-0500"?>E<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160740-0500" content="e"?>vents,
+                we have</p>
+<p> P(V) = P(C and V) + P(not C and V). </p>
+<p>Applying the
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160759-0500"?>G<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160759-0500" content="g"?>eneral
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160802-0500"?>M<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160802-0500" content="m"?>ultiplication
+                <?oxy_insert_start author="mmyers" timestamp="20101111T160805-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160805-0500" content="r"?>ule
+                to each term, we have</p>
+<p> P(V) = P(C) * P(V | C) + P(not C) * P(V | not C) = .4<?oxy_insert_start author="mmyers" timestamp="20101111T160822-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101111T160823-0500"?>
+                <?oxy_insert_end?>.9 + .6<?oxy_insert_start author="mmyers" timestamp="20101111T160824-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101111T160825-0500"?>
+                <?oxy_insert_end?>.3 = .36 + .18 = .54.</p>
+<p>The overall probability that the sales rep will take the Bermuda vacation is .54. The tree diagram below shows the probabilities obtained via the general multiplication rule, and then the addition rule.</p>
+<image style="block" src="../webcontent/image011.gif" alt="A probability tree. We will be naming paths
+through the tree with the notation &quot;{first branch-off: probability of branch-off; second branch-off:
+probability of branch-off; ...}&quot;. Each branch-off represents the path we take when we need to take a
+branch, and the probability for taking that branch is provided.
+    {C: .4; V: .9};
+    {C: .4; not V: .1};
+    {not C: .6; V: .3};
+    {not C: .6; not V: .7};
+    
+Now, focus on the {C: .4, V: .9} branch. From this branch we can conclude that P(C and V) = P(C) * P(V|C) =
+.4 * .9 = .36 . Also, the other branch {not C: .6, V: .3} branch shows that P(not C and V) = P(not C) *
+P(V | not C) = .6 * .3 = .18 . From these two, we can obtain P(V) = P(C and V) + P(not C and V) = .36 + .18
+= .54 ."/>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>Following one branch to a connected branch, such as C then V, represents the occurrence of one event and then another, which requires multiplication of probabilities.  Including outcomes reached via either of two end-branches represents the occurrence of one event or another, which requires addition of probabilities.</p>
+<p>In order to illustrate the background situation of either getting the commission or
+                    not<?oxy_insert_start author="mmyers" timestamp="20101111T161027-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161026-0500" content="---"?>which
+                    together make up the whole sample space
+                    S<?oxy_insert_start author="mmyers" timestamp="20101111T161036-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161034-0500" content="---"?>along
+                    with the follow-up circumstance of either taking the vacation or not, we can
+                    draw a different sort of Venn diagram:</p>
+<image style="block" src="../webcontent/image012.gif" alt="The entire sample space is represented by a large
+rectangle. This rectangle is divided into two pieces. One side is for C and the other side is for not C. In the
+middle of the rectangle is a circle, which has one part in C and the other in not C. The circle represents V, and
+the part of the circle in C represents C and V, and the other part (in not C) represents not C and V."/>
+<p>The diagram shows that V = (C and V) or (not C and V), where (C and V) and (not C and V) are
+                    disjoint. Applying first the
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161113-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161113-0500" content="a"?>ddition
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161116-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161115-0500" content="r"?>ule<?oxy_insert_start author="mmyers" timestamp="20101111T161117-0500"?>
+                    for Disjoint Events<?oxy_insert_end?> and then the
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161128-0500"?>G<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161128-0500" content="g"?>eneral
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161130-0500"?>M<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161130-0500" content="m"?>ultiplication
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161134-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161134-0500" content="r"?>ule,
+                    we have P(V) = P(C and V) + P(not C and V) = P(C) * P(V | C) + P(not C) * P(V |
+                    not C), just as we saw in our tree diagram.</p>
+<p>We can generalize our solution to obtain an expression for the probability of any event B, based on how B is impacted by the occurrence or non-occurrence of some other event A. We call this the <em>Law of Total Probability: </em>P(B) = P(A) * P(B | A) + P(not A) * P(B | not A).</p>
+</body>
+</section>
+<example>
+
+<p>Suppose the friend finds out that the sales rep has left for Bermuda. Is it likely that the
+                commission came through? Find the probability that the commission came through,
+                given that <?oxy_insert_start author="mmyers" timestamp="20101111T161311-0500"?>the
+                sales
+                rep<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T161310-0500" content="he"?>
+                went to Bermuda.</p>
+<p>Here, we are asked to find the probability that the commission came through, given that the sales rep took his Bermuda vacation, P(C | V). Using the definition of conditional probability,</p>
+<p> P(C | V) = P(C and V) / P(V)</p>
+<p>and now, using the tree, and our result from part (a) (P(V) = .54)), we get that:</p>
+<p> P(C | V) = P(C and V) / P(V) = .36/.54 = .67</p>
+<p>Thus, if it is known that the sales rep left for the Bermuda vacation, it is more likely than not that the commission came through.</p>
+<image style="block" src="../webcontent/image013.gif" alt="A probability tree. We will be naming paths
+through the tree with the notation &quot;{first branch-off: probability of branch-off; second branch-off:
+probability of branch-off; ...}&quot;. Each branch-off represents the path we take when we need to take a
+branch, and the probability for taking that branch is provided.
+    {C: .4; V: .9};
+    {C: .4; not V: .1};
+    {not C: .6; V: .3};
+    {not C: .6; not V: .7};
+
+From this tree, we observe that the branch {C: .4, V: .9} represents P(C and V) = P(C) and P(V|C) = 
+.4 * .9 = .36. We also observe that the branch {not C: .6, V: .3} represents P(not C and V) = 
+P(not C) and P(V|not C) = .6 * .3 = .18 . From these two we calculate P(V) = P(C and V) or P(not C
+and V) = .36 + .18 = .54. We also know that P(C|V) = P(C and V)/P(V) = .36/.54 = .67, giving us our
+answer."/>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>Ordinarily, when events occur in stages, the explanatory variable would be the occurrence or
+                    non-occurrence of a certain event at the first stage, and the response
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161428-0500"?>variable
+                    <?oxy_insert_end?>would be the occurrence or non-occurrence of the next event
+                    chronologically. In such
+                    cases<?oxy_insert_start author="mmyers" timestamp="20101111T161435-0500"?>,<?oxy_insert_end?>
+                    we would identify the probability of a certain response, given that the
+                    explanatory variable took a certain value. However, there are sometimes
+                    situations, as in the second example above, where what we know is the ultimate
+                    outcome, and what we want to find
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T161450-0500"?>out
+                    <?oxy_insert_end?>is the probability that a certain event occurred previously.
+                    Our solution to that example suggests a general formula for solving problems of
+                    this form:</p>
+<p>
+<m:math display="block" overflow="scroll">
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>A</m:mi>
+<m:mo>|</m:mo>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:mfenced>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>A</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">and</m:mi>
+<m:mtext> </m:mtext>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mi>B</m:mi>
+</m:mfenced>
+</m:mrow>
+</m:mfrac>
+</m:mrow>
+</m:math>
+<em>[our expression for a conditional probability]</em>
+</p>
+<p>
+<m:math display="block" overflow="scroll">
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>A</m:mi>
+<m:mo>|</m:mo>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:mfenced>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mi>A</m:mi>
+</m:mfenced>
+<m:mo>⋅</m:mo>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>B</m:mi>
+<m:mo>|</m:mo>
+<m:mi>A</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mi>B</m:mi>
+</m:mfenced>
+</m:mrow>
+</m:mfrac>
+</m:mrow>
+</m:math>
+<em>[by the General Multiplication Rule]</em>
+</p>
+<p>
+<m:math display="block" overflow="scroll">
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>A</m:mi>
+<m:mo>|</m:mo>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:mfenced>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mi>A</m:mi>
+</m:mfenced>
+<m:mo>⋅</m:mo>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>B</m:mi>
+<m:mo>|</m:mo>
+<m:mi>A</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mi>A</m:mi>
+</m:mfenced>
+<m:mo>⋅</m:mo>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>B</m:mi>
+<m:mo>|</m:mo>
+<m:mi>A</m:mi>
+</m:mrow>
+</m:mfenced>
+<m:mo>+</m:mo>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi mathvariant="italic">not</m:mi>
+<m:mtext> </m:mtext>
+<m:mi>A</m:mi>
+</m:mrow>
+</m:mfenced>
+<m:mo>⋅</m:mo>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>B</m:mi>
+<m:mo>|</m:mo>
+<m:mi mathvariant="italic">not</m:mi>
+<m:mtext> </m:mtext>
+<m:mi>A</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:mfrac>
+</m:mrow>
+</m:math>
+<em>[by the Law of Total Probability]</em>
+</p>
+<p>The fact that P(A | B) equals the latter expression is known as Bayes' Rule, or Bayes' Theorem.</p>
+</body>
+</section>
+</body>
+</workbook_page>

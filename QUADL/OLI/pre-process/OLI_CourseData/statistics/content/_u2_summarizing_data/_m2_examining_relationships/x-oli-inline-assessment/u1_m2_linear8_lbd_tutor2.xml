@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m2_linear8_lbd_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Give the equation for
+            this new line and compare it with the line you found for the whole dataset, commenting on
+            the effect of the outlier.</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>Once the outlier for the year 1896 is removed, the equation for the least squares
+               regression line is: </p>
+            <p>Time =
+               87<?oxy_comment_start author="mmyers" timestamp="20101101T180348-0400" comment="change correct?"?>2
+               <?oxy_insert_start author="mmyers" timestamp="20101101T180320-0400"?>+
+               (<?oxy_insert_end?>- 0.33 * Year<?oxy_insert_start author="mmyers" timestamp="20101101T180327-0400"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T180335-0400" content="."?>
+               <?oxy_comment_end?></p>
+            <p>When the outlier is removed, the line "drops" a
+               bit<?oxy_insert_start author="mmyers" timestamp="20101101T180402-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T180359-0400" content=" - "?>the
+               intercept is smaller and the slope is not as negative. Both of these results are
+               quite
+               reasonable<?oxy_insert_start author="mmyers" timestamp="20101101T180410-0400"?>,<?oxy_insert_end?>
+               since the original data
+               w<?oxy_insert_start author="mmyers" timestamp="20101101T180419-0400"?>ere<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T180418-0400" content="as"?>
+               pulled upward toward the outlier. Once this outlier is removed, the line drops.</p>
+         </explanation>
+      </part>
+   </question>
+</assessment>

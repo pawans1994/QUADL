@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page id="critical_value">
+	<head>
+		<title>The Critical Value Method</title>
+	</head>
+	<body>
+
+
+
+		<p>While we will be emphasizing the use of statistical software in obtaining the exact
+			p-value. The critical value method provides the ability to get an understanding of
+			whether or not a null hypothesis will be rejected at a given probability level (ex. .05
+			or .01). In addition, for the z test, the Normal Table can be used to determine the
+			exact probability level, without the use of statistical software. </p>
+		<section>
+			<title>Concepts of the Critical Value Method </title>
+			<body>
+				<p>There are several concepts that are important to understand in the critical value
+					method. They are the: 1) critical value and 2) the critical region. As shown in
+					the graph below, the <em style="bold">critical value </em>is the value, which
+					cuts off an area referred to as the <em style="bold">critical region (or area of
+						rejection), </em>as applied to the z test.</p>
+			</body>
+		</section>
+		<image src="../../webcontent/critical_value/image1.png" alt="A N(0,1) curve with critical values
+-|z| and |z| marked on the horizontal axis. The area to the left of -|z| is a critical region, and the area
+to the right of |z| is also a critical region."/>
+		<p>When z test statistics fall in the critical region (the <em style="bold">blue </em>shaded
+			areas in the above graph), they are far enough from the mean that they are significantly
+			different from the mean; therefore, in these instances, the null hypothesis would be
+			rejected. The critical region is determined by a critical value that is based on two
+			things: 1) the significance level of the test (either .05 or .01) <em style="bold">AND
+			</em>the direction of the test (ex. left-tailed, right-tailed, or two-tailed).</p>
+		<section>
+			<title>Not Equal To</title>
+			<body>
+				<p>For a two-tailed z test, there will be critical regions on both sides of the
+					distribution. For a two-tailed test using a .05 level of significance, we need
+					to determine a value that would put .025 or 2.5%, in each tail. We can determine
+					this value by using the Normal Table.</p>
+
+				<p>First, we need to look in the body of the normal table (<activity_link
+						idref="normal_table" target="new">click here</activity_link>), where we will
+					see that the exact value .0250 is associated with the z score of -1.96; thus,
+					-1.96 is the critical value that puts .025 (or 2.5%) in the left tail of the
+					distribution. Since the standard normal distribution is symmetrical, +1.96 is
+					the critical value that puts .025 (or 2.5%) in the right tail. Thus, the
+					critical values of -1.96 and +1.96 would define the critical regions for a
+					two-tailed z-test using a .05 significance level.</p>
+				<image src="../../webcontent/critical_value/image2.png" alt="A N(0,1) curve titled
+&quot;Critical Regions for a Two-Tailed z Test.&quot; The curve's horizontal axis has been marked with
+critical values z = -1.96 and z = 1.96. The area to the left of -1.96 is a critical region, and the area
+to the right of 1.96 is also a critical region."/>
+				<p>In order to test the null hypothesis, we need to look at where the z-test
+					statistic falls in relation to the critical regions formed by the critical
+					values. In a two-tailed z-test, a z-test statistic of -1.5 would not fall in a
+					critical region Therefore, we know that the p-value would be more than .05.
+					Thus, we would not reject the null hypothesis, since the p-value is greater than
+					.05 (or, stated another way, p-value &gt; .05).</p>
+				<p>On the other hand, a z-test statistic of -2.5 would fall within the critical
+					region on the left hand side of the distribution; t herefore, we know that the
+					p-value would be less than .05. In this instance, we would reject the null
+					hypothesis at a less than .05 level (or p-value &lt; .05). Furthermore, it is
+					possible to figure out the exact p-value for the z-test statistic of -2.5, by
+					using the Normal Table, which is .0062.</p>
+				<image src="../../webcontent/critical_value/image3.png" alt="The N(0,1) curve on which
+the critical value has been marked at -1.96 on the horizontal axis. In addition, the observed
+test statistics -2.5 and -1.5 have been marked. -1.5 is to the right of -1.96 so it is not part
+of the critical region, but -2.5 is to the left of -1.96, so it is part of the critical region."/>
+			</body>
+		</section>
+		<section>
+			<title>Less Than</title>
+			<body>
+				<p>The same logic applies to one-tailed z-tests. For the one-tailed “less than”
+					z-test, the critical value for a .05 significance level is -1.645 (note: since
+					the p-value for -1.64 is .0505 and the p-value for -1.65 is .0495, the critical
+					value for .0500 would be between the two z scores or -1.645).</p>
+				<image src="../../webcontent/critical_value/image4.png" alt="A N(0,1) curve labeled
+&quot;Critical Region for a 'Less Than' One-Tailed Test.&quot; The critical value for .05, -1.645,
+has been marked on the horizontal axis. The area to the left of this critical value under the curve
+is the critical region."/>
+				<p>With a “less than” one-tailed z test, any z-test statistic that is <em
+						style="bold">less</em> than -1.645, would fall in the critical region and
+					therefore, would have a p-value less than .05. For instance, -2.5 would be less
+					than -1.645 and would fall in the critical region. Thus, it would have a p-value
+					less than .05 and the null hypothesis would be rejected.</p>
+				<p>Any z-test statistic that is <em style="bold">larger</em> than -1.645 would have
+					a probability level of greater than .05 (or p-value &gt; .05). For instance, -1.5
+					would be greater than -1.645 and, therefore, would not fall in the critical
+					region. Thus, it would have a p-value greater than .05 and the null hypothesis
+					would not be rejected.</p>
+			</body>
+		</section>
+		<section>
+			<title>Greater Than</title>
+			<body>
+				<p>For the one-tailed “greater than” z-test, the critical value for a .05
+					significance level is 1.645.</p>
+				<image src="../../webcontent/critical_value/image5.png" alt="A N(0,1) curve labeled
+&quot;Critical Region for a 'Greater Than' One-Tailed Test.&quot; The critical value 1.645 has been
+marked on the horizontal axis. The area to the right of this critical value under the curve is the
+critical region."/>
+				<p>Thus, with a “greater than” one-tailed z test, any z-test statistic <em
+						style="bold">larger</em> than 1.645, would fall in the critical region and
+					therefore, would have a p-value less than .05. For instance, 2.5 would be
+					greater than 1.645 and would fall in the critical region. Thus, it would have a
+					p-value less than .05 (or p-value &lt; .05) and the null hypothesis would be
+					rejected .</p>
+				<p>Any z-test statistic that <em style="bold">less </em>than 1.645 would have a
+					probability level of greater than .05 (or p-value&gt;.05). For instance, 1.5
+					would be less than 1.645 and, therefore, would not fall in the critical region.
+					Thus, it would have a p-value greater than .05 and the null hypothesis would not
+					be rejected.</p>
+			</body>
+		</section>
+		<section>
+			<title>Wrapup:</title>
+			<body>
+				<p>The critical value method uses two concepts: 1) the critical value and 2) the
+					critical region. The critical value is used to determine the critical region and
+					is based on two things: 1) the significance level of the test (either .05 or
+					.01) <em style="bold">AND </em>the direction of the test (ex, left-tailed,
+					right-tailed, or two-tailed).</p>
+
+				<p>When z-test statistic falls in the critical region, it is far enough from the
+					mean that it is significantly different from the mean. Therefore, in this
+					instance, the null hypothesis would be rejected at the significance level used
+					to determine the critical region (either .05 or .01). Furthermore, the actual
+					p-value can be determined by using the Normal Table.</p>
+				<p>When the z-test statistic does not fall in the critical region, it indicates that
+					it is not far enough from the mean to be significantly different from the mean.
+					In this instance, the null hypothesis would not be rejected.</p>
+			</body>
+		</section>
+		<section>
+			<title>Comment:</title>
+			<body>
+				<p>The critical value method has been traditionally used for hypothesis testing
+					(note: there are different critical values and tables for t-tests, ANOVAs, and
+					Chi Square tests). The emphasis now, however, is on the use of exact p-values,
+					which are obtained through the use of statistical software packages.</p>
+
+			</body>
+		</section>
+		<section purpose="learnbydoing">
+			<title/>
+			<body>
+				<p>An Association of American Medical Colleges report stated that, in 2011-2012,
+					47.0% of all matriculated medical school students in the United States were
+					female. It is thought that, perhaps, the number of matriculated female students
+					may be lower in rural areas. Researchers collect a random sample of 1000
+					2011-2012 matriculated medical students from rural areas and find that 435 of
+					the students were female. </p>
+				<p>Were there proportionately fewer females matriculated medical students in rural
+					areas as compared to the national proportion of female matriculated medical
+					students?</p>
+				<wb:inline idref="critical_value_tutor"/>
+			</body>
+		</section>
+		<section purpose="didigetthis">
+			<title/>
+			<body>
+				<p>A Gallop poll in conducted in December 2006 found that 60% of Americans owned
+					pets. A 2011 survey of 1,500 adults found that 945 had pets. </p>
+				<p>Do the results this survey show that there has been a change in the proportion of
+					Americans, who own pets, between 2006 and 2011?</p>
+				<wb:inline idref="critical_value_tutor_2"/>
+			</body>
+		</section>
+	</body>
+</workbook_page>

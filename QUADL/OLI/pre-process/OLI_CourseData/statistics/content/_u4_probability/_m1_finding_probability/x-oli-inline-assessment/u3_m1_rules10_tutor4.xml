@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author version 1.1-->
+<assessment id="u3_m1_rules10_tutor4">
+	<title>Tutor</title>
+	<page>
+		<question id="q1">
+			<!--LO:LO: When appropriate, use tools such as Venn diagrams or probability tables as aids for finding probabilities.Sub-objective: probtools        Probability tools  -->
+			<body><p>Recall the example concerning the delivery of an important document. To
+					maximize the chances of on-time delivery, two copies of the document are sent
+					using two services, service A and service B. It is known that the probabilities
+					of on-time delivery are:</p>
+				<p>0.90 for service A: P(A) = 0.90</p>
+				<p>0.80 for service B: P(B) = 0.80</p>
+				<p>0.75 for both services being on time: P(A and B) = 0.75</p>
+				<p>What is the probability that only service B delivers the document on
+				time?</p></body>
+			<multiple_choice shuffle="false">
+				<choice value="A">P(B) = 0.80</choice>
+				<choice value="B">P(not A) = 0.10</choice>
+				<choice value="C">P("not A" and B) = 0.05</choice>
+				<choice value="D">none of these</choice>
+			</multiple_choice>
+			<part>
+				<response match="A" score="0">
+					<feedback>Incorrect. P(B) is different from P(only B) because P(B)
+						includes the situation in which both services deliver the document on time.
+						(A delivers it on time and B delivers it on time). </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Incorrect. P(not A) includes situations in which service B
+						delivers the document on time and situations in which service B does not
+						deliver the document on time. </feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback>Correct. If only service B delivers on time, then B and "not A" both
+						occur.</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Incorrect. We want the probability that only service B delivers
+						on time which means service A does not deliver on time.</feedback>
+				</response>
+			</part>
+		</question>
+	</page>
+</assessment>

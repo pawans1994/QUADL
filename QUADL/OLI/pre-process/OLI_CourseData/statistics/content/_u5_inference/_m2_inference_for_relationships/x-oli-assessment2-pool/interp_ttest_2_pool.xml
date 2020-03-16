@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_ttest_2_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_ttest_2">
+        <body>
+            <p>A Canadian study measuring depression level in teens (as reported in the <em style="italic">Journal of Adolescence</em>, vol. 25, 2002) randomly sampled 112
+                male teens and 101 female teens, and scored them on a common depression scale
+                (higher score representing more depression). The researchers suspected that the mean
+                depression score for male teens is higher than for female teens, and wanted to check
+                whether data would support this hypothesis.</p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub></p>
+            <p>H<sub>a</sub>: μ<sub>1</sub> &gt; μ<sub>2</sub></p>
+            <p>The following is the (edited) output for the test:</p>
+            <image style="block" src="../webcontent/assessment9q10image1.gif" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject
+                    H<sub>0</sub> and to conclude that the mean depression score for male teens is
+                larger than that of female teens.</choice>
+            <choice value="B">The data provide sufficient evidence to conclude that
+                male and female teens do not differ in mean depression score.</choice>
+            <choice value="C">The data do not provide sufficient evidence to conclude
+                that the mean depression score of male teens is larger than that of female
+                teens.</choice>
+            <choice value="D">The data do not provide sufficient evidence to reject
+                    H<sub>0</sub>, so we accept it, and conclude that male and female teens do not
+                differ in mean depression score.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value is much larger than
+                    0.05.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the p-value is large (0.4), the data do not provide
+                    enough evidence to reject the null hypothesis.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since the p-value is large (0.4) the data do not provide enough
+                    evidence to reject the null hypothesis in favor of the alternative hypothesis
+                    (which claims that male teens’ mean depression score is higher).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. “Not having enough evidence to reject H<sub>0</sub>” does not
+                    mean that we accept it. We never accept the null hypothesis.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_interp_ttest_2">
+        <body>
+            <p>A study measuring fitness level in teens randomly sampled 112 male teens and 101
+                female teens with a higher score indicating more fitness. Researchers suspected that
+                the fitness level for male teens (μ<sub>1</sub>) is higher than for female teens
+                    (μ<sub>2</sub>), and wanted to check whether the data would supported this
+                hypothesis.</p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: µ1 = µ2 </p>
+            <p>H<sub>a</sub>: µ1 &gt; µ2 </p>
+            <table>
+
+
+                <tr>
+                    <th>Sample</th>
+                    <th>N</th>
+                    <th>Mean</th>
+                    <th>SD</th>
+                </tr>
+
+
+                <tr>
+                    <td>1(M)</td>
+                    <td>112</td>
+                    <td>7.38</td>
+                    <td>6.95</td>
+                </tr>
+                <tr>
+                    <td>2(F)</td>
+                    <td>102</td>
+                    <td>7.15</td>
+                    <td>6.31</td>
+                </tr>
+
+            </table>
+            <p>t-test of difference: df = 210 t-value = 0.25 p-value = 0.400</p>
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject H<sub>0</sub> and to conclude that
+                the mean fitness score for male teens is higher than that of female teens.</choice>
+            <choice value="B">The data provide sufficient evidence to conclude that male and female
+                teens do not differ in mean fitness score.</choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>,
+                so we accept it, and conclude that female and male teens do not differ in mean
+                fitness score.</choice>
+            <choice value="D">The data do not provide sufficient evidence to conclude that the mean
+                fitness score of male teens is higher than that of female teens.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value is much larger than 0.05.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the p-value is large (0.40), the data do <em style="italic">not</em> provide
+                    enough evidence to reject the null hypothesis. However, you cannot conclude that
+                    male and female teens do not differ in mean fitness score.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. “Not having enough evidence to reject H<sub>0</sub>” does not
+                    mean that we accept it. We <em style="italic">never</em> accept the null hypothesis.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since the p-value is large (0.40) the data do not provide enough evidence to reject the null hypothesis.
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

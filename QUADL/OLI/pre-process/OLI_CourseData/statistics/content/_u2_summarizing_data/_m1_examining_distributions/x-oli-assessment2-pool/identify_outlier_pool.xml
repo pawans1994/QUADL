@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="identify_outlier_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_identify_outlier" select="single">
+        <body><p>The cost of taking your pet aboard the air flight with you in the continental US
+                varies according to the airlines. The five number summary for prices based on a
+                sample of major U.S. airlines was:</p>
+            <p>Min = 60, Q1 = 100, Median = 110, Q3 = 125, Max = 150 </p>
+            <p>Which of the following is true about this data?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The lowest price is an outlier.</choice>
+            <choice value="B">The highest price is an outlier.</choice>
+            <choice value="C">The data is skewed left.</choice>
+            <choice value="D">The data is skewed right.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The IQR is Q3 − Q1 = 125 − 100 = 25, so by the 1.5 IQR criterion,
+                    any observations below Q1 − 1.5 * IQR = 100 − 1.5 * (25) = 100 − 37.5 = 62.5 are
+                    considered to be outliers. Since 60 is below 62.5, 60 is an outlier. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The IQR is Q3 − Q1 = 125 - 100 = 25, so by the 1.5 IQR
+                    criterion any observations above Q3 + 1.5 * IQR = 100 + 1.5 * (25) = 125 + 37.5 =
+                    162.5 are considered to be outliers. Since 150 is not above 162.5, 150 is not an
+                    outlier. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Given only the 5-number summary, it is impossible to determine
+                    which way the data is skewed. Even if we know there are outliers, we would need
+                    to know the mean or see the histogram to determine if there are
+                    outliers.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Given only the 5-number summary, it is impossible to determine
+                    which way the data is skewed. Even if we know there are outliers, we would need
+                    to know the mean or see the histogram to determine if there are
+                    outliers.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q2_identify_outlier" select="single">
+        <body><p>Based on the results of a nation-wide study, the number of contacts programmed into
+                cell phones are summarized on the following boxplot:</p>
+            <image style="block" src="../webcontent/u2_m2_pool_boxplot.gif" />
+            <p>Which of the following is true about this data?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The lowest observation is an outlier.</choice>
+            <choice value="B">The highest observation is an outlier.</choice>
+            <choice value="C">The data is skewed left.</choice>
+            <choice value="D">The data is skewed right.</choice>
+            <choice value="E">There are no outliers.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The IQR is Q3 − Q1 = 125 − 50 = 75, so by the 1.5 IQR
+                    criterion, any observations below Q1 − 1.5 * IQR = 50 − 1.5 * (75) = 50 − 87.5 =
+                    −37.5 are considered to be outliers. Since 25 is not below −37.5, 25 is not an
+                    outlier. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The IQR is Q3 − Q1 = 125 − 50 = 75, so by the 1.5 IQR
+                    criterion, any observations above Q3 + 1.5 * IQR = 125 + 1.5 * (75) = 125 + 87.5 =
+                    212.5 are considered to be outliers. Since 200 is not above 212.5, 200 is not an
+                    outlier. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Given only the 5-number, summary it is impossible to determine
+                    which way the data is skewed. Even if we know there are outliers, we would need
+                    to know the mean or see the histogram to determine if there are outliers.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Given only the 5-number summary, it is impossible to determine
+                    which way the data is skewed. Even if we know there are outliers, we would need
+                    to know the mean or see the histogram to determine if there are
+                    outliers.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. The IQR is Q3 − Q1 = 125 − 50 = 75, so by the 1.5 IQR criterion,
+                    any observations below Q1 − 1.5 * IQR = 50 − 1.5 * (75) = 50 − 87.5 = −37.5 are
+                    considered to be outliers. Since 25 is not below −37.5, 25 is not an outlier.
+                    Similarly, any observations above Q3 + 1.5 * IQR = 125 + 1.5 * (75) = 125 + 87.5 =
+                    212.5 are considered to be outliers. Since 200 is not above 212.5, 200 is not an
+                    outlier.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+</pool>

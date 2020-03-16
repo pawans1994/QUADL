@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="label_boxplot_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_label_boxplot" select="single">
+        <body><p>Based on the results of a nationwide study, the number of contacts programmed into
+                cell phones are summarized on the following boxplot:</p>
+            <image style="block" src="../webcontent/u2_m2_pool_boxplot2.png" />
+            <p>Choose the correct label for the point on the boxplot represented by the question
+                mark:</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Minimum </choice>
+            <choice value="B">Q1 </choice>
+            <choice value="C">Median </choice>
+            <choice value="D">Q3 </choice>
+            <choice value="E">Maximum </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The minimum is the smallest observation, which is represented
+                    on the far left by the end of the whisker, located at 25. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The first quartile (Q1) is the median of the bottom half of
+                    the data, and is represented on the boxplot by the left side of the box, located
+                    at 50. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The median is the middle value of all the observations, and is
+                    represented on the boxplot by the line in the center of the box, located at 75.
+                </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The third quartile (Q3) is the median of the top half of the
+                    data, and is represented on the boxplot by the right side of the box, located at
+                    125. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The maximum is the largest observation, which is represented
+                    on the far right by the end of the whisker, located at 200.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <fill_in_the_blank id="q2_label_boxplot">
+
+        <body><p>The cost of taking your pet aboard the air flight with you in the continental US
+                varies according to the airlines. The five number summary for prices based on a
+                sample of major US airlines was: </p>
+            <p>Min = 60, Q1 = 100, Median = 110, Q3 = 125, Max = 150 </p>
+            <p>If we were to build the box plot for this data, the box would stretch between which
+                two values? </p>
+            <p>What would be the lowest value: <input_ref input="A" /> and highest
+                value: <input_ref input="B" /></p>
+        </body>
+
+        <input id="A" shuffle="false">
+            <choice value="one">60</choice>
+            <choice value="two">100</choice>
+            <choice value="three">110</choice>
+            <choice value="four">125</choice>
+            <choice value="five">150</choice>
+
+        </input>
+        <input id="B" shuffle="false">
+            <choice value="one">60</choice>
+            <choice value="two">100</choice>
+            <choice value="three">110</choice>
+            <choice value="four">125</choice>
+            <choice value="five">150</choice>
+        </input>
+
+
+        <part>
+            <response input="A" name="60" match="one" score="0">
+                <feedback>Incorrect. The minimum is 60, which is not the lowest value (left side,
+                    bottom of the box) in a boxplot. The minimum is represented on the far left (or
+                    bottom) by the end of the whisker.</feedback>
+            </response>
+            <response input="A" name="100" match="two" score="10">
+                <feedback>Correct. The lowest value (left side, bottom of the box) in a boxplot is
+                    the first quartile, which in this data set is 100. </feedback>
+            </response>
+            <response input="A" name="110" match="three" score="0">
+                <feedback>Incorrect. The lowest value (left side, bottom of the box) in a boxplot
+                    is not the median, but rather the value representing the 25th percentile of the
+                    distribution. </feedback>
+            </response>
+            <response input="A" name="125" match="four" score="0">
+                <feedback>Incorrect. The lowest value (left side, bottom of the box) in a boxplot
+                    is not the third quartile. </feedback>
+            </response>
+            <response input="A" name="150" match="five" score="0">
+                <feedback>Incorrect. The lowest value (left side, bottom of the box) in a boxplot
+                    is not the maximum, but rather the value representing the 25th percentile of the
+                    distribution. </feedback>
+            </response>
+
+        </part>
+        <part>
+            <response input="B" name="60" match="one" score="0">
+                <feedback>Incorrect. The minimum is 60, which is not the highest value (right side,
+                    top of the box) in a boxplot. The minimum is represented on the far left (or
+                    bottom) by the end of the whisker.</feedback>
+            </response>
+            <response input="B" name="100" match="two" score="0">
+                <feedback>Incorrect. The highest value (right side side, top of the box) in a
+                    boxplot is not the first quartile. </feedback>
+            </response>
+            <response input="B" name="110" match="three" score="0">
+                <feedback>Incorrect. The highest value (right side side, top of the box) in a
+                    boxplot is not the median, but rather the value representing the 75th percentile
+                    of the distribution. </feedback>
+            </response>
+            <response input="B" name="125" match="four" score="10">
+                <feedback>Correct. The highest value (right side side, top of the box) in a boxplot
+                    is the third quartile, which is this data set is 125.</feedback>
+            </response>
+            <response input="B" name="150" match="five" score="0">
+                <feedback>Incorrect. The highest value (right side side, top of the box) in a
+                    boxplot is not the maximum, but rather the value representing the 75th
+                    percentile of the distribution. The maximum is represented on the far right (or
+                    top) by the end of the whisker. </feedback>
+            </response>
+        </part>
+
+
+
+
+    </fill_in_the_blank>
+
+</pool>

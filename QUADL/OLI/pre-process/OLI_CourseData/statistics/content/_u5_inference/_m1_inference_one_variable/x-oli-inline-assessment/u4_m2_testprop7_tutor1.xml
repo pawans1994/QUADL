@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop7_tutor1">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>A p-value of <input_ref input="A"/> tells us that it is <input_ref input="B"/> to
+                    get data like those observed</p> <p> assuming <input_ref input="C"/>.</p>
+            </body>
+          	<numeric id="A" size="small"/>
+            <fill_in_the_blank id="B">
+                <choice value="one">likely</choice>
+                <choice value="two">unlikely</choice>
+            </fill_in_the_blank>
+            <fill_in_the_blank id="C">
+                <choice value="one">H<sub>0</sub> is true</choice>
+                <choice value="two">H<sub>a</sub> is true</choice>
+            </fill_in_the_blank>
+
+            <part>
+                <response input="A" match="0.114" score="1">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response input="A" match="*">
+                    <feedback>Incorrect. Find the p-value in the Minitab
+                        output.</feedback>
+                </response>
+                <hint>Find the p-value in the Minitab
+                output above.</hint>
+                <hint>The p-value is 0.114.</hint>
+            </part>
+            <part>
+                <response input="B" match="one" score="1">
+                    <feedback>Correct. A p-value of 0.114 is considered a large enough probability
+                        that the observed results are not unusual (likely) when the null hypothesis is
+                        true.</feedback>
+                </response>
+                <response input="B" match="two">
+                    <feedback>Incorrect. A statistician will view an event as fairly
+                        likely to occur if it has a probability of 0.114.</feedback>
+                </response>
+                <hint>A p-value of 0.114 is considered a large enough probability
+                    that the observed results are not unusual when the null hypothesis is
+                    true.</hint>
+            </part>
+            <part>
+                <response input="C" match="one" score="1">
+                    <feedback>Correct. Every hypothesis test is based on the assumption that
+                            H<sub>0</sub> is true.</feedback>
+                </response>
+                <response input="C" match="two">
+                    <feedback>Incorrect. Every hypothesis test is based on the
+                        assumption that H<sub>0</sub> is true.</feedback>
+                </response>
+                <hint>Every hypothesis test is based on the assumption that
+                    H<sub>0</sub> is true.</hint>
+            </part>
+        </question>
+    </page>
+   
+
+</assessment>

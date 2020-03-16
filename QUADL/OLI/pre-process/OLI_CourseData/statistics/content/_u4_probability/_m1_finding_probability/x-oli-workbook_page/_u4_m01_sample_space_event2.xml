@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m01_sample_space_event2">
+<head>
+<title>Sample Spaces and Events (2 of 2)</title>
+    <objref idref="determine_sample_space"/>
+</head>
+<body>
+   
+<p>So far, we have a random experiment and its sample space&#8212;the set of all possible outcomes
+            it can produce. Where does probability come into the picture? </p>
+<p>Once we have defined a random experiment, we can talk about an <em>event</em> of interest, which is a statement about the nature of the outcome that we're actually going to get once the experiment is conducted. Events are denoted by capital letters (other than S, which is reserved for the sample space).</p>
+<example><title>Tossing a Coin 3 Times</title>
+
+<p>Consider example 3, tossing a coin three times. Recall that the sample space in this case is:</p>
+<p>S = {HHH, THH, HTH, HHT, HTT, THT, TTH, TTT}</p>
+<p>We can define the following events:</p>
+<p>
+<em>Event A:</em> "Getting no H"</p>
+<p>
+<em>Event B:</em> "Getting exactly one H" </p>
+<p>
+<em>Event C:</em> "Getting at least one H"</p>
+<p>Note that each event is indeed a statement about the outcome that the experiment is going to produce.</p>
+<p>In practice, each event corresponds to some collection (subset) of the outcomes in the sample space:</p>
+<p>
+                <em>Event A:</em> "Getting no H" → TTT</p>
+<p>
+                <em>Event B:</em> "Getting exactly one H" → HTT, THT, TTH </p>
+<p>
+                <em>Event C:</em> "Getting at least one H" → HTT, THT, TTH, THH, HTH, HHT, HHH</p>
+<p>Here is a visual representation of events A, B and C.</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image src="../webcontent/image003.gif"
+        alt="We have a large rectangle labeled &quot;S&quot; which represents the entirety of the
+sample space. Inside this rectangle we have two circles labeled &quot;A&quot; and &quot;C.&quot;
+A contains only &quot;TTT&quot;. Inside of C, we see &quot;HHH,&quot; &quot;THH,&quot; &quot;HTH,&quot;
+&quot;HHT,&quot; and a circle representing event B. Inside B are &quot;HHT,&quot; &quot;THT,&quot;
+and &quot;TTH.&quot; Note that all of the items inside B are also inside C, so C fully encloses B."/>
+<p>From this visual representation of the events, it is easy to see that event B is totally included
+                in event C, in the sense that every outcome in event B is also an outcome in event
+                C. Also, note that event A stands apart from events B and C, in the sense that they
+                have no outcome in common, or no overlap. At this point these are only noteworthy
+                observations, but as you'll discover later, they are very important ones.</p>
+</example>
+<example><title>Staff Position</title>
+
+<p>Consider Example 6, where we choose two candidates at random out of four (Ann, Beth, Jim and
+                                                  Dan). Recall that in this case the sample space
+                                                  is:</p>
+<p> S = { (Ann, Beth), (Ann, Jim), (Ann, Dan), (Beth, Jim), (Beth, Dan), (Jim, Dan) }</p>
+<p>In this example, we might be interested in the following events, each of which is a statement
+                about the nature of the outcome that the random experiment will produce:</p>
+<p>
+                <em>Event A</em>: "Jim is chosen."</p>
+<p>
+                <em>Event B:</em> "The two chosen are of the same gender." </p>
+<p>Again, each event corresponds to some collection of outcomes. Use the exercise below to try this
+                yourself:</p>
+    <wb:inline idref="u3_m1_sample_space_event2_tutor1" purpose="learnbydoing"/><!--<flash src="../webcontent/flash/_u4_m0_inlinetutor3.swf" width="500" height="285" purpose="learnbydoing">
+<param name="problem_name">_u4_m0_inlinetutor3</param>
+</flash>-->
+</example>
+    <p>Once an event is defined, we can talk about the probability that it will occur. So, if we
+            have defined an <em>Event A</em>, we can use the notation we previously mentioned to
+            represent its probability, namely <em>P(A)</em>.</p>
+    <p>The following figure summarizes the information in this section:</p>
+    <image src="../webcontent/image004.gif" alt="A flow chart. We start with a Random
+Experiment, which leads to a Sample Space, called S. Then, we define Events (A, B, C...)
+which correspond to a collection of outcomes in S. After that, we obtain the probability
+of the events, resulting in P(A), P(B),..." />
+    
+    <section>
+        <title>Section Questions</title>
+        <body>
+            <activity purpose="myresponse" idref="_u4_m01_sample_space_event2_feedback"/>
+        </body>
+    </section>
+</body>
+</workbook_page>

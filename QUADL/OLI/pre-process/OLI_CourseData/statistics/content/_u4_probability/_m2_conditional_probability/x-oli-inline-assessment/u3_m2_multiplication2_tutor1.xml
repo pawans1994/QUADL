@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_multiplication2_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>A woman's pocket contains 2 quarters and 2 nickels; she randomly extracts one of the coins, and without replacing it picks a second coin.</p>
+   </content>
+   <question id="q1">
+      <body>
+         <p>Are the events Q1 = "first pick was a quarter" and Q2<?oxy_insert_start author="mmyers" timestamp="20101111T143228-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101111T143229-0500"?>
+            <?oxy_insert_end?>"second pick was a quarter" independent? </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">yes</choice>
+         <choice value="Res2">no</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Since the selection is done without replacement, Q1 and Q2 are not independent. In particular, the probability that the second selection is a quarter depends on whether the first selection was a quarter or not. P(Q2 | Q1) = 1/3, while P(Q2 | not Q1) = 2/3.  </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143305-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143305-0500" content="J"?>ob!
+               Indeed, Since the selection is done without replacement, Q1 and Q2 are not
+               independent. In particular, the probability that the second selection is a quarter
+               depends on whether the first selection was a quarter or not. P(Q2 | Q1) = 1/3, while
+               P(Q2 | not Q1) = 2/3. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>What is the probability of getting a quarter both times, P(Q1 and Q2)?			
+         </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">2/4 * 1/3 = 1/6 </choice>
+         <choice value="Res2">2/4 * 1/2 = 1/4 </choice>
+         <choice value="Res3">2/4 * 2/3 = 1/3 </choice>
+         <choice value="Res4">2/4 + 1/3 = 5/6</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143411-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143411-0500" content="J"?>ob!
+               Using the General Multiplication Rule, P(Q1 and Q2) = P(Q1) * P(Q2 | Q1). For the
+               first pick, there are 2 quarters out of 4, so you are right that P(Q1) = 2/4. Given
+               that the first coin was a quarter, there are 3 coins left, only
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143506-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143505-0500" content="one"?>
+               of which is a quarter, so P(Q2 | Q1) = 1/3. The answer is therefore (as you selected)
+               2/4 * 1/3 = 1/6. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Using the General Multiplication Rule, P(Q1 and Q2) =
+               P(Q1) * P(Q2 | Q1). For the first pick there are 2 quarters out of 4, so you are
+               right that P(Q1) = 2/4. However, given that the first coin was a quarter, there are 3
+               coins left, only
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143750-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143748-0500" content="one"?>
+               of which is a quarter, so P(Q2 | Q1) = 1/3, and not 1/2, as you selected. </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Using the General Multiplication Rule, P(Q1 and Q2) =
+               P(Q1) * P(Q2 | Q1). For the first pick there are 2 quarters out of 4, so you are
+               right that P(Q1) = 2/4. However, given that the first coin was a quarter, there are 3
+               coins left, only
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143816-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143815-0500" content="one"?>
+               of which is a quarter, so P(Q2 | Q1) = 1/3, and not 2/3, as you selected. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. We are looking for P(Q1 and Q2) and therefore need to
+               use the General Multiplication Rule. P(Q1 and Q2) = P(Q1) * P(Q2 | Q1). For the first
+               pick there are 2 quarters out of 4, so P(Q1) = 2/4. Given that the first coin was a
+               quarter, there are 3 coins left, only
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143843-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143842-0500" content="one"?>
+               of which is a quarter, so P(Q2 | Q1) = 1/3. Your mistake is that you added 2/4 and
+               1/3 instead of multiplying them. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q3">
+      <body>
+         <p>What is the probability of getting a quarter and then a nickel, P(Q1 and N2)?		
+         </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">2/4 * 1/3 = 1/6 </choice>
+         <choice value="Res2">2/4 * 1/2 = 1/4 </choice>
+         <choice value="Res3">2/4 * 2/3 = 1/3 </choice>
+         <choice value="Res4">2/4 + 1/3 = 5/6</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Using the General Multiplication Rule, P(Q1 and N2) =
+               P(Q1) * P(N2 | Q1). For the first pick there are 2 quarters out of 4, so you are
+               right that P(Q1) = 2/4. However, given that the first coin was a quarter, there are 3
+               coins left,
+               <?oxy_insert_start author="mmyers" timestamp="20101111T143931-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T143929-0500" content="two"?>
+               of which are nickels, so P(N2 | Q1) = 2/3, and not 1/3, as you selected.  </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Using the General Multiplication Rule, P(Q1 and N2) =
+               P(Q1) * P(N2 | Q1). For the first pick there are 2 quarters out of 4, so you are
+               right that P(Q1) = 2/4. However, given that the first coin was a quarter, there are 3
+               coins left,
+               <?oxy_insert_start author="mmyers" timestamp="20101111T144007-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T144006-0500" content="two"?>
+               of which are nickels, so P(N2 | Q1) = 2/3, and not 1/2, as you selected.  </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101111T144016-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T144016-0500" content="J"?>ob!
+               Using the General Multiplication Rule, P(Q1 and N2) = P(Q1) * P(N2 | Q1). For the
+               first pick there are 2 quarters out of 4, so you are right that P(Q1) = 2/4. Given
+               that the first coin was a quarter, there are 3 coins left,
+               <?oxy_insert_start author="mmyers" timestamp="20101111T144033-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T144032-0500" content="two"?>
+               of which are nickels, so P(N2 | Q1) = 2/3. The answer is therefore (as you selected)
+               2/4 * 2/3 = 1/3. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. We are looking for P(Q1 and N2) and therefore need to
+               use the General Multiplication Rule. P(Q1 and N2) = P(Q1) * P(N2 | Q1). For the first
+               pick there are 2 quarters out of 4, so P(Q1) = 2/4. Given that the first coin was a
+               quarter, there are 3 coins left,
+               <?oxy_insert_start author="mmyers" timestamp="20101111T144224-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T144222-0500" content="two"?>
+               of which are nickels, so P(N2 | Q1) = 2/3. The answer is therefore 2/4 * 2/3 =
+               1/3.<?oxy_delete author="mmyers" timestamp="20101111T144245-0500" content=" Try again."?>
+            </feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="Title">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">2.35 is the point estimate for which of the following?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">The proportion of all newlyweds who have sex more than twice in a typical week.</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">The mean number of times all newlyweds go out during a typical week.</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">The mean number of times all newlyweds have sex during a typical week.</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          </resprocessing>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. We actually do not know how many of the 513 couples reported on having sex more than twice in a typical week. Also, a proportion cannot be 2.35! It must be a number between 0 and 1. 
+</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. We cannot actually estimate this mean from the information given in the problem, since all we know is that 171 of the 513 sampled newlyweds go out more than twice in a typical week (and not the actual number of times each couple goes out in a typical week). </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Correct. We are told that the mean number of times that the newlyweds in our sample have sex in a typical is 2.35. Therefore, 2.35 is the point estimate for the mean in the entire population (all newlyweds).</mattext></material></itemfeedback>
+        </item></questestinterop>

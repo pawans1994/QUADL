@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="EnzymeKineticsClassDemo" version="2" date="10/1/05">
+    <name>&lt;b&gt;Protein Folding&lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+            <title>Enzyme Kinetics</title>
+            <text>
+            </text>
+            <actions>
+                <action event="record light"/>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeW.swf" x="10" y="350" xscale="1" yscale="1" /> 
+                <action event="create" name="slider1" url="tools/sliderNEW.swf"  x="10" y="120" xscale="1"  yscale=".9"/>
+                <action event="create" name="beaker" url="swfs/beakerplain.swf"  x="325" y="5" xscale="2.3"  yscale="1.85"/> 
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="333" y="31" xscale="1"  yscale="1"/>
+                <action event="create" name="equation1" url="tools/equationML1.swf"  x="10" y="60" xscale="1" yscale="1" />
+                <action event="create" name="inputs1" url="tools/inputs1.swf"  x="20" y="80" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKey1.swf"  x="25" y="35" xscale=".65" yscale=".65" />
+                <action event="create" name="k" url="tools/VariableWithLabel.swf"  x="10" y="250" xscale="1"  yscale="1"/> 
+                <action event="create" name="Kd" url="tools/VariableWithLabel.swf"  x="10" y="270" xscale="1"  yscale="1"/> 
+                <action event="create" settimer='12' advance='yes' />
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible"/>
+                <object name="userinput" state="hilight"/>
+            </objects>
+            <nextbutton text="next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+              </step>
+        <step id="login">
+            <title> </title>
+            <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;When you are ready to continue click "Begin Simulation."
+            </text>
+            
+            <actions>
+                <action event="record light"/>
+                <action event="initialize" name="opener" />
+                <!--needs to be loaded after box1 started-->
+                <action event="initialize" name="Kd" data="Kd" params="0"  />
+                <action event="initialize" name="k" data="k" params="0"  />
+            </actions>
+            <objects>
+                <object name="opener" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible"/>
+                <object name="userinput" state="hilight"/>
+                <object name="slider1" state="invisible"/>
+                <object name="thegrapher" state="visible"/> 
+                <object name="equation1" state="visible" action="1" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="thegrapher" state="invisible" >
+                    <child name="curve0" state="visible" color="#FF0000" label="S=7" />
+                </object>
+                <object name="inputs2" capture="yes" state="visible"/>
+                <object name="inputs1" capture="yes" state="visible">
+                    <child name="num_E" value="10" />
+                    <child name="num_S" value="40" />
+                </object>
+            </objects>
+            <nextbutton text="Begin Simulation" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+       
+        <step id="run">
+             <title> </title>
+            <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;When you are finished  click "Done."
+            </text>
+            <objects>
+                <object name="theexplainer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="thegrapher" state="visible"/> 
+                <object name="inputs1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="Kd" state="visible"/>
+                <object name="k" state="visible"/>
+                <object name="thegrapher" state="visible" />
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=410,topBorder=0,bottomBorder=330,leftBorder2=50,rightBorder2=360,topBorder2=0,bottomBorder2=230">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule-->     
+                        <molecule numMolecules= "10"  numbound= "0" velocity= "0"  cast= "moleculePFE"  state1="10" state2="6"  rotationVelocity="0"  rotation="0"  mytype="molecule"  myID="1"  mybounce="true" changestate="yes"/>                               
+                    </molecules>/>            
+                </action>
+                <action event="initialize" name="Toff" data="T off" params="_root.box1.bindstrength"  />
+                <action event="initialize" name="grapher"  />
+                <action event="initialize" name="Kd" data="Kd" params="_root.box1.Kd"  />
+                <action event="initialize" name="k" data="k" params="_root.box1.k"  />
+               <!-- <action event="initialize" name="slider1" params="L total" data="40"/>-->
+                <action event="initialize" name="thegrapher" params="child=0,color=0x0000FF,objectlink=inputs1.num_ES"  data="ymax=10,y_label=ML,graph_label="/>
+                 <action event="initialize" name="slider1" params="label='L total',low=0,high=100,reduce=_root.box1.removeLigands,increase=_root.box1.addLigands" data="40"/> <!--This is what we need to wire a slider to a simulator-->
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="run">
+            <title> </title>
+            <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Reload the browser page to start again
+            </text>
+            <objects>
+                <object name="theexplainer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="thegrapher" state="visible"/> 
+                <object name="inputs1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="Kd" state="visible"/>
+                <object name="k" state="visible"/>
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="pause"  />
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+
+        
+    </steps>
+</simulation>

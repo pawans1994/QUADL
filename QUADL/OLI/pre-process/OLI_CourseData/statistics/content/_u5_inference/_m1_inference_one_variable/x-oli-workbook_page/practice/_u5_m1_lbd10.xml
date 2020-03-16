@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd10">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice exploring the effect of
+            sample size on the significance of sample results, and help you get a better sense of
+            this effect. Another important goal of this activity is to help you understand the
+            distinction between statistical significance and practical importance.</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>For this activity, we will use example 1. Here is a summary of what we have found:</p>
+        <image style="block" src="../../webcontent/image275.gif"
+            alt="The entire population
+is represented as a large circle, representing products produced by the machine (following
+the repair). We are interested in p for this population, which is the proportion of defective
+products. H_0: p = .20, H_a: p &lt; .20 . From the population we generate a sample of 400
+products, and find that 64 are defective. Our conditions are met, and we find that p-hat
+= 64/400 = .16, z = -2, and p-value = .023 . We conclude that H_0 can be rejected."/>
+        <p>The results of this study&#8212;64 defective products out of 400&#8212;were statistically
+            significant in the sense that they provided enough evidence to conclude that the repair
+            indeed reduced the proportion of defective products from 0.20 (the proportion prior to
+            the repair). Even though the results&#8212;a sample proportion of defective products of
+            0.16&#8212;are statistically significant, it is not clear whether the results indicate
+            that the repair was effective enough to meet the company's needs, or, in other words,
+            whether these results have a practical importance. If the company expected the repair to
+            eliminate defective products almost entirely, then even though statistically, the
+            results indicate a significant reduction in the proportion of defective products, this
+            reduction has very little practical importance, because the repair was not effective in
+            achieving what it was supposed to. To make sure you understand this important
+            distinction between statistical significance and practical importance, we will push this
+            a bit further.</p>
+        <p>Consider the same example, but suppose that when the company examined the 400 randomly
+            selected products, they found that 78 of them were defective (instead of 64 in the
+            original problem): </p>
+        <image style="block" src="../../webcontent/image399.gif"
+            alt="A large circle represents
+the entire population of products produced by the machine (following the repair). We want to find
+p for this population, which is the proportion of defective products. Our two hypotheses are H_0:
+p=.20, H_a: p&lt;.20. We create a sample of 400 products (represented by a smaller circle). We find
+that 78 are defective, so p-hat = 78/400 = .195"/>
+        <wb:inline idref="u4_m2_testprop10_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+            <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="331">
+                <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor10a.xml</param>
+                <param name="problem_name">_u5_m1_lbdtutor10a</param>
+            </flash>
+        -->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>From the background we know that there are <code>n=400, x=78</code>, and the
+                        null value is <code>p=0.20</code>. Here are the basic commands: </p>
+                    <ul style="none">
+                        <li><code>p =
+                                prop.test(x=78,n=400,p=0.20,alternative="less",conf.level=0.95,
+                                correct=FALSE);p</code></li>
+
+                    </ul>
+                    <p>To calculate <code>z</code>, enter the following command. (Since the sample
+                        proportion is less than <code>p = 0.2</code>, we know that z will be
+                        negative, so we take the negative square root.) </p>
+                    <ul style="none">
+                        <li><code>z = -sqrt(p$statistic);z</code></li>
+
+                    </ul>
+                    <p>The provided p-value is equivalent to the p-value we might find from the
+                        z-test we hand calculate for proportions.</p>
+
+                    <!--<p>To conduct the z-test for the population proportion p in R, enter the
+                    command:</p>
+                <code>p = prop.test(78,400,0.2,alternative="less",conf.level=0.95, correct=FALSE);
+                    p</code>
+                <p>To calculate z, enter the following command. (Since the sample proportion is less
+                        than p<sub>o</sub> = 0.2, we know that z will be negative, so we take the
+                        negative square root.)</p>
+                <code>z = -sqrt(p$statistic); z</code>-->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor10b_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="590">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor10b_r.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor10b_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p> Carry out the z-test using StatCrunch (instructions reviewed below)</p>
+                    <p>If summaries are given:</p>
+                    <ul>
+                        <li>Choose: Stat → Proportions → One sample → with summary </li>
+                        <li>Enter the number of successes and observations</li>
+                        <li>Select Hypothesis Test for p</li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than</li>
+                        <li>Choose the form of the alternative hypothesis</li>
+                        <li>Press Compute! </li>
+                    </ul>
+                    <p>If the raw data are given:</p>
+                    <ul>
+                        <li>Choose: Stat → Proportions → One sample → with data </li>
+                        <li>Values in: select column with sample data </li>
+                        <li>Success: specify the value that denotes success. </li>
+                        <li>Perform: select Hypothesis Test for p </li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Carry out the test using Minitab (instructions are reviewed below). </p>
+                    <p>Minitab instructions review (z-test for the population proportion p):</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1 Proportion</li>
+                        <li>Enter the data: <ul>
+                                <li>If you have the raw data in a Minitab worksheet, choose the
+                                    "Samples in columns" option, and enter the column containing the
+                                    data.</li>
+                                <li>If the data are summarized, enter the sample size, and how many
+                                    of the subjects have the characteristic of interest.</li>
+                            </ul>
+                        </li>
+                        <li>Click on "Options" <ul>
+                                <li>Next to "Test proportion", enter the null value, p<sub>o</sub>. </li>
+                                <li>Choose the relevant alternative.</li>
+                                <li>Check "Use this....normal distribution."</li>
+                            </ul>
+                        </li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                    <!--<wb:inline idref="u4_m2_testprop10_lbd_tutor2"/>-->
+                    <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="453">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor10b.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor10b</param>
+                </flash>
+            -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To conduct the z-test for the population proportion p in Excel, we first need
+                        to calculate <m:math display="inline">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math>, and to do this we remember that <m:math display="inline">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Now we can calculate the test statistic using <m:math
+                            display="inline">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi>p</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:msqrt>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                </m:msub>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                  </m:msub>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                            </m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mfrac>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. </p>
+                    <ul>
+                        <li>Once we have calculated our test statistic z, we find the probability
+                            that p is less than the test statistic z using the Excel formula <code
+                                style="inline">=NORM.S.DIST(z, cumulative)</code>, (put TRUE for
+                            cumulative), which in this case, is the p-value that we are looking for
+                            (i.e. there is no need to subtract from 1 this time). </li>
+                    </ul>
+
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To conduct the z-test for the population proportion p in Excel, we first need
+                        to calculate <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math>, and to do this we remember that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Now we can calculate the test statistic using <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi>p</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:msqrt>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                </m:msub>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                  </m:msub>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                            </m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mfrac>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. </p>
+                    <ul>
+                        <li>Once we have calculated our test statistic z, we find the probability
+                            that p is less than the test statistic z using the Excel formula <code
+                                style="inline">=NORMSDIST(z)</code>, which in this case, is the
+                            p-value that we are looking for (i.e. there is no need to subtract from
+                            1 this time).</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>One Sample z-test for the proportion (p)</em>
+                    </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/5:1-PropZTest</code>. </li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li>1-PropZTest </li>
+                        <li>p<sub>o</sub> : Enter the null value for the population proportion from
+                            the null hypothesis. </li>
+                        <li>x: Enter number of products that were defective. </li>
+                        <li>n: Enter the sample size. </li>
+                        <li>Choose the correct form of the alternative hypothesis (&#8800;, &lt;,
+                            &gt;) </li>
+                        <li>Arrow down and choose CALCULATE, then press ENTER. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image506.jpg"
+                                alt="TI calculator output: 1-PropZTest
+                p_0: .2
+                x: 78
+                n: 400
+                prop&ne;p_0     &lt;p_0     &gt;p_0
+                Calculate           Draw"
+                            />
+                        </li>
+                        <li>Arrow down and choose CALCULATE, then press ENTER. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testprop10_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <p>Consider now another variation on the same problem. Assume now that over a period of a
+            month following the repair, the company randomly selected 20,000 products, and found
+            that 3,900 of them were
+            <?oxy_comment_start author="mmyers" timestamp="20101127T155751-0500" comment="use subscripts for Ho and Ha in graphic"?>defective.<?oxy_comment_end?>
+        </p>
+        <image style="block" src="../../webcontent/image400.gif"
+            alt="A large circle represents
+the entire population of products produced by the machine (following the repair). We want to find
+p for this population, which is the proportion of defective products. Our two hypotheses are H_0:
+p=.20, H_a: p&lt;.20. We create a sample of 20000 products (represented by a smaller circle). We find
+that 3900 are defective, so p-hat = 3900/20000 = .195"/>
+        <p>Note that the sample proportion of defective products is the same as before , 0.195,
+            which as we established before, does not indicate any practically important reduction in
+            the proportion of defective products.</p>
+
+        <wb:inline idref="u4_m2_testprop10_lbd_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

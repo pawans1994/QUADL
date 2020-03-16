@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_matched_pairs5">
+<head>
+<title>Matched Pairs (5 of 8)</title>
+    <objref idref="carry_out_inferential_method_groups"/>
+</head>
+<body>
+  
+<section>
+<title>Step 3: Finding the p-value</title>
+<body>
+
+    <p>As a special case of the one-sample t-test, the null distribution of the paired t-test
+                    statistic is a t distribution (with n - 1 degrees of freedom), which is the
+                    distribution under which the p-values are calculated. We will let the software
+                    find the p-value for us, and in this case, Excel gives us a p-value of
+                    0.009.</p>
+    
+   <!--  RS 07/28/10  Generalized to eliminate alternatives
+       <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>As a special case of the one-sample t-test, the null distribution of the paired t-test statistic is a t distribution (with n-1 degrees of freedom), which is the distribution under which the p-values are calculated. We will let the software find the p-value for us, and in this case Excel gives us a p-value of 0.009.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>As a special case of the one-sample t-test, the null distribution of the paired t-test statistic is a t distribution (with n-1 degrees of freedom), which is the distribution under which the p-values are calculated. We will let the software find the p-value for us:</p>
+<image style="block" src="../webcontent/image174.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>As a special case of the one-sample t-test, the null distribution of the paired t-test statistic is a t distribution (with n-1 degrees of freedom), which is the distribution under which the p-values are calculated. We will let the software find the p-value for us, and in this case R gives us a p-value of 0.009.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>The small p-value tells us that there is very little chance of getting data like those observed
+                    (or even more extreme) if the null hypothesis were true. More specifically,
+                    there is less than a 1% chance (.009=.9%) of obtaining a test statistic of -2.58
+                    (or lower), assuming that 2 beers have no impact on reaction times.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Step 4: Conclusion in Context.</title>
+<body>
+<p>As usual, we draw our conclusion based on the p-value. If the p-value is small, there is a
+                    significant difference between what was observed in the sample and what was
+                    claimed in H<sub>o</sub>, so we reject H<sub>o</sub> and conclude that the
+                    categorical explanatory variable does affect the quantitative response variable
+                    as specified in H<sub>a</sub>. If the p-value is not small, we do not have
+                    enough statistical evidence to reject H<sub>o</sub>. In particular, if a cutoff
+                    probability, α (significance level), is specified, we reject H<sub>o</sub> if
+                    the p-value is less than α. Otherwise, we do not reject H<sub>o</sub>. </p>
+<p>In our example, the p-value is .009, indicating that the data provide enough evidence to reject
+                        H<sub>o</sub> and conclude that drinking two beers does slow the reaction
+                    times of drivers, and thus that drivers are impaired after drinking two
+                    beers.</p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+
+    <p>It is very important to pay attention to whether the two-sample t-test or the paired t-test
+                    is appropriate. In other words, being aware of the study design is extremely
+                    important. Consider our example. If we had not "caught" that this is a matched
+                    pairs design, and had analyzed the data as if the two samples were independent
+                    using the two-sample t-test, we would have obtained a p-value of 0.057.</p>
+    
+ <!--  RS 07/28/10  Generalized to eliminate alternatives
+     <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>It is very important to pay attention to whether the two-sample t-test or the paired t-test is appropriate. In other words, being aware of the study design in extremely important. Consider our example. If we did not "catch" that this is a matched pairs design, and had analyzed the data as if the two samples were independent using the two-sample t-test, we would have obtained a p-value of 0.057.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>It is very important to pay attention to whether the two-sample t-test or the paired t-test is appropriate. In other words, being aware of the study design in extremely important. Consider our example. If we did not "catch" that this is a matched pairs design, and had analyzed the data as if the two samples were independent using the two-sample t-test, the following output would have been obtained:</p>
+<image style="block" src="../webcontent/image175.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>It is very important to pay attention to whether the two-sample t-test or the paired t-test is appropriate. In other words, being aware of the study design in extremely important. Consider our example. If we did not "catch" that this is a matched pairs design, and had analyzed the data as if the two samples were independent using the two-sample t-test, we would have obtained a p-value of 0.057.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>Note that using this (wrong) method to analyze the data, and a significance level of .05, we would conclude that the data do not provide enough evidence for us to conclude that drivers are impaired after drinking two beers. This is an example of how using the wrong statistical method can lead you to wrong conclusions, which in this context can have very serious implications.</p>
+</body>
+</section>
+</body>
+</workbook_page>

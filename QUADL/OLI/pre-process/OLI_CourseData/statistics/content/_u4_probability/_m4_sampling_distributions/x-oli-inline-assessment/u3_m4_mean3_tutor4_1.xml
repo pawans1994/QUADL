@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_mean3_tutor4_1">
+   <title>Tutor</title>
+   <page>
+      <question id="q1">
+         <body>
+            <p>The mean of the sampling distribution of sample of means is <input_ref input="A"/> and
+               the standard deviation is <input_ref input="B"/>.</p>
+         </body>
+         <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">$52,000</choice>
+            <choice value="two">$54,000</choice>
+            
+         </fill_in_the_blank>
+         <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">625</choice>
+            <choice value="two">5,000</choice>
+            
+         </fill_in_the_blank>
+         
+         <part>
+            <response input="A" name="218" match="one">
+               <feedback>Incorrect. This is the mean for the sample, rather than the mean of
+                  the sample of means. Remember, according to the Central Limit Theorem, the mean
+                  has approximately a normal distribution with the same mean as the population;
+                  therefore, $54,000 is the mean of the distribution of the sample means.</feedback>
+            </response>
+            <response input="A" name="234" match="two" score="10">
+               <feedback>Correct. According to the Central Limit Theorem, the mean has
+                  approximately a normal distribution with the same mean as the population;
+                  therefore, $54,000 is the mean of the distribution of the sample means.</feedback>
+            </response>
+            <hint>You are trying to determine the mean and standard deviation for the sampling
+               distribution of means.</hint>
+            
+         </part>
+         <part>
+            <response input="B" name="218" match="one" score="10">
+               <feedback>Correct. According to the Central Limit Theorem, then, the mean has
+                  approximately a normal distribution with the same mean as the population, $54,000,
+                  and a standard deviation of: σ/square root (n) = 5000/square root (64) = 625,
+                  which can also look like this: <link
+                     href="javascript:loadImage('../webcontent/equation_1.png')">Click
+                     here</link>.</feedback>
+            </response>
+            <response input="B" name="234" match="two">
+               <feedback>Incorrect. It looks like you used the population standard
+                  deviation.</feedback>
+            </response>
+            <hint>You are trying to determine the mean and standard deviation for the sampling
+               distribution of means.</hint>
+            
+         </part>
+      </question>
+      
+     
+     
+   </page>
+   <page>
+      <question id="q2">
+         <body>
+            <p>The z score for solving this problem is <input_ref input="C"/>.</p>
+         </body>
+         <fill_in_the_blank id="C" shuffle="false">
+            <choice value="one">0.4</choice>
+            <choice value="two">−4</choice>
+            <choice value="three">3.2</choice>
+            <choice value="four">−3.2</choice>
+            
+         </fill_in_the_blank>
+         
+         
+         <part>
+            <response input="C" name="218" match="one">
+               <feedback>Incorrect. Remember, to obtain the z score, the mean of the sample
+                  means should be subtracted from the sample mean and then divide by the standard
+                  deviation from the sampling distribution of the sample means.</feedback>
+            </response>
+            <response input="C" name="234" match="two">
+               <feedback>Incorrect. Remember, to obtain the z score, divide by the
+                  standard deviation from the sampling distribution of the sample means.</feedback>
+            </response>
+            <response input="C" name="250" match="three">
+               <feedback>Incorrect. Remember, the mean of the sample means should be
+                  subtracted from the sample mean.</feedback>
+            </response>
+            <response input="C" name="266" match="four" score="10">
+               <feedback>Correct. The z-score of 52,000 is (52,000 − 54,000)/5000/√(64), which can also look like this: <link
+                     href="javascript:loadImage('../webcontent/equation_2.png')">Click
+                     here</link>.</feedback>
+            </response>
+            <hint>You are trying to figure out the z score using a sample mean, rather than a raw
+               score.</hint>
+            <hint>Since you are trying to figure out the z score using the sample mean, the
+               denominator would use the standard deviation of the sample means, instead of the
+               population standard deviation.</hint>
+            
+         </part>
+      </question>
+     
+   </page>
+   <page>
+      <question id="q3">
+         <body>
+            <p>What is the probability of that the mean annual salary of a random sample of 64
+               teachers from this state is less than $52,000?</p>
+         </body>
+         <multiple_choice id="D" shuffle="false">
+            <choice value="one">0.0007</choice>
+            <choice value="two">0.9993</choice>
+            <choice value="three">0.3446</choice>
+            <choice value="four">0.6554</choice>
+            
+         </multiple_choice>
+         <part>
+            <response input="D" match="one" score="10">
+               <feedback>Correct. The probability of the z score of −3.21 using the Normal Table is
+                  0.0007 or P(&lt;52,000) = P(z, −3.2) = (table) = 0.0007. Thus, we find that
+                  while it is probably quite common to find teachers in this state with an annual
+                  salary that is less than $52,000, it would be extremely unusual for the mean
+                  salary of a sample of 64 teachers to be less than $52,000. </feedback>
+            </response>
+            <response input="D" match="two">
+               <feedback>Incorrect. It looks like you found the probability for the z
+                  score of 3.21, instead of −3.21.</feedback>
+            </response>
+            <response input="D" match="three">
+               <feedback>Incorrect. It looks like you found the probability for the z
+                  score of −0.4.</feedback>
+            </response>
+            <response input="D" match="four">
+               <feedback>Incorrect. It looks like you found the probability for the z
+                  score of 0.4.</feedback>
+            </response>
+            <hint>You will need to use the Normal Table to determine the probability for the z score
+               found in step 2.</hint>
+         </part>
+      </question>
+     
+   </page>
+
+</assessment>

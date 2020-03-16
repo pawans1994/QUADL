@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop7_tutor2">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>This p-value is the probability of observing a test statistic <input_ref
+                        input="D"/> than <input_ref input="E"/>, </p> <p>assuming <input_ref input="F"
+                    />.</p>
+            </body>
+            <fill_in_the_blank id="D">
+                <choice value="one">as small as or smaller</choice>
+                <choice value="two">as large as or larger</choice>
+                <choice value="three">both as small as or smaller and as large as or larger</choice>
+            </fill_in_the_blank>
+            <numeric id="E" size="small"/>
+            <fill_in_the_blank id="F">
+                <choice value="one">H<sub>0</sub> is true.</choice>
+                <choice value="two">H<sub>a</sub> is true.</choice>
+            </fill_in_the_blank>
+            <part>
+                <response input="D" match="one" score="1">
+                    <feedback>Correct. The "&lt;" in H<sub>a</sub> tells us to look at test
+                        statistics smaller than the test statistic that summarizes the
+                        data.</feedback>
+                </response>
+                <response input="D" match="two">
+                    <feedback>Incorrect. Look at H<sub>a</sub> to determine
+                        this.</feedback>
+                </response>
+                <response input="D" match="three">
+                    <feedback>Incorrect. Look at H<sub>a</sub> to determine
+                        this.</feedback>
+                </response>
+                <hint>The "&lt;" in H<sub>a</sub> tells us to look at test
+                    statistics smaller than the test statistic that summarizes the
+                    data.</hint>
+            </part>
+            <part>
+                <response input="E" match="-1.21" score="1">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response input="E" match="*">
+                    <feedback>Incorrect. The observed test statistic is the z-value in
+                        the Minitab output.</feedback>
+                </response>
+                <hint>The observed test statistic is the z-value in
+                the Minitab output.</hint>
+                <hint>The observed test statistic is −1.21.</hint>
+            </part>
+            <part>
+                <response input="F" match="one" score="1">
+                    <feedback>Correct. Every hypothesis test is based on the assumption that
+                            H<sub>0</sub> is true.</feedback>
+                </response>
+                <response input="F" match="two">
+                    <feedback>Incorrect. Every hypothesis test is based on the
+                        assumption that H<sub>0</sub> is true.</feedback>
+                </response>
+                <hint>Every hypothesis test is based on the assumption that
+                    H<sub>0</sub> is true.</hint>
+            </part>
+        </question>
+    </page>
+  
+
+</assessment>

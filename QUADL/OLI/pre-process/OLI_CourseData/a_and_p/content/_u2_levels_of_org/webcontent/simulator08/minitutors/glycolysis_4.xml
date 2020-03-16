@@ -1,0 +1,67 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+       <item ident="glycolysis_4">
+         <presentation>
+           <material>
+             <mattext texttype="text/plain">Now we will investigate how the energy from
+energy releasing steps in captured in glycolysis.  As you can tell from the diagram, glycolysis contains three steps that show a large decrease in energy for the uncoupled reactions (left panel).  The energy from these reactions is captured instead of being released as heat.
+                         
+&lt;b&gt;What happens to the energy change for these reactions when comparing the uncoupled reactions to the coupled reactions (right)?&lt;/b&gt;</mattext></material>
+           <response_lid rcardinality="Single" ident="gly4_01">
+             <render_choice>
+               <response_label ident="Res1">
+                 <material>
+                   <mattext texttype="text/plain">Becomes even more negative</mattext></material></response_label>
+               <response_label ident="Res2">
+                 <material>
+                   <mattext texttype="text/plain">Stays about the same.</mattext></material></response_label>
+               <response_label ident="Res3">
+               <material>
+                 <mattext texttype="text/plain">Becomes less negative.</mattext></material></response_label>
+               </render_choice>
+           </response_lid>
+         </presentation>
+         <resprocessing>
+           <outcomes>
+             <decvar varname="SCORE" vartype="integer"/></outcomes>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="gly4_01">Res1</varequal>
+             </conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/>
+           </respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="gly4_02">Res2</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="gly4_03">Res3</varequal></conditionvar>
+             <setvar varname="SCORE">10</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+        </resprocessing>
+         <itemfeedback ident="hint">
+           <hint>
+              <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">Look at steps 6, 7, and 10</mattext></material>
+             </hintmaterial>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">The energies for uncoupled and coupled reactions are shown on the top after you select a step.</mattext></material>
+             </hintmaterial>
+            </hint>
+         </itemfeedback>
+         <itemfeedback ident="FeedBack1">
+           <material>
+             <mattext texttype="text/plain">Incorrect!  This would mean that additional energy is being provided to the reaction. </mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack2">
+           <material>
+             <mattext texttype="text/plain">Incorrect. If this were true, we could not capture energy from the pathway.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack3">
+           <material>
+             <mattext texttype="text/plain">Correct.  The energy drop becomes smaller with coupling, the released energy is being captured.</mattext></material></itemfeedback>
+        </item>
+     </questestinterop>

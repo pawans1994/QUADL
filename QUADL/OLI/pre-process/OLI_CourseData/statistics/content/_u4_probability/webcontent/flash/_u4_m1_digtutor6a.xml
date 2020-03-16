@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m1_digtutor6a" title="_u4_m1_digtutor6a">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">What is the probability that a patient taking this drug will not experience insomnia?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">0.14</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">0.86</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">0.74</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">0.26</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  Note that 0.14 is P(I), and you are asked to find P(not I). </mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Good Job!  Indeed, using the complement rule, P(not I)=1-P(I)=1-0.14=0.86.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. 0.26 is the probability that a patient does not experience headache, P(not H), and you are asked to find P(not I).</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. 0.26 is the probability that a patient experiences headache, P(H), and you are asked to find P(not I).</mattext></material></itemfeedback></item></questestinterop>

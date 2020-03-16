@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="select_compar_type_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_select_compar_type">
+        <!-- LO: select_compar_type -->
+        <body>
+            <p>A teacher is experimenting with a new computer-based instruction and conducts a study
+                to test its effectiveness. In which situation could the teacher use the two-sample
+                t-test for comparing two population means?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The teacher gives each student in the class a pretest. Then she
+                teaches a lesson using a computer program. Afterwards, she gives each student a
+                post-test. The teacher wants to compare test scores for each student to see whether
+                the data will show an improvement.</choice>
+            <choice value="B">The teacher randomly divides the class into two groups. One of the
+                groups receives computer-based instruction and the other group receives traditional
+                instruction without computers. After instruction, each student takes a test and the
+                teacher wants to compare the test scores of the two groups.</choice>
+            <choice value="C">The teacher uses a combination of traditional methods and
+                computer-based instruction. She asks students which they liked better. She wants to
+                determine if the majority prefer the computer-based instruction.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Since the same group of students was measured twice (once
+                    before and then after instruction), this is a case of matched pairs
+                    design.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since students were randomized to two different groups, the data
+                    obtained from this study should be analyzed using the two (independent) samples
+                    t-test.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The teacher collects data on the variable "liked computer-based
+                    instruction better" (yes/no). With this data, the teacher could test a
+                    hypothesis about a proportion.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_select_compar_type">
+        <!-- LO: select_compar_type -->
+        <body>
+            <p>The owner of a test prep company was interested in whether students who took the
+                company’s face to face test prep class did better on the GRE (a standardized test
+                required for admission to many graduate programs) than students who followed the
+                test prep company’s live online program. The live online test prep class met in an
+                online classroom with live video instruction for the same number of hours as the
+                face to face class. In which situation could the test prep company use the
+                two-sample t-test for comparing two population means?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The test prep company gives each student a pretest. Then each student
+                completes the live online test prep class. Afterwards, each student takes a
+                posttest. The test prep company wants to compare the pretest and posttest GRE
+                scores for each student to see whether the data will show an improvement.</choice>
+            <choice value="B">The test prep company randomly divides the students into two groups.
+                One of the groups receives the face to face test prep class and the other group
+                receives the live online test prep class. After completing their test prep course,
+                each student takes the GRE and the test prep company compares the test scores of the
+                two groups.</choice>
+            <choice value="C">The students take part of their GRE test prep course online and the
+                remaining part in the face to face method. The test prep company asks the students
+                which they liked better. The company wants to determine if the majority prefer the
+                online class.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Since the same group of students was measured twice (once
+                    before and then after instruction), this is a case of matched pairs
+                    design.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since students were randomized to two different groups, the data
+                    obtained from this study should be analyzed using the two (independent) samples
+                    t-test.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The test prep company collects data on the variable "liked
+                    online class better" (yes/no). With this data, the company could test a
+                    hypothesis about a proportion.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_summary1">
+<head>
+<title>Summary (Inference)</title>
+</head>
+<body>
+<p>This summary provides a quick recap of the big ideas you've learned in the inference section
+            (without going into any of the technical details). Therefore, this summary does not
+            provide complete coverage of the material and thus should be used only as a checklist or
+            a quick review of the "big ideas" before an exam.</p>
+<ul>
+<li>In the Inference unit, which is the last step in the "Big Picture," we use the evidence provided
+                by the data to infer about the relevant population.</li>
+<li>The inference could be about the <em>value of unknown parameters</em> in our population (mean,
+                proportion, difference between means, etc.) or about the existence of a certain
+                <em>relationship between two variables</em> in the population.</li>
+<li>We discussed 3 forms of inference: point estimation, interval estimation and hypotheses testing.</li></ul>
+<section>
+    <title>Point Estimation</title>
+    <body>
+    
+    <ol>
+<li><em>Idea:</em> estimating an unknown parameter with a single value (that was obtained from the observed
+                                data).</li>
+<li>We typically estimate:
+					<ul>
+<li>the population mean <em>μ</em> by the sample mean <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math>  </li>
+<li>the population proportion <em>p</em> by the sample proportion <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi> p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:math></li>
+					    <li>the population standard deviation <em>σ</em> and the population variance 
+					        <m:math overflow="scroll">
+					            <m:mrow>
+					                <m:msup>
+					                    <m:mi>σ</m:mi>
+					                    <m:mn>2</m:mn>
+					                </m:msup>
+					            </m:mrow>
+					        </m:math> by the sample standard deviation <em>s</em>
+					    and the sample variance <m:math overflow="scroll">
+<m:mrow>
+<m:msup>
+<m:mi>s</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:math></li>
+      </ul>
+    Note that the last two parameters (σ and   <m:math overflow="scroll">
+        <m:mrow>
+            <m:msup>
+                <m:mi>σ</m:mi>
+                <m:mn>2</m:mn>
+            </m:msup>
+        </m:mrow>
+    </m:math>) are not covered in this course.</li>
+
+<li>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math>, <m:math overflow="scroll">
+    <m:mrow>
+        <m:mover>
+            <m:mi> p</m:mi>
+            <m:mo stretchy="true">ˆ</m:mo>
+        </m:mover>
+    </m:mrow>
+</m:math>,  s, and <m:math overflow="scroll">
+<m:mrow>
+<m:msup>
+<m:mi>s</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:math> are unbiased estimators for μ, p, σ, and <m:math overflow="scroll">
+<m:mrow>
+<m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:math>, respectively. Their precision increases with the sample size.</li>
+</ol>
+</body></section>
+<section>
+    <title>Interval Estimation</title>
+    <body>
+    
+				<ol>
+<li><p><em>Idea:</em> Estimating an unknown parameter with an interval of plausible values and attaching to the
+                                interval our level of confidence that it indeed covers the true
+                                value of the parameter. Such an interval is therefore called a
+                                confidence interval.</p></li>
+<li><p>The general form of confidence intervals is:
+				
+				<m:math overflow="scroll">
+<m:mrow>
+<m:mi>point estimate
+									</m:mi>
+<m:mo>±</m:mo>
+<m:mi>margin of error</m:mi>
+</m:mrow>
+</m:math>
+                  
+                                                                 
+   
+  where the margin of error represents the maximum estimation error for a given level of confidence, and is the product of the confidence
+   multiplier and the standard deviation (or standard error) of the point estimator.</p></li>
+<li><p>Since the margin of error (and therefore the width of the confidence interval) increases with
+                                the level of confidence, there is a trade-off between the level of
+                                confidence and the precision of the interval estimation. The price
+                                you have to pay for more confidence is less precision (a wider
+                                confidence interval) and vice versa.</p></li>
+<li><p>A way to get better precision for a given level of confidence is to increase the sample size. 
+    Sample size calculations can be carried out in order to determine the sample size needed for a desired margin of error 
+    at a certain level of confidence.  We should keep in mind, though, that in practice, larger sample sizes are not always 
+    available.</p></li>
+<li><p>For the confidence interval for the population mean, μ, we distinguished between: </p>
+    <ul>
+                                    <li><p>the case where the population standard deviation <em>σ is known</em>
+                                        (in which case we use the z* confidence multipliers), and </p></li>
+                                    <li><p>the case where <em>σ is unknown</em> and is replaced by the sample
+                                        standard deviation S (in which case we use the t* confidence
+                                        multipliers, and rely on software to do the calculations).
+                                    </p></li>
+    </ul> 
+    
+    <p>For large sample sizes, though, and for a given level of
+                                confidence, z* is approximately equal to t*. In either case, we
+                                can safely use the confidence interval as long as the population is
+                                large and/or the sample size is large (&gt; 30).</p></li>
+<li><p>The confidence interval for the population proportion p is the primary statistical method used in the analysis of polls, 
+    and can be safely used as long as  <m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>⋅</m:mo>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>≥</m:mo>
+<m:mn>10</m:mn>
+</m:mrow>
+</m:math> and <m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>⋅</m:mo>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:mfenced>
+<m:mo>≥</m:mo>
+<m:mn>10</m:mn>
+</m:mrow>
+</m:math>.
+</p></li>
+</ol>
+    </body></section>
+    <section>
+        <title>Hypothesis Testing</title>
+        <body>
+    
+    <ol>
+                            <li><p><em>Idea:</em> Unlike point and interval estimation, in which the goal is
+                                estimating an unknown parameter, in hypothesis testing we are
+                                assessing the evidence provided by the data in favor or against some
+                                claim about the population.</p> </li>
+                            <li><p>In practice, we have two competing hypotheses, H<sub>o</sub>, which
+                                is challenged by H<sub>a</sub>, and we are assessing whether or not
+                                the data provide evidence (beyond a reasonable doubt) that we can
+                                reject H<sub>o</sub> in favor of H<sub>a</sub>. If they do, we say
+                                that the results are significant; otherwise, if H<sub>o</sub> cannot
+                                be rejected, we say that the results are not significant.</p></li>
+                            <li><p>H<sub>o</sub> and H<sub>a</sub> are two claims about the population.
+                                In the one variable case, these claims are about the value of a
+                                parameter in the population. In inference about relationships,
+                                    H<sub>o</sub> and H<sub>a</sub> are about the
+                                existence/nonexistence of a certain relationship between the two
+                                variables. </p>
+                                <p>Recall that in case C→Q the existence/nonexistence of
+                                the relationship is stated in with μ<sub>1</sub> - μ<sub>2</sub>, μ<sub>d</sub>, or μ<sub>1</sub>, 
+                                μ<sub>2</sub>, μ<sub>3</sub>, ... , μ<sub>k</sub>. In
+                                case C→C and Q→Q, the relationship is stated in words.</p>
+                            </li>
+                            <li><p>After the hypotheses have been formulated, data are collected, and
+                                conditions for use are checked, the evidence in the data is assessed
+                                by finding the p-value of the test, the probability of getting data
+                                like those observed (or even more extreme) if H<sub>o</sub> were
+                                true. If the p-value is small (smaller than some cut-off called the
+                                significance level, typically set at .05), meaning that it would be
+                                unlikely to get data like those observed if H<sub>o</sub> were true,
+                                we reject H<sub>o</sub> in favor of H<sub>a</sub>. Otherwise, if the
+                                p-value &gt; 0.05, we cannot reject H<sub>o</sub>. Note that 0.05
+                                represents our "reasonable doubt." The p-value can be viewed as a
+                                measure of the evidence in the data against H<sub>o</sub>, where the
+                                smaller the p-value, the larger the evidence against
+                                H<sub>o</sub>.</p></li>
+                            <li><p>In practice, to find the p-value we use the test statistic, a
+                                summary of the data which is some measure of "how far" or "how
+                                different" the observed data are from what is claimed in
+                                    H<sub>o</sub>. The p-value of a test is the probability of
+                                getting a test statistic (based on the data) like that observed (or
+                                even more extreme), if H<sub>o</sub> were true. The p-value is
+                                therefore calculated using the sampling distribution of the test
+                                statistic when H<sub>o</sub> is true ( called the null
+                                distribution).</p></li>
+                            <li><p>Conclusions are then based on the p-value, and should always be
+                                stated in context.</p></li>
+                        </ol>
+                   
+
+</body></section></body>
+</workbook_page>

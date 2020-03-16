@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u4_m3_checkpoint4" max_attempts="3" recommended_attempts="1">
+    <title>Random Variables Checkpoint 4</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u4_m3_checkpoint4.pdf">Solution Set</link>.</p>
+    </content>-->
+    <section id="assess_06_colorblind">
+        <multiple_choice id="prob3-9" select="single">
+            <body>
+                <p>Color blindness is any abnormality of the color vision system that causes a
+                    person to see colors differently than most people or to have difficulty
+                    distinguishing among certain colors (www.visionrx.xom). </p>
+                <p>Color blindness is gender-based, with the majority of sufferers being males. </p>
+                <p>Roughly 8% of white males have some form of color blindness, while the incidence
+                    among white females is only 1%. </p>
+                <p>A random sample of 20 white males and 40 white females was chosen. </p>
+                <p>Let <em style="bold">X</em> be the number of males (out of the 20) who are color
+                    blind. </p>
+                <p>Let <em style="bold">Y</em> be the number of females (out of the 40) who are
+                    color blind. </p>
+                <p>Let <em style="bold">Z</em> be the total number of color blind individuals in the
+                    sample (males and females together). </p>
+                <p>Which of the following is true regarding the random variables X and Y?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">Both X and Y can be well-approximated by normal random variables. </choice>
+                <choice value="B">Only X can be well-approximated by a normal random variable. </choice>
+                <choice value="C">Only Y can be well-approximated by a normal random variable. </choice>
+                <choice value="D">Neither X nor Y can be well-approximated by a normal random
+                    variable. </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Remember that a binomial random
+                        variable with parameters n and p can be well-approximated by a normal random
+                        variable if both n * p &#8805; 10 and n * (1 - p) &#8805; 10.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. Remember that a binomial random variable with parameters n
+                        and p can be well-approximated by a normal random variable if both n * p
+                        &#8805; 10 and n * (1 - p) &#8805; 10. For X, n = 20, p = 0.08, and 20 *
+                        0.08 &lt; 10 → cannot be well-approximated by a normal random variable.
+                    </feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. Remember that a binomial random variable with parameters n
+                        and p can be well-approximated by a normal random variable if both n * p
+                        &#8805; 10 and n * (1 - p) &#8805; 10. For Y, n = 40, and p = 0.01, and 40 *
+                        0.01 &lt; 10 → cannot be well-approximated by a normal random
+                        variable.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. A binomial random variable will be well-approximated by a
+                        normal random variable if the following two conditions hold: n * p &#8805;
+                        10 and n * (1 - p) &#8805; 10. In our case, for <em style="bold">X</em>, n =
+                        20, p = 0.08, and 20 * 0.08 &#60; 10 → cannot be well-approximated by a
+                        normal random variable. For <em style="bold">Y</em>, n = 40, and p = 0.01,
+                        and 40 * 0.01 &#60; 10 → cannot be well-approximated by a normal random
+                        variable. </feedback>
+                </response>
+            </part>
+        </multiple_choice>
+    </section>
+    <section id="assess_06_examscores">
+        <multiple_choice id="prob3-10" select="single">
+            <body>
+                <p>Suppose the scores on an exam are normally distributed with a mean &#x3BC; = 75
+                    points, and standard deviation &#x3C3; = 8 points. </p>
+                <p>The instructor wanted to "pass" anyone who scored above 69. What proportion of
+                    exams will have passing scores?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">0.1587</choice>
+                <choice value="B">0.75 </choice>
+                <choice value="C">0.2266 </choice>
+                <choice value="D">0.7734 </choice>
+                <choice value="E">-0.75 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. This is the proportion of exams that are below 1 standard
+                        deviation from the mean (exam score = 67, z = -1.00). You want to find the
+                        proportion of exams that have a score above 69 points. This is equivalent to
+                        finding the probability that a given exam has a score of at least 69
+                        points.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It appears you switched μ and the sample mean in
+                        calculating the z-score for an exam score of 69 (it should be 69 - 75
+                        instead of 75 - 69). Additionally, this is a z-score, but you want to find
+                        the proportion of exams that have a score above 69 points. This is
+                        equivalent to finding the probability that a given exam has a score of at
+                        least 69 points.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion of exams that
+                        do not have a score below 69 points. You want to find the proportion of
+                        exams that have scores below 69 points.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. Let the random variable <em style="bold">X</em> represent the
+                        score on the exam. We are given that <em style="bold">X</em> is normal with
+                        a mean of 75 and standard deviation of 8, and we need to find P(X &#60; 69).
+                            <image style="block" src="../webcontent/6_formula4.gif"/>
+                    </feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. The z-score for 69 points is -0.75. However, this is not
+                        the proportion of exams that passed. Remember that a proportion can’t be
+                        negative. You should find P(<em style="bold">Z</em> &gt; -0.75).</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob3-11" select="single">
+            <body>
+                <p>Suppose the scores on an exam are normally distributed with a mean &#x3BC; = 75
+                    points and standard deviation &#x3C3; = 8 points. </p>
+                <p>What is the exam score for an exam whose z-score is 1.25?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">65 </choice>
+                <choice value="B">75 </choice>
+                <choice value="C">85 </choice>
+                <choice value="D">0.8944 </choice>
+                <choice value="E">0.1056 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Since the z-score is positive, the exam score associated
+                        with this z-score should be greater than the mean exam score.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. This is the mean exam score which as a z-score of 0. Since
+                        the z-score is positive, the exam score associated with this z-score should
+                        be greater than the mean exam score.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. A z-score of 1.25 means that the actual exam score is 1.25
+                        standard deviations above the mean, and therefore the exam score we are
+                        looking for is: mean + 1.25 * SD = 75 + 1.25 * 8 = 85. </feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion of exams that
+                        have an associated z-score of at most 1.25. However, you should find the
+                        exam score associated with a z-score of 1.25.</feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion of exams that
+                        have an associated z-score of at least 1.25. However, you should find the
+                        exam score associated with a z-score of 1.25.</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <numeric id="prob3-12">
+            <body>
+                <p>Suppose the scores on an exam are normally distributed with a mean &#x3BC; = 75
+                    points and standard deviation &#x3C3; = 8 points. </p>
+                <p>Suppose that the top 4% of the exams will be given an A+. In order to be given an A+, an exam must earn at least what score? Report your
+                    answer in whole numbers.</p>
+                <p><input_ref input="A"/></p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"/>
+            </input>
+            <part>
+                <response input="A" match="89" score="10">
+                    <feedback>Correct. We need to find the exam score such that the probability of
+                        getting a score above it is 0.04. Equivalently, we need to find the exam
+                        score such that the probability of getting a score below it is 1 – 0.04 =
+                        0.96. The z-score with a probability closest to 0.96 (which is 0.9599) is
+                        1.75. This means that the exam score that we are looking for is 1.75 * SD
+                        above the mean, and therefore is 75 + 1.75 * SD = 75 + 14 = 89.</feedback>
+                </response>
+                <response input="A" match="77" score="0">
+                    <feedback>Incorrect. It seems that you have found the minimum exam score in
+                        order for an exam to be in the top 40% of all exam scores. However, you
+                        should find the minimum exam score that would allow an exam to earn an
+                        A+.</feedback>
+                </response>
+                <response input="A" match="0.516" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion of exams that
+                        have a score of at most 79 points. However, you should find the minimum exam
+                        score that would allow an exam to earn an A+.</feedback>
+                </response>
+                <response input="A" match="0.516" score="0">
+                    <feedback>Incorrect. You need to find the exam score such that the probability
+                        of getting a score above it is 0.04. Equivalently, you need to find the exam
+                        score such that the probability of getting a score below it is 1 – 0.04 =
+                        0.96. Determine the z-score that has a probability closest to 0.96. The exam
+                        score that you are looking for is μ + z(σ).</feedback>
+                </response>
+            </part>
+        </numeric>
+    </section>
+</assessment>

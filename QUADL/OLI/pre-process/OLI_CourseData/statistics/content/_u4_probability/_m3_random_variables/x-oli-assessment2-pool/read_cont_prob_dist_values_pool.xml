@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="read_cont_prob_dist_values_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_read_cont_prob_dist_values">
+        <body>
+            <p>The following histogram displays the distribution of battery life (in hours) for a
+                certain battery model used in cell phones:</p>
+            <image style="block" src="../webcontent/read_cont_prob_dist_values_pool_image1.gif" />
+            <p>Suppose that battery life is a normal random variable with μ = 8 and σ = 1.2. Using
+                the standard deviation rule, what is the probability that a randomly chosen battery
+                will last between 6.8 and 9.2 hours?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.50</choice>
+            <choice value="B">0.68</choice>
+            <choice value="C">0.95</choice>
+            <choice value="D">0.997</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last less
+                    than 8 hours. Determine how many standard deviations away from the mean the
+                    value 6.8 and 9.2 are and then use the standard deviation rule to determine the
+                    probability.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The given range 6.8 to 9.2 is within 1 standard deviation of the
+                    mean, so the probability battery life will lie in this range is 0.68.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last between
+                    5.6 and 10.4 hours. Determine how many standard deviations away from the mean
+                    the value 6.8 and 9.2 are and then use the standard deviation rule to determine
+                    the probability.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last between
+                    4.4 and 11.6 hours. Determine how many standard deviations away from the mean
+                    the value 6.8 and 9.2 are and then use the standard deviation rule to determine
+                    the probability.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_read_cont_prob_dist_values">
+        <body><p>The following histogram displays the distribution of battery life (in hours) for a
+            certain battery model used in cell phones:</p>
+            <image style="block" src="../webcontent/read_cont_prob_dist_values_pool_image1.gif" />
+            <p>Suppose that battery life is a normal random variable with μ = 8 and σ = 1.2. How
+                likely is it that a randomly chosen battery lasts longer than 10.4 hours?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.50</choice>
+            <choice value="B">0.16</choice>
+            <choice value="C">0.05</choice>
+            <choice value="D">0.025</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last less
+                    than 8 hours. Determine how many standard deviations away from the mean the
+                    value 10.4 is and then determine what probability lies above this
+                    value.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last less
+                    than 5.6 hours. Determine how many standard deviations away from the mean the
+                    value 10.4 is and then determine what probability lies above this
+                    value.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the probability that a chosen battery will last longer
+                    than 10.4 hours or less than 5.6 hours. It appears you forgot to divide the
+                    probability by 2. Determine how many standard deviations away from the mean the
+                    value 10.4 is and then determine what probability lies <em style="italic">above
+                        this value</em>.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. 10.4 is 2 standard deviations above the mean of 8. To calculate
+                    probability above this point: 1 − 0.95 = 0.05/2 = 0.025.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

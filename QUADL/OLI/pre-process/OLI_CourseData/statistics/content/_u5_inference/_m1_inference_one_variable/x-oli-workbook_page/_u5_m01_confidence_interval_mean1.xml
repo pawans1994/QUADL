@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_mean1">
+    <head>
+        <title>Confidence Intervals for the Population Mean (1 of 8)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+    <body>
+        <section>
+            <title>Overview</title>
+            <body>
+                <p>As we mentioned in the introduction to interval estimation, we start by
+                    discussing interval estimation for the population mean μ. Here is a quick
+                    overview of how we introduce this topic.</p>
+                <ul>
+                    <li>Learn how a 95% confidence interval for the population mean μ is constructed
+                        and interpreted.</li>
+                    <li>Generalize to confidence intervals with other levels of confidence (for
+                        example, what if we want a 99% confidence interval?).</li>
+                    <li>Understand more broadly the structure of a confidence interval and the
+                        importance of the margin of error.</li>
+                    <li>Understand how the precision of interval estimation is affected by the
+                        confidence level and sample size.</li>
+                    <li>Learn under which conditions we can safely use the methods that are
+                        introduced in this section.</li>
+                </ul>
+
+                <!--<p>As the introduction mentioned, we'll start our discussion on interval estimation with
+            interval estimation for the population mean μ. We'll start by showing how a 95%
+            confidence interval is constructed, and later generalize to other levels of confidence.
+            We'll also discuss practical issues related to interval estimation.</p>-->
+                <p>Recall the IQ example:</p>
+            </body>
+        </section>
+        <example>
+
+            <p>Suppose that we are interested in studying the IQ levels of students at Smart
+                University (SU). In particular (since IQ level is a quantitative variable), we are
+                interested in estimating μ, the mean IQ level of all the students at SU.</p>
+            <p>We will assume that from past research on IQ scores in different universities, it is
+                known that the IQ standard deviation in such populations is <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>15</m:mn>
+                    </m:mrow>
+                </m:math>. In order to estimate μ , a random sample of 100 SU students was chosen,
+                and their (sample) mean IQ level is calculated (let's not assume, for now, that the
+                value of this sample mean is 115, as before).</p>
+            <p>
+                <image style="block" src="../webcontent/image033.gif"
+                    alt="A large circle represents
+the Population of all Students at SU. We are interested in the variable IQ, and the unknown parameter
+is &mu;, the population mean IQ level. In addition, we know that &sigma; = 15. From this population
+we create a sample of size n=100, represented by a smaller circle. In this sample, we need to find 
+x bar "
+                />We will now show the rationale behind constructing a 95% confidence interval for
+                the population mean μ.</p>
+            <p>* We learned in the "Sampling Distributions" module of probability that according to
+                the central limit theorem, the sampling distribution of the sample mean <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>X</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math> is approximately normal with a mean of μ and standard deviation of <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:mfrac>
+                            <m:mi mathvariant="normal">σ</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mrow>
+                </m:math>. In our example, then, (where <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>15</m:mn>
+                    </m:mrow>
+                </m:math> and n=100), the possible values of <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>X</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>, the sample mean IQ level of 100 randomly chosen students, is
+                approximately normal, with mean μ and standard deviation <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mfrac>
+                            <m:mn>15</m:mn>
+                            <m:msqrt>
+                                <m:mn>100</m:mn>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>5</m:mn>
+                    </m:mrow>
+                </m:math>.</p>
+            <p>* Next, we recall and apply the Standard Deviation Rule for the normal distribution,
+                and in particular its second part:</p>
+            <p> There is a 95% chance that the sample mean we get in our sample falls within 2 * 1.5
+                = 3 of μ.</p>
+
+            <image style="block" src="../webcontent/2_iq.png" height="350"
+                alt="A distribution curve with
+a horizontal axis labeled &quot;X bar.&quot; The curve is centered at X-bar=&mu;, and marked on
+the axis is &mu;+3 and &mu;-3. There is a 95% chance that any x-bar will fall between &mu;-3 and
+&mu;+3."/>
+            <p>* Obviously, if there is a certain distance between the sample mean and the
+                population mean, we can describe that distance by starting at either value. So, if
+                the sample mean (<m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>) falls within a certain distance of the population mean μ, then the
+                population mean μ falls within the same distance of the sample mean.</p>
+            <p>Therefore, the statement, "There is a 95% <em>chance</em> that the <em>sample</em>
+                mean <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math> falls within 3 units of μ" can be rephrased as: "We are 95%
+                    <em>confident</em> that the <em>population</em> mean μ falls within 3 units of
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>."</p>
+
+            <p>So, if we happen to get a sample mean of <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                    </m:mrow>
+                </m:math>, then we are 95% sure that μ falls within 3 of 115, or in other words that
+                μ is covered by the interval (115 - 3, 115 + 3) = (112,118).</p>
+            <p>(On later pages, we will use similar reasoning to develop a general formula for a
+                confidence interval.)</p>
+        </example>
+
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Note that the first phrasing is about <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, which is a random variable; that's why it makes sense to use
+                    probability language. But the second phrasing is about μ, which is a parameter,
+                    and thus is a "fixed" value that doesn’t change, and that's why we shouldn’t use
+                    probability language to discuss it. This point will become clearer after you do
+                    the activities on the next page. </p>
+
+            </body>
+        </section>
+    </body>
+</workbook_page>

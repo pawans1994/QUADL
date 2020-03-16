@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_interval_estimation1">
+<head>
+<title>Interval Estimation</title>
+    <objref idref="explain_confidence_interval"/>
+</head>
+<body>
+   
+<p>Point estimation is simple and
+            intuitive<?oxy_insert_start author="mmyers" timestamp="20101123T105238-0500"?>,<?oxy_insert_end?>
+            but also a bit problematic. Here is why:</p>
+<p>When we estimate, say, μ by the sample mean <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, we are almost guaranteed to make some kind of error. Even though we know that
+            the values of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> fall around
+            μ<?oxy_insert_start author="mmyers" timestamp="20101123T105256-0500"?>,<?oxy_insert_end?>
+            it is very unlikely
+            <?oxy_insert_start author="mmyers" timestamp="20101123T105302-0500"?>that
+            <?oxy_insert_end?>the value of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> will fall exactly at μ .</p>
+<p>Given that such errors are a fact of life for point estimates (by the mere fact that we are
+            basing our estimate on one sample that is a small fraction of the population), these
+            estimates are in themselves of limited usefulness, unless we are able to quantify the
+            extent of the estimation error. Interval estimation addresses this issue. The idea
+            behind <em>interval estimation</em> is,
+            therefore<?oxy_insert_start author="mmyers" timestamp="20101123T105350-0500"?>,<?oxy_insert_end?>
+            to enhance the simple point estimates by supplying information about the size of the
+            error attached.<em/>
+        </p>
+<p>In this
+            introduction<?oxy_insert_start author="mmyers" timestamp="20101123T105421-0500"?>,<?oxy_insert_end?>
+            we'll provide examples that will give you a solid intuition about the basic idea behind
+            interval estimation.</p>
+<example>
+
+<p>Consider the example that we discussed in the point estimation section:</p>
+<p>Suppose that we are interested in studying the IQ levels of students in a Smart University (SU).
+                In particular (since IQ level is a quantitative variable), we are interested in
+                estimating μ, the mean IQ level of all the students in SU. A random sample of 100 SU
+                students was chosen, and their (sample) mean IQ level was found to be <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                    </m:mrow>
+                </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T105511-0500"?>.<?oxy_insert_end?>
+            </p>
+<p>.<image style="block" src="../webcontent/image029.gif" alt="A large circle represents the
+Population of all Students at SU. We are interested in the variable IQ, and the parameter is &mu;,
+the population mean IQ level. From this population we create a sample of size n=100, represented by
+a smaller circle. In this sample, we find that x bar is 115."/>
+</p>
+<p>In point estimation we used <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                    </m:mrow>
+                </m:math> as the point estimate for μ. However, we had no
+                idea<?oxy_delete author="mmyers" timestamp="20101123T105535-0500" content="s"?> of
+                what
+                <?oxy_delete author="mmyers" timestamp="20101123T105540-0500" content="is "?>the
+                estimation error involved in such an
+                estimation<?oxy_insert_start author="mmyers" timestamp="20101123T105548-0500"?>
+                might be<?oxy_insert_end?>. Interval estimation takes point estimation a step
+                further and says something like:</p>
+<p>"I am 95% confident that by using the point estimate <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                    </m:mrow>
+                </m:math> to estimate μ, I am off by no more than 3 IQ points. In other words, I am
+                95% confident that μ is within 3 of 115, or between 112 (115<?oxy_insert_start author="mmyers" timestamp="20101123T105615-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101123T105616-0500"?>
+                <?oxy_insert_end?>3) and 118 (115<?oxy_insert_start author="mmyers" timestamp="20101123T105618-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101123T105618-0500"?>
+                <?oxy_insert_end?>3)."</p>
+<p>Yet another way to say the same thing is: I am 95% confident that μ is somewhere in (or covered
+                by) the interval (112,118). (<em>Comment:</em> At this point you should not worry
+                about, or try to figure
+                out<?oxy_insert_start author="mmyers" timestamp="20101123T105859-0500"?>,<?oxy_insert_end?>
+                how we got these numbers. We'll do that later. All we want to do here is make sure
+                you understand the idea.)</p>
+<p>Note that while point estimation provided just one number as an estimate for μ (115), interval
+                estimation provides a whole interval of "plausible values" for μ (between 112 and
+                118), and <?oxy_insert_start author="mmyers" timestamp="20101123T105950-0500"?>also
+                <?oxy_insert_end?>attaches the level of our confidence that this interval indeed
+                includes the value of μ
+                <?oxy_insert_start author="mmyers" timestamp="20101123T110009-0500"?>to our
+                estimation <?oxy_insert_end?>(in our example, 95% confidence). The interval
+                (112,118) is therefore called "a 95% confidence interval for μ."</p>
+</example>
+<p>Let's look at another example:</p>
+<example>
+
+<p>Let's consider the second example from the point estimation section.</p>
+<p>Suppose that we are interested in the opinions of U.S. adults regarding legalizing the use of marijuana. In particular, we are interested in the parameter p, the proportion of U.S. adults who believe marijuana should be legalized.</p>
+<p>Suppose a poll of
+                1<?oxy_insert_start author="mmyers" timestamp="20101123T110147-0500"?>,<?oxy_insert_end?>000
+                U.S. adults finds that 560 of them believe marijuana should be legalized.</p>
+<image style="block" src="../webcontent/image030.gif" alt="A large circle represents the population
+of all US Adults. We are interested in the parameter p, the proportion who believe marijuana
+should be legalized. From this population we create a sample of size n=1000, represented by a
+smaller circle. In this sample, we find that p hat is .56 ."/>
+<p>If we wanted to estimate p, the population proportion, by a single number based on the sample, it would make intuitive sense to use the corresponding quantity in the sample, the sample proportion <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mn>560</m:mn>
+<m:mn>1000</m:mn>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>56</m:mn>
+</m:mrow>
+</m:math>.</p>
+<p>Interval estimation would take this a step further and say something like:</p>
+<p>"I am 90% sure that by using .56 to estimate the true population proportion, p, I am off by (or,
+                I have an error of) no more than .03 (or
+                3<?oxy_insert_start author="mmyers" timestamp="20101123T110228-0500"?>
+                percentage<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T110226-0500" content="%"?>
+                points). In other words, I am 90% confident that the actual value of p is somewhere
+                between .53 (.56<?oxy_insert_start author="mmyers" timestamp="20101123T110239-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101123T110239-0500"?>
+                <?oxy_insert_end?>.03) and .59 (.56<?oxy_insert_start author="mmyers" timestamp="20101123T110241-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101123T110242-0500"?>
+                <?oxy_insert_end?>.03)." </p>
+<p>Yet another way of saying this is: "I am 90% confident that p is covered by the interval (.53,
+                .59)."</p>
+<p>In this
+                example<?oxy_insert_start author="mmyers" timestamp="20101123T110333-0500"?>,<?oxy_insert_end?>
+                (.53, .59) is a 90% confidence interval for p.</p>
+</example>
+<section>
+<title>Let's summarize</title>
+<body>
+<p>The two examples showed us that the idea behind interval estimation is, instead of providing just
+                    one number for estimating an unknown parameter of interest, to provide an
+                    interval of plausible values of the parameter
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T110447-0500"?>plus<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T110446-0500" content="+"?>
+                    a level of confidence that the value of the parameter is covered by this
+                    interval.</p>
+<p>We are now going to go into more
+                    detail<?oxy_delete author="mmyers" timestamp="20101123T110503-0500" content="s"?>
+                    and learn how these confidence intervals are created. As you'll see, the ideas
+                    that were developed in the "Sampling Distributions" module of the Probability
+                    unit will, again, be very important (as they were in point estimation).</p>
+<p>We'll start by discussing confidence intervals for the population mean μ, and later discuss confidence intervals for the population proportion p.</p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

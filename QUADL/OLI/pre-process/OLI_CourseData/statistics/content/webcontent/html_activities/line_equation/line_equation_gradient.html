@@ -1,0 +1,54 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="line_equation_gradient.js"></script>
+  <style>
+    <!--Hacks for proper iframe responsive support-->
+    body {
+      width: 1px;
+      min-width: 100%;
+    }
+    input[type=range].vertical {
+      margin-left: -80px;
+      margin-top: 162px;
+      width: 300px;
+      transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      position: absolute;
+    }
+
+    svg {
+      margin-left: 90px;
+      font: 10px sans-serif;
+      margin-top: 8px;
+    }
+    .grid .tick {
+      stroke: lightgrey;
+      opacity: 0.7;
+    }
+    .grid path {
+      stroke-width: 0;
+    }
+    .axis {
+      shape-rendering: crispEdges;
+    }
+    .axis line {
+      fill: none;
+      shape-rendering: crispEdges;
+    }
+    .y.axis line, .y.axis path {
+      fill: none;
+      stroke: lightgrey;
+    }
+    #slope {
+      margin-left: -150px;
+    }
+  </style>
+</head>
+<body>
+  <input type='range' class='vertical' id='intercept' type='range' min='0' max='5' step='.01'/>
+  <svg class='graph'/>
+  <input type='range' class='vertical' id='gradient' type='range' min='-2' max='2' step='.01'/>
+</body>
+</html>

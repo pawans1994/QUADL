@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_bridge1">
+    <head>
+        <title>Random Variables (1 of 3)</title>
+        <objref idref="use_probability_distributions"/>
+    </head>
+    <body>
+      
+        <section>
+            <title>Probability Distribution for Discrete Random Variables</title>
+            <body>
+                <p>In this section, we will work with probability distributions for discrete random
+                    variables. Here is an example: </p>
+            </body>
+        </section>
+        <example>
+            <p>Consider the random variable “The number of times a student changes major.” </p>
+            <p>(For convenience, it is common practice to say: Let X be the random variable “The
+                number of changes in major,” or “X = number of changes in major” so that from this
+                point we can simply refer to X, with the understanding of what it represents.). </p>
+            <p>Here is the probability distribution of (or, a probability model for) the random
+                variable X: </p>
+            <image style="block" src="../webcontent/image001.png" alt="Here is the distribution data
+given in &quot;X=# changes in major: Probability for that #&quot;:
+             0: 0.135;
+             1: 0.271;
+             2: 0.271;
+             3: 0.180;
+             4: 0.090;
+             5: 0.036;
+             6: 0.012;
+             7: 0.003;
+             8: 0.002;"/>
+            <p><em style="italic">Here is what this tells us: </em>
+            </p>
+            <p>For a randomly selected student, we cannot predict how many times he or she will
+                change majors, but there is a predictable pattern described by the probability
+                distribution (or model) above. So this is a random variable, for which we are
+                assuming the values range from 0 to 8. (In reality, a negligible proportion of
+                students change majors more than 8 times.) The table provides a way to assign
+                probabilities to outcomes. Note that if you add up the probabilities of all possible
+                outcomes (0.135 + 0.271 + … + 0.002) we get exactly 1, which is not surprising
+                (since one of the possible outcomes 0, 1, … 8 will occur for sure). </p>
+            <p>Another way to represent the probability distribution of a random variable is a
+                probability
+                <?oxy_comment_start author="mmyers" timestamp="20101120T110140-0500" comment="Consider changing the bottom line on the graphic below to say &quot;Number of Changes in Major&quot;
+
+(Not a big travesty to leave as is if it&apos;s too much trouble to change it)."?>histogram<?oxy_comment_end?>. </p>
+            <image style="block" src="../webcontent/image015.png" alt="A histogram, in which the
+vertical axis is titled &quot;Probability&quot; and the Horizontal axis is labeled &quot;Number
+of Major Changes.&quot; Moving from left to right across the horizontal axis, the values increase to
+the mode (peak) at x=1 and x=2, then slowly decay to near zero. This histogram represents the
+same data as the table above."/>
+            <p>The horizontal axis accounts for the range of all possible values of the random
+                variable (in our case, 0-8), and the vertical axis represents the probabilities of
+                those values. </p>
+            <p>The heights of the bars add to 1, which is not surprising since the heights represent
+                probabilities.</p>
+        </example>
+        <p>Let’s summarize the features of a probability distribution (also called a probability
+            model): </p>
+        <ul>
+            <li>The outcomes described by the model are <em>random</em>. This means that individual
+                outcomes are uncertain, but there is a regular, predictable distribution of outcomes
+                in a large number of repetitions. </li>
+            <li>The model provides a way of assigning probabilities to all possible outcomes. </li>
+            <li>The probability of each possible outcome can be viewed as the relative frequency of
+                the outcome in a large number of repetitions, so like any other probability, it can
+                be any value between 0 and 1. </li>
+            <li>The sum of the probabilities of all possible outcomes must be 1. </li>
+        </ul>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>At this point you must be asking yourself, "How do we generate a probability
+                    distribution of a (discrete) random variable?" </p>
+                <p>Probability distributions can be generated empirically through repeated trials.
+                    We record the relative frequency of each outcome then look at the distribution
+                    of the relative frequencies for all possible outcomes. We can also use a
+                    mathematical model to represent a probability distribution. In this case, we
+                    make assumptions about how outcomes will be distributed. In other words, we use
+                    a mathematical formula to describe the predicted relative frequencies for all
+                    possible outcomes. </p>
+                <p>At any case, the focus of this module is not on how to generate a probability
+                    distribution, but rather on how to gain useful information from a given
+                    distribution. </p>
+                <p>Let’s return to the example and do exactly that. </p>
+            </body>
+        </section>
+        <example>
+            <p>Recall the probability distribution of the random variable X = number of changes in
+                major: </p>
+            <image style="block" src="../webcontent/image001.png" alt="Here is the distribution data
+given in &quot;X=# changes in major: Probability P(X=# changes in major)&quot;:
+                0: 0.135;
+                1: 0.271;
+                2: 0.271;
+                3: 0.180;
+                4: 0.090;
+                5: 0.036;
+                6: 0.012;
+                7: 0.003;
+                8: 0.002;"/>
+            <p>Let’s see what kinds of probability questions we can answer using it. </p>
+            <p>(a) What is the probability that a college student will change majors at most once? </p>
+            <p>The phrase “at most once” means either the student never changed majors (X = 0) or
+                the student changed majors once (X = 1). Therefore, to find this probability, we
+                need to add up the probabilities that are highlighted in the table: </p>
+            <image style="block" src="../webcontent/image001highlighted.png" alt="The same table as above, except
+that the cells representing P(X=0) = 0.135 and P(X=1) = 0.271 have been highlighted."/>
+            <p>So, </p>
+            <p>P(a college student changes majors at most once) = P(X=0) + P(X=1) = 0.135 + 0.271 =
+                0.406 </p>
+            <p>So the probability that a randomly selected college student will change majors at
+                most once is about 0.406. We can also say that about 40.6% of the time, a randomly
+                selected college student will change majors at most once. </p>
+            <p>(b) John’s parents are concerned that he has decided to change his major for the
+                second time. John claims that he is not unusual. What is the probability that a
+                randomly selected college student will change his major as often as or more often
+                than John? </p>
+            <p>To answer the question about John, we need know the probability that a randomly
+                selected student will change his major 2 or more times. We need to add together the
+                probabilities shaded in the table. </p>
+            <image style="block" src="../webcontent/image002.png" alt="The probabilities shaded are P(X=2) =
+0.271,
+            P(X=3) = 0.180;
+            P(X=4) = 0.090;
+            P(X=5) = 0.036;
+            P(X=6) = 0.012;
+            P(X=7) = 0.003;
+            P(X=8) = 0.002;
+            P(X=9) = 0.000;"/>
+            <p>P(change major 2 or more times) = P(X=2) + P(X=3) + … + P(X=8) = 0.594 </p>
+            <p>Here is another way to figure this out. We can use the idea that all of the
+                probabilities together make up 100% of the possibilities. So if we add up all the
+                probabilities in the table we should get 1. Now if we figure out the probability
+                that someone changes majors 0 or 1 times, we can just subtract this from 1 to find
+                the probability that someone changes majors 2 or more times. </p>
+            <p>P(change major 2 or more times) = 1– [P(X=0) + P(X=1)] = 1 – [0.135 + 0.271] = 0.594 </p>
+            <p>Do you think John has given a convincing argument that he is not unusual? Yes! 59% of
+                the time, a college student will change majors as often as or more often than John
+                did. Stating this same result in terms of probability, we might say, “There is a 59%
+                probability that a randomly selected college student will change majors 2 or more
+                times while in college.” </p>
+            <wb:inline idref="u3_m3_bridge1_tutor1" purpose="didigetthis"/>
+            <wb:inline idref="u3_m3_bridge1_tutor2" purpose="didigetthis"/>
+            <p>We found that changing a major 2 or more times is not very unusual, since it happens
+                about 59% of the time. So … </p>
+            <p>(c) How often would John need to change his major to be considered unusual? </p>
+            <p>One way to answer this question is to just a make a judgment call about what we might
+                consider “unusual” based on the table. For example, we might notice that the
+                probability that a student will change majors 5 or more times is about 5%. </p>
+            <table rowstyle="plain">
+                <tr>
+                    <td>P(change majors 5 or more times)</td>
+                    <td>= P(X=5) + P(X=6) + P(X=7) + P(X=8) </td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td>= 0.036 + 0.012 + 0.003 + 0.002 = 0.053</td>
+                </tr>
+            </table>
+            <p>An event that occurs only 5% of the time is pretty unusual. </p>
+        </example>
+        <p>Are there other ways to more definitively determine what might be considered unusual?
+            Well, we might use a measure of center, such as the mean, to determine a “typical”
+            number of times that students change majors. Values that are two standard deviations
+            above the mean could be used to identify unusual behavior. We will come back to this
+            question after we have developed an understanding of mean and standard deviation for a
+            probability distribution. </p>
+    </body>
+</workbook_page>

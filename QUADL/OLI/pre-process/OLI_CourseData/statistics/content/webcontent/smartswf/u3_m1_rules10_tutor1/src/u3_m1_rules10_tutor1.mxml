@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" width="400" height="160"
+	backgroundColor="0xffffff"
+	backgroundAlpha="0"
+	styleName="plain" 
+	horizontalScrollPolicy="off"
+	verticalScrollPolicy="off"
+	applicationComplete="init()">
+	
+	<mx:Script>
+    <![CDATA[
+    	import flash.system.Security;
+    	import mx.events.ListEvent;
+    	//import events.CorrectEvent;
+    	
+    	private var inlineAPI:Object;
+    	private var comboArray:Array;
+     	
+      public function init():void
+      {
+        trace("message from loaded swf");
+		comboArray = new Array(A,B,C,D,E,F,G,H,I);
+		this.addEventListener("correct", showCorrect);
+		this.addEventListener("incorrect", showIncorrect);
+		this.addEventListener("lock", lock);
+		this.addEventListener("unlock", unlock);
+		this.addEventListener("highlight", highlight);
+		this.addEventListener("unhighlight", unhighlight);
+      	this.addEventListener("restore", restore);
+      }
+      
+      public function setAPI(apiObject:Object):void {
+      	trace("function setAPI, this.name is " + this.name);
+      	inlineAPI = apiObject;
+      }
+      
+      public function changeHandler(e:ListEvent):void {
+      	var cb:ComboBox = e.target as ComboBox;
+      	showNull(cb);
+		inlineAPI.swfResponse(this, cb.id, cb.selectedItem.data);
+      }
+
+      private function showCorrect(event):void {
+      	trace("function showCorrect, targetInput is " + event.targetInput);
+      	for (var item in comboArray) {
+      		if (comboArray[item].id == event.targetInput) {
+      			comboArray[item].setStyle("color", 0x009900);
+      			comboArray[item].setStyle ("disabledColor", 0x80B380);
+      		}
+      	}
+      }
+      
+      private function showIncorrect(event):void {
+      	trace("function showIncorrect, targetInput is " + event.targetInput);
+      	for (var item in comboArray) {
+      		if (comboArray[item].id == event.targetInput) {
+      			comboArray[item].setStyle("color", 0xFF0000);
+      			comboArray[item].setStyle ("disabledColor", 0xff8080);
+      		}
+      	}
+      }
+      
+      private function showNull(cb:ComboBox):void {
+      	cb.setStyle("color", 0x000000);
+      	cb.setStyle("disabledColor", 0x999999);
+      }
+      
+      private function lock(event):void {
+     	trace("function lock");
+      	for (var item in comboArray) {
+   			comboArray[item].enabled = false;
+      	}
+      }
+
+      private function unlock(event):void {
+     	trace("function unlock");
+      	for (var item in comboArray) {
+   			comboArray[item].enabled = true;
+      	}
+      }
+
+      private function highlight(event):void {
+      	trace("function highlight, targetInput is " + event.targetInput);
+      	for (var item in comboArray) {
+      		if (comboArray[item].id == event.targetInput) {
+      			//comboArray[item].setStyle("color", 0x009900);
+      			//comboArray[item].setStyle ("disabledColor", 0x80B380);
+      		}
+      	}
+      }
+
+      private function unhighlight(event):void {
+      	trace("function unhighlight, targetInput is " + event.targetInput);
+      	for (var item in comboArray) {
+      		if (comboArray[item].id == event.targetInput) {
+      			//comboArray[item].setStyle("color", 0x009900);
+      			//comboArray[item].setStyle ("disabledColor", 0x80B380);
+      		}
+      	}
+      }
+
+     private function restore(event):void {
+      	trace("function restore, targetInput is " + event.targetInput + " and targetValue is " + event.targetValue);
+	    for (var item:Object in comboArray) {
+	        var theWidget:Object = comboArray[item];
+	        //trace("questionID is " + theWidget.questionID + " and widgetID is " + theWidget.id);
+	        trace("theWidget is " + theWidget.id);
+	        if (theWidget.id == event.targetInput) {
+	        	trace("got match on " + theWidget.id);
+		  	    theWidget.selectedIndex = findComboBoxIndex(theWidget as ComboBox, event.targetValue);
+		  	    trace("selectedIndex is " + findComboBoxIndex(theWidget as ComboBox, event.targetValue));
+	        }
+	    }
+    }
+	private function findComboBoxIndex (element:ComboBox, dataString:String):int {
+		//trace("--function findComboBoxIndex, element is " + element + " and dataString is " + dataString);
+	    var index:int = 0;
+	    for (var i:int = 0; i < element.dataProvider.length; i++) {
+	    	if (element.dataProvider[i].data == dataString) {
+	    		index = i;
+	    		break;
+	    	}
+	    }
+	    //trace("returning " + index);
+	    return index;
+	}
+
+     ]]>
+  </mx:Script>
+		
+			<mx:Label text="B" fontSize="14" x="112" y="11"/>
+			<mx:Label text="D" fontSize="14" x="39" y="41"/>
+			<mx:Label x="205" y="11" text="not B" fontSize="14"/>
+			<mx:Label x="26" y="82" text="not D" fontSize="14"/>
+			<mx:Label text="Total" x="312" y="11" fontSize="14"/>
+			<mx:Label text="Total" x="27" y="121" fontSize="14"/>
+		
+			<mx:ArrayCollection id="probabilities">
+				<mx:Object label="0.02" data="one"/>
+				<mx:Object label="0.03" data="two"/>
+				<mx:Object label="0.05" data="three"/>
+				<mx:Object label="0.38" data="four"/>
+				<mx:Object label="0.40" data="five"/>
+				<mx:Object label="0.57" data="six"/>
+				<mx:Object label="0.60" data="seven"/>
+				<mx:Object label="0.95" data="eight"/>
+				<mx:Object label="1.00" data="nine"/>
+			</mx:ArrayCollection>
+			<mx:ComboBox id="A" x="85" y="42" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="B" y="42" x="188" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="C" y="42" x="292" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="D" x="85" y="82" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="E" y="82" x="188" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="F" y="82" x="292" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="G" x="85" y="122" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="H" y="122" x="188" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:ComboBox id="I" y="122" x="292" width="80" dataProvider="{probabilities}" prompt="--" change="changeHandler(event)"/>
+			<mx:HRule x="26" y="34" width="350"/>
+			<mx:HRule x="26" y="71" width="350"/>
+			<mx:HRule x="26" y="112" width="350"/>
+			<mx:VRule x="75" y="14" height="135"/>
+			<mx:VRule x="175" y="14" height="135"/>
+			<mx:VRule x="278" y="14" height="135"/>
+	
+	
+</mx:Application>

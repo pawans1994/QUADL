@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion2_tutor2">
+    <title>Tutor</title>
+    <page>
+
+        <question id="q1">
+            <body>
+                <p>We randomly sample college graduates from public universities and determine the
+                    proportion in the sample with student loans. For which of the following sample
+                    sizes is a normal model a good fit for the sampling distribution of sample
+                    proportions?</p>
+                <p>
+                    <input_ref input="A"/>
+                </p>
+            </body>
+            <multiple_choice id="A" shuffle="false">
+                <choice value="a">10</choice>
+                <choice value="b">20</choice>
+                <choice value="c">30</choice>
+                <choice value="d">Both 20 and 30</choice>
+                <choice value="e">None of these</choice>
+            </multiple_choice>
+            <part id="p1">
+                <response input="A" match="a">
+                    <feedback>Incorrect. Neither condition is met. np = (10)(0.62) =
+                        6.2 is not 10 or greater. Likewise, n(1 − p) = (10)(0.38) = 3.8 is not 10 or
+                        greater. So a normal model is not a good fit for the sampling distribution
+                        of sample proportions.</feedback>
+                </response>
+                <response input="A" match="b">
+                    <feedback>Incorrect. One condition is not met. np = (20)(0.62) =
+                        12.4 is greater than 10, but n(1 − p) = (20)(0.38) = 7.6 is not 10 or
+                        greater. So a normal model is not a good fit for the sampling distribution
+                        of sample proportions.</feedback>
+                </response>
+                <response input="A" match="c" score="10">
+                    <feedback>Correct. Both conditions are met. np = (30)(0.62) = 18.6 and n(1 - p)
+                        = (30)(0.38) = 11.4. Both are greater than 10. So a normal model is a
+                        good fit for the sampling distribution of sample proportions.</feedback>
+                </response>
+                <response input="A" match="d">
+                    <feedback>Incorrect. Only one of these two sample sizes satisfies
+                        the conditions when p = 0.62. Be sure to check that both of the following
+                        are true: np &#8805; 10 and n(1 − p) &#8805; 10.</feedback>
+                </response>
+                <response input="A" match="e">
+                    <feedback>Incorrect. For one of these options, the required
+                        conditions are met; both np &#8805; 10 and n(1 − p) &#8805; 10. 
+                    </feedback>
+                </response>
+                <hint>Are np &#8805; 10 and n(1 − p) &#8805; 10?</hint>
+            </part>
+        </question>
+    </page>
+
+</assessment>

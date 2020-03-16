@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop7_tutor6">
+    <title>Tutor</title>
+    <page>
+         <question id="q1">
+            <body>
+                <p>The p-value is the probability of getting results as extreme as or more extreme
+                    than the ones in this study if zinc is actually not effective.</p>
+                <p>
+                    <input_ref input="A"/>
+                </p>
+            </body>
+            <fill_in_the_blank id="A">
+                <choice value="one">valid</choice>
+                <choice value="two">not valid</choice>
+            </fill_in_the_blank>
+            <part id="p1">
+                <response input="A" match="one" score="1">
+                    <feedback>Correct. This has the elements of a good interpretation of p-value:
+                            <p>The p-value is a probability.</p>
+                        <p>The probability is based on the assumption that H<sub>0</sub>is true.</p>
+                        <p>A statement about results (test statistics or sample proportions) being
+                            more extreme than observed in the data.</p></feedback>
+                </response>
+                <response input="A" match="two">
+                    <feedback>Incorrect. This statement has the elements of a good
+                        interpretation of p-value: <p>The p-value is a probability.</p>
+                        <p>The probability is based on the assumption that H<sub>0</sub> is true
+                            ("zinc is not effective").</p>
+                        <p>A statement about results (test statistics or sample proportions) being
+                            more extreme than observed in the data ("results as extreme as or more
+                            extreme than....").</p></feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q2">
+            <body>
+                <p>The p-value is the probability that the drug is not effective.</p>
+                <p>
+                    <input_ref input="B"/>
+                </p>
+            </body>
+            <fill_in_the_blank id="B">
+                <choice value="one">valid</choice>
+                <choice value="two">not valid</choice>
+            </fill_in_the_blank>
+            <part id="p2">
+                <response input="B" match="one">
+                    <feedback>Incorrect. This statement is really saying that the p-value
+                        is the probability that H<sub>a</sub> is true. H<sub>a</sub> is either true
+                        or it isn't. We cannot make a probability statement about it because there
+                        is no randomness involved. We can only make probability statements about
+                        random events, such as results from random samples. The p-value is the
+                        probability that a random sample will have results greater than (or less
+                        than) an observed result if H<sub>0</sub> is true.</feedback>
+                </response>
+                <response input="B" match="two" score="1">
+                    <feedback>Correct. We cannot make a probability statement about whether the
+                        drug is not effective. It either is or it isn't. We can only make
+                        probability statements about random events, such as the results from random
+                        samples.</feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q3">
+            <body>
+                <p>The p-value is the probability that the drug is effective.</p>
+                <p>
+                    <input_ref input="C"/>
+                </p>
+            </body>
+            <fill_in_the_blank id="C" shuffle="false">
+                <choice value="one">valid</choice>
+                <choice value="two">not valid</choice>
+            </fill_in_the_blank>
+            <part id="p3">
+                <response input="C" match="one">
+                    <feedback>Incorrect. Sometimes students mistake the p-value for the
+                        probability that H<sub>0</sub> is true. H<sub>0</sub> is either true or it
+                        isn't. We cannot make a probability statement about it, because there is no
+                        randomness involved. We can only make probability statements about random
+                        events, such as results from random samples. The p-value is the probability
+                        that a random sample will have results greater than (or less than) an
+                        observed result if H<sub>0</sub> is true.</feedback>
+                </response>
+                <response input="C" match="two" score="1">
+                    <feedback>Correct. We cannot make a probability statement about whether the
+                        drug is effective. It either is or it isn't. We can only make probability
+                        statements about random events, such as the results from random
+                        samples.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

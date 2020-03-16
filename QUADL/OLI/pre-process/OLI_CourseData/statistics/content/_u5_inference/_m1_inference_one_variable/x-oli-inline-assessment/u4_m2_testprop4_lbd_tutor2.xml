@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop4_lbd_tutor2" max_attempts="100">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>What is the approximate test statistic for p-hat = 0.74? <input_ref input="A"
+                /></body>
+            <numeric id="A"/>
+            <part>
+                <response input="A" match="[0.958, 1.042]" score="10">
+                    <feedback>Correct. The test statistic is about 1, since p-hat = 0.74 is 0.10 above p<sub>0</sub> = 0.64 and 0.10 is 
+                        is 1 standard deviation.</feedback>
+                </response>
+                <response input="A" match="*">
+                    <feedback>Incorrect. The test statistic is the number of standard deviations that p-hat = 0.74 is above p<sub>0</sub> = 0.64.</feedback>
+                </response>
+                <hint>The test statistic is the number of standard deviations
+                    p-hat = 0.74 is from p<sub>0</sub> = 0.64.</hint>
+                <hint>p-hat = 0.74 is 0.10 above p<sub>0</sub> = 0.64.</hint>
+                <hint>p-hat is 1 standard deviation above p<sub>0</sub>.</hint>
+                <hint>The test statistic is approximately 1.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

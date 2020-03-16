@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="conditions_using_ztest_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_conditions_using_ztest">
+        <!-- LO: conditions_using_ztest -->
+        <body>
+            <p>According to a U.S. news poll, 38% of students in the class of 2013 had done an
+                internship during their time as an undergraduate student. Dana is interested in
+                finding out whether students at her university had an internship rate that was
+                higher than the national average. She decided to ask 100 architecture majors whether
+                they had ever done an internship while at their university. She collected the
+                responses and calculated that the proportion for her university was 43%.</p>
+            <p>Which one of the following statements about the z-test is correct?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">It is safe to use the z-test for p.</choice>
+            <choice value="B">It is not safe to use the z-test for p, since the sample is not a
+                random sample from the entire population (or cannot be considered as one).</choice>
+            <choice value="C">It is not safe to use the z-test for p, since n * p<sub>o</sub> is not
+                large enough.</choice>
+            <choice value="D">It is not safe to use the z-test for p, since n * (1 − p<sub>o</sub>)
+                is not large enough.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Her question was about whether students at her entire
+                    university had a different internship rate than the national average, but she
+                    only asked architecture students so it is <em style="bold">not</em> safe to use
+                    the z-test for p.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Her question was about whether students at her entire university
+                    had a different internship rate than the national average, but she only asked
+                    architecture students. This was not a random sample from the entire population,
+                    which would have included a variety of majors. Perhaps architecture majors have
+                    a higher rate (or a lower rate) of internships than other majors on
+                    campus.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 100 * 0.38 = 38. 38 is greater than 10, so n is large enough
+                    for this sample to behave as a normal sampling distribution of p-hat.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 100 * 0.62 = 62. 62 is greater than 10, so n is large enough
+                    for this sample to behave as a normal sampling distribution of p-hat.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_conditions_using_ztest">
+        <!-- LO: conditions_using_ztest -->
+        <body>
+            <p>According to a U.S. news poll, 38% of students in the class of 2013 had done an
+                internship during their time as an undergraduate student. Dana is interested in
+                finding out whether students at her university had an internship rate that was
+                higher than the national average. She obtained a list of 25 randomly selected
+                students from the population of all students at her university by requesting this
+                information from the university’s institutional research office. She collected the
+                responses and calculated that the proportion for her university was 43%.</p>
+            <p>Which one of the following statements about the z-test is correct?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">It is safe to use the z-test for p.</choice>
+            <choice value="B">It is not safe to use the z-test for p, since the sample is not a
+                random sample from the entire population (or cannot be considered as one).</choice>
+            <choice value="C">It is not safe to use the z-test for p, since n * p<sub>o</sub> is not
+                large enough.</choice>
+            <choice value="D">It is not safe to use the z-test for p, since n * (1 − p<sub>o</sub>)
+                is not large enough.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. She only polled 25 students, which will not result in a normal
+                    sampling distribution so it is <em style="bold">not</em> safe to use the z-test
+                    for p.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. She got a randomly selected list of students, so it can be
+                    considered a random sample from the entire population of students at her
+                    university.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. 25 * 0.38 = 9.5. 9.5 is less than 10, so n is not large enough
+                    for this sample to behave as a normal sampling distribution of p-hat.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 25 * 0.62 = 15.5. 15.5 is greater than 10, so n is large enough
+                    for this sample to behave as a normal sampling distribution of p-hat.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

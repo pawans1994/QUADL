@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+<assessment id="_u5_m2_matched_pairs_checkpoint1">
+	<title>Matched Pairs Checkpoint</title>
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+			are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+			will ask "This will submit your answers and finish this assignment. Are you sure?",
+			click "OK" if you are ready to submit your answers for final grading. </p>
+
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+				following link:</em>
+			<link href="../webcontent/checkpoint_topic_11_1.pdf">Solution Set</link>.</p>
+	</content>-->
+	<multiple_choice id="q1">
+		<!--LO:LO: Identify and distinguish among cases where use of calculations specific to independent samples, matched pairs, and ANOVA are appropriate.SO: Selecting 2-sample comparison type-->
+		<body>A teacher is experimenting with a new computer-based instruction and conducts a study
+			to test its effectiveness . In which situation could the teacher use a hypothesis test
+			for matched pairs?</body>
+		<input shuffle="false">
+			<choice value="A">The teacher gives each student in the class a pretest. Then she
+				teaches a lesson using a computer program. Afterwards, she gives each student a
+				post-test. The teacher wants to see if the difference in scores will show an
+				improvement. </choice>
+			<choice value="B">The teacher randomly divides the class into two groups. One of the
+				groups receives computer-based instruction. The other group receives traditional
+				instruction without computers. After instruction, each student takes a test and the
+				teacher wants to compare the performance of the two groups.</choice>
+			<choice value="C">The teacher uses a combination of traditional methods and
+				computer-based instruction. She asks students which they liked better. She wants to
+				determine if the majority prefer the computer-based instruction.</choice>
+		</input>
+		<part>
+			<response match="A" score="10">
+				<feedback>Correct. Since the same group of students was measured twice (once before
+					and then after instruction) this is a case of matched pairs design.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>Incorrect: Since students were randomized to two <em style="italic"
+						>different</em> groups the data obtained from this study should be analyzed
+					using the two (independent) samples t test. The correct answer is A.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>Incorrect: The teachers collects data on the variable: &quot;liked
+					computer-based instruction better&quot; (yes/no). With this data the teacher could
+					test a hypothesis about a proportion. The correct answer is A.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q2">
+		<!--LO:LO: Identify and distinguish among cases where use of calculations specific to independent samples, matched pairs, and ANOVA are appropriate.SO: Selecting 2-sample comparison typeLO: Identify and distinguish among cases where use of calculations specific to independent samples, matched pairs, and ANOVA are appropriate.SO: Selecting 2-sample comparison type-->
+		<body><p>Research suggests that identical twins have many similarities, such as body
+				weights, even as adults. A sample of ten sets of identical twins were weighed and
+				had their weights recorded in kilograms. The researcher wishes to test whether there
+				is a statistically significant difference in adult weight between first-born and
+				second-born identical twins.</p>
+			
+			<!--margo.coleman-seiffert:Hi Kim: This is the data about twins that we received permission to use. Not sure how to cite it...It is Therese Stukel's data....Can you let me know what I should do?Thanks!-->
+			<p>Given the design of the study and the question of interest, which of the following 4
+				computer outputs is relevant to use?</p></body>
+		<input shuffle="false">
+			<choice value="A">
+				<image src="../webcontent/chkpt_matched_pairs/image1.png"/></choice>
+			<choice value="B"><image src="../webcontent/chkpt_matched_pairs/image2.png"/></choice>
+			<choice value="C"><image src="../webcontent/chkpt_matched_pairs/image3.png"/></choice>
+			<choice value="D"><image src="../webcontent/chkpt_matched_pairs/image4.png"/></choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That is not quite right. While the appropriate hypothesis test is the
+					paired t-test, the alternative hypothesis is that there are differences, without
+					a specification of the direction of the differences. The correct answer is
+					C.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That is not quite correct. Since the study involved matching, through the
+					use of identical twins, it is a matched pairs t-test, rather than a two
+					independent samples t-test. In addition, the alternative hypothesis is that
+					there are differences, without a specification of the direction of the
+					differences. The correct answer is C.</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct! Since the study involved matching, through the use of identical
+					twins, and was interested in seeing whether there were &quot;any differences&quot; in mean
+					adult weights, the correct hypothesis test is the paired t-test with a &quot;not
+					equal&quot; alternative hypothesis.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That is not correct. While it is correct that the alternative hypothesis
+					is &quot;not equal,&quot; since the the study involved matching, through the use of
+					identical twins, it is a matched pairs t-test, rather than a two independent
+					samples t-test. The correct answer is C.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<content>
+		<p>The following is for questions 3 and 4:</p><p>Some research suggests that first born children
+			may have higher IQ scores than their later born siblings. Do first-born identical twins
+			have higher IQ scores than their second-born sibling? Data from a 1998 study by Tramo,
+			Loftus, Stukel, Weaver, and Gazzaniga were analyzed to determine whether first-born
+			identical twins have higher IQ scores than their second-born siblings. Ten pairs of
+			adult identical twins were assessed and their Full Scale IQ scores were calculated.</p>
+	</content>
+	<multiple_choice id="q3">
+		<!--LO:LO: Specify the null and alternative hypotheses for comparing groups.SO: Selecting appropriate hypothesis-->
+		<body><p>Let &mu;<sub>1</sub> and &mu;<sub>2</sub> represent the mean Full Scale IQ score for <em
+					style="italic">all </em>first-born identical twins and second-born identical
+				twins, respectively, and let &mu;<sub>d </sub>be the mean of the differences in IQ
+				score</p>
+			<p>of all identical twins (IQ score of first-born twin - IQ score of second-born
+				twin).</p>
+			<p>which are the appropriate null and alternative hypotheses?</p></body>
+		<input shuffle="false">
+			<choice value="A"><p>H<sub>0</sub>: &mu;<sub>d</sub> = 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> &gt; 0</p></choice>
+			<choice value="B"><p>H<sub>0</sub>: &mu;<sub>d</sub> = 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> &lt; 0</p></choice>
+			<choice value="C"><p>H<sub>0</sub>: &mu;<sub>d</sub> &gt; 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> = 0</p></choice>
+			<choice value="D"><p>H<sub>0</sub>: &mu;<sub>1</sub>= &mu;<sub>2</sub></p>
+				<p>H<sub>a</sub>: &mu;<sub>1</sub> &gt; &mu;<sub>2</sub></p></choice>
+			<choice value="E">Both (A) and (D) are correct.</choice>
+		</input>
+		<part>
+			<response match="A" score="10">
+				<feedback>Correct! H<sub><sub>0</sub></sub>: &mu;<sub>d</sub> = 0 and H<sub>a</sub>:
+						&mu;<sub>d</sub> &gt; 0 is the correct format for the null and alternative
+					hypothesis for this problem. Since this twin study is a matched pairs design,
+					the hypotheses should be stated in terms of the mean of the differences &mu;<sub>d
+					</sub>. Furthermore since we are testing whether the IQ of the first born twin is
+						<em style="bold">higher</em> than that of the second born twin, we would
+					like to test H<sub>0</sub>: &mu;<sub>d</sub> = 0 vs. H<sub>a</sub>: &mu;<sub>d</sub>
+					&gt; 0</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That&apos;s incorrect. It looks like there is confusion about the correct
+					direction of the sign for the alternative hypothesis. Since we are interested in
+					seeing whether the mean Full Scale IQ score for first-born identical twins is
+						<em style="bold">higher </em>than the second-born identical twins, it would
+					be a &quot;greater than&quot; alternative hypothesis. Therefore, the correct answer is
+					A.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That&apos;s incorrect. It looks like you confused the null and alternative
+					hypotheses. Remember, the null hypothesis is always <em style="bold">no
+						differences </em>and, thus, should have an equal sign, while the alternative
+					research hypothesis should reflect the differences that would be expected.
+					Therefore, the correct answer is A.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That&apos;s not quite right. The correct format for the null hypothesis for the
+					paired t-test is to use the &mu;<sub>d</sub> ; therefore the, null hypothesis
+					should be: H<sub>0</sub>: &mu;<sub>d</sub> = 0. In addition, the alternative
+					hypothesis should use &mu;<sub>d </sub>and the sign should be &quot;greater than,&quot; since
+					we are assessing whether the mean Full Scale IQ score for the first-born
+					identical twin is <em style="bold">higher </em>than the mean Full Scale IQ score
+					for the second-born identical twin. The correct answer is A.</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>That&apos;s not quite right. While a) is correct, d) is not correct. <p>Since
+						this is a matched pairs design, the hypotheses should be stated in terms of
+						the mean differences &mu;<sub>d</sub> . The correct answer is A.</p></feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q4">
+		<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test-->
+		<body><p>The following is the (edited) output for the test:</p>
+			<image src="../webcontent/chkpt_matched_pairs/image5.png"/>
+			<p>From the output we learn that:</p></body>
+		<input shuffle="false">
+			<choice value="A">The data provide sufficient evidence to reject H<sub>0</sub>and, thus,
+				conclude that the mean Full Scale IQ score for first-born identical twins is higher
+				than the mean Full Scale IQ score for second-born identical twins.</choice>
+			<choice value="B">The data provide sufficient evidence to reject H<sub>0</sub>. We
+				therefore conclude the data do <em style="italic">not </em>provide evidence to
+				conclude that the mean Full Scale IQ scores for first-born identical twins is higher
+				than that of second-born identical twins.</choice>
+			<choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+				We therefore conclude that the mean Full Scale IQ score for first-born identical
+				twins is higher than the mean Full Scale IQ score for second-born identical
+				twins.</choice>
+			<choice value="D"> The data do not provide sufficient evidence to reject H0. In other
+				words, based on the data we <em style="italic">cannot</em> conclude that the mean
+				Full Scale IQ scores for first-born identical twins is higher than the mean Full
+				Scale IQ score for second-born identical twins.</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That is incorrect. In order to reject the null hypothesis, the P-value
+					must be below .05. Since the P-Value is (much) greater than .05, we fail to
+					reject the null hypothesis. The correct answer is D.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That is incorrect. In order to reject the null hypothesis, the P-value
+					must be below .05. Since the P-Value is greater than .05, we fail to reject the
+					null hypothesis. Also, remember that if the null hypothesis were to be rejected
+					the right conclusion would be that the mean Full Scale IQ score for first-born
+					identical twins is higher than the mean Full Scale IQ score for second-born
+					identical twins. The correct answer is D.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That is incorrect. While it is correct that there is not enough evidence
+					to reject the H<sub>0</sub>, the correct conclusion is that based on the data we
+					cannot conclude that the mean Full Scale IQ scores for first-born identical
+					twins is higher than the mean Full Scale IQ score for second-born identical
+					twins. The correct answer is D.</feedback>
+			</response>
+			<response match="D" score="10">
+				<feedback>Correct! There is not enough evidence to reject the H<sub>0</sub>;
+					therefore, based on the data we <em style="italic">cannot</em> conclude that the
+					mean Full Scale IQ scores for first-born identical twins is higher than the mean
+					Full Scale IQ score for second-born identical twins.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q5">
+		<!--LO:LO: Identify and distinguish among cases where use of calculations specific to independent samples, matched pairs, and ANOVA are appropriate.SO: Selecting 2-sample comparison type-->
+		<body>In which of the following situations would it <em style="bold">not</em> be appropriate
+			to use a paired t-test to analyze the data?</body>
+		<input shuffle="false">
+			<choice value="A">A marriage therapist believes that many couples have different
+				perspectives regarding the state of their marriages, prior to the start of couples
+				therapy. In order to determine whether there is difference in marital satisfaction,
+				prior to the start of couples therapy, each member of thirty married couples were
+				individually given a marital satisfaction questionnaire. The mean marital
+				satisfaction scores were then separately calculated for the group of husbands and
+				the group of wives.</choice>
+			<choice value="B">A psychologist was interested in determining whether fraternal twins
+				differ in terms the degree to which they are extroverts. A sample of 50 fraternal
+				twins was given the Eysenck personality questionnaire to assess their levels of
+				extraversion.</choice>
+			<choice value="C">A psychiatrist believes that a new medication (New Drug) is more
+				effective at reducing the symptoms of depression than a placebo, sugar pill
+				(Placebo). Sixty people with depression were randomly assigned to one of two groups:
+				1) New Drug or 2) Placebo and were given the assigned drug or sugar pill for 30
+				days. Each of the 60 participants then completed the Beck Depression Inventory and
+				the mean depression score for the New Drug group is compared to the mean depression
+				score for the Placebo group.</choice>
+			<choice value="D">A researcher is interested in determining the effects of sleep
+				deprivation on the accuracy with which mazes are completed. Thirty people are given
+				a test of mazes on Day 1 at 9 am and again on Day 2 at 9 pm after being kept awake
+				for 36 hours. The researcher then compares the number of errors made on Day 1 to Day
+				2.</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That&apos;s not correct. Since the study uses marital couples, which are a
+					&quot;natural pair&quot; the appropriate statistical technique would be the paired t-test.
+					People, who are <em style="bold">randomly assigned</em> to two groups are <em
+						style="bold">not matched</em>: the observations in one sample are not linked
+					to another sample. Thus, the correct answer is C.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That&apos;s not correct. Since the study uses fraternal twins, which are a
+					&quot;natural pair&quot; the appropriate statistical technique would be the paired t-test.
+					People, who are <em style="bold">randomly assigned</em> to two groups are <em
+						style="bold">not matched</em>: the observations in one sample are not linked
+					to another sample. Thus, the correct answer is C.</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct! People, who are randomly assigned to two groups are not matched;
+					therefore, the observations in one sample are not linked to another sample. The
+					correct statistical technique for the example would be the two independent
+					samples t-test.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That&apos;s not correct. Since the study uses the same participants for both a
+					pretest measure (Day 1) and a post-test measure (Day 2), the observations in one
+					sample are dependent on the observations in another sample; therefore, the
+					appropriate statistical technique would be the paired t-test. People, who are
+						<em style="bold">randomly assigned</em> to two groups are <em style="bold"
+						>not matched</em>: the observations in one sample are not linked to another
+					sample. Thus, the correct answer is C.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<content>
+		<p>The following is for questions 6 and 7: </p>
+		<p>Research suggests that the pressure of being timed may interfere with performance on
+			tests that involve mathematical problems. A fictional study was conducted with 30 6th
+			graders. First, the 6th graders were given a math test that contained 50 problems and
+			were told that they had only one hour to complete it (Timed Condition). The same 6th
+			graders were later given a math test that contained 50 problems and were told that they
+			could have as much time, as needed, to complete the test (Unlimited Time Condition). The
+			total number of correct answers for each 6th grader was then calculated for each
+			condition. Then, for each student, the difference between the two scores (Timed-Untimed)
+			was calculated. The researchers hypothesized that the 6th graders would get fewer
+			correct answers, when they took the test with a time limit, as compared to when they had
+			unlimited time. </p>
+		<p><cite> Tramo MJ, Loftus WC, Green RL, Stukel TA, Weaver JB, Gazzaniga MS. Brain Size,
+				Head Size, and IQ in Monozygotic Twins. Neurology 1998; 50:1246-1252.</cite></p>
+	</content>
+	<multiple_choice id="q6">
+		<!--LO:LO: Specify the null and alternative hypotheses for comparing groups.SO: Selecting appropriate hypothesis-->
+		<body><p>If &mu;<sub>1</sub>and &mu;<sub>2</sub>represent the number of correct answers during the
+				Timed Condition and the Unlimited Time Condition, respectively, and let &mu;<sub>d
+				</sub>be the mean of the differences in the number of correct answers
+				(Timed-Untimed) of all 6th graders. Which are the appropriate null and alternative
+				hypotheses?</p></body>
+		<input shuffle="false">
+			<choice value="A"><p>H<sub>0</sub>: &mu;<sub>d</sub> = 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> &gt; 0</p></choice>
+			<choice value="B"><p>H<sub>0</sub>: &mu;<sub>d</sub> = 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> &lt; 0</p></choice>
+			<choice value="C"><p>H<sub>0</sub>: &mu;<sub>d</sub> &lt; 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>d</sub> = 0</p></choice>
+			<choice value="D"><p>H<sub>0</sub>: &mu;<sub>1</sub>- &mu;<sub>2</sub> = 0</p>
+				<p>H<sub>a</sub>: &mu;<sub>1</sub> - &mu;<sub>2</sub> &lt; 0</p></choice>
+			<choice value="E"><p>Both (B) and (D) are correct.</p></choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That&apos;s incorrect. It looks like there is confusion about the correct
+					direction of the sign for the alternative hypothesis. Recall that the for each
+					student the difference of correct answers was computed Timed-Untimed. Since we
+					are interested assessing whether the students would get <em style="bold">fewer
+					</em>correct answers in the Timed Condition as compared to the Untimed
+					Condition, it would be a <em style="bold">&quot;less than&quot; </em>alternative
+					hypothesis. Therefore, the correct answer is B.</feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>This is correct. Indeed, for each student the difference (Timed-Untimed)
+					was computed and since we are interested assessing whether the students would
+					get <em style="bold">fewer </em>correct answers in the Timed Condition as
+					compared to the Untied Condition, the correct hypotheses in this case are:
+						H<sub>0</sub>: &mu;<sub>d</sub> = 0 and H<sub>a</sub>: &mu;<sub>d</sub> &lt; 0
+					.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That&apos;s incorrect. It looks like you confused the null and alternative
+					hypotheses. Remember, the null hypothesis is always <em style="bold">no
+						differences </em>and, thus, should have an equal sign, while the alternative
+					research hypothesis should reflect the differences that would be expected.
+					Therefore, the correct answer is B.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That&apos;s not quite right. While H<sub>0</sub>: &mu;<sub>1</sub>- &mu;<sub>2</sub>
+					= 0 and H<sub>a</sub>: &mu;<sub>1</sub> - &mu;<sub>2</sub> &lt; 0 captures what we are
+					trying to assess, since this is a matched pairs design we need to write the
+					hypothesis in terms of &mu;<sub>d</sub>. Therefore, the correct answer is
+					B.</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>That&apos;s incorrect. Recall that in the matched pairs design we need to write
+					the hypothesis in terms of the mean of the differences &mu;<sub>d</sub>. Therefore
+					the only correct answer is B.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q7">
+		<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test-->
+		<body><p>The researchers analyzed the data and obtained the following output:</p>
+			<image src="../webcontent/chkpt_matched_pairs/image8.png"/>
+			<image src="../webcontent/chkpt_matched_pairs/image9.png"/>
+			<p>From the output we learn that:</p></body>
+		<input shuffle="false">
+			<choice value="A">The data provide sufficient evidence to reject H<sub>0</sub> . Thus,
+				the researchers conclude that 6<sup>th </sup>grade students get, on average, fewer
+				correct answers and, thus, lower scores on math tests when taking them under timed
+				conditions as compared to untimed conditions.</choice>
+			<choice value="B">the data provide sufficient evidence to reject H<sub>0</sub>. Thus,
+				based on the data the researchers cannot conclude that mean number of correct
+				answers on the math test for the Timed Condition is lower compared to the Untimed
+				Condition.</choice>
+			<choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+				Thus, the researchers conclude that 6<sup>th </sup>grade students get, on average,
+				fewer correct answers and, thus, lower scores, on math tests, when taking them under
+				timed conditions as compared to untimed conditions.</choice>
+			<choice value="D">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+				Thus, based on the data the researchers cannot conclude that mean number of correct
+				answers on the math test for the Timed Condition is lower compared to the Untimed
+				Condition.</choice>
+		</input>
+		<part>
+			<response match="A" score="10">
+				<feedback>Correct! In order to reject the null hypothesis, the P-value must be below
+					.05. Since the P-Value is less than .05, the researchers reject the null
+					hypothesis and conclude that 6<sup>th</sup> graders get, on average,
+					significantly <em style="bold">fewer</em>math problems correct, when the test is
+					timed, as compared to when the test is untimed.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That is incorrect. While it is correct that there is enough evidence to
+					reject the H<sub>0</sub>, the conclusion is incorrect. There is enough evidence
+					to suggest that 6<sup>th</sup>graders get, on average significantly <em
+						style="bold">fewer </em>math problems correct, when the test is timed, as
+					compared to when the test is untimed. The correct answer is A.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That is incorrect. Remember, to reject the null hypothesis, the P-value
+					must be below .05; in this case, the P-Value is below .0001. Thus, the
+					researchers reject the H<sub>0</sub>and conclude that there is enough evidence
+					to suggest that 6<sup>th</sup>graders get, on average, significantly <em
+						style="bold">fewer </em>math problems correct, when the test is timed, as
+					compared to when the test is untimed. The correct answer is A.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That is incorrect. Remember, to reject the null hypothesis, the P-value
+					must be below .05; in this case, the P-Value is below .0001. Thus, the
+					researchers reject the H<sub>0</sub>and conclude that there is enough evidence
+					to suggest that 6<sup>th</sup>graders get, on average, significantly <em
+						style="bold">fewer </em>math problems correct, when the test is timed, as
+					compared to when the test is untimed. The correct answer is A.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<content><p><cite> Tramo MJ, Loftus WC, Green RL, Stukel TA, Weaver JB, Gazzaniga MS. Brain Size,
+		Head Size, and IQ in Monozygotic Twins. Neurology 1998; 50:1246-1252.</cite></p></content>
+
+</assessment>

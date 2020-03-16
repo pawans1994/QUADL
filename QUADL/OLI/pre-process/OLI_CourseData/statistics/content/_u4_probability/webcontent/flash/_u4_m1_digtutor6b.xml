@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m1_digtutor6b" title="_u4_m1_digtutor6b">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">In this context, the complement of event L, "not L" is the event that:</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">the patient will experience both side effects</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">the patient will experience only one of the two side effects</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">the patient will experience neither of the two side effects.</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">the patient will experience either one of the side effects or both.</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  The event L is that the patient experiences at least one of the two side effects. This means that for event L to occur, one of three things need to happen: either the patient experiences I, or the patient experiences H or the patient experiences both I and H. Your answer is not correct because it is one of the ways on which event L can occur. What needs to happen, then, for event L not to occur?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  The event L is that the patient experiences at least one of the two side effects. This means that for event L to occur, one of three things need to happen: either the patient experiences I, or the patient experiences H or the patient experiences both I and H. Your answer is not correct because it describes two of the three ways in which event L can occur. What needs to happen, then, for event L not to occur?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Good Job!  The event L is that the patient experiences at least one of the side effects. This means that for event L to occur, one of three things need to happen: either the patient experiences I, or the patient experiences H or the patient experiences both I and H. Your answer is correct because is describes the only way in which event L will not occur: the patient does not experience either one of the two side effects.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  The event L is that the patient experiences at least one of the two side effects, meaning that the patient will experience either one of the side effects or both. Your answer is not correct, than, because it simply restates what event L is. What needs to happen, then, for event L not to occur?</mattext></material></itemfeedback></item></questestinterop>

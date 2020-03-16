@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_p7">
+<head>
+<title>Hypothesis Testing for the Population Proportion p (7 of 13)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+</head>
+<body>
+   
+<example>
+<title>1</title>
+    <image style="block" src="../webcontent/image264.gif" alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The two hypotheses are H_0: p =
+.20 and H_a: p &lt; .20. We take a sample of 400 products, represented by a smaller circle. We find
+that 64 of these are defective. p-hat = 64/400 = .16, and z = -2."/>
+<p> The p-value
+                <?oxy_comment_start author="mmyers" timestamp="20101127T105722-0500" comment="please use subscripts for Ho and Ha in the above graphic (and in the similar graphic for the other two examples)."?>in
+                this case is:<?oxy_comment_end?></p>
+<p><?oxy_comment_start author="mmyers" timestamp="20101127T105802-0500" comment="use bullets instead of asterisks (also applies to other examples"?>
+                *<?oxy_comment_end?> The probability of observing a test statistic as small as -2 or
+                smaller, assuming that H<sub>o</sub> is true.</p>
+<p>
+<em>OR (recalling what the test statistic actually means in this case),</em>
+</p>
+<p> * The probability of observing a sample proportion that is 2 standard deviations or more below <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>20</m:mn>
+</m:mrow>
+</m:math>, assuming that <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math> is the true population proportion.</p>
+<p>
+<em> OR, more specifically,</em>
+</p>
+<p> * The probability of observing a sample proportion of .16 or lower in a random sample of size 400, when the true population proportion is <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>20</m:mn>
+</m:mrow>
+</m:math>.</p>
+<p>In either case, the p-value is found as shown in the following figure:</p>
+<image style="block" src="../webcontent/image266.gif" alt="A normal N(0,1) curve. Marked on
+the horizontal axis are z-scores of 0 and -2. We are interested in the area to the left of -2,
+which is the p-value."/>
+    <p>To find <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>P</m:mi>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mi>Z</m:mi>
+                                <m:mo>≤</m:mo>
+                                <m:mo>−</m:mo>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math> we can either use a table or software. Eventually, after we understand the
+                details, we will use software to run the test for us and the output will give us all
+                the information we need. The p-value that the statistical software provides for this
+                specific example is 0.023. The p-value tells me that it is pretty unlikely
+                (probability of .023) to get data like those observed (test statistic of -2 or less)
+                assuming that H<sub>o</sub> is true.</p>
+<!-- RS 07/28/10 Generalized to eliminate alternatives
+    <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>To find <m:math overflow="scroll">
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mo>−</m:mo>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math> we can either use a table or software. Eventually, after we understand the details, we will use software to run the test for us and the output will give us all the information we need.  The p-value that Excel provides for this specific example is 0.023.  The p-value tells me that it is pretty unlikely (probability of .023) to get data like those observed (test statistic of -2 or less) assuming that that Ho is true.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>To find <m:math overflow="scroll">
+<m:mrow>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mo>−</m:mo>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math> we can either use a table or software. Eventually, after we understand the details, we will use software to run the test for us and the output will give us all the information we need. Here is the output Minitab provides for this specific example:</p>
+<image style="block" src="../webcontent/image403.gif"/>
+<p>Note that apart from the p-value the output provides the sample proportion (under <em>Sample p</em>), and the test statistic (under <em>Z-Value</em>).  The p-value tells me that it is pretty unlikely (probability of .023) to get data like those observed (test statistic of -2 or less) assuming that that Ho is true.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>To find <m:math overflow="scroll">
+            <m:mrow>
+                <m:mi>P</m:mi>
+                <m:mfenced open="(" close=")">
+                    <m:mrow>
+                        <m:mi>Z</m:mi>
+                        <m:mo>≤</m:mo>
+                        <m:mo>−</m:mo>
+                        <m:mn>2</m:mn>
+                    </m:mrow>
+                </m:mfenced>
+            </m:mrow>
+        </m:math> we can either use a table or software. Eventually, after we understand the details, we will use software to run the test for us and the output will give us all the information we need.  The p-value that R provides for this specific example is 0.023.  The p-value tells me that it is pretty unlikely (probability of .023) to get data like those observed (test statistic of -2 or less) assuming that that Ho is true.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+</example>
+<example>
+<title>2</title>
+<image style="block" src="../webcontent/image268.gif" alt="A large circle represents
+the population Students at the college. We want to know p about this population, or what is the
+population proportion of students using marijuana. The hypotheses are H_0: p = .157 and H_a: p
+&gt; .157 . We take a sample of 100 students, represented by a smaller circle. We find that 19
+use marijuana. p-hat = 19/100 = .19, and z = .91"/>
+<p> The p-value in this case is:</p>
+<p> * The probability of observing a test statistic as large as .91 or larger, assuming that
+                    H<sub>o</sub> is true.</p>
+<p>
+<em>OR (recalling what the test statistic actually means in this case),</em>
+</p>
+<p> * The probability of observing a sample proportion that is .91 standard deviations or more above
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>157</m:mn>
+                    </m:mrow>
+                </m:math>, assuming that <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> is the true population proportion.</p>
+<p>
+<em> OR, more specifically,</em>
+</p>
+<p> * The probability of observing a sample proportion of .19 or higher in a random sample of size 100, when the true population proportion is <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>157</m:mn>
+</m:mrow>
+</m:math>.</p>
+<p>In either case, the p-value is found as shown in the following figure:</p>
+<image style="block" src="../webcontent/image270.gif" alt="A N(0,1) curve for the sampling distribution.
+Marked on the horizontal axis are z-scores of 0 and .91 . The p-value is the area under the curve to the
+right of .91 ."/>
+    <p>Again, at this point we can either use a table or software to find that the p-value is 0.182.</p>
+   <!-- RS 07/28/10 - Generalized to eliminate alternatives
+       <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Again, at this point we can either use a table, software, or simply run the test in Excel to find that the p-value is 0.182.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>Again, at this point we can either use a table, software, or simply run the test in Minitab to get:</p>
+<image style="block" src="../webcontent/image404.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Again, at this point we can either use a table, software, or simply run the test in R to find that the p-value is 0.182.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>The p-value tells us that it is not very surprising (probability of .182) to get data like those
+                observed (which yield a test statistic of .91 or higher) assuming that the null
+                hypothesis is true.</p>
+</example>
+<example>
+<title>3</title>
+<image style="block" src="../webcontent/image271.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The two hypothesis are H_0: p = .64 and H_a: p &ne; .64 . We take
+a sample of 1000 US Adults, represented by a smaller circle. We find that 675 are in favor. p-hat =
+675/1000 = .675, and z = 2.31"/>
+<p> The p-value in this case is:</p>
+<p> * The probability of observing a test statistic as large as 2.31 (or larger) or as small as
+                -2.31 (or smaller), assuming that H<sub>o</sub> is true.</p>
+<p>
+<em>OR (recalling what the test statistic actually means in this case),</em>
+</p>
+<p> * The probability of observing a sample proportion that is 2.31 standard deviations or more away from <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>.</m:mo>
+<m:mn>64</m:mn>
+</m:mrow>
+</m:math>, assuming that <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math> is the true population proportion.</p>
+<p>
+<em> OR, more specifically,</em>
+</p>
+<p> * The probability of observing a sample proportion as different as .675 is from .64, or even
+                more different (i.e. as high as .675 or higher or as low as .605 or lower) in a
+                random sample of size 1,000, when the true population proportion is <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>64</m:mn>
+                    </m:mrow>
+                </m:math>.</p>
+<p>In either case, the p-value is found as shown in the following figure:</p>
+<image style="block" src="../webcontent/image274.gif" alt="A N(0,1) sampling distribution curve,
+with the z-scores -2.31, 0, and 2.31 marked on the horizontal axis. The p-value is the sum of the
+area under the curve to the left of -2.31 and the area under the curve to the right of 2.31"/>
+    <p>Again, at this point we can either use a table or software to find that the p-value is 0.021.</p>
+  <!-- RS 07/28/10  Generalized to eliminate alternatives
+      <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Again, at this point we can either use a table, software, or simply run the test in Excel to find that the p-value is 0.021.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>Again, at this point we can either use a table, software, or simply run the test in Minitab to get:</p>
+<image style="block" src="../webcontent/image405.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Again, at this point we can either use a table, software, or simply run the test in R to find that the p-value is 0.021.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>The p-value tells us that it is pretty unlikely (probability of .021) to get data like those
+                observed (test statistic as high as 2.31 or higher or as low as -2.31 or lower)
+                assuming that H<sub>o</sub> is true.</p>
+</example>
+    <!-- Note: as the editor mentions below, this is the wrong walkthrough for this page.  The correct one was never created.  RS 05-31-11 -->
+    <!--<p>In these three examples, we have focused on interpreting the p-value in terms of probability.
+            Probability is the machinery that allows us to use a sample to draw a conclusion about a
+            population. So before we leave our discussion of the p-value, we will connect this
+            important concept more explicitly to ideas developed in the Probability Unit. These
+            connections are presented in the following simulation. Our goal is to for you to be able
+            to articulate how inference is based on probability by explaining what a
+            <?oxy_comment_start author="mmyers" timestamp="20101127T111349-0500" comment="I think this might be the wrong walk-through. This one does not talk about p-values, just about conditions that must be met to use a normal distribution.
+
+Also, in the walk-though, &quot;new born&quot; should be &quot;newborn&quot; and &quot;grey&quot; should be &quot;gray&quot; (Obviously, these issues are not very important, if they&apos;re too much trouble to fix)."?>p-value
+            is<?oxy_comment_end?>.</p>
+    <flash src="../../../webcontent/OLICamtasiaController.swf" width="600" height="580" purpose="simulation">
+        <param name="movieURL">../../webcontent/flash/walkthrough6.swf</param>
+        <param name="movieFPS">15</param>
+        <param name="LoggingLibraryPath">../../../webcontent/OLILoggingLibrary.swf</param>
+    </flash>-->
+    
+    <section>
+<title>Comment</title>
+<body>
+<p>We've just seen that finding p-values involves probability calculations about the value of the
+                    test statistic assuming that H<sub>o</sub> is true. In this case, when
+                        H<sub>o</sub> is true, the values of the test statistic follow a standard
+                    normal distribution (i.e., the sampling distribution of the test statistic when
+                    the null hypothesis is true is N(0,1)). Therefore, p-values correspond to areas
+                    (probabilities) under the standard normal curve.</p>
+<p>Similarly, in <em>any test</em>, p-values are found using the sampling distribution of the test
+                    statistic when the null hypothesis is true (also known as the "null
+                    distribution" of the test statistic). In this case, it was relatively easy to
+                    argue that the null distribution of our test statistic is N(0,1). As we'll see,
+                    in other tests, other distributions come up (like the t-distribution and the
+                    F-distribution), which we will just mention briefly, and rely heavily on the
+                    output of our statistical package for obtaining the p-values.</p>
+</body>
+</section>
+<p>We've just completed our discussion about the p-value, and how it is calculated both in general
+            and more specifically for the z-test for the population proportion. Let's go back to the
+            four-step process of hypothesis testing and see what we've covered and what still needs
+            to be discussed.</p>
+<section>
+<title>The Four Steps in Hypothesis Testing</title>
+<body>
+    <ol>
+<li><p>
+                    State the appropriate null and alternative hypotheses, H<sub>o</sub>
+                    and H<sub>a</sub>.</p></li>
+<li><p>
+                    Obtain a random sample, collect relevant data, and <em>check whether
+                        the data meet the conditions under which the test can be used.</em> If the
+                    conditions are met, summarize the data using a test statistic.</p></li>
+<li><p>
+                    Find the p-value of the test.</p></li>
+<li><p>
+                    Based on the p-value, decide whether or not the results are
+                    significant, and <em>draw your conclusions in context.</em>
+                </p></li></ol>
+<p>With respect to the z-test the population proportion:</p>
+    <p>Step 1: Completed</p>
+    <p>Step 2: Completed</p>
+    <p>Step 3: Completed</p>
+    <p>Step 4: This is what we will work on next.</p>
+    <section purpose="learnbydoing">
+        <title>Learn By Doing</title>
+        <body>
+    <p>In 2007, a Gallup poll estimated that 45% of U.S. adults rated their financial situation as
+                            “good.” We want to know if the proportion is smaller this year. We
+                            gather a random sample of 100 U.S. adults this year and find that 39
+                            rate their financial situation as “good.” Use the output from Minitab to
+                            complete the following statements about the p-value. Use numbers from
+                            the output to fill in the blanks.</p>
+    <image src="../webcontent/1_img5.gif" alt="Test and CI for One Proportion.
+        Test of p = 0.45 vs p &lt; 0.45
+        Sample: 1:
+        X = 39
+        N = 100
+        Sample p = 0.390000
+        95% Upper Bound = 0.485600
+        Z-Value = -1.21
+        P-Value = 0.114"/>
+    <wb:inline idref="u4_m2_testprop7_tutor1" purpose="learnbydoing"/>
+            <wb:inline idref="u4_m2_testprop7_tutor2" purpose="learnbydoing"/>
+            <wb:inline idref="u4_m2_testprop7_tutor3" purpose="learnbydoing"/>
+            <wb:inline idref="u4_m2_testprop7_tutor4" purpose="learnbydoing"/>
+        </body>
+    </section>
+    <section purpose="learnbydoing">
+        <title>Learn By Doing</title>
+        <body>
+            <p>The trustees of a local school district commission a survey to determine voter
+                opinions about a possible bond measure to fund school upgrades. In a poll of 293
+                of the district’s 5,019 registered voters, 178 would support the bond measure. A
+                hypothesis test was conducted using Minitab to determine if such a bond would
+                pass with the required 55% of the vote.</p>
+            <image src="../webcontent/1_img6.gif" alt="Minitab output: Test and CI for One
+Proportion
+            Test of p=0.55 vs p &gt; 0.55
+            Sample: 1
+            X: 178
+            N: 293
+            Sample p: 0.607509
+            95% Upper Bound: 0.66342
+            Z-Value: 1.98
+            P-Value: 0.024"/>
+            <wb:inline idref="u4_m2_testprop7_tutor5" purpose="learnbydoing"/>
+        </body>
+    </section>
+    <section purpose="learnbydoing">
+        <title>Learn By Doing</title>
+        <body>
+            <p>Do zinc supplements reduce a child's risk of catching a cold? A medical study reports
+                a p-value of 0.03. Are the following interpretations of the p-value valid or
+                invalid?</p>           
+    <wb:inline idref="u4_m2_testprop7_tutor6" purpose="learnbydoing"/>
+        </body>
+    </section>
+</body>
+</section>
+</body>
+</workbook_page>

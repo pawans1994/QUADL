@@ -1,0 +1,392 @@
+<HTML>
+<HEAD><TITLE>
+Amino Acids
+</TITLE>
+<script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+
+<script type="text/javascript">
+jmolInitialize("./jmol");
+jmolSetAppletColor("gray");
+</script>
+
+<A NAME="top">
+
+<TABLE BORDER=0 WIDTH=900 CELLPADDING=0 CELLSPACING=0>
+
+<TH colspan=7 align=left>Biochemistry I</TH>
+<TH colspan=7 align=right>Amino Acid Images</TH>
+
+<TR>
+
+<td bgcolor="#eeeeee">&nbsp;</TD>
+
+<TD colspan=6 VALIGN=TOP bgcolor="#eeeeee">
+
+<script type="text/javascript">
+jmolApplet([340,340],
+"load ./jmol/pdbs/AAPDBs/L-alanine.pdb;zoom 125;rotate z -100","left");
+</script><BR>
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolRadioGroup([
+["background white;color labels black","white",true],
+["background gray;color labels black","gray",false],
+["background [100,100,255];color labels black","Lt blue",false],
+["background black;color label yellow","black",false]]," ","Background color")
+</script>
+</script>
+
+<script type="text/javascript">
+jmolSetTarget("left")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+</TD>
+
+<td bgcolor="#eeeeee">&nbsp;</TD>
+
+    <TD colspan=6 VALIGN=TOP bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolApplet([340,340],
+"load ./jmol/pdbs/AAPDBs/L-alanine.pdb;zoom 125;rotate z -100","right");
+</script><BR>
+<script type="text/javascript">
+jmolSetTarget("right") 
+jmolRadioGroup([
+["background white;color labels black","white",true],
+["background gray;color labels black","gray",false],
+["background [100,100,255];color labels black","Lt blue",false],
+["background black;color label yellow","black",false]]," ","Background color")
+</script>
+
+<script type="text/javascript">
+jmolSetTarget("right")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+
+</TD>
+    <td bgcolor="#eeeeee">
+        <H3>Determining Chirality</H3>
+        <ol>
+            <li>Label the four groups attached to the chiral center with the letters W,X,Y,Z. W has the highest atomic number (NH group).
+              <li>Point the group labeled 'Z' away from you (H<font face="symbol">a</font> here).
+               <li>If W,X,Y is <B>counter-clockwise</B> the compound is <B>L</B>, or S.
+                <li>If W,X,Y is <B>clockwise</B> the compound is <B>D</B>, or R.
+                 
+                        Most common amino acids are <B>L</B>.
+    </td>
+    
+</TR>
+
+<TR>
+<td bgcolor="#eeeeee">&nbsp;</TD>
+
+    <TD width=90 bgcolor="#eeeeee"><font color="#000000">
+<B>Non-polar:</b></td>
+    <td bgcolor="#eeeeee">
+<font color="#000000">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/glycine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Gly';set fontsize 12;color labels yellow;select *","","","Glycine");  
+</script>&nbsp;Gly</td>
+    <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-alanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ala';set fontsize 12;color labels yellow;select *","","","Alanine");  
+</script>&nbsp;Ala</td>
+    <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-valine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Val';set fontsize 12;color labels yellow;select *","","","Valine");  
+</script>&nbsp;Val</td>
+    <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-leucine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Leu';set fontsize 12;color labels yellow;select *","","","Leucine");  
+</script>&nbsp;Leu</td><td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-isoleucine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ile';set fontsize 12;color labels yellow;select *","","","Isoleucine");  
+</script>&nbsp;Ile</td>
+
+<td bgcolor="#eeeeee">&nbsp;</td>
+
+   <!--right panel--> 
+    <TD width=90 bgcolor="#eeeeee"><font color="#000000">
+        <B>Non-polar:</b></td>
+            <td bgcolor="#eeeeee">
+                <font color="#000000">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/glycine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Gly';set fontsize 12;color labels yellow;select *","","","Glycine");  
+                    </script>&nbsp;Gly
+                    <td bgcolor="#eeeeee">        
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-alanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ala';set fontsize 12;color labels yellow;select *","","","Alanine");  
+                    </script>&nbsp;Ala
+                        <td bgcolor="#eeeeee">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-valine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Val';set fontsize 12;color labels yellow;select *","","","Valine");  
+                    </script>&nbsp;Val
+                            <td bgcolor="#eeeeee">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-leucine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Leu';set fontsize 12;color labels yellow;select *","","","Leucine");  
+                    </script>&nbsp;Leu
+                                <td bgcolor="#eeeeee">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-isoleucine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ile';set fontsize 12;color labels yellow;select *","","","Isoleucine");  
+                    </script>&nbsp;Ile
+            </td>
+            <td bgcolor="#eeeeee"><font color="#000000">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+                                    jmolSetTarget("left") 
+                                    jmolButton("zap;load ./jmol/pdbs/AAPDBs/D-alanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  D-Ala';set fontsize 12;color labels yellow;select *","","","D-alanine");  
+                                  </script>&nbsp;D-Ala (Left Panel)
+                               </td></tr>
+                          
+<tr>
+<td bgcolor="#eeeeee">&nbsp;</td>
+<td bgcolor="#eeeeee"><font color="#000000">
+<B>Aromatic:</b>
+
+<td bgcolor="#eeeeee">
+<font color="#000000">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-histidine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  His';set fontsize 12;color labels yellow;select *","","","Histidine");  
+</script>&nbsp;His
+    <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-tyrosine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Tyr';set fontsize 12;color labels yellow;select *","","","Tyrosine");  
+</script>&nbsp;Tyr
+        <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-tryptophan.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Trp';set fontsize 12;color labels yellow;select *","","","Tryptophan");  
+</script>&nbsp;Trp
+            <td bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-phenylalanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Phe';set fontsize 12;color labels yellow;select *","","","Phenylalanine");  
+</script>&nbsp;Phe</td>
+<td bgcolor="#eeeeee">&nbsp;</td>
+<td bgcolor="#eeeeee">&nbsp;</td>
+    <!--right panel-->
+    <td bgcolor="#eeeeee"><font color="#000000">
+        <B>Aromatic:</b>
+            
+            <td bgcolor="#eeeeee">
+                <font color="#000000">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-histidine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  His';set fontsize 12;color labels yellow;select *","","","Histidine");  
+                    </script>&nbsp;His
+                    <td bgcolor="#eeeeee">                   
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-tyrosine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Tyr';set fontsize 12;color labels yellow;select *","","","Tyrosine");  
+                    </script>&nbsp;Tyr
+                        <td bgcolor="#eeeeee">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-tryptophan.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Trp';set fontsize 12;color labels yellow;select *","","","Tryptophan");  
+                    </script>&nbsp;Trp
+                            <td bgcolor="#eeeeee">
+                    <script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-phenylalanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Phe';set fontsize 12;color labels yellow;select *","","","Phenylalanine");  
+                    </script>&nbsp;Phe</td>
+                    <td bgcolor="#eeeeee">&nbsp;</td>
+                    <td bgcolor="#eeeeee"><font color="#000000">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+                            jmolSetTarget("right") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/D-alanine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  D-Ala';set fontsize 12;color labels yellow;select *","","","D-alanine");  
+                        </script>&nbsp;D-Ala (Right Panel)
+                    </td></tr>
+</tr>
+    
+    <tr>
+        <td bgcolor="#eeeeee">&nbsp;</td>
+        <td bgcolor="#eeeeee"><font color="#000000">
+            <B>Polar:</b>
+                
+                <td bgcolor="#eeeeee">
+                    <font color="#000000">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-serine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ser';set fontsize 12;color labels yellow;select *","","","Serine");  
+                        </script>&nbsp;Ser
+                        <td bgcolor="#eeeeee">                  
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-threonine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Thr';set fontsize 12;color labels yellow;select *","","","threonine");  
+                        </script>&nbsp;Thr
+                            <td bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-methionine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Met';set fontsize 12;color labels yellow;select *","","","Methionine");  
+                        </script>&nbsp;Met
+                                <td bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-asparagine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Asn';set fontsize 12;color labels yellow;select *","","","Asparagine");  
+                        </script>&nbsp;Asn
+                                    <td bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                        jmolSetTarget("left") 
+                        jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-glutamine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Glu';set fontsize 12;color labels yellow;select *","","","Glutamine");  
+                        </script>&nbsp;Gln
+                                       
+                        <td bgcolor="#eeeeee">&nbsp;</td>
+                        <!--right panel-->
+                        <td bgcolor="#eeeeee"><font color="#000000">
+                            <B>Polar:</b>
+                                
+                                <td bgcolor="#eeeeee">
+                                    <font color="#000000">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-serine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Ser';set fontsize 12;color labels yellow;select *","","","Serine");  
+                                        </script>&nbsp;Ser
+                                        <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-threonine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Thr';set fontsize 12;color labels yellow;select *","","","threonine");  
+                                        </script>&nbsp;Thr
+                                            <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-methionine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Met';set fontsize 12;color labels yellow;select *","","","Methionine");  
+                                        </script>&nbsp;Met
+                                                <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-asparagine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Asn';set fontsize 12;color labels yellow;select *","","","Asparagine");  
+                                        </script>&nbsp;Asn
+                                                    <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-glutamine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Glu';set fontsize 12;color labels yellow;select *","","","Glutamine");  
+                                        </script>&nbsp;Gln
+                                                        <td bgcolor="#eeeeee">&nbsp;</td>
+                        
+    </tr>
+    
+    <tr>
+        <td bgcolor="#eeeeee">&nbsp;</td>
+        <td bgcolor="#eeeeee"><font color="#000000">
+            <B>Charged:</b>
+                
+                <td bgcolor="#eeeeee">
+                    <font color="#000000">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-aspartate.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Asp';set fontsize 12;color labels yellow;select *","","","Aspartic Acid");  
+                        </script>&nbsp;Asp
+                        <td bgcolor="#eeeeee">
+<script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-glutamate.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Glu';set fontsize 12;color labels yellow;select *","","","Glutamic acid");  
+</script>&nbsp;Glu 
+                            <td bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-lysine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Lys';set fontsize 12;color labels yellow;select *","","","Lysine");  
+                        </script>&nbsp;Lys
+                            <td bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-arginine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Arg';set fontsize 12;color labels yellow;select *","","","Arginine");
+                        </script>&nbsp;Arg
+                                <td bgcolor="#eeeeee">&nbsp;</td>                 
+                        <td bgcolor="#eeeeee">&nbsp;</td>
+                        <td bgcolor="#eeeeee"><font color="#000000">
+                            <B>Charged:</b>
+                                
+                                <td bgcolor="#eeeeee">
+                                    <font color="#000000">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-aspartate.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Asp';set fontsize 12;color labels yellow;select *","","","Aspartic Acid");  
+                                        </script>&nbsp;Asp
+                                        <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-glutamate.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Glu';set fontsize 12;color labels yellow;select *","","","Glutamic acid");  
+                                        </script>&nbsp;Glu
+                                            <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-lysine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Lys';set fontsize 12;color labels yellow;select *","","","Lysine");  
+                                        </script>&nbsp;Lys
+                                                <td bgcolor="#eeeeee">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-arginine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Arg';set fontsize 12;color labels yellow;select *","","","Arginine");</script>&nbsp;Arg
+                                        
+                                                    <td bgcolor="#eeeeee">&nbsp;</td>
+                                                    <td bgcolor="#eeeeee">&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td bgcolor="#eeeeee">&nbsp;</td>
+        <td bgcolor="#eeeeee"><font color="#000000">
+            <B>Special:</b>
+                
+                <td colspan=1 bgcolor="#eeeeee">
+                    <font color="#000000">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-proline.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Pro';set fontsize 12;color labels yellow;select *","","","Proline");  
+                        </script>&nbsp;Pro
+                        <td colspan=4 bgcolor="#eeeeee">
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-cysteine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Cys';set fontsize 12;color labels yellow;select *","","","Cysteine");  
+                            </script>&nbsp;Cys&nbsp;&nbsp;
+  
+                        <script type="text/javascript">
+                            jmolSetTarget("left") 
+                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/cys_link.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];set fontsize 12;color labels yellow;select *","","","disulfide bond");  
+                        </script>&nbsp;[S-S bond]
+                        <td bgcolor="#eeeeee">&nbsp;</td>
+                        <!--right panel-->
+                        <td bgcolor="#eeeeee"><font color="#000000">
+                            <B>Special:</b>
+                                
+                                <td colspan=1 bgcolor="#eeeeee">
+                                    <font color="#000000">
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-proline.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Pro';set fontsize 12;color labels yellow;select *","","","Proline");  
+                                        </script>&nbsp;Pro
+                                        <td colspan=4 bgcolor="#eeeeee">   
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/L-cysteine.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select atomno=1;label '  Cys';set fontsize 12;color labels yellow;select *","","","Cysteine");  
+                                        </script>&nbsp;Cys&nbsp;&nbsp;
+                                        
+                                        <script type="text/javascript">
+                                            jmolSetTarget("right") 
+                                            jmolButton("zap;load ./jmol/pdbs/AAPDBs/cys_link.pdb;select *;rotate z -100;wireframe 40;spacefill 120;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];set fontsize 12;color labels yellow;select *","","","disulfide bond");  
+                                        </script>&nbsp;[S-S bond]
+                                            <td bgcolor="#eeeeee">&nbsp;</td>
+                        
+    </tr>
+    </table>
+
+
+
+</TABLE>
+<HR>
+
+<TT>Last modified December 14, 2007.</TT>
+
+</BODY>
+</HTML>

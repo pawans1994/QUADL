@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_p9">
+<head>
+<title>Hypothesis Testing for the Population Proportion p (9 of 13)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+</head>
+<body>
+   
+<section>
+    <title>Let’s Summarize</title>
+    <body><p>We have now completed going through the four steps of hypothesis testing, and in particular, we learned how they are applied to the z-test for the population proportion. Let's briefly summarize:</p>
+<section>
+<title>Step 1</title>
+<body>
+<p>State the null and alternative hypotheses:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:mi>p</m:mi>
+<m:mo>=</m:mo>
+<m:mi>p</m:mi>
+</m:mrow>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>
+</p>
+<image style="block" src="../webcontent/image279.gif" alt="H_a : p { one of &lt;, &gt;, or &ne; } p_0"/>
+<p>where the choice of the appropriate alternative (out of the three) is usually quite clear from the context of the problem.</p>
+</body>
+</section>
+<section>
+<title>Step 2</title>
+<body>
+<p>Obtain data from a sample and:</p>
+<p> (i) Check whether the data satisfy the conditions which allow you to use this test.</p>
+    <ul>
+        <li>Random sample (or at least a sample that can be considered random in context)</li>
+        <li><em style="italic">n</em> ⋅ <em style="italic">p</em><sub>0</sub> ≥ 10, <em style="italic">n</em> ⋅ (1 − <em style="italic">p</em><sub>0</sub>) ≥ 10</li>
+    </ul>
+<!--<p><?oxy_comment_start author="mmyers" timestamp="20101127T132122-0500" comment="use bullets instead of asterisks, and line up equation bullet with this bullet"?>
+                    *<?oxy_comment_end?> random sample (or at least a sample that can be considered random in context)</p>
+<image style="block" src="../webcontent/image280.gif" alt="n &times; p_0 &ge; 10,
+    and    n &times; (1 - p_0) &ge; 10"/>-->
+<p> (ii) Calculate the sample proportion <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, and summarize the data using the test statistic:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:mfrac>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>. </p>
+<p> (<em>Recall:</em> This standardized test statistic represents how many standard deviations above
+                    or below <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> our sample proportion <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is. )</p>
+</body>
+</section>
+<section>
+<title>Step 3</title>
+<body>
+<p>Find the p-value of the test either by using software or by using the test statistic as
+                    follows:</p>
+<p> * for <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mrow>
+<m:mi>a</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mi>p</m:mi>
+<m:mo>&lt;</m:mo>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>0</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mi>z</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</p>
+<p> * for <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mrow>
+<m:mi>a</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mi>p</m:mi>
+<m:mo>&gt;</m:mo>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>0</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>Z</m:mi>
+<m:mo>≥</m:mo>
+<m:mi>z</m:mi>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</p>
+<p> * for <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mrow>
+<m:mi>a</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mi>p</m:mi>
+<m:mo>≠</m:mo>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>0</m:mi>
+</m:mrow>
+</m:msub>
+<m:mi>:</m:mi>
+<m:mn>2</m:mn>
+<m:mi>P</m:mi>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mi>Z</m:mi>
+<m:mo>≥</m:mo>
+<m:mo>|</m:mo>
+<m:mi>z</m:mi>
+<m:mo>|</m:mo>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</p>
+</body>
+</section>
+<section>
+<title>Step 4</title>
+<body>
+<p>Reach a conclusion first regarding the significance of the results, and then determine what it
+                    means in the context of the problem. Recall that: </p>
+<p>If the p-value is small (in particular, smaller than the significance level, which is usually
+                    .05), the results are significant (in the sense that there is a significant
+                    difference between what was observed in the sample and what was claimed in
+                        H<sub>o</sub>), and so we reject H<sub>o</sub>. If the p-value is not small,
+                    we do not have enough statistical evidence to reject H<sub>o</sub>, and so we
+                    continue to believe that H<sub>o</sub>
+                    <em>may</em> be true. (Remember, in hypothesis testing we never "accept"
+                            H<sub>o</sub>).</p>
+</body>
+</section>
+<activity idref="_u5_m1_lbd9" purpose="learnbydoing"/>
+<p>What's next?</p>
+<p>Before we move on to the next test, we use the z-test for proportions to bring up and illustrate
+            some very important issues regarding hypothesis testing.</p></body></section>
+</body>
+</workbook_page>

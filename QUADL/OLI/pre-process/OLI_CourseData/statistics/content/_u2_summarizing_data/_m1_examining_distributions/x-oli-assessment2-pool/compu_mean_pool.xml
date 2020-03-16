@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_mean_pool">
+    <title>pool</title>
+
+
+
+
+    <multiple_choice id="q1_compu_mean" select="single">
+        <body>
+            <p>Here are two datasets: </p><p> Dataset A: 64 65 66 68 70 71 72</p>
+            <p>Dataset B: 64 65 66 68 70 71 720 </p>
+            <p>For dataset A, the mean and median are 68. Looking at dataset B, notice that all of
+                the observations except the last one are close together. Which measure will be
+                affected by this last observation in dataset B?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">Mean</choice>
+            <choice value="B">Median</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The mean will be affected by the outlier value 720. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The median will not be affected by the outlier value 720.</feedback>
+            </response>
+            
+        </part>
+    </multiple_choice>
+
+
+
+
+    <multiple_choice id="q2_compu_mean" select="single">
+        <body>
+            <p>Here are the number of hours that 9 students spend on the computer on a typical day:
+                </p><p> 1 6 7 6 8 11 6 12 15 </p>
+            <p>Which of the following represents the mean number of hours spent on the computer?
+            </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">6.0</choice>
+            <choice value="B">7.0</choice>
+            <choice value="C">8.0</choice>
+            <choice value="D">9.0</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This value represents the <em style="italic">mode</em>, or the most frequently
+                    occurring number. The mean is the sum of all the observations divided by the
+                    total number of observations. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This value represents the <em style="highlight">median</em>, the middle value in an
+                    ordered data set. The mean is the sum of all the observations divided by the
+                    total number of observations.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The mean involves the sum of all the observations (1 + 6 + 7 + 6
+                    + 6 + 11 + 6 + 12 + 15 = 72) divided by the total number of observations (9),
+                    which equals 8.0.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the total number of observations. The mean is the sum
+                    of all the observations divided by the total number of observations.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+</pool>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_case_three2">
+    <head>
+        <title>Case Q→Q (2 of 3)</title>
+        <objref idref="carry_out_inferential_method_relationships"/>
+        <objref idref="specify_hypotheses_for_relationships"/>
+    </head>
+<body>
+   
+        <p>Let's introduce our leading example, which was actually our leading example in the
+            E<?oxy_insert_start author="mmyers" timestamp="20101129T173347-0500"?>xploratory
+            <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101129T173349-0500"?>ata
+            <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101129T173352-0500"?>nalysis<?oxy_insert_end?>
+            unit as well.</p>
+        <example>
+            <p>In a study of the legibility and visibility of highway signs, a Pennsylvania research
+                firm determined the maximum distance at which each of 30 drivers could read a newly
+                designed sign. The 30 participants in the study ranged in age from 18 to 82 years
+                old. The government agency that funded the research hoped to improve highway safety
+                for older drivers and wanted to examine the relationship between age and
+                <?oxy_delete author="mmyers" timestamp="20101129T173417-0500" content="the "?>sign
+                legibility distance. (Data adopted with permission from Utts and Heckard,
+                <?oxy_comment_start author="mmyers" timestamp="20101129T173447-0500" comment="Is this a book? Please include year, and make book title italic"?>Mind
+                on Statistics<?oxy_comment_end?>).</p>
+            <p>Let's go through the entire process (outlined
+                <?oxy_insert_start author="mmyers" timestamp="20101129T173459-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T173459-0500" content="i"?>n
+                the previous page) for this example.</p>
+            <p>
+                <em>Starting point</em>: The researchers wanted to examine the relationship between
+                age and sign legibility distance in the population of drivers. The researchers
+                collected data from a random sample of 30 drivers:</p>
+            <image style="block" src="../webcontent/image179.gif" alt="A two column table, with column
+headers &quot;Age&quot; and &quot;Distance.&quot; Here is the data in the table, by row (in
+&quot;Age: Distance&quot; format):
+        18: 510;
+        20: 590;
+        22: 560;
+        23: 510;
+        23: 460;
+        25: 490;
+        27: 560;
+        ...
+        ...
+        77: 360;
+        79: 310;
+        82: 360;"/>
+            <p>
+                <em>Exploratory Analysis:</em>
+            </p>
+            <p>The researchers display the data
+                <?oxy_insert_start author="mmyers" timestamp="20101129T173542-0500"?>on<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T173540-0500" content="with"?>
+                a scatterplot:</p>
+            <image style="block" src="../webcontent/image147.gif" alt="A scatterplot of Distance vs. Age.
+Distance is on the vertical axis, and age is on the horizontal axis. The histogram has a negative relationship,
+and it seems like it could be reasonably linear."/>
+            <p>and observe a negative linear relationship in the data. In order to quantify the
+                strength of that linear
+                relationship<?oxy_insert_start author="mmyers" timestamp="20101129T173602-0500"?>,<?oxy_insert_end?>
+                the researchers supplement the scatterplot with a numerical
+                measure<?oxy_insert_start author="mmyers" timestamp="20101129T173615-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T173613-0500" content=" -- "?>the
+                <?oxy_comment_start author="mmyers" timestamp="20101129T205045-0500" comment="make bold to indicate terminology"?>correlation
+                coefficient
+                <?oxy_insert_start author="mmyers" timestamp="20101129T205048-0500"?>(<?oxy_insert_end?>r<?oxy_comment_end?><?oxy_insert_start author="mmyers" timestamp="20101129T205049-0500"?>)<?oxy_insert_end?>,
+                which turns out to be r = -.801, confirming the researchers' visual assessment of a
+                negative, fairly strong linear relationship between age and legibility distance.</p>
+        </example>
+        <activity idref="_u5_m2_lbd11" purpose="learnbydoing"/>
+            <p>
+                <em>Inference:</em>
+            </p>
+            <p>The researchers would now like to see whether the observed linear relationship
+                between age and legibility distance can be generalized to the entire population of
+                drivers. In other words, the researchers want to check whether the observed
+                linearity is due to true linearity in the population, or a pattern that could have
+                happened just by chance.</p>
+            <p>The test that the researchers are going to carry out is a t-test (most commonly known
+                as the "t-test for the slope" for reasons that we are not going to get into) which
+                is testing the following two hypotheses (step 1):</p>
+            <p>
+            <em><?oxy_insert_start author="mmyers" timestamp="20101129T180739-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T180737-0500" content="Ho"?>:</em>
+            There is no linear relationship between age and
+            distance<?oxy_insert_start author="mmyers" timestamp="20101129T180817-0500"?>.<?oxy_insert_end?></p>
+            <p>
+            <em><?oxy_insert_start author="mmyers" timestamp="20101129T180744-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T180742-0500" content="Ha"?>:</em>
+            There is a linear relationship between age and
+            distance<?oxy_insert_start author="mmyers" timestamp="20101129T180819-0500"?>.<?oxy_insert_end?></p>
+            <p>and in general,</p>
+            <p>
+            <em><?oxy_insert_start author="mmyers" timestamp="20101129T180803-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T180755-0500" content="Ho"?>:</em>
+            There is no linear relationship between X and
+            Y<?oxy_insert_start author="mmyers" timestamp="20101129T180821-0500"?>.<?oxy_insert_end?></p>
+            <p>
+            <em><?oxy_insert_start author="mmyers" timestamp="20101129T180808-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T180806-0500" content="Ha"?>:</em>
+            There is a linear relationship between X and
+            Y<?oxy_insert_start author="mmyers" timestamp="20101129T180822-0500"?>.<?oxy_insert_end?></p>
+        <!--<activity idref="_u5_m2_dig10" purpose="didigetthis"/>-->
+        <wb:inline idref="u4_m4_qq2_tutor1" purpose="didigetthis"/>
+        <wb:inline idref="u4_m4_qq2_tutor2" purpose="didigetthis"/>
+        <section>
+            <title>Comments</title>
+            <body>
+                <p>1. As we mentioned earlier, we are going to keep this discussion on the
+                    qualitative side and in particular we will not go very deeply into <em>step 2
+                    </em>of the hypothesis test. As for the<em> test-statistic</em> in this case,
+                    we'll just say that the
+                    test<?oxy_delete author="mmyers" timestamp="20101129T181920-0500" content=", as mentioned,"?>
+                    is a
+                    t-test<?oxy_insert_start author="mmyers" timestamp="20101129T181926-0500"?>,<?oxy_insert_end?>
+                    which<?oxy_insert_start author="mmyers" timestamp="20101129T181929-0500"?>,<?oxy_insert_end?>
+                    as we
+                    know<?oxy_insert_start author="mmyers" timestamp="20101129T181932-0500"?>,<?oxy_insert_end?>
+                    means that the null distribution of its test statistic (under which the p-values
+                    are calculated) is some t<?oxy_insert_start author="mmyers" timestamp="20101129T181939-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T181939-0500" content="-"?>distribution.</p>
+                <p>2. We are also going to focus
+                    <?oxy_delete author="mmyers" timestamp="20101129T181959-0500" content="only "?>on
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T182003-0500"?><?oxy_comment_start author="mmyers" timestamp="20101129T182036-0500" comment="is new wording correct? (There are other conditions that aren&apos;t mentioned here)?"?>only
+                    <?oxy_insert_end?>some<?oxy_comment_end?> of the <em>conditions</em> that allow
+                    us to safely use this t-test. They are:</p>
+                <ul>
+                    <li>the observed data indeed look linear (otherwise it would not make sense to
+                        try and generalize them)</li>
+                    <li>the observations are independent</li>
+                    <li>there are no extreme outliers in the data</li>
+                    <li>the sample size is fairly large</li>
+                </ul>
+                <p>Note that in our example all these conditions are met; the data definitely look
+                    linear, the observations (drivers) are independent of each other (since they
+                    were randomly chosen), there are no extreme observations in the data, and a
+                    sample size of n<?oxy_insert_start author="mmyers" timestamp="20101129T182110-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101129T182110-0500"?>
+                    <?oxy_insert_end?>30<?oxy_delete author="mmyers" timestamp="20101129T182111-0500" content=","?>
+                    is fairly large.</p>
+                <p>For <em>step 3,</em> the researchers use statistical software to find a test
+                    statistic value of -7.09, and a p-value that is so small that it is essentially
+                    0. This means that it would be extremely unlikely (actually, quite impossible)
+                    to get data like those observed if
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T182124-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T182124-0500" content="A"?>ge
+                    and
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T182127-0500"?>l<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T182127-0500" content="L"?>egibility
+                    distance were not linearly related. In other words, it would be extremely
+                    unlikely to get data like those observed just by chance.</p>
+             <!--   RS 07/28/10 Generalized to eliminate alternatives
+                 <alternatives group="statistics.package">
+                    <default><pref:value preference="statistics.package"/></default>
+                    <alternative value="excel">
+                        <title>Excel 2007 Instructions</title>
+                        <p>For <em>step 3,</em> the researchers use Excel to find a test statistic
+                            value of -7.09, and a p-value that is so small that it is essentially 0.
+                            This means that it would be extremely unlikely (actually, quite
+                            impossible) to get data like those observed if Age and Legibility
+                            distance were not linearly related. In other words, it would be
+                            extremely unlikely to get data like those observed just by chance.</p>
+                    </alternative>
+                    <alternative value="minitab">
+                        <title>Minitab Instructions</title>
+                        <p>For <em>step 3,</em> the researchers obtain the p-value from software.
+                            Here is the output:</p>
+                        <image style="block" src="../webcontent/image180.gif"/>
+                        <p>Note that the p-value appears in the row where the name of the
+                            explanatory variable, age, appears. The p-value of our test is so small
+                            that Minitab reports that it is 0. This means that it would be extremely
+                            unlikely (actually, quite impossible) to get data like those observed if
+                            Age and Legibility distance were not linearly related. In other words,
+                            it would be extremely unlikely to get data like those observed just by
+                            chance.</p>
+                        <p>(<em>Comment</em>: The value to the left of the p-value, -7.09 is our
+                            test statistic.)</p>
+                    </alternative>
+                    <alternative value="r">
+                        <title>R Instructions</title>
+                        <p>For <em>step 3,</em> the researchers use R to find a test statistic value
+                            of -7.09, and a p-value that is so small that it is essentially 0. This
+                            means that it would be extremely unlikely (actually, quite impossible)
+                            to get data like those observed if Age and Legibility distance were not
+                            linearly related. In other words, it would be extremely unlikely to get
+                            data like those observed just by chance.</p>
+                    </alternative>
+                <alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                <p>The researchers conclude (<em>step 4</em>) that since the p-value is so
+                    small<?oxy_insert_start author="mmyers" timestamp="20101129T182153-0500"?>,<?oxy_insert_end?>
+                    the data provide extremely strong evidence to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T182205-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T182203-0500" content="Ho"?>
+                    and conclude that age and legibility distance are linearly related.</p>
+                <!--<activity idref="_u5_m2_dig11" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m4_qq2_tutor3" purpose="didigetthis"/>
+                <activity idref="_u5_m2_lbd12" purpose="learnbydoing"/>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101129T204536-0500" comment="I think ti is confusing the way these three examples are all mixed up -- trying to keep track of what&apos;s going on in three exmaples at once might hinder students&apos; understanding. Consider streamlining this section. "?><em>Note:</em>
+                    It is important<?oxy_comment_end?> to distinguish between the information
+                    provided by r and by the p-value. The correlation coefficient <em>r informs us
+                        about the strength of the linear relationship in the data</em>: close to +1
+                    or -1 for a strong linear relationship, close to 0 for a weak linear
+                    relationship. In contrast, the regression <em>p-value informs us about the
+                        strength of evidence</em> that there is a linear relationship in the
+                    population from which the data were obtained.</p>
+                <p>In our example, since the p-value is 0.000 and r = -.801, we would say that we
+                    have extremely strong evidence of a fairly strong relationship between age and
+                    distance in the population of drivers.</p>
+            </body>
+        </section>
+                <!--<activity idref="_u5_m2_dig9" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>In our cry count of newborns and IQ at age three example, we have found the following:</p>
+                <ul>
+                    <li>The correlation
+                        coeffic<?oxy_insert_start author="mmyers" timestamp="20101129T205332-0500"?>i<?oxy_insert_end?>ent
+                        of our observed data is r<?oxy_insert_start author="mmyers" timestamp="20101129T204630-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101129T204630-0500"?>
+                        <?oxy_insert_end?>0.4.</li>
+                    <li>The p-value of the test:
+                        
+                        <ul>
+                            <li>H<sub>o</sub>: There is no linear relationship between cry count and IQ.</li>
+                            <li>H<sub>a</sub>: There is a significant linear relationship between cry count and IQ.</li>
+                        </ul>
+                        
+                        is p=0.012. 
+                    </li>
+                </ul>
+                <wb:inline idref="u4_m4_qq2_tutor4" purpose="didigetthis"/>
+            </body>
+        </section>
+        
+    </body>
+</workbook_page>

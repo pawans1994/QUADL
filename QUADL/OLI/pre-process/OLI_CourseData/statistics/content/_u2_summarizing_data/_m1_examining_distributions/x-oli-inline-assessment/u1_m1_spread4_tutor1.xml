@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m1_spread4_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>A survey taken in a large statistics class contained the question: "What's the fastest
+            you have driven a car (in miles per hour)?" The five-number summary for the 87 males
+            surveyed is: </p><p>min = 55, Q1 = 95, Median = 110, Q3 = 120, Max = 155 </p><p> Should the largest observation in this data set be classified as an outlier?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">Yes</choice>
+         <choice value="Res2">No</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. The IQR in this case is 120 − 95  =  25. Applying the
+               1.5(IQR) rule, we find: Q3 + 1.5(IQR) = 120 + 1.5(25) = 157.5, and therefore the
+               largest observation, 155, should <em style="italic">not</em>
+               be classified as an outlier. Note, however, that in this case: Q1 − 1.5(IQR) = 95 −
+               1.5(25) = 57.5, and therefore the smallest observation, 55, should be classified as
+               an outlier.</feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. The IQR in this case is 120 − 95  =  25. Applying the 1.5(IQR)
+               rule, we find: Q3 + 1.5(IQR) = 120 + 1.5(25) = 157.5, and therefore the largest
+               observation, 155, should <em style="italic">not</em>
+               be classified as an outlier. Note, however that in this case: Q1 − 1.5(IQR) = 95 −
+               1.5(25) = 57.5, and therefore the smallest observation, 55, should be classified as
+               an outlier.</feedback>
+         </response>
+         <hint>Use the 1.5(IQR) criterion for detecting outliers.</hint>
+      </part>
+   </question>
+</assessment>

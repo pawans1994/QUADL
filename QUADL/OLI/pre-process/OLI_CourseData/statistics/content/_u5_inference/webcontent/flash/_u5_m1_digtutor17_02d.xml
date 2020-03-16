@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u5_m1_digtutor17_02d" title="question_4">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">If the p-value is 0.103, based upon the same data, which confidence interval could be the 95% confidence interval for p?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">(0.068, 0.082)</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">(0.068, 0.078)</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">(0.085, 0.096)</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">(0.098, 0.112)</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Correct. Since 0.103 &gt; 0.05, we cannot reject the null hypothesis. Our value for p must be in the interval.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Note that the p-value is &gt; 0.05, so we cannot reject the null hypothesis. Our value for p is a plausible one.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Note that the p-value is &gt; 0.05, so we cannot reject the null hypothesis. Our value for p is a plausible one.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Note that the p-value is &gt; 0.05, so we cannot reject the null hypothesis. Our value for p must be in the interval, not our p-value.</mattext></material></itemfeedback></item></questestinterop>

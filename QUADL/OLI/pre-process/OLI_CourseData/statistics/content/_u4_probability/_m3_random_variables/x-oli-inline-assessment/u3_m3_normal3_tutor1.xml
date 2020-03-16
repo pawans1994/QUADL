@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal3_tutor1">
+   <title>Tutor</title>
+<page>
+   <question id="q1">
+      <body>
+         <p>Ron, who took
+               Prof<?oxy_insert_start author="mmyers" timestamp="20101122T104226-0500"?>essor<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T104228-0500" content="."?>
+               Meyer's class, scored 88 on the final. Ron's z-score is: </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">88</choice>
+         <choice value="Res2">6</choice>
+         <choice value="Res3">-1.2</choice>
+         <choice value="Res4">1.2</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect.  88 is Ron's raw score. Recall that the z-score of a normal value is (value - mean) / standard deviation. Please try again.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. It seems like you started well by calculating the difference (value - mean) = 88 - 82.  Recall however that z-score is calculated: (value - mean) / standard deviation.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. It seems like your mistake is that you calculated: (mean - value) / standard deviation. You switched "mean" and "value." Note that z-scores are calculated: (value - mean) / standard deviation. Please try again.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Good
+                  <?oxy_insert_start author="mmyers" timestamp="20101122T104308-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T104308-0500" content="J"?>ob!
+                  Indeed, <?oxy_insert_start author="mmyers" timestamp="20101122T104319-0500"?>Ron's
+                  <?oxy_insert_end?>z-score = (88 - 82) / 5 = 1.2. </feedback>
+         </response>
+      </part>
+   </question>
+</page></assessment>

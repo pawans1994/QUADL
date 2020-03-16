@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="_u4_m3_digtutor14b">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">What is the probability that a normal random variable will take a value that is between 1.5 standard deviations below the mean and 2.5 standard deviations above the mean? In other words, what is P(−1.5 &lt; z &lt; 2.5)?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">0.9938</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">0.0668</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">0.9270</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">0.0730</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+         </resprocessing>
+
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 0.9938 is just P(z &lt; 2.5). Recall that P(a &lt; z &lt; b) = P(z &lt; b) − P(z &lt; a), the table entry of a subtracted from the table entry of b.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 0.0668 is just P(z &lt; −1.5). Recall that P(a &lt; z &lt; b) = P(z &lt; b) − P(z &lt; a), the table entry of a subtracted from the table entry of b. </mattext></material></itemfeedback>
+<itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Correct. P(−1.5 &lt; z &lt; 2.5) = P(z &lt; 2.5) − P(z &lt; −1.5) = 0.9938 − 0.0668 = 0.9270.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Recall that P(a &lt; z &lt; b) = P(z &lt; b) − P(z &lt; a), the table entry of a subtracted from the table entry of b. </mattext></material></itemfeedback>
+       </item></questestinterop>

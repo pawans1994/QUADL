@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p5">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (5 of 13)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Comments</title>
+            <body>
+                <ol>
+                    <li><p>It should now be clear why this test is commonly known as <em>the z-test
+                                for the population proportion</em>. The name comes from the fact
+                            that it is based on a test statistic that is a <em>z-score.</em>
+                        </p></li>
+                    <li><p>Recall fact 1 that we used for constructing the z-test statistic. Here is
+                            part of it again:</p>
+                        <p> When we take a <em>random</em> sample of size n from a population with
+                            population proportion p, the possible values of the sample proportion
+                                (<m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:math>) (<em>when certain conditions are met</em>) have approximately
+                            a normal distribution with a mean of ... and a standard deviation of
+                            ....</p>
+                        <p> This result provides the theoretical justification for constructing the
+                            test statistic the way we did, and therefore the assumptions under which
+                            this result holds (in bold, above) are the conditions that our data need
+                            to satisfy so that we can use this test. These two conditions are:</p>
+                        <ol style="lower-roman">
+                            <li><p>The sample has to be random.</p></li>
+                            <li><p>The conditions under which the sampling distribution of <m:math
+                                        overflow="scroll">
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                        </m:mrow>
+                                    </m:math> is normal are met. In other words:</p></li>
+                        </ol>
+                        <image style="block" src="../webcontent/image248.gif"
+                            alt="
+n &times; p_0 &ge; 10                 and             n &times; (1 - p_0) &ge; 10"
+                        /></li>
+
+                    <li><p>Here we will pause to say more about condition (i.) above, the need for a
+                            random sample. In the Probability Unit we discussed sampling plans based
+                            on probability (such as a simple random sample, cluster, or stratified
+                            sampling) that produce a non-biased sample, which can be safely used in
+                            order to make inferences about a population. We noted in the Probability
+                            Unit that, in practice, other (non-random) sampling techniques are
+                            sometimes used when random sampling is not feasible. It is important
+                            though, when these techniques are used, to be aware of the type of bias
+                            that they introduce, and thus the limitations of the conclusions that
+                            can be drawn from them.</p>
+                        <p>For our purpose here, we will focus on one such practice, the situation
+                            in which a sample is not really chosen randomly, but in the context of
+                            the categorical variable that is being studied, the sample is regarded
+                            as random. For example, say that you are interested in the proportion of
+                            students at a certain college who suffer from seasonal allergies. For
+                            that purpose, the students in a large engineering class could be
+                            considered as a random sample, since there is nothing about being in an
+                            engineering class that makes you more or less likely to suffer from
+                            seasonal allergies. Technically, the engineering class is a convenience
+                            sample, but it is treated as a random sample in the context of this
+                            categorical variable. On the other hand, if you are interested in the
+                            proportion of students in the college who have math anxiety, then the
+                            class of engineering students clearly could not be viewed as a random
+                            sample, since engineering students probably have a much lower incidence
+                            of math anxiety than the college population overall. </p></li>
+                </ol>
+                <!--<activity idref="_u5_m1_lbd22" purpose="learnbydoing"/>-->
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>We are conducting a survey to determine if an upcoming bond measure will
+                            receive a majority vote in the county. The null hypothesis claims that p
+                            = 0.50, where p is the proportion of registered voters in the county who
+                            say they support the bond measure. </p>
+                        <wb:inline idref="u4_m2_testprop5_tutor1" purpose="learnbydoing"/>
+                        <p> In 2007, a Gallup poll estimated that 45% of U.S. adults rated their
+                            financial situation as “good.” Is the proportion different for this
+                            year? Which of the following samples could be used to test the null
+                            hypothesis p = 0.45? Mark each as valid (OK to use to test the
+                            hypothesis) or not valid (should not be used to test the
+                            hypothesis).</p>
+                        <wb:inline idref="u4_m2_testprop5_tutor2" purpose="learnbydoing"/>
+                        <p>We plan to poll 200 students enrolled in statistics at your college by
+                            distributing surveys during class. Which of the following hypotheses
+                            could be tested with the survey results? Mark each as valid (OK to use
+                            to test the hypothesis) or not valid (should not be used to test the
+                            hypothesis.)</p>
+                        <wb:inline idref="u4_m2_testprop5_tutor3" purpose="learnbydoing"/>
+                    </body>
+                </section>
+
+            </body>
+        </section>
+        <p>Let's check the conditions in our three examples.</p>
+        <example>
+            <title>1</title>
+            <ol style="lower-roman">
+                <li><p>The 400 products were chosen at random.</p></li>
+                <li><p>n = 400, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>p</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:math>, and
+                        <?oxy_comment_start author="mmyers" timestamp="20101126T234537-0500" comment="use real bullets instead of asterisks (or just list with no bullets) and use asterisks for multiplication in below equations (applies to all three examples)"?>therefore:<?oxy_comment_end?>
+                    </p></li>
+            </ol>
+            <image style="block" src="../webcontent/image250.gif"
+                alt="
+* n &times; p_0 = 80 &ge; 10
+                * n &times; (1 - p_0) = 320 &ge; 10"
+            />
+        </example>
+        <example>
+            <title>2</title>
+            <ol style="lower-roman">
+                <li><p>The 100 students were chosen at random.</p></li>
+                <li><p>n = 100, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>p</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>157</m:mn>
+                            </m:mrow>
+                        </m:math>, and therefore:</p></li>
+            </ol>
+            <image style="block" src="../webcontent/image252.gif"
+                alt="
+* n &times; p_0 = 15.7 &ge; 10
+                * n &times; (1 - p_0) = 84.3 &ge; 10"
+            />
+        </example>
+        <example>
+            <title>3</title>
+            <ol style="lower-roman">
+                <li><p>The 1,000 U.S. adults were chosen at random.</p></li>
+                <li><p>n = 1,000, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>p</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>64</m:mn>
+                            </m:mrow>
+                        </m:math>, and therefore:</p></li>
+            </ol>
+            <image style="block" src="../webcontent/image254.gif"
+                alt="
+* n &times; p_0 = 640 &ge; 10
+                * n &times; (1 - p_0) = 360 &ge; 10"
+            />
+        </example>
+        <!--<activity idref="_u5_m1_lbd23" purpose="learnbydoing"/>-->
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>In each of the following scenarios, you need to decide whether it is appropriate
+                    to use the z-test for the population proportion p, and if not, which condition
+                    is violated.</p>
+                <p><em>Scenario 1: </em>The UCLA Internet Report (February 2003) estimated that
+                    roughly 8.7% of Internet users are extremely concerned about credit card fraud
+                    when buying online. Has that figure changed since? To test this, a random sample
+                    of 100 Internet users was chosen. When interviewed, 10 said that they were
+                    extremely worried about credit card fraud when buying online. Let p be the
+                    proportion of all Internet users who are concerned about credit card fraud. </p>
+                <wb:inline idref="u4_m2_testprop5_tutor4" purpose="learnbydoing"/>
+                <p><em>Scenario 2: </em>The UCLA Internet Report (February 2003) estimated that a
+                    proportion of roughly .75 of Internet-using homes are still using dial-up access, but
+                    claimed that the use of dial-up is declining. Is that really the case? To
+                    examine this, a follow-up study was conducted a year later in which out of a
+                    random sample of 1,308 households that had an Internet connection, 804 were
+                    connecting using a dial-up modem. Let p be the proportion of all U.S.
+                    Internet-using households that have dial-up access. </p>
+                <wb:inline idref="u4_m2_testprop5_tutor5" purpose="learnbydoing"/>
+                <p><em>Scenario 3: </em>According to the UCLA Internet Report (February 2003) the
+                    use of the Internet at home is growing steadily. The report estimated that
+                    roughly 59.3% of households in the Unites States have Internet access at home.
+                    Has that trend continued since the report was released? To study this, a random
+                    sample of 1,200 households from a big metropolitan area was chosen, and it was
+                    found that 972 had an Internet connection. Let p be the proportion of U.S.
+                    households that have Internet access. </p>
+                <wb:inline idref="u4_m2_testprop5_tutor6" purpose="learnbydoing"/>
+                <p><em>Scenario 4: </em>A superintendent of a large school district claims that 80%
+                    of elementary school children in her district read at or above grade level
+                    (which is much higher than the national figure). To test the superintendent’s
+                    claim, a random sample of 40 elementary school children from the school district
+                    is chosen, and it found that only 27 of read at or above grade level. Let p be
+                    the proportion of all school children in the school district who read at or
+                    above grade level.</p>
+                <wb:inline idref="u4_m2_testprop5_tutor7" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <p>Checking that our data satisfy the conditions under which the test can be reliably used
+            is a very important part of the hypothesis testing process. So far we haven't explicitly
+            included it in the 4-step process of hypothesis testing, but now that we are discussing
+            a specific test, you can see how it fits into the process. We are therefore now going to
+            amend our 4-step process of hypothesis testing to include this extremely important part
+            of the process.</p>
+        <section>
+            <title>The Four Steps in Hypothesis Testing</title>
+            <body>
+                <ol>
+                    <li><p> State the appropriate null and alternative hypotheses, H<sub>o</sub> and
+                                H<sub>a</sub>.</p></li>
+                    <li>
+                        <p> Obtain a random sample, collect relevant data, and <em>check whether the
+                                data meet the conditions under which the test can be used</em>. If
+                            the conditions are met, summarize the data using a test
+                        statistic.</p></li>
+                    <li><p> Find the p-value of the test.</p></li>
+                    <li>
+                        <p> Based on the p-value, decide whether or not the results are significant
+                            and <em>draw your conclusions in context.</em>
+                        </p></li>
+                </ol>
+                <p>With respect to the z-test, the population proportion that we are currently
+                    discussing:</p>
+                <p>Step 1: Completed</p>
+                <p>Step 2: Completed</p>
+                <p>Step 3: This is what we will work on next.</p>
+
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

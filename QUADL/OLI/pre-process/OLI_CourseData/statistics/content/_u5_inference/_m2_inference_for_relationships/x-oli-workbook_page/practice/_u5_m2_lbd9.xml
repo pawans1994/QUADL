@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd9">
+    <head>
+        <title>Case C→C</title>
+    </head>
+    <body>
+<!--        <p>The purpose of this activity is to continue to explore whether the risk of alcohol
+            problems among New York firefighters and first responders is related to participation in
+            the 911 rescue. In particular, in this activity, we will state the hypotheses that are
+            being tested, learn how to carry out the chi-square test for independence using
+            statistical software, and check whether the conditions under which this test can be
+            safely used are met.</p>
+        <p>Here again are our observed data:</p>
+        <image style="block" src="../../webcontent/image423.gif"/>
+        <p>We are now ready to carry out the significance test, which will assess the significance
+            of the relationship between the risk of alcohol problems and participation in the 911
+            rescue. </p>
+        <wb:inline idref="u4_m4_cc3_lbd_tutor1" purpose="learnbydoing"/>-->
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="451">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor9a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor9a</param>
+                </flash>
+            -->
+        <p><!--Now you will-->In this activity, we check whether the conditions under which the chi-square test can be safely
+            used are met. In order to do this, you'll need to first launch the actual
+                <link href="../../../webcontent/FirefighterStress.pdf" target="new">research
+                report</link> and read the last paragraph on page iii of the
+            introduction (starting with the "The study was fully funded....").</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Next we will use R to calculate the expected counts, since we do not have the
+                        raw data to have R construct a table using the <code>data.frame()</code> command.</p>
+                    <p>Use the following command (on one line, with no spaces) to create a data frame of the actual counts in R:</p>
+                    <ul style="none">
+                        <li><code>data=data.frame(no.risk=c(793,441), moderate.to.severe.risk=c(309,110), row.names=c("participated","did.not.participate"));</code></li>
+                        <li><code>data</code></li>
+                    </ul>
+                    <p>Then use this command to calculate the expected counts:</p>
+                    <ul style="none">
+                        <li><code>chisq.test(data)$expected</code></li>
+                    </ul>
+                    
+                    <!--<wb:inline idref="_u5_m2_lbdtutor9b_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="480">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor9b_r.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor9b_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Next we will use Minitab to calculate the expected counts: </p>
+                    <ul>
+                        <li>Enter the observed counts as they appear in the table above (not
+                            including the totals) into columns C1 and C2.</li>
+                        <li>Name C1 "No Risk," and C2 "M to S Risk."</li>
+                        <li>Choose Stat → Tables → Chi-Square Test (Table in Worksheet).</li>
+                        <li>Under "Columns containing the table," enter C1 and C2.</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                    <!--<wb:inline idref="u4_m4_cc3_lbd_tutor2"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="451">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor9b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor9b</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>Next we will use Excel to calculate the expected counts: </p>
+                    <ul>
+                        <li>Create a table for expected counts with the same row and column headings
+                            as the one above, and use the formula <code style="inline">Expected
+                                Count = (Column Total * Row Total)/Table Total</code>. </li>
+                    </ul>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Next we will use StatCrunch to calculate the expected counts:</p>
+                    <ul>
+                        <li>Enter Yes and No in column var1.</li>
+                        <li>Enter the observed counts as they appear in the table above (not
+                            including the totals) into columns var2 and var3.</li>
+                        <li>Rename: var1 as “911”, var2 as “No Risk” and var3 as “M to S Risk” </li>
+                        <li>Choose Stat -> Tables -> Contingency -> with summary</li>
+                        <li>Select the columns: “No Risk” and “M to S Risk”</li>
+                        <li>Select Row labels in: “911”</li>
+                        <li>Press Next</li>
+                        <li>Check “Expected Count” and “Chi-Square”</li>
+                    </ul>
+                </alternative>
+
+              <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Next we will use Excel to calculate the expected counts: </p>
+                    <ul>
+                        <li>Create a table for expected counts with the same row and column headings
+                            as the one above, and use the formula <code style="inline">Expected
+                                Count = (Column Total * Row Total)/Table Total</code>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Next use your TI Calculator to calculate the expected counts: </p>
+                    <p><em>Chi-square test for independence </em></p>
+                    <ul>
+                        <li>Enter the data in Matrix A: </li>
+                        <li>Press <code style="inline">MATRIX (2ND/x<sup>-1</sup></code> on TI 84;
+                                <code style="inline">MATRIX</code> button on old TI83) </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image508.jpg"
+                                alt="NAMES  MATH  EDIT
+  1: [A], 2: [B], 3: [C], 4: [D], 5: [E], 6: [F] ..."
+                            /></li>
+                        <li>Press the right arrow twice to choose <code style="inline">EDIT</code>. </li>
+                        <li>Choose 1:[A]. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image509.jpg"
+                                alt="MATRIX[A]
+  1 x 1:   [ 0                     ]"/></li>
+                        <li>NOTE: Your screen may be different if another matrix was previously
+                            entered in [A]. </li>
+                        <li>You need to enter: number of rows X number of columns. </li>
+                        <li>The rows entry will be highlighted. Enter the number of categories for
+                            the explanatory variable. </li>
+                        <li>Use the right arrow (or <code style="inline">ENTER</code>) to move to
+                            the columns entry. </li>
+                        <li>Note that the correct number of rows is now displayed. </li>
+                        <li>Enter the number of categories for the response variable. </li>
+                        <li>Use the down arrow (or <code style="inline">ENTER</code>) to move to the
+                            entry for the first row, first column. </li>
+                        <li>Note that the correct number of columns is now displayed. </li>
+                        <li>Enter counts (no totals) from your two-way table. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image510.jpg"
+                                alt="MATRIX[A] 2x2
+        [ 793 309 ] [ 441 110 ]"/></li>
+                        <li>Choose <code style="inline">STAT/TESTS/C: X<sup>2</sup>-Test</code>. </li>
+                        <li>Enter the correct matrix for the observed values (the values you just
+                            entered from the two-way table) and any matrix for the expected values
+                            calculated by the TI. </li>
+                        <li>Note:You can always use the default values of [A] for observed and [B]
+                            for expected. </li>
+                        <li>To use matrices other than [A] or [B], position the cursor to the right
+                            of observed: (or expected) and press <code style="inline"
+                                >MATRIX/NAMES/</code> choose a matrix name. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image511.jpg"
+                                alt="&chi;&sup2; Test
+    Observed: [A]
+    Expected: [B]
+    Calculate Draw"
+                            /></li>
+                        <li>Choose <code style="inline">Calculate</code>, then <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image512.jpg"
+                                alt="&chi;&sup2;-Test
+    &chi;&sup2; = 12.66174866
+    p = 3.7321299e-4
+    df = 1"
+                            /></li>
+                        <li>Note: degrees of freedom df = (number of rows - 1)(number of columns -
+                            1)</li>
+                        <li>To see the expected values calculated by your TI: </li>
+                        <li>Choose <code style="inline">MATRIX (2ND/x<sup>-1</sup></code> on TI 84;
+                                <code style="inline">MATRIX</code> button on old TI83) </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image513.jpg"
+                                alt="NAMES   MATH   EDIT
+    1: [A] 2x2
+    2: [B] 2x2
+    3: [C]
+    4: [D]
+    5: [E]
+    ...."
+                            /></li>
+                        <li>Press the right arrow twice to choose <code style="inline">EDIT</code>. </li>
+                        <li>Choose 2:[B]. </li>
+                        <!--<li>You should see: <image style="inline" src="../../webcontent/image514.jpg"/></li>-->
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m4_cc3_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

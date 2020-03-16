@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment 
+Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd">
+<pool id="when_samp_distrib_normal_1_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_when_samp_distrib_normal_1" select="single">
+        <!-- LO:  -->
+        <body>
+            <p>A political polling agency wants to take a random sample of registered voters and ask
+                whether or not they will vote for a certain candidate. One plan is to select 400
+                voters, another plan is to select 1,600 voters. </p>
+            <p> Which one of the following is true regarding the standard deviation of the sampling
+                distribution of the sample proportion, p&#770;, of "yes" responses? </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">The standard deviation of the sampling distribution will be 4 times
+                smaller with sample size 400. </choice>
+            <choice value="B">The standard deviation of the sampling distribution will be 4 times
+                larger with sample size 400. </choice>
+            <choice value="C">The standard deviation of the sampling distribution will be 2 times
+                smaller with sample size 400. </choice>
+            <choice value="D">The standard deviation of the sampling distribution will be 2 times
+                larger with sample size 400. </choice>
+            <choice value="E">The standard deviation of the sampling distribution will be the same
+                for both sample sizes. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember we expect that the standard deviation of the sampling
+                    distribution of p&#770; will <em style="bold">decrease</em> as the sample
+                    size <em style="bold">increases</em>. Also, even though 1,600 is 4 times larger
+                    than 400 the standard deviation will not differ by a factor of 4. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Although we expect that the standard deviation of the sampling
+                    distribution of p&#770; will be larger for the sample size of 400 compared
+                    to the sample size of 1,600, the standard deviations will not differ by a factor
+                    of 4. Remember that the standard deviation of p&#770; is calculated as
+                        <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember we expect that the standard deviation of the sampling
+                    distribution of p&#770; will <em style="bold">decrease</em> as the sample
+                    size <em style="bold">increases</em>. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The standard deviation of the sampling distribution of
+                    p&#770; for the sample size of 400 is <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>400</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>
+                    <!--                    √[p(1&#8209;p)/400] --> and for the sample size of 1,600
+                    it is <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>,</m:mo>
+                                    <m:mn>600</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>. <!--                    √[p(1&#8209;p)/1,600]. --> Comparing the part
+                    of the equation that differs we get <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mn>400</m:mn>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>20</m:mn>
+                        </m:mrow>
+                    </m:math>
+                    <!--                    √400 = 20 --> and <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mn>1</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mn>600</m:mn>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>40</m:mn>
+                        </m:mrow>
+                    </m:math>. <!--                    √1,600 = 40. --> Given that <m:math
+                        display="inline">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>&minus;</m:mo>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="false">)</m:mo>
+                        </m:mrow>
+                    </m:math>
+                    <!--                    p(1&#8209;p)--> will be the same regardless of sample
+                    size, dividing by 20 will give a standard deviation that is 2 times larger than
+                    when we divide by 40. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Remember we expect that the standard deviation of the sampling
+                    distribution of p&#770; will <em style="bold">decrease</em> as the sample
+                    size <em style="bold">increases</em>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_when_samp_distrib_normal_1" select="single">
+        <!-- LO:  -->
+        <body>
+            <p>A distribution of a single statistic from repeated random samples of the same size
+                from the same population refers to which of the following?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">Random sampling </choice>
+            <choice value="B">The normal curve </choice>
+            <choice value="C">Distribution of population parameters </choice>
+            <choice value="D">Sampling distribution of a statistic </choice>
+            <choice value="E">Distribution of summary statistics </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While random sampling is used to select repeated samples, this
+                    is not a description of the random sampling process. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While the shape of the distribution will approximate a normal
+                    curve if the sample size is large enough, this is not a description of the
+                    normal curve. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. If population parameters are known, you would not need to
+                    collect random samples. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. A sampling distribution of a statistic refers to the distribution
+                    of a single statistic from repeated random samples of the same size, from the
+                    same population. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback> Incorrect. This description does not refer to all possible summary
+                    statistics but rather a <em style="bold">single statistic</em>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_when_samp_distrib_normal_1" select="single">
+        <!-- LO:  -->
+        <body>
+            <p>Juries should have the same racial distribution as the surrounding communities.
+                According to the U.S. Census Bureau, 18% of residents in Minneapolis, Minnesota, are
+                African Americans. Suppose a local court will randomly sample 100 state residents
+                and will then observe the proportion in the sample who are African American. How
+                likely is the resulting sample proportion to be between 0.066 and 0.294 (i.e., 6.6%
+                to 29.4% African American)?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">It is certain that the resulting sample proportion will be between
+                0.066 and 0.294 of the true proportion. </choice>
+            <choice value="B">There is roughly a 99.7% chance that the resulting sample proportion
+                will be between 0.066 and 0.294 of the true proportion. </choice>
+            <choice value="C">There is roughly a 95% chance that the resulting sample proportion
+                will be between 0.066 and 0.294 of the true proportion. </choice>
+            <choice value="D">There is roughly a 68% chance that the resulting sample proportion
+                will be between 0.066 and 0.294 of the true proportion. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You need to find the probability
+                    P(0.066&#160;&lt;&#160;p&#770;&#160;&lt;&#160;0.294). Using what you know
+                    about the mean and standard deviation of the sampling distribution for sample
+                    proportions. Given that the sampling distribution of p&#770; is normal, use
+                    the formulas for the mean and standard deviation to find the given probability.
+                </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. We need to consider the sampling distribution of p&#770;,
+                    which is normal (mean&#160;=&#160;p&#160;=&#160;0.18,
+                        standard&#160;deviation&#160;=<m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>18</m:mn>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>18</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>400</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>038</m:mn>
+                        </m:mrow>
+                    </m:math>. <!--                    &#160;√&#160;[p(1&#160;−&#160;p)&#160;/&#160;n]-->
+                    <!--                    =&#160;√&#160;[0.18(1&#8209;0.18)/&#160;400] =&#160;0.038-->
+                    Given this information, to find the likelihood that the sample proportion of
+                    p&#770; is between 0.066 and 0.294, we can proceed in two ways. First, we
+                    can notice that 0.066 is exactly 3 standard
+                    deviations(3&#160;*&#160;0.038&#160;=&#160;0.114) below the mean and that 0.294
+                    is exactly 3 standard deviation above the mean, and so according to the standard
+                    deviation rule, the likelihood is approximately 99.7%. Second, we can do this
+                    more formally. The z&#8209;score of 0.066 is −3 and the z&#8209;score of 0.294
+                    is +3. Therefore, P(0.066&#160;&lt;&#160;p&#770;&#160;&lt;&#160;0.294)
+                    =&#160;P(&#8209;3&#160;&lt;&#160;Z&#160;&lt;&#160;3)
+                    =&#160;P(Z&#160;&lt;&#160;3)&#8209;P(Z&#160;&lt;&#160;−3). </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems like you have found the probability that p&#770;
+                    lies between 0.104 and 0.256 instead of between 0.066 and 0.294. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It seems like you have found the probability that p&#770;
+                    lies between 0.142 and 0.218 instead of between 0.066 and 0.294.</feedback>
+            </response>
+            <!--  <hint>Use the sampling distribution of the sample proportion in this case. </hint>-->
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_when_samp_distrib_normal_1" select="single">
+        <body>
+            <p>A social scientist wishes to conduct a survey. She plans to ask a yes/no question to
+                a random sample from the U.S. adult population. One proposal is to select 100
+                people; another proposal is to select 900 people.</p>
+            <p>Which one of the following is true regarding the standard deviation of the sampling
+                distribution of the sample proportion, p&#770;, of "yes" responses?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The standard deviation of the sampling distribution will be 9 times
+                smaller with sample size 100. </choice>
+            <choice value="B">The standard deviation of the sampling distribution will be 9 times
+                larger with sample size 100. </choice>
+            <choice value="C">The standard deviation of the sampling distribution will be 3 times
+                smaller with sample size 100. </choice>
+            <choice value="D">The standard deviation of the sampling distribution will be 3 times
+                larger with sample size 100. </choice>
+            <choice value="E">The standard deviation of the sampling distribution will be the same
+                for both sample sizes. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that we expect the standard deviation of the sampling
+                    distribution of p&#770; to <em style="italic">decrease</em> as the sample size <em
+                        style="italic">increases</em>. Also, even though 900 is 9 times larger than
+                    100, the standard deviations will not differ by a factor of 9.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Although we expect the standard deviation of the sampling
+                    distribution of p&#770; to be larger with sample size 100 as compared to that with
+                    sample size 900, remember that the standard deviation of the sampling
+                    distribution of p&#770; is <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>. Even though 900 is 9 times larger than 100, the standard deviations
+                    will not differ by a factor of 9.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that we expect the standard deviation of the sampling
+                    distribution of p&#770; to <em style="italic">decrease</em> as the sample size <em
+                        style="italic">increases</em>.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. For a sample size of 100, the standard deviation of the sampling
+                    distribution of p&#770; is <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>100</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>. <!--                    = √[ (p(1-p)/100]. --> For a sample size of
+                    900, the standard deviation of the sampling distribution of p&#770; is <m:math
+                        display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>900</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>. <!--                    √[ (p(1-p)/n] = √[ (p(1-p)/100]--> Comparing
+                    the part of the equation that differs, <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mn>900</m:mn>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>30</m:mn>
+                        </m:mrow>
+                    </m:math>
+                    <!--                    √900 = 30 --> and <m:math display="inline">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mn>100</m:mn>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>10</m:mn>
+                        </m:mrow>
+                    </m:math>. <!--                    √100 = 10--> Given that p and 1 - p will be
+                    the same regardless of the sample size, dividing by 10 will give a standard
+                    deviation that is 3 times larger than dividing by 30.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Remember that we expect the standard deviation of the sampling
+                    distribution of p&#770; to <em style="italic">decrease</em> as the sample size <em
+                        style="italic">increases</em>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q5_when_samp_distrib_normal_1" select="single">
+        <body>
+            <p>Which of the following best describes the sampling distribution of a statistic?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The mechanism that determines whether the random sampling was
+                effective. </choice>
+            <choice value="B">A normal curve, for which probabilities are obtained by standardizing. </choice>
+            <choice value="C">A distribution of all parameters from the population that is to be
+                randomly sampled. </choice>
+            <choice value="D">A distribution of a single statistic from repeated random samples of
+                the same size, from the same population. </choice>
+            <choice value="E">A distribution of all possible summary statistics from a single random
+                sample, from the same population. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The sampling distribution is not able to determine whether
+                    random sampling was effective or not, because you do not know the population
+                    parameters beforehand; otherwise, you wouldn’t need sampling.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This statement is far too general to be correct. It refers to
+                    all normal distributions, not just the sampling distribution.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. If population parameters are known, you would not need to
+                    collect random samples.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. A sampling distribution of a statistic refers to the distribution
+                    of a <em style="italic">single statistic</em> from repeated random samples of
+                    the same size, from the same population.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. A sampling distribution of a statistic is not all possible
+                    summary statistics but rather a <em style="italic">single statistic</em>.
+                    Additionally, there is more than a single random sample needed to create the
+                    sampling distribution.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q6_when_samp_distrib_normal_1" select="single">
+        <body>
+            <p> Suppose that 20% of the residents in a certain state support an increase in the
+                property tax. An opinion poll will randomly sample 400 state residents and will then
+                compute the proportion in the sample that support a property tax increase. </p>
+            <p> How likely is the resulting sample proportion to be within 0.04 of the true
+                proportion (i.e., between 0.16 and 0.24)? </p>
+            <p> (<em style="bold">Hint:</em> Use the sampling distribution of the sample proportion
+                in this case.) </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">It is certain that the resulting sample proportion will be within 0.04
+                of the true proportion. </choice>
+            <choice value="B">There is roughly a 99.7% chance that the resulting sample proportion
+                will be within 0.04 of the true proportion. </choice>
+            <choice value="C">There is roughly a 95% chance that the resulting sample proportion
+                will be within 0.04 of the true proportion. </choice>
+            <choice value="D">There is roughly a 68% chance that the resulting sample proportion
+                will be within 0.04 of the true proportion. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You want to find <m:math display="inline">
+                        <m:mrow>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>16</m:mn>
+                            <m:mo>&lt;</m:mo>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">&circ;</m:mo>
+                            </m:mover>
+                            <m:mo>&lt;</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>24</m:mn>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>16</m:mn>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>20</m:mn>
+                                </m:mrow>
+                                <m:msub>
+                                    <m:mi>&sigma;</m:mi>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">&circ;</m:mo>
+                                    </m:mover>
+                                </m:msub>
+                            </m:mfrac>
+                            <m:mo>&lt;</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>&lt;</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>24</m:mn>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>20</m:mn>
+                                </m:mrow>
+                                <m:msub>
+                                    <m:mi>&sigma;</m:mi>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">&circ;</m:mo>
+                                    </m:mover>
+                                </m:msub>
+                            </m:mfrac>
+                            <m:mo stretchy="false">)</m:mo>
+                        </m:mrow>
+                    </m:math>. Using what you know about the mean and standard deviation of a
+                    sampling distribution, you should be able to find the given
+                    probability.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have found the probability that p&#770; lies
+                    between 0.14 and 0.26 rather than the probability that p&#770; lies between 0.16
+                    and 0.24.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We need to consider the sampling distribution of p&#770;, which is
+                    normal (mean = p = 0.20, <m:math display="inline">
+                        <m:mrow>
+                            <m:mi>standard</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>deviation</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>&minus;</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>400</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>02</m:mn>
+                        </m:mrow>
+                    </m:math>).
+                    <!--                    √ [p ( 1 − p ) / n] = 0.20 ( 1 − 0.20 ) 400 = 0.02. -->
+                    Given this information, to find the likelihood that the sample proportion of
+                    p&#770; is between 0.16 and 0.24, we can proceed in two ways. First, we can notice
+                    that 0.16 is exactly 2 standard deviations below the mean and that 0.24 is
+                    exactly 2 standard deviation above the mean, and so according to the standard
+                    deviation rule, the likelihood is approximately 95%. Second, we can do this more
+                    formally. The z-score of 0.16 is -2 and the z-score of 0.24 is +2.
+                        Therefore,<m:math display="inline">
+                        <m:mrow>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>16</m:mn>
+                            <m:mo>&lt;</m:mo>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">&circ;</m:mo>
+                            </m:mover>
+                            <m:mo>&lt;</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>24</m:mn>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mo>&minus;</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>&lt;</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>&lt;</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>&lt;</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy="false">)</m:mo>
+                            <m:mo>&minus;</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo stretchy="false">(</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>&lt;</m:mo>
+                            <m:mo>&minus;</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo stretchy="false">)</m:mo>
+                        </m:mrow>
+                    </m:math>.
+                    <!--       P(0.16&#160;&lt;&#160;p&#770;&#160;&lt;&#160;0.24)
+                    =&#160;P(&#160;−&#160;2&#160;&lt;&#160;Z&#160;&lt;&#160;2)
+                    =&#160;P(Z&#160;&lt;&#160;2)&#160;−&#160;P(Z&#160;&lt;&#160;−&#160;2).-->
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It seems that you have computed the probability that p&#770; is
+                    between 0.18 and 0.22 rather than the probability that p&#770; is between 0.16 and
+                    0.24.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

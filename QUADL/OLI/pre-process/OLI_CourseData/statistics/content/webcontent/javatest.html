@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="StyleSheet" type="text/css" href="../styles/style1/stats/stats.css">
+<SCRIPT LANGUAGE="Javascript">
+var isNav4 = (navigator.appName == "Netscape" && navigator.appVersion.charAt(0) == 4) ? true : false;
+var isMac = (navigator.platform.charAt(0) == 'M') ? true : false;
+</SCRIPT>
+</head>
+<body>
+
+
+<p>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td><img border="0" src="../styles/style1/stats/images/content_pghd_green.gif"></td>
+<td class="navbar">&nbsp;&nbsp;</td><td width="100%" class="navbar">Java Test</td>
+<td class="navbar">&nbsp;&nbsp;</td>
+<td class="navbar">&nbsp;&nbsp;</td>
+</tr>
+</table>
+</p>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td width="40"><img src="../styles/style1/stats/images/dot.gif" width="40" height="1"></td><td>
+
+
+<center><p>
+
+<blockquote>
+Below you should see a small java applet with a horizontal line and a trash can at the right.  If you see a grey box with an X, or nothing at all, you should follow the directions on the "Test & Configure Your System" page to make sure that you have java installed and enabled.
+</blockquote>
+</p>
+
+<SCRIPT LANGUAGE="Javascript">
+	if (isNav4 && isMac) {
+		var gotMRJ = false
+		for (var i=0; i < navigator.plugins.length && !gotMRJ; i++) if (navigator.plugins[i].name.toLowerCase() == "mrj java plugin") gotMRJ = true;
+		if (gotMRJ) {
+			document.write('<EMBED TYPE = "application/x-java-vm" NAME = "MeanMedian" PLUGINSPAGE = "http://www.mozilla.org/oji/MRJPlugin.html"' + 
+		    'WIDTH = "500" HEIGHT = "200" ARCHIVE = "MeanMedian.jar" CODE = "MeanMedian.class" URL = "http://home.netscape.com" ')
+			document.write('</EMBED>')
+		} else {
+			document.write('<center><p>When using Netscape this applet requires the <b>MRJPlugin</b>.</p>')
+			document.write('<p>For more information click <a href="../mrjpluin_info.htm" target="_blank">here</a>.</center></p>')
+		}
+	} else {
+		document.write('<applet archive="MeanMedian.jar" code="MeanMedian.class" width=500 height=200>')
+		document.write('</applet>')
+	}
+</SCRIPT>
+<p>&nbsp;</p>
+
+
+<a href="configure.html" class="standardlink">Go Back</a>
+</center>
+</td><td width="40"><img src="../styles/style1/stats/images/dot.gif" width="40" height="1"></td>
+</tr>
+</table>
+<p>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td><img border="0" src="../styles/style1/stats/images/content_pghd_green.gif"></td>
+<td class="navbar">&nbsp;&nbsp;</td><td width="100%" class="navbar">Java Test</td>
+<td class="navbar">&nbsp;&nbsp;</td>
+</tr>
+</table>
+</p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="_u9_blood-flow-DIGT">
+    <title>tutor</title>
+    <page>
+            
+            <!--LO:describe_blood_flow_organ_systems_OBJ-->
+            
+            <question id="blood-flow_1">
+                <body>Most organs receive blood <input_ref input="from"/>; and return blood <input_ref input="return"/>.</body>
+                <fill_in_the_blank id="from" shuffle="false">
+                    <choice value="direct_from_heart">directly from the heart</choice>
+                    <choice value="indirect_from_another">from the heart through another organ</choice>
+                    <choice value="direct_from_lung">directly from the lungs</choice>
+                </fill_in_the_blank>
+                <fill_in_the_blank id="return" shuffle="false">
+                    <choice value="indirect_return">through other organs back to the heart.</choice>
+                    <choice value="direct_return">directly to the heart</choice>
+                </fill_in_the_blank>
+               
+                <part targets="from">
+                    <response input="from" match="direct_from_heart" score="1">
+                        <feedback>Correct. Most organs receive oxygenated blood directly from the heart.</feedback>
+                    </response>
+                    <response input="from" match="indirect_from_another">
+                        <feedback>Incorrect. Most organs receive oxygenated blood directly from the heart.</feedback>
+                    </response>
+                    <response input="from" match="direct_from_lung">
+                        <feedback>Incorrect. Most organs receive oxygenated blood directly from the heart.</feedback>
+                    </response>
+                    
+                </part>
+                <part targets="return">
+                    <response input="return" match="indirect_return" >
+                        <feedback>Incorrect. Return deoxygenated blood directly to the heart without passing the blood through another organ. </feedback>
+                    </response>
+                    <response input="return" match="direct_return" score="1">
+                        <feedback>Correct. Return deoxygenated blood directly to the heart without passing the blood through another organ. </feedback>
+                    </response>
+                </part>
+            </question>
+           
+    </page>
+</assessment>

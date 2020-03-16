@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_confidence_interval_proportion1">
+<head>
+<title>Confidence Intervals for Population Proportion p (1 of 4)</title>
+    <objref idref="explain_confidence_interval"/>
+    <objref idref="find_confidence_intervals"/>
+</head>
+<body>
+    
+    
+<section>
+    <title>Overview</title>
+    <body><p>As we mentioned in the introduction to this module, when the variable that we're interested in studying in the population is <em>categorical</em>, the parameter we are trying to infer about is the <em>population proportion (p)</em> associated with that variable. We also learned that the point estimator for the population proportion p is the sample proportion <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:math>.</p>
+<p>To refresh your memory, here is a picture that summarizes an example we looked at.</p>
+<image style="block" src="../webcontent/image015.gif" alt="A large circle represents the population
+of all US Adults. We are interested in the parameter p, the proportion who believe marijuana
+should be legalized. From this population we create a sample of size n=1000, represented by a
+smaller circle. In this sample, we find that p hat (the point estimator) is .56 . Using point
+estimation we estimate p."/>
+<p>We are now moving on to interval estimation of p. In other
+            words<?oxy_insert_start author="mmyers" timestamp="20101126T092237-0500"?>,<?oxy_insert_end?>
+            we would like to develop a set of intervals
+            that<?oxy_insert_start author="mmyers" timestamp="20101126T092246-0500"?>,<?oxy_insert_end?>
+            with different levels of
+            confidence<?oxy_insert_start author="mmyers" timestamp="20101126T092249-0500"?>,<?oxy_insert_end?>
+            will capture the value of p. We've actually done all the
+            ground<?oxy_delete author="mmyers" timestamp="20101126T092415-0500" content=" "?>work
+            and discussed all the big ideas of interval estimation when we talked about interval
+            estimation for μ, so we'll be able to go through it much faster. Let's begin.</p>
+<p>Recall that the general form of any confidence interval for an unknown parameter is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi mathvariant="italic">estimate</m:mi>
+<m:mo>±</m:mo>
+<m:mi mathvariant="italic">margin</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">of</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">error</m:mi>
+</m:mrow>
+</m:math>
+</p>
+<p>Since the unknown parameter here is the population proportion p, the point estimator (as I
+            reminded you above) is the sample proportion <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>. The confidence interval for p,
+            therefore<?oxy_insert_start author="mmyers" timestamp="20101126T092507-0500"?>,<?oxy_insert_end?>
+            has the form:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:mi>m</m:mi>
+</m:mrow>
+</m:math>
+</p>
+<p>(Recall that m is the notation for the margin of error.) The margin of error
+            <?oxy_insert_start author="mmyers" timestamp="20101126T092519-0500"?>(<?oxy_insert_end?>m<?oxy_insert_start author="mmyers" timestamp="20101126T092521-0500"?>)<?oxy_insert_end?>
+            tells us with a certain confidence what the maximum estimation error is that we are
+            making, or in other words, that <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> is different from p (the parameter it estimates) by no more than m units.</p>
+<p>From our previous discussion on confidence intervals, we also know that the margin of error is
+            the product of two
+            <?oxy_comment_start author="mmyers" timestamp="20101126T092627-0500" comment="use asterisk ather than dot to indicate multiplication in phrase below."?>components:<?oxy_comment_end?></p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>m</m:mi>
+<m:mo>=</m:mo>
+<m:mi mathvariant="italic">confidence</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">multiplier</m:mi>
+<m:mtext> </m:mtext>
+<m:mo>⋅</m:mo>
+<m:mi mathvariant="italic">SD</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">of</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">the</m:mi>
+<m:mtext> </m:mtext>
+<m:mi mathvariant="italic">estimator</m:mi>
+</m:mrow>
+</m:math>
+</p>
+<p>To figure out what these two components are, we need to go back to a result we obtained in the
+            <?oxy_delete author="mmyers" timestamp="20101126T092641-0500" content="&quot;"?>Sampling
+            Distributions<?oxy_delete author="mmyers" timestamp="20101126T092644-0500" content="&quot;"?>
+            module of the Probability unit about the sampling distribution of <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>. We found that under certain conditions (which we'll come back to later),
+                <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> has a normal distribution with mean p, and standard deviation <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mn>1</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math>. This result makes things very simple for us, because it reveals what the two
+            components are that the margin of error is made of:</p>
+<p><?oxy_comment_start author="mmyers" timestamp="20101126T092716-0500" comment="use bullets instead of asterisks"?>*<?oxy_comment_end?>
+            Since, like the sampling distribution of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, the sampling distribution of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> is normal, the confidence multipliers that we'll use in the confidence
+            interval for p will be the same z* multipliers we use for the confidence interval for μ
+            when σ is known (using <em>exactly</em> the same reasoning and the same probability
+            results). The multipliers we'll use, then, are: <em>1.645, 2, and 2.576 at the 90%, 95%
+                and 99% confidence
+                level<?oxy_insert_start author="mmyers" timestamp="20101126T092738-0500"?>s<?oxy_insert_end?>,
+                respectively.</em>
+        </p>
+<p>* The standard deviation of our estimator <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:math> is <m:math overflow="scroll">
+<m:mrow>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mi>p</m:mi>
+<m:mo stretchy="false">(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mi>p</m:mi>
+<m:mo stretchy="false">)</m:mo>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:mfrac>
+</m:msqrt>
+</m:mrow>
+</m:math>
+</p>
+<p>Putting it all together, we find that the confidence interval for p should be: <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                    <m:mo>±</m:mo>
+                    <m:msup>
+                        <m:mi>z</m:mi>
+                        <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>⋅</m:mo>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math>. We just have to solve one practical problem and we're done. We're trying to
+            estimate the <em>unknown</em> population proportion <em>p</em>, so having it appear in
+            the confidence
+            interval<?oxy_delete author="mmyers" timestamp="20101126T092813-0500" content=" (look!)"?>
+            doesn't make any sense. To overcome this problem, we'll do the obvious thing<?oxy_insert_start author="mmyers" timestamp="20101126T092853-0500"?>
+            <?oxy_insert_end?>... </p>
+<p>We'll replace p
+            <?oxy_insert_start author="mmyers" timestamp="20101126T092858-0500"?>with<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T092857-0500" content="by"?>
+            its sample counterpart<?oxy_insert_start author="mmyers" timestamp="20101126T092932-0500"?>,<?oxy_insert_end?>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, and work with the <em>standard error of</em>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi> p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math>.</p>
+<p>Now we're done. The confidence interval for the population proportion p is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:msup>
+<m:mi>z</m:mi>
+<m:mo>*</m:mo>
+</m:msup>
+<m:mo>⋅</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:mfrac>
+</m:msqrt>
+</m:mrow>
+</m:math>
+</p>
+<p>As you'll see from the examples we'll present in this unit, estimating the population proportion comes up a lot in the context of polls.</p></body></section>
+</body>
+</workbook_page>

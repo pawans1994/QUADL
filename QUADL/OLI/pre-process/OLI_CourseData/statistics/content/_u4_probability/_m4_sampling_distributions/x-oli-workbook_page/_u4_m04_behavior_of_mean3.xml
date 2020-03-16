@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m04_behavior_of_mean3">
+    <head>
+        <title>Behavior of Sample Mean (3 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_mean"/>
+    </head>
+    <body>
+       
+        <p> Before we work some examples. Let’s compare and contrast what we now know about the
+            sampling distributions for sample means and sample proportions. </p>
+
+        <table>
+            <tr>
+                <th/>
+                <th/>
+                <th/>
+                <th colspan="3">Sampling Distribution</th>
+            </tr>
+            <tr>
+                <th>Variable</th>
+                <th>Parameter</th>
+                <th>Statistic</th>
+                <th>Center</th>
+                <th>Spread</th>
+                <th>Shape</th>
+            </tr>
+            <tr>
+                <td>Categorical (example: left-handed or not)</td>
+                <td>p = population proportion</td>
+                <td><m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> = sample proportion</td>
+                <td>p</td>
+                <td><m:math overflow="scroll">
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math></td>
+                <td>Normal IF np ≥ 10 and n(1 - p) ≥ 10</td>
+            </tr>
+            <tr>
+                <td>Quantitative (example: age)</td>
+                <td>&#956; = population mean, &#963; = population standard deviation</td>
+                <td><m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math> = sample mean</td>
+                <td>&#956;</td>
+                <td><m:math overflow="scroll">
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>σ</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:mfrac>
+                    </m:math></td>
+                <td>Normal if n &gt; 30 (always normal if population is normal)</td>
+            </tr>
+        </table>
+
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>Recall our earlier scenario: The Federal Pell Grant Program provides need-based
+                    grants to low-income undergraduate and certain postbaccalaureate students to
+                    promote access to postsecondary education. According to the National
+                    Postsecondary Student Aid Study conducted by the U.S. Department of Education in
+                    2008, the average Pell grant award for 2007-2008 was
+                    $2<?oxy_insert_start author="mmyers" timestamp="20101122T193812-0500"?>,<?oxy_insert_end?>600.
+                    Assume that the standard deviation in Pell grants awards was $500.</p>
+                <wb:inline idref="u3_m4_mean3_tutor1_1" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m4_mean3_tutor2" purpose="learnbydoing"/>
+            </body>
+        </section>
+
+        <example>
+
+            <p>Household size in the United States has
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194659-0500"?>a
+                <?oxy_insert_end?>mean
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194701-0500"?>of
+                <?oxy_insert_end?>2.6 people<?oxy_delete author="mmyers" timestamp="20101122T194710-0500" content=","?>
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194711-0500"?>and
+                <?oxy_insert_end?>standard deviation
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194714-0500"?>of
+                <?oxy_insert_end?>1.4 people.</p>
+            <p>(a) What is the probability that a randomly chosen household has more than 3
+                people?</p>
+            <p>A normal approximation should not be used here, because the distribution of household
+                sizes would be considerably skewed to the right. We do not have enough information
+                to solve this problem.</p>
+            <p>(b) What is the probability that the mean size of a random sample of 10 households is
+                more than 3? </p>
+            <p>By anyone's standards, 10 is a small sample size. The Central Limit Theorem does not
+                guarantee sample mean coming from a skewed population to be approximately normal
+                unless the sample size is large.</p>
+            <p>(c) What is the probability that the mean size of a random sample of 100 households
+                is more than 3? </p>
+            <p>Note: To review how to determine probabilities for z scores, please refer to the
+                Standard Normal Table section of the Random Variables module. </p>
+            <p>Now we may invoke the Central Limit Theorem: even though the distribution of
+                household size X is skewed, the distribution of sample mean household size <m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>X</m:mi>
+                        </m:mrow>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:math> is approximately normal for a large sample size such as 100. Its mean is
+                the same as the population mean, 2.6, and its standard deviation is
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194850-0500"?>the
+                <?oxy_insert_end?>population standard deviation divided by
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194855-0500"?>the
+                <?oxy_insert_end?>square root of
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194859-0500"?>the
+                <?oxy_insert_end?>sample size: <m:math overflow="scroll">
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mi>σ</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mrow>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mn>0</m:mn>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mn>4</m:mn>
+                    <m:mo>.</m:mo>
+                </m:math> The z-score for 3 is <m:math overflow="scroll">
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>3</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>6</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>4</m:mn>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:msqrt>
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>0</m:mn>
+                                            <m:mn>0</m:mn>
+                                        </m:mrow>
+                                    </m:msqrt>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>4</m:mn>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>8</m:mn>
+                    <m:mn>6</m:mn>
+                </m:math> The probability of the mean household size in a sample of 100 being more
+                than 3 is therefore P(<m:math overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>X</m:mi>
+                        </m:mrow>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:math> &gt; 3) = P(Z &gt; 2.86) = P(Z &lt; -2.86) = .0021.</p>
+            <p>Households of more than 3 people
+                are<?oxy_insert_start author="mmyers" timestamp="20101122T194915-0500"?>,<?oxy_insert_end?>
+                of
+                course<?oxy_insert_start author="mmyers" timestamp="20101122T194917-0500"?>,<?oxy_insert_end?>
+                quite common, but it would be extremely unusual for the mean size of a sample of 100
+                households to be more than 3.</p>
+        </example>
+        <!-- <activity idref="_u4_m4_lbd4" purpose="learnbydoing"/>-->
+        <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101122T194934-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T194933-0500" content="is"?>
+            next activity is to give guided practice in finding the sampling distribution of the
+            sample mean
+                <?oxy_insert_start author="mmyers" timestamp="20101122T194947-0500"?>(<?oxy_insert_end?><m:math
+                overflow="scroll">
+                <m:mover accent="true">
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                    <m:mo>¯</m:mo>
+                </m:mover>
+            </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T194949-0500"?>)<?oxy_insert_end?>,
+            and use it to learn about the likelihood of getting certain values of <m:math
+                overflow="scroll">
+                <m:mover accent="true">
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                    <m:mo>¯</m:mo>
+                </m:mover>
+            </m:math> .</p>
+
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>The annual salary of teachers in a certain state X has a mean of $54,000 and
+                    standard deviation of &#963; = $5,000. </p>
+               <!--   <p>Note: Even though the population distribution is skewed to the right, the sample
+                    size is large enough to guarantee that the Central Limit Theorem works
+                    regardless of the population distribution. </p>-->
+                <wb:inline idref="u3_m4_mean3_tutor3" purpose="learnbydoing"/>
+                
+                <p>What is the probability that the mean
+                    annual salary of a random sample of 64 teachers from this state is less than
+                    $52,000? </p>
+                <wb:inline idref="u3_m4_mean3_tutor4_1" purpose="learnbydoing"/>
+               
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p> Scores on the math portion of the SAT (SAT-M) in a recent year have followed a
+                    normal distribution with mean &#956; = 507 and standard deviation &#963; =
+                    111.</p>
+                <wb:inline idref="u3_m4_mean3_tutor5" purpose="didigetthis"/>
+            </body>
+        </section>
+
+
+
+    </body>
+</workbook_page>

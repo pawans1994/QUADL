@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules3_tutor3">
+    <title>Tutor</title>
+
+
+    <content>
+        <p>A couple decides to have children until they have one boy and one girl, but they will not
+            have more than three children. The sample space of possible outcomes is S = {GB, BG,
+            BBG, GGB, BBB, GGG}.</p>
+        <p>Consider the following events:</p>
+        <p>A–the couple has one boy</p>
+        <p>C–the couple has three children</p>
+        <p>D–all of the children are the same gender</p>
+
+        <p>Determine if the following pairs of events are disjoint.</p>
+    </content>
+
+
+    <question id="q1">
+        <!-- LO: Apply probability rules in order to find the likelihood of an event.
+Sub-objective: rule4        Probability rule 4   -->
+        <body><p>A and C <input_ref input="A"/></p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">disjoint</choice>
+            <choice value="two">not disjoint</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="disjoint" match="one">
+                <feedback>Incorrect. The sample space for event A is {GB, BG, GGB}. The sample
+                    space for event C is {GGB, BBG, BBB, GGG}. The outcome GGB is in both sample
+                    spaces.</feedback>
+            </response>
+            <response input="A" name="not disjoint" match="two" score="10">
+                <feedback>Correct. The events A and C are not disjoint because the outcome GGB is
+                    in both sample spaces. The sample space for event A is {GB, BG, GGB}. The sample
+                    space for event C is {GGB, BBG, BBB, GGG}.</feedback>
+            </response>
+        </part>
+    </question>
+
+    <question id="q2">
+        <!-- LO: -->
+        <body>
+            <p>A and D <input_ref input="B"/></p>
+        </body>
+        <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">disjoint</choice>
+            <choice value="two">not disjoint</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="B" name="disjoint" match="one" score="10">
+                <feedback>Correct. Events A and D are disjoint because their sample spaces do not
+                    share any outcomes. The sample space for event A is {GB, BG, GGB}. The sample
+                    space for event D is {BBB, GGG}.</feedback>
+            </response>
+            <response input="B" name="not disjoint" match="two">
+                <feedback>Incorrect. The sample space for event A is {GB, BG, GGB}. The sample
+                    space for event D is {BBB, GGG}. The sample spaces do not overlap.</feedback>
+            </response>
+        </part>
+    </question>
+
+    <question id="q3">
+        <!-- LO: -->
+        <body>
+            <p>C and D <input_ref input="C"/></p>
+        </body>
+        <fill_in_the_blank id="C" shuffle="false">
+            <choice value="one">disjoint</choice>
+            <choice value="two">not disjoint</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="C" name="disjoint" match="one">
+                <feedback>Incorrect. The sample space for event C is {GGB, BBG, BBB, GGG}. The
+                    sample space for event D is {BBB, GGG}. Both sample spaces contain the outcomes
+                    BBB and GGG, so the events are not disjoint.</feedback>
+            </response>
+            <response input="C" name="not disjoint" match="two" score="10">
+                <feedback>Correct. The events C and D are not disjoint because their sample spaces
+                    both contain the outcomes BBB and GGG. The sample space for event C is {GGB,
+                    BBG, BBB, GGG}. The sample space for event D is {BBB, GGG}.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

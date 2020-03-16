@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m0_relative_frequency1_lbd1">
+    <head>
+        <title>Relative Frequency</title>
+    </head>
+    <body>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>Recall from the introduction to probability section the birthday problem, which
+                    was presented as an example of when probability is counterintuitive. In
+                    particular, recall that we asked: "What is the probability that at least 2
+                    people out of a group of 60 will have the same birthday?" The answer, a 99.4%
+                    chance, was very surprising.</p>
+                <p>How about the probability of at least one "birthday match" in a group of 30
+                    people?</p>
+                <p>At this point in the course, we do not have the tools needed to solve this
+                    problem, so the best we can do is estimate this probability using relative
+                    frequency.</p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>As before, to simplify things, we will ignore leap years (i.e., we will assume
+                    that all years have 365 days) and we will assume that all days of the year are
+                    equally likely to be birthdays.</p>
+            </body>
+        </section>
+        <section>
+            <title>Plan</title>
+            <body>
+                <p>Using the activity below, we will generate (with replacement) 30 birthdays. The
+                    group of 30 birthdays represents a group of 30 people. We will then observe
+                    whether any birthday is repeated (i.e., whether there is at least one birthday
+                    match in the group). To use the relative frequency idea, we will then repeat
+                    this process 20 times, and count how many of the 20 repetitions had at least one
+                    birthday match. This relative frequency will be our estimated probability of at
+                    least one birthday match in a group of 30 people.</p>
+                <p>To make this process easier, keep a tally of the number of times you have done
+                    the simulation. In addition to this tally, keep a tally of the number of times
+                    you got at least one birthday match. So, each time you run the simulation, you
+                    will update two tallies: the number of runs of the applet and the number of
+                    times you got at least one match. The relative frequency will be the ratio of
+                    these two tallies. It will be our estimated probability of at least one birthday
+                    match in a group of 30 people.</p>
+            </body>
+        </section>
+        <section>
+            <title>The Simulation</title>
+            <body>
+                <iframe src="../../../webcontent/html_activities/relative_frequency/relative_frequency.html"
+                    height="700" width="750"/>
+                <!--   <p>Click <link href="http://www-stat.stanford.edu/~susan/surprise/Birthday.html"
+                        target="new">here</link> to launch the applet in a separate window.</p>--> 
+                <p><em>Step 1:</em> Choose <em>Generate 30 Birthdays</em> and press the
+                    <em>Start</em> button.</p>
+                <p>Notice that random birthdays are generated, then filed in the appropriate month
+                    and day. Look for <!--a red-->an orange square; this indicates a match. <!--There is also a
+                    rectangle on the lower right side of the screen that keeps-->Underneath "Generate ____ Birthdays" are Birthdays and Matches labels that keep track of the number
+                    of birthdays and the number of matches.</p>
+                <p><em>Step 2:</em> Record your results from the first run, then press the
+                    <em>Reset</em> button. You have now completed 1 of the 20 runs of the
+                    simulation.</p>
+                <p><em>Step 3:</em> Press the <em>Start</em> button, then record your results for
+                    the second run of the simulation.</p>
+                <!--<p><em>Step 4:</em> For the remaining 18 runs, check
+                    <em style="bold">Fast Update</em> so that the process is much faster.</p>-->
+            </body>
+        </section>
+        <wb:inline idref="u3_m0_relfreq1_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="369">
+<param name="question_file">../../../webcontent/flash/_u4_m1_lbdtutor2b.xml</param>
+<param name="problem_name">_u4_m1_lbdtutor2b</param>
+</flash>-->
+        <wb:inline idref="u3_m0_relfreq1_lbd_tutor2" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

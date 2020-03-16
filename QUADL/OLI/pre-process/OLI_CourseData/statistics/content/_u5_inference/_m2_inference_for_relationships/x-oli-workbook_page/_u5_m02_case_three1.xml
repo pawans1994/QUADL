@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_case_three1">
+<head>
+<title>Case Q→Q (1 of 3)</title>
+    <objref idref="choose_appropriate_inferential_method"/>
+    <objref idref="carry_out_inferential_method_relationships"/>
+</head>
+<body>
+    
+<section>
+<title>Inference for the Linear Relationships between Two Quantitative Variables</title>
+<body>
+<section>
+<title>Overview</title>
+<body>
+    <p>In inference for relationships, so far we have learned inference procedures for both cases
+                            C→Q and C→C from the role/type classification table below. The last case
+                            to be considered in this course is
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T172314-0500"?>c<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172314-0500" content="C"?>ase
+                            Q→Q, where both
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T172125-0500"?>the
+                            <?oxy_insert_end?>explanatory and response variables are quantitative.
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T172143-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172143-0500" content="["?>Case
+                            Q→C requires statistical methods that go beyond the scope of this
+                            course<?oxy_insert_start author="mmyers" timestamp="20101129T172134-0500"?>,<?oxy_insert_end?>
+                            but might be part of extension modules
+                            <?oxy_comment_start author="mmyers" timestamp="20101129T172206-0500" comment="is this still in the future?"?>in
+                            the
+                            future<?oxy_comment_end?><?oxy_insert_start author="mmyers" timestamp="20101129T172147-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172146-0500" content="]"?><?oxy_insert_start author="mmyers" timestamp="20101129T172149-0500"?>.<?oxy_insert_end?></p>
+<image style="block" src="../webcontent/image122.gif" alt="It is possible
+for any type of explanatory variable to be paired with any type of response variable.
+The possible pairings are:
+Categorical Explanatory → Categorical Response (C→C),
+Categorical Explanatory → Quantitative Response (C→Q),
+Quantitative Explanatory → Categorical Response (Q→C), and
+Quantitative Explanatory → Quantitative Response (Q→Q)."/>
+<p>In the E<?oxy_insert_start author="mmyers" timestamp="20101129T172330-0500"?>xploratory
+                            <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101129T172333-0500"?>ata
+                            <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101129T172335-0500"?>nalysis<?oxy_insert_end?>
+                            section, we examined the relationship between sample values for two
+                            quantitative variables by looking at a scatterplot and focused on the
+                            linear relationship by supplementing the scatterplot with the
+                            correlation coefficient r.</p>
+<p>There was no attempt made to claim that whatever relationship was observed in the sample necessarily held for the larger population from which the sample originated. Now that we have a better understanding of the process of statistical inference, we will present the method for inferring something about the relationship between two quantitative variables in an entire population, based on the relationship seen in the sample. In particular, the method will focus on <em>linear </em>relationships and will answer the following question: Is the observed linear relationship due to a true linear relationship between two variables in the population, or could it be that we obtained this kind of pattern in the data just by chance?</p>
+<p>If we conclude that we can generalize the observed linear relationship to the entire population,
+                            we will then use the data to estimate the line that governs the linear
+                            relationship between the two variables in the population, and use it to
+                            make predictions. The following figure summarizes this
+                            <?oxy_comment_start author="mmyers" timestamp="20101129T172643-0500" comment="Suggest changing &quot;NOW!&quot; to &quot;now.&quot; in below graphic. The &quot;tough&quot; part is cute, though :)"?>process:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image146.gif" alt="We represent our population of interest with
+a large circle. The question we which want to answer about the population is &quot;Are the two quantitative
+variables X and Y related?&quot; To answer this, we take an SRS of size n, generating our data. The data
+is summarized with a scatterplot and r, and we observe the linearity of the relationship between X and Y.
+Then, in the inference step we ask ourselves &quot;is the evidence of linear relationship in the data
+strong enough that we can generalize it to the entire population?&quot; If it is strong enough, we use the
+data to estimate the lne that governs the relationship between X and Y in the populations."/>
+<p>Note that the figure summarizes the whole process. Let's review it again.</p>
+
+<ul>
+<li>We start by asking whether the two quantitative variables are related (in any
+                                way<?oxy_delete author="mmyers" timestamp="20101129T172711-0500" content="!"?>).</li>
+<li>We collect data, and when we summarize them with a scatterplot and the correlation r, we observe a linear relationship.</li>
+</ul>
+
+<p><?oxy_insert_start author="mmyers" timestamp="20101129T172732-0500"?>Then we get
+                            to<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172737-0500" content="Now starts"?>
+                            the inference part of the
+                            process<?oxy_insert_start author="mmyers" timestamp="20101129T172744-0500"?>,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172743-0500" content="es"?>
+                            which we are going to learn here:</p>
+
+<ul>
+<li>We <?oxy_insert_start author="mmyers" timestamp="20101129T172759-0500"?>will
+                                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172801-0500" content="are "?>carry<?oxy_delete author="mmyers" timestamp="20101129T172805-0500" content="ing"?>
+                                out a test that will tell us whether the observed linear
+                                relationship is significant (i.e., can be generalized to the entire population)<?oxy_insert_start author="mmyers" timestamp="20101129T172813-0500"?>.<?oxy_insert_end?>
+                                <!--:ERROR: Lists cannot be used within a paragraph.--><ul>
+                                    <li>If the observed linear relationship is not
+                                        significant<?oxy_insert_start author="mmyers" timestamp="20101129T172833-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172825-0500" content=" - "?>too
+                                        bad.</li>
+                                    <li>If the observed linear relationship is significant, we can
+                                        use the data to estimate the line that governs the linear
+                                        relationship between X and Y in the population, and can use
+                                        it to make predictions (see comment 1 below).</li>
+                                </ul>
+                            </li>
+</ul>
+
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comments</title>
+<body>
+<p>1. We estimate the line that governs the linear relationship between X and Y in the population by
+                            the line that best fits the linear pattern in our observed data. Recall
+                            that in the
+                            E<?oxy_insert_start author="mmyers" timestamp="20101129T172902-0500"?>xploratory
+                            <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101129T172905-0500"?>ata
+                            <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101129T172907-0500"?>nalysis<?oxy_insert_end?>
+                            unit we've actually already learned how to find the least squares
+                            regression
+                            line<?oxy_insert_start author="mmyers" timestamp="20101129T172918-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T172916-0500" content=" - "?>the
+                            line that best fits the observed data. You can now see that finding the
+                            least squares regression line actually belongs to the inference unit,
+                            and while it is true that it is the line that best fits (in some sense)
+                            the observed data, it is really an estimate of the true linear
+                            relationship that exists in the population. The good thing is that we
+                            already learned how to obtain this line, so we'll only need to review
+                            it.</p>
+<p>2. This section on regression will be very qualitative in nature and will rely mostly on
+                            conceptual ideas and on output.
+                            <?oxy_comment_start author="mmyers" timestamp="20101129T173052-0500" comment="Is this still in the future (I already have a regression module)"?>An
+                            extension module to this
+                            course<?oxy_insert_start author="mmyers" timestamp="20101129T172951-0500"?>,<?oxy_insert_end?>
+                            which will go deeper into the inferential processes of
+                            regression<?oxy_insert_start author="mmyers" timestamp="20101129T173106-0500"?>,<?oxy_insert_end?>
+                            will exist in the near future.<?oxy_comment_end?></p>
+<p>3. This section will be organized around a leading example. At some stages along the
+                            way<?oxy_insert_start author="mmyers" timestamp="20101129T173123-0500"?>,<?oxy_insert_end?>
+                            you'll be directed to an activity, where you'll get to have hands-on
+                            practice with a different example.</p>
+<p> </p>
+<p> </p>
+</body>
+</section>
+</body>
+</section>
+</body>
+</workbook_page>

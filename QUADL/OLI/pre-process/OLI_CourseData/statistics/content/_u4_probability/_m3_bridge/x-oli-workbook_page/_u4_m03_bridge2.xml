@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_bridge2">
+    <head>
+        <title>Random Variables (2 of 3)</title>
+        <objref idref="use_probability_distributions"/>
+        <objref idref="describe_models_shape_center_spread"/>
+    </head>
+    <body>
+        
+        <section>
+            <title>Shape, Center and Spread of a Probability Distribution</title>
+            <body>
+                <p>Now let’s turn our attention to a more general discussion about the shape, center
+                    and spread of the probability distribution. </p>
+                <p>Here again is the probability distribution of the number of changes in major
+                    presented in a histogram: </p>
+                <image style="block" src="../webcontent/image015.png" alt="A histogram, in which the
+vertical axis is titled &quot;Probability&quot; and the Horizontal axis is labeled &quot;Number
+of Major Changes.&quot; Moving from left to right across the horizontal axis, the values increase to
+the mode (peak) at x=1 and x=2, then slowly decay to near zero."/>
+                <p><em>Shape:</em> We can see that the distribution is skewed right. This tells us
+                    that it is more common for students to change majors 0, 1, or 2 times. The
+                    probability decreases for X ≥ 5. </p>
+                <p>
+                    <em>Center and Spread:</em> Since the probability distribution is skewed, the
+                    mean and standard deviation is not the best way to describe the center and
+                    spread. But we will proceed with a discussion of the mean and standard deviation
+                    anyway, because these measures for random variables are useful general concepts
+                    as we move further into the course. </p>
+                <p> We will provide one example that explains how the mean and standard deviation of
+                    a random variable are calculated and how these calculations relate to what you
+                    already know about these measures. But after this example, we will use
+                    technology to find the mean and standard deviation of a random variable. </p>
+                <example>
+                    <p>First let’s think about how to calculate the mean. Since the values in the
+                        table are given to the nearest thousandths, we can translate the relative
+                        frequencies into frequencies as if there were 1,000 students. For example,
+                        the relative frequency of 0 is 0.135, so we can think of this as 135
+                        students out of 1,000 never changed majors. Similarly, 1 occurs with a
+                        relative frequency of 0.271, so we can view this as 271 students out of
+                        1,000 changed majors once. To calculate the mean, we add 135 zeros + 271
+                        ones + 271 twos + 180 threes and so on, then divide by 1,000. We have </p>
+                    <image style="block" src="../webcontent/image004.png" alt="Mean = [ 0(135) + 1(271) + 2(271) +
+3(180) + 4(90) + 5(36) + 6(12) + 7(3) + 8(2) ]/1000 = 2"/>
+                    <p>We can also divide each term by 1,000 and write this as a weighted mean: </p>
+                    <p>0(0.135) + 1(0.271) + 2(0.271) + 3(0.180) + 4(0.090) + 5(0.036) + 6(0.012) +
+                        7(0.003) + 8(0.002) = 2 </p>
+                </example>
+                
+                <example> 
+                    <p>In a similar fashion, we can calculate the standard deviation by viewing
+                        relative frequencies as a given number of students out of 1,000. For
+                        example, we have 135 students for whom X = 0, 271 students for whom X = 1, …
+                        etc. (This is exactly what we did to find the mean.) To find the standard
+                        deviation, we calculate the sum of the squares of the deviations from the
+                        mean for each of the 1,000 students and divide by 1,000 to find the
+                        variance. The standard deviation is the square root of the variance. This
+                        is, in essence, the way we calculated standard deviation with data. </p>
+                    <image style="block" src="../webcontent/image005.png" alt="variance = [ (0-2)&sup2;(135) + (1-2)&sup2;(271)
++ (2-2)&sup2;(271) + (3-2)&sup2;(180) + ... + (8-2)&sup2;(2) ] / 1000 = 2.014"/>
+                    <p>We can also divide each term by 1,000 and write this as a weighted sum. </p>
+                    <image style="block" src="../webcontent/image006.png" alt="variance = (0-2)&sup2;(0.135) +
+(1-2)&sup2;(0.271) + (2-2)&sup2;(0.271) + (3-2)&sup2;(0.180) + ... + (8-2)&sup2;(.002) = 2.014"/>
+                    <p>So the standard deviation is <image style="inline"
+                        src="../webcontent/image007.png" alt="&radic;(variance) = &radic;(2.014) &asymp; 1.4"/>
+                    </p></example>
+               
+                <p>We can use the mean and standard deviation to identify unusual values for the random variable.  </p>
+                <p>Here we have again the probability distribution of the number of changes in
+                    major, represented in a histogram. As we just found, the mean is 2 and the
+                    standard deviation is about 1.4, and we have drawn lines to show the mean and
+                    one standard deviation above and below the mean. </p>
+                <image style="block" src="../webcontent/image016.png" alt="A histogram, in which the
+vertical axis is titled &quot;Probability&quot; and the Horizontal axis is labeled &quot;Number
+of Major Changes.&quot; Moving from left to right o the horizontal axis, the values increase to
+the mode (peak) at x=1 and x=2, then slowly decay to near zero. This histogram represents the
+same data as the table above. On top of this histogram the mean has been drawn. This is a vertical
+line which is at x=2. The standard deviation has also been drawn at x = 2 &plusmn; 1.4, so there
+are two more vertical lines at about x = 0.6 and x = 3.4."/>
+                <p>Recall that earlier, we discussed what would be considered an unusual (and not
+                    unusual) number of changes in major, and we used probability calculations to
+                    assess that. For example, recall that we found that changing majors 5 or more
+                    times occurs only about 5% of the time, and therefore can be considered unusual. </p>
+                <p>Another way to think about defining “unusual” is to look at outcomes relative to
+                    the mean. We might consider outcomes more than two standard deviations from the
+                    mean as “unusual.” </p>
+                <p>What values are more than two standard deviations above the mean of 2? </p>
+                <p>Mean + 2(standard deviation) = 2 + 2(1.4) = 4.8, which rounds to 5. </p>
+                <p>So we conclude from this line of reasoning that if a college student changes
+                    majors 5 or more times, then he is “unusual.” </p>
+                <wb:inline idref="u3_m3_bridge2_tutor1" purpose="didigetthis"/><formula></formula>
+            </body>
+        </section>
+        <example>
+            <title>Detecting Fraud</title>
+            <p>Legitimate records often display a surprising pattern that is not present in faked
+                tax returns or other fraudulent accounting records. In legitimate records, the
+                distribution of first digits can be modeled using Benford’s Law. For example,
+                suppose that the total income recorded on a tax return is $20,712. The first digit
+                is 2. Now we examine a very large number of tax returns and record the first digit
+                of total income for all of the returns. The relative frequency of each first digit
+                will behave according to
+                <?oxy_comment_start author="mmyers" timestamp="20101120T153015-0500" comment="To alleviate curiosity, consider adding a few lines or a &quot;Many Students Wonder&quot; page about Benford&apos;s Law, and why it works."?>Benford’s
+                Law<?oxy_comment_end?>. </p>
+            <image style="block" src="../webcontent/image008edited.png" alt="A table describing the probability
+predicted for each first digit from a legit tax return. Data is given in &quot;First Digit: Predicted
+Probability&quot; format.
+            1: 0.301;
+            2: 0.176;
+            3: 0.125;
+            4: 0.097;
+            5: 0.079;
+            6: 0.067;
+            7: 0.058;
+            8: 0.051;
+            9: 0.046;"/>
+            <p>Benford’s Law can also be described using a mathematical formula, but we will not go
+                into that here. Instead, let’s double-check that this distribution meets the
+                criteria for a probability distribution of a discrete random variable. For a
+                randomly selected tax return, we cannot predict what the first digit will be, but
+                the first digits behave according to a predictable pattern described by Benford’s
+                Law. The model assigns probabilities to all possible values for a first digit
+                (notice that the first digit cannot be zero.) All possible outcomes taken together
+                have a probability of 1. You can verify this by adding the probabilities in the
+                table together. </p>
+            <p>Here is the probability distribution for first digits based on Benford’s Law shown in
+                a histogram. The mean is approximately 3.4, with a standard deviation of about 2.5
+                (calculations not
+                <?oxy_comment_start author="mmyers" timestamp="20101120T151905-0500" comment="Consider deleting the underscores from the graphic below, and changing to &quot;First Digits of Legitimate Tax Returns, According to Benford&apos;s Law&quot;"?>shown)<?oxy_comment_end?>. </p>
+            <image style="block" src="../webcontent/image009.png" alt="A histogram displaying the data
+presented in the table above (Benford's Law). The vertical axis represents Probability and the horizontal
+axis represents the First Digit. Moving from left to right along the horizontal axis we see that for First
+Digit = 1, we have the highest probability, and from there it decreases, first quickly then more slowly as
+if it were following a negative exponential curve. The mean has been marked at about 3.4, and the standard
+deviation lines have also been drawn at x = .9 and x = 5.9."/>
+            <p>Now, let’s compare this distribution to real data. </p>
+            <p>The second line in the table below is the probability distribution for the first
+                significant digit in <em style="italic">true tax data</em> collected by Mark Nigrini
+                from 169,662 IRS model files. You can see that relative frequencies of first digits
+                in the legitimate tax records follow Benford's law very closely. </p>
+            <image style="block" src="../webcontent/image008.png" alt="A table showing the frequency
+of the first digit from legit tax records. The 3 rows are labeled &quot;First digit from legit tax
+records,&quot; &quot;Relative frequency of first digits in legit tax records,&quot; and &quot;Probability
+predicted by Benford's Law.&quot; We will present the data by column, in &quot;First digit: Relative
+Frequency, Predicted Probability format&quot;
+            1: 0.305, 0.301;
+            2: 0.178, 0.176;
+            3: 0.126, 0.125;
+            4: 0.096, 0.097;
+            5: 0.078, 0.079;
+            6: 0.066, 0.067;
+            7: 0.056, 0.058;
+            8: 0.050, 0.051;
+            9: 0.045, 0.046;"/>
+            <p>On the other hand … </p>
+            <p>Here is the probability distribution for first digits in fraudulent tax records from
+                a study of fraudulent cash disbursement and payroll expenditures conducted in 1995
+                by the District Attorney’s Office in Kings County, New York. For fraudulent data,
+                the mean is approximately 5.2, with a standard deviation of about
+                <?oxy_comment_start author="mmyers" timestamp="20101120T152256-0500" comment="Consider changing graphic to read &quot;First Digits of Fraudulent Tax Records&quot;"?>0.9.<?oxy_comment_end?>
+            </p>
+            <image style="block" src="../webcontent/image010.png" alt="A histogram for the fraudulent data.
+The vertical axis represents probability and the horizontal axis represents the first digit of the fraudulent
+tax return. Going from left to right across the horizontal axis, from 1 to 3 the probability is low, less than
+0.03. Then, at 4, we have a probability of 0.1, and at 5 the mean (peak) appears, at about 0.6 probability.
+At 6, the probability is about 0.25, and the rest of the digits have very low (less than 0.04) probability.
+"/>
+            <p>Obviously, the relative frequencies of first digits from the fraudulent data do not
+                follow Benford’s Law (shown again
+                <?oxy_comment_start author="mmyers" timestamp="20101120T152646-0500" comment="does this, in fact, appear on the right online (here it is below, and I can&apos;t see the online version of this file)."?>on
+                the right<?oxy_comment_end?>). The distributions have very different shapes, means
+                and standard deviations. Compared to legitimate data, in fraudulent data we are much
+                more likely to see numbers with a first digit of 5 and much less likely to see
+                numbers with a first digit of 1, 2 or 3. </p>
+            <image style="block" src="../webcontent/image009.png" alt="A histogram for Bendford's Law.
+The vertical axis represents Probability and the horizontal axis represents the First Digit. Moving from
+left to right along the horizontal axis we see that for First Digit = 1, we have the highest probability,
+and from there it decreases, first quickly then more slowly as if it were following a negative exponential curve.
+The mean has been marked at about 3.4, and the standard deviation lines have also been drawn at x = .9
+and x = 5.9."/>
+        </example>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>When we compare the two distributions above, we can get a better understanding of
+                    the standard deviation of a random variable. The distribution in which it is
+                        <em>more likely</em> to find values that are <em>further from the mean</em>
+                    will have a <em>larger standard deviation</em>. </p>
+                <p>Likewise, the distribution in which it is <em>less likely</em> to find values
+                    that are <em>further from the mean</em> will have a <em>smaller standard
+                        deviation</em>. </p>
+                <p>In the fraudulent distribution, values like 1 or 2 that are far from the mean are
+                    very unlikely. On the other hand, in the Benford's Law distribution, the values
+                    1 and 2 are quite likely. Indeed, the standard deviation of the Benford Law is
+                    2.5, which is larger than the standard deviation in the fraudulent distribution,
+                    which is 0.9. </p>
+            </body>
+        </section>
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>Use the following histograms to answer the question below:</p>
+                <image style="block" src="../webcontent/image014.png" alt="Four histograms. The first
+one, Graph A, shows the following data (presented in &quot;horizontal value: vertical value format&quot;):
+        1: .07;
+        2: .10;
+        3: .12;
+        4: .13;
+        5: .16;
+        6: .13;
+        7: .12;
+        8: .10;
+        9: .07;
+        
+        Graph B shows:
+        1: .02;
+        2: .08;
+        3: .10;
+        4: .15;
+        5: .30;
+        6: .15;
+        7: .10;
+        8: .08;
+        9: .02;
+        
+        Graph C shows:
+        1: .01;
+        2: .01;
+        3: .10;
+        4: .18;
+        5: .40;
+        6: .18;
+        7: .10;
+        8: .01;
+        9: .01;
+        
+        Graph D shows:
+        1: .01;
+        2: .01;
+        3: .02;
+        4: .11;
+        5: .70;
+        6: .11;
+        7: .02;
+        8: .01;
+        9: .01;"/>
+                <wb:inline idref="u3_m3_bridge2_tutor2" purpose="learnbydoing"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

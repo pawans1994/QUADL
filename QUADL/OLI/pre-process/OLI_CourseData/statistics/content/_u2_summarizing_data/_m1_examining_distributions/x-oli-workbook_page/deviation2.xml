@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="deviation2">
+<head>
+<title>Standard Deviation (2 of 3)</title>
+    <objref idref="apply_standard_deviation_rule"/>
+</head>
+<body>
+    
+    <section>
+<title>The Standard Deviation Rule</title>
+<body>
+<p>In the previous activity we tried to help you develop better intuition about the concept of
+                    standard deviation. The rule that we are about to present, called "The Standard
+                    Deviation Rule" (also known as "The Empirical Rule") will hopefully also
+                    contribute to building your intuition about this concept.</p>
+<p>Consider a symmetric mound-shaped distribution: <image style="block"
+                        src="../webcontent/sdgraph1.gif" alt="A symmetric, mound shaped histogram"/>
+                    For distributions having this shape (also
+                    known as the <em>normal</em> shape), the following rule applies:</p>
+<p>
+<em>The Standard Deviation Rule:</em>
+</p>
+<ul>
+<li> Approximately 68% of the observations fall within 1 standard deviation of the mean.</li>
+<li> Approximately 95% of the observations fall within 2 standard deviations of the mean.</li>
+<li> Approximately 99.7% (or virtually all) of the observations fall within 3 standard deviations of
+                        the mean.</li>
+</ul>
+<p>The following picture illustrates this rule: <image style="block" src="../webcontent/sdgraph2.gif"
+    alt="A symmetric, mound shaped histogram. The mean is located at the mode of the histogram (right in
+the middle. The middle 68% of observations fall within 1 standard deviation of the mean. This means
+that the bars on this histogram representing the 68% of the observations closest to the mean are
+have a value that is at most 1 standard deviation from the mean. 95% of the observations fall within
+2 standard deviations of the mean. This encompasses more bars which are further from the mean (center
+of the histogram) than the center 68% did. Lastly, 99.7% of the observations fall within 3 standard
+deviations of the mean. Even more bars are selected."/>
+</p>
+<p>This rule provides another way to interpret the standard deviation of a distribution, and thus also provides a bit more intuition about it.</p>
+<p>To see how this rule works in practice, consider the following example:</p>
+</body>
+</section>
+<example>
+<title>Male Height</title>
+<p>The following histogram represents height (in inches) of 50 males. Note that the data are roughly
+                normal, so we would like to see how the Standard Deviation Rule works for this
+                example. <image style="block" src="../webcontent/sdgraph3.gif" alt="A symmetric histogram.
+The vertical axis is labeled &quot;Frequency&quot; and ranges from 0 to 7. The horizontal axis is labeled
+&quot;Height&quot; and ranges from 64 to 72. The mode of the histogram is at around x=71, y=7."/>
+            </p>
+<p>Below are the actual data, and the numerical summaries of the distribution. Note that the key players here, the mean and standard deviation, have been highlighted.
+<image style="block" src="../webcontent/deviation4.gif" alt="Actual Data. &quot;(&quot; Denotes the start of the 2nd
+standard deviation, and &quot;)&quot; denotes the end. &quot;[&quot; denotes the start of the 1st standard deviation,
+and &quot;]&quot; denotes the end. Data: 64 (66 66 67 67 67 67 [68 68 68 68 68 68 69 69 69 69 69 70 70 70 70 70 70 70
+71 71 71 71 71 71 71 72 72 72 72 72 72 73 73 73] 74 74 74 74 74 75 76 76) 77"/>
+</p>
+    <table>
+        <tr><th>Statistic</th><th>Height</th></tr>
+        <tr><th>N</th><td>50</td></tr>
+<tr><th>Mean</th><td><em style="highlight">70.58</em></td></tr>
+<tr><th>StDev</th><td><em style="highlight">2.858</em></td></tr>
+<tr><th>min</th><td>64</td></tr>
+<tr><th>Q1</th><td>68</td></tr>
+<tr><th>Median</th><td>70.5</td></tr>
+<tr><th>Q3</th><td>72</td></tr>
+<tr><th>Max</th><td>77</td></tr>        
+    </table>
+    <!--   RS 07/28/10 - replaced by table above
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel</title>
+<image style="block" src="../webcontent/deviation5excel.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab</title>
+<image style="block" src="../webcontent/deviation5.gif"/>
+</alternative>
+<alternative value="r">                 <title>R</title>
+<image style="block" src="../webcontent/deviation5r.gif"/>
+</alternative>
+</alternatives>-->
+<p>To see how well the Standard Deviation Rule works for this case, we will find what percentage of
+                the observations falls within 1, 2, and 3 standard deviations from the mean, and
+                compare it to what the Standard Deviation Rule tells us this percentage should be.
+                    <image style="block" src="../webcontent/deviation6.gif" alt="mean-SD=67.7, and
+mean+SD=73.4, so this 1st deviation captures 34 out of 50 observations = 68%. The SD rule says 68%
+also. mean-2(SD) = 64.9 and mean+2(SD)=76.3, which encompasses 48 out of 50 observations = 96%. The
+SD rule says 95%. Mean-3(SD)=62, and mean+3(SD)=79.2, which captures all of the observations = 100%.
+The SD rule says 99.7%"/>
+            </p>
+<p>It turns out the Standard Deviation Rule works
+                    <?oxy_comment_start author="mmyers" timestamp="20101019T181407-0400" comment="use italics for emphasis instead of bold."?><em>very
+                    well</em><?oxy_comment_end?> in this example.</p>
+</example>
+</body>
+</workbook_page>

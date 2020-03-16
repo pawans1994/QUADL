@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd13">
+    <head>
+        <title>Hypothesis Testing for the Population Mean</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is teach you to run the z-test for the population mean while
+            exploring the effect of sample size on the significance of the results.</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>Recall example 1 that we've just completed:</p>
+        <image style="block" src="../../webcontent/image343.gif"
+            alt="The entire population
+is represented as a large circle, representing Students at Ross College. We are interested
+in &mu; for this population, which is the SAT-M. This is a normal variable. H_0: &mu; = 500,
+H_a: &mu; &gt; 500. We also assume SD=100. From the population we generate a sample of 4
+scores, and find that x-bar=550. Our conditions are met, and we find z = 1, and p-value =
+.159. We conclude that H_0 cannot be rejected."/>
+        <p>Even though the sample mean was 550, which is substantially greater than the null value,
+            500, this result was not significant, since it was based on data obtained from only 4
+            students. In other words, the data did not provide enough evidence to reject
+                H<sub>o</sub> and conclude that the mean SAT-M score of all Ross College students is
+            larger than 500, the national mean. If this sample mean were obtained from 5 students,
+            would that result be significant? If not, would 6 be enough? In other words, what is the
+            smallest sample size for which a sample of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                    <m:mo>=</m:mo>
+                    <m:mn>550</m:mn>
+                </m:mrow>
+            </m:math> would be significant? In this activity, we will use statistical software to
+            explore this question.</p>
+        <p>
+            <em>Comment:</em> If you think about it, this question is not very practical, because
+            you do not know in advance what the sample mean will be, but it is intuitive enough that
+            it will help you get a better sense of how the sample size affects the significance of
+            the results.</p>
+        <wb:inline idref="u4_m2_testmean4_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+            <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="301">
+                <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor13a.xml</param>
+                <param name="problem_name">_u5_m1_lbdtutor13a</param>
+            </flash>
+        -->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>For n = 4, we know that the result x &#772; = 550 is not significant. Using
+                        the R instructions below and starting with n = 5 (and going up), create and
+                        fill in a table where the column headings are "n," "z (test statistic),"
+                        "p-value," and "significant at the 0.05 level (yes/no)." Stop after the
+                        first time your result becomes significant at the 0.05 significance
+                        level.</p>
+                    <p>We can use the following code to test the significance of the test under
+                        different sample size scenarios, n = 5 to n = 15.</p>
+                    <ol style="decimal">
+                        <li>Create a list of numbers 5,6,7,...,15 to represent various sample sizes:
+                                <ul style="none">
+                                <li><code>n=5:15</code></li>
+                            </ul></li>
+                        <li>Calculate the z-scores for each sample size: <ul style="none">
+                                <li><code>z=(550-500)/(100/sqrt(n))</code></li>
+                            </ul></li>
+                        <li>Calculate the p-values. <ul style="none">
+                                <li><code>pvalue=1-pnorm(z)</code></li>
+                            </ul></li>
+                        <li>Test whether the p-values are significant at 0.05. TRUE=Significant,
+                            FALSE=Not Significant: <ul style="none">
+                                <li><code>significance=c(pvalue&lt;0.05)</code></li>
+                            </ul></li>
+                        <li>Compile the information into a table: <ul style="none">
+                                <li><code>data.frame(n,z,pvalue,significance)</code></li>
+                            </ul></li>
+                    </ol>
+
+
+                    <!--<p>For n<?oxy_insert_start author="mmyers" timestamp="20101127T223058-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T223059-0500"?>
+                        <?oxy_insert_end?>4
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T223101-0500"?>,<?oxy_insert_end?>we
+                        know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. Using the R instructions below and starting
+                        with n<?oxy_insert_start author="mmyers" timestamp="20101127T223108-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T223109-0500"?>
+                        <?oxy_insert_end?>5 (and going up), create and fill in a table where the
+                        column headings are
+                        "n<?oxy_insert_start author="mmyers" timestamp="20101127T223124-0500"?>,<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101127T223122-0500" content=","?>
+                        "z (test
+                        statistic)<?oxy_insert_start author="mmyers" timestamp="20101127T223127-0500"?>,<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101127T223128-0500" content=","?>
+                        "p-value<?oxy_insert_start author="mmyers" timestamp="20101127T223131-0500"?>,<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101127T223132-0500" content=","?>
+                        and "significant at the .05 level
+                        (yes/no)<?oxy_insert_start author="mmyers" timestamp="20101127T223137-0500"?>.<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101127T223138-0500" content="."?>
+                        Stop after the first time your result becomes significant at the .05
+                        significance level. </p>
+                <p>To calculate the z-value and p-value for a sample of size n and sample mean
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mn>550</m:mn>
+                        </m:mrow>
+                    </m:math>, enter the function below into R:</p>
+                <code>significance = function(n)</code>
+                <code>{</code>
+                <code>z = (550-500)/(100/sqrt(n))</code>
+                <code>paste("n = ",n,", z = ",z,", p-value = ",1-pnorm(z))</code>
+                <code>}</code>
+                <p>Then execute <code>significance(n)</code> for n = 5, 6, 7, ... until the result
+                    is significant.</p>
+                <p><em>Note: Using
+                            R<?oxy_delete author="mmyers" timestamp="20101127T223207-0500" content=" - "?></em><?oxy_insert_start author="mmyers" timestamp="20101127T223225-0500"?>&#8212;<?oxy_insert_end?>you
+                        can test all the values of n from 5 to 14 by entering
+                            <code>significance(5:14)</code>. </p>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>For n = 4 , we know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. Using the StatCrunch instructions below and
+                        starting with n =5 (and going up), create and fill in a table where the
+                        column headings are "n," "z (test statistic)," "p-value," and "significant
+                        at the 0.05 level (yes/no)." Stop after the first time your result becomes
+                        significant at the 0.05 significance level. </p>
+                    <p>Here is how you carry out the z-test in StatCrunch:</p>
+                    <p>If summaries are given:</p>
+                    <ul>
+                        <li>Choose Stat → Z statistics → One sample → with summary</li>
+                        <li>Enter Sample mean, standard deviation and sample size.</li>
+                        <li>Select Hypothesis Test for μ </li>
+                        <li>Select Hypothesis Test</li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than </li>
+                        <li>Check Store in data table </li>
+
+                        <li>Press Compute! </li>
+                    </ul>
+                    <p>If the raw data are given:</p>
+                    <ul>
+                        <li>Choose Stat → Z statistics → One sample → with data</li>
+                        <li>Select column with sample data</li>
+                        <li>Press Next</li>
+                        <li>Select Hypothesis Test for μ </li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than </li>
+                        <li>Press Next</li>
+                        <li>Check Store in data table </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>For n = 4, we know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. Using the Minitab instructions below and
+                        starting with n = 5 (and going up), create and fill in a table where the
+                        column headings are "n," "z (test statistic)," "p-value," and "significant
+                        at the .05 level (yes/no)." Stop after the first time your result becomes
+                        significant at the 0.05 significance level. </p>
+                    <p>Here is how you carry out the z-test in Minitab:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1-Sample Z</li>
+                        <li>If the raw data are given, enter the column name under Samples in
+                            columns." If the summaries are given, enter under "Summarized Data" the
+                            sample size and sample mean.</li>
+                        <li>Enter the known value of the standard deviation (σ).</li>
+                        <li>Next to "test mean," enter the null value.</li>
+                        <li>Click on "Options" to select the relevant alternative.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                    <p>Useful Minitab tip: After the first time you run the z-test, it would be
+                        useful to use: Edit → Edit Last Dialog.</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>For n = 4, we know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. Using the Excel instructions below and
+                        starting with n = 5 (and going up), create and fill in a table where the
+                        column headings are "n," "z (test statistic)," "p-value," and "significant
+                        at the 0.05 level (yes/no)." Stop after the first time your result becomes
+                        significant at the 0.05 significance level. </p>
+                    <p>To carry out the z-test in Excel, we first need to calculate the z-statistic
+                        using the formula <m:math display="inline">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi mathvariant="normal">σ</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <ul>
+                        <li>Once you have calculated the z-statistic, you can calculate the p-value
+                            using the Excel function <code style="inline">NORM.S.DIST</code>.
+                            Remember that in this case, the p-value we want is <code style="inline"
+                                >1-NORM.S.DIST(z-statistic)</code>. </li>
+                        <li><em>IMPORTANT:</em> Recall that you may use the function <em>NORM.DIST</em> to skip the
+                            step of calculating the z-statistic.</li>
+                    </ul>
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>For n = 4 we know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. Using the Excel instructions below and
+                        starting with n = 5 (and going up), create and fill in a table where the
+                        column headings are "n," "z (test statistic)," "p-value," and "significant
+                        at the 0.05 level (yes/no)." Stop after the first time your result becomes
+                        significant at the 0.05 significance level. </p>
+                    <p>To carry out the z-test in Excel, we first need to calculate the z-statistic
+                        using the formula <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi mathvariant="normal">σ</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <ul>
+                        <li>Once you have calculated the z-statistic, you can calculate the p-value
+                            using the Excel function <code style="inline">NORMSDIST</code>. Remember
+                            that in this case, the p-value we want is <code style="inline"
+                                >1-NORMSDIST(z-statistic)</code>. </li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>For n = 4 we know that the result <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>550</m:mn>
+                            </m:mrow>
+                        </m:math> is not significant. </p>
+                    <p>Using the TI graphing calculator instructions below and starting with n = 5
+                        (and going up), create and fill in a table where the column headings are
+                        "n," "z (test statistic)," "p-value," and "significant at the 0.05 level
+                        (yes/no)." Stop after the first time your result becomes significant at the
+                        0.05 significance level. </p>
+                    <p>Note: after conducting the first test with n = 5, your TI will store all the
+                        values from this test. Therefore, when you conduct the next text with n = 6,
+                        the only change you’ll need to make is to replace the 5 for n with 6. The
+                        same is true for the rest of the tests (n = 7, 8, ...). </p>
+                    <p><em>One Sample z-test for the mean (&#956;) </em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/1:Z-Test </code></li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li>Choose <code style="inline">Stats</code> by using arrows to highlight
+                                <code style="inline">Stats</code> then pressing <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>&#956;<sub>o</sub>: 500 (test population mean from null hypothesis) </li>
+                        <li>&#963;: 100 (population standard deviation (this is given in the
+                            problem). </li>
+                        <li>x-bar: 550 (sample mean) </li>
+                        <li>n: 5 (sample size) </li>
+                        <li>Choose the relevant form of the alternative hypothesis (&gt;). </li>
+                        <li>Arrow down and choose <code style="inline">CALCULATE</code>. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image509.jpg"
+                                alt="TI Calculator Output: Z-Test
+            Inpt: Data      Stats
+            &mu;_0: 500
+            &sigma;: 100
+            x-bar: 550
+            n: 50
+            &mu;&ne;&mu;_0   &lt;&mu;   &gt;&mu;
+            Calculate   Draw"
+                            />
+                        </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testmean4_lbd_tutor2" purpose="learnbydoing"/>
+        <!--
+            <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="577">
+                <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor13b.xml</param>
+                <param name="problem_name">_u5_m1_lbdtutor13b</param>
+            </flash>
+        -->
+    </body>
+</workbook_page>

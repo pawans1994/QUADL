@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_random_variables2">
+    <head>
+        <title>Random Variables (2 of 2)</title>
+        <objref idref="distinguish_discrete_continuous"/>
+    </head>
+<body>
+   
+        <p>Before we go any further, a few observations about the nature of discrete and continuous
+            random variables should
+            b<?oxy_insert_start author="mmyers" timestamp="20101121T090634-0500"?>e<?oxy_insert_end?>
+            mentioned.</p>
+        <section>
+        
+        <title>Comments</title>
+        <body>
+            <ol><li><p>Sometimes<?oxy_insert_start author="mmyers" timestamp="20101121T090658-0500"?>,<?oxy_insert_end?>
+                            continuous random variables are
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T090644-0500"?>"<?oxy_insert_end?>rounded<?oxy_insert_start author="mmyers" timestamp="20101121T090646-0500"?>"<?oxy_insert_end?>
+                            and are
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T090650-0500"?>therefore
+                            <?oxy_insert_end?>"in a discrete disguise." </p>
+                <p>For example:</p>
+                <ul><li>time spent watching TV in a week<?oxy_insert_start author="mmyers" timestamp="20101121T090711-0500"?>,<?oxy_insert_end?>
+                                <?oxy_delete author="mmyers" timestamp="20101121T090712-0500" content="- "?>rounded
+                                to the nearest hour (or minute)</li>
+                    <li>outside temperature<?oxy_insert_start author="mmyers" timestamp="20101121T090719-0500"?>,<?oxy_insert_end?>
+                                <?oxy_delete author="mmyers" timestamp="20101121T090722-0500" content="- "?>to
+                                the nearest degree</li>
+                    <li>a person's weight<?oxy_insert_start author="mmyers" timestamp="20101121T090726-0500"?>,<?oxy_insert_end?>
+                                <?oxy_delete author="mmyers" timestamp="20101121T090727-0500" content="- "?>to
+                                the nearest pound.</li></ul>
+                <p>
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T090812-0500"?>Even
+                            though they "look like" discrete variables,
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T090827-0500" content="T"?><?oxy_insert_start author="mmyers" timestamp="20101121T090827-0500"?>t<?oxy_insert_end?>hese
+                            are still continuous random variables, and we will in most cases treat
+                            them as such.</p></li>
+                <li><p>On the other hand, there are some variables which are discrete in nature, but take so many distinct possible values that it will be much easier to treat them as continuous rather than discrete.</p>
+                    <ul><li>the IQ of a randomly chosen person</li>
+                        <li>the SAT score of a randomly chosen student</li>
+                        <li>the annual salary of a randomly chosen CEO, whether rounded to the nearest dollar or the nearest cent</li></ul>
+                </li>
+                <li><p>Sometimes we have a discrete random variable but do not know the extent
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T090924-0500"?>of
+                            <?oxy_insert_end?>its possible values. For example: How many accidents
+                            will occur in a particular intersection this month? We may know from
+                            previously collected data that this number is from
+                            0<?oxy_delete author="mmyers" timestamp="20101121T090935-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101121T090938-0500" content=" "?>5.
+                            But, 6, 7, or more accidents could be possible. </p></li>
+                <li><p>A good rule of thumb is that <em>discrete</em> random variables are things we
+                            <em>count</em><?oxy_insert_start author="mmyers" timestamp="20101121T090952-0500"?>,<?oxy_insert_end?>
+                            while <em>continuous</em> random variables are things we
+                                <em>measure</em>.</p>
+                    <ul>
+                        <li><p>We counted the number of tails and the number of ears with earrings.  These were discrete random variables.</p></li>
+                        <li><p>We measured the weight of the lightweight boxer. This was a continuous random variable.</p></li>
+                    </ul>
+                </li></ol>
+        </body>
+        </section>
+        <p></p>
+        <p>Often we can have a subject matter for which we can collect data that could involve a
+            discrete or a continuous random
+            variable<?oxy_insert_start author="mmyers" timestamp="20101121T091050-0500"?>,<?oxy_insert_end?>
+            depending on the information we wish to know.</p>
+        <example><title>Soft Drinks</title>
+            <p>Suppose we want to know <em>how many
+                    days<?oxy_insert_start author="mmyers" timestamp="20101121T091101-0500"?> per
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T091100-0500" content="/"?>week
+                    you drink a soft drink</em>. The sample space would be S = { 0, 1, 2, 3, 4, 5,
+                6, 7 }. There are a finite number of values for this variable. This would be a
+                discrete random variable.</p>
+            <p>Instead, suppose we want to know <em>how many ounces of soft drinks you consume per week</em>.  Even if we round to the nearest ounce, the answer is a measurement.  Thus, this would be a continuous random variable.</p>
+        </example>
+        
+        <example><title><?oxy_insert_start author="mmyers" timestamp="20101121T091438-0500"?>x<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T091438-0500" content="X"?>-bar</title>
+            <p>Suppose we are interested in the weights of all males.  We take a random sample and get the mean for that sample, namely 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>.  We then take another random sample (with the same sample size) and get another 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>.</p>
+            <p>We would expect the values of the 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>s from these two samples to be different, but pretty close in value.</p> 
+            <p> Each time we take a sample we'll get a different 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>. We will take lots of samples and thus get many 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>s. </p>
+            <p>The value of 
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math> from these repeated samples is a random variable.  Since it can take on any value within an interval of possible male weights it is a continuous random variable.</p>
+        </example>
+        <wb:inline idref="u3_m3_randomvars2_tutor1" purpose="didigetthis"/>
+        <!--<activity idref="_u4_m3_dig1" purpose="didigetthis"/>-->
+        <p>We devote a great deal of attention to random
+            variables<?oxy_insert_start author="mmyers" timestamp="20101121T091522-0500"?>,<?oxy_insert_end?>
+            since random variables and
+            <?oxy_insert_start author="mmyers" timestamp="20101121T091528-0500"?>the
+            <?oxy_insert_end?>probabilities that are associated with them play a vital role in the
+            theory behind statistical inference, our ultimate goal in this course.</p>
+        <p>This module is organized in two parts; one on discrete random variables, and one on continuous. We'll start with discrete.</p>
+    </body>
+    </workbook_page>

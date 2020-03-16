@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="histogram3">
+    <head>
+        <title>Histogram (3 of 3)</title>
+        <objref idref="interpret_graphical_displays"/>
+        <objref idref="summarize_quantitiative_distribution"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Center</title>
+            <body>
+                <p>The center of the distribution is its <em>midpoint</em>&#8212;the value that
+                    divides the distribution so that approximately half the observations take
+                    smaller values, and approximately half the observations take larger values. Note
+                    that from looking at the histogram we can get only a rough estimate for the
+                    center of the distribution. (More exact ways of finding measures of center will
+                    be discussed in the next section.)</p>
+                <p>Recall our grades example:</p>
+                <image style="block" src="../webcontent/histogram1.gif"
+                    alt="The exam grades histogram. The y-axis is labeled count, and the x-axis is labeled score. There is 1 count
+                    in 40-50 score interval, 2 counts in the 50-60 score interval, 4 counts in the 60-70 score interval,
+                    5 counts in the 70-80 score interval, 2 counts in the 80-90 score interval, and 1 count in the 90-100 score interval."/>
+
+                <p>As you can see from the histogram, the center of the grades distribution is
+                    roughly 70 (7 students scored below 70, and 8 students scored above 70).</p>
+            </body>
+        </section>
+        <section>
+            <title>Spread</title>
+            <body>
+                <p>The <em>spread</em> (also called <em>variability</em>) of the distribution can be
+                    described by the approximate range covered by the data. From looking at the
+                    histogram, we can approximate the smallest observation (<em>min</em>), and the
+                    largest observation (<em>max</em>), and thus approximate the range. (More exact
+                    ways of finding measures of spread are discussed in the next section.)</p>
+                <p>In our example: </p>
+                <table>
+                    <tr>
+                        <td>Approximate min:</td>
+                        <td>45 (the middle of the lowest interval of scores)</td>
+                    </tr>
+                    <tr>
+                        <td>Approximate max:</td>
+                        <td>95 (the middle of the highest interval of scores)</td>
+                    </tr>
+                    <tr>
+                        <td>Approximate range:</td>
+                        <td>95 − 45 = 50</td>
+                    </tr>
+                </table>
+            </body>
+        </section>
+        <section>
+            <title>Outliers</title>
+            <body>
+                <p>
+                    <em>Outliers</em> are observations that fall outside the overall pattern. For
+                    example, the following histogram represents a distribution that has a high
+                    probable outlier:</p>
+                <image style="block" src="../webcontent/histogram7.gif"
+                    alt="A histogram with frequency on the Y-axis.
+As we go from left to right on the x-axis, the frequency increases to a peak at x=5, then decreases.
+Eventually, we reach 0 at x=11. All of x > 10 have a frequency of 0, exception for x=15, which has a
+frequency of greater than zero. This is a outlier."/>
+                <p>Go back and check the histogram of scores at the top of this page. As you can
+                    see, there are no outliers.</p>
+                <example>
+                    <title>Best Actress Oscar Winners</title>
+                    <p>To provide an example of a histogram applied to actual data, we will look at
+                        the ages of Best Actress Oscar winners from 1970 to 2013 (To see the full
+                        dataset, <activity_link idref="bestactressdataset_2013" target="new">click
+                            here</activity_link>.)</p>
+                    <p>The histogram for the data is shown below.</p>
+                    <iframe src="https://plot.ly/~OLI_Stanford/69.embed?link=false" height="600"
+                        width="800"> </iframe>
+                    <!-- need to make pop link for image   <iframe title="Histogram of Best Actress Oscar Winners 1970 to 2013" width="700" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~OLI_Stanford/69.embed?link=false">
+                        <img src="/static/eda_examining_distributions_best_actress_histogram_static.jpg" alt="Histogram of Best Actress Ages with n=2 for age midpoint 20, n=5 for age midpoint 26, n=15 for age midpoint 32, n=7 for age midpoint 38, n=8 for age midpoint 44, n=2 for age midpoint 50, n=0 for age midpoint 56, n=3 for age midpoint 62, n=0 for age midpoint 68, n=1 for age midpoint 74, and n=1 for age midpoint 80." />
+                    </iframe> 
+                    <image style="block"
+                        src="../webcontent/eda_examining_distributions_best_actress_histogram_2013.jpg"
+                        alt="A histogram with Frequency on the Y-axis
+and Age on the X-axis. The following list describes, for each age, the frequency with which actresses of
+that age won. x=20, y=1; x=26,y=4; x=32,y=10; x=38,y=6; x=44,y=6; x=50,y=2; x=56,y=0; x=62,y=1; x=68,y=0;
+x=74,y=1; x=80, y=1"/>-->
+                    <p>We will now summarize the main features of the distribution of ages as it
+                        appears from the histogram:</p>
+                    <p>
+                        <em>Shape:</em> The distribution of ages is skewed right. We have a
+                        concentration of data among the younger ages and a long tail to the right.
+                        The vast majority of the "best actress" awards are given to young actresses,
+                        with very few awards given to actresses who are older.</p>
+                    <p>
+                        <em>Center:</em> The data seem to be centered around 34 or 35 years old.
+                        Note that this implies that roughly half the awards are given to actresses
+                        who are less than 34 years old.</p>
+                    <p>
+                        <em>Spread:</em> The data range from about 20 to about 80, so the
+                        approximate range equals 80 - 20 = 60.</p>
+                    <p>
+                        <em>Outliers:</em> There seem to be two probable outliers to the far right
+                        and possibly three around 62 years old.</p>
+                    <p>You can see how informative it is to know "what to look at" in a histogram.
+                        If there is one conclusion that we can make here, it is that Hollywood likes
+                        to give Oscars to young actresses.</p>
+                </example>
+            </body>
+        </section>
+        <!--<activity idref="histogram3selfassess" purpose="didigetthis"/>-->
+        <activity idref="histogram3lbd" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m1_histogram3_tutor1" purpose="didigetthis"/>
+        <wb:inline idref="u1_m1_histogram3_digt_tutor2" purpose="didigetthis"/>
+        <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If not, then
+            click the link below for some additional practice.</p>
+        <activity idref="histogram3selfassess_02" purpose="didigetthis"/>
+
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <ul>
+                    <li>The histogram is a graphical display of the distribution of a quantitative
+                        variable. It plots the number (count) of observations that fall in intervals
+                        of values.</li>
+                    <li>When examining the distribution of a quantitative variable, one should
+                        describe the overall pattern of the data (shape, center, spread), and any
+                        deviations from the pattern (outliers). </li>
+                    <li>When describing the shape of a distribution, one should consider: <ul>
+                            <li>Symmetry/skewness of the distribution </li>
+                            <li>Peakedness (modality)&#8212;the number of peaks (modes) the
+                                distribution has.</li>
+                        </ul>Not all distributions have a simple, recognizable shape. </li>
+                    <li>Outliers are data points that fall outside the overall pattern of the
+                        distribution and need further research before continuing the analysis.</li>
+                    <li>It is always important to interpret what the features of the distribution
+                        (as they appear in the histogram) mean in the context of the data.</li>
+                </ul>
+
+            </body>
+        </section>
+    </body>
+</workbook_page>

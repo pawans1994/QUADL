@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="estimate_r_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_estimate_r_pool" select="single">
+        <body>Suppose that the correlation r between two quantitative variables was found to be r =
+            0. Which of the following is the best interpretation of this correlation value?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">There is a strong linear relationship between the two variables. </choice>
+            <choice value="B">There is no linear relationship between the two variables. </choice>
+            <choice value="C">There is a strong relationship between the two variables. </choice>
+            <choice value="D">There is no relationship between the two variables. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A correlation coefficient <em style="italic">far</em> from zero
+                    would indicate a strong linear relationship. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The correlation coefficient indicates the strength of the
+                    linearity of a scatterplot relationship, and a correlation coefficient that is
+                    zero indicates no linear relationship. However, that there might still be some
+                    other (non-straight-line) kind of relationship.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A correlation coefficient <em style="italic">far</em> from zero
+                    would indicate a strong linear relationship.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Not quite right. The correlation coefficient only measures <em style="italic">linear</em> relationship.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+   
+
+    <multiple_choice id="q2_estimate_r_pool" select="single">
+        <body>The data in the scatterplot below are an individual's weight and the time it takes
+            (in seconds) on a treadmill to raise his or her pulse rate to 140 beats per minute. The
+            o's correspond to females and the +'s to males. Which of the following conclusions is
+            most accurate?<image style="block" src="../webcontent/assessment2q8.gif" />
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is a positive correlation between gender and weight. </choice>
+            <choice value="B">There is a negative correlation between time and weight for males and
+                for females. </choice>
+            <choice value="C">There is a positive correlation between time and weight for males and
+                for females. </choice>
+            <choice value="D">There is a negative correlation between gender and weight.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. There can only be a <em style="italic">correlation</em> between
+                    two quantitative variables. But notice that "gender" is categorical. Also, the
+                    correlation coefficient would be positive only when the points tend to rise from
+                    left to right.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. For each separate gender, we see that the points on the
+                    scatterplot tend to <em style="italic">fall</em> from left to right. This
+                    indicates a <em style="italic">negative</em> relationship. So the correlation
+                    coefficient would be negative for males, and would also be negative for females.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The correlation coefficient would be positive only when the
+                    points tend to rise from left to right. But on the scatterplot, we see that, for
+                    both males and females, the points tend to fall from left to right. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The scatterplot does show a negative correlation pattern, but
+                    there can only be a <em style="italic">correlation</em> between two quantitative
+                    variables. But notice that "gender" is categorical. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q3_estimate_r_pool" select="single">
+        <body>What can we say about the relationship between the correlation r and the slope b of
+            the least-squares line for the same set of data? </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Both r and b always have values between −1 and 1. </choice>
+            <choice value="B">r is always larger than b. </choice>
+            <choice value="C">r and b have the same sign (+ or −). </choice>
+            <choice value="D">The slope b is always equal to the square of the correlation r. </choice>
+            <choice value="E">b is always larger than r. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It’s true that the correlation r always has a value between −1
+                    and 1, but there is no such restriction on slope. The slope of a line can exceed
+                    1 or −1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the correlation r always has value between −1 and
+                    1, but a regression line could have a slope larger than 1. So it’s possible for
+                    b to be larger than r.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Although the correlation r isn’t the same as the slope b, the
+                    thing they always have in common is their <em style="italic">sign</em>.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. There is no such relationship between slope and correlation.
+                    Remember that the correlation r always has a value between 0 and 1, so the
+                    square of the correlation will also be between −1 and 1. But there is no such
+                    restriction on slope.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Remember that for points that tend to rise from left to right,
+                    the correlation is close to 1 when the points are tightly clustered around the
+                    regression line. But if the regression line is shallow, the slope could be close
+                    to zero. So it’s possible for b to be <em style="italic">less</em> than
+                    r.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q4_estimate_r_pool" select="single">
+        <body>If there is no relationship (linear or otherwise) between two quantitative variables
+            as observed on a scatterplot, the value of the correlation coefficient, r, is likely to
+            be which of the following? </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Closer to 1</choice>
+            <choice value="B">Closer to −1</choice>
+            <choice value="C">Closer to 0 </choice>
+            <choice value="D">Either closer to −1 or 1</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that a correlation close to 1 indicates a strong
+                    positive relationship.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Recall that a correlation close to −1 indicates a strong
+                    negative relationship.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. A correlation value close to 0 indicates no relationship between
+                    two quantitative variables.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall correlation close to 1 or −1 indicates reasonably strong
+                    positive or negative relationships, respectively.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q5_estimate_r_pool" select="single">
+        <body>Using data from 100 hospitals, a correlation of r = 0.78 is found between the size of
+            a hospital (measured in number of beds) and the average length of patient stays
+            (measured in days). Which of the following is true?</body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is a pretty strong positive linear correlation between number of
+                beds and length of hospital stay.</choice>
+            <choice value="B">Increasing hospital size must be the cause of longer patient stays. </choice>
+            <choice value="C">“Severity of illness” is a possible lurking variable that is behind
+                this relationship.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The correlation coefficient by itself isn’t enough to determine
+                    whether the relationship was linear. You would need to look at the scatterplot
+                    to determine if the relationship was a straight-line trend.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You can’t determine <em style="italic">causation</em> merely from the nature of a
+                    display. Just because there might be an <em style="italic">association</em>, that doesn’t (by itself)
+                    indicate anything about <em style="italic">causation</em>. Causation can only be determined by knowing
+                    the nature of the study design.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Severity of illness is a possible lurking variable, since the
+                    seriousness of a patient’s condition is will determine the length of stay. Also, since
+                    larger hospitals are more likely to treat severe conditions, this would
+                    explain why the patient stays are longer for large hospitals.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q6_estimate_r_pool" select="single">
+        <body>The data in the scatterplot below are an individual's age (in years) and the expected
+            life span (in years). The circles correspond to females and the x's to males. Which of
+            the following conclusions is most accurate?<image style="block" src="../webcontent/u2_m2_checkpoint2_image1.gif" />
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">There is a positive correlation between gender and life expectancy. </choice>
+            <choice value="B">There is a negative correlation between gender and life expectancy. </choice>
+            <choice value="C">There is a positive correlation between age and life expectancy for
+                both males and females.</choice>
+            <choice value="D">There is a negative correlation between age and life expectancy for
+                both males and females.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. There can only be a "correlation" between two quantitative
+                    variables. But notice that "gender" is categorical. Also, the correlation
+                    coefficient would be positive only when the points tend to rise from left to
+                    right.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The scatterplot does show a negative correlation pattern, but
+                    there can only be a "correlation" between two quantitative variables. But notice
+                    that "gender" is categorical. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The correlation coefficient would be positive only when the
+                    points tend to rise from left to right. But on the scatterplot, we see that, for
+                    both males and females, the points tend to fall from left to right. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. For each separate gender, we see that the points on the
+                    scatterplot tend to fall from left to right. This indicates a negative
+                    relationship. So the correlation coefficient would be negative for males, and
+                    would also be negative for females. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q7_estimate_r_pool" select="single">
+        <body>Suppose the correlation between two variables (x, y) in a data set is determined to
+            be r = 0.63, What must be true about the slope, b, of the least-squares line estimated
+            for the same set of data? </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The slope will also be a value between −1 and 1. </choice>
+            <choice value="B">The slope will have the opposite sign as the correlation. </choice>
+            <choice value="C">The slope b is always equal to the square of the correlation r. </choice>
+            <choice value="D">The slope will have the same sign as the correlation.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It’s true that the correlation r always has a value between −1
+                    and 1. But there is no such restriction on slope. The slope of a line can exceed
+                    1 or be less than −1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A line’s slope indicates if the points rise from left to right
+                    or fall from left to right, the same as correlation. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. There is no such relationship between slope and correlation.
+                    Remember that the correlation r always has a value between −1 and 1, so the
+                    square of the correlation will be between 0 and 1. But there is no such
+                    restriction on slope. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The slope, b, will always have the same sign as the correlation
+                    coefficient, r. Lines with positive slope tend to rise left to right, just like
+                    points that are positively associated. Lines with negative slope tend to fall
+                    left to right, just like points that are negatively associated.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+</pool>

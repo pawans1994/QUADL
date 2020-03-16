@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>[insert your title here]</title>
+
+<script type="text/javascript">
+// Framebuster script to relocate browser when MSIE bookmarks this
+// page instead of the parent frameset.  Set variable relocateURL to
+// the index document of your website (relative URLs are ok):
+var relocateURL = "/";
+
+if(parent.frames.length == 0) {
+  if(document.images) {
+    location.replace(relocateURL);
+  } else {
+    location = relocateURL;
+  }
+}
+</script>
+
+<script type="text/javascript" src="mtmcode.js">
+</script>
+
+<script type="text/javascript">
+// Morten's JavaScript Tree Menu
+// version 2.3.2-macfriendly, dated 2002-06-10
+// http://www.treemenu.com/
+
+// Copyright (c) 2001-2002, Morten Wang & contributors
+// All rights reserved.
+
+// This software is released under the BSD License which should accompany
+// it in the file "COPYING".  If you do not have this file you can access
+// the license through the WWW at http://www.treemenu.com/license.txt
+
+// Nearly all user-configurable options are set to their default values.
+// Have a look at the section "Setting options" in the installation guide
+// for description of each option and their possible values.
+
+
+
+/******************************************************************************
+* User-configurable options.                                                  *
+******************************************************************************/
+
+
+// variable for determining whether a sub-menu always gets a plus-sign
+// regardless of whether it holds another sub-menu or not
+MTMSubsGetPlus = "never";
+
+
+// Default target
+MTMDefaultTarget = "content";
+
+MTMTimeOut = 0;
+
+MTMSubsAutoClose = "true";
+
+MTMenuFont = "verdana";
+
+MTMenuText = "Table of Contents:";
+
+MTMRootIcon = "menu_link_external.gif";
+
+MTMenuCSSize = "70%";
+
+MTMBGColor = "#A0B8C8";
+
+MTMTrackColor = "#ffffff";
+
+
+
+/******************************************************************************
+* User-configurable list of icons.                                            *
+******************************************************************************/
+
+var MTMIconList = null;
+MTMIconList = new IconList();
+MTMIconList.addIcon(new MTMIcon("menu_link_external.gif", "http://", "pre"));
+MTMIconList.addIcon(new MTMIcon("menu_link_pdf.gif", ".pdf", "post"));
+
+/******************************************************************************
+* User-configurable menu.                                                     *
+******************************************************************************/
+
+// Main menu.
+var menu = null;
+menu = new MTMenu();
+
+menu.addItem("Intro to Statistics Online", null, null, "Read this before you begin the course");
+var introduction = null;
+introduction = new MTMenu();
+introduction.addItem("Course Overview", "studydemo.html", null, "Describes the main features of the course");
+menu.makeLastSubmenu(introduction);
+
+
+menu.addItem("Exploratory Data Analysis", null, null, "A closer look at datasets");
+// nested submenu #1, multiple submenu levels example
+var number_1 = null;
+number_1 = new MTMenu();
+
+number_1.addItem("Introduction", null, null, "What can we do with data?");
+var introduction2 = null;
+introduction2 = new MTMenu();
+number_1.makeLastSubmenu(introduction2);
+
+
+number_1.addItem("Examining Distributions", null, null, "Looking at how data are distributed");
+var number_1_2 = null;
+number_1_2 = new MTMenu();
+number_1_2.addItem("One Quantitative Variable", "../modules/m02_summarizing_data/one_quant_var.html", null, "Distributions with only one quantitative variable");
+var number_1_2_1 = null;
+number_1_2_1 = new MTMenu();
+
+
+number_1_2_1.addItem("Graphs", null, null, "Displaying the distribution with graphs");
+var graphs = null;
+graphs = new MTMenu();
+number_1_2_1.makeLastSubmenu(graphs);
+
+
+number_1_2_1.addItem("Numerical Measures", "../modules/m02_summarizing_data/measures.html", null, "Describing the distribution with numerical measures");
+var measures = null;
+measures = new MTMenu();
+measures.addItem("Measures of Center", "../modules/m02_summarizing_data/center1.html", null, "Looking at the center of the distribution", "menu_link_default_many.gif");
+measures.addItem("Measures of Spread", "../modules/m02_summarizing_data/spread1.html", null, "Looking at the spread of the distribution", "menu_link_default_many.gif");
+measures.addItem("Boxplot", "../modules/m02_summarizing_data/boxplot1.html", null, "Using the boxplot", "menu_link_default_many.gif");
+number_1_2_1.makeLastSubmenu(measures);
+
+number_1_2.makeLastSubmenu(number_1_2_1);
+
+number_1.makeLastSubmenu(number_1_2);
+
+number_1.addItem("Examining Relationships", null, null, "Looking at relationships between data");
+var relationships= null;
+relationships = new MTMenu();
+number_1.makeLastSubmenu(relationships);
+
+
+
+menu.makeLastSubmenu(number_1);
+
+menu.addItem("Producing Data", null, null, "How to collect a dataset");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_2 = null;
+number_2 = new MTMenu();
+menu.makeLastSubmenu(number_2);
+
+menu.addItem("Probability", null, null, "Using probability to make inferences about the data");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_3 = null;
+number_3 = new MTMenu();
+menu.makeLastSubmenu(number_3);
+
+
+menu.addItem("Inference", null, null, "Making inferences about the data");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_4 = null;
+number_4 = new MTMenu();
+menu.makeLastSubmenu(number_4);
+
+
+
+</script>
+</head>
+<body onload="MTMStartMenu(true)" bgcolor="#000033" text="#ffffcc" link="yellow" vlink="lime" alink="red">
+
+
+
+
+</body>
+</html>

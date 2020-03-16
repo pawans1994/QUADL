@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="test_intuit_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_test_intuit">
+        <!-- LO: test_intuit -->
+        <body>
+            <p>A study was conducted to estimate μ, the mean number of weekly hours that U.S.
+                adults use computers at home. Suppose a random sample of 81 U.S. adults gives a mean
+                weekly computer usage time of 8.5 hours and that from prior studies, the population
+                standard deviation is assumed to be σ = 3.6 hours.</p>
+            <p>Based on this information, what would be the point estimate for μ?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">81</choice>
+            <choice value="B">8.5</choice>
+            <choice value="C">3.6</choice>
+            <choice value="D">2.36</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. 81 represents the size of the sample, not the point estimate
+                    for μ, the population mean.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The point estimate for the population mean μ is the sample mean,
+                    x̄. In this case, to estimate the mean number of weekly hours of
+                    home-computer use among the population of U.S. adults, we used the sample mean
+                    obtained from the sample, therefore x̄ = 8.5.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 3.6 is the assumed population standard deviation, not the point
+                    estimate for μ, the population mean.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you divided the sample mean by the population
+                    standard deviation. This is not the point estimate for μ, the population
+                    mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_test_intuit">
+        <!-- LO: test_intuit -->
+        <body>
+            <p>A study was conducted to estimate μ, the mean commute distance that all employed
+                U.S. adults travel to work. Suppose a random sample of 49 employed U.S. adults gives
+                a mean commute distance of 22 miles and that from prior studies, the population
+                standard deviation is assumed to be σ = 8.4 miles.</p>
+            <p>Based on this information, what would be the point estimate for μ?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">49</choice>
+            <choice value="B">22</choice>
+            <choice value="C">8.4</choice>
+            <choice value="D">1.2</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. 49 is the sample size used to obtain the point
+                    estimate.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. 22 is x̄, the sample mean commute distance which is the
+                    point estimator of μ, the population mean commute distance.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 8.4 is the population standard deviation and is not an
+                    estimator of the population mean, μ.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you divided the population standard deviation by the
+                    square root of the sample size. This is the standard error of the sample mean
+                    and not the point estimator of the population mean, μ.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

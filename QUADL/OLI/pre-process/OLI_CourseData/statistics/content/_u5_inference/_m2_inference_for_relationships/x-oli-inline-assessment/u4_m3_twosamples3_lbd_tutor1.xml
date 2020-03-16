@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_twosamples3_lbd_tutor1">
+  <title>Tutor</title>
+  <question id="q1">
+    <body>Can we use the two-sample t-test to test this claim?</body>
+    <short_answer id="A"/>
+    <part>
+      <response input="A" match="*" score="10"/>
+      <explanation>
+        <p>Let's check the two conditions:</p>
+        <p><?oxy_delete author="mmyers" timestamp="20101128T154057-0500" content="1."?><?oxy_insert_start author="mmyers" timestamp="20101128T154059-0500"?>(i)<?oxy_insert_end?>
+          Since the 40 subjects were chosen at random, we can assume that the two samples are
+          independent.</p>
+        <p><?oxy_delete author="mmyers" timestamp="20101128T154106-0500" content="2."?><?oxy_insert_start author="mmyers" timestamp="20101128T154107-0500"?>(ii)<?oxy_insert_end?>
+          Since the sample sizes (22 and 18) are not large, for the two-sample t-test to be reliably
+          used the two populations need to be (at
+          least<?oxy_delete author="mmyers" timestamp="20101128T154119-0500" content=")"?>
+          close<?oxy_insert_start author="mmyers" timestamp="20101128T154124-0500"?>)<?oxy_insert_end?>
+          to normal.</p>
+        <p>In practice, we check by looking at our two samples using histograms and
+          mak<?oxy_insert_start author="mmyers" timestamp="20101128T154133-0500"?>ing<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T154133-0500" content="e"?>
+          sure that we don't see any gross violation of the normality assumption. However, both
+          histograms display clear violations
+          <?oxy_insert_start author="mmyers" timestamp="20101128T154145-0500"?>of<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T154146-0500" content="from"?>
+          the normality assumption in the form of extreme
+          skew<?oxy_delete author="mmyers" timestamp="20101128T154152-0500" content="ed"?>ness and
+          outliers (click <link
+            href="javascript:loadImage('../../../../webcontent/inline_assessment/lbd008.gif')"
+            >here</link> to see the histograms.) In conclusion, the two-sample t-test cannot be
+          reliably used.</p>
+      </explanation>
+    </part>
+  </question>
+</assessment>

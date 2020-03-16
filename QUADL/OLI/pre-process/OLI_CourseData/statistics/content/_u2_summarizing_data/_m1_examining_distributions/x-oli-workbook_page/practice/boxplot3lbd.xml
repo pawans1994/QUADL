@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="boxplot3lbd">
+    <head>
+        <title>Boxplot</title>
+    </head>
+    <body>
+        <p>The objectives of this activity are: </p>
+        <ul>
+            <li>To teach you how to use <pref:label preference="statistics.package"/> to produce
+                side-by-side boxplots and the relevant descriptive statistics,</li>
+            <li>To let you practice comparing and contrasting distributions, and</li>
+            <li>To help you gain more intuition about variability through the interpretation of your
+                results in context.</li>
+        </ul>
+        <p>The percentage of each entering Freshman class that graduated on time was recorded for
+            each of six colleges at a major university over a period of several years. (Source: This
+            data is distributed with the software package, Data Desk. (1993). Ithaca, NY: Data
+            Description, Inc., and appears in http://lib.stat.cmu.edu/DASL/)</p>
+        <p>In order to compare the graduation rates among the different colleges, we will create
+            side-by-side boxplots (graduation rate by college), and supplement the graph with
+            numerical measures. Follow the instructions, and then answer the questions based on the
+            output you got. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/graduation.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>grad_data</code>. Enter
+                        the command <code>grad_data</code> to see the data. There are 6 variables
+                        (column titles) in the data frame <code>grad_data</code>:
+                            <code>College.A</code>, <code>College.B</code>, <code>College.C</code>,
+                            <code>College.D</code>, <code>College.E</code>, and
+                            <code>College.F</code>.</p>
+                    <p>You should see graduation data for six colleges over the past eight years.
+                        Copy the next command to see a summary of the data for each college:</p>
+                    <code style="inline">summary(grad_data)</code>
+                    <!--                    <codeblock syntax="text">     College.A       College.B       College.C       College.D
+   Min.   :43.20   Min.   :67.30   Min.   :54.50   Min.   :74.10  
+   1st Qu.:50.95   1st Qu.:69.55   1st Qu.:56.58   1st Qu.:76.65  
+   Median :63.75   Median :70.15   Median :67.65   Median :79.00  
+   Mean   :60.96   Mean   :71.29   Mean   :65.17   Mean   :79.11  
+   3rd Qu.:70.50   3rd Qu.:73.05   3rd Qu.:71.58   3rd Qu.:81.10  
+   Max.   :73.80   Max.   :76.70   Max.   :74.80   Max.   :84.60  
+     College.E       College.F    
+   Min.   :54.50   Min.   :57.70  
+   1st Qu.:56.88   1st Qu.:65.05  
+   Median :59.15   Median :72.00  
+   Mean   :60.77   Mean   :72.78  
+   3rd Qu.:63.70   3rd Qu.:81.28  
+   Max.   :71.30   Max.   :87.40-->
+                    <p>By using the <code>summary()</code> command on the data frame instead of an
+                        individual variable, the summary statement of the five-number summary and
+                        mean are provided for each variable in the data frame.</p>
+                    <p>Finally, copy the next command to see side-by-side boxplots of the graduation
+                        data for the six colleges:</p>
+                    <code style="inline">boxplot(grad_data)</code>
+
+                    <p>Just as we did with the histogram, we can add x-axis and y-axis labels and
+                        titles using the same additional parameters in the <code>boxplot()</code>
+                        command, <code>xlab=</code>, <code>ylab=</code>, and <code>main=</code>. For
+                        example:</p>
+                    <code style="inline">boxplot(grad_data, xlab="Colleges",ylab ="Graduation
+                        Rates", main="Comparison of Graduation Rates")</code>
+                    <p>We can also modify the direction of the boxes by adding another parameter
+                            <code>horizontal=TRUE</code>. For example:</p>
+                    <code style="inline">boxplot(grad_data, horizontal=TRUE, ylab="Colleges",xlab
+                        ="Graduation Rates", main="Comparison of Graduation Rates")</code>
+                    <p>Notice that you must switch the x- and y-axis labels when you make a
+                        horizontal boxplot.</p>
+                    <p><em style="bold">Note:</em> Using R—Use the mouse to grab the corner of the
+                        graph window and change its shape. If you make the window wider, you see a
+                        label for each boxplot. While the graph window is the active window, try
+                        clicking the <em style="bold">File</em> menu. If you hold the mouse over
+                        "Copy to Clipboard," you see two ways that you can copy a graph for pasting
+                        into another document. This is how you use R to create data graphs for
+                        reports.</p>
+
+                    <p><em style="bold">R coding Note for reference only:</em> The above command
+                        works because all six variables are listed in separate columns. Data
+                        organization often plays a role in how you structure an R command. For
+                        example, if the data was instead organized into two columns
+                            <code>GradRate</code> and <code>College</code> in a new data frame
+                        called <code>grad2</code>, where <code>GradRate</code> contained all the
+                        numeric responses and <code>College</code> contained the labels <em
+                            style="italic">A, B, C,</em> etc., then the code would be as follows: </p>
+                    <code style="inline">boxplot(grad2$GradRate~grad2$College)</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open the file (graduation.xls) in StatCrunch you must first right-click
+                            <link href="../../../webcontent/excel/graduation.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link> to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on “Load File.”</li>
+                    </ul>
+                    <p>
+                        <em>Side by Side Boxplots:</em></p>
+                    <ul>
+                        <li>Choose Graph → Boxplot</li>
+                        <li>In the Boxplot window select the column %_grad_on_time</li>
+                        <li>Group by College</li>
+                        <li>In Grouping options select "Plot groups for each column"</li>
+                        <li>In Other options select “Use fences to identify outliers”</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>
+                        <em>Descriptive Statistics:</em></p>
+                    <ul>
+                        <li>Choose Stat → Summary Stats → Columns</li>
+                        <li>In the Summary Stats window select the column: %_grad_on_time</li>
+                        <li>Group by College</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/graduation.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: you will likely see a dialog box appear that says "A copy of
+                        the content of this file will be added to the current project"&#8212;just
+                        click OK.</p>
+                    <ul>
+                        <li>
+                            <em>Side by Side Boxplots:</em>
+                            <ul>
+                                <li>Choose Graph → Boxplot. </li>
+                                <li>Under "One Y," choose "With groups" (top right) and click
+                                    OK.</li>
+                                <li>Under "Graph variables", type "%_grad_on_time" under Y (or
+                                    double click on this variable in the panel on the left). </li>
+                                <li>Under "Categorical variable for grouping" type "College" (or
+                                    double click on this variable in the panel on the left). </li>
+                                <li>Click OK. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <em>Descriptive Statistics:</em>
+                            <ul>
+                                <li>Choose Stat → Basic Statistics → Display Descriptive Statistics. </li>
+                                <li>Type "%_grad_on_time" in the "Variables" box. </li>
+                                <li>Under "By variable," type "College." </li>
+                                <li>Click OK. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/graduation.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+                    <p><em>Descriptive Statistics:</em></p>
+                    <p>In the last Learn By Doing exercise, we calculated descriptive statistics for
+                        our entire dataset. This time, we want to calculate descriptive statistics
+                            <em>for each college</em> and then create side-by-side boxplots to
+                        compare the colleges graphically.</p>
+                    <p>To start, we'll create a table that will list each statistical measure and
+                        the value for each college. When you are done, your table should look like
+                        this:</p>
+                    <p><image src="../../../webcontent/excel_instructions/boxplot3lbd1_new_1.gif"
+                        /></p>
+                    <ul>
+                        <li>To create this table, first make the row and column labels: in an empty
+                            section of your worksheet, pick a cell and type <em>Statistic</em>. Then
+                            move one cell to the right and type <em>College A</em>. Move one cell to
+                            the right and type <em>College B</em>. Keep doing this for colleges C,
+                            D, E, and F. Now, in the cell underneath <em>Statistic</em>, type
+                                <em>min</em>. Move down one cell and type <em>Q1</em>, then
+                            underneath that <em>Median</em>, then <em>Q3</em>, and finally
+                                <em>Max</em>.</li>
+                    </ul>
+                    <p>Now for each statistic, we'll enter the formula to calculate that statistic
+                        and the range of data that corresponds to each college:</p>
+                    <ul>
+                        <li><em>min</em></li>
+                        <li>In the cell to the right of <em>min</em> and underneath <em>College
+                                A</em>, type <em>=min(B2:B9)</em> because B2 through B9 represents
+                            the data for College A.</li>
+                        <li>Now move one cell to the right (so that you're underneath <em>College
+                                B</em>, and type <em>=min(B10:B17)</em> because B10 through B17
+                            represents the data for College B.</li>
+                        <li>Repeat this calculation for colleges C, D, E, and F, adjusting the data
+                            range appropriately for each college.</li>
+                        <li><em>IMPORTANT:</em> Instead of typing the cell numbers inside of the
+                            parentheses, it is better to highlight the relevant cells with your
+                            mouse after typing <em>=min(</em> (by holding a left click as you
+                            highlight the cells).</li>
+                    </ul>
+
+                    <ul>
+                        <li><em>Q1</em></li>
+                        <li>In the cell to the right of <em>Q1</em> and underneath <em>College
+                                A</em>, type <em>=quartile(B2:B9,1)</em>, and repeat for colleges B,
+                            C, D, E, and F, adjusting the data range appropriately.</li>
+                    </ul>
+                    <ul>
+
+                        <li><em>Median</em></li>
+                        <li>In the cell to the right of <em>Median</em> and underneath <em>College
+                                A</em>, type <em>=median(B2:B9)</em>, and repeat for colleges B, C,
+                            D, E, and F, adjusting the data range appropriately.</li>
+                    </ul>
+                    <ul>
+                        <li><em>Q3</em></li>
+                        <li>In the cell to the right of <em>Q3</em> and underneath <em>College
+                                A</em>, type <em>=quartile(B2:B9,3)</em>, and repeat for colleges B,
+                            C, D, E, and F, adjusting the data range appropriately. </li>
+                    </ul>
+                    <ul>
+                        <li><em>Max</em></li>
+                        <li>In the cell to the right of <em>Max</em> and underneath <em>College
+                                A</em>, type <em>=Max(B2:B9)</em>, and repeat for colleges B, C, D,
+                            E, and F, adjusting the data range appropriately.</li>
+                    </ul>
+                    <p>
+                        <em>Side-by-Side Boxplots:</em></p>
+                    <p>Unfortunately, Excel can't create boxplots directly, so we have to create a
+                        column graph and alter it so that we get boxplots. We start by using our
+                        Descriptive Statistics to create a new table that will be the basis for our
+                        column graph. When you are done, your table should look like this:</p>
+                    <p><image src="../../../webcontent/excel_instructions/boxplot3lbd1_new_3.gif"
+                        /></p>
+                    <ul>
+                        <li>To create this table, first make the row and column labels: in an empty
+                            section of your worksheet, pick a cell and type <em>Statistic</em>. Then
+                            move one cell to the right and type <em>College A</em>. Move one cell to
+                            the right and type <em>College B</em>. Keep doing this for colleges C,
+                            D, E, and F. Now, in the cell underneath <em>Statistic</em>, type
+                                <em>25th Percentile</em> . Move down one cell and type <em>50th
+                                Percentile</em> , then underneath that <em>75th Percentile</em>,
+                            then <em>Lower limit</em> , and finally <em>Upper limit</em> .</li>
+                        <li>The <em>25th Percentile</em> values are the same as those for Q1, so
+                            select the values for Q1, right-click and select <em>Copy</em>, and then
+                            select the empty cells in the <em>25th Percentile</em> row and
+                            right-click and select <em>Paste Special</em> . In the pop-up window,
+                            choose <em>Values</em> and click <em>OK</em> .</li>
+                        <li>The <em>50th Percentile</em> values are equal to <em>Median - Q1</em> ,
+                            so enter the necessary formulas to calculate those values from the
+                            values in your Descriptive Statistics table. For example, if the value
+                            for College A Median is in cell M4, and the value for College A Q1 is in
+                            cell M3, the correct formula for calculating the 50th Percentile for
+                            College A would be <em>=M4-M3</em>.</li>
+                        <li><em>IMPORTANT:</em> There is a shortcut for filling in the values for
+                            the rest of the table. First, ensure that you have entered the formula
+                            correctly as described for College A (check the example table). Also be
+                            sure that your new table is directly below your first table for
+                            descriptive statistics. Once you have the formula entered for College A,
+                            highlight that cell and move your mouse over the square in the bottom
+                            right corner. Drag your mouse to the right until you have reached the
+                            cell under College F. If you have done this correctly all the cells
+                            should now be filled with the correct values.</li>
+                        <li>The <em>75th Percentile</em> values are equal to <em>Q3 -
+                            Median</em>.</li>
+                        <li>The <em>Lower limit</em> values are equal to <em>Q1 - min</em>.</li>
+                        <li>The <em>Upper limit</em> values are equal to <em>Max - Q3</em>.</li>
+                    </ul>
+                    <p>Now we can finally create our boxplots:</p>
+                    <ul>
+                        <li>Highlight the first few rows in your table&#8212;the column label row as
+                            well as the values in the <em>25th Percentile</em>, <em>50th
+                                Percentile</em>, and <em>75th Percentile</em> rows, and then choose
+                                <em>Column (the picture of bar graphs)</em> in the <em>Charts</em>
+                            group on the <em>Insert</em> tab.</li>
+                        <li>In the pull-down menu, choose the second option under <em>2-D
+                                Column</em> (labeled <em>Stacked Column</em> if you hover your mouse
+                            over it).</li>
+                        <li>Excel will create a stacked column graph for you. The idea here is that
+                            the top two boxes in each column will make up our boxplots. We'll add
+                            error bars for the min and Max values, and simply remove the bottom
+                            box.</li>
+                        <li>Click on the top box in one of the columns to select it, and then press
+                            the <em>Add Chart Elements</em> button and choose <em>Error Bars -&gt;
+                                More Error Bars Options</em> in the <em>Chart Layouts</em> group on
+                            the <em>Design (Chart Tools)</em> tab.</li>
+                        <li>In the pop-up window, choose <em>Vertical Error Bars</em> on the left
+                            and then choose <em>Plus</em> on the right.</li>
+                        <li>Choose <em>Custom</em> under <em>Error Amount</em> and then click the
+                                <em>Specify Value</em> button.</li>
+                        <li>In the pop-up window, in the <em>Positive Error Value</em> box, enter
+                            the range of values in the <em>Upper limit</em> row in the table we
+                            created (or click and drag to select those values). Click <em>OK</em>
+                            and then <em>Close</em>.</li>
+                        <li>Now repeat this error bar exercise for the bottom box in the columns,
+                            except choose <em>Minus</em> error bars, and enter the range of values
+                            in the <em>Lower limit</em> row of our table into the <em>Negative Error
+                                Value</em> box.</li>
+                        <li>Right-click on the top box in one of the columns and choose <em>Format
+                                Data Series</em>. In the pop-up window that appears to the right,
+                            choose <em>Fill</em> on the left, and specify <em>No fill</em>. Then
+                            choose <em>Border Color</em> on the left and specify <em>Solid
+                            Line</em>.</li>
+                        <li>Repeat for the middle box in the columns.</li>
+                        <li>Repeat for the bottom box in the columns, except this time specify
+                                <em>No fill</em> and <em>No line</em>. This will cause the bottom
+                            box to simply disappear.</li>
+                        <li>Click on the legend and hit the Delete key to remove it.</li>
+                        <li>Click on the horizontal lines in the background of the graph and hit the
+                            Delete key to remove them.</li>
+                        <li>Finally, right-click on the y-axis, and choose <em>Format Axis</em> from the
+                            pop-up menu that appears to the right. Make sure that <em>Axis Options</em> is
+                            selected on the left, and then next to <em>Minimum</em> enter <em>30</em> in the textbox.
+                            Click <em>Close</em>.</li>
+                    </ul>
+                </alternative>
+                <!--     <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/graduation.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Excel.</p>
+                    <p><em>Descriptive Statistics:</em></p>
+                    <p>In the last Learn By Doing exercise, we calculated descriptive statistics for
+                        our entire dataset. This time, we want to calculate descriptive statistics <em>for
+                            each college</em> and then create side-by-side
+                        boxplots to compare the colleges graphically.</p>
+                    <p>To start, we'll create a table that will list each statistical measure and
+                        the value for each college. When you are done, your table should look like
+                        this:</p>
+                    <p><image src="../../../webcontent/excel_instructions/boxplot3lbd1_old_1.gif"
+                        /></p>
+                    <ul>
+                        <li>To create this table, first make the row and column labels: in an empty
+                            section of your worksheet, pick a cell and type <em>Statistic</em>. Then
+                            move one cell to the right and type <em>College A</em>. Move one cell to
+                            the right and type <em>College B</em>. Keep doing this for colleges C,
+                            D, E, and F. Now, in the cell underneath <em>Statistic</em>, type
+                                <em>Q1</em>. Move down one cell and type <em>min</em>, then
+                            underneath that <em>Median</em>, then <em>Max</em>, and finally
+                                <em>Q3</em>.</li>
+                        <li>Note that the order here is slightly different than the ordering we've
+                            been using&#8212;the reason is that
+                            <?oxy_comment_start author="mmyers" timestamp="20101019T164228-0400" comment="It was not done in this order in the 2007 instructions  is this OK?"?>the
+                            statistical measures have to be in this order (Q1, min, Median, Max,
+                            Q3)<?oxy_comment_end?> for Excel 2003 to graph the boxplot
+                            correctly.</li>
+                    </ul>
+                    <p>Now for each statistic, we'll enter the formula to calculate that statistic
+                        and the range of data that corresponds to each college:</p>
+                    <ul>
+                        <li><em><?oxy_comment_start author="mmyers" timestamp="20101019T164302-0400" comment="Suggest removing bullets from Q1, min, etc."?>Q1<?oxy_comment_end?></em></li>
+                        <li>In the cell to the right of <em>Q1</em> and underneath <em>College
+                                A</em>, type <em>=quartile(B2:B9,1)</em> because B2 through B9
+                            represents the data for College A.</li>
+                        <li>Now move one cell to the right (so that you're underneath <em>College
+                                B</em>, and type <em>=quartile(B10:B17,1)</em> because B10 through
+                            B17 represents the data for College B.</li>
+                        <li>Repeat this calculation for colleges C, D, E, and F, adjusting the data
+                            range appropriately for each college.</li>
+                        <li><em>min</em></li>
+                        <li>In the cell to the right of <em>min</em> and underneath <em>College
+                                A</em>, type <em>=min(B2:B9)</em>, and repeat for colleges B, C, D,
+                            E, and F, adjusting the data range appropriately.</li>
+                        <li><em>Median</em></li>
+                        <li>In the cell to the right of <em>Median</em> and underneath <em>College
+                                A</em>, type <em>=median(B2:B9)</em>, and repeat for colleges B, C,
+                            D, E, and F, adjusting the data range appropriately.</li>
+                        <li><em>Max</em></li>
+                        <li>In the cell to the right of <em>Max</em> and underneath <em>College
+                                A</em>, type <em>=Max(B2:B9)</em>, and repeat for colleges B, C, D,
+                            E, and F, adjusting the data range appropriately.</li>
+                        <li><em>Q3</em></li>
+                        <li>In the cell to the right of <em>Q3</em> and underneath <em>College
+                                A</em>, type <em>=quartile(B2:B9,3)</em>, and repeat for colleges B,
+                            C, D, E, and F, adjusting the data range appropriately. </li>
+                    </ul>
+                    <p>
+                        <em>Side-by-Side Boxplots:</em></p>
+                    <ul>
+                        <li>Highlight the whole table, including the row and column labels, and then
+                            select <em>Insert&#8212;Chart</em> from the top menu bar. </li>
+                        <li>When the Chart Wizard window opens, select <em>Line Chart</em>, and then
+                            click <em>Next</em>. In Step 2, make sure <em>Rows</em> is selected, and
+                            then click <em>Finish</em>. </li>
+                        <li>What we have now is a line chart, because Excel can't generate boxplots
+                            directly, but we're going to make boxplots from this line chart. </li>
+                        <li>Right click on any line on the graph and choose <em>Format Data
+                                Series</em> from the pop-up menu. Then select the <em>Options</em>
+                            tab and check the boxes next to <em>High-low lines</em> and <em>Up/down
+                                bars</em> and click <em>OK</em>.</li>
+                        <li>Now to get rid of the lines, right click on each line in the graph in
+                            turn, choose <em>Format Data Series</em> from the pop-up menu, select
+                            the <em>Patterns</em> tab and select <em>None</em> under <em>Line</em>
+                            and then click <em>OK</em>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the samples for the student survey data loaded,
+                        right-click <link href="../../../webcontent/ti/graduation.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p><em style="italic">NOTE: This data set is fairly small (8 values for each
+                            school). It may be just as fast to enter the data yourself directly in
+                            L1-L6.</em>
+                    </p>
+                    <p>On the TI calculator, the dataset is displayed in lists L1-L6: </p>
+                    <ul style="none">
+                        <li>L1: College A&#8212;percentage of students who graduate on time</li>
+                        <li>L2: College B&#8212;percentage of students who graduate on time</li>
+                        <li>L3: College C&#8212;percentage of students who graduate on time</li>
+                        <li>L4: College D&#8212;percentage of students who graduate on time</li>
+                        <li>L5: College E&#8212;percentage of students who graduate on time</li>
+                        <li>L6: College F&#8212;percentage of students who graduate on time</li>
+                    </ul>
+                    <p>Now use the TI calculator to calculate the numerical measures of a
+                        distribution:</p>
+                    <p><em>Descriptive Statistics including five-number summary</em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/CALC/1:1-Var Stats</code>. Specify
+                            which list the data is in: <ul>
+                                <li>If you don’t specify any particular list, the default list is
+                                    L1.</li>
+                                <li>To access one of the built-in lists (L1-L6), press <code
+                                        style="inline">2ND</code> and then the number of the list.
+                                    For example, to access L1, you would press <code style="inline"
+                                        >2ND/1</code>.</li>
+                                <li>To access a non-built-in list, use the <code style="inline"
+                                        >LIST</code> menu (<code style="inline">2ND/STAT</code>).
+                                    Press <code style="inline">LIST/NAMES</code> to choose the
+                                    appropriate list.</li>
+                            </ul>
+                        </li>
+                        <li>Leave <code>FreqList</code> blank.</li>
+                        <li>Highlight <code>Calculate</code> and Press <code>ENTER</code>.</li>
+
+                        <li>The calculator will display: <table rowstyle="plain">
+                                <tr>
+                                    <td><m:math overflow="scroll">
+                                            <m:mrow>
+                                                <m:mover>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mo>¯</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:math></td>
+                                    <td>sample mean. This value is also the population mean if the
+                                        data in the list are population data.</td>
+                                </tr>
+                                <tr>
+                                    <td>&#931;x</td>
+                                    <td>sum of the x-values</td>
+                                </tr>
+                                <tr>
+                                    <td>&#931;x<sup>2</sup></td>
+                                    <td>sum of the squared x-values</td>
+                                </tr>
+                                <tr>
+                                    <td>Sx</td>
+                                    <td>sample standard deviation</td>
+                                </tr>
+                                <tr>
+                                    <td>&#963;x</td>
+                                    <td>population standard deviation</td>
+                                </tr>
+                                <tr>
+                                    <td>&#8595;n</td>
+                                    <td>sample size. The down arrow indicates that you can use the
+                                        down arrow to view remaining statistics</td>
+                                </tr>
+                                <tr>
+                                    <td>minX</td>
+                                    <td>minimum data value</td>
+                                </tr>
+                                <tr>
+                                    <td>Q1</td>
+                                    <td>first quartile</td>
+                                </tr>
+                                <tr>
+                                    <td>Med</td>
+                                    <td>median</td>
+                                </tr>
+                                <tr>
+                                    <td>Q3</td>
+                                    <td>third quartile</td>
+                                </tr>
+                                <tr>
+                                    <td>maxX</td>
+                                    <td>maximum data value</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <p><em>Boxplot</em></p>
+                    <ul>
+                        <li>Either clear any equations you may have in your calculator by choosing
+                                <code style="inline">Y=/CLEAR</code>, or else toggle them off by
+                            choosing <code style="inline">Y=</code> and then pressing the left arrow
+                            until <code style="inline">=</code> is selected and pressing <code
+                                style="inline">ENTER</code>.</li>
+                        <li>Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li>Choose <code style="inline">4:PlotsOff</code>. Hit <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>You should see: <image src="../../webcontent/boxplot3lbd1.jpg"/>
+                        </li>
+                        <li>Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li>Choose one of the available plots. For example, choose <code
+                                style="inline">1:Plot1…Off</code>
+                        </li>
+                        <li>Turn the plot <code style="inline">ON</code> by using arrows to
+                            highlight the word <code style="inline">ON</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                        <li>Choose the <code>Type</code>: The fourth graph is a modified
+                            boxplot.</li>
+                        <!--     <li>Choose the <code style="inline">Type</code>: second row, first graph is
+                            a modified boxplot. Note: to get to the second row, keep using the right
+                            arrow. Using the down arrow will move down to Xlist. </li>-->
+                        <li>Choose the correct <code style="inline">Xlist</code>: <ul>
+                                <li>To access one of the built-in lists (L1-L6), press <code
+                                        style="inline">2ND</code> and then the number of the list.
+                                    For example, to access L1, you would press <code style="inline"
+                                        >2ND/1</code>.</li>
+                                <li>To access a non-built-in list, use the <code style="inline"
+                                        >LIST</code> menu (<code style="inline">2ND/STAT</code>).
+                                    Press <code style="inline">LIST/NAMES</code> to choose the
+                                    appropriate list.</li>
+                            </ul></li>
+                        <li>Choose <code style="inline">Freq: 1</code> (the number one) </li>
+                        <!--                    <li>For grouped data, choose the list that contains the frequencies. For example, if frequency is stored in L2, choose <code style="inline">Freq:L2</code> by pressing <code style="inline">2ND/2</code>.</li>
+-->
+                        <li>Choose the <code style="inline">Mark</code> you prefer. </li>
+                        <li>You should see: <image src="../../webcontent/boxplot3lbd2.png"/>
+                        </li>
+                        <li>To view the boxplot, choose <code style="inline">ZOOM/9:
+                            ZoomStat</code>. </li>
+                        <li>If you want to change the viewing window, choose <code style="inline"
+                                >WINDOW</code>, and set the following values: <ul style="none">
+                                <li>Xmin&#8212;this is the lower value for the x-axis. It should be
+                                    lower than the smallest value in our dataset.</li>
+                                <li>Xmax&#8212;this is the upper value for the x-axis. It should be
+                                    higher than the largest value in our dataset.</li>
+                                <li>Xscl&#8212;this is the distance between the tick marks on the
+                                    x-scale.</li>
+                                <li>Ymin&#8212;this is the lower value for the y-axis.</li>
+                                <li>Ymax&#8212;this is the upper value for the y-axis.</li>
+                                <li>Yscl&#8212;this is the distance between the tick marks on the
+                                    y-scale.</li>
+                                <li>Xres=1&#8212;this is the resolution of the graph. Leave it set
+                                    to 1, which is most accurate. </li>
+                            </ul></li>
+                        <li>Choose <code style="inline">TRACE</code> and then use the left and right
+                            arrows to move the cursor around the boxplot to see the values for <code
+                                style="inline">min</code>, <code style="inline">Q1</code>, <code
+                                style="inline">Med</code>, <code style="inline">Q3</code>, and<code
+                                style="inline">max</code>.</li>
+                    </ul>
+                    <p><em>Side-by-side Boxplots</em></p>
+                    <ul>
+                        <li>You can display up to 3 boxplots on one screen by turning on three Stat
+                            Plots. Once you have all the boxplots turned on, you can choose <code
+                                style="inline">ZOOM/9:ZoomStat</code> to see all boxplots on the
+                            same screen. </li>
+                        <li>Once you have side-by-side boxplots displayed, you can choose <code
+                                style="inline">TRACE</code>, then use the up/down arrows to choose
+                            one of the boxplots and the left/right arrows to display <code
+                                style="inline">min</code>, <code style="inline">Q1</code>, <code
+                                style="inline">Med</code>, <code style="inline">Q3</code>, and<code
+                                style="inline">max</code>. </li>
+                        <li>If you have more than 3 boxplots, plot 3 at a time and draw a quick
+                            sketch of each, paying particular attention to the scale and the
+                            5-number summary. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>Answer the following questions:</p>
+        <wb:inline idref="u1_m1_boxplot3_lbd_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u1_m1_boxplot3_lbd_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m1_boxplot3_lbd_tutor3" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

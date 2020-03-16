@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_p12">
+<head>
+<title>Hypothesis Testing for the Population Proportion p (12 of 13)</title>
+    <objref idref="apply_concepts"/>
+</head>
+<body>
+    
+<section>
+<title>4. Hypothesis Testing and Confidence Intervals</title>
+<body>
+<p>The last topic we want to discuss is the relationship between hypothesis testing and confidence intervals. Even though the flavor of these two forms of inference is different (confidence intervals estimate a parameter, and hypothesis testing assesses the evidence in the data against one claim and in favor of another), there is a strong link between them.</p>
+<p>We will explain this link (using the z-test and confidence interval for the population proportion), and then explain how confidence intervals can be used after a test has been carried out.</p>
+<p>Recall that a confidence interval gives us a set of plausible values for the unknown population parameter. We may therefore examine a confidence interval to informally decide if a proposed value of population proportion seems plausible. </p>
+<p>For example, if a 95% confidence interval for p, the proportion of all U.S. adults already
+                    familiar with Viagra in May 1998, was (.61, .67), then it seems clear that we
+                    should be able to reject a claim that only 50% of all U.S. adults were familiar
+                    with the
+                    drug<?oxy_delete author="mmyers" timestamp="20101127T163943-0500" content="."?>,
+                    since based on the confidence interval, .50 is not one of the plausible values
+                    for p.</p>
+<p>In fact, the information provided by a confidence interval can be formally related to the
+                    information provided by a hypothesis test. (<em>Comment:</em> The relationship
+                    is more straightforward for two-sided alternatives, and so we will not present
+                    results for the one-sided
+                    case<?oxy_insert_start author="mmyers" timestamp="20101127T164010-0500"?>s<?oxy_insert_end?>.)</p>
+<p>Suppose we want to carry out the <em>two-sided
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T164042-0500" comment="use subscript for Ha in equation below"?>test:<?oxy_comment_end?></em>
+                </p>
+<image style="block" src="../webcontent/image299.gif" alt="H_0: p = p_0     and     H_a: p &ne; p_0"/>
+<p>using a significance level of .05.</p>
+<p>An alternative way to perform this test is to find a 95% <em>confidence interval</em> for p and check:</p>
+<p>If <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> falls<em> outside</em> the confidence interval, <em>reject</em>
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T164122-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164120-0500" content="Ho"?>.</p>
+<p>If <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> falls <em>inside</em> the confidence interval, <em>do not reject</em>
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T164127-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164125-0500" content="Ho"?>.</p>
+<p>In other words, if <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is not one of the plausible values for p, we reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T164145-0500"?>H<sub>o</sub>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164143-0500" content="Ho"?></p>
+<p>If <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is a plausible value for p, we cannot reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T164201-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164159-0500" content="Ho"?>. </p>
+<p>(<em>Comment:</em> Similarly, the results of a test using a significance level of .01 can be related to the 99% confidence interval.)</p>
+<p>Let's look at two examples:</p>
+<example>
+
+<p>Recall example 3, where we wanted to know whether the proportion of U.S. adults who support the death penalty for convicted murderers has changed since 2003, when it was .64.</p>
+<image style="block" src="../webcontent/image223.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The question we want to answer is &quot;has p changed since 2003
+(when it was .64)?&quot; We take a sample of 1000 US Adults, represented by a smaller circle. We
+find that 675 are in favor. p-hat =675/1000 = .675."/>
+<p>We are
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T164321-0500" comment="use subscript for Ha below"?>testing:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image300.gif" alt="H_0: p = .64      and       H_a: p &ne; .64;"/>
+<p>and as the figure reminds us, we took a sample of
+                        1<?oxy_insert_start author="mmyers" timestamp="20101127T164325-0500"?>,<?oxy_insert_end?>000
+                        U.S. adults, and the data told us that 675 supported the death penalty for
+                        convicted murderers (i.e. <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>675</m:mn>
+                            </m:mrow>
+                        </m:math>).</p>
+<p>A 95% confidence interval for p, the proportion of <em>all</em> U.S. adults who support the death penalty, is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>675</m:mn>
+<m:mo>±</m:mo>
+<m:mo>2</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>675</m:mn>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mo>.</m:mo>
+<m:mn>675</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mn>1000</m:mn>
+</m:mfrac>
+</m:msqrt>
+<m:mo>≈</m:mo>
+<m:mo>.</m:mo>
+<m:mn>675</m:mn>
+<m:mo>±</m:mo>
+<m:mo>.</m:mo>
+<m:mn>03</m:mn>
+<m:mo>=</m:mo>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>645</m:mn>
+<m:mo>,</m:mo>
+<m:mtext> </m:mtext>
+<m:mo>.</m:mo>
+<m:mn>705</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</p>
+<p>Since the 95% confidence interval for p does not include .64 as a plausible value for p, we can
+                        reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T164354-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164352-0500" content="Ho"?>
+                        and conclude (as we did before) that the proportion of U.S. adults who
+                        support the death penalty for convicted murderers has changed since
+                        2003.</p>
+<image style="block" src="../webcontent/image302.gif" alt="A number line illustrating the 95% confidence
+interval for p. The interval is (.645, .705). In H_0, p = .64, which is outside of this interval, so
+we can reject H_0: p = .64 ."/>
+</example>
+<example>
+
+<p>You and your roommate are arguing about whose turn it is to clean the apartment. Your roommate
+                        suggests that you settle this by tossing a coin and takes one out of a
+                        locked box he has on the shelf. Suspecting that the coin might not be fair,
+                        you decide to test it first. You toss the coin 80 times, thinking to
+                        yourself that
+                        if<?oxy_insert_start author="mmyers" timestamp="20101127T164425-0500"?>,<?oxy_insert_end?>
+                        indeed<?oxy_insert_start author="mmyers" timestamp="20101127T164427-0500"?>,<?oxy_insert_end?>
+                        the coin is
+                        fair<?oxy_insert_start author="mmyers" timestamp="20101127T164436-0500"?>,<?oxy_insert_end?>
+                        you should get around 40 heads. Instead you get 48 heads. You are puzzled.
+                        You are not sure whether getting 48 heads out of 80 is enough evidence to
+                        conclude that the coin is unbalanced, or whether this a result that could
+                        have happened just by chance when the coin is fair.</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101127T164500-0500"?>Statistics<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164458-0500" content="We"?>
+                        can
+                        help<?oxy_insert_start author="mmyers" timestamp="20101127T164514-0500"?>
+                        you answer this
+                        question.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164521-0500" content="!"?></p>
+<p>Let p be the true proportion (probability) of heads. We want to test whether the coin is fair
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T164541-0500" comment="use subscript for Ha below"?>or
+                        not:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image303.gif" alt="H_0: p = .5,   H_a: p &ne; .5"/>
+<p>The data we have are that out of n<?oxy_insert_start author="mmyers" timestamp="20101127T164545-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T164546-0500"?>
+                        <?oxy_insert_end?>80 tosses, we got 48 heads, or that the sample proportion
+                        of heads is:<?oxy_insert_start author="mmyers" timestamp="20101127T164602-0500"?>
+                        <?oxy_insert_end?><m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>48</m:mn>
+                                    <m:mn>80</m:mn>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>6</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+<p>The 95% confidence interval for p, the true proportion of heads for this coin, is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+<m:mo>±</m:mo>
+<m:mn>2</m:mn>
+<m:mo>⋅</m:mo>
+<m:msqrt>
+<m:mfrac>
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+<m:mn>80</m:mn>
+</m:mfrac>
+</m:msqrt>
+<m:mo>≈</m:mo>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+<m:mo>±</m:mo>
+<m:mo>.</m:mo>
+<m:mn>11</m:mn>
+<m:mo>=</m:mo>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mo>.</m:mo>
+<m:mn>49</m:mn>
+<m:mo>,</m:mo>
+<m:mtext> </m:mtext>
+<m:mo>.</m:mo>
+<m:mn>71</m:mn>
+</m:mrow>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</p>
+<p>Since in this case .5 is one of the plausible values for p, we cannot reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T164631-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164628-0500" content="Ho"?>.
+                        In other words, the data do not provide enough evidence to conclude that the
+                        coin is not fair.</p>
+<image style="block" src="../webcontent/image306.gif" alt="A number line showing the 95% confidence
+interval for p, which is (.49, .71). H_0 is p = .5, which falls within this interval, so we cannot reject
+H_0: p = .5 ."/>
+</example>
+<!--<activity idref="_u5_m1_dig17" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p>The UCLA Internet Report (February 2003) estimated that roughly 8.7% of
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T164649-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164649-0500" content="i"?>nternet
+                            users are extremely concerned about credit card fraud when buying
+                            online. A study was designed in order to examine whether that proportion
+                            has changed since. Let p be the proportion of all
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T164659-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164658-0500" content="i"?>nternet
+                            users who are concerned about credit card fraud. In this study we are
+                            therefore
+                            <?oxy_comment_start author="mmyers" timestamp="20101127T164717-0500" comment="use subscript for Ha below"?>testing:<?oxy_comment_end?>
+                        </p>
+            <image src="../webcontent/image390.gif" alt="H_0: p = .087,    H_a: p &ne; .087"/>
+            <p> Based on the collected data, a 95% confidence interval for p was found to be
+                            (.08<?oxy_delete author="mmyers" timestamp="20101127T164726-0500" content=" "?>,
+                            .14). </p>
+            <wb:inline idref="u4_m2_testprop12_tutor1" purpose="didigetthis"/>
+            <p>The UCLA Internet Report (February 2003) estimated that roughly 60.5% of U.S. adults
+                            use the
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T164959-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T164958-0500" content="i"?>nternet
+                            at work for personal use. A follow-up study was conducted in order to
+                            explore whether that figure has changed since. Let p be the proportion
+                            of U.S. adults who use the
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T165015-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T165014-0500" content="i"?>nternet
+                            at work for
+                            <?oxy_comment_start author="mmyers" timestamp="20101127T165044-0500" comment="use subscript for Ha below"?>personal
+                            use.<?oxy_comment_end?></p>
+            <image src="../webcontent/image391.gif" alt="H_0: p = .605,      H_a: p &ne; .605"/>
+            <p> Based on the collected data, the p-value of the test was found to be .001. 
+            </p>
+            <wb:inline idref="u4_m2_testprop12_tutor2" purpose="didigetthis"/>
+            <p><em>Did You Get It?</em> If so, then go ahead and move on. If
+                            not<?oxy_delete author="mmyers" timestamp="20101127T165642-0500" content=" yet"?>,
+                            then click the link below for some additional practice.</p>
+            <activity idref="_u5_m1_dig17_02" purpose="didigetthis"/>
+        </body>
+    </section>
+   </body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>The context of the last example is a good opportunity to bring up an important point that was discussed earlier.</p>
+<p>Even though we use .05 as a cutoff to guide our decision about whether the results are
+                    significant, we should not treat it as
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T171822-0500"?>inviolable<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T171820-0500" content="sacred"?>
+                    and we should always add our own judgment. Let's look at the last example
+                    again.</p>
+<p>It turns out that the p-value of this test is .0734. In other words, it is maybe not extremely
+                    unlikely, but it is quite unlikely (probability of .0734) that when you toss a
+                        <em>fair</em> coin 80 times you'll get a sample proportion of heads of 48/80<?oxy_insert_start author="mmyers" timestamp="20101127T171846-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T171846-0500"?>
+                    <?oxy_insert_end?>.6 (or even more extreme). It is true that using the .05
+                    significance level (cutoff), .0734 is not considered small enough to conclude
+                    that the coin is not fair. However, if you really don't want to clean the
+                    apartment, the p-value might be small enough for you to ask your roommate to use
+                    a different coin, or to provide one yourself!</p>
+</body>
+</section>
+</body>
+</workbook_page>

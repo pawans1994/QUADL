@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="u4_m3_checkpoint2_apply_random_var_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_u4_m3_checkpoint2_apply_random_var_pool" select="single">
+        <body>Safari Adventure Theme Park is a self­guided theme park in which people drive through
+            a park filled with African wildlife. They are given a map and a written guide to the
+            wildlife of the park. They charge $20.00 per car plus $2.00 per person in the car. The
+            number of people per car can be represented by the random variable X which has a mean
+            value μ<sub>X</sub> = 3.2, and a variance σ<sup>2</sup><sub>x</sub> = 1.4. What is the
+            mean of the total amount of money per car that is collected entering the park?</body>
+        <input labels="false" shuffle="true">
+            <choice value="A">$6.40</choice>
+            <choice value="B">$66.00</choice>
+            <choice value="C">$26.40</choice>
+            <choice value="D">$22.00</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. The
+                    transformation you used was 2 * μ<sub>X</sub>. However, you forgot about the
+                    constant part of the fee, which is the $20 that each car must pay.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. You
+                    used μ<sub>(a+bX)</sub> = 2 + 20 μ<sub>X</sub>. However, the constant part of
+                    the toll is $20/car and the variable part is $ 2/person.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that enters the park. T is composed of two parts: the fixed toll of $20
+                    (regardless of the number of people) and $2 for every person; thus T = 20 + 2 *
+                        μ<sub>X</sub> = 20 + 2(3.2) = 20 + 6.4 = $26.40.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears that you forgot to multiply the variable part
+                    ($2) by μ<sub>X</sub>. Remember that μ<sub>(a+bX)</sub> = a + b
+                    μ<sub>X</sub>. The constant part of the fee is $20/car, and the variable part
+                    is $ 2/person.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_u4_m3_checkpoint2_apply_random_var_pool" select="single">
+        <body>Safari Adventure Theme Park is a self­guided theme park in which people drive through
+            a park filled with African wildlife. They are given a map and a written guide to the
+            wildlife of the park. They charge $20 per car plus $2.00 per person in the car. The
+            number of people per car can be represented by the random variable X which has a mean
+            value μ<sub>X</sub> = 3.2, and a variance σ<sup>2</sup><sub>x</sub> = 1.4. What is the
+            variance of the total amount of money per car that is collected entering the
+            park?</body>
+        <input labels="false" shuffle="true">
+            <choice value="A">$5.60</choice>
+            <choice value="B">$2.80</choice>
+            <choice value="C">$26.40</choice>
+            <choice value="D">$4.00</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that enters the park. To find the variance of T, you can use the rule of
+                    variance: σ<sup>2</sup>
+                    <sub>a + bX</sub> = b<sup>2</sup>σ<sup>2</sup><sub>X</sub> =
+                    (2)<sup>2</sup>(1.4) = 4(1.4) = 5.60.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. If T is the total amount of money that is collected from a car
+                    that enters the park, the variance of T using the rule of variance is
+                        σ<sup>2</sup>
+                    <sub>a + bX</sub> = b<sup>2</sup>σ<sup>2</sup><sub>X</sub>. It looks like you
+                    calculated 2X b * σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It appears that you used the formula μ<sub>(a+bX)</sub> = a + b
+                        μ<sub>X</sub> which is the <em style="italic">mean</em> of T, the total
+                    amount of money that is collected from a car that enters the park. To find the
+                    variance of T, you use the rule of variance: σ<sup>2</sup>
+                    <sub>a + bX</sub> = b<sup>2</sup>σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. If T is the total amount of money that is collected from a car
+                    that enters the park, the variance of T using the rule of variance is
+                        σ<sup>2</sup>
+                    <sub>a + bX</sub> = b<sup>2</sup>σ<sup>2</sup><sub>X</sub>. It looks like you
+                    calculated b<sup>2</sup>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q3_u4_m3_checkpoint2_apply_random_var_pool" select="single">
+        <body><p>The number of people entering a state park is a random variable X with a mean of 3
+                and a variance of 2. The admission to the park is $6 per car plus an additional $2
+                per person in the car.</p>
+            <p>Which of the following is an expression for the total amount of money collected for a
+                car entering the park?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">6X + 2</choice>
+            <choice value="B">2X + 6</choice>
+            <choice value="C">3X + 6</choice>
+            <choice value="D">3X + 2</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems you have confused the different types of cost. It is
+                    $6 per car (regardless of number of passengers) and $2 per person in the
+                    car.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The amount of money collected for a car entering the park can be
+                    represented as 2X + 6.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems you have used the mean number of people instead of the
+                    cost per person in the equation.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It seems you have used the mean number of people instead of the
+                    cost per person in the equation. In addition you have used the wrong fixed cost
+                    for the car.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q4_u4_m3_checkpoint2_apply_random_var_pool" select="single">
+        <body><p>Salary of an employee at a large company is a random variable X with a mean of
+                $50,000 and a variance of $2,700. The CEO of the company decides to give every
+                employee a 2% raise and a $500 bonus.</p>
+            <p>Which of the following is an expression for an employee’s new salary?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">500 + 1.02X</choice>
+            <choice value="B">500 + 0.02X</choice>
+            <choice value="C">1.02 + 500X</choice>
+            <choice value="D">500 + 1.20X</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The new salary is 2% more than the old salary—that is, 1.02X—and
+                    then we add the $500 bonus to get 500 + 1.02X.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. To increase the salary by 2%, we must ADD 2% of the original
+                    salary, X, to the original salary; that is, X + 0.02X = 1.02X.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The 2% increase must be applied to the original salary, X. The
+                    $500 bonus is only <em style="italic">added</em> to the original salary, X.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. To increase the salary by 2%, we must <em style="italic">add</em> 2% or 2/100 = 0.02 of
+                    the original salary, X, to the original salary; that is, X + 0.02X = 1.02X. You have
+                    used 1.20X, which is a 20% increase in salary.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+</pool>

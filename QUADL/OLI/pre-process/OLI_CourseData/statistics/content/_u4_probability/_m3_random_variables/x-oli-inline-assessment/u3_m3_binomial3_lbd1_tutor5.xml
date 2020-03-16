@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial3_lbd1_tutor5">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>What is the probability that the student gets more than 2 questions right: P(X &gt;
+            2)?</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <alternatives group="statistics.package">
+               <alternative value="r">
+                  <title>R</title>
+                  <p>To find P(X &gt; 2) we notice that the complement of the event "X &gt; 2" is X
+                     &#8804; 2, and therefore, by the Complement Rule, P(X &gt; 2) = 1 - P(X &#8804;
+                     2). R gives us:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor6e_image1_r.gif"/>
+                  <!--<p>&gt; 1-pbinom(2,10,0.2)</p>
+                     <p>[1] 0.3222005</p>-->
+                  <p>Thus, there is approximately a 32% chance that using the "guessing strategy"
+                     the student will get more than 2 questions right on the quiz.</p>
+               </alternative>
+               <alternative value="StatCrunch">
+                  <title>StatCrunch</title>
+                  <p>To find P(X &gt; 2) we used n = 10, p = 0.2, symbol is &gt;, and k = 2.</p>
+                  <p>Here is the StatCrunch output:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor6e_image1_statcrunch.jpg"/>
+                  <p>Thus, there is approximately a 32% chance that using the "guessing strategy"
+                     the student will get more than 2 questions right on the quiz.</p>
+               </alternative>
+
+               <alternative value="minitab">
+                  <title>Minitab</title>
+                  <p>To find P(X &gt; 2), we notice that the complement of the event "X &gt; 2" is X
+                     &#8804; 2, and therefore, by the Complement Rule, P(X &gt; 2) = 1 - P(X &#8804;
+                     2). Minitab gives us:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor6e_image1_minitab.gif"/>
+                  <!--<p>Binomial with n = 10 and p = 0.2</p>
+                  <p>x P(X &#8804; x)</p>
+                  <p>2 0.677800</p>-->
+                  <p>and therefore P(X &gt; 2) = 1 - 0.6778 = 0.3222. Thus, there is approximately a
+                     32% chance that using the "guessing strategy" the student will get more than 2
+                     questions right on the quiz. </p>
+               </alternative>
+               <alternative value="excel">
+                  <title>Excel 2007</title>
+                  <p>To find P(X &gt; 2), we notice that the complement of the event "X &gt; 2" is X
+                     &#8804; 2, and therefore, by the Complement Rule, P(X &gt; 2) = 1 - P(X &#8804;
+                     2). In Excel, we'll use <em>=BINOMDIST(2, 10, 0.2, TRUE)</em>, and Excel
+                     reports a probability of 0.678.</p>
+                  <!--<p>Binomial with n = 10 and p = 0.2</p>
+                     <p>x P(X &#8804; x)</p>
+                     <p>2 0.6778</p>-->
+                  <p>Therefore, P(X &gt; 2) = 1 - 0.678 = 0.322. Thus, there is approximately a 32%
+                     chance that using the "guessing strategy" the student will get more than 2
+                     questions right on the quiz.</p>
+               </alternative>
+             <!--    <alternative value="excel2003">
+                  <title>Excel 2003</title>
+                  <p>To find P(X &gt; 2), we notice that the complement of the event "X &gt; 2" is X
+                     &#8804; 2, and therefore, by the Complement Rule, P(X &gt; 2) = 1 - P(X &#8804;
+                     2). In Excel, we'll use <em>=BINOMDIST(2, 10, 0.2, TRUE)</em>, and Excel
+                     reports a probability of 0.678.</p>
+       
+                  <p>Therefore, P(X &gt; 2) = 1 - 0.678 = 0.322. Thus, there is approximately a 32%
+                     chance that using the "guessing strategy" the student will get more than 2
+                     questions right on the quiz.</p>
+                     </alternative>-->
+               <alternative value="ti">
+                  <title>TI Calculator</title>
+                  <p>To find P(X &gt; 2), we notice that the complement of the event "X &gt; 2" is X
+                     &#8804; 2, and therefore, by the Complement Rule, P(X &gt; 2) = 1 - P(X &#8804;
+                     2). R gives us:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor6e_image1_ti.jpg"/>
+                  <!--<p>&gt; 1-pbinom(2,10,0.2)</p>
+                     <p>[1] 0.3222005</p>-->
+                  <p>Thus, there is approximately a 32% chance that using the "guessing strategy"
+                     the student will get more than 2 questions right on the quiz.</p>
+               </alternative>
+            </alternatives>
+         </explanation>
+      </part>
+   </question>
+</assessment>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">What is the 95% confidence interval for &#x03BC;? Interpret it in context.</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">Here is the R output:
+            
+&gt; t.test(sleep, conf.level=0.95)
+
+        One Sample t-test
+
+data:  sleep
+t = 54.8337, df = 141, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 7.090439 7.620828
+sample estimates:
+mean of x
+ 7.355634
+
+We are 95% certain that the mean number of hours college students in this state university sleep in a typical day is between 7.09 and 7.62.
+</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

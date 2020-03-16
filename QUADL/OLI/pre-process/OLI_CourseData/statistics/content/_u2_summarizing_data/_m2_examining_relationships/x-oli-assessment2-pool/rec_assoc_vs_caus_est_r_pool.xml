@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="rec_assoc_vs_caus_est_r_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_rec_assoc_vs_caus_est_r" select="single">
+        <body>
+            <p>A local city council’s study found that the correlation between number of liquor
+                stores in a neighborhood and neighborhood crime rates across all city neighborhoods
+                was r = 0.88.</p>
+            <p>Which one of the following statements is true?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is a pretty strong positive linear relationship between number
+                of liquor stores and crime rates.</choice>
+            <choice value="B">Closing liquor stores in a neighborhood will help to reduce the crime
+                rate of that neighborhood.</choice>
+            <choice value="C">Population is a possible lurking variable in this scenario, since
+                areas that are more densely populated are more likely to have higher crime
+                rates.</choice>
+            <choice value="D">As the number of liquor stores increase the crime rate will increase
+                in that neighborhood.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Although r = 0.88 does indicate a strong positive association,
+                    remember that correlation alone is not enough for us to determine that the
+                    relationship is linear.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A strong positive correlation does not mean that changing one
+                    variable will cause the other to change.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. It is possible that a lurking variable, such as population, is
+                    behind the observed relationship. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A strong positive correlation does not mean that changing one
+                    variable will cause the other to change.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_rec_assoc_vs_caus_est_r" select="single">
+        <body>A correlation of r = 0.85 is found between weekly sales of firewood and cough drops
+            over a 1-year period. Which of the following is a correct interpretation of this
+            correlation
+            value?<!--Based on this correlation, which one of the following statements is true? Check all that apply.--></body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is a pretty strong positive linear relationship between sales of
+                firewood and cough drops. </choice>
+            <choice value="B">Fire must be the cause of coughing. </choice>
+            <choice value="C">Temperature is a possible lurking variable that is behind this
+                relationship. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The correlation coefficient by itself isn’t enough to determine
+                    whether the relationship was linear. You would need to look at the scatterplot
+                    to determine if the relationship was a straight-line
+                    trend.<!-- Also, there is at
+                    least one true statement.--></feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You can’t determine causation merely from the nature of a
+                    display. <!--Just because there might be an association, that doesn’t (-->An
+                    association by itself does not indicate anything about causation. Causation can
+                    only be determined by knowing the nature of the study
+                    design.<!-- Also, there is at least one true
+                    statement.--></feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Temperature is a possible lurking variable, since the sales of
+                    both items tend to be low in the warm parts of the year and tend to be high in
+                    the cold parts of the year. So the sales would tend to be positively associated
+                    (both low at the same time, both high at the same time), which would explain the
+                    strong positive correlation coefficient.</feedback>
+            </response>
+            <!--            <response match="A,B" score="0">
+                <feedback>Incorrect. The correlation coefficient by itself isn’t enough to determine
+                    whether the relationship was linear. You would need to look at the scatterplot
+                    to determine if the relationship was a straight-line trend. Also, you can’t
+                    determine causation merely from the nature of a display. Just because there
+                    might be an association, that doesn’t (by itself) indicate anything about
+                    causation. Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="A,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, the
+                    correlation coefficient by itself isn’t enough to determine whether the
+                    relationship was linear. You would need to look at the scatterplot to determine
+                    if the relationship was a straight-line trend.</feedback>
+            </response>
+            <response match="B,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, you
+                    can’t determine causation merely from the nature of a display. Just because
+                    there might be an association, that doesn’t (by itself) indicate anything about
+                    causation. Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="A,B,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, the
+                    correlation coefficient by itself isn’t enough to determine whether the
+                    relationship was linear. You would need to look at the scatterplot to determine
+                    if the relationship was a straight-line trend. Also, you can’t determine
+                    causation merely from the nature of a display. Just because there might be an
+                    association, that doesn’t (by itself) indicate anything about causation.
+                    Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one true statement.</feedback>
+            </response>-->
+        </part>
+    </multiple_choice>
+
+</pool>

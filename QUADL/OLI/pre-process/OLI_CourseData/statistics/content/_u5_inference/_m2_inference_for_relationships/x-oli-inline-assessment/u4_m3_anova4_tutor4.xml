@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_anova4_tutor4">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>(i) Survey random samples of 5 seniors, 5 juniors, 5 sophomores, and 5 freshmen, and
+                get them to report the number of credits they are taking. Part-time students are
+                included, so there are some extreme low outliers in the data.</p>
+            <p>(ii) Survey random samples of 5 seniors, 5 juniors, 5 sophomores, and 5 freshmen, and
+                get them to report the number of credits they are taking. Only full-time students
+                are being considered, and the distributions do not display any
+                skew<?oxy_delete author="mmyers" timestamp="20101129T094320-0500" content="ed"?>ness
+                or outliers.</p>
+            <p>Which of the above two designs should not be handled with ANOVA?</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">design (i)</choice>
+            <choice value="B">design (ii)</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Indeed, this design should not be handled with ANOVA. The sample
+                    sizes are quite low (all of size 5), and there is a violation of the normality
+                    assumption in the form of extreme outliers.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. Note that in design (i), the sample sizes are quite low (all of
+                    size 5), and there is a violation of the normality assumption in the form of
+                    extreme outliers. In design (ii), the sample sizes are also small, but the data
+                    do<?oxy_delete author="mmyers" timestamp="20101129T094259-0500" content="es"?>
+                    not display any violation of the normality assumption, so ANOVA can be used.
+                </feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m3_lbdtutor9a" title="_u4_m3_lbdtutor9a">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">One of the criteria for admission to a certain engineering school is an SAT-M score in the top 2% of scores. How does this translate to an actual SAT-M score? In other words, how high must a student score on the SAT-M in order for his application to be considered? A different way to ask the same question is, What is the 98th percentile of the SAT-M distribution?
+Guidance: Recall that our normal table only works with "less than," so we need to rephrase our problem accordingly. Looking for the SAT-M score that 2% of students scored higher than is the same as looking for the SAT-M score that 98% of the students scored lower than.</mattext></material>
+      <response_str ident="Short answer 1">
+        <render_fib fibtype="String" prompt="Box"/></response_str></presentation>
+    <itemfeedback ident="solution">
+      <solution>
+        <solutionmaterial>
+          <material>
+            <mattext texttype="text/html">We are looking for the value x so that P(X &gt; x) = 0.02. The same value also satisfies P(X &lt; x) = 0.98. This way of posing the problem works best for us because our table is set up to work with "less than" rather than "greater than."  Now we look in the body of the table for the probability of 0.98 (or the closest thing to it).  We can't find 0.98, but we can get pretty close: 0.9798.            
+Looking at the margins, we see that this probability corresponds to a z-score of 2.05. This means that in order to be in the top 2% of SAT-M scores (and thus be considered for the engineering school), a student must score more than 2.05 standard deviations above the mean, which is a score of  507 + 2.05(111) = 734.55. Since SAT-M scores are whole numbers, we conclude that in order to be considered for the engineering school, a student must have a SAT-M score of at least 735.</mattext></material></solutionmaterial></solution></itemfeedback></item></questestinterop>

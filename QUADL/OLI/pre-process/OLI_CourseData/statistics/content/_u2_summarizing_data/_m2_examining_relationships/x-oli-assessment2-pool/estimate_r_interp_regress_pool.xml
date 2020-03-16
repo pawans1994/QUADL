@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="estimate_r_interp_regress_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_estimate_r_interp_regress" select="single">
+        <body>A local ice cream shop kept track of the number of cans of cold soda it sold each
+            day, and the temperature that day, for two months during the summer. The data are
+            displayed in the scatterplot below: <image style="block" src="../webcontent/assessment2q3.gif" /> The one outlier corresponds to a day on
+            which the refrigerator for the soda was broken. Which of the following is true? </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">A reasonable value of the correlation coefficient r for these data is
+                1.2. </choice>
+            <choice value="B">If the temperature were measured in degrees Celsius (C = 5/9*(F-32)),
+                the value of r would change accordingly. </choice>
+            <choice value="C">If the outlier were removed, r would increase. </choice>
+            <choice value="D">If the outlier were removed, r would decrease. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The correlation coefficient r must be between −1 and 1. It
+                    cannot be larger than 1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The correlation coefficient r is a unitless number, so it’s not
+                    affected by a change of units.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The outlier makes the data less "tightly clustered" around the
+                    linear trend. Removing the outlier will increase the overall tightness of the
+                    points around their straight-line trend, so the correlation coefficient would be
+                    closer to 1. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. For a scatterplot where the trend is generally rising, the
+                        <em>more</em> linear the scatterplot is, the <em>closer to 1</em> the
+                    correlation coefficient r will be. Notice that removing the outlier will
+                        <em>increase</em> the overall tightness of the points around their
+                    straight-line trend.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q2_estimate_r_interp_regress" select="single">
+        <body>The weights (in pounds) and cholesterol levels (in mg/dL) of several individuals was
+            observed. The data are shown in the scatterplot below: <image style="block" src="../webcontent/estimate_r_interp_regress_pool_b1_graphic.gif" /> The outlier on
+            the graph is likely due to an error in recording the data. Which of the following
+            statements is true?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">A reasonable value of the correlation coefficient r for these data is
+                1.2. </choice>
+            <choice value="B">If the weight (WT) were measured in kilograms instead of pounds (1 lb
+                = 0.4536 kg) the value of r would change accordingly. </choice>
+            <choice value="C">If the outlier were removed, the correlation coefficient (r) would increase. 
+            </choice>
+            <choice value="D">If the outlier were removed, the correlation coefficient (r) would decrease. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the graph shows a positive association, the correlation
+                    coefficient must range between −1 and 1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Correlation is unitless, meaning that changing the units of
+                    either variable, x or y, won’t change its value.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The outlier lies outside the linear pattern formed by most of the
+                    data. Since correlation measures how tightly the points in a graph cluster about
+                    a straight line, removing the outlier, which has the largest deviation from the
+                    line will increase the correlation. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The outlier lies outside the linear pattern formed by most of
+                    the data. Since correlation measures how tightly the points in a graph cluster
+                    about a straight line, removing the outlier, which has the largest deviation
+                    from the line will increase the correlation.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

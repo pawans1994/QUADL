@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+<assessment id="_u5_m2_anova_checkpoint1">
+	<title>ANOVA Checkpoint</title>
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+			are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+			will ask "This will submit your answers and finish this assignment. Are you sure?",
+			click "OK" if you are ready to submit your answers for final grading. </p>
+
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+				following link:</em>
+			<link href="../webcontent/checkpoint_topic_11_1.pdf">Solution Set</link>.</p>
+	</content>-->
+	<multiple_choice id="q1">
+		<!--LO:LO: Identify and distinguish among cases where use of calculations specific to independent samples, matched pairs, and ANOVA are appropriate.-->
+		<body>For which of the following would it be most appropriate to use an ANOVA to analyze the
+			data?</body>
+		<input shuffle="false">
+			<choice value="A">A researcher is interested in determining the most effective format
+				for advertising. He randomly assigns 60 people to one of three groups: (1) television
+				commercial, (2) radio commercial, or (3) magazine advertisement. Group members review
+				the commercial and then report whether or not they would buy the product.</choice>
+			<choice value="B">In order to determine the effectiveness of different diet plans, 90
+				people are randomly assigned to one of three groups: 1) low calorie diet, 2) low-fat
+				diet, or 3) low-carb diet. At the end of 60 days, the number of pounds lost was
+				recorded for each of the participants.</choice>
+			<choice value="C">Both A and B.</choice>
+			<choice value="D">Neither A nor B.</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That&apos;s incorrect. While there is a categorical explanatory variable, with
+					more than 2 categories, the response variable is categorical (Yes, would buy the
+					product/No, would not buy the product). The ANOVA is an example of Case C&rarr;Q,
+					where there is a categorical explanatory variable and quantitative response
+					variable. The correct answer is B.</feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>That is Correct! There is a categorical explanatory variable (type of
+					diet), with more than two categories, and a quantitative response variable
+					(number of pounds lost).</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That&apos;s incorrect. While it would be appropriate to use the ANOVA for B, it
+					would not be appropriate to use the ANOVA for A. While A does have a categorical
+					explanatory variable, with more than 2 categories, the response variable is
+					categorical (Yes, would buy the product/No, would not buy the product). The
+					ANOVA is an example of Case C?Q, where there is a categorical explanatory
+					variable, with more than two categories, and quantitative response variable. The
+					correct answer is B.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That&apos;s incorrect. While it would not be appropriate to use the ANOVA for
+					A, it would be appropropriate to use it for B. In B, there is a categorical
+					explanatory variable (type of diet), with more than two categories, and a
+					quantitative response variable (number of pounds lost). The correct answer is
+					B.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<content>
+		<p>Please use the following information for Questions 2, 3, and 4.</p>
+		<p>To determine whether there is a relationship between the type of school attended
+			and verbal reasoning scores for Irish students, three samples with 25 students, in
+			each group, were randomly selected from data used by Raferty and Hout (1985). One group
+			of students attended secondary school. The second group of students attended vocational
+			school. And, the third group, consisted of students, who attended only primary
+			school.</p>
+		
+		
+		<p><cite><em style="italic">Raftery, A.E. and Hout, M. (1985). Does Irish education approach the meritocratic
+			ideal? A logistic analysis. Economic and Social Review, 16, 115-140.</em></cite></p>
+		
+	</content>
+	<multiple_choice id="q2">
+		<!--LO:LO: Specify the null and alternative hypotheses for comparing groups.SO: Selecting appropriate hypothesis-->
+		<body><p>If we let &#956;<sub>1</sub>, &#956;<sub>2</sub>, and &#956;<sub>3 </sub>be the mean verbal
+			reasoning scores for students who attended secondary school, vocational school, and
+			primary school only, respectively, the appropriate hypotheses in this case
+			are:</p></body>
+		<input shuffle="false">
+			
+			<body><p>If we let &#956;<sub>1</sub>, &#956;<sub>2</sub>, and &#956;<sub>3 </sub>be the mean verbal
+				reasoning scores for students who attended secondary school, vocational school, and
+				primary school only, respectively, the appropriate hypotheses in this case
+				are:</p></body>
+			<input shuffle="false">
+				
+				<choice value="A"><p>H<sub>0</sub>: &#956;<sub>1</sub> &#61; &#956;<sub>2</sub> &#956;<sub>3</sub></p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub>, &#956;<sub>2</sub>,&#956;<sub>3</sub>, are not all
+						equal</p></choice>
+				
+				<choice value="B"><p>H<sub>0</sub>: &#956;<sub>1</sub>, &#956;<sub>2</sub>, &#956;<sub>3</sub>, are not
+					all equal</p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> &#61; &#956;<sub>2</sub> &#61; &#956;<sub>3</sub></p></choice>
+				
+				<choice value="C"><p>H<sub>0</sub>: &#956;<sub>1</sub> &#61; &#956;<sub>2</sub> &#61;
+					&#956;<sub>3</sub></p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> &#8800; &#956;<sub>2</sub> &#8800;
+						&#956;<sub>3</sub></p></choice>
+				
+				<choice value="D"><p>H<sub>0</sub>: &#956;<sub>1</sub> &#8800; &#956;<sub>2</sub> &#8800;
+					&#956;<sub>3</sub></p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> &#61; &#956;<sub>2</sub> &#61; &#956;<sub>3</sub></p></choice>
+				
+				<choice value="E">None of the above are correct.</choice>
+			
+			
+		</input>
+			<response match="A" score="10">
+				<feedback>Correct! The alternative hypothesis for the ANOVA is not all the &#956;&apos;s are
+					equal.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That is incorrect. It looks like you reversed the null and alternative
+					hypotheses. Remember, the null hypothesis is always no differences, while the
+					alternative hypotheses for the ANOVA is not all the &#956;&apos;s are equal. Consider the
+					remaining options. The correct answer is A.</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>That is incorrect. Remember, we want to know if there is sufficient
+					evidence to conclude that not all three groups had the same verbal reasoning
+					scores. However, this would still allow two groups to score equally well, while
+					a third group did better or worse. Consider the remaining options. The correct
+					answer is A.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That is incorrect. First, it looks like you reversed the null and
+					alternative hypotheses. Remember, the null hypothesis is always no differences,
+					while the alternative hypotheses for the ANOVA is not all the &#956; are equal. In
+					addition, for the alternative hypothesis, we want to know if there is sufficient
+					evidence to conclude that not all three groups had the same verbal reasoning
+					scores. The correct answer is A.</feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>That is incorrect. The null hypothesis is always no differences, while
+					the alternative hypotheses for the ANOVA is not all the &#956;&apos;s are equal. Consider
+					the remaining options. The correct answer is A.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	
+	<multiple_choice id="q3">
+		<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.-->
+		<body><p>Here are the three sample standard deviations for the verbal reasoning scores for
+			the three groups (secondary school, vocational school, and primary school only):</p>
+			<image src="../webcontent/chkpt_anova/image5.png"/>
+			<p>Based on this information, do the data meet the condition of equal population
+				standard deviations for the use of the ANOVA?</p></body>
+		<input shuffle="false">
+			<choice value="A">Yes, because 14.18 - 11.71 &lt; 2</choice>
+			<choice value="B">Yes, because 14.18/11.71 &lt; 2</choice>
+			<choice value="C">No, because the standard deviations are not equal</choice>
+			<choice value="D">Unable to determine from the information provided</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback><p>That is incorrect. The condition of equal population standard
+					deviations is considered to be met if the <em style="italic">ratio</em>of
+					the largest sample standard deviation to the smallest sample standard
+					deviation is less than 2. The correct answer is B.</p></feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback><p>Correct! The condition of equal population standard deviations is
+					considered to be met if the <em style="italic">ratio</em> of the largest sample standard deviation
+					to the smallest sample standard deviation is less than 2.</p></feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback><p>That is incorrect. The condition of equal population standard deviations is considered to
+					be met if the <em style="italic">ratio</em> of the largest sample standard deviation to the smallest
+					sample standard deviation is less than 2. The correct answer is
+					B.</p></feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback><p>That is incorrect. The condition of equal population standard
+					deviations is considered to be met if the <em style="italic">ratio</em> of the largest sample
+					standard deviation to the smallest sample standard deviation is less than 2.
+					The correct answer is B.</p></feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="q4">
+		<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.-->
+		<body><p>The analysis was run on the data and the following output was obtained:</p>
+			<image src="../webcontent/chkpt_anova/image6.png"/>
+			<p>Based on this information, we :</p></body>
+		<input shuffle="false">
+			<choice value="A">Fail to reject the H<sub>0 </sub>and conclude that the data provide
+				strong evidence that the three mean verbal reasoning scores (representing the three
+				types of schools attended) are not all equal.</choice>
+			<choice value="B">Fail to reject the H<sub>0 </sub>and conclude that the data do not
+				provide sufficient evidence that there is a relationship between the type of school
+				attended and verbal reasoning scores for Irish students.</choice>
+			<choice value="C">Reject the H<sub>0 </sub>and conclude that the data provide strong
+				evidence that there is a relationship between the type of school attended and verbal
+				reasoning scores for Irish students.</choice>
+			<choice value="D">Reject the H<sub>0 </sub>and conclude that the data provide strong
+				evidence that verbal reasoning scores are related to type of school in the following
+				way: the mean verbal reasoning score for Irish students who attended secondary
+				school is higher than the mean verbal reasoning score for Irish students who
+				attended vocational school, which in turn is higher than that of Irish students who
+				attended only primary school.</choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback>That is incorrect. While the conclusion is correct, since the p-value is
+					less than .0001, we would reject the null hypothesis. The correct answer is
+					C.</feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback>That is incorrect. Since the p-value is less than .0001, we would reject
+					the null hypothesis; as a result, we would conclude that there is enough evidence
+					to suggest that there is a relationship between the type of school attended and
+					verbal reasoning scores for Irish students. The correct answer is C.</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback>Correct! Since the p-value is less than .0001, we would reject the null
+					hypothesis and, as a result, would conclude that there is enough evidence to
+					suggest that there is a relationship between the type of school attended and
+					verbal reasoning scores for Irish students.</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>That&apos;s not quite correct. While we would reject that H0, we would conclude
+					that there is enough evidence to suggest that there is a relationship between
+					the type of school attended and verbal reasoning scores for Irish students. It
+					is not possible, based on the information provided, to determine how the groups
+					differ from one another. The correct answer is C.</feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<content>
+		<p><cite>Raftery, A.E. and Hout, M. (1985). Does Irish education approach the meritocratic
+				ideal? A logistic analysis. Economic and Social Review, 16, 115-140. </cite></p>
+	</content>
+</assessment>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m01_probability_rules1">
+<head>
+<title>Probability Rules (1 of 11)</title>
+    <objref idref="apply_probability_rules"/>
+</head>
+<body>
+   
+    <section>
+<title>Basic Probability Rules</title>
+<body>
+<p>In the previous section we considered situations in which all the possible outcomes of
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T103625-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T103624-0500" content="the"?>
+                    random experiment are equally likely, and learned a simple way to find the
+                    probability of any event in this special case. We are now moving on to learn how
+                    to find the probability of events in the general case (when the possible
+                    outcomes are not necessarily equally likely), using five basic probability
+                    rules. Fortunately, these basic rules of probability are very intuitive, and as
+                    long as they are applied
+                    systematically<?oxy_insert_start author="mmyers" timestamp="20101108T103707-0500"?>,<?oxy_insert_end?>
+                    they will let us solve more complicated problems; in particular, those problems
+                    for which our intuition might be inadequate.</p>
+</body>
+    </section>
+    <theorem type="rule">
+<title>Rule 1</title>
+<statement>
+<p><em>For any event A, 0 &le; P(A) &le; 1.</em></p></statement>
+</theorem>
+<p>This first rule
+            <?oxy_delete author="mmyers" timestamp="20101108T103847-0500" content="is not a very practical one, but "?>simply
+            reminds us of the basic property of probability
+            <?oxy_insert_start author="mmyers" timestamp="20101108T103912-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T103911-0500" content="which"?>
+            we've already learned. The probability of an event, which informs us of the likelihood
+            of it occurring, can range anywhere from 0 (indicating that the event will never occur)
+            to 1 (indicating that the event is certain). One
+            <?oxy_insert_start author="mmyers" timestamp="20101108T104015-0500"?>practical use of
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104031-0500" content="way in which "?>this
+            rule
+            <?oxy_delete author="mmyers" timestamp="20101108T104042-0500" content="can be practical "?>is<?oxy_insert_start author="mmyers" timestamp="20101108T104048-0500"?>
+            that is can be used to
+            identify<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104055-0500" content=" by flag"?><?oxy_delete author="mmyers" timestamp="20101108T104058-0500" content="ging"?>
+            any probability calculation
+            <?oxy_insert_start author="mmyers" timestamp="20101108T104135-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104134-0500" content="which"?>
+            comes out to be more than 1 as wrong.</p>
+<p>Before moving on <?oxy_insert_start author="mmyers" timestamp="20101108T104305-0500"?>to
+            <?oxy_insert_end?>the other rules,
+            let<?oxy_insert_start author="mmyers" timestamp="20101108T104203-0500"?>'s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104201-0500" content=" me"?>
+            first <?oxy_insert_start author="mmyers" timestamp="20101108T104209-0500"?>look
+            at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104206-0500" content="introduce"?>
+            an example
+            <?oxy_delete author="mmyers" timestamp="20101108T104216-0500" content="which"?><?oxy_insert_start author="mmyers" timestamp="20101108T104218-0500"?>that<?oxy_insert_end?>
+            will provide a context for illustrating the next several rules.</p>
+<example>
+
+<p>As previously discussed, all human blood can be typed as O, A, B<?oxy_delete author="mmyers" timestamp="20101108T104319-0500" content=","?><?oxy_insert_start author="mmyers" timestamp="20101108T111911-0500"?>
+                <?oxy_insert_end?>or AB. In addition, the frequency of
+                <?oxy_insert_start author="mmyers" timestamp="20101108T104326-0500"?>the occurrence
+                of <?oxy_insert_end?>these blood types varies by ethnic and racial groups. According
+                to
+                <?oxy_delete author="mmyers" timestamp="20101108T104341-0500" content="the "?>Stanford
+                University's Blood Center (<link href="http://bloodcenter.stanford.edu" target="new"
+                    >bloodcenter.stanford.edu</link>), these are the probabilities of human blood
+                types in the United
+                States<?oxy_delete author="mmyers" timestamp="20101108T104439-0500" content=":"?>
+                (the probability for type A has been omitted on
+                purpose)<?oxy_insert_start author="mmyers" timestamp="20101108T104442-0500"?>:<?oxy_insert_end?></p>
+<image style="block" src="../webcontent/image010.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: ?;
+    B: 0.10;
+    AB: 0.04;"/>
+<p>.</p>
+<p>
+                <em>Motivating question for rule 2:</em> A person in the
+                <?oxy_insert_start author="mmyers" timestamp="20101108T104506-0500"?>United
+                States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104505-0500" content="U.S."?>
+                is chosen at random. What is the probability of the person having blood type A?</p>
+<p>
+                <em>Answer:</em> Our intuition tells us that since the four blood types O, A, B, and
+                AB exhaust all the possibilities, their probabilities together must sum to 1, which
+                is the probability of a
+                <?oxy_insert_start author="mmyers" timestamp="20101108T104556-0500"?>"<?oxy_insert_end?>certain<?oxy_insert_start author="mmyers" timestamp="20101108T104553-0500"?>"<?oxy_insert_end?>
+                event (a person has one of these 4 blood types for certain). Since the probabilities
+                of O, B, and AB together sum to .44 + .1 + .04 = .58, the probability of type A must
+                be the remaining .42 (1 - .58 = .42):</p>
+<image style="block" src="../webcontent/image011.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+</example>
+<p>This example
+            <?oxy_insert_start author="mmyers" timestamp="20101108T104628-0500"?>illustrates<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T104625-0500" content="motivates"?>
+            our second rule, which tells us
+            <?oxy_comment_start author="mmyers" timestamp="20101108T105157-0500" comment="Just to be sure ...
+
+Above it said this was true of the probabilities of a &quot;certain&quot; event. Should that qualifier be added into the wording of this rule, also? (In other words, is there never a situation where you are dealing with an &quot;uncertain&quot; event?)
+
+"?>that
+            the probability of all outcomes in the sample space together must be
+            1<?oxy_comment_end?>.</p>
+<theorem type="rule"><title>Rule 2</title> 
+    <statement>
+<p> <em>P(S) = 1; that is, the sum of the probabilities of all possible outcomes is 1.</em></p></statement>
+</theorem>
+<section>
+<title>Comment</title>
+<body>
+<p>This is a good place to compare and contrast what we're doing here with what we learned in the
+                    E<?oxy_insert_start author="mmyers" timestamp="20101108T105901-0500"?>xploratory
+                    <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101108T105908-0500"?>ata
+                    <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101108T105912-0500"?>nalysis
+                    (EDA)<?oxy_insert_end?> section. Notice that in this problem we are essentially
+                    focusing on a single categorical
+                    variable<?oxy_insert_start author="mmyers" timestamp="20101108T105928-0500"?>:<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T105927-0500" content=","?>
+                    blood type. We summarized this variable above, as we summarized single
+                    categorical variables in the
+                    E<?oxy_delete author="mmyers" timestamp="20101108T110012-0500" content="xploratory "?>D<?oxy_delete author="mmyers" timestamp="20101108T110015-0500" content="ata "?>A<?oxy_delete author="mmyers" timestamp="20101108T110018-0500" content="nalysis"?>
+                    section, by listing what values the variable takes and how often it takes them.
+                    In EDA we used
+                    percentages<?oxy_insert_start author="mmyers" timestamp="20101108T110035-0500"?>,<?oxy_insert_end?>
+                    and here we're using probabilities, but the two convey the same information. In
+                    the EDA section, we learned that a pie<?oxy_insert_start author="mmyers" timestamp="20101108T110109-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T110109-0500" content="-"?>chart
+                    provides an appropriate display when a single categorical variable is involved,
+                    and similarly we can use it here (using percentages instead of
+                    probabilities):</p>
+<image style="block" src="../webcontent/image012.gif" alt="A pie chart, titled &quot;Blood Types.&quot;
+Type O takes up 44% of the pie chart, A uses 42%, AB represents 4%, and B represents the rest, 10%."/>
+<p>Even though what we're doing here is indeed similar to what we've done in the EDA section, there
+                    is a subtle but important difference between the underlying situations in this
+                    section and the ones
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T110204-0500"?>in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T110203-0500" content="from"?>
+                    the Exploratory Data Analysis section. In EDA, we summarized data that were
+                    obtained from a <em>sample</em> of individuals for whom values of the variable
+                    of interest were recorded. Here, when we present the frequency, or
+                    probability<?oxy_insert_start author="mmyers" timestamp="20101108T110239-0500"?>,<?oxy_insert_end?>
+                    of each blood type, we have in mind the entire <em>population</em> of people in
+                    the <?oxy_insert_start author="mmyers" timestamp="20101108T110250-0500"?>United
+                    States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T110248-0500" content="US"?>,
+                    for which we are presuming to know the overall frequency of values taken by the
+                    variable of interest.</p>
+</body>
+</section>
+<!--<activity idref="_u4_m1_dig5" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m1_rules1_tutor1" purpose="didigetthis"/>
+</body>
+</workbook_page>

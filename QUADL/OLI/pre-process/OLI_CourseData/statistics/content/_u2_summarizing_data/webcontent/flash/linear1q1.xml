@@ -1,0 +1,46 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <item ident="stats_item" title="linear1q1">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">Which of the two scatterplots do you think displays a stronger linear relationship?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">The top scatterplot</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">The bottom scatterplot</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">Both relationships are equally strong</mattext></material></response_label>
+</render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+</resprocessing>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">We tricked you!  This was our intention.... Look closely at the two scatterplots and notice that they display the same data, but look different since we used different scales on the axis. Both scatterplots, then display an &lt;b&gt;equally strong&lt;/b&gt; positive linear relationship.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">We tricked you!  This was our intention.... Look closely at the two scatterplots and notice that they display the same data, but look different since we used different scales on the axis. Both scatterplots, then are equally strong.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">You are correct.  Both scatterplots display the same data, but just look different since different scales were used on the axis. Both scatterplots, then are equally strong.</mattext></material></itemfeedback>
+</item>

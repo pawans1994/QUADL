@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<link
+      href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+      type="text/css" rel="stylesheet">
+
+
+<assessment id="_u5_m2_checkpoint2" max_attempts="3" recommended_attempts="1">
+      <title>Case C&rarr;C and Q&rarr;Q Checkpoint</title>
+      <!--<introduction>
+            <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+                  finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+                  ask "This will submit your answers and finish this assignment. Are you sure?", click
+                  "OK" if you are ready to submit your answers for final grading. </p>
+            <p>If you close this window without having saved or submitted, your changes will be lost.
+                  After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+                  be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+      </introduction>
+      <content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/case_cc_qq_checkpoint_solutions.pdf">Solution Set</link>.</p></content>-->	
+      
+            <section id="s4">
+                  <content>
+                        <p>The first three questions refer to the following information:</p>
+                        <p>The mortality rate from melanoma (skin cancer) during the 1950s was
+                              recorded for each of the 48 contiguous United States, plus Washington
+                              D.C. (as reported by Fisher and Van Belle (1993) and found on <link
+                                    href="http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/"
+                                    target="new"
+                                    >http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/</link>).</p>
+                        <p>The following is the scatterplot of the data:</p>
+                             <image style="block"
+                                    src="../webcontent/assessment9q11image1.gif"/><p>
+                                         The plot shows a
+                              negative linear relationship between the latitude of the state and
+                              melanoma mortality rate.</p>
+                  </content>
+                  <multiple_choice id="inference2-11" select="single">
+                        <body>In context, the negative relationship (shown in the scatterplot above)
+                              means that:</body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> The more southern the state, the
+                                    higher the melanoma death rate.</choice>
+                              <choice value="B"> The more northern the state, the
+                                    higher the melanoma death rate.</choice>
+                              <choice value="C"> The more southern the state, the
+                                    more people died of melanoma.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="10">
+                                    <feedback> Correct. From the scatterplot we see that the
+                                          lower the latitude the higher the mortality per 10
+                                          million. In other words, the more southern the state, the
+                                          higher the death rate. Note that since the response
+                                          variable is the mortality per 10 million, it measures the
+                                          death rate rather than the number of deaths.</feedback>
+                              </response>
+                              <response match="B" score="0">
+                                    <feedback> Incorrect. Notice that there is a
+                                          negative linear relationship between latitude and
+                                          mortality per 10 million. In other words, as latitude
+                                          increases, mortality per 10 million decreases. Consider
+                                          the remaining options. (A) is the right answer.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback> Incorrect. Notice that the variable
+                                          mortality per 10 million is a rate, not an absolute count,
+                                          of deaths from melanoma. Consider the remaining options.
+                                          (A) is the right answer.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+                  <multiple_choice id="inference2-12" select="single">
+                        <body>Based on the scatterplot and the value of the correlation coefficient,
+                              it would make sense to test the significance of this observed linear
+                              relationship between latitude and melanoma mortality rate. The
+                              appropriate hypotheses are:</body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> <ul style="none">
+                                          <li><em style="bold"> H<sub>0</sub>:</em> melanoma
+                                                mortality rate is related to latitude</li>
+                                          <li><em style="bold"> H<sub>a</sub>:</em> melanoma
+                                                mortality rate is not related to latitude</li>
+                                    </ul>
+                              </choice>
+                              <choice value="B"> <ul style="none">
+                                          <li><em style="bold"> H<sub>0</sub>:</em> melanoma
+                                                mortality rate is not related to latitude</li>
+                                          <li><em style="bold"> H<sub>a</sub>:</em> melanoma
+                                                mortality rate is related to latitude</li>
+                                    </ul>
+                              </choice>
+                              <choice value="C"> <ul style="none">
+                                          <li><em style="bold"> H<sub>0</sub>:</em> melanoma
+                                                mortality rate is linearly related to latitude</li>
+                                          <li><em style="bold"> H<sub>a</sub>:</em> melanoma
+                                                mortality rate is not linearly related to
+                                                latitude</li>
+                                    </ul>
+                              </choice>
+                              <choice value="D"> <ul style="none">
+                                          <li><em style="bold"> H<sub>0</sub>:</em> melanoma
+                                                mortality rate is not linearly related to
+                                                latitude</li>
+                                          <li><em style="bold"> H<sub>a</sub>:</em> melanoma
+                                                mortality rate is linearly related to latitude</li>
+                                    </ul>
+                              </choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback> Incorrect. The null hypothesis
+                                          should assume no relationship. Consider the remaining
+                                          options. (D) is the right answer.</feedback>
+                              </response>
+                              <response match="B" score="0">
+                                    <feedback> Incorrect. You are not testing for
+                                          just any kind of relationship between the variables.
+                                          Specifically, you are testing if there is a linear
+                                          relationship between the variables. Consider the remaining
+                                          options. (D) is the right answer.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback> Incorrect. The null hypothesis
+                                          should assume no relationship. Consider the remaining
+                                          options. (D) is the right answer.</feedback>
+                              </response>
+                              <response match="D" score="10">
+                                    <feedback> Correct. The hypotheses for testing the linear
+                                          relationship between two quantitative variables is always:
+                                                H<sub>0</sub>: the explanatory and response
+                                          variables are not linearly related. H<sub>a</sub>: the
+                                          explanatory and response variables are linearly related.
+                                     </feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+                  <multiple_choice id="inference2-13" select="single">
+                        <body><p>The following output is available:</p> <image style="block"
+                                    src="../webcontent/assessment9q13image1.gif"/> <p>From the output
+                                          we learn that:</p></body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> the data do not provide sufficient
+                                    evidence to conclude that melanoma mortality rate is linearly
+                                    related to latitude.</choice>
+                              <choice value="B"> the data provide extremely strong
+                                    evidence that melanoma mortality rate is linearly related to
+                                    latitude.</choice>
+                              <choice value="C"> the data provide moderately strong
+                                    evidence that melanoma mortality rate is linearly related to
+                                    latitude.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback> Incorrect. Notice that the p-value
+                                          in the &apos;Lat&apos; row is extremely small (approximately 0).
+                                          Consider the remaining options. (B) is the right
+                                          answer.</feedback>
+                              </response>
+                              <response match="B" score="10">
+                                    <feedback> Correct. The p-value is so small that Minitab
+                                          reports that it is 0. This means that it would be
+                                          essentially impossible to get data like those observed if
+                                          melanoma mortality rate and latitude were not linearly
+                                          related. This is extremely strong evidence that the two
+                                          variables are linearly related.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback> Incorrect. Notice that the p-value
+                                          in the &apos;Lat&apos; row is extremely small (approximately 0).
+                                          Consider the remaining options. (B) is the right
+                                          answer.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+            </section>
+      
+            <section id="s6">
+                  <content>
+                        <p>The following four questions refer to the following information:</p>
+                        <p>To determine if there is a relationship between grade performance and
+                              extracurricular participation, North Carolina state conducted a study
+                              of 112 students, recording the number of students in each of three
+                              extra-curricular categories, and each of two grade categories.</p> <p>Here
+                              are the results:</p> <image style="block"
+                                    src="../webcontent/assessment9q18image1.gif"/>(<em
+                                    style="italic">Source:</em> Felder, et. al., &#x201C;A Study of
+                              Student Performance in an Introductory Chemical Engineering
+                              Course,&#x201D; <em style="italic">1992 ASEE Annual Conference
+                                    Proceedings, pp. 1516&#x2013;1519.)</em></p>
+                  </content>
+                  <multiple_choice id="inference2-18" select="single">
+                        <body>What is the expected count of students with high extra-curricular
+                              participation and good grades?</body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> 3</choice>
+                              <choice value="B"> 5.86</choice>
+                              <choice value="C"> 8</choice>
+                              <choice value="D"> 112</choice>
+                              <choice value="E"> None of the above.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback>That is not quite right. We find the expected number
+                                          of students with high extra-curricular participation and
+                                          good grades by assuming independence between
+                                          extra-curricular activity and grades. Then multiply the
+                                          probability of having high extra-curricular participation
+                                          and good grades with the total number of people in the
+                                          table. Consider the remaining options. (B) is the right
+                                          answer.</feedback>
+                              </response>
+                              <response match="B" score="10">
+                                    <feedback> Correct. The expected count is: (row total * column
+                                          total) / table total = 8 * 82 / 112 = 5.86.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback>That is not quite right. We find the expected number
+                                          of students with high extra-curricular participation and
+                                          good grades by assuming independence between
+                                          extra-curricular activity and grades. Then multiply the
+                                          probability of having high extra-curricular participation
+                                          and good grades with the total number of people in the
+                                          table. Consider the remaining options. (B) is the right
+                                          answer.</feedback>
+                              </response>
+                              <response match="D" score="0">
+                                    <feedback>That is not quite right. We find the expected number
+                                          of students with high extra-curricular participation and
+                                          good grades by assuming independence between
+                                          extra-curricular activity and grades. Then multiply the
+                                          probability of having high extra-curricular participation
+                                          and good grades with the total number of people in the
+                                          table. Consider the remaining options. (B) is the right
+                                          answer.</feedback>
+                              </response>
+                              <response match="E" score="0">
+                                    <feedback>That is not quite right. It may be helpful to go back
+                                          and review this section before answering this question. (B)
+                                          is the right answer.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+                  <multiple_choice id="inference2-19" select="single">
+                        <body>The count that you found in the previous question is the number of
+                              students with high extra-curricular participation and good grades that
+                              you would expect to see assuming that:</body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> the conditions that allow us to
+                                    safely use the chi-squared procedure are met.</choice>
+                              <choice value="B"> extra-curricular participation and
+                                    grade performance are related.</choice>
+                              <choice value="C"> extra-curricular participation and
+                                    grade performance are independent.</choice>
+                              <choice value="D"> the null hypothesis of the
+                                    chi-squared test for independence in this case is true.</choice>
+                              <choice value="E"> both (C) and (D) are
+                                    correct.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback>That is not quite right. Remember that the count found
+                                          above relies on the fact that the categories are
+                                          independent. Consider the remaining options. (E) is the
+                                          right answer.</feedback>
+                              </response>
+                              <response match="B" score="0">
+                                    <feedback>That is not quite right. Remember that the count found
+                                          above actually relies on the opposite assumption, that the
+                                          categories are independent. Consider the remaining
+                                          options. (E) is the right answer.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback>That is not quite right. Although this is a true
+                                          statement, there is a better option. Consider the
+                                          remaining options. (E) is the right answer.</feedback>
+                              </response>
+                              <response match="D" score="0">
+                                    <feedback>That is not quite right. Although this is a true
+                                          statement, there is a better option. Consider the
+                                          remaining options. (E) is the right answer.</feedback>
+                              </response>
+                              <response match="E" score="10">
+                                    <feedback>Correct. In general, the expected counts are the
+                                          counts that we would expect to see if the null hypothesis
+                                          of the chi-square test (which claims that the two
+                                          categorical variables are not related, or independent)
+                                          were true. In this case, then, the expected counts are
+                                          calculated assuming that extra-curricular activity and
+                                          grade performance are not related.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+                  <multiple_choice id="inference2-20" select="single">
+                        <body><p>The following is the (edited) output of the chi-squared test in this
+                              case:</p> <image style="block"
+                                    src="../webcontent/assessment9q20image1.gif"/> <p>Based on the
+                              output (and using the traditional significance level of 5%) we can
+                              determine that:</p></body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> the data provide sufficient evidence
+                                    to conclude that extra-curricular participation and grade
+                                    performance are independent.</choice>
+                              <choice value="B"> the data do not provide sufficient
+                                    evidence to conclude that extra-curricular participation and
+                                    grade performance are independent.</choice>
+                              <choice value="C"> the data provide sufficient evidence
+                                    to conclude that extra-curricular participation and grade
+                                    performance are related.</choice>
+                              <choice value="D"> the data do not provide sufficient
+                                    evidence to conclude that extra-curricular participation and
+                                    grade performance are related.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback>That is not quite right. Notice that the p-value is
+                                          below .05. This implies that the data provide sufficient
+                                          evidence to reject the null hypothesis. Consider the
+                                          remaining options. (C) is the right answer.</feedback>
+                              </response>
+                              <response match="B" score="0">
+                                    <feedback>That is not quite right. Notice that the p-value is
+                                          below .05. This implies that the data provide sufficient
+                                          evidence to reject the null hypothesis. Consider the
+                                          remaining options. (C) is the right answer.</feedback>
+                              </response>
+                              <response match="C" score="10">
+                                    <feedback>Correct. The p-value (0.046) is sufficiently small
+                                          (less than .05) to reject H<sub>0</sub> in favor of the
+                                          alternative hypothesis and conclude that extra-curricular
+                                          activity and grade performance are related.</feedback>
+                              </response>
+                              <response match="D" score="0">
+                                    <feedback>That is not quite right. Notice that the p-value is
+                                          below .05. This implies that the data provide sufficient
+                                          evidence to reject the null hypothesis. Consider the
+                                          remaining options. (C) is the right answer.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+                  <multiple_choice id="inference2-21" select="single">
+                        <body>Which of the following facts should make you the most worried about
+                              the reliability of the results of the test in this case?</body>
+                        <input labels="false" shuffle="false">
+                              <choice value="A"> The 112 students were all students
+                                    in a chemical engineering course and not a random sample from
+                                    the entire student body.</choice>
+                              <choice value="B"> Two of the six observed counts are
+                                    less than 5.</choice>
+                              <choice value="C"> Not all of the cells' contributions
+                                    to the chi-squared statistic are greater than 1.</choice>
+                              <choice value="D"> Two of the six expected counts are
+                                    less than 5.</choice>
+                        </input>
+                        <part>
+                              <response match="A" score="0">
+                                    <feedback>That is not quite right. Although these students are
+                                          all from the same course, they are still randomly chosen.
+                                          Consider the remaining options. (D) is the right
+                                          answer.</feedback>
+                              </response>
+                              <response match="B" score="0">
+                                    <feedback>That is not quite right. Rather than two of the six
+                                          observed counts being less than 5, two of the six expected
+                                          counts being less than 5 should worry you. Consider the
+                                          remaining options. (D) is the right answer.</feedback>
+                              </response>
+                              <response match="C" score="0">
+                                    <feedback>That is not quite right. This just implies that some
+                                          cells have expected counts and observed counts that are
+                                          very close in value. (D) is the right answer.</feedback>
+                              </response>
+                              <response match="D" score="10">
+                                    <feedback>Correct. Since two of the six (or 33% of the)
+                                          expected counts are less than 5 we should be concerned
+                                          about the reliability of the results of the test. The fact
+                                          that the random sample was not taken from among the entire
+                                          university&apos;s students but from a smaller sampling frame of
+                                          students in a chemical engineering course should not harm
+                                          the reliability of the test results (since the sample is
+                                          still random) but should just affect how general our
+                                          conclusions can be.</feedback>
+                              </response>
+                        </part>
+                  </multiple_choice>
+            </section>
+      
+</assessment>

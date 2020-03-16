@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="causation4">
+    <head>
+        <title>Causation and Lurking Variables (4 of 5)</title>
+        <objref idref="recognize_association_causation"/>
+        <objref idref="explain_simpsons_paradox"/>
+
+    </head>
+    <body>
+       
+        <p>So far, we have: </p>
+        <ul>
+            <li>discussed what lurking variables are,</li>
+            <li>demonstrated different ways in which the lurking variables can interact with the two
+                studied variables, and</li>
+            <li>understood that the existence of a possible lurking variable is the main reason why
+                we say that association does not imply causation.</li>
+        </ul>
+        <p>As you recall, a lurking variable, by definition, is a variable that was not included in
+            the study, but could have a substantial effect on our understanding of the relationship
+            between the two studied variables.</p>
+        <p>What if we <em style="italic">did</em> include a lurking variable in our study? What kind
+            of effect could that have on our understanding of the relationship? These are the
+            questions we are going to discuss next.</p>
+        <p>Let's start with an example:</p>
+        <example>
+            <title>Hospital Death Rates</title>
+            <p>
+                <em>Background:</em> A government study collected data on the death rates in nearly
+                6,000 hospitals in the United States. These results were then challenged by
+                researchers, who said that the federal analyses failed to take into account the
+                variation among hospitals in the severity of patients' illnesses when they were
+                hospitalized. As a result, said the researchers, some hospitals were treated
+                unfairly in the findings, which named hospitals with higher-than-expected death
+                rates. What the researchers meant is that when the federal government explored the
+                relationship between the two variables&#8212;hospital and death rate&#8212;<em>it
+                    also should have included in the study (or taken into account) the lurking
+                    variable&#8212;severity of illness.</em>
+            </p>
+            <p>We will use a simplified version of this study to illustrate the researchers' claim,
+                and see what the possible effect could be of including a lurking variable in a
+                study. (Reference: Moore and McCabe (2003). <em style="italic">Introduction to the
+                    Practice of Statistics</em>.)</p>
+            <p>Consider the following two-way table, which summarizes the data about the status of
+                patients who were admitted to two hospitals in a certain city (Hospital A and
+                Hospital B). Note that since the purpose of the study is to examine whether there is
+                a "hospital effect" on patients' status, "Hospital is the explanatory variable, and
+                "Patient's Status" is the response variable. <image style="block"
+                    src="../webcontent/causation6.gif" alt="A two-way table. The columns are the
+categories within the variable &quot;Patient's Status&quot;. These categories are &quot;Died&quot;
+and &quot;Survived.&quot; In addition, there is a &quot;Total&quot; column. The rows are categories
+for the variable &quot;Hospital&quot;. These categories are &quot;Hospital A&quot; and &quot;Hospital
+B&quot;. Like usual there is also a &quot;Total&quot; Row. Here is the data in &quot;Row,Column: Value
+&quot; format:
+    Hospital A, Died: 63;
+    Hospital A, Survived: 2037;
+    Hospital A, Total: 2100;
+    Hospital B, Died: 16;
+    Hospital B, Survived: 784;
+    Hospital B, Total: 800;
+    Total, Died: 79;
+    Total, Survived: 2821;
+    Total, Total: 2900;"/>
+            </p>
+            <p>When we supplement the two-way table with the conditional percents within each
+                hospital: <image style="block" src="../webcontent/causation7.gif" alt="A
+two-way table with the same rows and columns as the previous two-way table, except the Total
+row has been removed. Here is the data in the same format:
+    Hospital A, Died: 3%;
+    Hospital A, Survived: 97%;
+    Hospital A, Total: 100%;
+    Hospital B, Died: 2%;
+    Hospital B, Survived: 98%;
+    Hospital B, Total: 100%;"/>
+            </p>
+            <p>we find that Hospital A has a higher death rate (3%) than Hospital B (2%). Should we
+                jump to the conclusion that a sick patient admitted to Hospital A is 50% more likely
+                to die than if he/she were admitted to Hospital B? <em>Not so fast ...</em>
+            </p>
+            <p>Maybe Hospital A gets most of the severe cases, and that explains why it has a higher
+                death rate. In order to explore this, we need to <em>include (or account for) the
+                    lurking variable "severity of illness" in our analysis.</em> To do this, we go
+                back to the two-way table and split it up to look separately at patents who are
+                severely ill, and patients who are not. <image style="block"
+                    src="../webcontent/causation10.gif" alt="The original two-way table has been
+split into two two-way tables, one for &quot;Patients severely ill&quot; and one for &quot;Patients
+not severely ill.&quot; Once again, here are the columns, for the variable &quot;Patient's
+Status&quot;: &quot;Died&quot;, &quot;Survived&quot;, &quot;Total&quot;. The rows, for the variable
+&quot;Hospital&quot;: &quot;Hospital A&quot;, &quot;Hospital B&quot;, &quot; Total&quot;. Data will
+be given in &quot;Row,Column: Value&quot; format.
+
+    Table for &quot;Patients severely ill:&quot;
+    Hospital A, Died: 57;
+    Hospital A, Survived: 1443;
+    Hospital A, Total: 1500;
+    Hospital B, Died: 8;
+    Hospital B, Survived: 192;
+    Hospital B, Total: 200;
+    Total, Died: 65;
+    Total, Survived: 1635;
+    Total, Total: 1700;
+                
+    Table for &quot;Patients not severely ill:&quot;
+    Hospital A, Died: 6;
+    Hospital A, Survived: 594;
+    Hospital A, Total: 600;
+    Hospital B, Died: 8;
+    Hospital B, Survived: 592;
+    Hospital B, Total: 600;
+    Total, Died: 14;
+    Total, Survived: 1186;
+    Total, Total: 1200;"/>
+            </p>
+            <p>As we can see, Hospital A <em>did</em> admit many more severely ill patients than
+                Hospital B (1,500 vs. 200). In fact, from the way the totals were split, we see that
+                in Hospital A, severely ill patients were a much higher proportion of the
+                patients&#8212;1,500 out of a total of 2,100 patients. In contrast, only 200 out of
+                800 patients at Hospital B were severely ill. To better see the effect of including
+                the lurking variable, we need to supplement each of the two new two-way tables with
+                its conditional percentages: <image style="block"
+                    src="../webcontent/causation11.gif" alt="Two
+two-way tables with the same rows and columns as the previous two-way table, except the Total
+row has been removed. Here is the data in the same format:
+    Table for &quot;Patients severely ill:&quot;
+    Hospital A, Died: 3.8%;
+    Hospital A, Survived: 96.2%;
+    Hospital A, Total: 100%;
+    Hospital B, Died: 4.0%;
+    Hospital B, Survived: 96.0%;
+    Hospital B, Total: 100%;
+    
+    Table for &quot;Patients not severely ill:&quot;
+    Hospital A, Died: 1.0%;
+    Hospital A, Survived: 99.0%;
+    Hospital A, Total: 100%;
+    Hospital B, Died: 1.3%;
+    Hospital B, Survived: 98.7%;
+    Hospital B, Total: 100%;"/>
+            </p>
+            <p>Note that despite our earlier finding that overall Hospital A has a higher death rate
+                (3% vs. 2%), when we take into account the lurking variable, we find that actually
+                it is Hospital B that has the higher death rate both among the severely ill patients
+                (4% vs. 3.8%) and among the not severely ill patients (1.3% vs. 1%). <em>Thus, we
+                    see that adding a lurking variable can change the direction of an
+                    association.</em>
+            </p>
+            <p>Whenever including a lurking variable causes us to rethink the direction of an
+                association, this is called <em>Simpson's paradox.</em>
+            </p>
+            <p>The possibility that a lurking variable can have such a dramatic effect is another
+                reason we must adhere to the principle: </p>
+        </example>
+        <theorem type="principle">
+            <statement>
+                <p>Association <em>does not</em> imply causation!</p>
+            </statement>
+        </theorem>
+       
+    </body>
+</workbook_page>

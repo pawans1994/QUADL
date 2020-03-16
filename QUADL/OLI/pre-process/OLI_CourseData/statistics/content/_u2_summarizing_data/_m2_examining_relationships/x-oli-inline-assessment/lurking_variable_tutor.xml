@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="lurking_variable_tutor">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:Recognize the distinction between association and causation, and identify potential lurking variables for explaining an observed relationship.-->
+            <body><p>Research has suggested that there is a correlation between Internet usage and
+                    obesity. Using this information, a fictional study found a correlation of r =
+                    0.79 between the number of hours of daily Internet usage and Body Mass Index, a
+                    measure of body weight.</p>
+                <p>Which of the following is true? Check all that apply.</p>
+            </body>
+            <multiple_choice shuffle="false" select="multiple">
+                <choice value="A">There is a pretty strong positive linear relationship between the
+                    number of hours spent on the Internet and the Body Mass Index scores.</choice>
+                <choice value="B">Using the Internet causes people to gain weight.</choice>
+                <choice value="C">Physical activity is a possible “lurking” variable behind this
+                    relationship, since people who spend a large amount of time using the Internet
+                    may be more likely to be less physically active.</choice>
+                <!--<choice value="D">Both (a) and (c) are correct.</choice>
+                <choice value="E">None of the above are correct.</choice>-->
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The correlation coefficient by itself isn’t enough to
+                        determine whether the relationship was linear. We would need to see the
+                        scatterplot to determine if the relationship was a straight-line trend.
+                        Also, there is at least one true statement.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. Correlation does <em style="italic">not</em> mean
+                        causation. Also, there is at least one true statement.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. It is possible that a lurking variable, such as physical
+                        activity is behind the relationship.</feedback>
+                </response>
+                <response match="A,B" score="0">
+                    <feedback>Incorrect. The correlation coefficient by itself isn’t enough to
+                        determine whether the relationship was linear. We would need to see the
+                        scatterplot to determine if the relationship was a straight-line trend.
+                        Also, correlation does <em style="italic">not</em>mean causation.</feedback>
+                </response>
+                <response match="A,C" score="0">
+                    <feedback>Incorrect. You are correct that it is possible that a lurking
+                        variable, such as physical activity, is behind the relationship. However,
+                        the correlation coefficient by itself isn’t enough to determine whether the
+                        relationship was linear. We would need to see the scatterplot to determine
+                        if the relationship was a straight-line trend.</feedback>
+                </response>
+                <response match="B,C" score="0">
+                    <feedback>Incorrect. You are correct that it is possible that a lurking
+                        variable, such as physical activity, is behind the relationship. However,
+                        correlation does <em style="italic">not</em> mean causation.</feedback>
+                </response>
+                <response match="A,B,C" score="0">
+                    <feedback>Incorrect. You are correct that it is possible that a lurking
+                        variable, such as physical activity, is behind the relationship. However,
+                        the correlation coefficient by itself isn’t enough to determine whether the
+                        relationship was linear. We would need to see the scatterplot to determine
+                        if the relationship was a straight-line trend. Also, correlation does <em
+                            style="italic">not</em> mean causation.</feedback>
+                </response>
+                <response match="*" score="0">
+                    <feedback>Incorrect. At least one statement is true.</feedback>
+                </response>
+                <!--                <response match="D" score="0">
+                    <feedback>Incorrect. It is possible that lurking variable, such as
+                        physical activity is behind the relationship. But remember that the
+                        correlation coefficient by itself isn’t enough to determine whether the
+                        relationship was linear. We’d need to see the scatterplot to determine if
+                        the relationship was a straight-line trend. Please try again.</feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. Think about what a correlation can tell us
+                        about the relationship between two variables. Please try again.</feedback>
+                </response>-->
+                <hint>Think about what a correlation can tell us about the relationship between two
+                    variables.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

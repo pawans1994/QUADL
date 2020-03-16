@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="didigetthis_histogram3">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">What do you think is the shape of the distribution of age of death from trauma (accident, murder, suicide, drug overdose, etc.)? Why?
+Recall that we talked earlier about the shape of the distribution of age of death from natural causes (heart disease, cancer, etc.). Use a similar type of reasoning for the age of death from trauma.
+			</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+			  <response_label ident="Res1">
+				<material>
+				  <mattext texttype="text/plain">Symmetric - Uniform</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">Skewed Left</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">Skewed Right</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">Symmetric - Unimodal</mattext></material></response_label>
+              <response_label ident="Res5">
+                <material>
+                  <mattext texttype="text/plain">Symmetric - Bimodal</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res5</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"></displayfeedback></respcondition>
+          </resprocessing>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Correct. The bulk of deaths from trauma happen at a younger age, and fewer at an older age. Therefore, we expect the distribution of age of death from trauma to be skewed right.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack4">
+          <material>
+            <mattext texttype="text/plain">Incorrect.</mattext></material></itemfeedback>
+        </item></questestinterop>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_hypothesis_testing_general_idea4">
+    <head>
+        <title>Overview (4 of 4)</title>
+        <objref idref="explain_hypothesis_testing"/>
+    </head>
+    <body>
+      
+
+        <p><?oxy_comment_start author="mmyers" timestamp="20101126T151716-0500" comment="make bold for organization purposes."?><em>Hypothesis
+                testing step 4: Making conclusions.</em><?oxy_comment_end?></p>
+        <p> Since our conclusion is based on how small the p-value is, or in other words, how
+            surprising our data are when H<sub>o</sub> is true, it would be nice to have some kind
+            of guideline or cutoff that will help determine how small the p-value must be, or how
+            "rare" (unlikely) our data must be when H<sub>o</sub> is true, for us to conclude that
+            we have enough evidence to reject H<sub>o</sub>.</p>
+        <p> This cutoff exists, and because it is so important, it has a special name. It is called
+            the <em>significance level of the test</em> and is usually denoted by the Greek letter
+            α. The most commonly used significance level is α = .05 (or 5%). This means that:</p>
+        <ul>
+            <li>if the p-value &lt; α (usually .05), then the data we got is considered to be "rare
+                (or surprising) enough" when H<sub>o</sub> is true, and we say that the data provide
+                significant evidence against H<sub>o</sub>, so we reject H<sub>o</sub> and accept
+                    H<sub>a</sub>.</li>
+            <li>if the p-value &gt; α (usually .05), then our data are not considered to be
+                "surprising enough" when H<sub>o</sub> is true, and we say that our data do not
+                provide enough evidence to reject H<sub>o</sub> (or, equivalently, that the data do
+                not provide enough evidence to accept H<sub>a</sub>).</li>
+        </ul>
+        <p>
+            <em>Important comment about wording.</em></p>
+        <p>Another common wording (mostly in scientific journals) is:</p>
+        <p> "The results are statistically significant" - when the p-value &lt; α.</p>
+        <p> "The results are not statistically significant" - when the p-value &gt; α.</p>
+        <section>
+            <title>Comments</title>
+            <body>
+                <ol>
+                    <li>
+                        <p> Although the significance level provides a good guideline for drawing
+                            our conclusions, it should not be treated as an incontrovertible
+                            truth<?oxy_comment_start author="mmyers" timestamp="20101126T153146-0500" comment="I assume you want to avoid religious references that are not specifically pertinent, however innocuous."?>.<?oxy_comment_end?>
+                            There is a lot of room for personal interpretation. What if your p-value
+                            is .052? You might want to stick to the rules and say ".052 &gt; .05 and
+                            therefore I don't have enough evidence to reject H<sub>o</sub>", but you
+                            might decide that .052 is small enough for you to believe that
+                                H<sub>o</sub> should be rejected.</p><p> It should be noted that
+                            scientific journals do consider .05 to be the cutoff point for which any
+                            p-value below the cutoff indicates enough evidence against
+                            H<sub>o</sub>, and any p-value above it, <em style="italic">or even
+                                equal to it</em>, indicates there is not enough evidence against
+                                H<sub>o</sub>.</p></li>
+                    <li>
+                        <p> It is important to draw your conclusions <em>in context</em>. It is
+                                <em>never enough</em> to say: <em style="italic">"p-value = ..., and
+                                therefore I have enough evidence to reject H<sub>o</sub> at the .05
+                                significance level."</em>You <em>should always add:</em> "... and
+                            conclude that ... (what it means in the context of the problem)".
+                        </p></li>
+                    <li>
+                        <p> Let's go back to the issue of the nature of the two types of conclusions
+                            that I can make.</p>
+                        <p>
+                            <em>Either</em>
+                            <em style="italic">I reject H<sub>o</sub> and accept H<sub>a</sub> (when
+                                the p-value is smaller than the significance level)</em>
+                            <em>or</em>
+                            <em style="italic">I cannot reject H<sub>o</sub> (when the p-value is
+                                larger than the significance level).</em></p></li>
+                </ol>
+                <p> As we mentioned earlier, note that the second conclusion does not imply that I
+                    accept H<sub>o</sub>, but just that I don't have enough evidence to reject it.
+                    Saying (by mistake) "I don't have enough evidence to reject H<sub>o</sub> so I
+                    accept it" indicates that the data provide evidence that H<sub>o</sub> is true,
+                    which is <em>not necessarily the case</em>. Consider the following slightly
+                    artificial yet effective example:</p>
+                <example>
+                    <p>An employer claims to subscribe to an "equal opportunity" policy, not hiring
+                        men any more often than women for managerial positions. Is this credible?
+                        You're not sure, so you want to test the following <em>two hypotheses:</em>
+                    </p>
+                    <ul style="none">
+                        <li><p>
+                                <em>H<sub>o</sub>:</em> The proportion of male managers hired is
+                                .5</p></li>
+                        <li><p>
+                                <em>H<sub>a</sub>:</em> The proportion of male managers hired is
+                                more than .5</p></li>
+                    </ul>
+                    <p>
+                        <em>Data:</em> You choose at random three of the new managers who were hired
+                        in the last 5 years and find that all 3 are men.</p>
+                    <p>
+                        <em>Assessing Evidence:</em> If the proportion of male managers hired is
+                        really .5 (H<sub>o</sub> is true), then the probability that the random
+                        selection of three managers will yield three males is therefore .5 * .5 * .5
+                        = .125. This is the p-value.</p>
+                    <p>
+                        <em>Conclusion:</em> Using .05 as the significance level, you conclude that
+                        since the p-value = .125 &gt; .05, the fact that the three randomly selected
+                        mangers were all males is not enough evidence to reject H<sub>o</sub>. In
+                        other words, you do not have enough evidence to reject the employer's claim
+                        of subscribing to an equal opportunity policy.</p>
+                    <p> However, <em>the data (all three selected are males) definitely does not
+                            provide evidence to accept the employer's claim (H<sub>o</sub>).</em>
+                    </p>
+                </example>
+            </body>
+        </section>
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>The following two hypotheses are tested: </p>
+                <ul style="none">
+                    <li>
+                        <p> H<sub>o</sub>: The proportion of U.S. adults who oppose gay marriage is
+                            roughly 50%. </p></li>
+                    <li>
+                        <p> H<sub>a</sub>: The proportion of U.S. adults who oppose gay marriage is
+                            above 50% (i.e., the majority oppose). </p></li>
+                </ul>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101126T155405-0500" comment="I added the word &quot;suppose,&quot; but if this was a real study, I strongly suggest adding a source and date, since its findings are controversial."?>Suppose
+                    a survey<?oxy_comment_end?> was conducted in which a random sample of 1,100 U.S.
+                    adults was asked about their opinions about gay marriage, and based on the data,
+                    the p-value was found to be .002. </p>
+                <p> Comment: Throughout this activity use a .05 (5%) significance level (cutoff). </p>
+                <wb:inline idref="u4_m2_overview4_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_overview4_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_overview4_tutor3" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_overview4_tutor4" purpose="learnbydoing"/>
+
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p> The following two hypotheses are tested: </p>
+                <ul style="none">
+                    <li>
+                        <p> H<sub>o</sub>: The average number of miles driven per year is 12,000.
+                        </p></li>
+                    <li>
+                        <p> H<sub>a</sub>: The average number of miles driven per year is less than
+                            12,000. </p></li>
+                </ul>
+                <p> In a survey, 1,600 randomly selected drivers were asked the number of miles they
+                    drive yearly. Based upon the results, the p-value = .068.</p>
+                <p>Comment: Throughout this activity use a .05 (5%) significance level. </p>
+                <wb:inline idref="u4_m2_overview4_tutor5" purpose="didigetthis"/>
+                <wb:inline idref="u4_m2_overview4_tutor6" purpose="didigetthis"/>
+                <wb:inline idref="u4_m2_overview4_tutor7" purpose="didigetthis"/>
+                <wb:inline idref="u4_m2_overview4_tutor8" purpose="didigetthis"/>
+
+            </body>
+        </section>
+
+
+
+
+    </body>
+</workbook_page>

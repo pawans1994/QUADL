@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_condprob2_tutor2">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+      <body>
+         <p>If the document has reached its destination on time
+               <?oxy_insert_start author="mmyers" timestamp="20101109T104647-0500"?>through<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T104645-0500" content="using"?>
+               service A, what is the probability that it will also reach its destination
+               <?oxy_delete author="mmyers" timestamp="20101109T104616-0500" content="by"?><?oxy_insert_start author="mmyers" timestamp="20101109T104640-0500"?>through<?oxy_insert_end?>
+               service B? When you answer, first write down the conditional probability we are
+               looking for, and then find it using the definition of conditional probability: </p>
+         <p>P(B | A) = P(A and B) / P(A).</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We are given that the document has arrived on time using service A, and we are
+               wondering what the probability is that it will also arrive on time using service B.
+               We are therefore looking for P(B | A).</p>
+            <p>Using the definition of conditional probability and the probability table, we get
+               that:</p>
+            <p>P(B | A) = P(A and B) / P(A) = .75/.9 = .833</p>
+         </explanation>
+      </part>
+   </question></page>
+</assessment>

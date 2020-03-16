@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="StandardDeviation3of3q2" title="question_2">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">What percentage of the temperatures are less than 99.5&#176;F?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/html">0.15%</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/html">0.3%</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/html">2.5%</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/html">5%</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/html">16%</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/html">Correct. According to the SD rule, 99.7% of dog temperatures are between 101.3 − 3(0.6) = 99.5 and 101.3 + 3(0.6) = 103.1&#176;F, which means that the remaining 0.3% of temperatures are divided evenly between less than 99.5&#176;F and more than 103.1&#176;F. We therefore conclude that 0.15% of temperatures are less than 99.5&#176;F.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/html">Incorrect. According to the SD rule, 99.7% of dog temperatures are between 101.3 − 3(0.6) = 99.5 and 101.3 + 3(0.6) = 103.1&#176;F. The remaining percentage is 0.3%, but it is divided evenly between less than 99.5&#176;F and more than 103.1&#176;F.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/html">Incorrect. According to the SD rule, 99.7% of dog temperatures are between 101.3 - 3(0.6) = 99.5 and 101.3 + 3(0.6) = 103.1&#176;F. It appears that you have used 95%.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/html">Incorrect. According to the SD rule, 99.7% of dog temperatures are between 101.3 - 3(0.6) = 99.5 and 101.3 + 3(0.6) = 103.1&#176;F. It appears that you have used 95%.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/html">Incorrect. According to the SD rule, 99.7% of dog temperatures are between 101.3 - 3(0.6) = 99.5 and 101.3 + 3(0.6) = 103.1&#176;F. It appears that you have used 68%.</mattext></material></itemfeedback></item></questestinterop>

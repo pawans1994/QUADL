@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">We calculated a p-value of 0 in this test. Interpret what that means, and draw your conclusions.</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">A p-value of essentially 0 tells us that it would be nearly impossible to get a sample proportion of 12.5% (or larger) of contaminated drinking water had the true proportion been 3.5%. In other words, the airline industry cannot claim that this just happened to be a 'bad' sample that occurred by chance. A p-value of 0 tells us that such a sample most likely did not happen just by chance. Our conclusion is therefore that we have extremely strong reason to reject Ho and conclude that the proportion of contaminated drinking water on airplanes is higher than the proportion in general. On a technical level, the p-value is smaller than any significance level that we are going to set, so Ho can be rejected.
+
+&lt;b&gt;Comment:&lt;/b&gt; In the original study, there were 158 randomly chosen airplanes, and in 20 of them the drinking water was found to be contaminated.  As we mentioned, we based the context of this activity on these results, and we simply doubled the counts. Instead of 158 airplanes, we had 316; instead of 20 airplanes with contaminated drinking water, we had 40). We did that since technically, otherwise the conditions under which this test can be used would not been met. Practically, the results of this study are so extreme, that the fact that not all the conditions were met has no effect on the actual conclusion.</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

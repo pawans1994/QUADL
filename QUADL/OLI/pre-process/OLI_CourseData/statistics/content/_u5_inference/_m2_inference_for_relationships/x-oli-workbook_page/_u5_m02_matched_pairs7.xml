@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_matched_pairs7">
+<head>
+<title>Matched Pairs (7 of 8)</title>
+    <objref idref="carry_out_inferential_method_groups"/>
+    <objref idref="specify_hypotheses_for_groups"/>
+</head>
+<body>
+   
+<section>
+<title>Confidence Interval for μ<sub>d</sub>
+                (<?oxy_insert_start author="mmyers" timestamp="20101128T222012-0500"?>P<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222010-0500" content="p"?>aired
+                t
+                <?oxy_insert_start author="mmyers" timestamp="20101128T222018-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222017-0500" content="c"?>onfidence
+                <?oxy_insert_start author="mmyers" timestamp="20101128T222020-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222020-0500" content="i"?>nterval)</title>
+<body>
+<p> </p>
+</body>
+</section>
+<p> So far we've discussed the paired
+            t-test<?oxy_insert_start author="mmyers" timestamp="20101128T222032-0500"?>,<?oxy_insert_end?>
+            which checks whether there is enough evidence stored in the data to reject the claim
+            that <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi mathvariant="normal">μ</m:mi>
+                        <m:mi>d</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                </m:mrow>
+            </m:math> in favor of one of the three possible alternatives. </p>
+<p>If we would like to estimate <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi mathvariant="normal">μ</m:mi>
+                        <m:mi>d</m:mi>
+                    </m:msub>
+                </m:mrow>
+            </m:math>, the mean of the differences (response 1 - response 2), we can use the natural
+            point estimate, <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math><?oxy_delete author="mmyers" timestamp="20101128T222054-0500" content=" "?>,
+            the sample mean of the differences, or preferably, use a 95% confidence
+            interval<?oxy_insert_start author="mmyers" timestamp="20101128T222101-0500"?>,<?oxy_insert_end?>
+            which will provide us with a set of plausible values for <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi mathvariant="normal">μ</m:mi>
+                        <m:mi>d</m:mi>
+                    </m:msub>
+                </m:mrow>
+            </m:math>. </p>
+<p>In particular, if the test has rejected <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi>H</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                    <m:mo>:</m:mo>
+                    <m:msub>
+                        <m:mi mathvariant="normal">μ</m:mi>
+                        <m:mi>d</m:mi>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                </m:mrow>
+            </m:math>, a confidence interval for <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi mathvariant="normal">μ</m:mi>
+                        <m:mi>d</m:mi>
+                    </m:msub>
+                </m:mrow>
+            </m:math> can be
+            insightful<?oxy_insert_start author="mmyers" timestamp="20101128T222113-0500"?>,<?oxy_insert_end?>
+            since it quantifies the effect that the categorical explanatory
+            <?oxy_insert_start author="mmyers" timestamp="20101128T222119-0500"?>variable
+            <?oxy_insert_end?>has on the
+            response<?oxy_insert_start author="mmyers" timestamp="20101128T222123-0500"?>
+            variable<?oxy_insert_end?>. </p>
+    
+    <p><em>Comment: </em>We will not go into the formula and calculation of the confidence interval, but rather ask our statistical software to do it for us, and focus on interpretation.</p>
+    
+  <!-- RS 07/28/10  Generalized to eliminate alternatives
+      <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p><em>Comment: </em>We will not go into the formula and calculation of the confidence interval, but rather ask our software to do it for us, and focus on interpretation.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p><em>Comments: </em></p>
+    <p>1. We will not go into the formula and calculation of the confidence interval, but rather ask our software to do it for us, and focus on interpretation.</p>
+<p>2. As in previous tests that we looked at, recall that in Minitab, the confidence interval is provided only as part of the output of the two-sided test.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+ <p><em>Comment: </em>We will not go into the formula and calculation of the confidence interval, but rather ask our software to do it for us, and focus on interpretation.</p>
+          
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<example>
+
+<p>Recall our leading example about whether drivers are impaired after having two
+                beers<?oxy_delete author="mmyers" timestamp="20101128T222210-0500" content="."?>:</p>
+<image style="block" src="../webcontent/image054.gif" alt="The X variable is whether
+the driver had 2 beers or no beers. We have two populations, population 1 of sober drivers and population 2
+of drivers who had two beers. For each population we have the Reaction Time (Y) mean, &mu;_1 for population 1
+and &mu;_2 for population 2. We use the same drivers to generate the samples for both populations. The SRS
+of size 20 is created for population 1 before the drivers have had 2 beers, and using the same drivers,
+we generate the SRS of size 20 for population 2 after giving them 2 beers."/>
+<p>which is reduced to inference about a single mean, the mean of the differences (before<?oxy_insert_start author="mmyers" timestamp="20101128T222231-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101128T222231-0500"?>
+                <?oxy_insert_end?>after)<?oxy_insert_start author="mmyers" timestamp="20101128T222227-0500"?>:<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222226-0500" content=","?></p>
+<image style="block" src="../webcontent/image067.gif" alt="For the population of all drivers,
+we are trying to find &mu;_d, which represents the mean of the difference in total reaction
+time (before 2 beers - after 2 beers). To do this, we generate a sample from the population.
+The sample consists of 20 differences."/>
+<p>The p-value of our test, <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>H</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mo>:</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                    </m:mrow>
+                </m:math> vs. <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>H</m:mi>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:mo>:</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                        <m:mo>&lt;</m:mo>
+                        <m:mn>0</m:mn>
+                    </m:mrow>
+                </m:math> was .009, and we therefore rejected
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T222305-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222246-0500" content="Ho"?>
+                and concluded that the mean difference in total reaction time (before beer - after
+                beer) was negative, or in other words, that drivers are impaired after having two
+                beers. As a follow-up to this conclusion, it would be interesting to quantify the
+                effect that two beers have on the driver, using the 95% confidence interval for
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                    </m:mrow>
+                </m:math>. </p>
+
+    
+    <p>Using statistical software, we find that the 95% confidence interval for	<m:math overflow="scroll">
+        <m:mrow>
+            <m:msub>
+                <m:mi mathvariant="normal">μ</m:mi>
+                <m:mi>d</m:mi>
+            </m:msub>
+        </m:mrow>
+    </m:math>, the mean of the differences (before - after), is roughly (-.9, -.1).
+    </p>
+    
+    
+   <!-- RS 07/28/10 Generalized to eliminate alternatives
+       <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Using Excel, we find that the 95% confidence interval for	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>, the mean of the differences (before - after), is roughly (-.9, -.1).
+				</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>Here is the output of the two-sided test (which includes the confidence interval):				</p>
+<image style="block" src="../webcontent/image177.gif"/>
+<p>We find that the 95% confidence interval for	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>, the mean of the differences (before - after), is roughly (-.9, -.1).
+				</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Using R, we find that the 95% confidence interval for	<m:math overflow="scroll">
+            <m:mrow>
+                <m:msub>
+                    <m:mi mathvariant="normal">μ</m:mi>
+                    <m:mi>d</m:mi>
+                </m:msub>
+            </m:mrow>
+        </m:math>, the mean of the differences (before - after), is roughly (-.9, -.1).
+        </p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>We can therefore say with 95% confidence that drinking two beers increases the total reaction time of the driver by between .1 and .9 of a second.</p>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>As we've seen in previous tests, as well as in the matched pairs case, the 95% confidence interval for
+			<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math>
+			can be used for testing in the two-sided case (<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math> vs. <m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi>H</m:mi>
+<m:mi>a</m:mi>
+</m:msub>
+<m:mo>:</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+<m:mo>≠</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:math>):
+		</p>
+<p>If the null value, 0, falls outside the confidence interval,
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T222418-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222416-0500" content="Ho"?>
+                    is
+                    rejected<?oxy_insert_start author="mmyers" timestamp="20101128T222422-0500"?>.<?oxy_insert_end?></p>
+<p>If the null value, 0, falls inside the confidence interval,
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T222433-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222430-0500" content="Ho"?>
+                    is not
+                    rejected<?oxy_insert_start author="mmyers" timestamp="20101128T222437-0500"?>.<?oxy_insert_end?></p>
+<example>
+
+    <p>Let's go back to our twin study example, where we found a 95% confidence interval for	<m:math overflow="scroll">
+        <m:mrow>
+            <m:msub>
+                <m:mi mathvariant="normal">μ</m:mi>
+                <m:mi>d</m:mi>
+            </m:msub>
+        </m:mrow>
+    </m:math> of (-6.11322, 0.30072) and a p-value of 0.074.</p>
+    
+    
+    <!--  RS 07/28/10  Generalized to eliminate alternatives 
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Let's go back to our twin study example, where we found a 95% confidence interval for	<m:math overflow="scroll">
+<m:mrow>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mi>d</m:mi>
+</m:msub>
+</m:mrow>
+</m:math> of (-6.11322, 0.30072) and a p-value of 0.074.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>Let's go back to our twin study example:</p>
+<image style="block" src="../webcontent/image178.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Let's go back to our twin study example, where we found a 95% confidence interval for	<m:math overflow="scroll">
+            <m:mrow>
+                <m:msub>
+                    <m:mi mathvariant="normal">μ</m:mi>
+                    <m:mi>d</m:mi>
+                </m:msub>
+            </m:mrow>
+        </m:math> of (-6.11322, 0.30072) and a p-value of 0.074.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p> We used the fact that the p-value is .074 to conclude that
+                            <?oxy_insert_start author="mmyers" timestamp="20101128T222625-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222620-0500" content="Ho"?>
+                        can not be rejected (at the .05 significance level), and that whether
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T222639-0500"?>or not
+                        <?oxy_insert_end?>a person was raised by
+                        his<?oxy_insert_start author="mmyers" timestamp="20101128T222630-0500"?> or
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222629-0500" content="/"?>her
+                        birth parents doesn't necessarily have an effect on intelligence (as
+                        measured by IQ scores). The last comment tells us that we can also use the
+                        confidence interval to reach the same
+                        conclusion<?oxy_insert_start author="mmyers" timestamp="20101128T222656-0500"?>,<?oxy_insert_end?>
+                        since 0 falls inside the confidence interval for <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math>. In other words, since 0 is a plausible value for <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math> we cannot reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101128T222706-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222704-0500" content="Ho"?>
+                        which claims that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mn>0</m:mn>
+                            </m:mrow>
+                        </m:math>. </p>
+</example>
+</body>
+</section>
+<!--<activity idref="_u5_m2_lbd5" purpose="learnbydoing"/>-->
+<section purpose="learnbydoing">
+    <title>Learn By Doing</title>
+    <body>
+        <p>A publishing company wanted to test whether
+                    <?oxy_delete author="mmyers" timestamp="20101128T222717-0500" content="the "?>typing
+                    speed<?oxy_delete author="mmyers" timestamp="20101128T222722-0500" content=" of secretaries"?>
+                    differs when using word processor A or word processor B. A random sample of 25
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T222734-0500"?>typists<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222732-0500" content="secretaries"?>
+                    was selected and the typing
+                    speed<?oxy_insert_start author="mmyers" timestamp="20101128T222743-0500"?>s<?oxy_insert_end?>
+                    (in words per minute) were recorded for each secretary when using word processor
+                    A and then when using word processor B. (Which word processor
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T222753-0500"?>wa<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222753-0500" content="i"?>s
+                    used first
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T222758-0500"?>wa<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222757-0500" content="i"?>s
+                    determined for each
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T222803-0500"?>typist<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T222801-0500" content="secretary"?>
+                    by a coin flip).</p>
+        <p>Based on the collected data, a 95% confidence interval for μ<sub>d</sub>, the mean
+            difference (word processor A - word processor B) was found to be (2.5, 7.8).</p>
+        <p>The appropriate hypotheses for testing whether the typing speeds differ when using word
+            processor A or word processor B is the two-sided test: </p>
+        <image style="block" src="../webcontent/image417.gif" alt="H_0: &mu;_d = 0,  H_a: &mu;_d
+&ne; 0"/>
+        <wb:inline idref="u4_m3_matchedpairs7_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m3_matchedpairs7_tutor2" purpose="learnbydoing"/>
+        
+    </body>
+</section>
+</body>
+</workbook_page>

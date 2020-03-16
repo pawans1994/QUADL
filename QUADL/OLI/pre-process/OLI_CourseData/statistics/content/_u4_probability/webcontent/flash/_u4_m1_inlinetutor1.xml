@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m1_inlinetutor1" title="_u4_m1_inlinetutor1">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">The probability that the selection will appear to be discriminatory is therefore:</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">P(D) = 1</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">P(D) = 4/6</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">P(D) = 6/10</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">P(D) = 4/10</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">P(D) = 0</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="hint">
+      <hint>
+        <hintmaterial>
+          <material>
+            <mattext texttype="text/plain">Since the two were chosen at random, all the possible outcomes are equally likely, and therefore:
+
+                              number of outcomes in D        ? 
+                  P(D) = ------------------------------- = ----- 
+                              number of outcomes in S        ?</mattext></material></hintmaterial></hint></itemfeedback>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect. P(D)=1 means that the random selection will choose two candidates of the same gender for certain. This is not the case here. There are many possible outcomes that are not of this type.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Rethink your denominator (6).  The hint might be helpful in guiding your thinking.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Rethink your numerator (6).  The hint might be helpful in guiding your thinking.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Good Job!  Since all the possible outcomes are equally likely,  
+
+                              number of outcomes in D        4
+                   P(D) = ------------------------------ = -----
+                              number of outcomes in S       10</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Incorrect. P(D)=0 means that the random selection will never choose two candidates of the same gender.    This is not the case here. There are some possible outcomes that are of this type.</mattext></material></itemfeedback></item></questestinterop>

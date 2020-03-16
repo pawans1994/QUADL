@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+<assessment id="_u4_m4_checkpoint1" max_attempts="3" recommended_attempts="1">
+	<title>Sampling Distributions Checkpoint 1</title>
+
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+		
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/sampling_distributions_checkpoint_1_solutions.pdf">Solution Set</link>.</p></content>	-->
+	
+	<multiple_choice id="prob4-2" select="single">
+		<body>
+			<p> In June 2005, a survey was conducted in which a random sample of 1,464 U.S. adults was asked
+				the following question: "In 1973 the Roe versus Wade decision established a woman's
+				constitutional right to an abortion, at least in the first three months of
+				pregnancy. Would you like to see the Supreme Court completely overturn its Roe
+				versus Wade decision, or not?" </p>
+			<p> The results were: Yes&#8212;30%, No&#8212;63%, Unsure&#8212;7%&#160;&#160;&#160;&#160; (<em
+					style="italic">Source</em>: www.Pollingreport.com) </p>
+			<p> Which of the following is true? </p>
+		</body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> &#160;&#160; 30%, 63%, and 7% are all parameters. </choice>
+			<choice value="B"> &#160;&#160; 30%, 63%, and 7% are all statistics. </choice>
+			<choice value="C"> &#160;&#160; If another random sample of size 1,464 U.S. adults were to be
+				chosen, we would expect to get the exact same distribution of answers. </choice>
+			<choice value="D"> &#160;&#160; Both (A) and (C) are correct. </choice>
+			<choice value="E"> &#160;&#160; Both (B) and (C) are correct. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Incorrect. When discussing parameters, we are referring
+					to the actual value of certain variables relating to the population. In this
+					example, if we were able to poll all U.S. adults and have everyone respond to
+					the poll, then these numbers would be parameters. Consider the remaining
+					options. (B) is the right answer. </feedback>
+			</response>
+			<response match="B" score="10">
+				<feedback>  Correct. Since the survey results are obtained from the sample,
+					these are all statistics. Due to sampling variability, if we were to take a
+					different sample of the same size we would not expect to get the same sample
+					results. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback>  Incorrect. Due to sampling variability, we cannot
+					expect to get the same sample results from multiple samples. Consider the
+					remaining options. (B) is the right answer. </feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback>  Incorrect. When discussing parameters, we are referring
+					to the actual value of certain variables relating to the population. In this
+					example, if we were able to poll all U.S. adults and have everyone respond to
+					the poll, then these numbers would be parameters. Also, due to sampling
+					variability, we cannot expect to get the same results from multiple samples.
+					Consider the remaining options. (B) is the right answer. </feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback>  Incorrect. Due to sampling variability, we cannot
+					expect to get the same sample results from multiple samples. Consider the
+					remaining options. (B) is the right answer. </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<section id="assess_07_socialscientists">
+		<content>
+			<p> The next three questions refer to the following information: </p>
+			<p> A social scientist wishes to conduct a survey. She plans to ask a yes/no question to a random
+				sample from the U.S. adult population. One proposal is to select 100 people; another
+				proposal is to select 900 people. </p>
+		</content>
+		<multiple_choice id="prob4-5" select="single">
+			<body> Which of the following is true regarding the sample proportion p-hat, of "yes" responses? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; The sample proportion from the sample of 900 is
+					more likely to be close to the true population proportion, p. </choice>
+				<choice value="B"> &#160;&#160; The sample proportion from sample of 100 is more
+					likely to be close to the true population proportion, p. </choice>
+				<choice value="C"> &#160;&#160; The sample proportion in either proposal is equally likely to
+					be close to the true population proportion, p, since the sampling is random. </choice>
+				<choice value="D"> &#160;&#160; It is impossible to say one way or the other.
+				</choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback> Correct. The larger the sample size, the closer we expect the sample proportion to
+						be to the true population proportion. Intuitively, this makes sense, since
+						the larger the sample, the more it is “like the population.” More formally,
+						since the standard deviation of the sampling distribution of the sample
+						proportion p-hat is: <m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mi>n</m:mi>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> , it decreases as the sample size increases. This means that for
+						larger sample sizes, the possible values of p-hat are less spread out and
+						therefore more likely to be closer to their mean, which is the population
+						proportion, p. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that the standard deviation of the sampling
+						distribution of p-hat is<m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mi>n</m:mi>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> , which clearly decreases as the sample size increases. This means
+						that a statistic, p-hat, will have a higher probability of being closer to
+						the true population proportion, p, with a larger sample size. Consider the
+						remaining options. (A) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Remember that the standard deviation of
+						the sampling distribution of p-hat is <m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mi>n</m:mi>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> , which clearly decreases as the sample size increases. This means
+						that a statistic, p-hat, will have a higher probability of being closer to
+						the true population proportion, p, with a larger sample size. Consider the
+						remaining options. (A) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. It may be helpful to go back and re-read the section on
+						sampling distributions. Then consider the remaining options. (A) is the
+						right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob4-6" select="single">
+			<body> If the study were conducted over and over (selecting different samples of people
+				each time), which one of the following would be true regarding the resulting sample
+				proportions of "yes" responses? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; Different sample proportions would result each
+					time, but for sample size 900 they would be centered (have their mean) at the
+					true population proportion, whereas for sample size 100 they would not. </choice>
+				<choice value="B"> &#160;&#160; Different sample proportions would result each
+					time, but for sample size 100 they would be centered (have their mean) at the
+					true population proportion, whereas for sample size 900 they would not. </choice>
+				<choice value="C"> &#160;&#160; Different sample proportions would result each
+					time, but for either sample size, they would be centered (have their mean) at
+					the true population proportion. </choice>
+				<choice value="D"> &#160;&#160; For either sample size, using the same size each
+					time, as long as the sampling is done <em style="bold">with replacement</em>,
+					their mean would be 0. </choice>
+				<choice value="E"> &#160;&#160; None of the above is true, since it makes no
+					sense to talk about the <em style="bold">mean</em> of sample proportions.
+				</choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Remember that the sampling distribution of p-hat will be
+						normally distributed with a mean of p, the population proportion. Consider
+						the remaining options. (C) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that the sampling distribution of p-hat will be
+						normally distributed with a mean of p, the population proportion. Consider
+						the remaining options. (C) is the right answer. </feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback> Correct. Due to sampling variability, for different samples we will get different
+						values of p-hat. Since the mean of the sampling distribution of p-hat is p,
+						the population proportion, whether we take a sample of size 100 or a sample
+						of size 900, the resulting values of p-hat will be centered around p in both
+						cases. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Remember that the sampling distribution
+						of p-hat will be normally distributed with mean p, the population
+						proportion. Because the sampling distribution is normally distributed, and
+						p-hat cannot take on negative values, it doesn’t make sense to have the
+						sampling distribution centered at 0. Consider the remaining options. (C) is
+						the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. It may be helpful to review the pages on sampling
+						distributions and then consider the remaining options. (C) is the right
+						answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob4-7" select="single">
+			<body> Which one of the following is true regarding the standard deviation of the sampling
+				distribution of the sample proportion, p-hat, of "yes" responses? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; The standard deviation of the sampling
+					distribution will be 9 times smaller with sample size 100. </choice>
+				<choice value="B"> &#160;&#160; The standard deviation of the sampling
+					distribution will be 9 times larger with sample size 100. </choice>
+				<choice value="C"> &#160;&#160; The standard deviation of the sampling
+					distribution will be 3 times smaller with sample size 100. </choice>
+				<choice value="D"> &#160;&#160; The standard deviation of the sampling
+					distribution will be 3 times larger with sample size 100. </choice>
+				<choice value="E"> &#160;&#160; The standard deviation of the sampling
+					distribution will be the same for both sample sizes. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>  Incorrect. Remember that we expect the standard
+						deviation of the sampling distribution of p-hat to decrease as the sample
+						size increases. Consider the remaining options. (D) is the right answer.
+					</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Although we expect the standard
+						deviation of the sampling distribution of p-hat to be larger with sample
+						size 100 as compared to that with sample size 900, remember that the
+						standard deviation of the sampling distribution of p-hat contains the term
+							<m:math display="inline">
+							<m:mrow>
+								<m:mfrac>
+									<m:mn>1</m:mn>
+									<m:msqrt>
+										<m:mi>n</m:mi>
+									</m:msqrt>
+								</m:mfrac>
+							</m:mrow>
+						</m:math> and the rest does not depend on sample size. Consider the
+						remaining options. (D) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Remember that we expect the standard deviation of the
+						sampling distribution of p-hat to decrease as the sample size increases.
+						Consider the remaining options. (D) is the right answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback> Correct. For a sample size of 100, the sampling distribution of
+						p-hat is: <m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mn>100</m:mn>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> . For a sample of size 900, the sampling distribution of p-hat is:
+							<m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mn>900</m:mn>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> . This is the correct answer since: <m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mn>900</m:mn>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> = <m:math display="inline">
+							<m:mrow>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mrow>
+											<m:mn>9</m:mn>
+											<m:mo>&lowast;</m:mo>
+											<m:mn>100</m:mn>
+										</m:mrow>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> = <m:math display="inline">
+							<m:mrow>
+								<m:mfrac>
+									<m:mn>1</m:mn>
+									<m:mn>3</m:mn>
+								</m:mfrac>
+								<m:msqrt>
+									<m:mfrac>
+										<m:mrow>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">(</m:mo>
+											<m:mn>1</m:mn>
+											<m:mo>&minus;</m:mo>
+											<m:mi>p</m:mi>
+											<m:mo stretchy="false">)</m:mo>
+										</m:mrow>
+										<m:mn>100</m:mn>
+									</m:mfrac>
+								</m:msqrt>
+							</m:mrow>
+						</m:math> . </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Remember that we expect the standard
+						deviation of the sampling distribution of p-hat to decrease as the sample
+						size increases. Consider the remaining options. (D) is the right answer.
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	<multiple_choice id="prob4-8" select="single">
+		<body> The sampling distribution of a statistic is (select the best answer): </body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> &#160;&#160; The mechanism that determines whether the random
+				sampling was effective. </choice>
+			<choice value="B"> &#160;&#160; A <em>normal</em> curve, for which probabilities are obtained
+				by standardizing. </choice>
+			<choice value="C"> &#160;&#160; A distribution of all parameters from the population
+				that is to be randomly sampled. </choice>
+			<choice value="D"> &#160;&#160; A distribution of a single statistic from repeated
+				random samples of the same size, from the same population. </choice>
+			<choice value="E"> &#160;&#160; A distribution of all possible summary statistics
+				from a single random sample, from the same population. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Incorrect. The sampling distribution is not able to determine whether
+					random sampling was effective or not, because you do not know the population
+					parameters beforehand, otherwise you wouldn’t need sampling. Consider the
+					remaining options. (D) is the right answer. </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Incorrect. This statement is far too general to be
+					correct. It refers to all normal distributions, not just the sampling
+					distribution. Consider the remaining options. (D) is the right answer.
+				</feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback> Incorrect. (D) is the right answer. </feedback>
+			</response>
+			<response match="D" score="10">
+				<feedback> Correct. This is simply the explanation of what the sampling distribution of a
+					statistic is. None of the others are correct.  </feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback> Incorrect. (D) is the right answer. </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<multiple_choice id="prob4-9" select="single">
+		<body>
+			<p> Suppose that 20% of the residents in a certain state support an increase in the
+				property tax. An opinion poll will randomly sample 400 state residents and will then
+				compute the proportion in the sample that support a property tax increase. </p>
+			<p> How likely is the resulting sample proportion to be within .04 of the true
+				proportion (i.e., between .16 and .24)? </p>
+			<p> (<em style="italic"><em>Hint</em></em>: Use the sampling distribution of the sample
+				proportion in this case.) </p>
+		</body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> &#160;&#160; It is <em>certain</em> that the resulting sample
+				proportion will be within .04 of the true proportion. </choice>
+			<choice value="B"> &#160;&#160; There is roughly a 99.7% chance that the resulting
+				sample proportion will be within .04 of the true proportion. </choice>
+			<choice value="C"> &#160;&#160; There is roughly a 95% chance that the resulting
+				sample proportion will be within .04 of the true proportion. </choice>
+			<choice value="D"> &#160;&#160; There is roughly a 68% chance that the resulting
+				sample proportion will be within .04 of the true proportion. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Incorrect. You want to find <m:math display="inline">
+						<m:mrow>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mo>.</m:mo>
+							<m:mn>16</m:mn>
+							<m:mo>&lt;</m:mo>
+							<m:mover>
+								<m:mi>p</m:mi>
+								<m:mo stretchy="true">&circ;</m:mo>
+							</m:mover>
+							<m:mo>&lt;</m:mo>
+							<m:mo>.</m:mo>
+							<m:mn>24</m:mn>
+							<m:mo stretchy="false">)</m:mo>
+							<m:mo>=</m:mo>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mfrac>
+								<m:mrow>
+									<m:mo>.</m:mo>
+									<m:mn>16</m:mn>
+									<m:mo>&minus;</m:mo>
+									<m:mo>.</m:mo>
+									<m:mn>20</m:mn>
+								</m:mrow>
+								<m:msub>
+									<m:mi>&sigma;</m:mi>
+									<m:mover>
+										<m:mi>p</m:mi>
+										<m:mo stretchy="true">&circ;</m:mo>
+									</m:mover>
+								</m:msub>
+							</m:mfrac>
+							<m:mo>&lt;</m:mo>
+							<m:mi>Z</m:mi>
+							<m:mo>&lt;</m:mo>
+							<m:mfrac>
+								<m:mrow>
+									<m:mo>.</m:mo>
+									<m:mn>24</m:mn>
+									<m:mo>&minus;</m:mo>
+									<m:mo>.</m:mo>
+									<m:mn>20</m:mn>
+								</m:mrow>
+								<m:msub>
+									<m:mi>&sigma;</m:mi>
+									<m:mover>
+										<m:mi>p</m:mi>
+										<m:mo stretchy="true">&circ;</m:mo>
+									</m:mover>
+								</m:msub>
+							</m:mfrac>
+							<m:mo stretchy="false">)</m:mo>
+						</m:mrow>
+					</m:math>. Using what you know about the mean and standard deviation of a
+					sampling distribution, you should be able to find the given probability.
+					Consider the remaining options. (C) is the right answer. </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Incorrect. It seems that you have found the probability
+					that p-hat lies between .14 and .26 rather than the probability that p-hat lies
+					between .16 and .24. Consider the remaining options. (C) is the right answer.
+				</feedback>
+			</response>
+			<response match="C" score="10">
+				<feedback> Correct. Here we are given that in the population (residents of a certain state) the
+					proportion of those who support tax increase is p = .20. From this population we
+					draw a random sample of size n = 400, and we want to know the likelihood that
+					the proportion of those who support tax increase in the sample (p-hat) will be
+					between .16 and .24. As the hint suggests, in order to answer this question, we
+					need to consider the sampling distribution of p-hat, which is normal (mean = p =
+					.20, standard deviation = <m:math display="inline">
+						<m:mrow>
+							<m:msqrt>
+								<m:mfrac>
+									<m:mrow>
+										<m:mi>p</m:mi>
+										<m:mo stretchy="false">(</m:mo>
+										<m:mn>1</m:mn>
+										<m:mo>&minus;</m:mo>
+										<m:mi>p</m:mi>
+										<m:mo stretchy="false">)</m:mo>
+									</m:mrow>
+									<m:mi>n</m:mi>
+								</m:mfrac>
+							</m:msqrt>
+							<m:mo>=</m:mo>
+							<m:msqrt>
+								<m:mfrac>
+									<m:mrow>
+										<m:mo>.</m:mo>
+										<m:mn>20</m:mn>
+										<m:mo stretchy="false">(</m:mo>
+										<m:mn>1</m:mn>
+										<m:mo>&minus;</m:mo>
+										<m:mo>.</m:mo>
+										<m:mn>20</m:mn>
+										<m:mo stretchy="false">)</m:mo>
+									</m:mrow>
+									<m:mn>400</m:mn>
+								</m:mfrac>
+							</m:msqrt>
+							<m:mo>=</m:mo>
+							<m:mo>.</m:mo>
+							<m:mn>02</m:mn>
+						</m:mrow>
+					</m:math> . Given this information, to find the likelihood that the sample
+					proportion of p-hat is between .16 and .24, we can proceed in two ways. First,
+					we can notice that .16 is exactly 2 standard deviations below the mean and that
+					.24 is exactly 2 standard deviation above the mean, and so according to the
+					standard deviation rule, the likelihood is approximately 95%. Second, we can do
+					this more formally. The z-score of .16 is -2 and the z-score of .24 is +2.
+					Therefore, <m:math display="inline">
+						<m:mrow>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mo>.</m:mo>
+							<m:mn>16</m:mn>
+							<m:mo>&lt;</m:mo>
+							<m:mover>
+								<m:mi>p</m:mi>
+								<m:mo stretchy="true">&circ;</m:mo>
+							</m:mover>
+							<m:mo>&lt;</m:mo>
+							<m:mo>.</m:mo>
+							<m:mn>24</m:mn>
+							<m:mo stretchy="false">)</m:mo>
+							<m:mo>=</m:mo>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mo>&minus;</m:mo>
+							<m:mn>2</m:mn>
+							<m:mo>&lt;</m:mo>
+							<m:mi>Z</m:mi>
+							<m:mo>&lt;</m:mo>
+							<m:mn>2</m:mn>
+							<m:mo stretchy="false">)</m:mo>
+							<m:mo>=</m:mo>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mi>Z</m:mi>
+							<m:mo>&lt;</m:mo>
+							<m:mn>2</m:mn>
+							<m:mo stretchy="false">)</m:mo>
+							<m:mo>&minus;</m:mo>
+							<m:mi>P</m:mi>
+							<m:mo stretchy="false">(</m:mo>
+							<m:mi>Z</m:mi>
+							<m:mo>&lt;</m:mo>
+							<m:mo>&minus;</m:mo>
+							<m:mn>2</m:mn>
+							<m:mo stretchy="false">)</m:mo>
+						</m:mrow>
+					</m:math>. </feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback> Incorrect. It seems that you have computed the
+					probability that p-hat is between .18 and .22 rather than the probability that
+					p-hat is between .16 and .24. Consider the remaining options. (C) is the right
+					answer. </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+</assessment>

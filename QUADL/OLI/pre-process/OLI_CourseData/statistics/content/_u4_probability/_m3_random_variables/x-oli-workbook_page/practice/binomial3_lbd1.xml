@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="binomial3_lbd1">
+    <head>
+        <title>Binomial Random Variables</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give guided practice at solving problems involving
+            binomial random variables and to teach how the same probabilities can be found using a
+            statistical software package.</p>
+        <p>A multiple choice test has 10 questions, each with 5 possible answers, only one of which
+            is correct. A student who did not study is absolutely clueless, and therefore uses an
+            independent random guess to answer each of the 10 questions.</p>
+
+        <p><em style="bold">Let X be the number of questions the student gets right.</em></p>
+        <wb:inline idref="u3_m3_binomial3_lbd1_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="267">
+<param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6a.xml</param>
+<param name="problem_name">_u4_m3_lbdtutor6a</param>
+</flash>-->
+        <wb:inline idref="u3_m3_binomial3_lbd1_tutor2" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="313">
+<param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6b.xml</param>
+<param name="problem_name">_u4_m3_lbdtutor6b</param>
+</flash>-->
+        <wb:inline idref="u3_m3_binomial3_lbd1_tutor3" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="317">
+<param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6c.xml</param>
+<param name="problem_name">_u4_m3_lbdtutor6c</param>
+</flash>-->
+        <p>Applying the binomial formula is a good way for "first-timers" to understand the
+            mechanics of binomial probabilities. Once you have mastered the technique, however, it
+            may still be tedious to perform the necessary calculations.</p>
+        <p>For example, if I would ask you: What is the probability that the student will get at
+            most 4 questions right? Or in other words, if we wanted to find P(X ≤ 4), we would need
+            to add P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4).</p>
+        <p>For each of these 5 probabilities, we would need to use the formula, and then add the
+            probabilities. This is very tedious. When calculations involve large n values,
+            calculations become tedious as well. Luckily, any statistical software will do binomial
+            calculations for us.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To find probabilities of the type P(X = k) or P(X ≤ k) in R, we'll use the
+                        following function:</p>
+                    <code>To find the probability of the type P(X=k) use the following function: dbinom(k, n, p)
+                    </code>
+                       
+                    <code>To find the probability of the type P(X ≤ k), use the following function: pbinom(k, n, p) </code>
+                    <p>where</p>
+                    <ul>
+                        <li>k is the number of successes in trials</li>
+                        <li>n is the number of independent trials</li>
+                        <li>p is the probability of success in each trial</li>
+                    </ul>
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = 0.2), and verify that you get the same answer as you did in the
+                        last question, where you did it by hand.</p>
+                    <p>Now use R to find the probability that the student gets no more than 4
+                        questions right: P(X &#8804; 4).</p>
+                    <!--<wb:inline idref="_u4_m3_lbdtutor6dr"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="350">
+                    <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6dr.xml</param>
+                    <param name="problem_name">_u4_m3_lbdtutor6dexcel</param>
+                    </flash>-->
+                    <!--<wb:inline idref="_u4_m3_lbdtutor6er"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="480">
+                    <param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6er.xml</param>
+                    <param name="problem_name">_u4_m3_lbdtutor6eexcel</param>
+                    </flash>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To find probabilities of the type P(X = k), P(X &lt; k), P(X ≤ k), P(X > k), or P(X ≥ k) in StatCrunch, we'll use the following:</p>
+                        <ul>
+                            <li>Choose <code>Stat → Calculators → Binomial</code>.</li>
+                            <li>Enter the value for n in the textbox for n.</li>
+                            <li>Enter the value for p in the textbox for p.</li>
+                            <li>Choose the appropriate symbol from the pull-down menu for the probability you want to calculate (either =, >, &lt;, ≤, or ≥).</li>
+                            <li>Enter the value for k in the textbox.</li>
+                            <li>Press Compute.</li>
+                        </ul>
+                        <p>As practice, follow these steps to find P(X = 4) for our example (where n = 10 and p = 0.2), and verify that you get the same answer as you did in the last question, where you did it by hand. Now use StatCrunch to find the probability that the student gets no more than 4 questions right: P(X ≤ 4).</p>
+                    <!--<p>To find probabilities of the type P(X = k), P(X &lt; k), P(X ≤ k), P(X &gt;
+                        k), or P(X ≥ k) in StatCrunch, we'll use the following:</p>
+                    <ul>
+                        <li>Choose: Stat → Calculators → Binomial.</li>
+                        <li>Enter the value for n in the textbox for n.</li>
+                        <li>Enter the value for p in the textbox for p.</li>
+                        <li>Choose the appropriate symbol from the pull-down menu for the probabilty
+                            you want to calculate. (Note that ≤ is <em>&lt; =</em> and ≥ is <em>=
+                                &gt;</em>.)</li>
+                        <li>Enter the value for k in the textbox.</li>
+                        <li>Press Compute.</li>
+                    </ul>
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = 0.2), and verify that you get the same answer as you did in the
+                        last question, where you did it "by hand."</p>
+                    <p>Now use StatCrunch to find the probability that the student gets no more than
+                        4 questions right: P(X &#8804; 4).</p>-->
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Here is how we'll do this in Minitab:</p>
+                    <ol>
+                        <li>Choose Calc → Probability Distributions → Binomial</li>
+                        <li>If you would like to find probabilities of the type P(X = k) choose
+                            "Probability." If you would like to find probabilities of the type P(X ≤
+                            k) choose "Cumulative Probability."</li>
+                        <li>Enter the value of n next to "Number of trials" and the value of p next
+                            to "Event Probability."</li>
+                        <li>Choose "Input constant" and give the value of k.</li>
+                        <li>Click OK.</li>
+                    </ol>
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = 0.2), and verify that you get the same answer as you did in the
+                        last question, where you did it by hand.</p>
+                    <p>Now use Minitab to find the probability that the student gets no more than 4
+                        questions right: P(X &#8804; 4).</p>
+                    <!--<wb:inline idref="u4_m3_binomial3_lbd_tutor4"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="361">
+<param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6d.xml</param>
+<param name="problem_name">_u4_m3_lbdtutor6d</param>
+</flash>-->
+                    <!--<wb:inline idref="u4_m3_binomial3_lbd_tutor5"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="496">
+<param name="question_file">../../../webcontent/flash/_u4_m3_lbdtutor6e.xml</param>
+<param name="problem_name">_u4_m3_lbdtutor6e</param>
+</flash>-->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>To find probabilities of the type P(X = k) or P(X ≤ k) in Excel, we'll use
+                        the following function: <code style="inline">=BINOMDIST(k, n, p,
+                            cumulative)</code> where</p>
+                    <ul>
+                        <li>k is the number of successes in trials</li>
+                        <li>n is the number of independent trials</li>
+                        <li>p is the probability of success in each trial</li>
+                        <li>cumulative is a logical value that determines the form of the function.
+                            If cumulative is TRUE, then BINOMDIST returns the cumulative
+                            distribution function, which is the probability that there are at most k
+                            successes: P(X ≤ k). If FALSE, it returns the probability mass function,
+                            which is the probability that there are exactly k successes: P(X =
+                            k).</li>
+                    </ul>
+
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = .2), and verify that you get the same answer as you did in the
+                        last question, where you did it by hand.</p>
+                    <p>Now use Excel to find the probability that the student gets no more than 4
+                        questions right: P(X &#8804; 4).</p>
+
+                </alternative>
+              <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To find probabilities of the type P(X = k) or P(X ≤ k) in Excel, we'll use
+                        the following function: <code style="inline">=BINOMDIST(k, n, p,
+                            cumulative)</code> where</p>
+                    <ul>
+                        <li>k is the number of successes in trials</li>
+                        <li>n is the number of independent trials</li>
+                        <li>p is the probability of success in each trial</li>
+                        <li>cumulative is a logical value that determines the form of the function.
+                            If cumulative is TRUE, then BINOMDIST returns the cumulative
+                            distribution function, which is the probability that there are at most k
+                            successes: P(X ≤ k). If FALSE, it returns the probability mass function,
+                            which is the probability that there are exactly k successes: P(X =
+                            k).</li>
+                    </ul>
+
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = 0.2), and verify that you get the same answer as you did in the
+                        last question, where you did it by hand.</p>
+                    <p>Now use Excel to find the probability that the student gets no more than 4
+                        questions right, P(X &#8804; 4).</p>
+
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To find probabilities of the type P(X = k) or P(X ≤ k) using your TI graphing
+                        calculator, we'll use the following functions: </p>
+                    <p>To find P(X = k), use <code style="inline">binompdf(n, p, k)</code>. </p>
+                    <p>To find P(X ≤ k), use <code style="inline">binomcdf(n, p, k)</code>. </p>
+                    <p>where: </p>
+                    <ul>
+                        <li>n is the number of independent trials</li>
+                        <li>p is the probability of success in each trial</li>
+                        <li>k is the number of successes in trials</li>
+                    </ul>
+                    <p><code style="inline">binompdf</code> returns the binomial probability density
+                        function, which is the probability that there are exactly k successes: P(X =
+                        k). </p>
+                    <p><code style="inline">binomcdf</code> returns the binomial cumulative density
+                        function, which is the probability that there are at most k successes: P(X ≤
+                        k). </p>
+                    <p>To access these functions on your TI graphing calculator: </p>
+                    <ul>
+                        <li>Choose <code style="inline">DISTR (2ND/VARS)</code>. </li>
+                        <li>Choose <code style="inline">A:binompdf(</code>
+                        </li>
+                        <li>or choose <code style="inline">B:binomcdf(</code>
+                        </li>
+                        <li>Then enter the values for <code>trials</code>, <code>p</code>, and <code>x value</code>.</li>
+                        <li>Highlight <code>Paste</code> and press <code>ENTER</code>.</li>
+                        <li>You should see binompdf(n, p, x) with the values you entered.  Press <code>ENTER</code>.</li>
+                            
+                    </ul>
+                    <p>As practice, follow these steps to find P(X = 4) for our example (where n =
+                        10 and p = 0.2), and verify that you get the same answer as you did in the
+                        last question, where you did it by hand: <image style="inline"
+                            src="../../webcontent/image500.jpg"
+                            alt="Output: binompdf(10, 0.2, 4) =
+.088080384"/></p>
+                    <p>Now use your TI to find the probability that the student gets no more than 4
+                        questions right, P(X ≤ 4).</p>
+                </alternative>
+            </alternatives>
+        </pullout>
+
+        <wb:inline idref="u3_m3_binomial3_lbd1_tutor4" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Use R to find the probability that the student gets more than 2 questions
+                        right, P(X &gt; 2).</p>
+                    <p>Guidance: R will calculate for us only probabilities of the type P(X = k) or
+                        P(X &#8804; k). To find P(X &gt; 2) think about the complement of this
+                        event.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Use StatCrunch to find the probability that the student gets more than 2
+                        questions right, P(X &gt; 2).</p>
+
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Use Minitab to find the probability that the student gets more than 2
+                        questions right, P(X &gt; 2).</p>
+                    <p>Guidance: Minitab will calculate for us only probabilities of the type P(X =
+                        k) or P(X &#8804; k). To find P(X &gt; 2) think about the complement of this
+                        event.</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>Use Excel to find the probability that the student gets more than 2 questions
+                        right, P(X &gt; 2).</p>
+                    <p>Guidance: Excel will calculate for us only probabilities of the type P(X = k)
+                        or P(X &#8804; k). To find P(X &gt; 2) think about the complement of this
+                        event.</p>
+                </alternative>
+             <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Use Excel to find the probability that the student gets more than 2 questions
+                        right, P(X &gt; 2).</p>
+                    <p>Guidance: Excel will calculate for us only probabilities of the type P(X = k)
+                        or P(X &#8804; k). To find P(X &gt; 2) think about the complement of this
+                        event.</p>
+                </alternative>-->  
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Use your TI to find the probability that the student gets more than 2
+                        questions right, P(X &gt; 2). </p>
+                    <p> Guidance: Your TI will only calculate probabilities of the type P(X = k) or
+                        P(X ≤ k). To find P(X &gt; 2) think about the complement of this event. </p>
+                </alternative>
+            </alternatives>
+        </pullout>
+
+        <wb:inline idref="u3_m3_binomial3_lbd1_tutor5" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+
+
+    </body>
+</workbook_page>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean9_tutor2">
+    <title>Tutor</title>
+    <question id="q1">
+        <body><p>Which of the following is the proper output to use for testing whether or not the
+                manufacturing process is working correctly, based on the study?</p>
+            <image src="../webcontent/image500.png" alt="One-sample T A"/>
+            <image src="../webcontent/image501.png" alt="One-sample Z B"/>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">A</choice>
+            <choice value="B">B</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In this case, sigma (the population standard deviation) is
+                    unknown; the only standard deviation available was the sample standard deviation
+                    (it says
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103523-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103523-0500" content="‘"?>computed
+                    for the
+                    sample<?oxy_insert_start author="mmyers" timestamp="20101128T103527-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103526-0500" content="’"?>),
+                    so the test could not be a z-test. Then, even though the sample size is
+                    relatively small (only five boards tested), the t-test is
+                    justified<?oxy_insert_start author="mmyers" timestamp="20101128T103536-0500"?>,<?oxy_insert_end?>
+                    because the population is known to be
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103538-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103538-0500" content="N"?>ormal.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. In this case, notice that sigma (the population
+                    standard deviation) is unknown; the only standard deviation available was the
+                    sample standard deviation (it says
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103611-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103610-0500" content="‘"?>computed
+                    for the
+                    sample<?oxy_insert_start author="mmyers" timestamp="20101128T103614-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103614-0500" content="’"?>),
+                    so the test could not be a z-test. So the only possibility
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103633-0500"?>is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103631-0500" content="must be"?>
+                    a t-test. In this case, the t-test is justified even though the sample size is
+                    relatively small (only five boards tested), because the population is known to
+                    be
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103641-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103641-0500" content="N"?>ormal.</feedback>
+            </response>
+        </part>
+    </question>
+ </assessment>

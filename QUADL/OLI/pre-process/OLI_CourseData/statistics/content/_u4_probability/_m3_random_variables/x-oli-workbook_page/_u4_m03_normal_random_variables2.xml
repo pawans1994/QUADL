@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_normal_random_variables2">
+    <head>
+        <title>Introduction to Normal Random Variables(2 of 3)</title>
+        <objref idref="find_probabilities_of_normal_distribution"/>
+    </head>
+    <body>
+
+        <section>
+            <title>The Standard Deviation Rule for Normal Random Variables</title>
+            <body>
+                <p>We began to get a feel for normal distributions in the
+                    E<?oxy_insert_start author="mmyers" timestamp="20101122T093139-0500"?>xploratory
+                    <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101122T093146-0500"?>ata <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101122T093149-0500"?>nalysis<?oxy_insert_end?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093307-0500"?>(EDA)
+                    <?oxy_insert_end?>section, when we introduced the Standard Deviation Rule (or
+                    the
+                        <em>68<?oxy_delete author="mmyers" timestamp="20101122T093209-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101122T093211-0500" content=" "?>95<?oxy_delete author="mmyers" timestamp="20101122T093213-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101122T093215-0500" content=" "?>99.7</em>
+                    rule) for how values in a normally-shaped <em>sample data set</em> behave
+                    relative to their mean (<m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>) and standard deviation (s). This is the same rule that dictates how
+                    the distribution of a normal <em>random variable</em> behaves relative to its
+                    mean <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> and standard deviation <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math>. Now we use probability language and notation to
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093251-0500"?>describe<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T093248-0500" content="tell about"?>
+                    the random variable's behavior. For example, in the EDA
+                    section<?oxy_insert_start author="mmyers" timestamp="20101122T093313-0500"?>,<?oxy_insert_end?>
+                    we would have said "68% of pregnancies in our data set fall within 1 standard
+                    deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093320-0500"?>(<?oxy_insert_end?>s<?oxy_insert_start author="mmyers" timestamp="20101122T093321-0500"?>)<?oxy_insert_end?>
+                    of their mean
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T093330-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T093332-0500"?>)<?oxy_insert_end?>."
+                    The analogous statement now would be "If X, the length of a randomly chosen
+                    pregnancy, is normal with mean
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T093350-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T093351-0500"?>)<?oxy_insert_end?>
+                    and standard deviation
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T093354-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T093357-0500"?>)<?oxy_insert_end?>,
+                    then <m:math overflow="scroll">
+                        <m:mn>0</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>6</m:mn>
+                        <m:mn>8</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mi>P</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>)</m:mo>
+                    </m:math>."</p>
+                <p>In general, if X is a normal random variable, then the probability is</p>
+                <p>68% that X falls within 1 <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> of <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> , that is, in the interval <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                        <m:mo>±</m:mo>
+                        <m:mi>σ</m:mi>
+                    </m:math>
+                </p>
+                <p>95% that X falls within 2 <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> of <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> , that is, in the interval <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mi>σ</m:mi>
+                    </m:math>
+                </p>
+                <p>99.7% that X falls within 3 <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> of <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> , that is, in the interval<m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                        <m:mo>±</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mi>σ</m:mi>
+                    </m:math>
+                </p>
+                <p>Using probability notation, we may
+                    <?oxy_comment_start author="mmyers" timestamp="20101122T093720-0500" comment="Consider replacing mu and sigma with symbols in graphic below"?>write<?oxy_comment_end?></p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mn>0</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>6</m:mn>
+                        <m:mn>8</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mi>P</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mi>σ</m:mi>
+                        <m:mo>)</m:mo>
+                    </m:math>
+                </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mn>0</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>9</m:mn>
+                        <m:mn>5</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mi>P</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mi>σ</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mi>σ</m:mi>
+                        <m:mo>)</m:mo>
+                    </m:math>
+                </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mn>0</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>9</m:mn>
+                        <m:mn>9</m:mn>
+                        <m:mn>7</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mi>P</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>-</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mi>σ</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>X</m:mi>
+                        <m:mo>&lt;</m:mo>
+                        <m:mi>μ</m:mi>
+                        <m:mo>+</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mi>σ</m:mi>
+                        <m:mo>)</m:mo>
+                    </m:math>
+                </p>
+                <image style="block" src="../webcontent/image121.gif"
+                    alt="A normal bell curve with some ranges marked.
+At the center (peak) of the bell curve is &mu;. The area under the bell curve between &mu;-&sigma; &lt; X
+&lt; &mu;+&sigma; compromises of 0.68 of the total area under the bell curve (which is 1). The area under
+the bell curve between &mu;-2&sigma; &lt; X &lt; &mu;+2&sigma; is 0.95 of the total area under the curve.
+Capturing even more area under the bell curve is the range of &mu;-3&sigma; &lt; X &lt; &mu;+3&sigma;,
+which is 0.997 of the total area under the curve."/>
+                <!-- <p>Ross, is there any way to replace mu and sigma with the real symbols</p>-->
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Notice that the information from the rule can be interpreted from the perspective
+                    of the tails of the normal curve: since .68 is the probability of being within
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093937-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T093936-0500" content="one"?>
+                    standard deviation of the mean, (1 - .68) / 2 = .16 is the probability of being
+                    further than
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093927-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T093926-0500" content="one"?>
+                    standard deviation below the mean (or further than
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T093945-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T093943-0500" content="one"?>
+                    standard deviation above the mean). Likewise, (1 - .95) / 2 = .025 is the
+                    probability of being more than 2 standard deviations below (or above) the mean;
+                    (1 - .997) / 2 = .0015 is the probability of being more than 3 standard
+                    deviations below
+                    (<?oxy_insert_start author="mmyers" timestamp="20101122T093901-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T093859-0500" content="also"?>
+                    above) the mean. The three figures below illustrate this.</p>
+                <!--<p>Ross, It would be nice to have the following three figures side by side. not crucial.</p>-->
+                <image style="block" src="../webcontent/image122.gif"
+                    alt="A normal bell curve, in which &mu;, &mu;-&sigma;,
+and &mu;+&sigma; have been marked on the horizontal axis. The probability of being within one standard
+deviation of &mu;, or between &mu;-&sigma; and &mu;+&sigma;, is .68 . The probability of being below
+one standard deviation from the mean is the area under the bell curve to the left of &mu;-&sigma;
+which is .16 . Likewise, the probability of being further than one standard deviation above the mean is
+the area under the bell curve to the right of &mu;+&sigma;, which is .16 ."/>
+                <image style="block" src="../webcontent/image123.gif"
+                    alt="A normal bell curve. The probability of being within
+two standard deviation of &mu; is .95 . The probability of being further than two standard deviations below
+the mean is the area under the bell curve to the left of &mu;-2&sigma; which is .025 . The probability of
+being further than two standard deviation above the mean is the area under the bell curve to the right of
+&mu;+2&sigma;, which is .025 ."/>
+                <image style="block" src="../webcontent/image124.gif"
+                    alt="A normal bell curve. The probability of being within
+three standard deviation of &mu; is .997 . The probability of being below three standard deviations from
+the mean is the area under the bell curve to the left of &mu;-3&sigma; which is .0015 . The probability of
+being further than three standard deviation above the mean is the area under the bell curve to the right of
+&mu;+3&sigma;, which is .0015 ."/>
+                <example>
+
+                    <p>Suppose that foot length of a randomly chosen adult male is a normal random
+                        variable with mean <m:math overflow="scroll">
+                            <m:mi>μ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>1</m:mn>
+                        </m:math> and standard deviation <m:math overflow="scroll">
+                            <m:mi>σ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                        </m:math>. Then the Standard Deviation Rule lets us sketch the probability
+                        distribution of X as follows:</p>
+                    <image style="block" src="../webcontent/image127.gif"
+                        alt="A probability distribution curve in which the
+horizontal axis is labeled &quot;X - Foot Length.&quot; The curve is a normal bell curve. The mean, &mu;,
+is at X=11. The first standard deviation is at X=9.5 and X=12.5, with probability of .68 . The second
+standard deviation is X=8 and X=14, with probability of .95 . The third standard deviation is at X=6.5
+and X=15.5, with probability of .997 ."/>
+                    <p><em>(a)</em> What is the probability that a randomly chosen adult male will
+                        have a foot length between 8 and 14 inches?
+                        .95<?oxy_insert_start author="mmyers" timestamp="20101122T094133-0500"?>,<?oxy_insert_end?>
+                        or
+                        95%<?oxy_insert_start author="mmyers" timestamp="20101122T094205-0500"?>.<?oxy_insert_end?></p>
+                    <p><em>(b)</em> An adult male is almost guaranteed (.997 probability) to have a
+                        foot length between what two values? 6.5 and 15.5 inches.</p>
+                    <p><em>(c)</em> The probability is only 2.5% that an adult male will have a foot
+                        length greater than how many inches?
+                        14<?oxy_insert_start author="mmyers" timestamp="20101122T094202-0500"?>.<?oxy_insert_end?></p>
+                    <image style="block" src="../webcontent/image128.gif"
+                        alt="The probability distribution curve for foot lengths.
+The 2nd standard deviation boundaries from the mean have been marked at X=8 and X=14 . The probability of being
+within 2 standard deviations of the mean is .95, and the probability of being above 2 standard deviations
+(X &gt; 14) is .025 . The probability of being below the 2nd standard deviation (X &lt; 8) is also .025 ."/>
+                    <p>Now you should try a few. (Use the figure that is just before <em>part
+                            (a)</em> to help you.)</p>
+                    <wb:inline idref="u3_m3_normal2_tutor1" purpose="learnbydoing"/>
+                    <!--<flash src="../../webcontent/flash/_u4_m3_inlinetutor3.swf" width="500" height="275" purpose="learnbydoing">
+<param name="problem_name">_u4_m3_inlinetutor3</param>
+</flash>-->
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Notice that there are two types of problems we may want to solve: those like
+                        <em>(a)</em>,
+                    <em>(d)</em><?oxy_delete author="mmyers" timestamp="20101122T095208-0500" content=","?>
+                    and
+                    <em>(e)</em><?oxy_insert_start author="mmyers" timestamp="20101122T095212-0500"?>,
+                    in
+                    which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T095215-0500" content=" where"?>
+                    a particular interval of values of a normal random variable is given, and we are
+                    asked to find a probability, and those like <em>(b)</em>,
+                    <em>(c)</em><?oxy_delete author="mmyers" timestamp="20101122T095226-0500" content=","?>
+                    and
+                    <em>(f)</em><?oxy_insert_start author="mmyers" timestamp="20101122T095229-0500"?>,
+                    in
+                    which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T095234-0500" content=" where"?>
+                    a probability is given and we are asked to identify
+                    wh<?oxy_insert_start author="mmyers" timestamp="20101122T095248-0500"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T095246-0500" content="ere"?>
+                    the normal random variable's values would be.</p>
+                <!--<activity idref="_u4_m3_dig12" purpose="didigetthis"/>-->
+                <wb:inline idref="u3_m3_normal2_tutor2" purpose="didigetthis"/>
+                <activity idref="_u4_m3_lbd7" purpose="learnbydoing"/>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

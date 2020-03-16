@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_rules3">
+<head>
+<title>Rules for Means and Variances of Random Variables (3 of 3)</title>
+    <objref idref="apply_rules_means_variances"/>
+</head>
+<body>
+    
+<p>Besides taking a linear transformation of a random variable, another way to form a new random variable is to combine two or more existing random variables in some way, such as finding the sum of two random variables. Again, we'll start with a motivating example.</p>
+<example><title>Xavier's and Yves' Production Lines</title>
+
+<p>Recall previous examples for the number X of defective parts coming out of Xavier's production line, and Y from Yves' line. Consider the total number of defective parts coming out of both production lines together. This is the <em>new random variable X + Y</em>. Since we know the means and standard deviations of X and of Y, is there a simple, quick way to figure out the mean and standard deviation of X + Y?</p>
+</example>
+<p>In general, the mean of the sum of random variables is the sum of the means. As long as the random variables are independent, the variance of the sum equals the sum of the variances. The formal rules are as follows:</p>
+<section>
+<title>Rules for X + Y
+                (<?oxy_insert_start author="mmyers" timestamp="20101201T105015-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101201T105015-0500" content="s"?>um
+                of
+                <?oxy_insert_start author="mmyers" timestamp="20101201T105018-0500"?>T<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101201T105018-0500" content="t"?>wo
+                <?oxy_insert_start author="mmyers" timestamp="20101201T105020-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101201T105020-0500" content="r"?>andom
+                <?oxy_insert_start author="mmyers" timestamp="20101201T105023-0500"?>V<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101201T105022-0500" content="v"?>ariables)</title>
+<body>
+<p>Let X and Y be random variables with means <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>Y</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math> and with variances <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                    </m:math>and <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>Y</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101121T182719-0500"?>.
+                    <?oxy_insert_end?>Then the new random variable X + Y has
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T182753-0500"?>a
+                    <?oxy_insert_end?>mean<?oxy_insert_start author="mmyers" timestamp="20101121T182755-0500"?>
+                    of<?oxy_insert_end?></p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>+</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>
+</p>
+<p>and as long as the random variables are independent, the variance of X + Y
+                    is<?oxy_insert_start author="mmyers" timestamp="20101121T182812-0500"?>:<?oxy_insert_end?></p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>+</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+</m:math>
+</p>
+<p>What these two rules tell us is that if we take two random variables and add them, then the new
+                    mean is the sum of the original two means, and the new
+                    variance<?oxy_insert_start author="mmyers" timestamp="20101121T182838-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T182837-0500" content="---"?>not
+                    standard
+                    deviation<?oxy_insert_start author="mmyers" timestamp="20101121T182843-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T182842-0500" content="---"?>is
+                    the sum of the original two variances, as long as those variables are
+                    independent.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>We've talked a lot about independent and dependent <em>events</em>, but not about what it means for two <em>random variables</em> to be independent or dependent. Basically, the same reasoning extends from events to random variables.  Two random variables will be independent if knowing that one random variable takes any of its possible values has no effect on the probability that the other random variable takes a certain value.</p>
+<p>While in the case of <em>events</em> we formalized the definition of independence using conditional probability, doing the same for random variables is beyond the scope of this course. Therefore, whenever we want to use the rule:</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>+</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+</m:math>, we will assume that X and Y are independent, or it will be clear from the context of the problem.</p>
+<example><title>Combined Mean and Standard Deviation</title>
+
+<p>We want to find the mean and standard deviation of X + Y, the total number of defective products
+                        coming out of both production
+                        lines<?oxy_insert_start author="mmyers" timestamp="20101121T183109-0500"?>
+                        in an hour<?oxy_insert_end?>. In the previous
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T183035-0500"?>section,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T183033-0500" content="part"?>
+                        we found that:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>21</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>7</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>85</m:mn>
+</m:math>
+</p>
+<p> Using the
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T183127-0500"?>r<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T183127-0500" content="R"?>ules
+                        for X + Y, we find that:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>+</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:mo>+</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>7</m:mn>
+<m:mo>=</m:mo>
+<m:mn>4</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>+</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:msup>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>+</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mn>5</m:mn>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>9</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>9</m:mn>
+</m:mrow>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>4</m:mn>
+<m:mn>8</m:mn>
+</m:math>
+</p>
+<p>We can
+                        conclude<?oxy_insert_start author="mmyers" timestamp="20101121T183136-0500"?>,<?oxy_insert_end?>
+                        then<?oxy_insert_start author="mmyers" timestamp="20101121T183138-0500"?>,<?oxy_insert_end?>
+                        that the total number of defective parts coming out of both production lines
+                        in an hour is on average 4.5, and typically the combined number of defective
+                        products is about 1.48 away from that average.</p>
+</example>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>It is important to remember that while variances are additive, standard deviations are not:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>+</m:mo>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>1</m:mn>
+<m:mo>+</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:mn>5</m:mn>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>0</m:mn>
+<m:mn>6</m:mn>
+<m:mo>≠</m:mo>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+<m:mo>+</m:mo>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>4</m:mn>
+<m:mn>8</m:mn>
+</m:math>
+</p>
+</body>
+</section>
+<!--<activity idref="_u4_m3_dig7" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_rules3_tutor1" purpose="didigetthis"/>
+    <section>
+        <title>Checkpoint</title>
+        <body>
+            <p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>
+            <p>
+                
+                    
+            </p>
+            <activity idref="_u4_m3_checkpoint2_pool" purpose="checkpoint"/>
+        </body>
+    </section>
+    
+</body>
+</workbook_page>

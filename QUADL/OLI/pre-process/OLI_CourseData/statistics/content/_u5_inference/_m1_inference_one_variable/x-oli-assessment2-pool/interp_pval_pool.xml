@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_pval_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_pval">
+        <!--LO:pvalueinterp -->
+        <body>A graduate student designs a research study. She hopes to show that the results of her
+            experiment are statistically significant. What type of p-value indicates statistically
+            significant results?</body>
+        <input shuffle="false">
+            <choice value="A">A large p-value</choice>
+            <choice value="B">A small p-value</choice>
+            <choice value="C">The magnitude of a p-value has no impact on statistical
+                significance.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A large p-value means that the results are not statistically
+                    significant. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. A small p-value indicates that the results are statistically
+                    significant.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A small p-value indicates that the results are statistically
+                    significant.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_interp_pval">
+        <!--LO:pvalueinterp -->
+        <body>
+            <p>A tire manufacturer has a 60,000-mile warranty for tread life. The manufacturer
+                considers the overall tire quality to be acceptable if less than 8% are worn out at
+                60,000 miles.</p>
+            <p>The manufacturer tests 250 tires that have been used for 60,000 miles. They find that
+                15 of them are worn out. With this data, we test the following hypotheses at the 5%
+                significance level.</p>
+            <p> H<sub>0</sub>: The proportion of tires that are worn out after 60,000 miles is equal
+                to 0.08.</p>
+            <p> H<sub>a</sub>: The proportion of tires that are worn out after 60,000 miles is less
+                than 0.08.</p>
+            <p>The p-value is 0.15. Which conclusion is correct?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">Accept H<sub>0</sub>. </choice>
+            <choice value="B">Fail to reject H<sub>0</sub>. </choice>
+            <choice value="C">Reject H<sub>0</sub>. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You are correct that we cannot reject H<sub>0</sub> since the
+                    p-value is greater than the significance level (0.15 &gt; 0.05), but this does
+                    not mean that H<sub>0</sub> is true (i.e., that we can accept
+                    H<sub>0</sub>).</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The p-value is greater than the significance level (0.15 &gt;
+                    0.05), so we fail to reject H<sub>0</sub>. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The p-value is greater than the significance level (0.15 &gt;
+                    0.05), so we cannot reject H<sub>0</sub>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q3_interp_pval">
+        <!--LO:Logic of hypothesis testing. -->
+        <body>
+            <p>A researcher wants to find out if there is a significant difference between men and
+                women in the average number of tattoos that a person has. After doing the
+                statistical analysis, the researcher finds that the p-value is 0.003. If the chosen
+                significance level is 0.05 (5%), which of the following statements is the best
+                interpretation of this p-value?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">The results are statistically significant.</choice>
+            <choice value="B">The results are not statistically significant. </choice>
+            <choice value="C">The magnitude of a p-value has no impact on statistical significance.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The p-value for the experiment, 0.003, is smaller than the
+                    significance level. A small p-value indicates that the results are statistically
+                    significant.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The p-value for the experiment, 0.003, is smaller than the
+                    significance level. A small p-value indicates that the results are statistically
+                    significant. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The p-value does have an impact on statistical significant. The
+                    p-value for the experiment 0.003, is smaller than the significance level. A
+                    small p-value indicates that the results are statistically significant.
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q4_interp_pval">
+        <!--LO:Logic of hypothesis testing. -->
+        <body>
+            <p>A government health official is interested in whether there has been a statistically
+                significant decrease in teen smoking rates. In 2013, 8.4 percent of 12th graders had
+                used tobacco in the past 30 days. With this data, we test the following hypotheses
+                at the 5% significance level.</p>
+            <p>The health official surveys 200 randomly selected 12th graders and finds that 14 of
+                them have used tobacco in the past 30 days.</p>
+            <p> H<sub>0</sub>: The percentage of 12th graders who have smoked in the past 30 days is
+                equal to 8.4%.</p>
+            <p> H<sub>a</sub>: The percentage of 12th graders who have smoked in the past 30 days is
+                greater than 8.4%.</p>
+            <p>The p-value is 0.09. Which conclusion is correct?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">Accept H<sub>0</sub>. </choice>
+            <choice value="B">Fail to reject H<sub>0</sub>. </choice>
+            <choice value="C">Reject H<sub>0</sub>. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Not quite right. You are correct that we cannot reject H<sub>0</sub>
+                    because the p-value is greater than the significance level (0.09 &gt; 0.05). But
+                    this does not mean that H<sub>0</sub> is true (i.e., that we can “accept”
+                        H<sub>0</sub>).</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The p-value is greater than the significance level (0.09 &gt;
+                    0.05), so we “fail to reject” H<sub>0</sub>. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The p-value is greater than the significance level (0.09 &gt;
+                    0.05), so we cannot reject H<sub>0</sub>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

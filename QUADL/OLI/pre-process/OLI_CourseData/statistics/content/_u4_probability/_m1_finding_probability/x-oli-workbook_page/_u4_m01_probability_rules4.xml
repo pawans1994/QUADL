@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules4">
+    <head>
+        <title>Probability Rules (4 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+      
+        <theorem type="rule">
+            <title>Rule 4: The Addition Rule for Disjoint Events</title>
+            <statement>
+                <p>
+                    <em>The Addition Rule for Disjoint Events: If A and B
+                        are<?oxy_delete author="mmyers" timestamp="20101108T130028-0500" content=" two"?>
+                        disjoint events, then P(A or B) = P(A) + P(B).</em>
+                </p>
+            </statement>
+        </theorem>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>When dealing with probabilities, the word "or" will always be associated with the
+                    operation of addition; hence the name of this rule, "The Addition Rule."</p>
+            </body>
+        </section>
+        <example>
+
+            <p>Recall the blood type example:</p>
+            <image style="block" src="../webcontent/image011.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+            <p>Here is some additional information:</p>
+            <p>* A person with type <em>A</em> can donate blood to a person with type <em>A</em> or
+                    <em>AB.</em>
+            </p>
+            <p>* A person with type <em>B</em> can donate blood to a person with type <em>B</em> or
+                    <em>AB.</em>
+            </p>
+            <p>* A person with type <em>AB</em> can donate blood to a person with type <em>AB</em>
+                only.</p>
+            <p>* A person with type <em>O</em> blood can donate to anyone.</p>
+            <p>What is the probability that a randomly chosen person is a potential donor for a
+                person with blood type A? </p>
+            <p>From the information given, we know that being a potential donor for a person with
+                blood type A means having
+                <?oxy_delete author="mmyers" timestamp="20101108T125946-0500" content="either "?>blood
+                type A or O. We therefore need to find P(A or O). Since
+                the<?oxy_delete author="mmyers" timestamp="20101108T130052-0500" content=" two"?>
+                events A and O are disjoint, we can use the addition rule for disjoint events to
+                get: P(A or O)<?oxy_insert_start author="mmyers" timestamp="20101108T130103-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T130104-0500"?>
+                <?oxy_insert_end?>P(A)<?oxy_insert_start author="mmyers" timestamp="20101108T130106-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T130106-0500"?>
+                <?oxy_insert_end?>P(O)<?oxy_insert_start author="mmyers" timestamp="20101108T130107-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T130109-0500"?>
+                <?oxy_insert_end?>.42<?oxy_insert_start author="mmyers" timestamp="20101108T130111-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T130112-0500"?>
+                <?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T130113-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T130114-0500"?>
+                <?oxy_insert_end?>.86<?oxy_insert_start author="mmyers" timestamp="20101108T130117-0500"?>.<?oxy_insert_end?>
+                It is easy to see why adding the probability actually makes sense. If 42% of the
+                population has blood type A and 44% of the population has blood type O, then 42%<?oxy_insert_start author="mmyers" timestamp="20101108T130126-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T130127-0500"?>
+                <?oxy_insert_end?>44%<?oxy_insert_start author="mmyers" timestamp="20101108T130128-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T130129-0500"?>
+                <?oxy_insert_end?>86% of the population has either blood type A or O, and thus are
+                potential donors to a person with blood type A. This reasoning about why the
+                addition rule makes sense can be visualized using the pie<?oxy_insert_start author="mmyers" timestamp="20101108T130155-0500"?>
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T130154-0500" content="-"?>chart
+                below:</p>
+            <image style="block" src="../webcontent/image017a.gif" alt="A pie chart titled
+&quot;Blood Types.&quot; Type A takes up 42% of the pie chart, and type O takes up 44%. Together,
+as A or O, they take up 86% of the pie chart."/>
+        </example>
+        <wb:inline idref="u3_m1_rules4_tutor5" purpose="didigetthis"/>
+        
+        <!--<activity idref="_u4_m1_lbd5" purpose="learnbydoing"/>-->
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>So far we have introduced the
+                    addition<?oxy_delete author="mmyers" timestamp="20101108T130227-0500" content="al"?>
+                    rule for the special case in which the events
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T130316-0500"?>being
+                    considered <?oxy_insert_end?>are disjoint. The purpose of this activity is to
+                    make you aware of the danger in wrongly using the addition rule for disjoint
+                    events in cases where the events are actually not disjoint. Consider the blood
+                    type example
+                    again<?oxy_insert_start author="mmyers" timestamp="20101108T130415-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T130414-0500" content=":"?></p>
+                <p>Recall the blood type example:</p>
+                <image src="../webcontent/lbd004.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+                <p>with the following additional information:</p>
+                <p>A person with type <em>A</em> can donate blood to a person with type <em>A</em>
+                    or <em>AB</em>.</p>
+                <p>A person with type <em>B</em> can donate blood to a person with type <em>B</em>
+                    or <em>AB</em>.</p>
+                <p>A person with type <em>AB</em> can donate blood to a person with type <em>AB</em>
+                    only.</p>
+                <p>A person with type <em>O</em> blood can donate to anyone.</p>
+
+                <p>Suppose that there are two patients who are each in need of a blood donation.
+                    Patient 1 has blood type A and patient 2 has blood type B. Consider the
+                    following<?oxy_delete author="mmyers" timestamp="20101108T130500-0500" content=" two"?>
+                    events:</p>
+                <p>D1<?oxy_insert_start author="mmyers" timestamp="20101108T130517-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T130514-0500" content=" - "?>a
+                    randomly chosen person
+                    <?oxy_delete author="mmyers" timestamp="20101108T130754-0500" content="is a potential"?><?oxy_insert_start author="mmyers" timestamp="20101108T130754-0500"?>can
+                    be a<?oxy_insert_end?> donor for patient 1.</p>
+                <p>D2<?oxy_insert_start author="mmyers" timestamp="20101108T130525-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T130519-0500" content=" - "?>a
+                    randomly chosen person
+                    <?oxy_delete author="mmyers" timestamp="20101108T130818-0500" content="is a potential"?><?oxy_insert_start author="mmyers" timestamp="20101108T130822-0500"?>can
+                    be a<?oxy_insert_end?> donor for patient 2.</p>
+                <p>We are interested in finding the probability that a randomly chosen person
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T131007-0500"?>can be a
+                    donor
+                    for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T131016-0500" content="is a potential donor to"?>
+                    patient 1 or patient 2. In other words, we are interested in finding P(D1 or
+                    D2).</p>
+                <wb:inline idref="u3_m1_rules4_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m1_rules4_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m1_rules4_tutor3" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <p>As we mentioned earlier, later on in this module we will establish a more general
+            Addition Rule that applies even when two events are not disjoint. </p>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>The
+                    <?oxy_delete author="mmyers" timestamp="20101108T134220-0500" content="general "?>Addition
+                    Rule <?oxy_insert_start author="mmyers" timestamp="20101108T134225-0500"?>for
+                    Disjoint Events <?oxy_insert_end?>can naturally be extended to more than
+                    <?oxy_insert_start author="mmyers" timestamp="20101130T152127-0500"?>two<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101130T152126-0500" content="2"?>
+                    disjoint events. Let's take
+                    <?oxy_insert_start author="mmyers" timestamp="20101130T152136-0500"?>three<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101130T152136-0500" content="3"?>,
+                    for example. If A,
+                    B<?oxy_delete author="mmyers" timestamp="20101108T134251-0500" content=","?> and
+                    C are three disjoint
+                    events<?oxy_insert_start author="mmyers" timestamp="20101108T134319-0500"?>,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T134320-0500" content=":"?></p>
+                <image style="block" src="../webcontent/image018.gif" alt="A Venn Diagram showing 3 disjoint
+events. As usual there is a gray box showing the entire sample space. Inside this gray box are three completely
+separate circles. The first circle is for the occurrences in A, the second for occurrences in B, and the third
+for occurrences in C."/>
+                <p>th<?oxy_insert_start author="mmyers" timestamp="20101108T134325-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T134325-0500" content="a"?>n
+                    P(A or B or C) = P(A) + P(B) + P(C). The rule is the same for
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T134336-0500"?>any number
+                    of<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T134340-0500" content="4 or more"?>
+                    disjoint events.</p>
+            </body>
+        </section>
+        <!--<activity idref="_u4_m1_dig7" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m1_rules4_tutor4" purpose="learnbydoing"/>
+        <p>We are now done with the first version of the Addition Rule (the version restricted to
+            disjoint events) and
+            <?oxy_insert_start author="mmyers" timestamp="20101108T143228-0500"?>we are
+            <?oxy_insert_end?>ready to move on to rule 5. As mentioned before, the general version
+            of the Addition Rule will be presented after rule 5.</p>
+    </body>
+</workbook_page>

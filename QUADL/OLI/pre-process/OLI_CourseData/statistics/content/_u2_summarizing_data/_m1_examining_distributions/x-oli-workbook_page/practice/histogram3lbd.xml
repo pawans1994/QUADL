@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<workbook_page xmlns:bib="http://bibtexml.sf.net/" xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:theme="http://oli.web.cmu.edu/presentation/" xmlns:wb="http://oli.web.cmu.edu/activity/workbook/" id="histogram3lbd">
+	<head>
+		<title>Histogram</title>
+	</head>
+	<body>
+		<p id="bba2bff08518409da7b35fd3a74ceb40">We will use the Best Actor Oscar winners (1970–2013) to learn how to create a histogram using a statistics package and practice what we&apos;ve learned about describing the histogram.</p>
+		<p id="beb2b882b5c4435e84555abf926b2a59">
+			Click
+			<activity_link idref="bestactordataset_2013" target="new" purpose="checkpoint">here</activity_link>
+			to see the entire dataset.
+		</p>
+		<pullout>
+			<title>Title</title>
+			<alternatives group="statistics.package">
+				<default />
+				<alternative value="r">
+					<title>R Instructions</title>
+					<p id="be75afcbbc6e4b2ea42599044c15f11f">
+						To open R with the dataset preloaded, right-click
+						<link href="../../../webcontent/r/actor_2013.RData" target="self" internal="false">here</link>
+						and choose &quot;Save Target As&quot; to download the file to your computer. Then find the downloaded file and double-click it to open it in R.
+					</p>
+					<p id="b2c175d10a5745d89d37feabe5300901">
+						The data have been loaded into the data frame
+						<code>actor_age</code>
+						. Enter the command
+						<code>actor_age</code>
+						to see the data. The only variable (column title) in the data frame
+						<code>actor_age</code>
+						is
+						<code>Age</code>
+						.
+					</p>
+					<p id="bfcb7162b57d4e1cb551d85a980ae518">To create a histogram of the actors’ age data we can use the following code:</p>
+					<p id="ee3890cb3b4c4a528812e0f88ce8f1ca">
+						<code>hist(actor_age$Age)</code>
+					</p>
+					<p id="af15af28d66f4ce1badc8534692a1790">
+						Notice the default settings in R are to use the variable name, in this case
+						<code>actor_age$Age</code>
+						in the title and x-axis label. In addition, the default y-axis is &quot;Frequency.&quot; A good graphic is a well-labeled graphic. We can modify all of these settings with a few additional parameters added into the
+						<code>hist()</code>
+						command.
+					</p>
+					<p id="e49824bbb74c48ceb168a9511baf80a0">For example, if you want to add an x-axis label and remove the title of the histogram, use the following code:</p>
+					<p id="a93c3f82226d4f67976e777588fbbd60">
+						<code>hist(actor_age$Age, xlab=&quot;Age of Best Actor Oscar Winners (1970-2013)&quot;, main=&quot;&quot;)</code>
+					</p>
+					<p id="e3581b833eee4932b373eee3127cf58e">If you want to modify the x-axis and y-axis label and the title use the following code:</p>
+					<p id="adbf59c6ad3b4eb5a2e3704c2191c476">
+						<code>hist(actor_age$Age, xlab=&quot;Age of Best Actor Oscar Winners (1970-2013)&quot;, ylab=&quot;Number of Actors&quot;, main=&quot;Best Actor Oscar Winners Ages&quot;)</code>
+					</p>
+					<p id="e2f39aa6d4db4c96a32a47846ae9985a">Try replacing the x-axis label, y-axis label, and title with your own modified labels.</p>
+					<p id="fd1d55d9eeaf45c49f066c54d359fc97">
+						Another possible modification to the histogram is the number of bins. R uses an algorithm to determine the optimal number of bins based on the data, but in some cases you may want to modify the number of bins yourself. You can add the parameter
+						<code>breaks=</code>
+						into the
+						<code>hist()</code>
+						command, which will tell R to make that many breaks in the data. R will not always do the exact number of breaks if it is not possible, but it will provide a close approximation. For example, let’s try 8 breaks:
+					</p>
+					<p id="bb6d8c6905f94517aee18a7441717712">
+						<code>hist(actor_age$Age, breaks=8, xlab=&quot;Age of Best Actor Oscar Winners (1970-2013)&quot;, main=&quot;&quot;)</code>
+					</p>
+					<p id="b92e68bb0fd641d4a2b3ca6de5074aa7">Try replacing the number of &quot;breaks&quot; with 5 or 20. Which histogram gives the right amount of detail—neither too little nor too much?</p>
+					<p id="d06a47ac488546c59b266932c6ce672e">
+						<em style="italic">Note:</em>
+						Using R—If you are looking at a graph in R, you may find that the command window (the one labeled &quot;R Console&quot;) is not responsive. That is because the graph window is the &quot;active&quot; window. Click on the command window to make it the active window. In addition, notice that R will always overwrite your current graphic with a new graphic. Enter the code
+						<code>x11()</code>
+						and press prior to each new graphic command and R will create a new window for that graphic.
+					</p>
+				</alternative>
+				<alternative value="StatCrunch">
+					<title>StatCrunch Instructions</title>
+					<p id="fe8329caea444e3f9eaca3c1e24a6a48">
+						To open the file (actor.xls) in StatCrunch you must first right-click
+						<link href="../../../webcontent/excel/actor_2013.xls" target="self" internal="false">here</link>
+						and choose &quot;Save Target As&quot; to download the file to your computer. Next click
+						<link href="http://www.statcrunch.com/" target="new" internal="false">here</link>
+						to open StatCrunch in a separate window and login using your username and password.
+					</p>
+					<ul id="i8dfa17c9c5e541babf4ac6b229e9fb4f">
+						<li>
+							<p id="aea1f13608ab041b1b650fefba8e9cffd">Click on the link “Open StatCrunch” at the top of the My StatCrunch page.</p>
+						</li>
+						<li>
+							<p id="aeaa838c95ede4dac8e3583488a8024b5">To open the data set, click on the Data button in the top row and select Load → From file → on my computer.</p>
+						</li>
+						<li>
+							<p id="ab1daf4f1657a465891dbdaf4ec5c8654">Under File, press the Browse button and select the data set you downloaded.</p>
+						</li>
+						<li>
+							<p id="aea91cb50aa454a51a27f3d6d71a5938a">Scroll to the bottom of the page and click on “Load File.”</p>
+						</li>
+					</ul>
+					<p id="e0dea32fe2744bef91a8b9e56f11c339">To create a histogram of the actors&apos; age data:</p>
+					<ul id="i3741df8bf618437d9edc22b7321e5948">
+						<li>
+							<p id="ac01f1cd3084748f3bc06c06db804ca07">Choose Graph → Histogram</p>
+						</li>
+						<li>
+							<p id="afbfa37a3bea740ce88e10658a9c489d3">In the Histogram window select the column Age</p>
+						</li>
+						<li>
+							<p id="acea5298280404ff9858888456ada87fa">Press Compute!</p>
+						</li>
+					</ul>
+				</alternative>
+				<alternative value="minitab">
+					<title>Minitab Instructions</title>
+					<p id="ae65d950a7174293b0e2632ff23499ef">
+						To open Minitab with the actors&apos; age data loaded, right-click
+						<link href="../../../webcontent/minitab/actor_2013.mtw" target="self" internal="false">here</link>
+						and choose &quot;Save Target As&quot; to download the file to your computer. Then find the downloaded file and double-click it to open it in Minitab. Note: you will likely see a dialog box appear that says &quot;A copy of the content of this file will be added to the current project&quot;—just click OK.
+					</p>
+					<p id="f18eea95eec1412da0bb26530f072f2e">To create a histogram of the actors&apos; age data,</p>
+					<ul id="i6e6ce7dbbb7f4d59af3bb65f85caec8d">
+						<li>
+							<p id="af07a691a0c8a4809a34cf5521cc91663">Choose Graph → Histogram.</p>
+						</li>
+						<li>
+							<p id="aac77952d1a594697a46e33010ac40e70">Make sure &quot;Simple&quot; is highlighted and click OK.</p>
+						</li>
+						<li>
+							<p id="aa8a6130aee1347f5bc7c4012a4ac7147">In the dialog box, under Graph variables, type Age (or simply double-click on Age in the left panel).</p>
+						</li>
+						<li>
+							<p id="ac8b9239c0e6f453a9d7a601df257b16b">Click OK.</p>
+						</li>
+					</ul>
+				</alternative>
+				<alternative value="excel">
+					<title>Excel 2013 and 2016 Instructions</title>
+					<p id="d0706778bb4b49fbba50f36c632bd4ca">
+						To open the dataset, click
+						<link href="../../../webcontent/excel/actor_2013.xls" target="self" internal="false">here</link>
+						to download the file to your computer. Then find the downloaded file and double-click it to open it in Excel. When Excel opens you may have to enable editing.
+					</p>
+					<p id="eda51b8a740945deadd180878b5c8b17">Now create a histogram of the actors&apos; age data:</p>
+					<ul id="i356fabd138e8476693cdb59154812979">
+						<li>
+							<p id="ad3a8f63a77594aeb809f5d92355a8163">First we need to define the bins that Excel will use to create the histogram. In this case, our minimum data point is 29, and our max is 76. We&apos;ll use a bin width of 5, and make bins from 25 to 79:</p>
+						</li>
+						<li>
+							<p id="ab25a6d472b034c648b2b43f4a78fc6a4">In an empty cell type Bin and in the cell to the right type Frequency.</p>
+						</li>
+						<li>
+							<p id="afe826db09c674dcc95abcc9c6fc7bebc">In the cell under Bin put the different bins based on the bin width of 5. Here the first bin would be 25-29. Continue adding bins by typing 30-34, 35-39, 40-44, etc. When finished you should have 11 bins.</p>
+						</li>
+						<li>
+							<p id="c4e6619c476b4cee90981010fa41ae14">
+								Next sort the data by first highlighting the entire dataset and then selecting
+								<em style="italic">sort smallest to largest</em>
+								from the pop-up menu that appears by pressing the
+								<em style="italic">Sort and Filter button</em>
+								from the
+								<em style="italic">Editing</em>
+								group on the
+								<em style="italic">Home</em>
+								tab.
+							</p>
+						</li>
+						<li>
+							<p id="ad92414c3f9f0485cb0fb999d1e65e6e1">With the data sorted, you can count the number that would fit into each bin and put those counts in the column under Frequency.</p>
+						</li>
+						<li>
+							<p id="cc3e7e990d6e4d0eb63f64e34b48c198">
+								Now highlight the Bin and Frequency columns. Then navigate to the
+								<em style="italic">Insert</em>
+								tab, find the
+								<em style="italic">Chart</em>
+								group and click on the
+								<em style="italic">insert column chart</em>
+								button (the picture of an upright bar graph). From there select
+								<em style="italic">clustered column</em>
+								under
+								<em style="italic">2-D column</em>
+								.
+							</p>
+						</li>
+						<li>
+							<p id="a7ecb1a92069432ab8618a4e1c2760be">
+								Histograms shouldn&apos;t have spaces between the bars, so right-click on one of the bars and choose
+								<em style="italic">Format Data Series</em>
+								. Then set the gap width to 0% (No Gap).
+							</p>
+						</li>
+						<li>
+							<p id="f229a720d8eb45eda7fe6e49986b05e8">
+								Before closing the Format Data Series window, click on
+								<em style="italic">Border under Fill and Line</em>
+								on the left, choose
+								<em style="italic">Solid line</em>
+								, and set the color to black.
+							</p>
+						</li>
+					</ul>
+				</alternative>
+				<alternative value="ti">
+					<title>TI Instructions</title>
+					<p id="dd6f680387204e7cad367d9200c1d73f">
+						To open a list with the actors&apos; age data loaded, right-click
+						<link href="../../../webcontent/ti/actor_2013.8xl" target="self" internal="false">here</link>
+						and choose &quot;Save Target As&quot; to download the file to your computer. Then find the downloaded file and send it to your calculator. For instructions on how to connect your calculator to your computer and transfer a file, click
+						<activity_link idref="ti_instructions" target="new" purpose="checkpoint">here</activity_link>
+						.
+					</p>
+					<p id="efa6135c2e54468bbf38ed8bcc063034">
+						<em style="italic">NOTE: This dataset is fairly small (n=32). It may be just as fast to enter the data yourself directly in L1.</em>
+					</p>
+					<p id="e9117a7388b54e7391fe9f4b74e92a36">The data for actor’s age is stored in L1.</p>
+					<p id="ffe6b3658f894007b60e25e4ce68f99e">Now create a histogram of the actors&apos; age data:</p>
+					<p id="fcdb5a315327475591b6471ed2f83fba">
+						<em style="italic">Histogram</em>
+					</p>
+					<ul id="ic9b686a46052436898b7cb2986cf28d9">
+						<li>
+							<p id="ac31fcc9e984d499997b8c914733f8615">Either clear any equations you may have in your calculator by choosing</p>
+							<code>Y=/CLEAR</code>
+							<p id="acbf9f1154dcc46bab01be035e8d5af58">, or else toggle them off by choosing</p>
+							<code>Y=</code>
+							<p id="aa898c2612dfc4a12a508c1e7d9255d97">and then pressing the left arrow until</p>
+							<code>=</code>
+							<p id="aadbd863c0e2847ce9fd750b777154fc1">is selected and pressing</p>
+							<code>ENTER</code>
+							<p id="ae9fc74d0faf9495e994f3168c5dfe910">.</p>
+						</li>
+						<li>
+							<p id="ad033b314ebd44de99c02001fc80522c0">Choose</p>
+							<code>STAT PLOT (2ND/Y=)</code>
+							<p id="ae28fea30b2e642b689f4706642bc4cc9">.</p>
+						</li>
+						<li>
+							<p id="af7e88e2f5e734ad4868487a836f026a0">Choose</p>
+							<code>4:PlotsOff</code>
+							<p id="aa75504fab90842569ca2d7dd6a774e8b">. Hit</p>
+							<code>ENTER</code>
+							<p id="aa4bdbf5164bb4bfea274ecb37a22e825">.</p>
+						</li>
+						<li>
+							<p id="ac20a7c9125e6440eb2e6091515ce62eb">You should see:</p>
+							<image id="fde3ad652a574b25b3d640fb6f496b53" src="../../webcontent/histogram3lbd1.gif" alt="" style="inline" vertical-align="middle">
+								<caption />
+								<popout enable="false" />
+							</image>
+						</li>
+						<li>
+							<p id="aaa1e7e4efe2c412197cbbac6b3049ca3">Again, choose</p>
+							<code>STAT PLOT (2ND/Y=)</code>
+							<p id="aedf8132bf9844aa293d094630f6ec9ce">.</p>
+						</li>
+						<li>
+							<p id="acfd03702f9424a02bf3ec196c4cf74bd">Choose</p>
+							<code>1:Plot1…Off</code>
+						</li>
+						<li>
+							<p id="aa651179c01a44f31ab69ff7e46c4259b">Turn the plot on by using arrows to highlight the word</p>
+							<code>ON</code>
+							<p id="af995b91b873346e389d165566817222c">, then press</p>
+							<code>ENTER</code>
+							<p id="ad581d88e5826416ca7234e8da8d5ff94">.</p>
+						</li>
+						<li>
+							<p id="aba1f5f6c2f004c87878d69af7aeb371c">Choose the</p>
+							<code>Type:</code>
+							<p id="ab517559a3a4a4665b37c3ec83b1043c3">Histogram is the third graph.</p>
+						</li>
+						<li>
+							<p id="aab29a5e0fe9d4335acc3d8dd86bbef98">Choose the correct</p>
+							<code>Xlist: L1 (2ND/1)</code>
+							<p id="af08c116a7bab406ab862a77b24824f9c">.</p>
+						</li>
+						<li>
+							<p id="ad1e94ac506064915827cc85e1a993f09">Choose</p>
+							<code>Freq: 1</code>
+							<p id="ac2fcc8d2027944de8893ca04bc458408">(the number one).</p>
+						</li>
+						<li>
+							<p id="ac1e88ec4989d46db9c7c84b9a84d5043">You should see:</p>
+							<image id="ec529263611f41b7aeed1f79d03df33a" src="../../webcontent/histogram3lbd2.gif" alt="" style="inline" vertical-align="middle">
+								<caption />
+								<popout enable="false" />
+							</image>
+						</li>
+					</ul>
+					<p id="f2e8e8b4a02a4b28965d80e6745a863e">First we need to determine the class width and what lower value we want for our first class. In this case, our minimum data point is 31, and our max is 76. We’ll use a class width of 5, and make classes from 30 to 80.</p>
+					<ul id="ic4a8bced896e487d94033a076b35266e">
+						<li>
+							<p id="adb7cd0bbbd1744cf880564f09dacbf07">Choose</p>
+							<code>WINDOW</code>
+							<p id="aa5ff8320cec74fbc9eb3892d44f62fb8">, and set the following values:</p>
+							<ul id="i23ff05e07a344b5483424f564a7931b5" style="none">
+								<li>
+									<p id="acb010c404d824162aadee2d6f3ee7c0e">Xmin=30—this is the lower value for the X axis. It should be lower than the smallest value in our dataset.</p>
+								</li>
+								<li>
+									<p id="ae9cf37e32e2947e6899be6c161f5187b">Xmax=80—this is the upper value for the X axis. It should be higher than the largest value in our dataset.</p>
+								</li>
+								<li>
+									<p id="ae36ffd70271a438788020f6f4026972f">Xscl=5—this is the distance between the tick marks on the X scale, and determines how wide each class is.</p>
+								</li>
+								<li>
+									<p id="ac60fbeaaf71f43259bd2a248e7159deb">Ymin=0—this is the lower value for the Y axis.</p>
+								</li>
+								<li>
+									<p id="ad6ab303e694d4dd2ad3c043b36a7c921">Ymax=10—this is the upper value for the Y axis.</p>
+								</li>
+								<li>
+									<p id="ac90ad754d8064d27b98f20a79c691d77">Yscl=1—this is the distance between the tick marks on the Y scale.</p>
+								</li>
+								<li>
+									<p id="ab931d7e8fd0440d78accc98a73728f3b">Xres=1 - this is the resolution of the graph. Leave it set to 1, which is most accurate.</p>
+								</li>
+								<li>
+									<p id="adb95aae7717f4c09a29af7fbcadbf25d">ΔX and TraceStep: Leave these set to their default values.</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p id="ae4ba5d85c78646548f3d09c0feb6f49b">You should see:</p>
+							<image id="aeb577ab55a94228898b90cc1ff71655" src="../../webcontent/histogram3lbd3.gif" alt="" style="inline" vertical-align="middle">
+								<caption />
+								<popout enable="false" />
+							</image>
+						</li>
+						<li>
+							<p id="adaab88b62c1546669be7b762601cef63">Choose</p>
+							<code>GRAPH</code>
+							<p id="ae4c5bf06f6d54b6ea95b71cba283b0cd">.</p>
+						</li>
+						<li>
+							<p id="aa489c4ee9dcc400b81a024cc27f90618">Choose</p>
+							<code>TRACE</code>
+							<p id="af9a2ef7a5a2841349ac8999fdf444c31">and then use the left and right arrows to move the cursor around the histogram to see the values for each bar.</p>
+						</li>
+					</ul>
+				</alternative>
+			</alternatives>
+		</pullout>
+		<wb:inline idref="u1_m1_histogram3_lbd_tutor1" purpose="learnbydoing" />
+	</body>
+</workbook_page>

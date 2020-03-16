@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="type_i_ii_errors_digt_2">
+    <title>Tutor</title>
+
+    <question id="q1">
+        <!-- LO  identify Type II Error in context-->
+        <body>
+            <p>A researcher looks at the mean salaries of male and female electricians and decides
+                based on the evidence that there is no difference between the two groups. The
+                researcher could have made a <input_ref input="A"/> in drawing this conclusion. </p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">type I error</choice>
+            <choice value="two">type II error</choice>
+
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="type_i" match="one" score="0">
+                <feedback>Incorrect. A type I error would require the researcher to claim that there
+                    is a significant difference in mean salaries between male and female
+                    electricians, when in reality, there may be no difference in the average
+                    salaries. The correct answer is type II error, since the researchers failed to
+                    reject the null hypothesis.</feedback>
+            </response>
+            <response input="A" name="type_ii" match="two" score="10">
+                <feedback>Correct. It may be a type II error, because the researcher concluded
+                    based on the evidence that there is no significant difference in average
+                    salaries of men and women electricians, when in reality, there may be a
+                    significant difference between groups.</feedback>
+            </response>
+
+
+
+        </part>
+
+    </question>
+
+</assessment>

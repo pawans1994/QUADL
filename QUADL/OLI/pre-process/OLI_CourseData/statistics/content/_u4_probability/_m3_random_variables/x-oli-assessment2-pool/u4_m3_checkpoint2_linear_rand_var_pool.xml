@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="u4_m3_checkpoint2_linear_rand_var_pool">
+    <title>pool</title>
+    <numeric id="q1_u4_m3_checkpoint2_linear_rand_var">
+        <body>
+            <p>The number of people in a car that crosses a certain bridge is represented by the
+                random variable X, which has a mean value μ<sub>X</sub> = 2.7, and a variance
+                    σ<sup>2</sup><sub>X</sub> = 1.2. The toll on the bridge is $3.00 per car
+                plus $0.50 per person in the car.</p>
+            <p>What is the mean of the total amount of money that is collected from a car that
+                crosses the bridge? Report your answer to two decimal places. Do NOT include a
+                dollar sign ($) when reporting your answer.</p>
+            <p><input_ref input="A" /></p>
+          <p>What is the variance of the total amount of money that is collected from a car that
+                crosses the bridge? Report your answer to two decimal places. Do NOT include a
+                dollar sign ($) when reporting your answer.</p>
+            <p><input_ref input="B" /></p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+             <choice value="B" />
+        </input>
+        <part>
+            <response input="A" match="4.35" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of 3 dollars
+                    (regardless of the number of passengers) and $0.50 for every passenger, thus T =
+                    3 + 0.50 * X. To find the mean of T, you use the rule of means:
+                        μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub> = 3 + 0.5(2.7) = 3 + 0.5(2.7) =
+                    4.35.</feedback>
+            </response>
+            <response input="A" match="1.35" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. The
+                    transformation you used was 0.5 X. However, you forgot about the constant part
+                    of the toll, which is the $3.00 that each car must pay.</feedback>
+            </response>
+            <response input="A" match="8.60" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. You
+                    used μ<sub>(a+bX)</sub> = 0.5 + 3 μ<sub>X</sub>. However, the constant part of
+                    the toll is $3.00/car, and the variable part is $0.50/mile.</feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of $3.00
+                    (regardless of the number of passengers) and $0.50 for every passenger. Thus, T
+                    = 3 + 0.50 * X. To find the mean of T, you use the rule of means:
+                        μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>.</feedback>
+            </response>
+        </part>
+        <part>
+            <response input="B" match="0.30" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of $3
+                    (regardless of the number of passengers) and $0.50 for every passenger. Thus, T
+                    = 3 + 0.50 * X. To find the variance of T, you use the rule of variances:
+                        σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup> σ<sup>2</sup><sub>X</sub> =
+                    (0.5)2(1.2) = 0.25(1.2) = 0.30.</feedback>
+            </response>
+            <response input="B" match="0.60" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a + bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. The <em style="italic">a</em> represents the
+                    constant part of the toll, and the <em style="italic">b</em> represents the
+                    variable part.</feedback>
+            </response>
+            <response input="B" match="3.30" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a + bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. It appears that you used σ<sup>2</sup><sub>a +
+                        bX</sub> = a + b<sup>2</sup> σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response input="B" match="*" score="0">
+                <feedback>Incorrect. Let T be the total amount of money that is collected from a car
+                    that crosses the bridge. T is composed of two parts: the fixed toll of $3
+                    (regardless of the number of passengers) and $0.50 for every passenger. Thus, T
+                    = 3 + 0.50 * X. To find the variance of T, you use the rule of variances:
+                        σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup>
+                    σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+        </part>
+    </numeric>
+
+    <multiple_choice id="q2_u4_m3_checkpoint2_linear_rand_var" select="single">
+        <body>Suppose Blue Cab Company charges $2.85 a ride up to 0.1 miles and $0.30 for each
+            additional tenth of a mile. If the mean distance a passenger wants to go is 5.3 miles
+            with a standard deviation of 1.4 miles, what is the mean of the fare passengers
+            pay?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Mean $4.14</choice>
+            <choice value="B">Mean $18.45</choice>
+            <choice value="C">Mean $18.75</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Let T be the total amount of the cab fare. It looks as though
+                    you used the equation μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub> but you used b =
+                    $0.30 which is the price per 1/10 of a mile not the price per mile. The pricing
+                    is given in miles, not 1/10 of miles so we need to set b = $3.00. It is also
+                    important to note that μ<sub>X</sub> = 5.3 − 0.1 = 5.2 because the $2.85
+                    includes the first 0.1 miles of the trip.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The key was to convert the rate to dollars per mile from dollars
+                    per tenth of a mile so <em style="bold">b</em> = 3 and to set μ<sub>X</sub> =
+                    5.3 − 0.1 = 5.2 since the first 10th of a mile was included in the fixed fee.
+                    Therefore, the mean is $2.85 + $3.00(5.2) = 2.85 + 15.60 = $18.45.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks at though you set <em style="bold">b</em> = $3.00 but
+                    you forgot to compensate for the fact that the first 1/10 mile was included in
+                    the $2.85 fixed fee, so μ<sub>X</sub> = 5.3 − 0.1 = 5.2.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q3_u4_m3_checkpoint2_linear_rand_var" select="single">
+        <body>Suppose Blue Cab Company charges $2.85 a ride up to 0.1 miles and $0.30 for each
+            additional tenth of a mile. If the mean distance a passenger wants to go is 5.3 miles
+            with a standard deviation of 1.4 miles, what is the standard deviation of the fare
+            passengers pay?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">$0.42</choice>
+            <choice value="B">$4.20</choice>
+            <choice value="C">$9.00</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Let T be the total amount of the cab fare and the standard
+                    deviation of T is σ<sub>a+bX</sub> = bσ<sub>X</sub>. However, it looks as though
+                    you used <em style="bold">b</em> = $0.30 which is the price per 1/10 of a mile
+                    not the price <em style="italic">per mile.</em> The pricing is given in miles,
+                    not 1/10 miles, so we need to set <em style="bold">b</em> = $3.00.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Let T be the total amount of the cab fare and the standard
+                    deviation of T is σ<sub>a+bX</sub> = bσ<sub>X</sub>. The key was to convert the
+                    rate to <em style="italic">dollars per mile</em> from dollars per tenth of a
+                    mile, so <em style="italic">b</em> = 3. The standard deviation of T is 3.00(1.4)
+                    = 4.20.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks at though you set <em style="italic">b</em> = $3.00
+                    but calculated b<sup>2</sup> instead of using σ<sub>a+bX</sub> =
+                    bσ<sub>x</sub>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q4_u4_m3_checkpoint2_linear_rand_var" select="single">
+        <body><p>The number of computer monitors manufactured per day by CompScreens Inc. is a
+            random variable X, with a mean μ<sub>x</sub> = 120 and a variance of σ<sup>2</sup>x<sub /> = 36. The cost of
+                manufacturing the monitors is $500 base cost plus $15 per monitor. </p>
+            <p>What is the variance of the total cost per day for CompScreens Inc. to manufacture
+                computer monitors?</p></body>
+        <input labels="false" shuffle="false">
+            <choice value="A">540</choice>
+            <choice value="B">1040</choice>
+            <choice value="C">8100</choice>
+            <choice value="D">8600</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. It appears that you calculated
+                        b*σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. It appears you used σ<sup>2</sup><sub>a+bX</sub>
+                    = a + b σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Let T be the total cost of manufacturing monitors for a day. T is
+                    composed of two parts: the fixed cost of $500 (regardless of the number of
+                    monitors) and $15 for every monitor made. The total cost can be written as T =
+                    500 + 15X. To find the variance of T you use the rule of variances:
+                        σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup> σ<sup>2</sup><sub>X</sub> =
+                        (15)<sup>2</sup>(36) = 8100.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that σ<sup>2</sup><sub>a+bX</sub> = b<sup>2</sup>
+                        σ<sup>2</sup><sub>X</sub>. It appears you used σ<sup>2</sup><sub>a +
+                        bX</sub> = a + b<sup>2</sup> σ<sup>2</sup><sub>X</sub>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <numeric id="q5_u4_m3_checkpoint2_linear_rand_var">
+        <body>
+            <p>The number of people entering a state park is a random variable X with a mean of 3
+                and a variance of 2. The admission to the park is $6 per car plus an additional
+                $1.50 per person in the car.</p>
+            <p>What is the mean of the total amount of money collected for a car entering the park?
+                Report your answer to <em style="bold">two</em> decimal places. Do NOT include a
+                dollar sign ($) when reporting your answer.</p>
+            <p><input_ref input="A" /></p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+        </input>
+        <part>
+            <response input="A" match="10.50" score="10">
+                <feedback>Correct. Let T be the total amount of money that is collected from a car
+                    that enters the park. T is composed of two parts: the fixed fee of 6 dollars
+                    (regardless of the number of passengers) and $1.50 for every passenger. The
+                    total amount of money can be written as T = 6 + 1.5X. To find the mean of T you
+                    use the rule of means: μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub> = 6 + 1.5(3) =
+                    10.5.</feedback>
+            </response>
+            <response input="A" match="4.50" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. The
+                    transformation you used was 1.5X. However, you forgot about the constant part of
+                    the fee, which is the $6.00 that each car must pay.</feedback>
+            </response>
+            <response input="A" match="19.50" score="0">
+                <feedback>Incorrect. Remember that μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub>. You
+                    used μ<sub>(a+bX)</sub> = 1.5 + 6 μ<sub>X</sub>. However, the constant part of
+                    the fee is $6.00/car and the variable part is $ 1.50/passenger. </feedback>
+            </response>
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Let T be the total amount of money that is collected from a car
+                    that enters the park. T is composed of two parts: the fixed fee of 6 dollars per
+                    car (regardless of the number of passengers) and $ 1.50 for every passenger,
+                    thus T = 6 + 1.50 * X. To find the mean of T you use the rule of means:
+                        μ<sub>(a+bX)</sub> = a + b μ<sub>X</sub></feedback>
+            </response>
+        </part>
+    </numeric>
+
+</pool>

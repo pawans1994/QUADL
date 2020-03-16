@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="one_vs_two_side_test_select_compar_type_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_one_vs_two_side_test_select_compar_type">
+        <!--LO: Identify and distinguish among cases where use of calculations specific to 
+		    independent samples, matched pairs, and ANOVA are appropriate. -->
+        <body><p>Research suggests that identical twins have many similarities, such as body
+                weights, even as adults. A sample of ten sets of identical twins were weighed and
+                had their weights recorded in kilograms. The researcher wishes to test whether there
+                is a statistically significant difference in adult weight between first-born and
+                second-born identical twins.</p>
+            <p><cite>Source: M. J. Tramo, W. C. Lodtus, T. A. Stukel, R. L. Green, J. B. Weaver, and
+                    M. S. Gazzaniga. “Brain Size, Head Size, and Intelligence Quotient in
+                    Monozygotic Twins.” <em style="italic">Neurology</em> 50, 1246–52.</cite></p>
+            <!--margo.coleman-seiffert:Hi Kim: This is the data about twins that we received permission to use. Not sure how to cite it...It is Therese Stukel's data....Can you let me know what I should do?Thanks!-->
+            <p>Given the design of the study and the question of interest, which one of the
+                following computer outputs is relevant to use?</p></body>
+        <input shuffle="false">
+            <choice value="A">
+                <image src="../webcontent/chkpt_matched_pairs/image1.png" /></choice>
+            <choice value="B"><image src="../webcontent/chkpt_matched_pairs/image2.png" /></choice>
+            <choice value="C"><image src="../webcontent/chkpt_matched_pairs/image3.png" /></choice>
+            <choice value="D"><image src="../webcontent/chkpt_matched_pairs/image4.png" /></choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the appropriate hypothesis test is the paired t-test, the
+                    alternative hypothesis is that there are differences, without a specification of
+                    the direction of the differences.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the study involved matching, through the use of identical
+                    twins, it is a matched-pairs t-test rather than a two independent samples
+                    t-test. In addition, the alternative hypothesis is that there are differences,
+                    without a specification of the direction of the differences.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since the study involved matching, through the use of identical
+                    twins, and was interested in seeing whether there were “any differences” in mean
+                    adult weights, the correct hypothesis test is the paired t-test with a “not
+                    equal” alternative hypothesis.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. While it is correct that the alternative hypothesis is “not
+                    equal,” since the the study involved matching, through the use of identical
+                    twins, it is a matched-pairs t-test rather than a two independent samples
+                    t-test.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_one_vs_two_side_test_select_compar_type">
+        <!-- LO: select_compar_type -->
+        <body>
+            <p>The local power company is testing a new type of thermostat that automatically
+                changes the air conditioning settings on “peak days” to see if using the new
+                thermostat will reduce power consumption. The power company randomly selects 35
+                homes of a similar size to test the new thermostat. They compare the average summer
+                power consumption before and after the new thermostat is installed. The power
+                company wishes to find out if there is evidence to suggest that energy use was
+                significantly higher before the new thermostats were installed (with lower energy
+                use after the new thermostats were installed).</p>
+            <p>Given the design of the study and the question of interest, which one of the
+                following four computer outputs is relevant to use?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A"><image src="../webcontent/chkpt_matched_pairs/image12.png" />
+            </choice>
+            <choice value="B"><image src="../webcontent/chkpt_matched_pairs/image13.png" />
+            </choice>
+            <choice value="C"><image src="../webcontent/chkpt_matched_pairs/image14.png" />
+            </choice>
+            <choice value="D"><image src="../webcontent/chkpt_matched_pairs/image15.png" />
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Since the study involved matching through the use of before and
+                    after measurements, and the power company was interested in seeing whether the
+                    energy use before the new thermostat was higher than the energy use after, this
+                    was a paired t-test with a “greater than” alternative hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While you are correct that the alternative hypothesis specified
+                    that energy use before installation would be greater than energy use after,
+                    since the study involved matching (through the use of before and after
+                    measurements) it is not a two independent samples t-test. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. While it is correct that the paired t-test should be used
+                    because of matching before and after data, it is not correct that they were
+                    looking for “any differences” in energy use (t-test of difference = 0 [vs. ≠ 0]).
+                    The alternative hypothesis is that energy use will be greater before the
+                    installation of the new thermostat than after.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Since the study involved matching through the use of before and
+                    after measurements, it is not a two independent samples t-test. Additionally,
+                    the alternative hypothesis is that energy use will be greater before the
+                    installation of the new thermostat than after, not “any differences” in energy
+                    use (t-test of difference = 0 [vs. ≠ 0]). </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

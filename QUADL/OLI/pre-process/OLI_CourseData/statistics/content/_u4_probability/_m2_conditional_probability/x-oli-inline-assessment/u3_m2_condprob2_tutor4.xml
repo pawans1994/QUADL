@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_condprob2_tutor4">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+      <body>
+         <p>If service A delivered the document on time, what is the probability that it
+               <?oxy_delete author="mmyers" timestamp="20101109T105359-0500" content="will not be"?><?oxy_insert_start author="mmyers" timestamp="20101109T105359-0500"?>was
+               not<?oxy_insert_end?> delivered on time using service B?</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We are given that
+                  th<?oxy_insert_start author="mmyers" timestamp="20101109T105311-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T105310-0500" content="at"?>
+                  document was delivered on time using service A, and we are wondering how likely
+                  <?oxy_delete author="mmyers" timestamp="20101109T105320-0500" content="is "?>it
+                  <?oxy_insert_start author="mmyers" timestamp="20101109T105323-0500"?>is
+                  <?oxy_insert_end?>that it
+                  <?oxy_insert_start author="mmyers" timestamp="20101109T105338-0500"?>was
+                  not<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T105341-0500" content="will not be"?>
+                  delivered on time using service B. We are therefore looking for P(not B | A).
+                  Using the definition of conditional probability and the probability table, we get
+                  that:</p>
+            <p>P(not B | A) = P(A and not B) / P(A) = .15/.90 = .167</p>
+            <p>Let's summarize the results we got:</p>
+            <p>P(B | A) = .833</p>
+            <p>P(B | not A) = .50</p>
+            <p>P(not B | A) = .167</p>
+            <p>Note that P(B | A) = 1 - P(not B | A), which tells us that P(not B | A) is the
+                  complement event of P(B | A). Students sometimes tend to get confused and think
+                  that the complement event of P(B | A) is P(B | not A). Please
+                  <?oxy_delete author="mmyers" timestamp="20101109T105750-0500" content="pay attention to that"?><?oxy_insert_start author="mmyers" timestamp="20101109T105750-0500"?>note
+                  the distinction<?oxy_insert_end?>. The
+                  <?oxy_insert_start author="mmyers" timestamp="20101109T105720-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T105720-0500" content="c"?>omplement
+                  <?oxy_insert_start author="mmyers" timestamp="20101109T105722-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T105722-0500" content="r"?>ule
+                  extends to conditional probabilities only when you condition on the same
+                  event<?oxy_insert_start author="mmyers" timestamp="20101109T105813-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T105812-0500" content="!"?></p>
+         </explanation>
+      </part>
+   </question></page>
+</assessment>

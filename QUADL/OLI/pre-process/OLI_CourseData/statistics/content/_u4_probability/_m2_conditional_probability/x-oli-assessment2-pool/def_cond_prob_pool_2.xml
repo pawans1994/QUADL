@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="def_cond_prob_pool_2">
+    <title>pool</title>
+    <multiple_choice id="q1_def_cond_prob_2" select="single">
+        <body>
+            <p>Two methods, A and B, are available for teaching a certain industrial skill. There is
+                an 80% chance of successfully learning the skill if method A is used, and a 95%
+                chance of success if method B is used. However, method B is substantially more
+                expensive and is therefore used only 25% of the time (method A is used the other 75%
+                of the time). The following notations are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>—Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>—Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold"> L</em>—The skill was learned
+                    successfully. </li>
+            </ul>
+            <p>Which of the following is the correct representation of the information that is
+                provided to us? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">P(A) = 0.75, P(B) = 0.25, P(L | A) = 0.80, P(L | B) =
+                0.95 </choice>
+            <choice value="B">P(A) = 0.75, P(B) = 0.25, P(A | L) = 0.80, P(B | L) =
+                0.95 </choice>
+            <choice value="C">P(A) = 0.75, P(B) = 0.25, P(A and L) = 0.80, P(B and L)
+                = 0.95 </choice>
+            <choice value="D">P(A | L) = 0.75, P(B | L) = 0.25, P(L | A) = 0.80, P(L |
+                B) = 0.95 </choice>
+            <choice value="E">P(A and L) = 0.75, P(B and L) = 0.25, P(L | A) = 0.80,
+                P(L | B) = 0.95 </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. There is an 80% chance of learning the skill if method <em style="bold">A</em> is used → P(<em style="bold">L</em>|<em style="bold">A</em>) = 0.80. There is a 95% chance of learning the skill if method <em style="bold">B</em> is used → P(<em style="bold">L</em>|<em style="bold">B</em>) = 0.95. Method <em style="bold">B</em> is used 25% of the time →
+                    P(B) = 0.25 → P(not B) = P(<em style="bold">A</em>) = 0.75. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Recall that if method <em style="bold">A</em> is used, then
+                    there is an 80% chance of successfully learning the skill and if method <em style="bold">B</em> is used, then there is a 95% probability of learning the
+                    skill. In other words, given that you have used method <em style="bold">A</em>
+                    or <em style="bold">B</em>, you will learn the skill with probability 80% or
+                    95%, respectively.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. P(<em style="bold">A</em> and <em style="bold">L</em>)
+                    represents the probability that a randomly chosen person has both learned the
+                    skill and used method <em style="bold">A</em>. P(<em style="bold">B</em> and <em style="bold">L</em>) represents the probability that a randomly chosen
+                    person has both learned the skill and used method <em style="bold">B</em>.
+                    Recall that given method <em style="bold">A</em> is used, the probability of
+                    successfully learning the skill is 80%. Also, given that method <em style="bold">B</em> is used, the probability of successfully learning the skill is
+                    95%.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. P(<em style="bold">A</em> | <em style="bold">L</em>) represents
+                    the probability that a randomly chosen person that learned the skill
+                    successfully has learned the skill using method <em style="bold">A</em>.
+                    Similarly, P(<em style="bold">B</em> | <em style="bold">L</em>) represents the
+                    probability that a randomly chosen person that learned the skill successfully
+                    has learned the skill using method <em style="bold">B</em>. Recall that method
+                        <em style="bold">A</em> is used 75% of the time because it costs less than
+                    using method <em style="bold">B</em>, which is used 25% of the time.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. P(<em style="bold">A</em> and <em style="bold">L</em>)
+                    represents the probability that a randomly chosen person has both learned the
+                    skill and used method <em style="bold">A</em>. P(<em style="bold">B</em> and <em style="bold">L</em>) represents the probability that a randomly chosen
+                    person has both learned the skill and used method <em style="bold">B</em>.
+                    Recall that methods <em style="bold">A</em> and <em style="bold">B</em> are used
+                    75% and 25% of the time, respectively.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_def_cond_prob_2" select="single">
+        <body>
+            <p>Which of the following represents the probability that a die toss will be less than
+                four given that it is an odd number? </p>
+            <table>
+                <tr>
+                    <td> Event A: </td>
+                    <td> an odd number. </td>
+                </tr>
+                <tr>
+                    <td> Event B: </td>
+                    <td> less than 4. </td>
+                </tr>
+            </table>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">P(A|B)</choice>
+            <choice value="B">P(B|A)</choice>
+            <choice value="C">P(B)</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This answer gives you the probability of event A given B or the
+                    probability that the die is an odd number given that it is less than
+                    four.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The probability of event B given A is the probability that the
+                    die is less than four given that it is an odd number (i.e., 1 or 3).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the probability that the die is less than four, but
+                    these are dependent events so you must also account for P(A). </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

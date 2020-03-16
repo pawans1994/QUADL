@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_binomial2">
+<head>
+<title>Binomial Random Variables (2 of 4)</title>
+    <objref idref="fit_binomial_model"/>
+</head>
+<body>
+   
+<p>Now that we understand what a binomial random variable is, and when it arises, it's time to discuss its probability distribution. We'll start with a simple example and then generalize to a formula.</p>
+<example><title>Deck of Cards</title>
+
+<p>Consider a regular deck of 52
+                cards<?oxy_insert_start author="mmyers" timestamp="20101121T200532-0500"?>, in
+                which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T200535-0500" content=" where"?>
+                there are 13 cards of each suit: hearts, diamonds, clubs and spades.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T200548-0500"?>We select
+                3<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T200546-0500" content="Three"?>
+                cards<?oxy_delete author="mmyers" timestamp="20101201T101336-0500" content=" are selected"?>
+                at random <em>with replacement</em>. Let X be the number of diamond cards we got
+                (out of the
+                <?oxy_insert_start author="mmyers" timestamp="20101121T200602-0500"?>3<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T200600-0500" content="three"?>).</p>
+<p>We have 3 trials here, and they are independent (since the selection is with replacement).  The outcome of each trial can be either success (diamond) or failure (not diamond), and the probability of success is 1/4 in each of the trials.</p>
+<p>X<?oxy_insert_start author="mmyers" timestamp="20101121T200630-0500"?>,<?oxy_insert_end?>
+                then<?oxy_insert_start author="mmyers" timestamp="20101121T200631-0500"?>,<?oxy_insert_end?>
+                is binomial with n = 3 and p = 1/4.</p>
+<p>Let's build the probability distribution of X as we did in the chapter on probability
+                distributions. Recall that we begin with a table
+                <?oxy_insert_start author="mmyers" timestamp="20101121T200653-0500"?>in
+                which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T200652-0500" content="where"?>
+                we:</p>
+<ul><li><p> record all possible outcomes in
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T200703-0500"?>3<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T200701-0500" content="three"?>
+                        selections, where each selection may result in success (a
+                        diamond<?oxy_insert_start author="mmyers" timestamp="20101121T200712-0500"?>,<?oxy_insert_end?>
+                        D) or failure (a
+                        non-diamond<?oxy_insert_start author="mmyers" timestamp="20101121T200714-0500"?>,<?oxy_insert_end?>
+                        N)<?oxy_insert_start author="mmyers" timestamp="20101121T200736-0500"?>.<?oxy_insert_end?></p></li>
+<li><p> find the value of X that corresponds to each
+                        outcome<?oxy_insert_start author="mmyers" timestamp="20101121T200734-0500"?>.<?oxy_insert_end?></p></li>
+<li><p> use simple probability principles to find the probability of each
+                        outcome<?oxy_insert_start author="mmyers" timestamp="20101121T200729-0500"?>.<?oxy_insert_end?></p></li>
+</ul>
+    <image style="block" src="../webcontent/image078.gif" alt="A table of all of the outcomes. Here
+is the data in the table, given in &quot;Outcome: Value of X, Probability&quot; format:
+        NNN: 0, 3/4 &times; 3/4 &times; 3/4;
+        NND: 1, 3/4 &times; 3/4 &times; 1/4;
+        NDN: 1, 3/4 &times; 1/4 &times; 3/4;
+        DNN: 1, 1/4 &times; 3/4 &times; 3/4;
+        NDD: 2, 3/4 &times; 1/4 &times; 1/4;
+        DND: 2, 1/4 &times; 3/4 &times; 1/4;
+        DDN: 2, 1/4 &times; 1/4 &times; 1/4;
+        DDD: 3, 1/4 &times; 1/4 &times; 1/4;"/>
+        
+<p>With the help of the addition principle, we condense the information in this table to construct
+                the actual probability distribution
+                <?oxy_comment_start author="mmyers" timestamp="20101121T201011-0500" comment="Consider adding asterisks to indicate multiplication in numbers 1 and 2 in the table below -- between 1/4 to the first and  3/4 to the second, for example."?>table:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image079.gif" alt="The probability distribution table has two
+rows, labeled &quot;X&quot; and &quot;P(X=x).&quot; Here is the data in the table, organized by column.
+The format is &quot;(X, P(X=x))&quot;
+        0: 1(3/4)&sup3;
+        1: 3(1/4)&sup1;(3/4)&sup2;
+        2: 3(1/4)&sup2;(3/4)&sup1;
+        3: 1(1/4)&sup3;"/>
+</example>
+<p>In order to establish a general formula for the probability that a binomial random variable X
+            takes any given value x, we will look for patterns in the above distribution. From the
+            way we constructed this probability
+            distribution<?oxy_insert_start author="mmyers" timestamp="20101121T201030-0500"?>,<?oxy_insert_end?>
+            we know that, in general:</p>
+<image style="block" src="../webcontent/image080.gif" alt="P(X=x) = [ Number of possible outcomes with x
+successes out of 3 ] &times; [ Probability that each of the outcomes that has x successes out of 3 ]"/>
+<p>Let's start with the second part, the probability that there will be x successes out of 3, where
+            the probability of success is 1/4. Notice that the fractions multiplied in each case are
+            for the probability of x successes (where each success has
+            <?oxy_insert_start author="mmyers" timestamp="20101121T201118-0500"?>a
+            <?oxy_insert_end?>probability
+            <?oxy_insert_start author="mmyers" timestamp="20101121T201122-0500"?>of
+            <?oxy_insert_end?>p = 1/4) and the remaining (3 - x) failures (where each failure has
+            probability <?oxy_insert_start author="mmyers" timestamp="20101121T201131-0500"?>of
+            <?oxy_insert_end?>1 - p = 3/4).</p>
+<image style="block" src="../webcontent/image081.gif" alt="This probability distribution table is nearly
+the same as the previous one, but presents the calculations in a different way. The table has two rows,
+labeled &quot;X&quot; and &quot;P(X=x).&quot; Here is the data in the table, organized by column. The
+format is &quot;(X, P(X=x))&quot;
+        0: 1 &times; (1/4)^0 &times; (3/4)^(3-0);
+        1: 3 &times; (1/4)^1 &times; (3/4)^(3-1);
+        2: 3 &times; (1/4)^2 &times; (3/4)^(3-2);
+        3: 1 &times; (1/4)^3 &times; (3/4)^(3-3);"/>
+<p>So in general:</p>
+<image style="block" src="../webcontent/image082.gif" alt="[ Probability of each of the outcomes that
+has x successes out of 3 ] = (1/4)^x &times; (3/4)^(3-x)"/>
+<p>Let's move on to talk about the number of possible outcomes with x successes out of three.  Here it is harder to see the pattern, 
+    so we'll give the following mathematical result.</p>
+<section>
+<title>Result</title>
+<body>
+<p>Consider a random experiment
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T201209-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T201207-0500" content="which"?>
+                    consists of n trials, each one ending up in either success or failure. The
+                    number of possible outcomes in the sample space that have exactly k successes
+                    out of n is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mfrac>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>k</m:mi>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mi>k</m:mi>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+</m:math>
+</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101121T201240-0500"?>Note that
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T201243-0500" content="where"?>
+                    n! is read "n factorial" and is defined to be the product 1 * 2 * 3 *
+                    .<?oxy_delete author="mmyers" timestamp="20101121T201255-0500" content=" "?>.<?oxy_delete author="mmyers" timestamp="20101121T201254-0500" content=" "?>.
+                    * n. 0! is defined to be 1.</p>
+<example> <title>Ear Piercings</title>
+
+<p>You choose 12 male college students at random and record whether they have any
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T201318-0500"?>ear
+                        <?oxy_insert_end?>piercings (success) or not. There are many possible
+                        outcomes to this experiment (actually,
+                        4<?oxy_insert_start author="mmyers" timestamp="20101121T201330-0500"?>,<?oxy_insert_end?>096
+                        of them!).</p>
+<p>In how many of the possible outcomes of this experiment are there exactly 8 successes (students
+                        who
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T201349-0500"?>have at
+                        least one
+                        ear<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T201348-0500" content="are"?>
+                        pierced)?</p>
+<p>There is no way that we would start listing all these possible outcomes. The result above comes to our rescue.</p>
+<p>The result says that in an experiment like this, where you repeat a trial n times (in our case, we repeat it n = 12 times, once for each student we choose), the number of possible outcomes with exactly 8 successes (out of 12) is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mfrac>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mn>8</m:mn>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+<m:mo>-</m:mo>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>*</m:mo>
+<m:mn>2</m:mn>
+<m:mo>*</m:mo>
+<m:mn>3</m:mn>
+<m:mo>*</m:mo>
+    <m:mo>&#160;.&#160;</m:mo>
+    <m:mo>.&#160;</m:mo>
+    <m:mo>.&#160;</m:mo>
+<m:mo>*</m:mo>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+</m:mrow>
+<m:mrow>
+    <m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>*</m:mo>
+<m:mn>2</m:mn>
+<m:mo>*</m:mo>
+<m:mn>3</m:mn>
+<m:mo>*</m:mo>
+    <m:mo>&#160;.&#160;</m:mo>
+    <m:mo>.&#160;</m:mo>
+    <m:mo>.&#160;</m:mo>
+<m:mo>*</m:mo>
+<m:mn>8</m:mn>
+    <m:mo>)&#160;</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>*</m:mo>
+<m:mn>2</m:mn>
+<m:mo>*</m:mo>
+<m:mn>3</m:mn>
+<m:mo>*</m:mo>
+<m:mn>4</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>495</m:mn>
+</m:math>
+</p>
+</example>
+<!--<activity idref="_u4_m3_dig9" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_binomial2_tutor1" purpose="didigetthis"/>
+<example><title>Cards Revisited</title>
+
+<p>Let's go back to our example,
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T202403-0500"?>in
+                        which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T202402-0500" content="where"?>
+                        we have n = 3 trials (selecting 3 cards). We saw that there were 3 possible
+                        outcomes with exactly 2 successes out of 3. The result confirms this
+                        since:</p>
+<p>
+<m:math overflow="scroll">
+<m:mfrac>
+<m:mrow>
+<m:mn>3</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mn>3</m:mn>
+<m:mo>-</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>*</m:mo>
+<m:mn>2</m:mn>
+<m:mo>*</m:mo>
+<m:mn>3</m:mn>
+</m:mrow>
+<m:mrow>
+    <m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>*</m:mo>
+<m:mn>2</m:mn>
+    <m:mo>)&#160;</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>6</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+</m:math>
+</p>
+</example>
+<p>In general, then</p>
+<image style="block" src="../webcontent/image086.gif" alt="[ Number of possible outcomes with x
+successes out of 3 ] = ( 3! ) / [ x! &times; (3-x)! ]"/>
+<p>Putting it all together, we get that the probability distribution of
+                    X<?oxy_insert_start author="mmyers" timestamp="20101121T202431-0500"?>,<?oxy_insert_end?>
+                    which is binomial with n = 3 and p = 1/4 is:</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>3</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mn>x</m:mn>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mn>3</m:mn>
+<m:mo>-</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+    <m:mo>&#160;</m:mo>
+<m:mo>(</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>1</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>4</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msup>
+    <m:mo>&#160;</m:mo>
+<m:mo>(</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>3</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>4</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>3</m:mn>
+<m:mo>-</m:mo>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msup>
+<m:mi/>
+<m:mi/>
+<m:mi/>
+<m:mi/>
+<m:mi>f</m:mi>
+<m:mi>o</m:mi>
+<m:mi>r</m:mi>
+<m:mi> </m:mi>
+<m:mi>x</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+<m:mn>1</m:mn>
+<m:mo>,</m:mo>
+<m:mn>2</m:mn>
+<m:mo>,</m:mo>
+<m:mn>3</m:mn>
+</m:math>
+</p>
+<p>In general, the number of ways to get x successes (and n - x failures) in n trials is 
+    <m:math overflow="scroll">
+<m:mfrac>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>x</m:mi>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+    </m:math>
+     Therefore, the probability of x successes (and n - x failures) in n trials, where the probability of success in each trial is p (and the probability of failure is 1 - p) 
+    is equal to the number of outcomes in which there are x successes out of n trials, times the probability of x successes, times the probability of n - x failures:</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>=</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>!</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>x</m:mi>
+<m:mo>!</m:mo>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:msup>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mi>p</m:mi>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msup>
+</m:math>
+</p>
+<p>where x may take any value 0, 1,
+                    .<?oxy_delete author="mmyers" timestamp="20101121T202750-0500" content=" "?>.<?oxy_delete author="mmyers" timestamp="20101121T202749-0500" content=" "?>.
+                    , n.</p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

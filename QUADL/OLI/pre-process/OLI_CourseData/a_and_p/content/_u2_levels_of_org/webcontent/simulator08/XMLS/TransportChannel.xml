@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="LigandBindingExperiment" version="1" date="3/1/06">
+    <name>&lt;b&gt; &lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+
+            <actions>
+                <action event="record light"/> 
+               <action event="create" name="button" url="tools/button.swf"  x="25" y="400" xscale="1"  yscale="1"/>
+                <action event="create" name="bilayer" url="swfs/bilayer.swf"  x="0" y="190" xscale="1.2"  yscale="1"/>
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="0" y="0" xscale="1"  yscale="1"/> 
+                <action event="settimer" timer='3' advance='yes' resettimer='0' />
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible"/>
+                 <title>Equilibrium</title>
+                 <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium"
+                 </text>
+                <object name="userinput" state="hilight"/>
+            </objects>
+                  <nextbutton text="Begin Simulation" state="0"/>
+            <prevbutton text="Back" state="0"/>
+              </step>
+        <step id="begin">
+            <actions>
+            <action event="record light"/> 
+            <action event="initialize" name="button" data="Begin Simulation"/>  
+            </actions>
+            <objects>
+            <title>Glucose Transporter</title>
+            <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;
+            </text>
+            <object name="button" state="visible"/>
+            <object name="button" state="visible"/>
+            </objects>
+            <nextbutton text="Add Ink"  state="0"/>
+            <prevbutton text="Back" state="0"/>
+            </step>     
+        <step id="startmolecules">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Watch as the glucose passes through</title>
+                    <text> </text>
+                </object>
+                <object name="bilayer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="button" state="invisible"/>
+            </objects>
+            <actions> 
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=750,topBorder=0,bottomBorder=500,leftBorder2=0,rightBorder2=750,topBorder2=200,bottomBorder2=270">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->  
+                        <molecule numMolecules= "1"  injectionforce= "0" velocity= "0"  cast= "transportMolecule"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="250" y="150" Xoffset="0"  Yoffset="0" rotationVelocity="0"  rotation="0"   transporter="1" polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="2"   mybounce="true" />             
+                        <molecule numMolecules= "20"  injectionforce= "0" velocity= "30"  cast= "glucose"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="30"  Yoffset="30" rotationVelocity="0"  rotation="0"    polarity = "0,0,0,0,0,0,0,0" mytype="ligand"  myID="1"   bindswith="molecule2.pocket1.bound1,Kd?5,k?500" mybounce="true" />
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "40"  cast= "moleculewater"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="100" Xoffset="30"  Yoffset="30" rotationVelocity="50"  rotation="50"   polarity = "0,0,0,0,.8,1,1,.8"  mytype="molecule"  myID="3"  mybounce="true" />   
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "40"  cast= "moleculewater"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="380" Xoffset="30"  Yoffset="30" rotationVelocity="50"  rotation="50"   polarity = "0,0,0,0,.8,1,1,.8"  mytype="ligand"  myID="4"  mybounce="true" />   
+                    </molecules>
+                </action>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+   
+        
+    </steps>
+</simulation>

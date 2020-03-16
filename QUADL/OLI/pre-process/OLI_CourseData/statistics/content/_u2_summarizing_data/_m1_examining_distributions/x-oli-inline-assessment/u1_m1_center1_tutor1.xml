@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_center1_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Here are the number of hours that 9 students spend on the computer on a typical day: </p><p>1 6 7 5 8 5 11 12 15</p><p>What is the median number of hours spent on the computer?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">5</choice>
+         <choice value="Res2">6.5</choice>
+         <choice value="Res3">7</choice>
+         <choice value="Res4">7.5</choice>
+         <choice value="Res5">8</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. This is the mode, or the most frequently occurring number. The median is the middle most number, (n + 1)/2, in an ordered list of values.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. It appears you averaged 6 and 7, the 4th and 5th observations in the ordered list of values. Recall that when the number of observations is odd (which is the case here), the median is the observation in the (n + 1)/2 spot in the ordered list.</feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. After you order the data, since n = 9, the median is (9 + 1)/2
+               = 5, or the 5th observation in the ordered list, which in this case is 7.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. It appears you averaged 7 and 8, the 5th and 6th observations in the ordered list of values. Recall that when the number of observations is odd (which is the case here), the median is the observation in the (n + 1)/2 spot in the ordered list.</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. This is the middle most number in the <em style="italic">unordered</em> list of values. The median is the middle-most number, (n + 1)/2, in an <em style="italic">ordered</em> list.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

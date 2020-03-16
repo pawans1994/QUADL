@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_discrete_probability_dist4">
+<head>
+<title>Probability Distribution (4 of 5)</title>
+    <objref idref="find_probability_distribution_discrete_random"/>
+</head>
+<body>
+   
+<p>We've seen how probability distributions are created<?oxy_insert_start author="mmyers" timestamp="20101121T105426-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105425-0500" content=","?>
+            <?oxy_insert_start author="mmyers" timestamp="20101121T105427-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105427-0500" content="n"?>ow
+            it's time to use them to find probabilities.</p>
+<example><title>Changing Majors</title>
+<p>A random sample of graduating seniors was surveyed just before graduation.  One question that was asked is:  How many times did you change majors?  The results 
+are displayed in a probability distribution.</p>
+    <image src="../webcontent/image_prob_dist_chg_major.gif" alt="A probability distribution table in
+which the rows are labeled quot; and &quot;P(X = x)&quot;. Here is the data in the table, given in
+column format (x: P(X=x)):
+        0: .28;
+        1: .37;
+        2: .23;
+        3: .09;
+        4: .02;
+        5: .01;"></image>
+   
+    <p>Using this probability distribution we can answer probability questions such as:  What is the probability that a randomly selected senior has changed majors more than once?  This can be written as P(X > 1).</p>
+    <p>More than once would be translated to:  </p>
+   <table rowstyle="plain">
+       <tr><td align="right">P(X > 1)</td> <td align="center">=</td>   <td align="left">  P(X = 2) + P(X = 3) + P(X = 4) + P(X = 5)</td></tr>
+   <tr><td></td> <td align="center">=</td><td align="left"> .23 + .09 + .02 + .01</td></tr>
+       <tr><td></td> <td align="center">=</td> <td align="left">  .35</td></tr>    
+   </table>
+</example>
+    <p>As you just
+            saw<?oxy_delete author="mmyers" timestamp="20101121T105535-0500" content="/noticed"?> in
+            this example, we need to pay attention to the wording of the probability question. The
+            key words that told us which values to use for X are <em>more than</em>. The following
+            will clarify and reinforce the <em>key words</em> and their
+            meaning<?oxy_insert_start author="mmyers" timestamp="20101121T105609-0500"?>s<?oxy_insert_end?>.</p>
+<section>
+    <title>Key Words</title>
+    <body>
+      <p>Let's begin with some everyday situations using <em>at least</em> and <em>at most</em>. </p>
+        <p>Suppose someone said to you, "I
+                    need<?oxy_insert_start author="mmyers" timestamp="20101121T105630-0500"?> you to write<?oxy_insert_end?>
+                    <em>at least 10 pages</em> for a term paper." What does this mean? It means that
+                    10 pages is the smallest amount you are going to write. In other words, you will <?oxy_insert_start author="mmyers" timestamp="20101121T105714-0500"?>write<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105713-0500" content="use"?>
+                    <em>10 or more</em> pages
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T105722-0500"?>for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105721-0500" content="in"?>
+                    the term paper. This
+                    would<?oxy_delete author="mmyers" timestamp="20101121T105732-0500" content=" also"?>
+                    be the same as saying,
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T105740-0500"?>"<?oxy_insert_end?><em>not
+                        less than</em> 10
+                    pages.<?oxy_insert_start author="mmyers" timestamp="20101121T105745-0500"?>"<?oxy_insert_end?>
+                    So, for example, writing 9 pages would be unacceptable.</p>
+        <p>On the other hand, suppose you are considering the number of children you will have. You
+                    want <em>at most 3 children</em>. This means that 3 children is the most that
+                    you wish to have. In other words, you will have <em>3 or fewer</em> children.
+                    This would
+                    <?oxy_delete author="mmyers" timestamp="20101121T105817-0500" content="also "?>be
+                    the same as saying,
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T105822-0500"?>"<?oxy_insert_end?><em>not
+                        more than</em> 3
+                    children.<?oxy_insert_start author="mmyers" timestamp="20101121T105826-0500"?>"<?oxy_insert_end?>
+                    So, for example, you would not want to have 4 children.</p>
+        <p>The following table gives a list of some key words to know. Suppose a random variable X
+                    had possible values of
+                    0<?oxy_delete author="mmyers" timestamp="20101121T105840-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101121T105842-0500" content=" "?>5.</p>
+        <table>
+            <tr><th>Key Words</th> <th>Meaning</th> <th>Symbols</th> <th>Values for X</th> </tr>
+            <tr><td>more than 2</td> <td>strictly larger than 2</td> <td>X > 2</td> <td>3, 4, 5</td></tr>
+            <tr><td>no more than 2</td> <td>2 or fewer</td> <td> X ≤ 2</td> <td>0, 1, 2</td></tr>
+            <tr><td>fewer than 2</td> <td>strictly smaller than 2</td>  <td> X &lt; 2 </td> <td>0, 1</td></tr>
+            <tr><td>no less than 2</td> <td>2 or more</td> <td> X ≥ 2</td>  <td>2, 3, 4, 5</td></tr>
+            <tr><td>at least 2</td> <td>2 or more</td> <td> X ≥ 2  </td>  <td>2, 3, 4, 5</td></tr>
+            <tr><td>at most 2</td> <td>2 or fewer</td> <td> X ≤ 2 </td>  <td>0, 1, 2</td></tr>
+            <tr><td>exactly 2</td> <td>2, no more or no less, only 2</td>  <td> X = 2 </td>  <td>2</td></tr>
+        </table>
+        <p>Now try these activities to see if you get the idea.</p>
+    </body>
+</section>
+    <wb:inline idref="u3_m3_discreteprobdist4_tutor1"  purpose="learnbydoing"></wb:inline>
+    <wb:inline idref="u3_m3_discreteprobdist4_tutor2"  purpose="learnbydoing"></wb:inline>
+    <activity idref="discrete_probdist4_lbd1"  purpose="learnbydoing"></activity>
+    <p>Before we move on to the next section on
+            <?oxy_insert_start author="mmyers" timestamp="20101121T113559-0500"?>the
+            <?oxy_insert_end?>means and variances of a probability distribution, let's revisit the
+            <?oxy_insert_start author="mmyers" timestamp="20101121T113606-0500"?>c<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113605-0500" content="C"?>hanging
+            <?oxy_insert_start author="mmyers" timestamp="20101121T113610-0500"?>m<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113608-0500" content="M"?>ajors
+            example<?oxy_insert_start author="mmyers" timestamp="20101121T113612-0500"?>:<?oxy_insert_end?></p>
+    <image src="../webcontent/image_prob_dist_chg_major.gif" alt="A probability distribution table in
+which the rows are labeled quot; and &quot;P(X = x)&quot;. Here is the data in the table, given in
+column format (x: P(X=x)):
+        0: .28;
+        1: .37;
+        2: .23;
+        3: .09;
+        4: .02;
+        5: .01;"></image>
+    
+    <inquiry>
+        <question> Based upon this distribution, do you think it would be unusual to change majors 2 or more times?</question>
+        <answer>P(X ≥ 2) = .35.  So, 35% of the time a student changes majors 2 or more times.  This means that it is not unusual to do so. </answer>      
+    </inquiry>
+    <inquiry>
+        <question>Do you think it would be unusual to change majors 4 or more times?</question>
+        <answer>P(X ≥ 4) = .03.
+                So<?oxy_insert_start author="mmyers" timestamp="20101121T113951-0500"?>,<?oxy_insert_end?>
+                3% of the time a student changes majors 4 or more times.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T113736-0500"?>This means that
+                it is fairly unusual to do
+                so<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113754-0500" content="Now, it is getting to be unusual"?>. </answer>
+    </inquiry>
+    
+    <p>After we learn about means and standard deviations, we will have another way to answer these types of questions.</p>
+    
+    
+
+</body>
+</workbook_page>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist4_lbd_tutor3">
+    <title>Tutor</title>
+   <page><question id="q1">
+    <body>
+        <p>Using the probabilities you found in Question 2:</p>
+       <p>Let X represent a discrete random variable that counts the number of <em style="bold">incorrect</em> identifications.  Create the probability distribution.</p></body>
+    <short_answer id="A"/>    
+    
+    <part><response input="A" match="*" score="1"/>
+        <hint>Since there are 3 trials, X can be 0, 1, 2, or 3.</hint>
+        <hint>Count the number of Is in each of the elements in the sample space and use their probabilities to create the distribution.</hint>
+        <explanation><p>Notice that one of the elements of the sample space has
+                            <em><?oxy_insert_start author="mmyers" timestamp="20101121T112905-0500"?>0<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T112902-0500" content="zero"?></em>
+                        Is, some have
+                            <em><?oxy_insert_start author="mmyers" timestamp="20101121T112910-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T112908-0500" content="one"?></em>
+                        I, some have
+                            <em><?oxy_insert_start author="mmyers" timestamp="20101121T112913-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T112912-0500" content="two"?></em>
+                        Is, and one has
+                            <em><?oxy_insert_start author="mmyers" timestamp="20101121T112918-0500"?>3<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T112917-0500" content="three"?></em>
+                        Is.</p>
+            <p>When <em>X = 0</em> we have CCC.  Thus, P(X = 0) = 0.512.</p>
+            <p>When <em>X = 1</em> we have ICC, CIC, and CCI. All of these had the same probability.
+                        Thus, P(X = 1) =
+                        3(0.128)<?oxy_insert_start author="mmyers" timestamp="20101121T112941-0500"?>,<?oxy_insert_end?>
+                        or 0.384.</p>
+        <p>When <em>X = 2</em>, we have IIC, ICI, and CII.  All of these had the same probability.  Thus, P(X = 2) = 3(.032)  or  0.096.</p>
+        <p>Last, when <em>X = 3</em>, we have III.  Thus, P(X = 3) = 0.008.</p>
+      <p>The sum of these probabilities is indeed 1:  0.512 + 0.384 + 0.096 + 0.008 = 1.</p>
+        <p>This is summarized
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T113016-0500"?>in the
+                        table <?oxy_insert_end?>below:</p>
+            <image src="../webcontent/u4_m3_discrete_probdist4_lbd_image1.gif"/>
+        </explanation>
+    </part>
+   
+</question></page>
+    <page>
+        <content><p>Now we wish to find some probabilities using the probability distribution you just
+                created.<?oxy_delete author="mmyers" timestamp="20101121T113041-0500" content="."?></p><image src="../webcontent/u4_m3_discrete_probdist4_lbd_image1.gif"/></content>
+        
+        <question id="q2">
+            <body><p>Find P(at least one identification is incorrect).</p></body>
+            <short_answer id="A"/>
+            <part>
+                <response input="A" match="*" score="1"></response>
+                <hint>At least one means one or more.  What values of X are one or more?</hint>
+                <hint>At least one means is X is 1, 2, or 3.  In other words, X ≥ 1.</hint>                
+                <explanation><p>At least one means P(X ≥ 1). So X can be 1, 2, or 3. This means the probability is 0.384 + 0.096
+                        + 0.008 = 0.488. </p>
+                    <p>Using complements P(X ≥ 1) = 1 = P(X = 0) or 1 - 0.512, which is also 0.488.</p></explanation>
+            </part>
+
+        </question>
+    </page>
+    
+    <page>
+        <content><image src="../webcontent/u4_m3_discrete_probdist4_lbd_image1.gif"/></content> 
+        <question id="q3">
+            <body><p/>Find P(more than
+                <?oxy_insert_start author="mmyers" timestamp="20101121T113322-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113320-0500" content="two"?>
+                identifications are incorrect).</body>
+            <short_answer id="B"/>
+            <part><response input="B" match="*" score="1"></response>
+                 <hint>What values for X are more than 2?</hint>
+            <hint>The only value for X that is more than 2 is 3.</hint>
+                <explanation>The only value for X that is more than 2 is 3.  P(X = 3) = 0.008.</explanation>           </part>
+           
+        </question>
+        
+    </page>
+    
+    <page>
+        <content><image src="../webcontent/u4_m3_discrete_probdist4_lbd_image1.gif"/></content> 
+        <question id="q4">
+            <body><p/>Find P(no more than one identification is incorrect).</body>
+            <short_answer id="C"/>
+            <part><response input="C" match="*" score="1"></response>
+                <hint>What values for X are not more than 1?</hint>
+                <hint>The values for X that are no more than 1 are 0 and 1.</hint>
+                <explanation><p>The values for X that are no more than one are <?oxy_insert_start author="mmyers" timestamp="20101121T113405-0500"?>0<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113403-0500" content="zero"?>
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T113357-0500"?>and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113356-0500" content="or"?>
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T113410-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T113409-0500" content="one"?>. </p>
+                    <p>P(no more than one identification is incorrect) = P(X = 0) + P(X = 1) = 0.512
+                        +
+                        0.384<?oxy_insert_start author="mmyers" timestamp="20101121T113428-0500"?>,<?oxy_insert_end?>
+                        or 0.896.</p>
+                </explanation>           </part>
+         
+        </question>
+        
+    </page>
+</assessment>

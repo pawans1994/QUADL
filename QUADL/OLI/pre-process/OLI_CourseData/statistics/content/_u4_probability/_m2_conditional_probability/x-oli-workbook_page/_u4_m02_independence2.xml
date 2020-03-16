@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_independence2">
+<head>
+<title>Independence (2 of 2)</title>
+    <objref idref="determine_whether_two_events_are_independent"/>
+</head>
+<body>
+   
+<section>
+<title>Comment</title>
+<body>
+<p>Recall the pierced ears example. We checked the independence of the events M (being a male) and E
+                    (having pierced ears) by comparing P(E) to P(E<?oxy_insert_start author="mmyers" timestamp="20101109T115641-0500"?>
+                    <?oxy_insert_end?>|<?oxy_insert_start author="mmyers" timestamp="20101109T115641-0500"?>
+                    <?oxy_insert_end?>M).</p>
+<p>An alternative method of checking for dependence would be to compare P(E | M) with P(E | not M) [same as P(E | F)].  In our case, P(E | M) = 36/180 = .2, while P(E | not M) = 288/320 = .9, and since the two are very different, we can say that the events E and M are not independent.</p>
+<p>In general, another method for checking the independence of events A and B is to compare <em>P(B
+                        | A) and P(B | not A)</em>. In other words, two events are independent if
+                    the probability of one event does not change whether we know that the other
+                    event has occurred or we know that the other event
+                    <?oxy_insert_start author="mmyers" timestamp="20101109T120105-0500"?>has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T120103-0500" content="did"?>
+                    not
+                    occur<?oxy_insert_start author="mmyers" timestamp="20101109T120108-0500"?>red<?oxy_insert_end?>.
+                    It can be shown that <em>P(B | A) and P(B | not
+                    A)</em><?oxy_delete author="mmyers" timestamp="20101109T120402-0500" content="."?>
+                    would differ whenever P(B) and P(B | A) differ, so this is another perfectly
+                    legitimate way to establish dependence or independence.</p>
+</body>
+</section>
+<!--<activity idref="_u4_m2_dig4" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p>Recall again the smoke alarms example.</p>
+            <p> A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. </p>
+            <image src="../webcontent/dig002.gif" alt="A table, in which the column headings are
+&quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot;
+and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:
+            D, B: .38;
+            D, not B: .57;
+            D, Total: .95;
+            not D, B: .02;
+            not D, not B: .03;
+            not D, Total: .05;
+            Total, B: .40;
+            Total, not B: .60;
+            Total, Total: 1.00;"/>
+    <wb:inline idref="u3_m2_independence2_tutor1" purpose="didigetthis"/>
+            
+        </body>
+    </section>
+    
+<p>Before we establish a general rule for independence, let's consider an example
+            <?oxy_insert_start author="mmyers" timestamp="20101111T092929-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T092928-0500" content="which"?>
+            will illustrate another method that we can use to check whether two events are
+            independent:</p>
+<example>
+
+<p>A
+                <?oxy_insert_start author="mmyers" timestamp="20101201T093757-0500"?>group<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101201T093755-0500" content="class"?>
+                of 100 college students were surveyed about their gender and whether they had
+                decided on a major. </p>
+<image style="block" src="../webcontent/image004.gif" alt="A table. The column headings are
+&quot;Decided,&quot; &quot;Undecided,&quot; and &quot;Total.&quot; The rows are
+&quot;Female,&quot; &quot;Male,&quot; and &quot;Total.&quot; Here is the data in
+the table in &quot;Row, Column: Value&quot; format.
+    Female, Decided: 27;
+    Female, Undecided: 33;
+    Female, Total: 60;
+    Male, Decided: 18;
+    Male, Undecided: 22;
+    Male, Total: 40;
+    Total, Decided: 45;
+    Total, Undecided: 55;
+    Total, Total: 100;"/>
+<p>Offhand, we wouldn't necessarily have any compelling reason to expect that deciding on a major would depend on a student's gender. We can check for independence by comparing the overall probability of being decided to the probability of being decided given that a student is female:</p>
+<p>P(D) = 45/100 = .45 and P(D | F) = 27/60 = .45. </p>
+<p><?oxy_comment_start author="mmyers" timestamp="20101111T102415-0500" comment="You are sying that the two must be exactly equal in order for the events to be independant, but with such a small sample size, I don&apos;t see why a small amount of &quot;inequality&quot; in those equations would necessarily imply any &quot;real&quot; dependence, even though it would imply mathematical dependence. In other words, if one less man were decided in the graph below, I don&apos;t think it would be fair to make the statement that men are less likely to have decided their majors. 
+
+Should there be a note explaining the difference between &quot;not being able to prove mathematical independence&quot; and &quot;being able to prove real-world dependence&quot;?"?>The
+                fact that the two are equal<?oxy_comment_end?> tells us that, as we might expect,
+                deciding on a major is independent of gender.
+                <?oxy_delete author="mmyers" timestamp="20101111T093306-0500" content="["?>Note from
+                the comment that these must also equal P(D | M), which is 18/40 =
+                .45.<?oxy_delete author="mmyers" timestamp="20101111T093309-0500" content="]"?></p>
+<p>Now let's approach the issue of independence in a different way: first, we may note that the overall probability of being decided is 45/100 = .45. </p>
+<image style="block" src="../webcontent/image005.gif" alt="The same table as the previous. Cells will
+ be named in &quot;{Row, Column: Value}&quot; format.
+            The {Total, Decided: 45} and {Total, Total: 100} cells have been highlighted because they
+are the cells used to derive the overall probability of being decided."/>
+<p>And the overall probability of being female is 60/100 = .60. </p>
+<image style="block" src="../webcontent/image006.gif" alt="The same table again except cells {Female, Total: 60} and
+{Total, Total: 100} have been highlighted because those cells are used to calculate the probability of being
+female."/>
+<p>If being decided is independent of gender, then 45% of the 60% of the class who are female should
+                have a decided major; in other words, the probability of being female and decided
+                should equal the probability of being female multiplied by the probability of being
+                decided. If the events F and D are independent, we should have P(F and D)<?oxy_insert_start author="mmyers" timestamp="20101111T093438-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101111T093438-0500"?>
+                <?oxy_insert_end?>P(F)<?oxy_insert_start author="mmyers" timestamp="20101111T093439-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101111T093439-0500"?>
+                <?oxy_insert_end?>P(D).</p>
+<p>In fact, P(F and D) = 27/100 = .27 = P(F) * P(D) = .45 * .60. This confirms our alternate verification of independence.</p>
+</example>
+<p>In general, another method for checking the independence of events A and B is to compare P(A and B) to P(A) * P(B).  If the two are equal, then A and B are independent, otherwise the two are not independent.</p>
+<p>Let's summarize all the possible methods we've seen for checking the independence of events in one rule:</p>
+<p>Two events A and B are independent if any one of the following hold:</p>
+<p>P(B | A) = P(B)</p>
+<p>P(A | B) = P(A)</p>
+<p>P(B | A) = P(B | not A)</p>
+<p>P(A and B) =
+            <?oxy_comment_start author="mmyers" timestamp="20101111T093633-0500" comment="addition correct?"?>P(A)
+            <?oxy_insert_start author="mmyers" timestamp="20101111T093615-0500"?>*
+            <?oxy_insert_end?>P(B)<?oxy_comment_end?></p>
+<section>
+<title>Comment</title>
+<body>
+<p>These various equalities turn out to be equivalent, so that if one equality holds, all are equal,
+                    and if one equality does not hold, all are not equal. (This is the case for the
+                    same reason that knowing one of
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T094726-0500"?>the values
+                    <?oxy_insert_end?>P(A and B), P(A and not B), P(not A and B),
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T094808-0500"?>or
+                    <?oxy_insert_end?>P(not A and not B), along with P(A) and P(B),
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T094816-0500"?>allows you
+                    to
+                    <?oxy_insert_end?>determine<?oxy_delete author="mmyers" timestamp="20101111T094821-0500" content="s"?>
+                    the remaining cells of
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T094828-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T094829-0500" content="the"?>
+                    two-way
+                    <?oxy_insert_start author="mmyers" timestamp="20101111T094832-0500"?>probability
+                    <?oxy_insert_end?>table.)</p>
+<p>Therefore, in order to check whether events A and B are independent or
+                    not<?oxy_delete author="mmyers" timestamp="20101111T102836-0500" content=" "?>,
+                    it is sufficient to check only whether one of the four
+                    equalit<?oxy_insert_start author="mmyers" timestamp="20101111T094847-0500"?>ies<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T094846-0500" content="y"?>
+                    holds<?oxy_insert_start author="mmyers" timestamp="20101111T094902-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T094900-0500" content=" - "?>whichever
+                    is easiest for you.</p>
+</body>
+</section>
+<!--<activity idref="_u4_m2_lbd2" purpose="learnbydoing"/>-->
+    <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101111T094913-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T094912-0500" content="is"?>
+            next activity is to practice checking the independence of two events using the four
+            different possible methods that we've provided, and see that all of them will lead us to
+            the same conclusion, regardless of which of the four methods we use.</p>
+    <wb:inline idref="u3_m2_independence2_tutor2" purpose="learnbydoing"/>
+    <section>
+        <title>Checkpoint</title>
+        <body>
+            <p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>
+            <p>
+                 
+            </p>
+            <activity idref="_u4_m2_checkpoint1_pool" purpose="checkpoint"/>
+        </body>
+    </section>
+    
+</body>
+</workbook_page>

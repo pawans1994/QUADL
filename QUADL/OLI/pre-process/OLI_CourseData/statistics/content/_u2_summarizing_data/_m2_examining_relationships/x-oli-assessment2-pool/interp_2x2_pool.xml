@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_2x2_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_2x2" select="single">
+        <!-- LO: interp_2x2 -->
+        <body>
+            <p>Which of the tables is the appropriate table of conditional percentages to discover
+                if the region where one lives affects whether or not one has health insurance?</p>
+            <image src="../../webcontent/flash/didigetthis_caseii2_02q3image1.gif" />
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Table A</choice>
+            <choice value="B">Table B</choice>
+            <choice value="C">Table C</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. This table reports the conditional percentages for each value of
+                    the explanatory variable (region) displayed in the rows: northeast, midwest,
+                    south, and west.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This table reports percentages each cell contributes to the
+                    whole rather than conditional percentages for each value of the explanatory
+                    variable.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. We need to find the conditional percentages for each value of
+                    the explanatory variable. This table displays the conditional percentages for
+                    health insurance, which is not the explanatory variable.</feedback>
+            </response>
+
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_2x2" select="single">
+        <!-- LO: interp_2x2 -->
+        <body>
+            <p>A 2009 study analyzed data from the National Longitudinal Study of Adolescent Health.
+                Participants were followed into adulthood. Each study participant was categorized as
+                to whether they were obese (BMI &gt;30) or not and whether they were dating,
+                cohabiting, or married. The table below summarizes the results.</p>
+            <image src="../webcontent/checkpoint_pool_table1.gif" />
+            <p>What percentage of those who were married were obese? (Round your answer to 1 decimal
+                place.)</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">34.7% (147/424)</choice>
+            <choice value="B">44.4% (147/331)</choice>
+            <choice value="C">32.8% (424/1293)</choice>
+            <choice value="D">25.6% (331/1293)</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The percentage of those who were married that were obese is
+                    calculated as the number of married and obese participants divided by the number of
+                    married participants (147/424).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like you calculated the percentage of obese participants who
+                    were married (147/331). The question asks for the percentage of <em style="italic">married participants who were obese.</em></feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks like you calculated the percent of participants who were
+                    married (424/1293). The question asks for the percentage of married participants <em style="italic">who were obese.</em></feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It looks like you calculated the percentage of participants who were
+                    obese (331/1293). The question asks for the percentage of <em style="italic">married</em> participants who
+                    were obese.</feedback>
+            </response>
+
+        </part>
+    </multiple_choice>
+
+</pool>

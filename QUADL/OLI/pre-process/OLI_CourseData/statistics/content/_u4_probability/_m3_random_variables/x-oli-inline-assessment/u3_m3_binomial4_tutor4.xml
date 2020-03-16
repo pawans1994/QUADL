@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial4_tutor4">
+   <title>Tutor</title>
+   <page>
+      <question id="q1">
+         <body><p>Change the value of p to 0.2, and set n all the way to the left to n=10. </p>
+            <p>What is the shape of the distribution? </p></body>
+
+
+         <multiple_choice shuffle="false">
+            <choice value="res1">symmetric</choice>
+            <choice value="res2">skewed right</choice>
+            <choice value="res3">skewed left</choice>
+         </multiple_choice>
+         <part>
+            <response match="res1" score="0">
+               <feedback>Incorrect. The distribution is not symmetric.</feedback>
+            </response>
+            <response match="res2" score="1">
+               <feedback>Correct. The distribution is not symmetric. Most of it is on the left, with
+                  a long tail to the right.</feedback>
+            </response>
+            <response match="res3" score="0">
+               <feedback>Incorrect. When a distribution is skewed left, most of it is on the right,
+                  with a long tail to the left.</feedback>
+            </response>
+
+         </part>
+      </question>
+
+      <question id="q2">
+         <body><p>Increase the value of n by moving the slider to the right. As the value of n
+               increases, the shape of the distribution becomes roughly <input_ref input="A"/>
+            </p></body>
+         <text id="A" size="medium"/>
+
+
+         <part>
+            <response input="A" match="symmetric-unimodal" score="10">
+               <feedback>Correct. The distribution shape becomes roughly symmetric when n is large
+                  with most of the data (high bars) in the middle and very little data (low bars) in
+                  the extremes.</feedback>
+            </response>
+            <response input="A" match="Symmetric" score="10">
+               <feedback>Correct. It is symmetric with most of the data (high bars) in the middle
+                  and very little data (low bars) in the extremes.</feedback>
+            </response>
+            <response input="A" match="symmetric" score="10">
+               <feedback>Correct. It is symmetric with most of the data (high bars) in the middle
+                  and very little data (low bars) in the extremes.</feedback>
+            </response>
+            <response input="A" match="normal" score="0">
+               <feedback>Not quite right. While it is true that for large values of n the
+                  distribution resembles the normal (bell-shaped) distribution, note that for small
+                  values of n the distribution is symmetric but not quite bell-shaped.</feedback>
+            </response>
+
+            <response input="A" match="bell" score="0">
+               <feedback>Not quite right. While it is true that for large values of n the
+                  distribution resembles the normal (bell-shaped) distribution, note that for small
+                  values of n the distribution is symmetric but not quite bell-shaped.</feedback>
+            </response>
+            <response input="A" match="a bell" score="0">
+               <feedback>Not quite right. While it is true that for large values of n the
+                  distribution resembles the normal (bell-shaped) distribution, note that for small
+                  values of n the distribution is symmetric but not quite bell-shaped.</feedback>
+            </response>
+            <response input="A" match="bell curve" score="0">
+               <feedback>Not quite right. While it is true that for large values of n the
+                  distribution resembles the normal (bell-shaped) distribution, note that for small
+                  values of n the distribution is symmetric but not quite bell-shaped.</feedback>
+            </response>
+
+            <response input="A" match="*" score="0">
+               <feedback>Incorrect. Please try another shape.</feedback>
+            </response>
+            <hint>You may wish to review the types of distributions in the Exploratory Data Analysis
+               section, under One Quantitative Variable, Graphs, Histogram (2 of 3).</hint>
+            <hint>Enter "symmetric" in the highlighted text box.</hint>
+
+         </part>
+      </question>
+
+   </page>
+</assessment>

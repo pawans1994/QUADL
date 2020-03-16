@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_condprob2_tutor1">
+   <title>Tutor</title>
+   
+   <question id="q1">
+      <body>
+         <p>Which of the following represents the probability that a randomly chosen female has
+            pierced ears? In other words, what is the conditional probability that a randomly chosen
+            student has pierced ears, given that this student is
+            <?oxy_delete author="mmyers" timestamp="20101109T102001-0500" content="a "?>female? </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">P (E | M)</choice>
+         <choice value="Res2">P (not E | M)</choice>
+         <choice value="Res3">P (not M | E)</choice>
+         <choice value="Res4">P (E | not M)</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P(E | M) represents the probability that a randomly chosen student has pierced ears (E) given that this student is a male (M). </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. P(not E | M) represents the probability that a randomly chosen student does not have pierced ears (not E), given that this student is a male (M).</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. P(not M | E) represents the probability that a randomly chosen student is a female (not M) given that this student has pierced ears (E).
+</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102046-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102045-0500" content="J"?>ob!
+               P(E | not M) represents the probability that a randomly chosen student has pierced
+               ears (E) given that this student is a female (not M). </feedback>
+         </response>
+      </part>
+   </question>
+   
+   <question id="q2">
+      <body>
+         <p>Which of the following represents the probability that a randomly chosen student is a
+            non-pierced male? </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">P(not E | M)</choice>
+         <choice value="Res2">P(E | not M)</choice>
+         <choice value="Res3">P(not E and M)</choice>
+         <choice value="Res4">P(E and not M)</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P(not E | M) represents the probability that a randomly
+               chosen student does not have pierced ears, given that the student is a male. Note
+               that we are not looking for a conditional probability here. We are looking for the
+               probability that a randomly chosen student is a non-pierced male.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. P(E | not M) represents the probability that a randomly
+               chosen student has pierced ears, given that the student is a female. Note that we are
+               not looking for a conditional probability here. We are looking for the probability
+               that a randomly chosen student is a non-pierced male.
+            </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102147-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102147-0500" content="J"?>ob!
+               Indeed, we are not looking for a conditional probability here. We are looking for the
+               probability that a randomly chosen student is a non-pierced male. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. While you are right that we are not looking for
+               conditional probability here, P(E and not M) represents the probability that a
+               randomly chosen student is a pierced female, and we are looking for the probability that a randomly chosen student is a non-pierced male. </feedback>
+         </response>
+      </part>
+   </question>
+   
+   <question id="q3">
+      <body>
+         <p>P(not E | not M) represents the probability that:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">a randomly chosen male does not have pierced ears.</choice>
+         <choice value="Res2">a randomly chosen female does not have pierced ears.</choice>
+         <choice value="Res3">a randomly chosen student is a non-pierced female.</choice>
+         <choice value="Res4">a randomly chosen non-pierced student is a female.</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P(not E | not M) is a probability conditioned on the
+               student selected being a female (not M). </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102332-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102331-0500" content="J"?>ob!
+               P(not E | not M) conditions on the student being a female (not M). In other words, we
+               choose only among the female students. </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. The probability that you chose is P(not E and not M).
+               Note that in P(not E | not M) we are conditioning on the student being a female. In
+               other words, we choose only among the female students. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. The probability that you chose assumes that we are
+               choosing only among the non-pierced students, so it represents P(not M | not E), and
+               not the probability we are looking
+               for<?oxy_insert_start author="mmyers" timestamp="20101109T102524-0500"?>,<?oxy_insert_end?>
+               which is P(not E | not M). </feedback>
+         </response>
+      </part>
+   </question>
+   
+   <question id="q4">
+      <body>
+         <p>What is P(not E | not M), the probability that a randomly chosen female does not have
+            pierced ears?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">288/320</choice>
+         <choice value="Res2">32/176</choice>
+         <choice value="Res3">32/320</choice>
+         <choice value="Res4">32/500</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Your denominator is right<?oxy_insert_start author="mmyers" timestamp="20101109T102650-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102650-0500" content=","?>
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102652-0500"?>W<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102652-0500" content="w"?>e
+               are conditioning on the student being a female, and therefore restricting ourselves
+               only to the 320 female students. However, note that 288 out of the females are
+               pierced and we
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102639-0500"?>are looking
+               for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102637-0500" content="asked"?>
+               P(not E | not M). </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. If your denominator is 176, this means that you
+               restrict yourselves to the second column, or, in other words, you condition on the
+               fact that the student is not pierced (not E). 32/176, then, represents P(not M | not E),
+               and we are looking for P(not E | not M). </feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102745-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102744-0500" content="J"?>ob!
+               When
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102759-0500"?>we<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T102758-0500" content="you"?>
+               condition on
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102749-0500"?>"<?oxy_insert_end?>not
+               M,<?oxy_insert_start author="mmyers" timestamp="20101109T102751-0500"?>"<?oxy_insert_end?>
+               this means that we are restricting ourselves
+               <?oxy_insert_start author="mmyers" timestamp="20101109T102807-0500"?>to
+               <?oxy_insert_end?>only
+               <?oxy_delete author="mmyers" timestamp="20101109T102810-0500" content="to "?>the 320
+               female students. Indeed, among them, 32 are not pierced, and therefore 32/320 is the
+               right answer. </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. If your denominator is 500, this means that you are
+               choosing among the 500 students, without assuming (or conditioning on) anything.
+               32/500 represents, then, the probability that a randomly chosen student is a
+               non-pierced
+               female<?oxy_delete author="mmyers" timestamp="20101109T103034-0500" content=" - "?><?oxy_insert_start author="mmyers" timestamp="20101109T103037-0500"?>&#8212;<?oxy_insert_end?>P(not
+               E and not M). Note that we are looking for P(not E | not
+               M)<?oxy_insert_start author="mmyers" timestamp="20101109T103046-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103046-0500" content=" - "?>we
+               are conditioning on the student being a
+               female<?oxy_insert_start author="mmyers" timestamp="20101109T103101-0500"?>,<?oxy_insert_end?>
+               or in other words, we are choosing only from the 320 females. </feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

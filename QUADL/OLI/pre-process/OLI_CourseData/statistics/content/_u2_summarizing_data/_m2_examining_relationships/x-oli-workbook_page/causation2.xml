@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="causation2">
+<head>
+<title>Causation and Lurking Variables (2 of 5)</title>
+
+  <objref idref="recognize_association_causation"/>
+</head>
+<body>
+   
+<p>Let's start by looking at the following example:</p>
+<example>
+<title>Fire Damage</title>
+<p>The scatterplot below illustrates how the number of firefighters sent to fires (X) is related to
+                                                  the amount of damage caused by fires (Y) in a
+                                                  certain city. <image style="block"
+                                                  src="../webcontent/causation2.gif" alt="A
+scatterplot in which the horizontal axis is labeled &quot;# Of Firefighters&quot;, and the vertical
+axis is labeled &quot;Damage ($)&quot;. The vertical axis ranges from $0 to $2500000 and the
+horizontal axis ranges from 0 to 40."/>
+                                                </p>
+<p>The scatterplot clearly displays a fairly strong (slightly curved) <em>positive</em> relationship
+                                                  between the two variables. Would it, then, be
+                                                  reasonable to conclude that sending more
+                                                  firefighters to a fire causes more damage, or that
+                                                  the city should send fewer firefighters to a fire,
+                                                  in order to decrease the amount of damage done by
+                                                  the fire?
+                                                  Of
+                                                  course not!  So what
+                                                  is going on here?</p>
+<p>There is a <em>third variable in the background</em>&#8212;the seriousness of the fire&#8212;that
+                                                  is responsible for the observed relationship. More
+                                                  serious fires require more firefighters, and also
+                                                  cause more damage.</p>
+<p>The following figure will help you visualize this situation:
+			<image style="block" src="../webcontent/causation3.gif" alt="A flowchart. The &quot;
+Seriousness of the fire&quot; is a &quot;lurking variable.&quot; This is a cause of both
+&quot;Number of firefighters (X)&quot; and &quot;amount of damage (Y)&quot; We have
+falsely observed a &quot;observed association&quot; between &quot;Number of firefighters (X)
+&quot; and &quot;Amount of damage (Y)&quot;"/>
+</p>
+<p>Here, the seriousness of the fire is a <em>lurking variable. </em> A <em>lurking variable</em> is
+                                                  a variable that is not among the explanatory or
+                                                  response variables in a study, but could
+                                                  substantially affect your interpretation of the
+                                                  relationship among those variables.</p>
+</example>
+<p>In particular, as in our example, the lurking variable might have an effect on <em style="italic"
+                                                  >both</em> the explanatory and the response
+                                                variables. This common effect creates the observed
+                                                association between the explanatory and response
+                                                variables, even though there is no causal link
+                                                between them. This possibility, that there might be
+                                                a lurking variable (which we might not be thinking
+                                                about) that is responsible for the observed
+                                                relationship leads to our principle: </p>
+		<theorem type="principle">
+<statement><p>Association <em>does not</em> imply causation!</p></statement>
+</theorem>
+
+</body>
+</workbook_page>

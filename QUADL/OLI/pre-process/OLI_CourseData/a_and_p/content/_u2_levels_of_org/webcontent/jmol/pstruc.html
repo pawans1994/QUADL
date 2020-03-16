@@ -1,0 +1,249 @@
+<HTML>
+<HEAD><TITLE>
+Secondary Structural Elements of Proteins
+</TITLE>
+<script src="./jmol/Jmol.js" type="text/javascript"></script>&nbsp;
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+<script type="text/javascript">
+jmolInitialize("./jmol");
+jmolSetAppletColor("gray");
+</script>&nbsp;
+<TABLE BORDER=0 WIDTH=850 CELLPADDING=0 CELLSPACING=0>
+<TH>&nbsp;</TH>
+<TH align=left>Biochemistry I</th>
+    <TH colspan=2 align=right>Secondary Structural Elements</TH>
+<TR>
+
+    <TD bgcolor="#eeeeee">&nbsp;</TD>
+
+    <TD bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolApplet([420,350],
+"load ./jmol/pdbs/pstruc/trans.pdb;rotate z -100","left");
+</script>
+        <br>
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolRadioGroup([
+["background white;color labels black","white",true],
+["background gray;color labels black","gray",false],
+["background [100,100,255];color labels black","Lt blue",false],
+["background black;color label yellow","black",false]]," ","Background color")
+</script>&nbsp;
+<script type="text/javascript">
+jmolSetTarget("left")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+</TD>
+
+    <TD>&nbsp;</TD>
+    <TD bgcolor="#eeeeee">
+        <script type="text/javascript">
+            jmolApplet([420,350],
+            "load ./jmol/pdbs/pstruc/trans.pdb;rotate z -100","right");
+        </script>
+        <br>
+            <script type="text/javascript">
+                jmolSetTarget("right") 
+                jmolRadioGroup([
+                ["background white;color labels black","white",true],
+                ["background gray;color labels black","gray",false],
+                ["background [100,100,255];color labels black","Lt blue",false],
+                ["background black;color label yellow","black",false]]," ","Background color")
+            </script>
+            <script type="text/javascript">
+                jmolSetTarget("right")
+                jmolCheckbox("spin on","spin off", "Spin", false)
+            </script>
+    </TD>
+</TR>
+    <TR>
+        <TD bgcolor="#eeeeee">&nbsp;</TD>
+        <TD bgcolor="#eeeeee"><B>Peptide Bond</B><BR>
+    <!--Left Buttons here-->
+    <font color="#000000">
+&nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("zap;load ./jmol/pdbs/pstruc/trans.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Ala';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+        </script>&nbsp;Ala-Ala Trans&nbsp;&nbsp;
+        <script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("zap;load ./jmol/pdbs/pstruc/cis.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Ala';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+        </script>&nbsp;Ala-Ala cis<BR>
+&nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("zap;load ./jmol/pdbs/pstruc/pro_trans.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Pro';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+        </script>&nbsp;Ala-Pro Trans&nbsp;&nbsp;
+        <script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("zap;load ./jmol/pdbs/pstruc/pro_cis.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Pro';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+        </script>&nbsp;Ala-Pro cis
+            <BR>
+                <B>Protein G:</B>
+                <script type="text/javascript">
+                    jmolSetTarget("left") 
+                    jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;rotate z 49;rotate y 77;rotate z -136;select all;wireframe off;spacefill off;select protein and not hetero;wireframe 40;spacefill 120;set specular on;select all","","","Prot G");  
+                </script>&nbsp;Protein G&nbsp;&nbsp;
+                <script type="text/javascript">
+                    jmolSetTarget("left") 
+                    jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;select *;rotate z 49;rotate y 77;rotate z -136;wireframe off;spacefill off;cartoons;color structure;set specular on;select all","","","Prot G");  
+                </script>&nbsp;Protein G [cartoon]
+<BR><B>Secondary Structure:</B>
+&nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("zap;load ./jmol/pdbs/pstruc/alpha.pdb;reset;select *;rotate z 160;wireframe 40;spacefill 120;set specular on; select atomno=1;label 'N';select atomno=75;Label 'C';set fontsize 9;color labels purple;restrict elemno>1;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","a-helix");  
+    </script>&nbsp;<font face="symbol">a</font>-helix&nbsp;&nbsp;
+    <script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("zap;load ./jmol/pdbs/pstruc/helix3_10.pdb;reset;select *;rotate z 160;wireframe 40;spacefill 120;set specular on;select atomno=1;label 'N';select atomno=75;label 'C';set fontsize 9;color labels purple;restrict elemno>1;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","3-10 helix");  
+    </script>&nbsp;3-10-helix&nbsp;&nbsp;&nbsp;
+    
+    <script type="text/javascript">
+        jmolSetTarget("left")
+        jmolCheckbox("dots on;color dots yellow","dots off", "Dots", false)
+    </script>&nbsp;
+    
+    <br>
+&nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("zap;load ./jmol/pdbs/pstruc/beta.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];restrict elemno>1","","","b-strand");  
+    </script>&nbsp;<font face="symbol">b</font>-stand.
+    <script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;rotate z 163.45; rotate y 120.08; rotate z -104.38;center atomno=398;zoom 150;select all;wireframe off;spacefill off;select ((3-9 or 50-55) and ((backbone) or *.CB));wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple","","","b-strand");  
+    </script>&nbsp;||  <font face="symbol">b</font>-sheet.
+        <script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb; rotate z 178.1; rotate y 130.93; rotate z 113.07;center atomno=335;zoom 150;select all;wireframe off;spacefill off;select ((42-47 or 50-55) and ((backbone) or *.CB));wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple","","","b-strand");  
+        </script>&nbsp;anti-||  <font face="symbol">b</font>-sheet;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("left")
+        jmolCheckbox("hbonds calculate;color hbonds yellow;hbonds 80","hbonds off", "H-bonds", false)
+    </script>&nbsp;
+        
+        <TD>&nbsp;</TD>
+        <TD bgcolor="#eeeeee">&nbsp;<B>Peptide Bond</B><BR>
+            <!--Right Buttons here-->
+            
+            <font color="#000000">
+&nbsp;&nbsp;<script type="text/javascript">
+                    jmolSetTarget("right") 
+                    jmolButton("zap;load ./jmol/pdbs/pstruc/trans.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Ala';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+                </script>&nbsp;Ala-Ala Trans&nbsp;&nbsp;
+                <script type="text/javascript">
+                    jmolSetTarget("right") 
+                    jmolButton("zap;load ./jmol/pdbs/pstruc/cis.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Ala';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+                </script>&nbsp;Ala-Ala cis<BR>
+&nbsp;&nbsp;<script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/pstruc/pro_trans.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Pro';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+                    </script>&nbsp;Ala-Pro Trans&nbsp;&nbsp;
+<script type="text/javascript">
+                        jmolSetTarget("right") 
+                        jmolButton("zap;load ./jmol/pdbs/pstruc/pro_cis.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;select atomno=1;label '  Ala-Pro';set fontsize 9;color labels purple;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","Trans");  
+                    </script>&nbsp;Ala-Pro cis
+                    <BR>
+                        &nbsp;<B>Protein G:</B>
+                        <script type="text/javascript">
+                            jmolSetTarget("right") 
+                            jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;rotate z 49;rotate y 77;rotate z -136;select all;wireframe off;spacefill off;select protein and not hetero;wireframe 40;spacefill 120;set specular on;select all","","","Prot G");  
+                        </script>&nbsp;Protein G&nbsp;&nbsp;
+                        <script type="text/javascript">
+                            jmolSetTarget("right") 
+                            jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;select *;rotate z 49;rotate y 77;rotate z -136;wireframe off;spacefill off;cartoons;color structure;set specular on;select all","","","Prot G");  
+                        </script>&nbsp;Protein G [cartoon]
+                        <BR>
+                            
+                            &nbsp;<B>Secondary Structure:</B>
+&nbsp;&nbsp;<script type="text/javascript">
+                                jmolSetTarget("right") 
+                                jmolButton("zap;load ./jmol/pdbs/pstruc/alpha.pdb;reset;select *;rotate z 160;wireframe 40;spacefill 120;set specular on; select atomno=1;label 'N';select atomno=75;Label 'C';set fontsize 9;color labels purple;restrict elemno>1;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","a-helix");  
+                            </script>&nbsp;<font face="symbol">a</font>-helix&nbsp;&nbsp;
+                            <script type="text/javascript">
+                                jmolSetTarget("right") 
+                                jmolButton("zap;load ./jmol/pdbs/pstruc/helix3_10.pdb;reset;select *;rotate z 160;wireframe 40;spacefill 120;set specular on;select atomno=1;label 'N';select atomno=75;label 'C';set fontsize 9;color labels purple;restrict elemno>1;select *;select all;color white;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];select all","","","3-10 helix");  
+                            </script>&nbsp;3-10-helix&nbsp;&nbsp;&nbsp;
+                            
+                            <script type="text/javascript">
+                                jmolSetTarget("right")
+                                jmolCheckbox("dots on;color dots yellow","dots off", "Dots", false)
+                            </script><br>
+&nbsp;&nbsp;<script type="text/javascript">
+                                    jmolSetTarget("right") 
+                                    jmolButton("zap;load ./jmol/pdbs/pstruc/beta.pdb;reset;select *;rotate z -100;wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple;select carbon;color [100,100,100];select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];restrict elemno>1","","","b-strand");  
+                                </script>&nbsp;<font face="symbol">b</font>-stand.
+                                <script type="text/javascript">
+                                    jmolSetTarget("right") 
+                                    jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb;rotate z 163.45; rotate y 120.08; rotate z -104.38;center atomno=398;zoom 150;select all;wireframe off;spacefill off;select ((3-9 or 50-55) and ((backbone) or *.CB));wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple","","","b-strand");  
+                                </script>&nbsp;||  <font face="symbol">b</font>-sheet.
+                                <script type="text/javascript">
+                                    jmolSetTarget("right") 
+                                    jmolButton("zap;load ./jmol/pdbs/pstruc/ProtG.pdb; rotate z 178.1; rotate y 130.93; rotate z 113.07;center atomno=335;zoom 150;select all;wireframe off;spacefill off;select ((42-47 or 50-55) and ((backbone) or *.CB));wireframe 40;spacefill 120;set specular on;set fontsize 9;color labels purple","","","b-strand");  
+                                </script>&nbsp;anti-||  <font face="symbol">b</font>-sheet.
+                                
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <script type="text/javascript">
+                                    jmolSetTarget("right")
+                                    jmolCheckbox("hbonds calculate;color hbonds yellow;hbonds 80","hbonds off", "H-bonds", false)
+                                </script>&nbsp;
+    </TABLE>
+
+<Table width=800>
+<TR>
+<TD>&nbsp;</TD>
+
+<TD><font color="#000000">
+    <HR> Notes:
+        <OL>
+            <LI>In trans peptide bond the amide proton is opposite from
+                the carbony oxygen. In a cis peptide bond they are on the same side. The close
+                contacts between the <font face="symbol">a</font> carbons and other side-chain atoms cause the cis bond to be higher in energy.
+                
+                <LI>The peptide bond before a proline is unfavourable as either cis or trans
+                    due to crowding. The energy of the trans bond is increased such that it is now
+                    only slightly more favourable than the cis configuration.
+                    
+                    <LI><font face="symbol">a</font>-Helix
+                        <UL>
+                            <LI>Usually right-handed
+                                <LI>3.6 residues/turn
+                                    <LI>5.4 A rise/turn
+                                        <LI>i, i+4 residues form H-bonds
+                                            <LI>H-bonds || to helical axis
+                                                <LI>Side chains point outward.
+                        </UL>
+                        
+                        <LI>3-10 helix
+                            <UL>i, i+3 residues form H-bonds
+                                <LI>Hbonds not || not || to helical axis
+                                    <LI>Thinner than <font face="symbol">a</font>-Helix
+                            </UL>
+                            
+                            <LI><font face="symbol">b</font>-Strand
+                                <UL>
+                                    <LI>Highly extended (<font face="symbol">F</font>,<font face="symbol">Y</font>=180)
+                                        <LI>2 residues/'turn'
+                                            <LI>6.6 A rise/turn
+                                                <LI>hydrogen bonds: N/A
+                                </UL>
+                                <LI><font face="symbol">b</font>-Sheets
+                                    <UL>
+                                        <LI>Two types, || and anti-||
+                                            <LI><b>inter-</b>chain hydrogen bonds
+                                                <LI>zig-zag pattern
+                                                    <LI>Side chains alternate up-and-down
+                                    </UL>
+        </OL>
+
+
+
+</TABLE>
+<HR>
+
+<TT>Last modified December 14, 2007.</TT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_mode_tutor2">
+   <title>Tutor</title>
+   <!-- LO: Define and identify mode(s) for a given set of data. -->
+   <question id="q1">
+      <body>
+         <p>Here are the number of hours that 15 students spend on the computer on a typical day:
+            </p><p> 1 1 2 3 6 7 5 5 5 8 8 8 11 12 15</p>
+         <p>The mode number of hours spent on the computer is: <input_ref input="A"/>
+         </p>
+      </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">1</choice>
+         <choice value="two">5</choice>
+         <choice value="three">8</choice>
+         <choice value="four">5 and 8</choice>
+         <choice value="fifth">Unable to determine</choice>
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="A" name="1" match="one">
+            <feedback>Incorrect. Remember, the mode(s) is the most frequently
+               occurring score.</feedback>
+         </response>
+         <response input="A" name="5" match="two">
+            <feedback>Incorrect. Remember, the mode is the most frequently occurring
+               score; therefore, it is possible to have more than one mode in a distribution. Please
+               try again.</feedback>
+         </response>
+         <response input="A" name="8" match="three">
+            <feedback>Incorrect. Remember, the mode is the most frequently occurring
+               score; therefore, it is possible to have more than one mode in a distribution. Please
+               try again.</feedback>
+         </response>
+         <response input="A" name="5_and_8" match="four" score="10">
+            <feedback>Correct. This sample has two modes, since 5 and 8 both occur 3 times in the
+               sample and no other value occurs with more frequency.</feedback>
+         </response>
+         <response input="A" name="unable_determine" match="fifth">
+            <feedback>Incorrect. Remember the mode(s) is the most frequently occurring
+               score(s) in a distribution. Please try again.</feedback>
+         </response>
+      </part>
+   </question>
+
+ <question id="q2">
+    <!--  LO: Define and identify mode(s) for a given set of data. -->
+      <body>
+       
+         <p>The data from the above 15 students forms a <input_ref input="B"/> distribution.
+         </p>
+      </body>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">unimodal</choice>
+         <choice value="two">bimodal</choice>
+         <choice value="three">multimodal</choice>
+
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="B" name="unimodal" match="one">
+            <feedback>Incorrect. To be a unimodal distribution, there would need to be only one
+               mode. Since there is more than one mode, what type of distribution would it
+               be?</feedback>
+         </response>
+         <response input="B" name="bimodal" match="two" score="10">
+            <feedback>Correct! There are two modes (5 and 8) in the distribution of scores;
+               therefore, it is a bimodal distribution.</feedback>
+         </response>
+         <response input="B" name="multimodal" match="three">
+            <feedback>Incorrect. While there is more than one mode in the distribution, multimodal
+               distributions contain more than two modes. Since there are two modes, what type of
+               distribution is it?</feedback>
+         </response>
+
+      </part>
+   </question>
+</assessment>

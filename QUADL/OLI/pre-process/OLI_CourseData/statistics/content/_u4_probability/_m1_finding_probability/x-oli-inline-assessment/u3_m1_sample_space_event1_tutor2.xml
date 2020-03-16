@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_sample_space_event1_tutor2">
+    <title>Tutor</title>
+    <question id="q1">
+        <!-- LO: Determine the sample space of a given random experiment.
+Sub-objective: samplespace    Identifying sample space   -->
+        <body>
+            <p>A couple decides to have children until they have one boy and one girl, but they will
+                not have more than three children. Choose the correct sample space for this random
+                experiment. <input_ref input="A"/></p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">S = {GGG, GGB, GBG, GBB, BBB, BBG, BGB, BGG}</choice>
+            <choice value="two">S = {GGG, GGB, BBB, BGG}</choice>
+            <choice value="three">S = {GB, BG, BBG, GGB}</choice>
+            <choice value="four">S = {GB, BG, BBG, GGB, BBB, GGG}</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="S = {GGG, GGB, GBG, GBB, BBB, BBG, BGB, BGG}" match="one">
+                <feedback>Not quite right. Some of these outcomes are not possible. For example, GBB
+                    is not part of the sample space, since the couple would not have the third child
+                    after having a girl and a boy.</feedback>
+            </response>
+            <response input="A" name="S = {GGG, GGB, BBB, BGG}" match="two">
+                <feedback>Not quite right. All of these outcomes are possible, but this sample space
+                    is missing some outcomes. Note that the couple will not necessarily have 3
+                    children.</feedback>
+            </response>
+            <response input="A" name="S = {GB, BG, BBG, GGB}" match="three" score="0">
+                <feedback>Not quite right. All of these outcomes are possible, but this sample space
+                    is missing some outcomes. If the first two children are the same gender, the
+                    couple will have a 3rd child. What outcomes are possible in this
+                    case?</feedback>
+            </response>
+            <response input="A" name="S = {GB, BG, BBG, GGB, BBB, GGG}" match="four" score="10">
+                <feedback>Correct. Each outcome has one boy and one girl, except if the couple has
+                    three children of the same gender (in which case they stop having children
+                    because they originally decided to have no more than 3.)</feedback>
+            </response>
+
+        </part>
+    </question>
+</assessment>

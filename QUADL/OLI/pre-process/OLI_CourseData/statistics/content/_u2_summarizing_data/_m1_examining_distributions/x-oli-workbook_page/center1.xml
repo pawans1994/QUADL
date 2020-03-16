@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="center1">
+    <head>
+        <title>Measures of Center (1 of 2)</title>
+        <!--     <objref idref="define_mode_median_mean"/>-->
+        <objref idref="relate_center_and_spread"/>
+    </head>
+
+    <body>
+
+
+        <p>Intuitively speaking, the numerical measure of center is telling us what is a “typical
+            value” of the distribution.</p>
+
+        <p>The three main numerical measures for the center of a distribution are the <em>mode</em>,
+            the <em>mean</em> and the <em>median</em>. Each one of these measures is based on a
+            completely different idea of describing the center of a distribution. We will first
+            present each one of the measures, and then compare their properties. </p>
+
+        <section>
+            <title>Mode</title>
+            <body>
+                <p>So far, when we looked at the shape of the distribution, we identified the mode
+                    as the value where the distribution has a “peak” and saw examples when
+                    distributions have one mode (unimodal distributions) or two modes (bimodal
+                    distributions). In other words, so far we identified the mode visually from the
+                    histogram.</p>
+                <p>Technically, the mode is the most commonly occurring value in a distribution. For
+                    simple datasets where the frequency of each value is available or easily
+                    determined, the value that occurs with the highest frequency is the mode.</p>
+            </body>
+        </section>
+        <example>
+            <title>Best Actress Oscar Winners</title>
+            <p>We will continue with the Best Actress Oscar winners example. (To see the full
+                dataset, <activity_link idref="bestactressdataset_2013" target="new">click
+                    here</activity_link>.)</p>
+            <p>To find the most commonly occurring, or <em style="italic">modal</em>, age, it is
+                helpful to list the ages in a frequency table, which gives the following
+                results:</p>
+            <table>
+                <tr>
+                    <td><em style="bold">Best Actress Age</em></td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>32</td>
+                    <td><em style="bold">33</em></td>
+                    <td>34</td>
+                    <td>35</td>
+                    <td>36</td>
+                    <td>37</td>
+                    <td>38</td>
+                    <td>39</td>
+                    <td>41</td>
+                    <td>42</td>
+                    <td>44</td>
+                    <td>49</td>
+                    <td>61</td>
+                    <td>62</td>
+                    <td>74</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td><em style="bold">Count</em></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td><em style="bold">6</em></td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <p>The mode is 33, since it occurs the most times (6).</p>
+
+        </example>
+
+
+
+        <example>
+            <title>World Cup Soccer</title>
+
+
+            <p>Often, we have large sets of data and use a frequency table to display the data more
+                efficiently.</p>
+            <p>Data were collected from the last three World Cup soccer tournaments. A total of 192
+                games were played. The table below lists the number of goals scored per game (not
+                including any goals scored in shootouts).</p>
+            <table>
+                <tr>
+                    <th>Total # Goals/Game</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>51</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <p>We can see that the most frequently occurring value is 2 goals (which occurred 51
+                times). Therefore, the mode for this set of data is 2.</p>
+
+        </example>
+        <wb:inline idref="u1_m1_mode_tutor" purpose="didigetthis"/>
+
+        <!-- <wb:inline idref="u1_m1_mode_tutor2" purpose="didigetthis"/> -->
+
+        <section>
+
+            <title>Mean</title>
+            <body>
+                <p>The mean is the average of a set of observations (i.e., the sum of the
+                    observations divided by the number of observations). If the n observations are
+                        x<sub>1</sub>, x<sub>2</sub>, ... , x<sub>n</sub>, their mean, which we
+                    denote by <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> (and read x-bar), is therefore <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mtext> </m:mtext>
+                            <m:mo>=</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mtext> </m:mtext>
+                                    <m:mo>+</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mtext> </m:mtext>
+                                    <m:mo>+</m:mo>
+                                    <m:mo>. </m:mo>
+                                    <m:mo>. </m:mo>
+                                    <m:mo>. </m:mo>
+                                    <m:mo>+</m:mo>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mi>n</m:mi>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <example>
+                    <title>Best Actress Oscar Winners</title>
+                    <p>Again we use the Best Actress Oscar winners example. (To see the full
+                        dataset, <activity_link idref="bestactressdataset_2013" target="new">click
+                            here</activity_link>.)</p>
+                    <p>
+                        <!--:WARNING: The element stats:data is no longer supported.-->
+                        <!--This instance of the element has been converted to a pullout.-->
+                        <formula style="block">34 34 27 37 42 41 36 32 41 33 31 74 33 49 38 61 21 41
+                            26 80 42 29 33 36 45 49 39 34 26 25 33 35 35 28 30 29 61 32 33 45 29 62
+                            22 44</formula>
+                    </p>
+
+                    <p>The mean age of the 32 actresses is <m:math overflow="scroll">
+
+
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>34</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>34</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>27</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>62</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>22</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>44</m:mn>
+                                    </m:mrow>
+                                    <m:mn>44</m:mn>
+                                </m:mfrac>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mfrac>
+                                    <m:mn>1687</m:mn>
+                                    <m:mn>44</m:mn>
+                                </m:mfrac>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mn>38</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>3</m:mn>
+                            </m:mrow>
+                        </m:math></p>
+                    <!--   <p>The mean age of the 32 actresses is <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>34</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>34</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>26</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>35</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>33</m:mn>
+                                    </m:mrow>
+                                    <m:mn>32</m:mn>
+                                </m:mfrac>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mfrac>
+                                    <m:mn>1233</m:mn>
+                                    <m:mn>32</m:mn>
+                                </m:mfrac>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mn>38</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>5</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>-->
+                </example>
+                <p>Note that the mean gives a measure of center that is higher than our
+                    approximation of the center from looking at the histogram (which was 35). The
+                    reason for this will be clear soon. </p>
+            </body>
+        </section>
+        <example>
+            <title>World Cup Soccer</title>
+
+            <p>We now continue with the data from the last three World Cup soccer tournaments. A
+                total of 192 games were played. The table below lists the number of goals scored per
+                game (not including any goals scored in shootouts). </p>
+            <table>
+                <tr>
+                    <th>Total # Goals/Game</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr>
+                    <td align="center">0</td>
+                    <td align="center">17</td>
+                </tr>
+                <tr>
+                    <td align="center">1</td>
+                    <td align="center">45</td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td align="center">51</td>
+                </tr>
+                <tr>
+                    <td align="center">3</td>
+                    <td align="center">37</td>
+                </tr>
+                <tr>
+                    <td align="center">4</td>
+                    <td align="center">25</td>
+                </tr>
+                <tr>
+                    <td align="center">5</td>
+                    <td align="center">11</td>
+                </tr>
+                <tr>
+                    <td align="center">6</td>
+                    <td align="center">3</td>
+                </tr>
+                <tr>
+                    <td align="center">7</td>
+                    <td align="center">2</td>
+                </tr>
+                <tr>
+                    <td align="center">8</td>
+                    <td align="center">1</td>
+                </tr>
+            </table>
+            <p>To find the mean number of goals scored per game, we would need to find the sum of
+                all 192 numbers, then divide that sum by 192. Rather than add 192 numbers, we use
+                the fact that the same numbers appear many times. For example, the number 0 appears
+                17 times, the number 1 appears 45 times, the number 2 appears 51 times, etc.</p>
+            <p>If we add up 17 zeros, we get 0. If we add up 45 ones, we get 45. If we add up 51
+                twos, we get 102. Repeated addition is multiplication.</p>
+            <p>Thus, the sum of the 192 numbers = 0(17) + 1(45) + 2(51) + 3(37) + 4(25) + 5(11) +
+                6(3) + 7(2) + 8(1) = 453.</p>
+            <p>The mean is 453/192 = 2.359.</p>
+            <p>This way of calculating a mean is sometimes referred to as a <em>weighted
+                    average</em>, since each value is "weighted" by its frequency. Note that, in
+                this example, the values of 1, 2, and 3 are most heavily weighted.</p>
+        </example>
+
+
+        <wb:inline idref="u1_m1_mean_tutor" purpose="didigetthis"/>
+        <wb:inline idref="u1_m1_mean_tutor2" purpose="didigetthis"/>
+
+        <section>
+            <title>Median</title>
+            <body>
+                <p>The median M is the midpoint of the distribution. It is the number such that half
+                    of the observations fall above, and half fall below. To find the median:</p>
+                <ul>
+                    <li> Order the data from smallest to largest.</li>
+                    <li> Consider whether n, the number of observations, is even or odd. <ul>
+                            <li>If n is <em>odd</em>, the median M is the center observation in the
+                                ordered list. This observation is the one "sitting" in the <em>(n +
+                                    1)/2 spot</em> in the ordered list.</li>
+                            <li>If n is <em>even</em>, the median M is the <em>mean</em> of the<em>
+                                    two center observations</em> in the ordered list. These two
+                                observations are the ones "sitting" in the <em>n/2</em> and <em>n/2
+                                    + 1</em> spots in the ordered list.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <example>
+                    <title>Median (1)</title>
+                    <p>For a simple visualization of the location of the median, consider the
+                        following two simple cases of n = 7 and n = 8 ordered observations, with
+                        each observation represented by a solid circle: </p>
+                    <image style="block" src="../webcontent/center1.gif"
+                        alt="When there are n=7
+ordered observations, the median M is the center observation, which is located in the (7+1)/2 = 4th
+spot in the ordered list. When there are n=8 ordered observations, the mediam M is the mean of the
+two center observations, which in this care are located at the 8/2=4th and 8/2+1=5th spots in the
+ordered list."
+                    />
+                </example>
+                <!--<activity idref="center1selfassess" purpose="didigetthis"/>-->
+
+                <example>
+                    <title>Median (2)</title>
+                    <p>To find the median age of the Best Actress Oscar winners, we first need to
+                        order the data. It would be useful, then, to use the stemplot, a diagram in
+                        which the data are already ordered.</p>
+                    <p> Here n = 44 (an even number), so the median M, will be the mean of the two
+                        center observations. These are located at the n / 2 = 44 / 2 = <em>22nd</em>
+                        and n / 2 + 1 = 44 / 2 + 1 = <em>23rd</em> spots. Counting from the top, we
+                        find that:</p>
+                    <ul>
+                        <li>the 22nd ranked observation is 34</li>
+                        <li>the 23rd ranked observation is 35</li>
+                    </ul>
+                    <p>Therefore, the median <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>M</m:mi>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>34</m:mn>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>+</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>35</m:mn>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mn>2</m:mn>
+                                </m:mfrac>
+                                <m:mtext> </m:mtext>
+                                <m:mo>=</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mn>34.5</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <image style="block"
+                        src="../webcontent/eda_examining_distributions_best_actress_stemplot_median2.jpg"
+                        alt="A stem plot in which
+the 16th and 17th leaves are highlighted. The stem plot is described in a stem|leaves format in row
+order. The highlighted entries are surrounded by *:
+    2|12
+    2|56678999
+    3|012233333344
+    3|5566789
+    4|1112244
+    4|599
+    5|
+    5|
+    6|112
+    6|
+    7|4
+    7|
+    8|0"
+                    />
+                </example>
+                <wb:inline idref="u1_m1_center1_tutor1" purpose="didigetthis"/>
+
+                <section>
+                    <title>Calculating mean, median, and mode</title>
+                    <body>
+                        <youtube src="k3aKKasOmIw"/>
+                        <p>
+                            <link href="https://creativecommons.org/licenses/by-sa/3.0/"
+                                target="new">CC BY-SA 3.0</link> by <link
+                                href="https://www.oercommons.org/courses/statistics-mean-median-and-mode"
+                                target="new">Khan Academy</link></p>
+                        <p/>
+                        <p/>
+                        <p>Explore this simulation activity to see how well you can calculate the
+                            mean and median for different data sets.</p>
+                        <p>To view this interactive simulation in a separate window click <link
+                                href="http://ggbtu.be/m13347" target="new">here</link>.</p>
+                        <iframe src="https://tube.geogebra.org/student/m13347" height="800"
+                            width="800"> </iframe>
+
+                        <p/>
+                        <p><link href="https://creativecommons.org/licenses/by-sa/3.0/" target="new"
+                                >CC BY-SA 3.0</link> by <link href="http://www.geogebra.org/"
+                                target="new">GeoGebra Group</link></p>
+
+                    </body>
+                </section>
+                <!--   <p>The <link href="http://www.geogebra.org/">GeoGebra Group</link> offers a <link
+                        href="http://ggbtu.be/m13347">simulation activity</link> where you can
+                    practice calculating the mean and median for different datasets. </p>-->
+            </body>
+        </section>
+        <activity idref="center1lbd" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

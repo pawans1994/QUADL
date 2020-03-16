@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop5_tutor1">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <body><p>Which of the following samples is an appropriate
+                    random sample for testing this hypothesis?</p>
+            </body>
+            <multiple_choice shuffle="false">
+                <choice value="A">A random sample of 100 county residents</choice>
+                <choice value="B">A random sample of 100 registered voters who voted in the last
+                    statewide election </choice>
+                <choice value="C">A random sample of 100 registered voters from the county</choice>
+                <choice value="D">A random sample of 100 registered voters from the largest city in
+                    the county</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" name="county residents" score="0">
+                    <feedback>Incorrect. The sample needs to be a subset of the
+                        population of interest. Since some residents may be too young to vote or are
+                        not registered to vote, this sample will contain people who are not in the
+                        population. Carefully reread the definition of the parameter p to identify
+                        the population about which we are testing a hypothesis. Try
+                        again.</feedback>
+                </response>
+                <response match="B" name="statewide election" score="0">
+                    <feedback>Incorrect. The sample needs to be a subset of the
+                        population of interest. This sample will contain people who are not in the
+                        population. Carefully reread the definition of the parameter p to identify
+                        the population about which we are testing a hypothesis. 
+                    </feedback>
+                </response>
+                <response match="C" name="registered county residents" score="10">
+                    <feedback>Correct. The population of interest is “registered voters in the
+                        county.” Here we are taking a random sample from the population. </feedback>
+                </response>
+                <response match="D" name="largest city" score="0">
+                    <feedback>Incorrect. This is a random sample drawn from a segment
+                        of the population of interest. But registered voters in the largest city in
+                        the county may not accurately represent the opinions of the county as a
+                        whole. Rural voters may vote differently on bond measures than urban voters.
+                        The sample must be randomly drawn from the population as a whole. 
+                    </feedback>
+                </response>
+                <hint>Ideally, the sample is a random sample from the population of interest.
+                </hint>
+            </part>
+        </question>
+    </page>
+</assessment>

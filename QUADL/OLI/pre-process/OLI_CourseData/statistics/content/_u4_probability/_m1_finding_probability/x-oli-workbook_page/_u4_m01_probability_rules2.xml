@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules2">
+    <head>
+        <title>Probability Rules (2 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+       
+        <p>Let's move on to rule 3. In probability and in its applications, we are frequently
+            interested in finding out the probability that a certain event will<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T112405-0500" content="does"?>
+            <?oxy_comment_start author="mmyers" timestamp="20101108T112716-0500" comment="use italics rather than bold for emphasis"?><em>not</em><?oxy_comment_end?>
+            occur. An important point to understand here is that "event A does not occur" is
+                <em>a<?oxy_insert_start author="mmyers" timestamp="20101108T112435-0500"?>
+                separate<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T112439-0500" content="n"?>
+                event<?oxy_delete author="mmyers" timestamp="20101108T112441-0500" content=" by itself"?></em>
+            <?oxy_insert_start author="mmyers" timestamp="20101108T112420-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T112418-0500" content="which"?>
+            consists of all the outcomes in the sample space S
+            <?oxy_insert_start author="mmyers" timestamp="20101108T112457-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T112456-0500" content="which"?>
+            are not in A. It is for this reason that the event "event A does not occur" is called
+            <em style="bold">"the complement event of A,"</em> since it compares event A to the whole
+            sample space. Notation: we will write <em>"not A"</em> to denote the event that A does
+                <?oxy_comment_start author="mmyers" timestamp="20101108T112736-0500" comment="use italic instead of bold for emphasis"?><em>not</em><?oxy_comment_end?>
+            occur. Here is a visual representation of how event A and its complement event "not A"
+            <?oxy_delete author="mmyers" timestamp="20101108T112840-0500" content="complete each other to"?><?oxy_insert_start author="mmyers" timestamp="20101108T112844-0500"?>together
+            represent<?oxy_insert_end?> the whole sample space.</p>
+        <image style="block" src="../webcontent/image013.gif" alt="The entire sample space S is
+represented with a gray box. Inside of this box is a blue circle, representing all outcomes in A.
+Everything else in the gray box but outside of the blue circle is &quot;not A&quot;."/>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Such a visual display is called a "Venn diagram."
+                    <?oxy_delete author="mmyers" timestamp="20101108T113212-0500" content="Using rectangles and circles, a"?><?oxy_insert_start author="mmyers" timestamp="20101108T113219-0500"?>A<?oxy_insert_end?>
+                    Venn diagram is a simple way to visualize events and the relationships between
+                    them<?oxy_insert_start author="mmyers" timestamp="20101108T113226-0500"?> using
+                    rectangles and circles<?oxy_insert_end?>. We will use Venn diagrams throughout
+                    this module.</p>
+            </body>
+        </section>
+        <p>Rule 3 deals with the relationship between the probability of an event and the
+            probability of its complement event. Given that event A
+            and<?oxy_delete author="mmyers" timestamp="20101108T113311-0500" content=" the"?> event
+            "not A" together make up the whole sample space S, and since rule 2 tells us that P(S) =
+            1, the following rule should be quite intuitive:</p>
+        <theorem type="rule">
+            <title>Rule 3: The Complement Rule</title>
+            <statement>
+                <p>
+                    <em>
+                        <?oxy_delete author="mmyers" timestamp="20101108T113409-0500" content="The Complement Rule: "?>P(not
+                        A) = 1 - P(A); that is, the probability that an event does not occur is 1
+                        minus the probability that it does occur.</em>
+                </p>
+            </statement>
+        </theorem>
+
+
+        <example>
+
+            <p>Back to the blood type example:</p>
+            <image style="block" src="../webcontent/image011.gif" alt="Data given in &quot;Blood Type:
+Probability&quot; Format: 
+    O: 0.44;
+    A: 0.42;
+    B: 0.10;
+    AB: 0.04;"/>
+            <p>Here is some additional information:</p>
+            <ul>
+                <li>A person with type <em>A</em> can donate blood to a person with type <em>A</em>
+                    or <em>AB</em>.</li>
+                <li>A person with type <em>B</em> can donate blood to a person with type <em>B</em>
+                    or <em>AB</em>.</li>
+                <li>A person with type <em>AB</em> can donate blood to a person with type
+                        <em>AB</em> only.</li>
+                <li>A person with type <em>O</em> blood can donate to anyone.</li>
+            </ul>
+            <p>What is the probability that a randomly chosen person cannot donate blood to
+                <?oxy_insert_start author="mmyers" timestamp="20101108T113535-0500"?>everyone<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T113537-0500" content="just anyone"?>?
+                In other words, what is the probability that a randomly chosen person does not have
+                blood type O? We need to find P(not O). Using the Complement Rule, P(not O)<?oxy_insert_start author="mmyers" timestamp="20101108T113553-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T113554-0500"?>
+                <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101108T113555-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101108T113555-0500"?>
+                <?oxy_insert_end?>P(O)<?oxy_insert_start author="mmyers" timestamp="20101108T113557-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T113558-0500"?>
+                <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101108T113559-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101108T113600-0500"?>
+                <?oxy_insert_end?>.44<?oxy_insert_start author="mmyers" timestamp="20101108T113601-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T113602-0500"?>
+                <?oxy_insert_end?>.56. In other words, 56% of the
+                U<?oxy_insert_start author="mmyers" timestamp="20101108T113617-0500"?>.<?oxy_insert_end?>S<?oxy_insert_start author="mmyers" timestamp="20101108T113618-0500"?>.<?oxy_insert_end?>
+                population does not have blood type O:</p>
+            <image style="block" src="../webcontent/image014.gif" alt="A pie chart, titled
+&quot;Blood Types.&quot; Type O takes up 44% of the pie chart, A uses 42%, AB represents 4%,
+and B represents the rest, 10%. Note that the types of blood which are &quot;not O&quot; take
+up 56% of the pie chart."/>
+        </example>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Note that the Complement Rule, <em>P(not A)<?oxy_insert_start author="mmyers" timestamp="20101108T113659-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T113702-0500"?>
+                        <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101108T113703-0500"?>
+                        <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101108T113705-0500"?>
+                        <?oxy_insert_end?>P(A) </em>can be re-formulated as <em>P(A)<?oxy_insert_start author="mmyers" timestamp="20101108T113718-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T113719-0500"?>
+                        <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101108T113721-0500"?>
+                        <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101108T113722-0500"?>
+                        <?oxy_insert_end?>P(not A). </em>This seemingly trivial
+                    algebra<?oxy_insert_start author="mmyers" timestamp="20101108T113729-0500"?>ic<?oxy_insert_end?>
+                    manipulation has an important application, and actually captures the strength of
+                    the complement rule. In some cases, when finding P(A) directly is very
+                    complicated, it might be much easier to find P(not A) and
+                    th<?oxy_insert_start author="mmyers" timestamp="20101108T113744-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T113744-0500" content="a"?>n
+                    just subtract it from 1 to get the desired P(A). We will come back to this
+                    comment and see examples later in this module.</p>
+            </body>
+        </section>
+        <!--<activity idref="_u4_m1_dig6" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>On the "Information for the Patient" label of a certain
+                    anti<?oxy_delete author="mmyers" timestamp="20101108T113803-0500" content="-"?>depressant
+                    it is claimed that based on some clinical
+                    trials,<?oxy_insert_start author="mmyers" timestamp="20101108T114022-0500"?>
+                    when taking this medication<?oxy_insert_end?></p>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101108T113828-0500" comment="use bullets instead of dashes"?>-<?oxy_comment_end?>
+                    there is a 14% chance of experiencing sleeping problems<?oxy_insert_start author="mmyers" timestamp="20101108T113918-0500"?>,<?oxy_insert_end?>
+                    <?oxy_delete author="mmyers" timestamp="20101108T114107-0500" content="known as"?><?oxy_insert_start author="mmyers" timestamp="20101108T114109-0500"?>or<?oxy_insert_end?>
+                    insomnia (denote this event by I)</p>
+                <p> - there is a 26% chance of experiencing headaches (denote this event by H),
+                    and</p>
+                <p> - there is a 35% chance of experiencing at least one of these two side effects
+                    (denote this event by L)</p>
+                <wb:inline idref="u3_m1_rules2_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u3_m1_rules2_tutor2" purpose="didigetthis"/>
+                <wb:inline idref="u3_m1_rules2_tutor3" purpose="didigetthis"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

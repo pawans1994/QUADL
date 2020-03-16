@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m01_sample_space_event1">
+    <head>
+        <title>Sample Spaces and Events (1 of 2)</title>
+        <objref idref="determine_sample_space"/>
+    </head>
+    <body>
+       
+        <p>As we saw in the previous module, probability questions arise when we are faced with a situation that involves uncertainty. Such a situation is called a <em>random experiment</em>, 
+            an experiment that produces an outcome that cannot be predicted in advance (hence the uncertainty).</p>
+        <p>Here are a few examples of random experiments:</p>
+    <ol> 
+        <li>  <p> Toss a coin once<?oxy_insert_start author="mmyers" timestamp="20101106T110033-0400"?> and
+                    record whether you get heads (H) or tails (T)<?oxy_insert_end?>. The possible
+                    outcomes that this random experiment can produce are: {H, T}.</p></li>
+       <li> <p> Toss a coin twice. The possible outcomes that this random experiment can produce are: {HH, HT,
+                    TH, TT}.</p></li>
+       <li> <p><?oxy_delete author="mmyers" timestamp="20101106T105610-0400" content="3. "?>Toss a coin 3
+                    times. The possible outcomes in this case are: {HHH, THH, HTH, HHT, HTT, THT,
+                    TTH, TTT}.</p></li>
+       <li> <p> Toss a coin until you get the first
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T110117-0400"?>t<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T110117-0400" content="T"?>ails
+                    (T). When we conduct this
+                    experiment<?oxy_insert_start author="mmyers" timestamp="20101106T110008-0400"?>,<?oxy_insert_end?>
+                    one possible outcome is that we get T in the first toss and we are done. Another
+                    possible outcome is that we get H in the first toss, toss a second time, get T
+                    and be done. We might need three tosses until we get the first T, etc. The
+                    possible outcomes of this random experiment are therefore: {T, HT, HHT, HHHT,
+                    ...}. (Note that in this example the list of possible outcomes is not finite as
+                    in examples
+                    1<?oxy_delete author="mmyers" timestamp="20101106T110148-0400" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101106T110150-0400" content=" "?>3.
+                    This is not an important distinction at this point, just a noteworthy
+                    observation.)</p></li>
+     <li>   <p> Choose a person at random and check
+                    his<?oxy_insert_start author="mmyers" timestamp="20101106T110221-0400"?> or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T110222-0400" content="/"?><?oxy_insert_start author="mmyers" timestamp="20101106T110222-0400"?>
+                    <?oxy_insert_end?>her blood type. In this random experiment the possible
+                    outcomes are the four blood types: {A, B, AB, O}.</p></li>
+      <li>  <p> There are two job openings for a staff position at a certain college, and 4 equally qualified
+                    candidates for the job (Ann, Beth,
+                    Jim<?oxy_delete author="mmyers" timestamp="20101106T112036-0400" content=","?>
+                    and Dan). For fairness, the human resources department decides to choose two of
+                    the four candidates at random. The possible outcomes of this random experiment
+                    are all possible pairs of candidates: { (Ann, Beth), (Ann, Jim), (Ann, Dan),
+                    (Beth<?oxy_insert_start author="mmyers" timestamp="20101106T111007-0400"?>,<?oxy_insert_end?>
+                    Jim), (Beth, Dan), (Jim, Dan) }.</p></li>
+   </ol>
+    <section>
+        <title>Comment: Does Order Matter?</title>
+        <body>
+            <p>Note that when a coin is tossed
+                    twice<?oxy_insert_start author="mmyers" timestamp="20101106T111837-0400"?>,<?oxy_insert_end?>
+                    as in example 2, the possible outcome HT (indicating that the first toss was H
+                    and the second T) is
+                    <?oxy_comment_start author="mmyers" timestamp="20101106T111514-0400" comment="use italics instead of all caps for emphasis"?>NOT<?oxy_comment_end?>
+                    the same as the outcome TH (indicating that T occurred first and then H), and
+                    therefore both outcomes
+                    <?oxy_delete author="mmyers" timestamp="20101106T171918-0400" content="a"?><?oxy_insert_start author="mmyers" timestamp="20101106T171920-0400"?>we<?oxy_insert_end?>re
+                    listed separately. This is an example of a situation when order does matter.
+                    However, order does not always matter. Example 6 is a case
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T111819-0400"?>in
+                    which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T111818-0400" content="where"?>
+                    order does not matter. The outcome (Ann, Beth) indicates that Ann and Beth are
+                    the two randomly chosen to get the jobs. Whether Ann appears first or Beth does
+                    is irrelevant in this case, and therefore (Beth, Ann)
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T111855-0400"?>wa<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T111854-0400" content="i"?>s
+                        <?oxy_comment_start author="mmyers" timestamp="20101106T111209-0400" comment="use italics instead of bold for emphasis"?><em>not</em><?oxy_comment_end?>
+                    listed as a separate outcome.</p>
+            <p>There is really no rule
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T172006-0400"?>that
+                    dictates<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T172002-0400" content="for"?>
+                    when order matters and when it doesn't. It is
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T171940-0400"?>sometimes<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T171935-0400" content="usually pretty"?>
+                    clear from the way the random experiment is defined. For example, suppose I were
+                    to change example 6
+                    slightly<?oxy_delete author="mmyers" timestamp="20101106T111958-0400" content=" to be the following"?>:</p>
+            <p>There are two job openings for
+                    <?oxy_delete author="mmyers" timestamp="20101106T172029-0400" content="a "?>similar
+                    staff
+                    position<?oxy_insert_start author="mmyers" timestamp="20101106T172034-0400"?>s<?oxy_insert_end?>
+                    at a certain college: one
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T172042-0400"?>in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T172041-0400" content="at"?>
+                    the Registrar's Office, and one
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T172045-0400"?>in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T172045-0400" content="at"?>
+                    the Office of Admissions. The Human Resources Department has identified four
+                    equally qualified candidates for the jobs (Ann, Beth, Jim and Dan), and for
+                    fairness decides to choose two of the four candidates at
+                    random<?oxy_insert_start author="mmyers" timestamp="20101106T112107-0400"?>.
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T112112-0400" content=", where t"?><?oxy_insert_start author="mmyers" timestamp="20101106T112116-0400"?>T<?oxy_insert_end?>he
+                    first chosen
+                    w<?oxy_insert_start author="mmyers" timestamp="20101106T112127-0400"?>ill<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T112128-0400" content="ould"?>
+                    fill the position
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T172118-0400"?>in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T172117-0400" content="at"?>
+                    the Registrar's Office, and the second will fill the position in the Office of
+                    Admissions.</p>
+            <p>Now order
+                        <?oxy_comment_start author="mmyers" timestamp="20101106T112222-0400" comment="use italics instead of bold for emphasis"?><em>is</em><?oxy_comment_end?>
+                    relevant<?oxy_insert_start author="mmyers" timestamp="20101106T112426-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T112229-0400" content=" - "?>the
+                    two outcomes (Ann, Beth) and (Beth, Ann) are not the
+                    same<?oxy_insert_start author="mmyers" timestamp="20101106T112251-0400"?> in
+                    this
+                    scenario.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T112251-0400" content="!"?>
+                    The first
+                    <?oxy_insert_start author="mmyers" timestamp="20101109T123422-0500"?>outcome<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T123420-0500" content="one"?>
+                    indicates that Ann got the position at the Registrar's
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T112546-0400"?>O<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101106T112545-0400" content="o"?>ffice
+                    and Beth got the position at the
+                    <?oxy_insert_start author="mmyers" timestamp="20101106T112551-0400"?>Office of
+                    <?oxy_insert_end?>Admissions<?oxy_delete author="mmyers" timestamp="20101106T112556-0400" content=" Office"?>,
+                    while the second outcome indicates the reverse. In this case, therefore, all the
+                    possible outcomes are:</p>
+            <p> { (Ann, Beth), (Beth, Ann), (Ann, Jim), (Jim, Ann), (Ann, Dan), (Dan, Ann),</p>
+            <p> (Beth, Jim), (Jim, Beth), (Beth, Dan), (Dan, Beth), (Jim, Dan), (Dan, Jim) }</p>
+        </body>
+    </section>
+    <p>Each random experiment has a set of possible outcomes, and there is <em>uncertainty</em> as to which of the outcomes we are actually going to get once the experiment is conducted. This list of possible outcomes is called <em>the sample space</em> of the random experiment, and is denoted by the (capital) letter <em>S.</em>
+    </p>
+    <p>Going back to the 6 examples above, we can write:</p>
+    <p>Example 1: <em>S</em> = {H, T}</p>
+    <p>Example 2: <em>S</em> = {HH, HT, TH, TT}</p>
+    <p>Example 3: <em>S</em> = {HHH, THH, HTH, HHT, HTT, THT, TTH, TTT}</p>
+    <p>Example 4: <em>S</em> = {T, HT, HHT, HHHT, ...}</p>
+    <p>Example 5: <em>S</em> = {A, B, AB, O}</p>
+    <p>Example 6: <em>S</em> = { (Ann, Beth), (Ann, Jim), (Ann, Dan), (Beth, Jim), (Beth, Dan),
+            (Jim,
+            <?oxy_comment_start author="mmyers" timestamp="20101106T173203-0400" comment="Please forgive the following lengthy explanation of why I think more detail might be in order here:
+    
+I realized several pages after this point that I had misunderstood the significance of whether the &quot;order&quot; mattered or not. At first, I thought the coin toss order only mattered because you had &quot;decided&quot; it mattered. Looking at that example compared to the one about two jobs and four candidates, I mistakenly came to the conclusion that when deciding what to include in &quot;S,&quot; the order was only important if it mattered in terms of the answer. In other words, since there were two positions, the order of candidates chosen didn&apos;t matter. And therefore, if all you were looking for in the coin toss experiment was the probability of getting heads if you toss a coin twice, the order (TH or HT) didn&apos;t matter. So my &quot;S&quot; would only have included 3 possible outcomes, which would have given me a 2/3 probability, rather than the correct 3/4 probability. It wasn&apos;t until several pages hence, when the example about the likelihood of a couple who will have 3 children having 2 girls was discussed, that I realized that I had misunderstood some key point, and it took me a little while to figure out why I had gotten it wrong. (I had thought that since the order of the children didn&apos;t &quot;matter&quot; to me in terms of the answer, that it didn&apos;t matter at all. I would have had 4 possible outcomes for S, with a probability of 1/4 (incorrect), rather than 8 possible outcomes with a probability of 3/8.
+
+I have no idea how common my misconception might be -- after all, it has been 20 years since I&apos;ve taken a math class.
+
+Please look over the following. It is, basically, every way I can come up with to try to explain the distincion between the two given examples. As such, if you decide to use it at all, it would probably be best as a &quot;Many Students Wonder&quot; page. Please determine whether you think any of the following would be helpful to your students. In particular, please verify the mathematical vailidity of my last statement before using it:
+
+It is not always easy to intuitively determine whether or not the order of responses in S matters. For example: If you want to determine P(H) in example 2 (the probability of getting heads if you toss a coin twice), S = {HH, HT, TH, TT}. Even though the order of the results of two tosses doesn&apos;t seem to matter (i.e., HT seems the same as TH), for the purposes of calculating probability, both cases must be included in S. The probability in this scenario is 3/4, but if the apparent &quot;duplicate&quot; had been removed from S, the probability would have been calculated as 2/3, which is incorrect.
+
+In example 6, the order of the 2 chosen job candidates does not matter because there are 2 equal positions to be filled, and the candidates are being considered in pairs. When you eliminate one of each of the &quot;duplicates&quot;--i.e., (Beth, Ann) and (Ann, Beth)--the ratio of each pair of candidates to the total number of possible outcomes does not change mathematically; it goes from 2/12 to 1/6. However, in example 2 (the coin toss), the responses are not being considered as pairs, even though they appear to be listed in S as pairs. H and T each represent an independent result in each outcome, so eliminating the apparent &quot;duplicate&quot; in S would change the ratio between the total number of possible outcomes and the number of outcomes that satisfy P(H), and thus would result in an incorrect probability calculation.
+
+Note that if you always assume that the order is important, and therefore you always include all possible outcomes in S, your probability calculations will always be correct (although they might be slightly more complicated). When in doubt, assume that the order matters, and include all possible outcomes in S.
+"?>Dan)
+            }<?oxy_comment_end?>. </p>
+
+        <wb:inline idref="u3_m1_sample_space_event1_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u3_m1_sample_space_event1_tutor2" purpose="didigetthis"/>
+        
+    </body>
+        </workbook_page>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

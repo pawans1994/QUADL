@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>[insert your title here]</title>
+
+<script type="text/javascript">
+// Framebuster script to relocate browser when MSIE bookmarks this
+// page instead of the parent frameset.  Set variable relocateURL to
+// the index document of your website (relative URLs are ok):
+var relocateURL = "/";
+
+if(parent.frames.length == 0) {
+  if(document.images) {
+    location.replace(relocateURL);
+  } else {
+    location = relocateURL;
+  }
+}
+</script>
+
+<script type="text/javascript" src="mtmcode.js">
+</script>
+
+<script type="text/javascript">
+// Morten's JavaScript Tree Menu
+// version 2.3.2-macfriendly, dated 2002-06-10
+// http://www.treemenu.com/
+
+// Copyright (c) 2001-2002, Morten Wang & contributors
+// All rights reserved.
+
+// This software is released under the BSD License which should accompany
+// it in the file "COPYING".  If you do not have this file you can access
+// the license through the WWW at http://www.treemenu.com/license.txt
+
+// Nearly all user-configurable options are set to their default values.
+// Have a look at the section "Setting options" in the installation guide
+// for description of each option and their possible values.
+
+
+
+/******************************************************************************
+* User-configurable options.                                                  *
+******************************************************************************/
+
+
+// variable for determining whether a sub-menu always gets a plus-sign
+// regardless of whether it holds another sub-menu or not
+MTMSubsGetPlus = "never";
+
+
+// Default target
+MTMDefaultTarget = "content";
+
+MTMTimeOut = 0;
+
+MTMSubsAutoClose = "true";
+
+MTMenuFont = "verdana";
+
+MTMenuText = "Table of Contents:";
+
+MTMRootIcon = "menu_link_external.gif";
+
+MTMenuCSSize = "70%";
+
+MTMBGColor = "#A0B8C8";
+
+MTMTrackColor = "#ffffff";
+
+MTMSubExpandColor = "#330099";
+
+MTMSubClosedColor = "#330099";
+
+
+/******************************************************************************
+* User-configurable list of icons.                                            *
+******************************************************************************/
+
+var MTMIconList = null;
+MTMIconList = new IconList();
+MTMIconList.addIcon(new MTMIcon("menu_link_external.gif", "http://", "pre"));
+MTMIconList.addIcon(new MTMIcon("menu_link_pdf.gif", ".pdf", "post"));
+
+/******************************************************************************
+* User-configurable menu.                                                     *
+******************************************************************************/
+
+// Main menu.
+var menu = null;
+menu = new MTMenu();
+
+menu.addItem("Intro to Statistics Online", "welcome.html", null, "Introduction to Statistics Online");
+var introduction = null;
+introduction = new MTMenu();
+introduction.addItem("Course Overview", "overview.html", null, "Course Overview");
+introduction.addItem("Test & Configure Your System", "configure.html", null, "Test and Configure Your System");
+menu.makeLastSubmenu(introduction, true);
+
+
+menu.addItem("Exploratory Data Analysis", "../modules/m02_summarizing_data/eda.html", null, "Summarizing and looking at the data using graphs and numbers");
+// nested submenu #1, multiple submenu levels example
+var number_1 = null;
+number_1 = new MTMenu();
+
+number_1.addItem("Introduction", "../modules/m02_summarizing_data/eda_intro.html", null, "Basic definitions (Data, variables etc)");
+
+number_1.addItem("Examining Distributions", "../modules/m02_summarizing_data/examining_distributions.html", null, "Summarizing the data obtained from one variable ");
+var number_1_2 = null;
+number_1_2 = new MTMenu();
+number_1_2.addItem("One Categorical Variable", "../modules/m02_summarizing_data/one_cat_var1.html", null, "Summarizing data obtained from one categorical variable", "menu_link_default_many.gif");
+number_1_2.addItem("One Quantitative Variable", "../modules/m02_summarizing_data/one_quant_var.html", null, "Summarizing data obtained from one quantitative variable");
+var number_1_2_1 = null;
+number_1_2_1 = new MTMenu();
+
+
+
+number_1_2_1.addItem("Graphs", "../modules/m02_summarizing_data/graphs.html", null, "Visual displays for describing the distribution of a quantitative variable ");
+var graphs = null;
+graphs = new MTMenu();
+graphs.addItem("Histogram", "../modules/m02_summarizing_data/histogram1.html", null, "A visual display for describing the distribution of a quantitative variable", "menu_link_default_many.gif");
+graphs.addItem("Stemplot", "../modules/m02_summarizing_data/stemplot.html", null, "A visual display for describing the distribution of a quantitative variable");
+number_1_2_1.makeLastSubmenu(graphs);
+
+number_1_2_1.addItem("Numerical Measures", "../modules/m02_summarizing_data/measures.html", null, "Supplementing the visual displays with numerical summaries");
+var measures = null;
+measures = new MTMenu();
+measures.addItem("Measures of Center", "../modules/m02_summarizing_data/center1.html", null, "Describing the center of the distribution with numbers (mean and median) ", "menu_link_default_many.gif");
+measures.addItem("Measures of Spread", "../modules/m02_summarizing_data/spread1.html", null, "Describing the spread of the distribution with numbers (range, IQR)", "menu_link_default_many.gif");
+measures.addItem("Boxplot", "../modules/m02_summarizing_data/boxplot1.html", null, "Another visual display of the distribution of a quantitative variable", "menu_link_default_many.gif");
+measures.addItem("The Standard Deviation", "../modules/m02_summarizing_data/deviation1.html", null, "One more measure of spread", "menu_link_default_many.gif");
+number_1_2_1.makeLastSubmenu(measures);
+
+number_1_2.makeLastSubmenu(number_1_2_1);
+
+number_1_2.addItem("Wrap-Up (Distributions)", "../modules/m02_summarizing_data/distributions_conc.html", null, "Wrap-Up for the Examining Distributions module");
+
+number_1.makeLastSubmenu(number_1_2);
+
+number_1.addItem("Examining Relationships", "../modules/m02_summarizing_data/examining_relationships.html", null, "Summarizing the data obtained from two variables");
+var relationships= null;
+relationships = new MTMenu();
+
+
+relationships.addItem("Role-Type Classification", "../modules/m02_summarizing_data/relationships_intro1.html", null, "The role-type classification", "menu_link_default_many.gif");
+relationships.addItem("Case I", "../modules/m02_summarizing_data/casei1.html", null, "Categorical explanatory variable and quantitative response variable", "menu_link_default_many.gif");
+relationships.addItem("Case II", "../modules/m02_summarizing_data/caseii1.html", null, "Two categorical variables", "menu_link_default_many.gif");
+relationships.addItem("Case III", "../modules/m02_summarizing_data/caseiii.html", null, "Two quantitative variables");
+var caseiii = null;
+caseiii = new MTMenu();
+caseiii.addItem("Scatterplot", "../modules/m02_summarizing_data/scatterplot1.html", null, "A graphical display of the relationship between two quantitative variables", "menu_link_default_many.gif");
+caseiii.addItem("Linear Relationships", "../modules/m02_summarizing_data/linear1.html", null, "A Special Case: Linear Relationships", "menu_link_default_many.gif");
+relationships.makeLastSubmenu(caseiii);
+relationships.addItem("Causation", "../modules/m02_summarizing_data/causation1.html", null, "Causation, lurking variables, and Simpson's paradox", "menu_link_default_many.gif");
+relationships.addItem("Wrap-Up (Relationships)", "../modules/m02_summarizing_data/relationships_conc.html", null, "Wrap-up for the Examining Relationships module");
+
+
+
+number_1.makeLastSubmenu(relationships);
+
+number_1.addItem("EDA Summary", "../modules/m02_summarizing_data/eda_summary.html", null, "Summary of the Exploratory Data Analysis unit");
+
+
+menu.makeLastSubmenu(number_1);
+
+menu.addItem("Producing Data", "../modules/m02_summarizing_data/producing_data.html", null, "Producing Data");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_2 = null;
+number_2 = new MTMenu();
+menu.makeLastSubmenu(number_2);
+
+menu.addItem("Probability", "../modules/m02_summarizing_data/probability.html", null, "Probability");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_3 = null;
+number_3 = new MTMenu();
+menu.makeLastSubmenu(number_3);
+
+
+menu.addItem("Inference", "../modules/m02_summarizing_data/inference.html", null, "Inference");
+// nested submenu #2, multiple submenu levels example #2, 6 items
+var number_4 = null;
+number_4 = new MTMenu();
+menu.makeLastSubmenu(number_4);
+
+
+
+</script>
+</head>
+<body onload="MTMStartMenu(true)" bgcolor="#000033" text="#ffffcc" link="yellow" vlink="lime" alink="red">
+
+
+
+
+</body>
+</html>

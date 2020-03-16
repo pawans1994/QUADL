@@ -1,0 +1,253 @@
+<HTML>
+<HEAD><TITLE>
+Protein SuperSecondary, Tertiary, and Quaternary  Structure
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+<TABLE WIDTH="850" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<TH colspan=2 align=left>Biochemistry I</TH>
+ <TH colspan=2 align=right>Supersecondary Structures &amp; Fibrous Proteins</TH>
+
+<TR VALIGN=TOP>
+
+<TD width=5>&nbsp;</TD>
+
+<TD VALIGN=TOP WIDTH=500>
+ <script type="text/javascript">
+ jmolApplet([495,495],
+ "load ./jmol/pdbs/super_sec/1ypi_A.pdb;reset; rotate z 91.69; rotate y 78.51; rotate z 92.0;select *;wireframe off;spacefill off;cartoon;color structure;set specular on;select atomno=1;label 'TPI';set fontsize 9;color labels yellow;select all","protg");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("protg")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+  </TD>
+
+<TD VALIGN=TOP WIDTH=380 BGCOLOR="#eeeeee" VALIGN="TOP"><FONT COLOR="#000000">
+<B>Supersecondary Structure</b><BR><BR>
+ &nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolButton("zap;load ./jmol/pdbs/super_sec/1ypi_A.pdb;reset; rotate z 91.69; rotate y 78.51; rotate z 92.0;select *;wireframe off;spacefill off;cartoon;color structure;set specular on;select atomno=1;label 'TPI';set fontsize 9;color labels yellow;select all","","","Triose phosphate isomerase");  
+ </script>&nbsp;<b>Triose Phosphate Isomerase</b>
+ <br>
+  &nbsp;&nbsp;&nbsp;<font face="symbol">b</font>-barrel&nbsp;
+  <script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolCheckbox("select helix;cartoon off","select helix;cartoon on","+/- helix",false)  
+ </script>
+ 
+ <br>
+ &nbsp;&nbsp;&nbsp;<font face="symbol">bab</font>-unit.
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolButton("reset;center 125;rotate z 91.69; rotate y 78.51; rotate z 92.0;wireframe off;spacefill off;cartoon;color structure;set specular on;select atomno=1;label 'TPI';set fontsize 9;color labels yellow;select 121-168;color purple;select all","","","Triose phosphate isomerase");  
+ </script>&nbsp;highlight
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolButton("select not (121-168);center 125;cartoon 100;delay 0.2;cartoon 90;delay 0.1;cartoon 80;delay 0.1;cartoon 70;delay 0.1;cartoon 60;delay 0.1;cartoon 50;delay 0.1;cartoon 40;delay 0.1;cartoon 30;delay 0.1;cartoon 20;delay 0.1;cartoon 10;cartoon off;select 121-168;color purple;cartoon;center 125;select all","","","Triose phosphate isomerase");  
+ </script>&nbsp;view only <font face="symbol">bab</font>
+ 
+
+  <br><br>
+ &nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolButton("zap;load ./jmol/pdbs/super_sec/f_acid_bind.pdb;spacefill off;select *;rotate z 141.79; rotate y 55.35; rotate z 135.82;wireframe off;cartoon;color structure;set specular on;select atomno=1;label '  FA Binding Protein';set fontsize 9;color labels yellow;select all","","","Fatty acid binding protein");  
+ </script>&nbsp;<b>Fatty acid binding protein</b>
+<br>
+ &nbsp;&nbsp;&nbsp;<font face="symbol">b</font>-meander
+ <script type="text/javascript">
+ jmolSetTarget("protg") 
+ jmolButton("select 88-120;color purple;select all","","","Fatty acid binding protein");  
+ </script>&nbsp;
+ 
+ &nbsp;&nbsp;<font face="symbol">aa</font>
+ <script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("select 88-120;color structure;select 15-36;color purple;select all","","","Fatty acid binding protein");  
+  </script>
+  <table border=0>
+  <tr><td width=190>
+   <br>
+  &nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolButton("zap;load ./jmol/pdbs/super_sec/protG.pdb;spacefill off;wireframe off;color structure;cartoon;set specular on;select atomno=1;label '  Protein G';set fontsize 9;color labels yellow;select *","","","Load Protein G");  
+ </script>&nbsp;<b>Protein G</b> 
+  
+  <br>
+   &nbsp;&nbsp;&nbsp;<font face="symbol">b</font>-hairpin
+   <script type="text/javascript">
+    jmolSetTarget("protg") 
+    jmolButton("select 5-26;color purple;select 45-60;color cyan;set specular on;select atomno=1;label '  Protein G';set fontsize 9;color labels yellow;select *","","","Load Protein G");  
+   </script>&nbsp;
+  </td>
+  <td width=190>
+   <br>
+   &nbsp;<script type="text/javascript">
+    jmolSetTarget("protg") 
+    jmolButton("zap;load ./jmol/pdbs/super_sec/1eta.pdb;rotate z -11.66; rotate y 32.8; rotate z 71.15;wireframe off;spacefill off;cartoon;color structure;set specular on;select atomno=1;label '  Prealbumin';set fontsize 9;color labels yellow;select  all","","","Load Prealbumin");  
+   </script>&nbsp;<b>Prealbumin</b>
+    <br>
+    &nbsp;&nbsp;&nbsp;Greek key
+    <script type="text/javascript">
+     jmolSetTarget("protg") 
+     jmolButton("select 11-74;ribbons;color group;select all","","","Greek key");
+    </script>&nbsp;
+     </td></tr></table>
+
+<HR>
+ <B>Fibrous Proteins</B><BR><BR>
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("zap;load ./jmol/pdbs/super_sec/coil.pdb;select mainchain;wireframe 80;spacefill 120;select atomno=7;label ' N';color label purple;set fontsize 18;restrict elemno>1","","","Load coil-coil");  
+  </script>&nbsp;<b>Coil-coil</b>
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("select all;wireframe off;spacefill off;select mainchain;wireframe 100;select Leu;wireframe 100;spacefill 150; select leu and sidechain;wireframe 100;spacefill 150;color yellow;restrict elemno>1;select all","","","Show Leu");  
+  </script>&nbsp;+Leu
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("select 24:B and elemno>1;wireframe 80;select all;calculate hbonds;hbonds 100;color hbonds yellow","","","H bonds");  
+  </script>&nbsp;Hbonds
+  
+ &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolCheckbox("set windowCentered off;center atomno=904;set windowCentered on;zoomto 1.0 300","set windowCentered off;center atomno=904;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+  </script>
+ <br><br> 
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("zap;load ./jmol/pdbs/super_sec/silk.pdb; rotate z 168.93; rotate y 74.17; rotate z 56.16;select mainchain;wireframe 40;spacefill 120;set specular on;select all;color white;select carbon;color [100,100,100]; select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];restrict elemno>1","","","Load Silk");  
+  </script>&nbsp;<b>Silk</b>
+  
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("background [0,0,0];monitor 620 526;monitor 634 514;monitor 617 529;monitor 543 603;monitor 546 600;monitor 560 586;monitor 563 583;color monitor yellow;set monitor 0.2","","","Silk-sidechains");  
+  </script>&nbsp;H-bonds
+  
+  
+ &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("select  *:J;define chainj selected;select  *:E;define chaine selected;isoSurface surf1 select(chainj) ignore(not chainj) molecular;isoSurface surf2 select(chaine) ignore(not chaine) molecular;color $surf1 orange;color $surf2  grey;color $surf1 translucent;color $surf2  translucent","","","Silk-sidechains");    </script>&nbsp;Surface
+  
+   &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolCheckbox("set windowCentered off;center atomno=600;set windowCentered on;zoomto 1.0 200","set windowCentered off;center atomno=600;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+  </script>
+  
+  <br><br> 
+   &nbsp;<script type="text/javascript">
+    jmolSetTarget("protg") 
+    jmolButton("zap;load ./jmol/pdbs/super_sec/collagen.pdb;select mainchain;wireframe 40;spacefill 120;set specular on;select all;color white;select carbon;color [100,100,100]; select nitrogen;color [120,80,255];select oxygen;color red;select sulfur;color [255,150,0];restrict elemno>1;delay 1.0;move 90 0 0 0 0 0 0 0 1.5","","","Load Collagen");  
+   </script>&nbsp;<b>Collagen</b>
+  
+  &nbsp;<script type="text/javascript">
+   jmolSetTarget("protg") 
+   jmolButton("select *;wireframe 40;backbone off;spacefill 120;set specular on;select gly;color yellow;restrict elemno>1","","","Load Collagen");  
+  </script>&nbsp;+Gly
+   
+   &nbsp;<script type="text/javascript">
+    jmolSetTarget("protg") 
+    jmolButton("select *;wireframe 40;backbone off;spacefill 120;set specular on;select pro;color gold;restrict elemno>1","","","Load Collagen");  
+   </script>&nbsp;+Pro
+   
+   &nbsp;&nbsp;<script type="text/javascript">
+    jmolSetTarget("protg") 
+    jmolCheckbox("select  all;color cpk;select *:A;define glya selected;select *:B;define glyb selected;select *:C;define glyc selected;isoSurface surf1 select(glya) ignore(not glya) molecular;color $surf1 orange;color $surf1 translucent;isoSurface surf2 select(glyb) ignore(not glyb) molecular;color $surf2 red;color $surf2 translucent;isoSurface surf3 select(glyc) ignore(not glyc) molecular;color $surf3 grey;color $surf3 translucent","isoSurface surf1 off;isoSurface surf2 off;isoSurface surf3 off","+/-Sur",false);
+   </script>
+   <img src="clock.gif"></img>
+   
+  
+  
+    
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("protg") 
+  jmolCheckbox("set windowCentered off;center atomno=89;set windowCentered on;zoomto 1.0 200","set windowCentered off;center atomno=230;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+ </script>
+   
+</TD>
+</TABLE>
+
+<table width=750>
+ <TR><TD>
+<HR>
+
+<B>Globular Proteins - Super-secondary Structures:</B><BR>
+
+ <UL><LI>Individual <font face="symbol">a</font>-helices and <font face="symbol">b</font>-sheets are stabilzed by main-chain hydrogen bonds.
+  <LI>Helix-helix and helix-sheet interactions usually involve non-polar residues and are therefore stabilized by the hydrophobic effect and van der Waals.
+   <LI><font face="symbol">b</font>-barrels close the edge of <font face="symbol">b</font>-sheets, satisfying H-bonds on edge of sheet.</UL>
+
+<OL>
+
+<LI>Single Domain Proteins:
+
+<UL>
+ <LI>Triose Phosphate Isomerase - b</font>-barrel core, <font
+  face="symbol">bab</FONT> units make up the walls. <font
+   face="symbol">a</font>-helicies are on the outside.
+</li>
+<LI>Fatty Acid Binding Protein - <font face="symbol">b</font>-barrel formed of
+anti-|| <font face="symbol">b</font>-strands. Contains <B>both</B> a <font
+face="symbol">b</font>-meander and an <font face="symbol">a</font><font
+face="symbol">a</font> unit.</LI>
+
+<LI>Prealbumin - <font face="symbol">b</font>-barrel formed of a Greek key.</LI>
+
+ <LI>Protein G - single <font face="symbol">a</font> packed against <font
+  face="symbol">b</font>-sheet. Contains several <font
+   face="symbol">b</font>-hairpins Note that the sheet is a mixture of || and
+  anti-|| <font face="symbol">b</font>-strands.</LI>
+  
+  </ul>
+  <br>
+<li>Fibrous Proteins
+
+  
+<OL>
+
+<LI>Coiled-Coil (Leucine Zipper)
+<UL>
+<LI>Two 'normal' <font face="symbol">a</font>helices wound together in a 'super-helix'
+<LI>Held together by hydrophobic interactions between Leucine residues
+</UL>
+
+<LI>Silk
+<UL>
+<LI> || planes of anti-parallel <font face="symbol">b</font> strands
+<LI> Repeating unit  is Ala-Gly.
+<LI> Hydrophobic interface between each plane due to Ala methyl groups
+</UL>
+
+<LI>Collagen
+<UL>
+<LI>Triple helix
+<LI>Repeating unit: Gly-Pro-Pro
+<LI>Large number of Proline residues are hydroxylated (requires vitamin C)
+<LI>Gly residues are on the inside because of their small size
+</UL>
+
+</UL>
+</tr>
+ </table>
+</BODY>
+</HTML>
+

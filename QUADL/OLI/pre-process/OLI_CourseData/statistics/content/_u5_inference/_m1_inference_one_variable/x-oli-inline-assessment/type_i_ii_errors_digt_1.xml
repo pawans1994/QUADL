@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="type_i_ii_errors_digt_1">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:identify type I error in context-->
+            <body>What type of error is possible here?</body>
+            <multiple_choice shuffle="false" select="single">
+                <choice value="A">type I</choice>
+                <choice value="B">type II</choice>
+                <choice value="C">neither</choice>
+                <choice value="D">both</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="10">
+                    <feedback>Correct. We rejected the null hypothesis. With a type I error, we
+                        reject a null hypothesis that is true.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect: With a type II error, we fail to reject a null hypothesis
+                        that is false. In this hypothesis test, we reject the null; therefore, it is
+                        impossible to have a type II error.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect: One of the two types of errors is always a possibility. In
+                        a hypothesis test, there are two possible conclusions, and each conclusion
+                        comes with the possibility of one of these errors.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect: It is never possible to make both of these errors at the
+                        same time. In a hypothesis test, there are two possible conclusions, and
+                        each conclusion comes with the possibility of one of these
+                        errors.</feedback>
+                </response>
+                <hint>Remember, you are trying to determine what type of error (type I or type II)
+                    the researchers may have made in making their conclusions.</hint>
+                <hint> &gt;A type I error is possible only if we reject the <em style="bold">H</em>
+                    <sub>0</sub> . A type II error is possible only if we fail to reject the <em
+                        style="bold">H</em>
+                    <sub>0</sub> . </hint>
+            </part>
+        </question>
+    </page>
+</assessment>

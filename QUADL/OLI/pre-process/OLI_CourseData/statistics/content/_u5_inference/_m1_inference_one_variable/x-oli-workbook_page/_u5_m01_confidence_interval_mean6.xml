@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_confidence_interval_mean6">
+<head>
+<title>Confidence Intervals for the Population Mean (6 of 8)</title>
+    <objref idref="explain_confidence_interval"/>
+    <objref idref="find_confidence_intervals"/>
+</head>
+<body>
+   
+    
+<section>
+<title>Sample Size Calculations</title>
+<body>
+<p>As we just learned, for a given level of confidence, the sample size determines the size of the margin of error and thus the width, or precision, of our interval estimation. This process can be reversed.</p>
+<p>In situations where a researcher has some flexibility as to the sample size, the researcher can calculate in advance what the sample size is that he/she needs in order to be able to report a confidence interval with a certain level of confidence and a certain margin of error. Let's look at an example.</p>
+<example>
+
+<p>Recall the example about <?oxy_insert_start author="mmyers" timestamp="20101123T150559-0500"?>the
+                        <?oxy_insert_end?>SAT-M
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T150602-0500"?>scores
+                        <?oxy_insert_end?>of community college students.</p>
+<p>An educational researcher is interested in estimating μ, the mean score on the math part of the
+                        SAT (SAT-M) of all community college students in his state. To this end, the
+                        researcher has chosen a random sample of 650 community college students from
+                        his state, and found that their average SAT-M score is 475. Based on a large
+                        body of research that was done on the
+                        SAT<?oxy_delete author="mmyers" timestamp="20101123T152957-0500" content="s"?>,
+                        it is known that the scores roughly follow a normal
+                        distribution<?oxy_insert_start author="mmyers" timestamp="20101123T150629-0500"?>,<?oxy_insert_end?>
+                        with
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T150630-0500"?>the
+                        <?oxy_insert_end?>standard deviation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>100</m:mn>
+                            </m:mrow>
+                        </m:math> .</p>
+<p>The 95% confidence interval for μ is <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>475</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>*</m:mo>
+                                        <m:mfrac>
+                                            <m:mn>100</m:mn>
+                                            <m:msqrt>
+                                                <m:mn>650</m:mn>
+                                            </m:msqrt>
+                                        </m:mfrac>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>475</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>*</m:mo>
+                                        <m:mfrac>
+                                            <m:mn>100</m:mn>
+                                            <m:msqrt>
+                                                <m:mn>650</m:mn>
+                                            </m:msqrt>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                        </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T150653-0500"?>,<?oxy_insert_end?>
+                        which is roughly <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mn>475</m:mn>
+                                <m:mo>±</m:mo>
+                                <m:mn>8</m:mn>
+                            </m:mrow>
+                        </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T150659-0500"?>,<?oxy_insert_end?>
+                        or (467,484). For a sample size of n<?oxy_insert_start author="mmyers" timestamp="20101123T150705-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101123T150705-0500"?>
+                        <?oxy_insert_end?>650, our margin of error is 8.</p>
+<p>Now, let's think about this problem in a slightly different way:</p>
+<p>An educational researcher is interested in estimating μ, the mean score on the math part of the SAT (SAT-M) of all community college students in his state with a margin of error of (only) 5, at the 95% confidence level. What is the sample size needed to achieve this? (σ, of course, is still assumed to be 100).</p>
+<p>To solve this, we set:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>m</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>⋅</m:mo>
+<m:mfrac>
+<m:mn>100</m:mn>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>so</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mfenced open="(" close=")">
+<m:mn>100</m:mn>
+</m:mfenced>
+</m:mrow>
+<m:mn>5</m:mn>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p>and</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:msup>
+<m:mfenced open="(" close=")">
+<m:mfrac>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mfenced open="(" close=")">
+<m:mn>100</m:mn>
+</m:mfenced>
+</m:mrow>
+<m:mn>5</m:mn>
+</m:mfrac>
+</m:mfenced>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>=</m:mo>
+<m:mn>1600</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>So, for a sample size of 1,600 community college students, the researcher will be able to
+                        estimate μ with a margin of error of 5, at the 95% level. In this example,
+                        we can also imagine that the researcher has some flexibility in choosing the
+                        sample
+                        size<?oxy_insert_start author="mmyers" timestamp="20101123T150804-0500"?>,<?oxy_insert_end?>
+                        since there is a minimal cost (if any) involved in recording students' SAT-M
+                        scores, and there are many more than 1,600 community college students in
+                        each state.</p>
+</example>
+<p>Rather than take the same steps to isolate n every time we solve such a problem, we may obtain a general expression for the required n for a desired margin of error m and a certain level of confidence.</p>
+<p> Since <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>z</m:mi>
+                            <m:mo>∗</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> is the formula to determine m for a given n, we can use simple algebra
+                    to express n in terms of m (multiply both sides by
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T150850-0500"?>the
+                    <?oxy_insert_end?>square root of n, divide both sides by m, and square both
+                    sides) to get</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:msup>
+<m:mfenced open="(" close=")">
+<m:mfrac>
+<m:mrow>
+<m:msup>
+<m:mi>z</m:mi>
+<m:mo>*</m:mo>
+</m:msup>
+<m:mi mathvariant="normal">σ</m:mi>
+</m:mrow>
+<m:mi>m</m:mi>
+</m:mfrac>
+</m:mfenced>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:math>. </p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>Clearly, the sample size n must be an integer. In the previous example we got n<?oxy_insert_start author="mmyers" timestamp="20101123T150907-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101123T150907-0500"?>
+                    <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101123T150909-0500"?>,<?oxy_insert_end?>600,
+                    but in other
+                    situations<?oxy_insert_start author="mmyers" timestamp="20101123T150933-0500"?>,<?oxy_insert_end?>
+                    the calculation may give us a non-integer result. In these cases, we should
+                    always <em>round up to the next highest integer.</em>
+                </p>
+<p>Using this "conservative approach," we'll achieve an interval at least as narrow as the one desired.</p>
+<example>
+
+<p>IQ scores are known to vary normally with
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T151040-0500"?>a
+                        <?oxy_insert_end?>standard deviation
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T151043-0500"?>of
+                        <?oxy_insert_end?>15. How many students should be sampled if we want to
+                        estimate<?oxy_insert_start author="mmyers" timestamp="20101123T151107-0500"?>
+                        the <?oxy_insert_end?> population mean IQ at 99% confidence with a margin of
+                        error equal to 2?</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:msup>
+<m:mfenced open="(" close=")">
+<m:mfrac>
+<m:mrow>
+<m:msup>
+<m:mi>z</m:mi>
+<m:mo>*</m:mo>
+</m:msup>
+<m:mi mathvariant="normal">σ</m:mi>
+</m:mrow>
+<m:mi>m</m:mi>
+</m:mfrac>
+</m:mfenced>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mtext> </m:mtext>
+<m:mo>=</m:mo>
+<m:mtext> </m:mtext>
+<m:msup>
+<m:mfenced open="(" close=")">
+<m:mfrac>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>576</m:mn>
+<m:mfenced open="(" close=")">
+<m:mn>15</m:mn>
+</m:mfenced>
+</m:mrow>
+<m:mn>2</m:mn>
+</m:mfrac>
+</m:mfenced>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mtext> </m:mtext>
+<m:mo>=</m:mo>
+<m:mtext> </m:mtext>
+<m:mn>373</m:mn>
+<m:mo>.</m:mo>
+<m:mn>26</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>Round up to be safe, and take a sample of 374 students.</p>
+</example>
+<!--<activity idref="_u5_m1_lbd2" purpose="learnbydoing"/>-->
+    <p>The purpose of
+                    th<?oxy_insert_start author="mmyers" timestamp="20101123T151126-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151126-0500" content="is"?>
+                    next activity is to give you guided practice in sample size calculations for
+                    obtaining confidence intervals with a desired margin of error, at a certain
+                    confidence level. Consider the example from the previous
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T151141-0500"?>L<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151141-0500" content="l"?>earn
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T151144-0500"?>B<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151143-0500" content="b"?>y
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T151146-0500"?>D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151146-0500" content="d"?>oing
+                    activity:</p>
+    <wb:inline idref="u4_m1_confintmean6_tutor1" purpose="learnbydoing"/>
+    <section>
+        <title>Comment</title>
+        <body>    <p>In the preceding activity, you saw
+                            that<?oxy_delete author="mmyers" timestamp="20101123T151546-0500" content=","?>
+                            in order to calculate the sample size when planning a study, you needed
+                            to know the population standard deviation,
+                            <?oxy_comment_start author="mmyers" timestamp="20101123T151843-0500" comment="clarification OK? (Symbol has not yet been &quot;named&quot; in course"?>sigma<?oxy_insert_start author="mmyers" timestamp="20101123T151602-0500"?>
+                            (σ)<?oxy_insert_end?>.<?oxy_comment_end?> In practice, sigma is usually
+                            <?oxy_insert_start author="mmyers" timestamp="20101123T151812-0500"?>not<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151810-0500" content="never"?>
+                            known<?oxy_insert_start author="mmyers" timestamp="20101123T151752-0500"?>,<?oxy_insert_end?>
+                            because it is a parameter. (The rare exceptions are certain variables
+                            like IQ score or standardized tests that might be constructed to have a
+                            particular known sigma.) </p><p>
+            Therefore, when researchers wish to compute the required sample size in preparation for a study, they use an <em>estimate</em> of sigma.  Usually, sigma is estimated based on the standard deviation obtained in prior studies.
+        </p><p> However, in some cases, there might not be any prior studies on the topic. In such instances, a
+                            researcher still needs to get a rough estimate of the standard deviation
+                            of the (yet-to-be-measured) variable, in order to determine the required
+                            sample size for the study. One way to get such a rough estimate is with
+                            the
+                            <?oxy_insert_start author="mmyers" timestamp="20101123T151956-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T151956-0500" content="‘"?>range
+                            rule of
+                            thumb,<?oxy_insert_start author="mmyers" timestamp="20101123T152001-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T152000-0500" content="’"?>
+                            which you will practice in the following activity.  </p>
+        </body>
+    </section>
+    
+    <!--<activity idref="_u5_m1_lbd24" purpose="learnbydoing"/>-->
+    <p>The purpose of
+                    th<?oxy_insert_start author="mmyers" timestamp="20101123T152008-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T152007-0500" content="is"?>
+                    next activity is to give you some experience with a method for roughly
+                    estimating
+                    <?oxy_comment_start author="mmyers" timestamp="20101123T152115-0500" comment="clarification OK?"?>sigma<?oxy_insert_start author="mmyers" timestamp="20101123T152027-0500"?>
+                    (σ, the population standard deviation)<?oxy_insert_end?>
+                    <?oxy_comment_end?>when no prior studies are available, in order to compute
+                    sample size when planning a first study. </p>
+<section purpose="learnbydoing">
+    <title>Learn By Doing</title>
+    <body>
+        <p>An increasing global population requires more food from crops. With
+            the world’s farmland limited due to overuse and a warming globe, one solution may come from
+            crops that are genetically-engineered to grow in harsh desert soil. </p>
+        <p> Suppose that an agricultural researcher has just genetically engineered a brand new type
+                            of corn, never before tested, which the researcher hopes will yield a
+                            sufficient number of kernels of corn when grown in harsh desert soil. In
+                            order to
+                            test<?oxy_insert_start author="mmyers" timestamp="20101123T152204-0500"?>
+                            the corn<?oxy_insert_end?>, the researcher will grow a certain number of
+                            ears of the new corn in harsh desert soil, and will count and record the
+                            number of kernels per ear. </p>
+        <p> The researcher needs your statistical help in computing the minimum number of ears of the
+            new corn that will be needed to be grown for the study. </p>
+        
+        <wb:inline idref="u4_m1_confintmean6_tutor2" purpose="learnbydoing"/>
+        <p> In the formula for the required number
+                            <?oxy_insert_start author="mmyers" timestamp="20101123T152250-0500"?>(<?oxy_insert_end?>n<?oxy_insert_start author="mmyers" timestamp="20101123T152251-0500"?>)<?oxy_insert_end?>
+                            of ears of corn the researcher needs in the study, you should have seen
+                            that we need to know sigma. Remember that the variable of interest is
+                            <?oxy_insert_start author="mmyers" timestamp="20101123T152449-0500"?>the
+                            <?oxy_insert_end?>number of kernels per ear of corn; so in this case
+                            sigma represents the standard deviation of number of kernels (from ear
+                            to ear), for the population of all ears of the new genetically
+                            engineered corn. </p>
+        <p> In this case, sigma (the standard deviation of
+            kernels per ear) isn’t known, since the genetically engineered corn is brand new; and
+            since the new corn has never been tested, there are no prior studies to use to estimate
+            sigma. </p>
+        <p> So the researcher can use the ‘range rule of thumb,’ which says that, to a
+            rough approximation, sigma is no bigger than range/4, where range = max – min. If you have no
+            other estimate for sigma, you can therefore use range/4 as a rough estimate for sigma. </p>
+        <p>To use range/4 as a rough estimate for sigma, we need to estimate the range of the number
+                            of kernels on an ear of the new experimental corn. An ordinary ear of
+                            corn has around 800 kernels. We don’t know how few or how many kernels
+                            each ear of the experimental corn will have, but at the very minimum it
+                            could have zero (if the new corn didn’t produce any kernels at all); and
+                            even if the new corn actually over-produces compared to existing corn
+                            (despite being grown in harsh conditions), it certainly isn’t going to
+                            overproduce by more than twice (since it’s going to be grown in harsh
+                            desert soil), so the maximum number of kernels can’t be larger than
+                            1<?oxy_insert_start author="mmyers" timestamp="20101123T152632-0500"?>,<?oxy_insert_end?>600. </p>
+        <wb:inline idref="u4_m1_confintmean6_tutor3" purpose="learnbydoing"/>
+        
+        <wb:inline idref="u4_m1_confintmean6_tutor4" purpose="learnbydoing"/>
+    </body>
+
+</section>
+</body>
+</section>
+</body>
+</workbook_page>

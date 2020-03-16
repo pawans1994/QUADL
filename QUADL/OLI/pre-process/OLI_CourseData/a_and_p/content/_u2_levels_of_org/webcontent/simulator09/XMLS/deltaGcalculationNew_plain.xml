@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="deltaGgrapher" version="1">
+    <name>&lt;b&gt;Calculating ∆G&lt;sup&gt;0&lt;sup&gt;&lt;/b&gt;</name>
+    <debugger state="on"/> 
+    <steps>
+        <step id="createIT">
+            <objects  tutor="">
+                <object name="theexplainer" state="visible">
+                <title> </title>
+                <text> 
+                </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects>
+            <actions>
+             
+                <action event="create" name="bk" url="tools/bk.swf"  x="316" y="0" xscale="1"  yscale=".66"/>
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> 
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/> 
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="320" y="20" xscale="1"  yscale="1"/>
+                <action event="create" name="grapher1" url="tools/deltaGgraph3.swf"  x="340" y="180" xscale="1" yscale="1" />               
+                <action event="create" name="f_a" url="tools/DisplayValue.swf"  x="540" y="470" xscale="1"  yscale="1"/>
+                <action event="create" name="f_a_actual" url="tools/DisplayValue.swf"  x="540" y="450" xscale="1"  yscale="1"/>
+                <action event="create" name="equation1" url="tools/equationMO1.swf"  x="410" y="295" xscale="1" yscale="1" />
+                <!--<action event="create" name="label1" url="tools/label.swf"  x="400" y="255" xscale="1" yscale="1" />
+                <action event="create" name="label2" url="tools/label.swf"  x="325" y="343" xscale="1" yscale="1" />
+                <action event="create" name="label3" url="tools/label.swf"  x="580" y="345" xscale="1" yscale="1" />
+                <action event="create" name="inputs1" url="tools/inputs1NEW.swf"  x="433" y="315" xscale="1" yscale="1" />
+                <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="180" xscale="1"  yscale="1"/> -->
+                <action event="create" name="castKey1" url="tools/castKeyDeltaG.swf"  x="317" y="185" xscale="1" yscale="1" />
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+         <step id="userSet E">
+             <objects  tutor="">
+                 <object name="title" state="visible">
+                     <text>Equilibrium position of a reaction defined by standard energy change,∆G&lt;sub&gt;0&lt;sub&gt;</text>
+                 </object>
+                <object name="theexplainer" state="visible">
+                    <text>
+The upper part of the right window shows 20 molecules that can be either in form A or form B.  These two forms are in equilibrium with each other and will interconvert randomly.
+
+The lower part of the right window shows a quantitative representation of the equilibrium position and Gibbs free energy of the system.
+
+The scales underneath the graph indicate the fraction of the molecules in form A (upper) and form B (lower). The extreme left represents a system where all of the molecules are in form A and the extreme right represents a system where all of the molecules are in form B.
+
+You can select the standard energy of each reactant by using the sliders labeled A and B. The numerical values you select appear at the top of the column. 
+
+
+Click "Next" to continue.
+                    </text>
+                </object>
+                 <object name="box1" state="hilight"/>
+                 <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                 <object name="castKey1" state="hilight"/> 
+            </objects>
+             <actions> 
+                 <action event="initialize"  name="button" params="object=box1,action=reset"  data="Reset"/>  
+                 <action event="initialize" name="f_a" params="thevariable=state1,thelabel=f_a,thevalue=.5" /> 
+                 <action event="initialize" name="f_a_actual" params="thevariable=actual,thelabel=actual,thevalue=0" /> 
+                 <action event="initialize" name="box1" params="leftBorder=0,rightBorder=450,topBorder=0,bottomBorder=250,leftBorder2=0,rightBorder2=450,topBorder2=0,bottomBorder2=250">
+                     <molecules>
+                         <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->  
+                         <molecule numMolecules= "0"  injectionforce= "0" velocity= "0"  cast= "glucose"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="250" y="80" Xoffset="30" Yoffset="30" rotationVelocity="0"  rotation="0"  watchEnvironment= "1"  changestate="yes" state1="1,,50,.1" state2="2,,50,-.2" polarity = "0,0,0,0,0,0,0,0" mytype="ligand"  myID="1"  mybounce="false" />             
+                         <molecule numMolecules= "0"  injectionforce= "0" velocity= "0"  cast= "ligandgreen"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="80" Xoffset="30" Yoffset="30" rotationVelocity="0"  rotation="0"  watchEnvironment= "1"  changestate="yes" state1="1,,50,-.2" state2="2,,50,.1" polarity = "0,0,0,0,0,0,0,0" mytype="ligand"  myID="2"  mybounce="false" />
+                           </molecules>
+                 </action>
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=5,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=50,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=95,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=140,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=185,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=230,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=275,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=320,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=365,y=60,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=1,x=410,y=60,Xoffset=0,Yoffset=0" />
+                 
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=5,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=50,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=95,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=140,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=185,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=230,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=275,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=320,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=365,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=1,param3=2,x=410,y=100,Xoffset=0,Yoffset=0" />
+                 <action event="sendmessage" name="grapher1" params="setmySlider=off" />
+                 <action event="record all"/>
+             </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+         </step>
+        
+        <step id="mt1">
+            <objects  tutor="deltag_1.xml">
+                <object name="title" state="visible">
+                    <text>Equilibrium position of a reaction defined by standard energy change,∆G&lt;sub&gt;0&lt;sub&gt;</text>
+                </object>
+                
+                <object name="box1" state="hilight"/>
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey1" state="hilight"/> 
+                
+            </objects>
+            <actions>  
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="mt2">
+            <objects  tutor="deltag_2.xml">
+                <object name="title" state="visible">
+                </object>
+                
+                <object name="box1" state="hilight"/>
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey1" state="hilight"/> 
+                
+            </objects>
+            <actions>  
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        <step id="mt3">
+            <objects  tutor="">
+                <object name="title" state="visible">
+                    <text>Once you have selected the standard energy for each form, click the Graph button to see the equilibrium point represented by E.
+                        
+You can repeat this process as many times as you like.Equilibrium position of a reaction defined by standard energy change,∆G&lt;sub&gt;0&lt;sub&gt;</text>
+                </object>
+                
+                <object name="box1" state="hilight"/>
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey1" state="hilight"/> 
+                
+            </objects>
+            <actions>  
+                <action event="record all"/>
+                <action event="sendmessage" name="grapher1" params="linecolor=0xffffff" />
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        <step id="Gibbs">
+            <objects  tutor="">
+                <object name="title" state="visible">
+                    <text>Non-Equilibrium and Gibbs free energy.</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>
+Select standard energy values for form A and form B that give an equilibrium point close to the center.
+                        
+Hit the graph button, the curve that appears shows the absolute value of the ∆G for this particular standard energy difference, plotted as a function of the reactants and products. 
+
+A slider has been added to the scales below the graph. Move the slider to change in concentration of the reactants.  The &lt;b&gt;*&lt;/b&gt; on the curve indicates the absolute value of the ∆G for the selected concentrations of reactants and products.  
+                                                                       
+The concentrations will be reflected in the behavior of the molecules above.</text>  </object>              
+<object name="box1" state="hilight"/>
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey1" state="hilight"/> 
+                
+            </objects>
+            <actions>  
+                <action event="record all"/>
+                <action event="sendmessage" name="grapher1" params="linecolor=0xcccccc" />
+                <action event="sendmessage" name="grapher1" params="setmySlider=on" />
+                <action event="sendmessage" name="grapher1" params="disturbme=0" />
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>  
+        
+        <step id="mt4">
+            <objects  tutor="">
+                <object name="title" state="visible">
+                    <text>Non-Equilibrium and Gibbs free energy.</text>
+                </object>
+                
+                <object name="box1" state="hilight"/>
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey1" state="hilight"/> 
+               
+            </objects>
+            <actions>  
+                <action event="record all"/>
+                <action event="create" name="castKey2" url="tools/2enzyme.swf"  x="350" y="90" xscale="1" yscale="1" />
+                <action event="sendmessage" name="grapher1" params="graph" />
+                <action event="sendmessage" name="grapher1" params="disturbme=1" />
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>       
+
+     
+        <step id="mt5">
+            <objects  tutor="">
+                <object name="title" state="visible">
+                    <text>Non-Equilibrium and Gibbs free energy.</text>
+                </object>              
+               
+                <object name="bk" state="hilight"/>
+                <object name="grapher1" state="hilight"/> 
+                <object name="castKey2" state="hilight"/> 
+
+            </objects>
+            <actions> 
+
+                <action event="sendmessage" name="grapher1" params="setmySlider=on" />
+                <action event="sendmessage" name="grapher1" params="linecolor=0xcccccc" />
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+         
+
+        
+        <step id="all done">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title>ALL done</title>
+                    <text>
+                        
+Reload the page to repeat these experiments.</text>
+                </object>
+                <object name="image" state="invisible" />
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="record light"/>
+                
+                
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        
+        <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+    </steps>
+</simulation>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintmean7_lbd1_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>What is the 99% confidence interval for &#956;? Interpret it in context.</body>
+        <short_answer id="A"/>
+        <part>
+            <response input="A" match="*" score="10"/>
+            <explanation>
+                <alternatives group="statistics.package">
+                    <alternative value="r">
+                        <title>R</title>
+                        <p>R gives us:</p>
+                        <image src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor3a_image2.gif" alt="R output"/>
+                        <p>Thus, we are 99% confident that the mean birth weight of first babies
+                            born to mothers who are 35 or older is between 2,996 and 3,227
+                            grams.</p>
+                    </alternative>
+                    <alternative value="minitab">
+                        <title>Minitab</title>
+                        <p>Here is the Minitab output:</p>
+                        <image src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor3a_image1.jpg" alt="Minitab output"/>
+                        <p>Thus, we are 99% confident that the mean birth weight of first babies
+                            born to mothers who are 35 or older is between 2,996 and 3,227
+                            grams.</p>
+                        <p><em>Comments: </em></p>
+                        <p>1. Note that in the output, Minitab also calculates the sample standard
+                            deviation, s, (under StDev) and another quantity denoted by "SE Mean"
+                            (which we will discuss in the course shortly). Even though these
+                            quantities are not needed for calculating the confidence interval, it is
+                            quite encouraging to see that the sample standard deviation is 501.32,
+                            since this means that our assumption of &#x03C3; = 500 is quite
+                            reasonable. </p>
+                        <p>2. If you go back for a minute to the dialog box (Stat → Basic statistics
+                            → 1 Sample Z) you'll notice that there is also the option to give
+                            Minitab "Summarized data" instead of the raw data. (i.e., the sample
+                            size (n) and mean (x-bar)). As we mentioned earlier in this activity, in
+                            cases like these, it would be easier to simply use the formula
+                            ourselves, but it is noteworthy that the option in Minitab exists. </p>
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2007</title>
+                        <p>Excel tells us that the mean is 3,111, and the margin of error is 115.
+                            Thus, we are 99% confident that the mean birth weight of first babies
+                            born to mothers who are 35 or older is between 2,996 and 3,226
+                            grams.</p>
+                    </alternative>
+                   <!--  <alternative value="excel2003">
+                        <title>Excel 2003</title>
+                        <p>Excel tells us that the mean is 3,111, and the margin of error is 115.
+                            Thus, we are 99% confident that the mean birth weight of first babies
+                            born to mothers who are 35 or older is between 2,996 and 3,226
+                            grams.</p>
+                    </alternative> -->
+                    <alternative value="ti">
+                        <title>TI Calculator</title>
+                        <p>If you enter:</p>
+                        <image src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor3a_image1_ti.jpg" alt="ti calculator output"/>
+                        <p>and choose <code>CALCULATE</code>, then press <code>ENTER</code>, you should see:</p>
+                        <image src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor3a_image2_ti.jpg" alt="ti calculator output"/>
+                        <p>Thus, we are 99% confident that the mean birth weight of first babies
+                            born to mothers who are 35 or older is between 2,996 and 3,227
+                            grams.</p>
+                        <p><em>Comments: </em></p>
+                        <p>1. Note that in the output, the TI Calculator also calculates the sample
+                            standard deviation, Sx. Even though this quantity is not needed for
+                            calculating the confidence interval, it is quite encouraging to see that
+                            the sample standard deviation is 501.32, since this means that our
+                            assumption of &#x03C3; = 500 is quite reasonable. </p>
+                        <p>2. When calculating the confidence interval for the population mean, the TI offers the choice of <em>DATA</em> or <code>STATS</code>. If you choose <code>STATS</code>, you’d see:</p>
+                            <image src="../../../webcontent/inline_assessment/_u5_m1_lbdtutor3a_image3_ti.jpg" alt="ti calculator ouput"/>                            
+                            <p>Note that you’d enter x-bar and n rather than List: and Freq:</p>
+                    </alternative>
+                </alternatives>
+               </explanation>
+        </part>
+    </question>
+</assessment>

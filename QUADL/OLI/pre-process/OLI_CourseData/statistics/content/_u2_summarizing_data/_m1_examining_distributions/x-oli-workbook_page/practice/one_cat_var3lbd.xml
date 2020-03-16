@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="one_cat_var3lbd">
+    <head>
+        <title>One Categorical Variable</title>
+    </head>
+    <body>
+        <p>The same survey that asked 1,200 U.S. college students about their body perception also
+            asked the following question: </p>
+        <p>"With whom do you find it easiest to make friends?" (opposite sex, same sex or no
+            difference). </p>
+        <!--<p>In this activity we will use the collected data to: </p>
+        <ul>
+            <li> learn how to tally our data into a table of counts and
+                percents. </li>
+            <li> learn how to produce a pie-chart. </li>
+        </ul>
+        
+        <p>To create a table of counts and percents: </p>
+        <ul>
+            <li> Choose: Statistics → Table of Counts and Percents</li>
+            <li> Choose the 'Friends' Variable</li>
+            <li> Under "Display", check "Counts" and "Percents".</li>
+            <li> Click OK.</li>
+        </ul>
+        <p>To create a pie-chart of the data: </p>
+        <ul>
+            <li> Choose: Graph → Pie Chart.</li>
+            <li> Choose the "Friends" variable.</li>
+            
+            <li> Click OK.</li>
+        </ul>
+        
+        <flash src="../../../webcontent/flash/StatRex.swf" width="800"
+            height="400"/>-->
+        <p>In this activity we will use the collected data to </p>
+        <ul>
+            <li>Learn how to tally our data into a table of counts and percentages. </li>
+            <li>Learn how to produce a pie chart. </li>
+        </ul>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/friends.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R. </p>
+                    <p>The data have been loaded into the data frame <code>friends</code>. Enter the
+                        command <code>friends</code> to see the data.</p>
+                    <p>You can scroll up and down to see how 1,200 men and women answered the
+                        question: "With whom do you find it easiest to make friends?"</p>
+                    <p>Notice that the column title in the data frame <code>friends</code> is
+                            <code>Friends</code>. The column title <code>Friends</code> is the
+                        variable name, while the data frame name is <code>friends</code>. The subtle
+                        difference is the capital F in the column title. R is sensitive to
+                        capitalization so R identifies <code>friends</code> and <code>Friends</code>
+                        as two different things. To extract a specific variable from a data frame
+                        there are many methods, the simplest method is to use the $ to identify the
+                        desired variable (column title) within the data frame, or
+                            <code>friends$Friends</code>.</p>
+                    <p>Obviously the raw data is not very useful so we will summarize it using a
+                        table. To get a summary table of the data, copy and paste the next commands
+                        into R (and press Enter if necessary to execute the command):</p>
+                    <code>t = table(friends$Friends);t</code>
+
+                    <p><em>Note:</em> Using R—When you assign a value to a variable, R will not
+                        display the value unless you ask for the display by executing the variable
+                        name as a command in the console.</p>
+
+                    <p>The same method is used below when the summary table for <code>Friends</code>
+                        is converted to percentages and assigned to the variable percent. Executing
+                        the variable name to see its contents may seem like an unnecessary extra
+                        step, but the convention allows you to assign a large amount of data to a
+                        variable and not fill your screen with the result (which could be millions
+                        of numbers) unless you really want to see it.</p>
+                    <p>To see the proportion of the total in each category, copy and paste the
+                        command:</p>
+                    <p><code>prop = prop.table(t);prop</code></p>
+
+
+                    <p>To see the percentage of the total in each category, copy and paste the
+                        command:</p>
+                    <code>percent=prop.table(t)*100;percent</code>
+
+                    <p>Finally, copy and paste the next command to create a pie chart of your
+                        data:</p>
+                    <code>pie(t)</code>
+                    <p>The following alternate version of the pie chart command will produce a chart
+                        with more informative labels:</p>
+                    <p>First we will modify our <em style="bold">percent</em> table so that each
+                        value is rounded to one decimal place.</p>
+                    <code>pf = round(percent,1);pf</code>
+
+                    <p>Next we will create a label that will include the category name and the
+                        percent as the labels for each section of the pie chart. R defaults to
+                        alphabetical order for tables and graphic creation so if you create your own
+                        labels list the names accordingly.</p>
+                    <code>lbl = paste(c("No difference","Opposite sex","Same
+                        sex"),pf,"%",sep="");lbl</code>
+
+                    <p>Finally, create the pie chart with the new label added:</p>
+                    <code>pie(t,label=lbl)</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/friends.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next,
+                        click <link href="http://www.statcrunch.com/" target="new">here</link> to
+                        open StatCrunch in a separate window, and log in using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page.</li>
+                        <li>To open the dataset, choose <code>Data → Load → From file → on my
+                                computer</code>.</li>
+                        <li>Select "Browse" or “Choose File” (depending on which browser you're
+                            using), and select the dataset you downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on “Load File.”</li>
+                    </ul>
+                    <p>To ask StatCrunch for a table of counts and percentages:</p>
+                    <ul>
+                        <li>Choose <code>Stat → Tables → Frequency</code>.</li>
+                        <li>In the Frequency Table window, select the column Friends.</li>
+                        <li>Press Compute! (The information will appear in a pop-up window.)</li>
+                    </ul>
+                    <p>To ask StatCrunch for a pie chart of the data:</p>
+                    <ul>
+                        <li>Choose <code>Graph → Pie Chart → with data</code>.</li>
+                        <li>In the Pie Chart With Data window, select column Friends.</li>
+                        <li>Press Compute! (Pie chart will appear in a pop-up window.)</li>
+                    </ul>
+                    <!--<ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set select the "My computer" link under Load a data set
+                            from box on the left side of the page.</li>
+                        <li>Select the "Browse" or "Choose File" (depending on which browser you're
+                            using and select the data set you downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on "Load File."</li>
+                    </ul>
+                    <p>To ask StatCrunch for a table of counts and percents:</p>
+                    <ul>
+                        <li> Choose: Stat → Tables → Frequency.</li>
+                        <li> In Frequency Table window select the column: Friends.</li>
+                        <li> Press Calculate (The information will appear in a pop-up window).</li>
+                    </ul>
+                    <p>To ask StatCrunch for a pie chart of the data:</p>
+                    <ul>
+                        <li> Choose: Graphics → Pie Chart → with data</li>
+                        <li> In Pie Chart window select column: Friends.</li>
+                        <li> Press Create Graph! (Pie chart will appear in a pop-up window).</li>
+                    </ul>-->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/friends.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: you
+                        will likely see a dialog box appear that says "A copy of the content of this
+                        file will be added to the current project"&#8212;just click OK.</p>
+                    <p>To ask Minitab for a table of counts and percentages: </p>
+                    <ul>
+                        <li>Choose: Stat → Tables → Tally Individual Variables.</li>
+                        <li>Under "Variables" type friends (or double-click on this variable in the
+                            left panel).</li>
+                        <li>Under "Display," check "Counts" and "Percents."</li>
+                        <li>Click OK (The information will appear in the session (upper)
+                            window).</li>
+                    </ul>
+                    <p>To ask Minitab for a pie chart of the data: </p>
+                    <ul>
+                        <li>Choose: Graph → Pie Chart.</li>
+                        <li>Under "Categorical variables," type "Friends" (or double-click on this
+                            variable in the left panel).</li>
+                        <li>Click on "Labels," choose the "Slice Labels" tab on top, and check
+                            "Frequency" and "Percent."</li>
+                        <li>Click OK twice. A separate window with the pie chart will show up.</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/friends.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing. </p>
+
+                    <p>To ask Excel for a table of counts and percentages: </p>
+                    <ul>
+                        <li>Click on the cell with the variable label <em>Friends</em>.</li>
+                        <li>Click on the arrow under <em>PivotTable</em> in the <em>Tables</em>
+                            group in the <em>Insert</em> tab, and choose <em>Pivot Table</em> from
+                            the drop-down menu.</li>
+                        <li>Click <em>OK</em>.</li>
+                        <li>Excel will create a new worksheet with a blank table. We have to tell
+                            Excel how to construct the table:</li>
+                        <li>You should see a window titled <em>PivotTable Field List</em> with a
+                            single item that is our "Friends" variable. </li>
+                        <li>Check the box next to <em>Friends</em>.</li>
+                        <li>Now drag the <em>Friends</em> item to the table where it says <em>Drop
+                                Value Fields Here</em>.</li>
+                    </ul>
+                    <p>You should now have a table that shows the number of each type of data
+                        entry&#8212;"No difference," "Opposite sex," and "Same sex,"&#8212;and a
+                        grand total. This is the count of each of these entries. To see the percents
+                        for each entry, we can ask Excel to show percents instead of counts:</p>
+                    <ul>
+                        <li>Right-click on any of the cells containing the counts and choose
+                                <em>Value Field Settings</em> from the pop-up menu.</li>
+                        <li>Click the tab that says <em>Show values as</em>.</li>
+                        <li>Now use the drop-down menu labeled <em>Show data as:</em> to select
+                                <em>% of total</em> and click <em>OK</em>.</li>
+                    </ul>
+                    <p>To produce a pie chart of the data using Excel: </p>
+                    <ul>
+                        <li> First, if your table is showing percents, you need to change it back to
+                            counts:</li>
+                        <li>Right-click on any of the cells containing the percents and choose
+                                <em>Value Field Settings</em> from the pop-up menu.</li>
+                        <li>Click the tab that says <em>Show values as</em>.</li>
+                        <li>Now use the drop-down menu labeled <em>Show values as: </em> to select
+                                <em>No Calculation</em> and click <em>OK</em>.</li>
+                        <li> Now click on one of the cells in your table and then click the
+                                <em>PivotChart</em> button in the <em>Tools</em> group on the
+                                <em>Analyze (PivotTable Tools)</em> tab.</li>
+                        <li> In the <em>Insert Chart</em> window that appears, choose the first pie
+                            chart option and click <em>OK</em>.</li>
+                        <li>To label the sections of the pie, right click the pie and choose
+                                <em>Format Data Labels</em> (version 2013) or <em>Add Data Labels
+                            </em> (version 2016) from the pop-up menu.</li>
+                        <li>To see percentages as well as absolute values, right-click the pie and
+                            choose Format Data Labels from the pop-up menu. On the menu that appears
+                            to the right, check the box next to <em>Percentage</em>.</li>
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/friends.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                    <p>To ask Excel for a table of counts and percentages: </p>
+                    <ul>
+                        <li> Click on the cell with the variable label <em>Friends</em>.</li>
+                        <li> Choose: <em>Data → Pivot Table and Pivot Chart Report</em>.</li>
+                        <li> Click <em>Finish</em>.</li>
+                        <li> Excel will create a new worksheet with a blank table. We have to tell
+                            Excel how to construct the table:</li>
+                        <li>You should see a window titled <em>PivotTable Field List</em> with a
+                            single item that is our "Friends" variable. </li>
+                        <li>Drag the <em>Friends</em> item to the table where it says <em>Drop
+                                Column Fields Here</em>.</li>
+                        <li>Now go back to the PivotTable Field List and drag the <em>Friends</em>
+                            item to the table where it says <em>Drop Data Items Here</em>.</li>
+                    </ul>
+                    <p>You should now have a table that shows the number of each type of data
+                        entry&#8212;"No difference," "Opposite sex," and "Same sex,"&#8212;and a
+                        grand total. This is the count of each of these entries. To see the percents
+                        for each entry, we can ask Excel to show percents instead of counts:</p>
+                    <ul>
+                        <li>Right-click on any of the cells containing the counts and choose
+                                <em>Field Settings</em> from the pop-up menu.</li>
+                        <li>Click the button that says <em>Options</em>.</li>
+                        <li>Now use the drop-down menu labeled <em>Show data as:</em> to select
+                                <em>% of row</em> and click <em>OK</em>.</li>
+                    </ul>
+                    <p>To produce a pie chart of the data using Excel: </p>
+                    <ul>
+                        <li> First, if your table is showing percents, you need to change it back to
+                            counts:</li>
+                        <li>Right-click on any of the cells containing the percents and choose
+                                <em>Field Settings</em> from the pop-up menu.</li>
+                        <li>Now use the drop-down menu labeled <em>Show data as:</em> to select
+                                <em>Normal</em> and click <em>OK</em>.</li>
+                        <li> Now right-click one of the cells in your table and choose
+                                <em>PivotChart</em> from the pop-up menu.</li>
+                        <li> Excel will create a new chart with a bar graph. We want to change this
+                            to a pie chart:</li>
+                        <li>Right-click somewhere in the graph
+                                <em style="italic">outside of the bar</em>.</li>
+                        <li>Choose <em>Chart Type</em> from the pop-up menu.</li>
+                        <li>Now select <em>Pie</em> from the <em>Chart type</em> list on the left
+                            and then click <em>OK</em>.</li>
+                        <li>To complete the pie chart, drag the <em>Friends</em> item from the
+                                <em>PivotTable Field List</em> to the legend where it says <em>Drop
+                                Category Fields Here</em>. Note: if you don't see the legend, the
+                            PivotTable Field list window may be covering it.</li>
+                        <li>To label the sections of the pie, right click one of the sections of the
+                            pie and choose <em>Format Data Series</em> from the pop-up menu, select
+                            the tab marked <em>Data Labels</em>, and then check the boxes next to
+                                <em>Value</em> and <em>Percentage</em> and click <em>OK</em>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Important Note!</em> TI 83/84 calculators do not have the built-in
+                        capability to create a table of counts and percentages or to construct a pie
+                        chart. Thus, for this activity, we suggest trying one of the other
+                        technologies available in OLI Statistics. <link
+                            href="http://cran.r-project.org/">R</link> is an excellent statistical
+                        package that is free to download and that is available for both Windows and
+                        Mac OS X.</p>
+                    <p>If you want to continue with the TI Calculator, you can produce a table of
+                        counts and percentages by hand using your TI to help. You can download an
+                        app that will allow you to construct a pie chart. </p>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/friends.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p>Since the dataset is too large (n=1,200) to store in one list, the 1,200
+                        values are split into two lists.</p>
+                    <p>The friends data should now be loaded in L1 and L2, and is coded as follows:
+                        0=no difference, 1=opposite sex, 2=same sex.</p>
+                    <p>You can produce a table of counts or percents by hand using your TI to
+                        help.</p>
+                    <p><em>Table of Counts and Percentages </em>
+                    </p>
+                    <p>First, sort the lists (L1 and L2) that contain the coded data for the
+                        categorical variable in ascending order:</p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/EDIT/2:SortA(</code>
+                        </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image503.jpg"/></li>
+                        <li>Before pressing <code style="inline">ENTER</code>, choose the list that
+                            you want to sort: <ul>
+                                <li>To access one of the built-in lists (L1-L6), press <code
+                                        style="inline">2ND</code> and then the number of the list.
+                                    For example, to access L1, you would press <code style="inline"
+                                        >2ND/1</code>.</li>
+                                <li>To access a non-built-in list, use the <code style="inline"
+                                        >LIST</code> menu (<code style="inline">2ND/STAT</code>).
+                                    Press <code style="inline">LIST/NAMES</code> to choose the
+                                    appropriate list.</li>
+                            </ul></li>
+                        <li>Press the right parenthesis, then <code style="inline">ENTER</code>. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image504.jpg"/></li>
+                        <li>Check out the sorted list by choosing <code style="inline"
+                                >STAT/EDIT/1:Edit</code>. </li>
+                    </ul>
+                    <p>Count the number of values for each category. </p>
+                    <p> The page <activity_link target="new" idref="one_cat_var1">One Categorical
+                            Variable (1 of 3)</activity_link> describes how to create a table with
+                        counts and percentages. </p>
+                    <p><em>PieChart</em></p>
+                    <p>While the TI Calculator does not have the built-in capability to create a pie
+                        chart, you can download an app for your calculator that will do this. It is
+                        called CellSheet App and is a free download from the <link
+                            href="http://education.ti.com/educationportal/sites/US/productDetail/us_cellsheet_83_84.html"
+                            target="new">TI website</link>. Note that some TI calculators have the
+                        CellSheet App preloaded&#8212;choose <code style="inline">APPS</code> on
+                        your TI to see if CellSheet App is already loaded on your calculator.</p>
+
+                    <p>The TI website also includes <link target="new"
+                            href="http://education.ti.com/educationportal/sites/US/nonProductSingle/download.html"
+                            >instructions for downloading apps to your TI</link> and an <link
+                            target="new"
+                            href="http://education.ti.com/educationportal/activityexchange/download_file.jsp?cid=US&amp;fileurl=Math%2FProbabilityStatistics%2F2974%2F2-02_goodtofair_MT_TG_FINAL.pdf"
+                            >example exercise</link> that shows how to construct a pie chart.</p>
+                    <p>Once you have CellSheet App installed, use it to create a pie chart on the
+                        TI:</p>
+                    <ul>
+
+                        <li>Press <code style="inline">APPS</code>.</li>
+                        <li>Choose <code style="inline">Cellsheet</code>.</li>
+                        <li>Press any key twice to get to the spreadsheet screen. </li>
+                        <li>Press <code style="inline">GRAPH</code> to access the CellSheet
+                            menu.</li>
+                        <li>Choose <code style="inline">1:File</code></li>
+                        <li>Choose <code style="inline">3:New</code></li>
+                        <li>Name the spreadsheet and press <code style="inline">ENTER</code>.</li>
+                        <li>Press <code style="inline">ENTER</code> again.</li>
+                        <li>Now enter the labels for the pie chart in row 1, starting in column A. <ul>
+                                <li>Use the arrow keys to position the cursor in A1.</li>
+
+                                <li>Choose <code style="inline">A-LOCK (2ND/ALPHA)</code></li>
+                                <li>Press
+                                    <?oxy_comment_start author="mmyers" timestamp="20101015T165246-0400" comment="does &quot; have its own key, or are you saying you have to press shift (or the TI equivalent, if there is one) and the + key? (just checking)"?>"
+                                    (found over the + key)<?oxy_comment_end?>, then continue
+                                    pressing the letters for a name for the first category. Press
+                                        <code style="inline">ENTER</code> when finished.</li>
+                                <li>Your cursor should be in A2.</li>
+                                <li>Enter the percentage for the first category.</li>
+                                <li>Repeat for each category of the categorical variable.</li>
+                                <li>You should see: <image style="inline"
+                                        src="../../webcontent/image505.jpg"/></li>
+                            </ul></li>
+                        <li>Choose the <code style="inline">Menu</code> by pressing <code
+                                style="inline">GRAPH</code>.</li>
+                        <li>Choose <code style="inline">4: Charts</code>.</li>
+                        <li>Choose <code style="inline">7:Pie</code></li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image506.jpg"/></li>
+                        <li>For Categories: enter the range for the category labels, ex. A1:C1 <ul>
+
+                                <li>Press <code style="inline">ALPHA/MATH</code> for the A, then
+                                    press the number 1.</li>
+                                <li>Press <code style="inline">ALPHA/.</code> for the : (press ALPHA
+                                    and a decimal point to get a colon)</li>
+                                <li>Press <code style="inline">ALPHA/APPS</code> for the C, then
+                                    press the number 1.</li>
+                                <li>Press <code style="inline">ENTER</code> or the down arrow to
+                                    move to the next line.</li>
+                            </ul></li>
+                        <li>For Series: enter the range of the percentages of each category, or
+                                <code style="inline">A2:C2</code></li>
+                        <li>Choose Percent by highlighting <code style="inline">Percent</code> and
+                            pressing <code style="inline">ENTER</code>.</li>
+                        <li>Enter a <code style="inline">Title:</code>. Alpha-lock is automatically
+                            on, so press up to 10 letters for a title.</li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image507.jpg"/></li>
+                        <li>Choose <code style="inline">DRAW</code> and press <code style="inline"
+                                >ENTER</code>.</li>
+                        <li>Choose <code style="inline">TRACE</code> and use arrows to investigate
+                            the different categories for the pie chart.</li>
+                        <li>Note: you can enter counts instead of percentages if you prefer.</li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Note that the pie chart visually provides all the information that is in the
+                    table.</p>
+            </body>
+        </section>
+        <wb:inline idref="u1_m1_onecatvar3_lbd_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m1_onecatvar3_lbd_tutor2" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

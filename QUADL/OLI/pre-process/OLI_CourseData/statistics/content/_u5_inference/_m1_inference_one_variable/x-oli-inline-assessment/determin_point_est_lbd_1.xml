@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="determin_point_est_lbd_1">
+    <title>Tutor</title>
+
+    <question id="q1">
+        <!-- LO determine_point_estimates-->
+        <body>
+            <p>What is the point estimate for the proportion of all female college students who exercise on a regular basis? (Numbers are rounded to two decimal places as needed.) <input_ref input="A"/>
+            </p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">0.32</choice>
+            <choice value="two">0.67</choice>
+            <choice value="three">0.69</choice>
+            <choice value="four">0.48</choice>
+
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="stronger" match="one" score="0">
+                <feedback>Incorrect. You need to find what <em style="italic">proportion of the females</em> in the sample exercise on a regular basis. It looks like you incorrectly used the total sample size (2,540) in the denominator.</feedback>
+            </response>
+            <response input="A" name="weaker" match="two" score="10">
+                <feedback>Correct. Of the 1,220 females in the sample, 818 exercise on a regular basis, so the sample proportion is 818 / 1,220 = 0.67.</feedback>
+            </response>
+            <response input="A" name="about the same" match="three" score="0">
+                <feedback>Incorrect. This number represents the sample proportion of students (males and females) who exercise on a regular basis. Note that you are asked to focus only on the females.</feedback>
+            </response>
+            <response input="A" name="about the same" match="three" score="0">
+                <feedback>Incorrect. This is the sample proportion of females in the sample. You want the sample proportion of females <em style="italic">who regularly exercise</em>.</feedback>
+            </response>
+
+            <hint>What proportion of the females in the sample exercise on a regular basis?</hint>
+         
+        </part>
+
+    </question>
+
+</assessment>

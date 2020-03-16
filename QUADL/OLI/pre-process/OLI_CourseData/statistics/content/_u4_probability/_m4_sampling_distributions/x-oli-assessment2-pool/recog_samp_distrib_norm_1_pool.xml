@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="recog_samp_distrib_norm_1_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_recog_samp_distrib_norm_1" select="single">
+        <!-- LO:  -->
+        <body>
+            <p>A political polling agency wants to take a random sample of registered voters and ask
+                whether or not they will vote for a certain candidate. One plan is to select 400
+                voters, another plan is to select 1,600 voters. </p>
+            <p> If the study were conducted repeatedly (selecting different samples of people each
+                time), which one of the following would be true regarding the resulting sample
+                proportions of "yes" responses? </p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">Different sample proportions would result each time, but for either
+                sample size, they would be centered (have their mean) at the true population
+                proportion. </choice>
+            <choice value="B">Different sample proportions would result each time, but for sample
+                size 1,600 they would be centered (have their mean) at the true population
+                proportion, whereas for sample size 400 they would not. </choice>
+            <choice value="C">Different sample proportions would result each time, but for sample
+                size 400 they would be centered (have their mean) at the true population proportion,
+                whereas for sample size 1,600 they would not. </choice>
+            <choice value="D">For either sample size, using the same size each time, as long as the
+                samples are drawn with replacement, they would be centered (have a mean) at 0.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Due to sampling variability, for different samples we will get
+                    different values of p̂. Since the mean of the sampling distribution of p̂
+                    is p, the population proportion, whether we take a sample of size 400 or a
+                    sample of size 1,600, the resulting values of p̂ will be centered around p in
+                    both cases. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with a mean of p, the population proportion. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with a mean of p, the population proportion. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with mean p, the population proportion. Because the
+                    sampling distribution is normally distributed, and p̂ cannot take on negative
+                    values, it doesn’t make sense to have the sampling distribution centered at 0.
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_recog_samp_distrib_norm_1" select="single">
+        <body>
+            <p>A social scientist wishes to conduct a survey. She plans to ask a yes/no question
+                to a random sample from the U.S. adult population. One proposal is to select 100
+                people; another proposal is to select 900 people.</p>
+            <p>If the study were conducted repeatedly (selecting different samples of people
+                each time), which one of the following would be true regarding the resulting
+                sample proportions of "yes" responses?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Different sample proportions would result each time,
+                but for sample size 900 they would be centered (have their mean) at the true
+                population proportion, whereas for sample size 100 they would not. </choice>
+            <choice value="B">Different sample proportions would result each time,
+                but for sample size 100 they would be centered (have their mean) at the true
+                population proportion, whereas for sample size 900 they would not. </choice>
+            <choice value="C">Different sample proportions would result each time,
+                but for either sample size, they would be centered (have their mean) at the true
+                population proportion. </choice>
+            <choice value="D">For either sample size, using the same size each
+                time, as long as the sampling is done with replacement, their mean would be 0.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with a mean of p, the population proportion. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with a mean of p, the population proportion.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Due to sampling variability, for different samples we will
+                    get different values of p̂. Since the mean of the sampling distribution
+                    of p̂ is p, the population proportion, whether we take a sample of size
+                    100 or a sample of size 900, the resulting values of p̂ will be centered
+                    around p in both cases.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that the sampling distribution of p̂ will be
+                    normally distributed with mean p, the population proportion. Because the
+                    sampling distribution is normally distributed, and p̂ cannot take on
+                    negative values, it doesn’t make sense to have the sampling distribution
+                    centered at 0.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

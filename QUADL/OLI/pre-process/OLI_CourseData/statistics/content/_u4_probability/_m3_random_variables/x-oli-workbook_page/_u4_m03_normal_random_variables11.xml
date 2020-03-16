@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_normal_random_variables11">
+<head>
+<title>Normal Approximation to the Binomial (3 of 3)</title>
+    <objref idref="use_normal_as_approximation_to_binomial"/>
+</head>
+<body>
+   
+<p>Actually, there is another important reason why
+            <?oxy_comment_start author="mmyers" timestamp="20101122T140025-0500" comment="clarifications OK?"?>the
+            <?oxy_insert_start author="mmyers" timestamp="20101122T135921-0500"?>binomial
+            <?oxy_insert_end?>approximation<?oxy_insert_start author="mmyers" timestamp="20101122T135931-0500"?>
+            example from the middle of the previous
+            page<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140002-0500" content=" here"?><?oxy_comment_end?>
+            is not too good. The following comment will explain.</p>
+<section>
+<title>Comment</title>
+<body>
+<p>It is possible to improve the normal approximation to the binomial by adjusting for the
+                    discrepancy that arises when we make the shift from
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T140139-0500"?>the
+                    <?oxy_insert_end?>areas of histogram rectangles to
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T140143-0500"?>the
+                    <?oxy_insert_end?>area under a smooth curve. For example, if we want to find the
+                    binomial probability that X is less than <em>or equal to</em> 8, we are
+                    including the area of the entire rectangle over 8, which actually extends to
+                    8.5. Our normal approximation only included the area up to 8. The figure below
+                    illustrates this:</p>
+<image style="block" src="../webcontent/image186.gif" alt="The probability histogram with a normal
+distribution curve drawn over it. The vertical axis is labeled &quot;Probability&quot; and horizontal
+axis is for X. The histogram and curve are the same as the previously shown ones, with a mean of 10
+and standard deviation of 2.24 . Since the histogram uses bars, there is a bar which is centered over
+X=8 . It has a width of 1, so the bar's boundaries are actually 7.5 and 8.5. Thus, in order to calculate
+P(X &le; 8), we get the area of all the bars for X=0 to X=8. This means for X=8, we are getting the area
+of the bar which is P(X = 8) high and 1 wide. In contrast, for the curve, we get the area under the
+curve to the left of X = 8. This means we do not capture the area in the bar for X=8 from X=8 to X=8.5,
+since that half of the bar is outside of the normal curve's approximated area."/>
+<p>It can be improved upon by making the <em>continuity correction:</em>
+</p>
+<p>in this case, we would have</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≤</m:mo>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>≈</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≤</m:mo>
+<m:mn>8</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>8</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>4</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mo>-</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>6</m:mn>
+<m:mn>7</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>5</m:mn>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+</m:math>, which is much closer to the actual binomial probability of .2517 than our original approximation (.1867) was.</p>
+<p>Similarly, suppose I wanted to answer: What is the probability that the student gets at least 13 questions right?</p>
+<image style="block" src="../webcontent/image188.gif" alt="The same histogram as above, but in this
+case we are trying to find P(X &ge; 13). So, the curve has shaded in the area to the right of X=13.
+The histogram has shaded in the bars for X=13 through X=20. The approximation that the curve provides
+does not cover the left half of the bar for X=13, because the bar for X=13 starts at X=12.5 and ends at
+X=13.5, so it misses X=12.5 thourgh X=13 . This missing area makes the approximation worse."/>
+<p>Here, to calculate the exact probability we are including the area of the entire rectangle over 13, which actually starts from 12.5. 
+    Our normal approximation only included the area from 13. The continuity correction in this case would be:</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≥</m:mo>
+<m:mn>1</m:mn>
+<m:mn>3</m:mn>
+<m:mo>)</m:mo>
+<m:mo>≈</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≥</m:mo>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≥</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>12</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>4</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≥</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mi>s</m:mi>
+<m:mi>y</m:mi>
+<m:mi>m</m:mi>
+<m:mi>m</m:mi>
+<m:mi>e</m:mi>
+<m:mi>t</m:mi>
+<m:mi>r</m:mi>
+<m:mi>y</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mi>t</m:mi>
+<m:mi>a</m:mi>
+<m:mi>b</m:mi>
+<m:mi>l</m:mi>
+<m:mi>e</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>3</m:mn>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+</m:math>
+</p>
+<p>It turns out that the exact probability in this case (using software) is .1316, so the
+                    approximation is
+                    excellent<?oxy_insert_start author="mmyers" timestamp="20101122T140407-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140406-0500" content="!"?></p>
+<!--<activity idref="_u4_m3_lbd12" purpose="learnbydoing"/>-->
+    <p>The purpose of
+                    th<?oxy_insert_start author="mmyers" timestamp="20101122T140500-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140459-0500" content="is"?>
+                    next activity is to give you guided practice in solving word problems involving
+                    a binomial random variable, when the normal approximation is appropriate and is
+                    extremely helpful.</p>
+    <section purpose="learnbydoing">
+        <title>Learn By Doing</title>
+        <body>
+            <p>Roughly 10% of all college students in the
+                            U<?oxy_insert_start author="mmyers" timestamp="20101122T140518-0500"?>nited
+                            States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140527-0500" content=".S."?>
+                            are left-handed. Most academic institutions, therefore, try to have at
+                            least a few left-handed chairs in each classroom. 225 students are about
+                            to enter a lecture hall that has 30 left-handed chairs for a lecture.
+                            What is the probability that this is not going to be enough<?oxy_insert_start author="mmyers" timestamp="20101122T140554-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140553-0500" content=","?>
+                            <?oxy_insert_start author="mmyers" timestamp="20101122T140600-0500"?>in
+                            other words, what is the probability
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140613-0500" content="meaning "?>that
+                            more than 30 (or at least 31) of the 225 students are left-handed?</p>
+            <p>Let's think about this situation.</p>
+            <p>Let X be the number of left-handed students (success) out of the 225 students (trials). X is therefore binomial with n = 225 and p = .1. We are asked to find P(X &gt; 30) or P(X &#8805; 31).</p>
+            <p>Clearly, doing this using the binomial distribution is out of the
+                            question<?oxy_insert_start author="mmyers" timestamp="20101122T140647-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T140646-0500" content="!"?></p>
+    <wb:inline idref="u3_m3_normal11_tutor1" purpose="learnbydoing"/>
+            <wb:inline idref="u3_m3_normal11_tutor2" purpose="learnbydoing"/>
+        </body>
+    </section>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m2_casecc2_tutor3">
+   <title>Tutor</title>
+   <page>
+      <question id="q1">
+         <body>
+            <p>We would like to learn about the relationship between the two categorical variables
+               "parents' smoking" and "students'
+               smoking." More specifically, since we want to explore whether parents' smoking habits affect
+               their children's smoking habits, the explanatory variable is <input_ref input="A"/>
+               and the response variable is <input_ref input="B"/>.
+            </p>
+         </body>
+         <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">students' smoking</choice>
+            <choice value="two">parents' smoking</choice>
+         </fill_in_the_blank>
+         <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">students' smoking</choice>
+            <choice value="two">parents' smoking</choice>
+         </fill_in_the_blank>
+         <part>
+            <response input="A" name="students' smoking" match="one">
+               <feedback>Incorrect. The explanatory variable is the variable that claims to explain, predict, or affect the response. Since we are exploring the impact of parents' smoking habits on their children, students' smoking is <em style="italic">not</em> the explanatory variable.<!--We want to know whether students' smoking habits can <em style="italic">be explained by</em> parents' smoking habits.--></feedback>
+            </response>
+            <response input="A" name="parents' smoking" match="two" score="1">
+               <feedback>Correct. We are exploring the impact of parents' smoking habits on their children, and therefore, parents' smoking is the explanatory variable.<!--We want to know whether parents' smoking habits might "explain" students' smoking habits, so this is the explanatory variable.--></feedback>
+            </response>
+         </part>
+         <part>
+            <response input="B" name="students' smoking" match="one" score="1">
+               <feedback>Correct. Since we are exploring the impact of parents' smoking habits on their children, students' smoking is the response variable.<!--We want to know whether students' smoking habits are a response to parents' smoking habits, so this is the response variable.--></feedback>
+            </response>
+            <response input="B" name="parents' smoking" match="two">
+               <feedback>Incorrect. The response variable is the outcome of the study. Since we are exploring the impact of parents' smoking habits on their children, parents' smoking is <em style="italic">not</em> the response variable.<!--We want to know whether students' smoking habits are a <em style="italic">response</em> to parents' smoking habits.--></feedback>
+            </response>
+         </part>
+      </question>
+   </page>
+
+</assessment>

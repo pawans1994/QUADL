@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_ttest_mp_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_ttest_mp">
+        <!--LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test-->
+        <body>
+            <p>Some research suggests that first born children may have higher IQ scores than their
+                later born siblings. Do first-born identical twins have higher IQ scores than their
+                second-born sibling? Data from a 1998 study
+                <!--by Tramo, Loftus, Stukel, Weaver, and
+                Gazzaniga -->were analyzed
+                to determine whether first-born identical twins have higher IQ scores than their
+                second-born siblings. Ten pairs of adult identical twins were assessed and their
+                Full Scale IQ scores were calculated.</p>
+            <p><cite>Source: M. J. Tramo, W. C. Lodtus, T. A. Stukel, R. L. Green, J. B. Weaver, and
+                    M. S. Gazzaniga. “Brain Size, Head Size, and Intelligence Quotient in
+                    Monozygotic Twins.” <em style="italic">Neurology</em> 50, 1246–52.</cite></p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>d</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>d</sub> &lt; 0</p>
+            <p>The following is the (edited) output for the test:</p>
+            <table>
+                <tr>
+                    <th>Sample</th>
+                    <th>N</th>
+                    <th>Mean</th>
+                    <th>StDev</th>
+                    <th>SE Mean</th>
+                </tr>
+                <tr>
+                    <td>First-born</td>
+                    <td>10</td>
+                    <td>112.9</td>
+                    <td>14.7</td>
+                    <td>4.65</td>
+                </tr>
+                <tr>
+                    <td>Second-born</td>
+                    <td>10</td>
+                    <td>108.7</td>
+                    <td>11.3</td>
+                    <td>3.57</td>
+                </tr>
+                <tr>
+                    <td>Difference</td>
+                    <td>10</td>
+                    <td>4.1</td>
+                    <td>13.4</td>
+                    <td>4.23</td>
+                </tr>
+            </table>
+            <p>95% lower bound for mean difference: −4.36 </p>
+            <p>t-test of mean difference = 0 (vs. &gt; 0): t-value = 0.97, p-value = 0.179</p>
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject H<sub>0</sub>and, thus,
+                conclude that the mean Full Scale IQ score for first-born identical twins is higher
+                than the mean Full Scale IQ score for second-born identical twins.</choice>
+            <choice value="B">The data provide sufficient evidence to reject H<sub>0</sub>. We
+                therefore conclude the data do <em style="italic">not </em>provide evidence to
+                conclude that the mean Full Scale IQ scores for first-born identical twins is higher
+                than that of second-born identical twins.</choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                We therefore conclude that the mean Full Scale IQ score for first-born identical
+                twins is higher than the mean Full Scale IQ score for second-born identical
+                twins.</choice>
+            <choice value="D">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                In other words, based on the data we <em style="italic">cannot</em> conclude that
+                the mean Full Scale IQ scores for first-born identical twins is higher than the mean
+                Full Scale IQ score for second-born identical twins.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. In order to reject the null hypothesis, the p-value must be
+                    below 0.05. Since the P-Value is (much) greater than 0.05, we fail to reject the
+                    null hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. In order to reject the null hypothesis, the p-value must be
+                    below 0.05. Since the p-value is greater than 0.05, we fail to reject the null
+                    hypothesis. Also, remember that if the null hypothesis were to be rejected, the
+                    right conclusion would be that the mean Full Scale IQ score for first-born
+                    identical twins is higher than the mean Full Scale IQ score for second-born
+                    identical twins.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. While it is correct that there is not enough evidence to reject
+                    the H<sub>0</sub>, the conclusion is incorrect.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. There is not enough evidence to reject the H<sub>0</sub> given
+                    that the p-value is above 0.05; therefore, based on the data, we <em style="italic">cannot</em> conclude that the mean Full Scale IQ scores for
+                    first-born identical twins is higher than the mean Full Scale IQ score for
+                    second-born identical twins.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_ttest_mp">
+        <!--LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test-->
+        <body>
+            <p>The director of a daycare center noticed that the infants were getting more diaper
+                rashes than usual in the summer time. The policy of the center was to change the
+                diapers on a schedule every three hours. The director wanted to find out if<!-- changing-->
+                adjusting the diaper-changing schedule to every two hours would significantly reduce
+                the number of diaper rashes. Since some of the infants seemed to have more sensitive
+                skin, she decided to directly compare the number of diaper rashes for each
+                individual infant when the diaper was changed every three hours versus every two
+                hours. For the first week, the daycare center changed the diapers as usual every
+                three hours and noted the number of days that each infant had symptoms of a diaper
+                rash. During the second week, the teachers changed diapers every two hours and
+                recorded the number of days with symptoms of a diaper rash. At the end of the two
+                weeks, they compared for each individual infant the number of days with symptoms of
+                a diaper rash when the diapers were changed every three hours versus every two
+                hours. </p>
+            <p>The following hypotheses were tested: </p>
+            <p>H<sub>0</sub>: μ<sub>d</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>d</sub> &gt; 0</p>
+            <p>The following is the (edited) output for the test:</p>
+            <image src="../webcontent/chkpt_matched_pairs/image16.png" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject H<sub>0</sub> and,
+                thus, conclude that the mean number of days with diaper rash symptoms when changed
+                every three hours is higher than the mean number of days with diaper rash symptoms
+                when changed every two hours.</choice>
+            <choice value="B">The data provide sufficient evidence to reject H<sub>0</sub>.We
+                therefore conclude the data do not provide evidence to conclude that the mean number
+                of days with diaper rash symptoms when changed every three hours is higher than the
+                mean number of days with diaper rash symptoms when changed every two hours. </choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                We therefore conclude that the mean number of days with diaper rash symptoms when
+                changed every three hours is higher than the mean number of days with diaper rash
+                symptoms when changed every two hours. </choice>
+            <choice value="D">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                In other words, based on the data we cannot conclude that the mean number of days
+                with diaper rash symptoms when changed every three hours is higher than the mean
+                number of days with diaper rash symptoms when changed every two hours.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In order to reject the null hypothesis, the p-value must be
+                    below 0.05. Since the p-value of 0.0015 is less than 0.05, we can reject the
+                    null hypothesis and conclude that there is sufficient evidence to suggest that
+                    there are significantly more diaper rashes when changed every three hours
+                    compared to every two hours.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While it is correct that since the p-value is less than 0.05,
+                    we can reject the null hypothesis; the conclusion is incorrect. Remember that
+                    if the null hypothesis were to be rejected, the right conclusion would be that
+                    the mean number of diaper rashes when changed every three hours is higher than
+                    the mean number of diaper rashes when changed every two hours. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Since the p-value is less than 0.05, we <em style="italic">can</em> reject the null hypothesis. Also, the conclusion is incorrect: if
+                    we fail to reject the null hypothesis then we should conclude that there was not
+                    sufficient evidence that the mean number of diaper rashes was greater for three
+                    hours than two hours. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Since the p-value is less than 0.05, we <em style="italic">can</em> reject the null hypothesis. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_interp_ttest_mp">
+        <!--LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test-->
+        <body>
+            <p>Developmental psychology researchers have shown a genetic influence of shyness in
+                infants where infants who were adopted were more likely to be rated as shy at 2
+                years of age if their biological mothers rated themselves as also being shy (Daniels
+                &amp; Plomin, 1985). A researcher wanted to find out if this finding extended to
+                shyness in identical twins. The researcher recruited a sample of 35 pairs of infants
+                who were identical twins. The researcher asked the infants’ primary caregiver to
+                rate each infant’s level of shyness and compared the shyness level between each
+                identical twin to see if there was a mean difference in shyness between the pairs of
+                identical twins. </p>
+            <p> The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>d</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>d</sub> ≠ 0</p>
+            <p>The researchers analyzed the data and obtained the following output:</p>
+            <image src="../webcontent/chkpt_matched_pairs/image17.png" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject H<sub>0</sub>. Thus,
+                the researchers conclude that there is a significant difference in infant shyness
+                between the first-born and second-born identical twins.</choice>
+            <choice value="B">The data provide sufficient evidence to reject H<sub>0</sub>. Thus,
+                based on the data the researchers cannot conclude that there is a significant
+                difference in infant shyness between the first-born and second-born identical twins. </choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                Thus, the researchers conclude that there is a significant difference in infant
+                shyness between the first-born and second-born identical twins. </choice>
+            <choice value="D">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                Thus, based on the data the researchers cannot conclude that there is a significant
+                difference in infant shyness between the first-born and second-born identical
+                twins.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. In order to reject the null hypothesis, the p-value must be
+                    below 0.05. Since the p-value is greater than 0.05, the researchers fail to
+                    reject the null hypothesis so they cannot conclude that there is a significant
+                    difference in infant shyness between the first-born and second-born identical
+                    twins.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. In order to reject the null hypothesis, the p-value must be
+                    below 0.05. Since the p-value is greater than 0.05, the researchers fail to
+                    reject the null hypothesis, so they cannot conclude that there is a significant
+                    difference in infant shyness between the first-born and second-born identical
+                    twins.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback> Incorrect. While it is correct that there is not enough evidence to
+                    reject the H<sub>0</sub> because the p-value is greater than 0.05, the conclusion is
+                    incorrect. Since the p-value is greater than 0.05, they cannot conclude that
+                    there is a difference between the first- and second-born twins on infant shyness.
+                </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. To reject the null hypothesis, the p-value must be below 0.05; in
+                    this case, the p-value is greater than 0.05. Thus, the researchers should fail
+                    to reject the H<sub>0</sub>, and they cannot conclude that there is a difference between the
+                    first- and second-born twins on infant shyness. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_interp_ttest_mp">
+        <!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw 
+		    the appropriate conclusions.SO: Interpreting t-test-->
+        <body>
+            <p>Research suggests that the pressure of being timed may interfere with performance on
+                tests that involve mathematical problems. A fictional study was conducted with 30 sixth
+                graders. First, the sixth graders were given a math test that contained 50 problems and
+                were told that they had only one hour to complete it (timed condition). The same sixth
+                graders were later given a math test that contained 50 problems and were told that they
+                could have as much time, as needed, to complete the test (unlimited time condition). The
+                total number of correct answers for each sixth grader was then calculated for each
+                condition. Then, for each student, the difference between the two scores (timed − untimed)
+                was calculated. The researchers hypothesized that the sixth graders would get fewer
+                correct answers when they took the test with a time limit than when they had
+                unlimited time.</p>
+            <!--<p><cite>Source: M. J. Tramo, W. C. Lodtus, T. A. Stukel, R. L. Green, J. B. Weaver, and M. S. Gazzaniga. “Brain Size, Head Size, and Intelligence Quotient in Monozygotic Twins.” <em style="italic">Neurology</em> 50, 1246–52.</cite></p> (this is for the twins/IQ questions ~cl)-->
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: μ<sub>d</sub> = 0</p>
+            <p>H<sub>a</sub>: μ<sub>d</sub> &gt; 0</p>
+            <p>The researchers analyzed the data and obtained the following output:</p>
+            <image src="../webcontent/chkpt_matched_pairs/image8.png" />
+            <image src="../webcontent/chkpt_matched_pairs/image9.png" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject H<sub>0</sub>. Thus,
+                the researchers conclude that sixth grade students get, on average, fewer
+                correct answers and thus lower scores on math tests when taking them under timed
+                conditions as compared to untimed conditions.</choice>
+            <choice value="B">The data provide sufficient evidence to reject H<sub>0</sub>. Thus,
+                based on the data the researchers cannot conclude that mean number of correct
+                answers on the math test for the timed condition is lower than for the untimed
+                condition.</choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                Thus, the researchers conclude that sixth grade students get, on average,
+                fewer correct answers and, thus, lower scores, on math tests, when taking them under
+                timed conditions as compared to untimed conditions.</choice>
+            <choice value="D">The data do not provide sufficient evidence to reject H<sub>0</sub>.
+                Thus, based on the data, the researchers cannot conclude that mean number of correct
+                answers on the math test for the timed condition is lower than for the untimed
+                condition.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In order to reject the null hypothesis, the p-value must be below
+                    0.05. Since the p-value is less than 0.05, the researchers reject the null
+                    hypothesis and conclude that sixth graders get, on average,
+                    significantly <em style="italic">fewer</em> math problems correct when the test is
+                    timed as compared to when the test is untimed.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While it is correct that there is enough evidence to reject the
+                    H<sub>0</sub>, the conclusion is incorrect. There is enough evidence to
+                    suggest that sixth graders get, on average, significantly <em style="italic">fewer</em> math problems correct when the test is timed as
+                    compared to when the test is untimed.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. While the conclusion is correct, remember that to reject the null
+                    hypothesis, the p-value must be below 0.05; in this case, the p-value is below
+                    0.0001. Thus, the researchers reject the H<sub>0</sub>.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember, to reject the null hypothesis, the p-value must be
+                    below 0.05; in this case, the p-value is below 0.0001. Thus, the researchers
+                    reject the H<sub>0</sub>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

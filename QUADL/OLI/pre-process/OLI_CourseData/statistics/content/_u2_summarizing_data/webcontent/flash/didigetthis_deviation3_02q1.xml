@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="StandardDeviation3of3q1" title="question_1">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">About 95% of the temperatures of dogs fall within which range?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">100.1 − 102.5</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">100.1 − 101.9</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">100.7 − 101.9</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">99.5 − 103.1</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">above 101.3</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Correct. The Standard Deviation Rule tells us that 95% of the temperatures fall within 2 SD of the mean. In this case, this is between 101.3 − 2(0.6) = 100.1 and 101.3 + 2(0.6) = 102.5.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. The Standard Deviation Rule tells us that 95% of the temperatures fall within 2 SD of the mean. However, the mean of 101.3 is not in the middle of this range. Note that 101.3 − 2(0.6) = 100.1, but 101.3 + 1(0.6) = 101.9.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Using the figures given for the mean and standard deviation, 100.7 and 101.9 are within only one SD of the mean. According to the Standard Deviation Rule, 68% of the temperatures are in this range.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Using the figures given for the mean and standard deviation, 99.5 and 103.1 are within 3 SD of the mean. According to the Standard Deviation Rule, 99.7% of the temperatures are in this range.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Since 101.3 is the mean, approximately 50% of the temperatures will be above 101.3.</mattext></material></itemfeedback></item></questestinterop>

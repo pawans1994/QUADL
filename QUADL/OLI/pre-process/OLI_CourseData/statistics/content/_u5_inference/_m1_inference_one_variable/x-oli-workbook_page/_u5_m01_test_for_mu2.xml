@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_mu2">
+    <head>
+        <title>Hypothesis Testing for the Population Mean (2 of <!--9-->9)</title>
+        <objref idref="specify_hypotheses"/>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+    <body>
+
+        <section>
+            <title>1. Stating the Hypotheses</title>
+            <body>
+                <p>The null and alternative hypotheses for the z-test for the population mean (μ)
+                    have exactly the same structure as the hypotheses for z-test for the population
+                    proportion (p):</p>
+                <p><?oxy_comment_start author="mmyers" timestamp="20101127T183351-0500" comment="Use bullets"?>*<?oxy_comment_end?>
+                    The null hypothesis has the form:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>=</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> (where <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the null value).</p>
+                <p>* The alternative hypothesis takes one of the following three forms (depending on
+                    the context):</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>&lt;</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (one-sided)</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>&gt;</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (one-sided)</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>≠</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (two-sided)</p>
+                <example>
+                    <title>1</title>
+                    <p> In our example 1, based on a sample of 4 students from Ross College, we were
+                        testing whether the mean SAT-M of all of Ross College students is higher
+                        than the national mean (which, by construction, is 500). </p>
+                    <p> Here is the figure that summarizes example 1:</p>
+                    <image style="block" src="../webcontent/image311.gif"
+                        alt="A large circle represents all of the
+Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M scores,
+which has a normal distribution. The question we want to answer is &quot;is the mean SAT-M 500
+(national mean) or is it higher? (Assume: SD = 100).&quot; We take a sample from the population
+of size n = 4, represented by a smaller circle. For this sample, x-bar = 550."
+                    />
+                </example>
+                <wb:inline idref="u4_m2_testmean2_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testmean2_tutor2" purpose="didigetthis"/>
+                <!--
+    <flash src="../../webcontent/flash/_u5_m1_inlinetutor3.swf" width="500" height="320" purpose="learnbydoing">
+<param name="problem_name">_u5_m1_inlinetutor3</param>
+</flash>-->
+                <example>
+                    <title>2</title>
+                    <p>Here we want to test whether the mean concentration of a certain chemical in
+                        a large shipment of a certain prescription drug is the required 250 ppm:</p>
+                    <image style="block" src="../webcontent/image314.gif"
+                        alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. The question we
+want to answer is &quot;is the mean concentration the required 250ppm or not? (Assume: SD = 12).&quot;
+Selected from the population is a sample of size n=100, represented by a smaller circle. x-bar for this
+sample is 247."/>
+                    <p>The null and alternative hypotheses in this case are therefore:</p>
+                    <image style="block" src="../webcontent/image320.gif"
+                        alt="H_0: &mu; = 250, H_a: &mu;
+&ne; 250"/>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>2. Collecting Data and Summarizing Them</title>
+            <body>
+                <p> Since our parameter of interest is the population mean (μ), once we collect the
+                    data, we find the sample mean (<m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>).</p>
+                <p> However, we already know that in hypothesis testing we go a step beyond
+                    calculating the relevant sample statistic and summarize the data with a test
+                    statistic.</p>
+                <p> Recall that in the z-test for the proportion, the test statistic is the z-score
+                    (standardized value) of the sample proportion, assuming that H<sub>o</sub> is
+                    true. It should not be very surprising that in the z-test for the population
+                    mean, we do exactly the same thing.</p>
+                <p> The test statistic is the z-score (standardized value) of the sample mean
+                        (<m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>) assuming that H<sub>o</sub> is true (in other words, assuming that
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>=</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>).</p>
+                <p> We rely once again on probability results&#8212;in this case, we refer to
+                    results about the sampling distribution of the sample mean (<m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>): </p>
+                <p>When we discussed probability models based on sampling distributions, we
+                    concluded that sample means behave as follows:</p>
+                <ul>
+                    <li>Center: The mean of the sample means is µ, the population mean.</li>
+                    <li>Spread: The standard deviation of the sample means is <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mi mathvariant="normal">σ</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>.</li>
+                    <li>Shape: The sample means are normally distributed if the variable is normally
+                        distributed in the population
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T185142-0500" comment="use italics for emphasis"?>or<?oxy_comment_end?>
+                        the sample size is large enough to guarantee approximate normality. Recall
+                        that this last statement is the Central Limit Theorem. As a general
+                        guideline, we said that if n &gt; 30, the Central Limit Theorem applies and
+                        we can use a normal curve as a probability model. </li>
+                </ul>
+                <p>Based on this description of the sampling distribution of <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, we can define a test statistic that measures the distance between the
+                    hypothesized value of µ (denoted µ<sub>o</sub>) and the sample mean (determined
+                    by the data) in standard deviation units. </p>
+                <p>The test statistic is: <m:math display="scroll">
+                        <m:mrow>
+                            <m:mi>z</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>x</m:mi>
+                                        <m:mo>&macr;</m:mo>
+                                    </m:mover>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:mfrac>
+                                    <m:mi>&sigma;</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> . </p>
+                <!--<p> When we take a random sample from a population with mean μ and standard deviation σ, the possible values of the sample mean, <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math>: have</p>
+<p> (i) have mean μ</p>
+<p> (ii) have standard deviation <m:math overflow="scroll">
+<m:mrow>
+<m:mfrac>
+<m:mi mathvariant="normal">σ</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p> (iii) have shape that is normal as long as the population shape is normal, or the sample size is large enough for the Central Limit Theorem to guarantee approximate normality.</p>
+<p> The test statistic is therefore:<m:math overflow="scroll">
+<m:mrow>
+<m:mi>z</m:mi>
+<m:mo>=</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>−</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+<m:mfrac>
+<m:mi mathvariant="normal">σ</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p> </p>-->
+            </body>
+        </section>
+        <section>
+            <title> Comments</title>
+            <body>
+                <p>1. Note that our test statistic (because it is a z-score), tells us how far
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is from the null value <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0 </m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> measured in standard deviations. Since <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> represents the data and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> represents the null hypothesis, the test statistic is a measure of how
+                    different our data are from what is claimed in the null hypothesis. The larger
+                    the test statistic, the more evidence we have against H<sub>o</sub>, since what
+                    we saw in our data is very different from what H<sub>o</sub> claims. This is an
+                    idea that we mentioned in the previous test as well.</p>
+                <p>2. As we established earlier, all inference procedures are based on probability.
+                    We are trying to determine if our sample results are likely or unlikely based on
+                    our assumptions about the population. This requires that we have a probability
+                    model that describes the long-term behavior of sample results that are randomly
+                    collected from a population that fits our hypothesis. For this reason, the
+                    Central Limit Theorem gives us criteria for deciding if the z-test for the
+                    population mean can be used. We need to verify: </p>
+                <!-- (iii) above states the conditions under which the sampling distribution of <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math> will be normal; either the population is normal (that is, the variable of interest has a normal distribution in the population) or the sample size is large enough for the Central Limit Theorem to apply and ensure the approximate normality.</p>
+<p> The machinery behind the z-test for the population mean assumes that <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math> is normal, and therefore in order to carry out the z-test we need to verify:</p>-->
+                <p> (i) The sample is random (or at least can be considered as random in
+                    context).</p>
+                <p> (ii) We are in one of the three situations marked with a green check mark in the
+                    following table:</p>
+                <image style="block" src="../webcontent/image325.gif"
+                    alt="A table with two columns
+and two rows, titled &quot;Conditions: z-test for a population mean.&quot; The column headings are:
+&quot;Small Sample Size&quot; and &quot;Large Sample Size.&quot; The row headings are &quot;Variable
+varies normally in the population&quot; and &quot;Variable doesn't vary normally in the population.&quot;
+Here is the data in the table by cell in &quot;Row, Column: Value&quot; format:
+                Variable varies normally in the population, Small sample size: OK;
+                Variable varies normally in the population, Large sample size: OK;
+                Variable doesn't vary normally in the population, Small sample size: NOT OK;
+                Variable doesn't vary normally in the population, Large sample size: OK;"/>
+                <p>3. If the conditions are met, then <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> values vary normally, or at least close enough to normally to use a
+                    normal model to calculate probabilities. When <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> values are normal, then the z-scores will be normally distributed with
+                    a mean of 0 and a standard deviation of 1. </p>
+                <!--Note that if the conditions are met (i.e. <m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math> varies normally, at least approximately), the null distribution of the test statistic (i.e., distribution of the test statistic when <m:math overflow="scroll">
+<m:mrow>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mo>=</m:mo>
+<m:msub>
+<m:mi mathvariant="normal">μ</m:mi>
+<m:mn>0</m:mn>
+</m:msub>
+</m:mrow>
+</m:math>) is N(0,1) - the standardized normal (Z). Hence the name z-test.</p>-->
+            </body>
+        </section>
+        <p>Let's go back to our examples.</p>
+        <example>
+            <title>1</title>
+            <p>Here is a summary of
+                <?oxy_comment_start author="mmyers" timestamp="20101127T185804-0500" comment="use subscripts for Ho and Ha in the graphic below"?>example
+                1<?oxy_comment_end?>:</p>
+            <image style="block" src="../webcontent/image327.gif"
+                alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. Our hypotheses are H_0: &mu; = 500 and H_a: &mu; &gt; 500,
+assuming SD = 100. We take a sample from the population of size n = 4, represented by a smaller
+circle. For this sample, x-bar = 550."/>
+            <p>Let's start by checking the conditions:</p>
+            <p> (i) The sample is random.</p>
+            <p> (ii) The variable of interest, SAT-M scores, is assumed to vary normally in the
+                population, so the fact that the sample size is small (n = 4) is not a problem.
+                Sample means will be normally distributed and we can use a normal probability model
+                based on z-scores to determine probabilities.</p>
+            <!--The variable of interest - SAT-M - is assumed to vary normally, so the fact
+                that the sample size is small (n=4) does not present a problem.</p>-->
+            <image style="block" src="../webcontent/image328.gif"
+                alt="The same table as before.
+The &quot;Variable varies normally in the population, Small sample size&quot; case is what this example
+is. As a recap, the table has two columns and two rows, and is titled &quot;Conditions: z-test for a
+population mean.&quot; The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size.
+&quot; The row headings are &quot;Variable varies normally in the population&quot; and &quot;Variable
+doesn't vary normally in the population.&quot; Here is the data in the table by cell in &quot;Row,
+Column: Value&quot; format:
+            Variable varies normally in the population, Small sample size: OK, (this is the case this example is);
+            Variable varies normally in the population, Large sample size: OK;
+            Variable doesn't vary normally in the population, Small sample size: NOT OK;
+            Variable doesn't vary normally in the population, Large sample size: OK;"/>
+            <p>The sample mean is <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>550</m:mn>
+                    </m:mrow>
+                </m:math>, and so the test statistic is:</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>550</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mn>500</m:mn>
+                            </m:mrow>
+                            <m:mfrac>
+                                <m:mn>100</m:mn>
+                                <m:msqrt>
+                                    <m:mn>4</m:mn>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mn>1</m:mn>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>This means that our data (represented by the sample mean) are only 1 standard
+                deviation above the null value (500). Clearly, this provides some evidence against
+                    H<sub>o</sub>, but is this strong enough evidence to reject it? Probably not.
+                This will be confirmed when we find the p-value. Here is an updated
+                <?oxy_comment_start author="mmyers" timestamp="20101127T185737-0500" comment="use subscripts for Ho and Ha below in figures"?>figure:<?oxy_comment_end?></p>
+            <image style="block" src="../webcontent/image331.gif"
+                alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. Our hypotheses are H_0: &mu; = 500 and H_a: &mu; &gt; 500,
+assuming SD = 100. We take a sample from the population of size n = 4, represented by a smaller
+circle. For this sample, x-bar = 550, and with our conditions met, we can find that z = 1."
+            />
+        </example>
+        <example>
+            <title>2</title>
+            <image style="block" src="../webcontent/image332.gif"
+                alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. Our hypotheses
+are H_0:mean = 250, and H_a: mean is not 250. We assume that SD = 12). Selected from the population is a 
+sample of size n=100, represented by a smaller circle. x-bar for this sample is 247."/>
+            <p>In this case, the conditions that allow us to carry out the z-test are met since:</p>
+            <p> (i) The sample is random.</p>
+            <p> (ii) The sample size (n = 100) is large enough for the Central Limit Theorem to
+                apply (note that in this case the large sample is essential since the concentration
+                level is not known to vary normally).</p>
+            <image style="block" src="../webcontent/image333.gif"
+                alt="The same table as before.
+The &quot;Variable doesn't vary normally in the population, Large sample size&quot; case is what this example
+is. As a recap, the table has two columns and two rows, and is titled &quot;Conditions: z-test for a
+population mean.&quot; The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size.
+&quot; The row headings are &quot;Variable varies normally in the population&quot; and &quot;Variable
+doesn't vary normally in the population.&quot; Here is the data in the table by cell in &quot;Row,
+Column: Value&quot; format:
+            Variable varies normally in the population, Small sample size: OK;
+            Variable varies normally in the population, Large sample size: OK;
+            Variable doesn't vary normally in the population, Small sample size: NOT OK;
+            Variable doesn't vary normally in the population, Large sample size: OK,
+(this is the case this example is);"/>
+            <p>The z-statistic in this case is: <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>247</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mn>250</m:mn>
+                            </m:mrow>
+                            <m:mfrac>
+                                <m:mn>12</m:mn>
+                                <m:msqrt>
+                                    <m:mn>100</m:mn>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mo>−</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>5</m:mn>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>Our data (represented by the sample mean concentration level&#8212;247) are 2.5
+                standard deviations below the null value. A difference of 2.5 standard deviations is
+                considered quite strong evidence against H<sub>o</sub>. (Essentially any difference
+                that is above 2 standard deviations is considered quite large.) This will be
+                confirmed when we find the p-value of the test. Here is an updated figure that
+                represents the hypothesis testing process for this problem
+                <?oxy_comment_start author="mmyers" timestamp="20101127T190219-0500" comment="use subscripts below"?>so
+                far:<?oxy_comment_end?></p>
+            <image style="block" src="../webcontent/image335.gif"
+                alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. Our hypotheses
+are H_0:mean = 250, and H_a: mean is not 250. We assume that SD = 12). Selected from the population is a 
+sample of size n=100, represented by a smaller circle. x-bar for this sample is 247, and because our conditions
+are met, we can calculate that z = -2.5"
+            />
+        </example>
+        <youtube src="9WT3tK3o3mY"></youtube>
+        <!--  <flash src="../../../webcontent/OLICamtasiaController.swf" width="600" height="580"
+            purpose="simulation">
+            <param name="movieURL">../../webcontent/flash/walkthrough6.swf</param>
+            <param name="movieFPS">15</param>
+            <param name="LoggingLibraryPath">../../../webcontent/OLILoggingLibrary.swf</param>
+        </flash>-->
+        <activity idref="_u5_m1_lbd12" purpose="learnbydoing"/>
+        <!--<activity idref="_u5_m1_dig24" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>Use the following histogram to answer the question below.</p>
+                <image src="../webcontent/_u5_m1_dig24a_01.gif"
+                    alt="A histogram titled &quot;Histogram 1&quot;,
+and the vertical axis is labeled &quot;Frequency.&quot; Here is the data shown on the histogram, given
+in &quot;Horizontal axis value, vertical axis value&quot; format:
+            7: 1
+            8: 3
+            9: 3
+            10: 1
+            11: 4
+            12: 1
+            13: 1
+            14: 1"/>
+                <wb:inline idref="u4_m2_testmean2_tutor3" purpose="didigetthis"/>
+                <p>Normal body temperature for healthy, at-rest human beings has always been said to
+                    be 98.6&#176;F. A doctor has seen a lot of patients who had a lower or higher
+                    body temperature when they were not ill. He has read research that says it is
+                    actually lower. So, he collected 50 randomly selected temperatures that had a
+                    mean of 98.4&#176;F. The standard deviation is known to be .35&#176;F.</p>
+                <p>H<sub>o</sub>: μ = 98.6</p>
+                <p>H<sub>a</sub>: μ &#8800; 98.6</p>
+                <wb:inline idref="u4_m2_testmean2_tutor4" purpose="didigetthis"/>
+                <p>Each histogram in the questions below represents a random sample. We do not know
+                    if the variable is distributed normally in the population, but we want to be
+                    reasonably sure that the distribution of sample means will be normal so that we
+                    can use the z-test for testing claims about the population mean. </p>
+                <p> For each histogram, choose the option that best describes how to proceed with a
+                    hypothesis test for a population mean.</p>
+                <wb:inline idref="u4_m2_testmean2_tutor5" purpose="didigetthis"/>
+            </body>
+        </section>
+
+    </body>
+</workbook_page>

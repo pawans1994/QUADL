@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="_u4_m3_digtutor6e">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">Use Excel to find the probability that the student gets more than 2 questions right, P(X &gt; 2).
+   
+Guidance: Excel will calculate for us only probabilities of the type P(X = k) or 
+P(X &#x2264; k). To find P(X &gt; 2), think Complement Event.
+</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">To find P(X &gt; 2) we notice that the complement rule of the event "X &gt; 2" is X &#x2264; 2, and therefore P(X &gt; 2) = 1 − P(X &#x2264; 2). In Excel, we'll use "=BINOMDIST(2, 10, 0.2, TRUE)", and we find that:
+
+Binomial with n = 10 and p = 0.2
+
+x          P(X &#x2264; x)
+2          0.6778
+
+and therefore P(X &gt; 2) = 1 − 0.6778 = 0.3222. There is about 32% chance that, using the guessing strategy, the student will get more than 2 questions right on the quiz.
+			</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

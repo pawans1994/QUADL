@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="deviation1lbd">
+    <head>
+        <title>Standard Deviation</title>
+    </head>
+    <body>
+        <p>The concept of standard deviation is less intuitive as a measure of spread than the range
+            or the IQR. The following activity is designed to help you develop a better intuition
+            for the standard deviation. </p>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>At the end of a statistics course, the 27 students in the class were asked to
+                    rate the instructor on a number scale of 1 to 9 (1 being "very poor," and 9
+                    being "best instructor I've ever had"). The following table provides three
+                    hypothetical rating data: </p>
+            </body>
+        </section>
+        <image style="block" src="../../webcontent/deviation7.gif"/>
+        <p>And here are the histograms of the data: </p>
+        <image style="block" src="../../webcontent/deviation8.gif"/>
+        <image style="block" src="../../webcontent/deviation9.gif"/>
+        <image style="block" src="../../webcontent/deviation10.gif"/>
+        <wb:inline idref="u1_m1_deviation1_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="451">
+<param name="question_file">../../../webcontent/flash/practice_deviation1q1.xml</param>
+<param name="problem_name">practice_deviation1q1</param>
+</flash>-->
+        <p>Now check your intuition by finding the actual standard deviations of the three rating
+            distributions. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/sdintuition.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the variable <code>ratings</code> which has
+                        three variables (column titles) <code>Class.I</code>, <code>Class.II</code>,
+                        and <code>Class.III</code>. Enter the command <code>ratings</code> to see
+                        the data.</p>
+                    <p>Now you can calculate the standard deviations for each variable with the
+                        command: </p>
+                    <code style="inline"><!-- apply(ratings, sd)-->sapply(ratings, sd)</code>
+                    <p><em>Note: </em>Using R—Notice that R understands that your three columns
+                        represent different data sets with different names, and R computes the
+                        standard deviations of the three data sets separately. The above code can
+                        easily be modified for other commands for descriptive statistics such as
+                        <code>mean</code> or <code>median</code>. If the data frame is formatted
+                        differently, consider the <code>aggregate()</code> function instead of
+                        <code>sapply()</code>.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open the file (sdintuition.xls) in StatCrunch you must first
+                        right-click <link
+                            href="../../_u2_summarizing_data/webcontent/excel/sdintuition.xls"
+                            target="self">here</link> and choose "Save Target As" to
+                        download the file to your computer. Next click <link
+                            href="http://www.statcrunch.com/" target="new">here</link>
+                        to open StatCrunch in a separate window and login using your
+                        username and password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My
+                            StatCrunch page. </li>
+                        <li>To open the data set, click on the Data button in the top
+                            row and select Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set
+                            you downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on "Load
+                            File."</li>
+                    </ul>
+                    <p>To ask StatCrunch for the descriptive statistics of the three
+                        distributions:</p>
+                    <ul>
+                        <li>Choose Stat → Summary Stats → Columns</li>
+                        <li>In the Summary Stats window select the columns: Class I,
+                            Class II and Class III</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <!--<p>To open the file (sdintuition.xls) in StatCrunch, you must first right-click <link
+                        href="../../../webcontent/excel/sdintuition.xls" target="self"
+                        >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next, click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link>to open StatCrunch in a separate window, and login using your
+                        username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page</li>
+                        <li>To open the data set, click on the Data button in the top row and select Load → From file → on my computer</li>
+                        <li>Under File, press the Browse button and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p> To ask StatCrunch for the descriptive statistics of the three
+                        distributions:</p>
+                    <ul>
+                        <li>Choose: Stat→ Summary Stats → Columns</li>
+                        <li>In the Summary Stats window, select the columns <em style="italic">Class I</em>, <em style="italic">Class II</em>, and <em style="italic">Class III</em></li>
+                        <li>Press Compute!</li>
+                    </ul>-->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <ul>
+                        <li>
+                            <p>To open Minitab with the data in the worksheet, right-click <link
+                                href="../../../webcontent/minitab/sdintuition.mtw" target="self"
+                                >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Minitab. Note: you will likely see a dialog box appear
+                                that says "A copy of the content of this file will be added to the
+                                current project"&#8212;just click OK.</p>
+                        </li>
+                        <li> To ask Minitab for the descriptive statistics of the three
+                            distributions: <ul>
+                                <li> Choose: Stat → Basic Statistics → Display Descriptive
+                                    Statistics. </li>
+                                <li>Under "Variables" enter the names of the three columns of data
+                                    (or simply highlight them in the left panel and click "select"). </li>
+                                <li>Click OK. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <ul>
+                        <li>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/sdintuition.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to
+                            your computer. Then find the downloaded file and double-click it to open
+                            it in Excel. </li>
+                        <li> Use Excel to calculate the standard deviation of the three
+                            distributions: <ul>
+                                <li>Click a cell outside of the three columns of data, and type
+                                    <em>=stdev(A2:A28)</em>. That is the standard deviation for
+                                    the first distribution.</li>
+                                <li>Repeat for the other two distributions, adjusting the data range
+                                    accordingly.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </alternative>
+             <!--     <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <ul>
+                        <li>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/sdintuition.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to
+                            your computer. Then find the downloaded file and double-click it to open
+                            it in Excel. </li>
+                        <li> Use Excel to calculate the standard deviation of the three
+                            distributions: <ul>
+                                <li>Click a cell outside of the three columns of data, and type
+                                    <em>=stdev(A2:A28)</em>. That is the standard deviation for
+                                    the first distribution.</li>
+                                <li>Repeat for the other two distributions, adjusting the data range
+                                    accordingly.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                        href="../../../webcontent/ti/sdintuition.8xg" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and send it to your calculator. For instructions on how
+                        to connect your calculator to your computer and transfer a file, click
+                        <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p>On the TI calculator, the dataset is displayed in lists L1-L3: </p>
+                    <ul style="none">
+                        <li>L1: Ratings from Class I</li>
+                        <li>L2: Ratings from Class II</li>
+                        <li>L3: Ratings from Class III</li>
+                    </ul>
+                    <p>Now use the TI calculator to calculate the numerical measures of a
+                        distribution:</p>
+                    <p><em>Descriptive Statistics including five-number summary</em></p>
+                    <p>Note: you’ll have to repeat these steps for Ratings Class I (stored in L1),
+                        Ratings Class II (stored in L2), and Ratings Class III (stored in L3). </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/CALC/1:1-Var Stats</code>. Specify
+                            which list the data are in; since the age data are in L1, you would
+                            enter <code style="inline">2ND/1</code> to choose L1. If you don't
+                            specify any particular list, the default list is L1. </li>
+                        <li>Leave <code>FreqList</code> blank.</li>
+                        <li>Highlight <code>Calculate</code> and press <code>ENTER</code>.</li>
+                        
+                        <li>The calculator will display the usual sample statistics and population
+                            parameters. We’re interested in Sx&#8212;sample standard deviation.
+                            Record the sample standard deviation (Sx) for each class.</li>
+                    </ul>
+                </alternative>
+            </alternatives>
+            
+        </pullout>
+        <wb:inline idref="u1_m1_deviation1_lbd_tutor2" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="376">
+<param name="question_file">../../../webcontent/flash/practice_deviation1q2.xml</param>
+<param name="problem_name">practice_deviation1q2</param>
+</flash>-->
+    </body>
+</workbook_page>

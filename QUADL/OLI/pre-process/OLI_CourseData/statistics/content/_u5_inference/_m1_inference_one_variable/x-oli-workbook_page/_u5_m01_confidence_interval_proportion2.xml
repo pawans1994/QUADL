@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_proportion2">
+    <head>
+        <title>Confidence Intervals for Population Proportion p (2 of 4)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+    <body>
+
+
+        <example>
+
+            <p>The drug Viagra became available in the U.S. in May, 1998, in the wake of an
+                advertising campaign that was unprecedented in scope and intensity. A Gallup poll
+                found that by the end of the first week in May, 643 out of a random sample of 1,005
+                adults were aware that Viagra was an impotency medication (based on "Viagra A
+                Popular Hit," a Gallup poll analysis by Lydia Saad, May 1998).</p>
+            <p>Let's estimate the proportion p of all adults in the U.S. who by the end of the first
+                week of May 1998 were already aware of Viagra and its purpose by setting up a 95%
+                confidence interval for p.</p>
+            <p>We first need to calculate the sample proportion <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                    </m:mrow>
+                </m:math>. Out of 1,005 sampled adults, 643 knew what Viagra is used for, so <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mn>643</m:mn>
+                            <m:mn>1005</m:mn>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>64</m:mn>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <image style="block" src="../webcontent/image090.gif"
+                alt="A large circle represents the population
+of all US Adults (18+). We are interested in the parameter is p, the proportion who know what
+Viagra is used for. From this population we create a sample of size n=1005, represented by a
+smaller circle. In this sample, we find that p hat (the point estimator) is .64 ."/>
+            <p>Therefore,</p>
+            <p>A 95% confidence interval for p is <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:msqrt>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>64</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>64</m:mn>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>64</m:mn>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mn>1005</m:mn>
+                            </m:mfrac>
+                        </m:msqrt>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>64</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>03</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>61</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mo>.</m:mo>
+                                <m:mn>67</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>We can be 95% sure that the proportion of all U.S. adults who were already familiar
+                with Viagra by that time was between .61 and .67 (or 61% and 67%).</p>
+            <p>The fact that the margin of error equals .03 says we can be 95% confident that
+                unknown population proportion p is within .03 (3%) of the observed sample proportion
+                .64 (64%). In other words, we are 95% confident that 64% is "off" by no more than
+                3%.</p>
+            <!--<activity idref="_u5_m1_dig22" purpose="didigetthis"/>-->
+            <wb:inline idref="u4_m1_confintprop2_tutor1" purpose="didigetthis"/>
+            <wb:inline idref="u4_m1_confintprop2_tutor2" purpose="didigetthis"/>
+            <wb:inline idref="u4_m1_confintprop2_tutor3" purpose="didigetthis"/>
+        </example>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>We would like to share with you the methodology part of the poll release of the
+                    Viagra example, and show you that you now have the tools to understand how polls
+                    results are analyzed:</p>
+                <p>"The results are based on telephone interviews with a randomly selected national
+                    sample of 1,005 adults, 18 years and older, conducted May 8-10, 1998. For
+                    results based on samples of this size, one can say with 95 percent confidence
+                    that the error attributable to sampling and other random effects could be plus
+                    or minus 3 percentage points. In addition to sampling error, question wording
+                    and practical difficulties in conducting surveys can introduce error or bias
+                    into the findings of public opinion polls."</p>
+                <!--<activity idref="_u5_m1_lbd5" purpose="learnbydoing"/>-->
+                <p>The purpose of the next activity is to provide guided practice in calculating and
+                    interpreting the confidence interval for the population proportion p, and
+                    drawing conclusions from it.</p>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>A poll asked a random sample of 1,000 U.S. adults, "Do you think that the
+                            use of marijuana should be legalized?" 560 of those asked answered
+                            yes.</p>
+
+                        <wb:inline idref="u4_m1_confintprop2_tutor4" purpose="learnbydoing"/>
+                        <wb:inline idref="u4_m1_confintprop2_tutor5" purpose="learnbydoing"/>
+                        <wb:inline idref="u4_m1_confintprop2_tutor6" purpose="learnbydoing"/>
+                        <wb:inline idref="u4_m1_confintprop2_tutor7" purpose="learnbydoing"/>
+                    </body>
+
+                </section>
+                <p>Two important results that we discussed at length when we talked about the
+                    confidence interval for μ also apply here:</p>
+                <p>1. There is a trade-off between level of confidence and the width (or precision)
+                    of the confidence interval. The more precision you would like the confidence
+                    interval for p to have, the more you have to pay by having a lower level of
+                    confidence.</p>
+                <p>2. Since n appears in the denominator of the margin of error of the confidence
+                    interval for p, for a fixed level of confidence, the larger the sample, the
+                    narrower, or more precise it is. This brings us naturally to our next point.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

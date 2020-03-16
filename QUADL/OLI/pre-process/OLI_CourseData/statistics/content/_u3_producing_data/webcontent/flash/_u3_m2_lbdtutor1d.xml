@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u3_m2_lbdtutor1d" title="_u3_m2_lbdtutor1d">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">One new software has a very technical-sounding name which often appeals to males, and males tend to have a high level of satisfaction for any product.</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">age</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">gender</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">comp</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Actually gender is the right answer. We'll never be able to know whether the high level of satisfaction with the new software is because users really like it, or because of the gender of those who chose to use it. Males will tend to use this software due to its very technical name, and males also usually have high levels of satisfaction.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Good Job! Indeed, we'll never be able to know whether the high level of satisfaction with the new software is because users really like it, or because of the gender of those who chose to use it. Males will tend to use this software due to its very technical name, and males also usually have high levels of satisfaction.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Actually gender is the right answer. We'll never be able to know whether the high level of satisfaction with the new software is because users really like it, or because of the gender of those who chose to use it. Males will tend to use this software due to its very technical name, and males also usually have high levels of satisfaction.</mattext></material></itemfeedback></item></questestinterop>

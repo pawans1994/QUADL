@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_independence1">
+<head>
+<title>Independence (1 of 2)</title>
+    <objref idref="determine_whether_two_events_are_independent"/>
+</head>
+<body>
+  
+<p>As we saw in the E<?oxy_insert_start author="mmyers" timestamp="20101109T110745-0500"?>xploratory
+                                                <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101109T110749-0500"?>ata
+                                                <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101109T110752-0500"?>nalysis<?oxy_insert_end?>
+                                                section, whenever a situation involves more than one
+                                                variable, it is generally of interest to determine
+                                                whether or not the variables are related. In
+                                                probability, we talk about independent events, and
+                                                in the first module we said that two events A and B
+                                                are <em>independent</em> if
+                                                <?oxy_delete author="mmyers" timestamp="20101109T113406-0500" content="one"?>
+                                                event
+                                                <?oxy_insert_start author="mmyers" timestamp="20101109T113422-0500"?>A
+                                                <?oxy_insert_end?>occurring <em>does not affect</em>
+                                                the probability that
+                                                <?oxy_delete author="mmyers" timestamp="20101109T113428-0500" content="the other "?>event
+                                                <?oxy_insert_start author="mmyers" timestamp="20101109T110831-0500"?>B
+                                                will
+                                                <?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101109T110834-0500" content="s"?>.
+                                                Now that we've introduced conditional probability,
+                                                we can formalize the definition of independence of
+                                                events and develop four simple ways to check whether
+                                                two events are independent or not. We will introduce
+                                                these "independence checks" using examples, and then
+                                                summarize.</p>
+<example>
+
+<p>Consider again the two-way table for all 500 students in a particular high school, classified according to gender and whether or not they have one or both ears pierced.</p>
+    <image style="block" src="../webcontent/image001.gif" alt="The same table of the data for piercings.
+The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The
+Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is
+given in &quot;Row, Column:
+        Value&quot; format:
+        Male, Pierced: 36;
+        Male, Not Pierced: 144;
+        Male, Total: 180;
+        Female, Pierced: 288;
+        Female, Not Pierced: 32;
+        Female, Total: 320;
+        Total, Pierced: 324;
+        Total, Not Pierced: 176;
+        Total, Total: 500;"/>
+<p>Would you expect those two variables to be related? That is, would you expect having pierced ears
+                                                  to depend on whether
+                                                  <?oxy_insert_start author="mmyers" timestamp="20101109T110913-0500"?>the
+                                                  <?oxy_insert_end?>student is male or female? Or,
+                                                  to put it yet another way, would knowing a
+                                                  student's gender affect the probability that
+                                                  <?oxy_insert_start author="mmyers" timestamp="20101109T110934-0500"?>the<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T110934-0500" content="a"?>
+                                                  student's ears are pierced? To answer this, we may
+                                                  compare the overall probability of having pierced
+                                                  ears to the conditional probability of having
+                                                  pierced ears, given that a student is male. Our
+                                                  intuition would tell us that the latter should be
+                                                  lower: male students tend not to have their ears
+                                                  pierced, whereas female students do. Indeed, for
+                                                  students in general, the probability of having
+                                                  pierced ears (event E) is P(E) = 324/500 = .648.
+                                                  But the probability of having pierced ears given
+                                                  that a student is
+                                                  male<?oxy_delete author="mmyers" timestamp="20101109T111011-0500" content=","?>
+                                                  is only P(E | M) = 36/180 = .20.</p>
+<p>As we anticipated, P(E | M) is lower than P(E). The probability of a student having pierced ears
+                changes (in this case, gets lower) when we know that the student is
+                male<?oxy_insert_start author="mmyers" timestamp="20101109T111028-0500"?>,<?oxy_insert_end?>
+                and therefore the events E and M are dependent. (If E and M were independent,
+                <?oxy_comment_start author="mmyers" timestamp="20101109T115331-0500" comment="I understand that you&apos;re using this wording to provide a different way of looking at the issue, but be aware that it might give an impression of causality: the &quot;knowing&quot; wording implies that P(B) changes not because A happened, but because you know that A happened. In other words, it suggests that the fact that a student is male has no affect whatsoever on the probability that his ears are pierced. It is the fact that you know he is male that affects that probability.  "?>knowing
+                or not knowing that the student
+                is<?oxy_delete author="mmyers" timestamp="20101109T111116-0500" content=" a"?> male<?oxy_comment_end?>
+                <?oxy_delete author="mmyers" timestamp="20101109T112033-0500" content="sh"?><?oxy_insert_start author="mmyers" timestamp="20101109T112035-0500"?>w<?oxy_insert_end?>ould
+                not have made a difference<?oxy_insert_start author="mmyers" timestamp="20101109T112139-0500"?>
+                <?oxy_insert_end?>...<?oxy_delete author="mmyers" timestamp="20101109T112142-0500" content="."?><?oxy_insert_start author="mmyers" timestamp="20101109T112143-0500"?>
+                <?oxy_insert_end?>but it
+                d<?oxy_insert_start author="mmyers" timestamp="20101109T112147-0500"?>id.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T112146-0500" content="oes!"?>)</p>
+<p>This example illustrates that one method for
+                                                  <?oxy_insert_start author="mmyers" timestamp="20101109T111238-0500"?>determining<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T111236-0500" content="checking"?>
+                                                  whether two events are independent is to compare
+                                                  <em>P(B | A)</em> and <em>P(B)</em>.</p>
+<p>If the two are <em>equal</em> (i.e., knowing or not knowing whether A has occurred has no effect
+                                                  on the probability of B occurring) then the two
+                                                  events are <em>independent</em>. Otherwise, if the
+                                                  <em>probability changes</em> depending on whether
+                                                  we know that A has occurred or not, then the two
+                                                  events are <em>not independent</em>. Similarly,
+                                                  using the same reasoning, we can compare <em>P(A |
+                                                  B)</em> and <em>P(A)</em>.</p>
+</example>
+<example>
+
+<p>Recall the side effects example. On the "Information for the Patient" label of a certain
+                anti<?oxy_delete author="mmyers" timestamp="20101109T112251-0500" content="-"?>depressant
+                it is claimed that based on some clinical trials, there is a 14% chance of
+                experiencing sleeping problems known as insomnia (denote this event
+                <?oxy_comment_start author="mmyers" timestamp="20101109T112324-0500" comment="remove bold -- no emphasis needed"?>by
+                    <em>I</em>), there is a 26% chance of experiencing headache (denote this event
+                by <em>H</em>), and there is a 5% chance of experiencing both side effects (<em>I
+                    and H</em>).<?oxy_comment_end?></p>
+<p>Are the two side effects independent of each other? </p>
+<p>To check whether the two side effects are independent, let's compare P(H | I) and P(H).</p>
+<p>In the previous part of this module, we found that <em>P(H | I)</em> = P(H and I) / P(I) =
+                                                  .05/.14 = <em>.357</em>, while <em>P(H)<?oxy_insert_start author="mmyers" timestamp="20101109T112411-0500"?>
+                                                  <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101109T112412-0500"?>
+                                                  <?oxy_insert_end?>.26. </em>Knowing that a patient
+                                                  experienced insomnia increases the likelihood that
+                                                  he/she will also experience headache from .26 to
+                                                  .357. The conclusion, therefore is that the two
+                                                  side effects are not independent, they are
+                                                  dependent.</p>
+<p>Alternatively, we could have compared P(I<?oxy_insert_start author="mmyers" timestamp="20101109T112514-0500"?>
+                                                  <?oxy_insert_end?>|<?oxy_insert_start author="mmyers" timestamp="20101109T112515-0500"?>
+                                                  <?oxy_insert_end?>H) to P(I). <em> P(I)<?oxy_insert_start author="mmyers" timestamp="20101109T112518-0500"?>
+                                                  <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101109T112519-0500"?>
+                                                  <?oxy_insert_end?>.14</em>, and previously we
+                                                  found that <em>P(I | H)</em> = P(I and H) / P(H) =
+                                                  .05/.26 = <em>.1923</em>, and again, since the two
+                                                  are not equal, we can conclude that the two side
+                                                  effects I and H are dependent.</p>
+</example>
+<!--<activity idref="_u4_m2_dig3" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p>Recall again the smoke alarms example.</p>
+            <p> A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. </p>
+            <image src="../webcontent/dig002.gif" alt="A table, in which the column headings are
+&quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot;
+and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:
+            D, B: .38;
+            D, not B: .57;
+            D, Total: .95;
+            not D, B: .02;
+            not D, not B: .03;
+            not D, Total: .05;
+            Total, B: .40;
+            Total, not B: .60;
+            Total, Total: 1.00;"/>
+    <wb:inline idref="u3_m2_independence1_tutor1" purpose="didigetthis"/>
+            
+        </body>
+    </section>
+    
+</body>
+</workbook_page>

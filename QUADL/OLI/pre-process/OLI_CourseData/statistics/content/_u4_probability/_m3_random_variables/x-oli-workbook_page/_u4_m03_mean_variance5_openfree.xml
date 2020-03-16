@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_mean_variance5_openfree">
+<head>
+<title>Mean and Variance of a Random Variable (5 of 5)</title>
+    <objref idref="find_mean_variance_discrete_random"/>
+</head>
+<body>
+   
+<p>The concept of standard deviation is a bit harder to grasp than that of the mean. The purpose of the following examples and activities is to help you gain a better feel for the standard deviation of a random variable:</p>
+<example><title>Xavier's and Yves' Production Lines</title>
+
+<p>Recall the probability distribution of the random variable X, representing the number of defective parts per hour produced by Xavier's production line, and the probability distribution of the random variable Y, representing the number of defective parts per hour produced by Yves' production line:</p>
+<image style="block" src="../webcontent/image039.gif"  alt="Two probability distribution tables. The first has two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in column format (X: P(X=x)):
+        0: .15;
+        1: .30;
+        2: .25;
+        3: .20;
+        4: .10;
+        The second table also has two rows, labeled &quot;Y&quot; and &quot;P(Y=y).&quot; The data in column format
+        (Y: P(Y=y)):
+        0: .05;
+        1: .05;
+        2: .10;
+        3: .75;
+        4: .05;"/>
+<p>Look carefully at both probability distributions. Both X and Y take the same possible values (0, 1, 2, 3, 4).  However, they are very different in the way the probability is distributed among these values.  We saw before that this makes a difference in means:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>7</m:mn>
+</m:math>
+</p>
+<p>We now want to get a sense about how the different probability distributions impact their standard deviations.  
+</p>
+    
+<p>Recall that the standard deviation of a random variable can be interpreted as a typical (or the
+                long<?oxy_insert_start author="mmyers" timestamp="20101121T164013-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164013-0500" content=" "?>run
+                average) distance between the value of X and its mean.</p>
+<!--:WARNING: Removed paragraph enclosing flash element.-->
+
+    <wb:inline idref="u3_m3_meanvariance5_tutor1" purpose="learnbydoing"/><!--<flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="281" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u4_m3_inlinetutor2.xml</param>
+<param name="problem_name">_u4_m3_inlinetutor2</param>
+</flash>-->
+    <p>So, 75% of the time Y will assume a value (3) that is very close to its mean (2.7), while X
+                will assume a value (2) that is close to its mean (1.8) much less
+                often<?oxy_insert_start author="mmyers" timestamp="20101121T164047-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164044-0500" content=" – "?>only
+                25% of the time. The
+                long<?oxy_insert_start author="mmyers" timestamp="20101121T164050-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164050-0500" content=" "?>run
+                average, then, of the distance between the values of Y and their mean will be much
+                smaller than the
+                long<?oxy_insert_start author="mmyers" timestamp="20101121T164104-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164104-0500" content=" "?>run
+                average of the distance between the values of X and their mean.</p>
+<p> Therefore, <m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>&lt;</m:mo>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>1</m:mn>
+</m:math> Actually, <m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:mn>5</m:mn>
+</m:math>, so we can draw the following conclusion:</p>
+<p>Yves' production line produces an average of 2.70 defective parts per hour. The number of defective parts varies from hour to hour; typically (or, on average), it is about .85 away from 2.70.</p>
+</example>
+
+
+<section>
+    <title>Summary</title>
+    <body><p>
+        Here are the histograms for the production lines:</p>
+        <image src="../webcontent/image_xavier_histo_mean.jpg" width="346" height="233" style="inline"
+            alt="Histogram for Xavier's production line. The vertical axis is labeled &quot;Probability&quot;
+and the horizontal axis is labeled &quot;X.&quot; The data in the histogram is the same as the data in the
+probability table for Xavier's line. Moving from left to right across the horizontal axis we see that a peak
+in probability is reached at X=1, but it is not much higher than X=0. In addition, going right from X=1,
+the values decay, ultimately to 0.10 at X=4. The mean for Xavier's line is at X=1.8 ."></image>
+        <image src="../webcontent/image_yves_histo_mean.jpg" width="346" height="233" style="inline" alt="For
+Yves's line is another histogram with the same axes. Going left to right, we see a peak at X=3, which is much
+higher than the other values. All of the other values are roughly the same. The mean is at X=2.7 ."></image>
+        <p>When we compare distributions, the distribution in which it is <em>more likely</em> to
+                    find values that are further from the mean will have a <em>larger</em> standard
+                    deviation.
+                    Likewise<?oxy_insert_start author="mmyers" timestamp="20101121T164201-0500"?>,<?oxy_insert_end?>
+                    the distribution in which it is <em>less likely</em> to find values that are
+                    further from the mean will have the <em>smaller</em> standard deviation.</p>
+    
+        <wb:inline idref="u3_m3_meanvariance5_tutor2" purpose="learnbydoing"></wb:inline>
+        <p>The following graphs will be used in the next
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T164210-0500"?>"<?oxy_insert_end?>Did
+                    I Get
+                    This?<?oxy_insert_start author="mmyers" timestamp="20101121T164212-0500"?>"
+                    exercise.<?oxy_insert_end?></p>
+        <image src="../webcontent/u4_m3_meanvariance5_digt_imagea.jpg" width="288" height="195" style="inline"
+            alt="A histogram titled &quot;Graph A&quot; showing the following data (presented in &quot;horizontal value: 
+vertical value format&quot;):
+            1: .07;
+            2: .10;
+            3: .12;
+            4: .13;
+            5: .16;
+            6: .13;
+            7: .12;
+            8: .10;
+            9: .07;"></image>
+        <image src="../webcontent/u4_m3_meanvariance5_digt_imageb.jpg" width="288" height="195" style="inline"
+            alt="A histogram titled &quot;Graph B&quot; showing the following data (presented in &quot;horizontal value: 
+vertical value format&quot;):
+            1: .02;
+            2: .08;
+            3: .10;
+            4: .15;
+            5: .30;
+            6: .15;
+            7: .10;
+            8: .08;
+            9: .02;"></image>
+        <image src="../webcontent/u4_m3_meanvariance5_digt_imagec.jpg" width="288" height="195" style="inline"
+            alt="A histogram titled &quot;Graph C&quot; showing the following data (presented in &quot;horizontal value: 
+vertical value format&quot;):
+            1: .01;
+            2: .01;
+            3: .10;
+            4: .18;
+            5: .40;
+            6: .18;
+            7: .10;
+            8: .01;
+            9: .01;"></image>
+        <image src="../webcontent/u4_m3_meanvariance5_digt_imaged.jpg" width="288" height="195" style="inline"
+            alt="A histogram titled &quot;Graph D&quot; showing the following data (presented in &quot;horizontal value: 
+vertical value format&quot;):
+            1: .01;
+            2: .01;
+            3: .02;
+            4: .11;
+            5: .70;
+            6: .11;
+            7: .02;
+            8: .01;
+            9: .01;"></image>
+        <wb:inline idref="u3_m3_meanvariance5_tutor3" purpose="didigetthis"></wb:inline> 
+        
+        
+       <section>
+           <title>Comment</title>
+           <body><p>As we have stated
+                            before<?oxy_insert_start author="mmyers" timestamp="20101121T164236-0500"?>,<?oxy_insert_end?>
+                            using the mean and standard deviation gives us another way to assess
+                            which values of a random variable are unusual. Any values of a random
+                            variable
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T164247-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164246-0500" content="which"?>
+                            fall within 2 standard deviations of the mean would be considered
+                            ordinary (not unusual). </p></body>
+       </section>
+        
+        <example><title>Xavier's Production
+                        Line<?oxy_insert_start author="mmyers" timestamp="20101121T164301-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164258-0500" content=" - "?>Unusual
+                        or Not?</title>
+            
+        <p>Looking once again at the probability distribution for Xavier's production line: </p>
+            <image src="../webcontent/image_xavier_histo_mean.jpg" width="374" height="253" style="block"
+                alt="Histogram for Xavier's production line. The vertical axis is labeled
+&quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot; The data in the
+histogram is the same as the data in the probability table for Xavier's line. Moving from
+left to right across the horizontal axis we see that a peak in probability is reached at X=1,
+but it is not much higher than X=0. In addition, going right from X=1, the values decay,
+to about 0.10 at X=4. The mean for Xavier's line is at X=1.8 ."></image>
+            <p>Would it be considered unusual to have 4 defective parts per hour?  </p>
+            <p>We know that 
+                <m:math overflow="scroll">
+                    <m:msub>
+                        <m:mi>μ</m:mi>
+                        <m:mrow>
+                            <m:mi>X</m:mi>
+                        </m:mrow>
+                    </m:msub>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>8</m:mn></m:math> and <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mn>1</m:mn>
+                    </m:math>.</p>
+                   <p>Ordinary values are within 2 standard deviations of the mean.  1.8 - 2(1.21) = -.62 and 1.8 + 2(1.21) = 4.22.  
+                       This gives us an  interval from -.62 to 4.22. Since we cannot have a negative number of defective parts, the interval is essentially from 0 to 4.22.  
+                       Because 4 is within this interval, it would be considered ordinary.  Therefore, it is <em>not unusual</em>.</p>
+            <p>Would it be considered unusual to have no defective parts?  Zero is within 2 standard deviations of the mean, so it would not be considered unusual to have 
+            no defective parts.</p>
+        </example>
+        
+        
+        
+    <p>The following activity will reinforce this idea.</p>
+    
+    </body>
+</section>
+    <section>
+        <title>Learn By Doing</title>
+        <body><p>Recall the probability distribution for changing majors.  </p>
+        <!--    <image src="../webcontent/image_prob_dist_chg_major.gif"></image> -->
+            <p>We have made the following calculations for the mean and standard deviation.  For some extra practice, feel free to verify our calculations.</p>
+            <p><m:math overflow="scroll">
+                <m:msub>
+                    <m:mi>μ</m:mi>
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                </m:msub>
+                <m:mo>=</m:mo>
+                    <m:mn>1.23</m:mn></m:math> and
+                <m:math overflow="scroll">
+                <m:msub>
+                    <m:mi>σ</m:mi>
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                </m:msub>
+                <m:mo>=</m:mo>
+                <m:mn>1.08</m:mn></m:math>
+            </p>
+            <wb:inline idref="u3_m3_meanvariance5_tutor4" purpose="learnbydoing"></wb:inline>
+
+        </body>
+    </section>
+    <p>"Risk" in investments provides a useful application for the concept of variability. If there is no variability at all in possible outcomes, then the outcome is something we can count on, with no risk involved. 
+        At the other extreme, if there is a large amount of variability with possibilities for either tremendous loss or gain, then the associated risk is quite high. </p>
+    <p>If a variable's possible values just differ somewhat, with some only marginally favorable and others unfavorable, 
+        then the underlying random experiment entails just a moderate amount of risk. The following example demonstrates how differing values of standard deviation reflect the amount of risk in a situation.</p> 
+    
+    <example><title>Comparing Investments</title>
+
+<p>Consider three possible investments, with returns denoted as X, Y, and Z, respectively, and probability distributions outlined in the tables below.</p>
+<image style="block" src="../webcontent/image043.gif" alt="A probability table with has two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in column format (X: P(X=x)):
+14,000: 1;
+In other words, X only has one value, 14,000, and P(X=14,000) = 1."/>
+<p>Investment X is what we'd call a "sure thing," with a guaranteed return of $14,000: there is no risk involved at all.</p>
+<image style="block" src="../webcontent/image044.gif" alt="A probability table with two rows, labeled &quot;Y&quot;
+and &quot;P(Y=y).&quot; The data in column format (Y: P(Y=y)):
+0: .98;
+1,000,000: .02;
+In other words, P(Y = 0) = .98 and P(Y = 1,000,000) = .02"/>
+<p>Investment Y is extremely risky, with a high probability (.98) of no gain at all, contrasted by a slight probability (.02) of "making a killing" with a return of a million dollars.</p>
+<image style="block" src="../webcontent/image045.gif" alt="A probability table with two rows, labeled &quot;Z&quot;
+and &quot;P(Z=z).&quot; The data in column format (Y: P(Z=z)):
+10,000: .5;
+20,000: .5;
+In other words, P(Z = 10,000) = .5 and P(Z = 20,000) = .5"/>
+<p>Investment Z is somewhere in between: there is an equal chance for either a return that's on the low side or a return that's on the high side.</p>
+<p>If you only consider the mean return on each investment, would you prefer X, Y, or Z? The means for X, Y, and Z are calculated as follows:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>0</m:mn>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>z</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>Clearly, the mean return for Y is highest, and so investment
+                <?oxy_insert_start author="mmyers" timestamp="20101121T164550-0500"?>in
+                <?oxy_insert_end?>Y would seem to be preferable.</p>
+<p>Now consider the standard
+                deviations<?oxy_insert_start author="mmyers" timestamp="20101121T164559-0500"?>,<?oxy_insert_end?>
+                and consider which investment you'd
+                prefer<?oxy_insert_start author="mmyers" timestamp="20101121T164651-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T164643-0500" content=", "?>X,
+                Y, or Z.</p>
+<p>The standard deviations are:</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>0</m:mn>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>9</m:mn>
+<m:mn>6</m:mn>
+<m:mo>×</m:mo>
+<m:mn>1</m:mn>
+<m:msup>
+<m:mn>0</m:mn>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:mrow>
+</m:msup>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>Y</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>4</m:mn>
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>z</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mn>5</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>z</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p>
+<p>Granted, the mean returns suggest that investment X is least profitable and investment Y is most
+                profitable. On the other hand, the standard deviations are telling us that the
+                return for X is a sure thing; for
+                Y<?oxy_insert_start author="mmyers" timestamp="20101121T164730-0500"?>,<?oxy_insert_end?>
+                the remote chance of making a huge profit is offset by a high risk of losing the
+                investment entirely; for
+                Z<?oxy_insert_start author="mmyers" timestamp="20101121T164738-0500"?>,<?oxy_insert_end?>
+                there is a modest amount of risk involved. If you can't afford to lose any money,
+                then investment X would be the way to go. If you have enough assets to take a
+                chance, then investment Y would be worthwhile. In particular, if a large company
+                routinely makes many such investments, then in the long run there will occasionally
+                be such enormous gains that the company is willing to absorb many smaller losses.
+                Investment Z represents the middle ground, somewhere between the other two.</p>
+</example>
+   <!-- <section>
+        <title>Checkpoint</title>
+        <body>
+            <p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>
+            <p>
+                
+                    
+            </p>
+            <activity idref="_u4_m3_checkpoint1" purpose="checkpoint"/>
+        </body>
+    </section>-->
+    <section>
+<title>Section Questions</title>
+<body>
+<activity purpose="myresponse" idref="_u4_m03_mean_variance4_feedback"/>
+</body>
+</section>
+    
+</body>
+</workbook_page>

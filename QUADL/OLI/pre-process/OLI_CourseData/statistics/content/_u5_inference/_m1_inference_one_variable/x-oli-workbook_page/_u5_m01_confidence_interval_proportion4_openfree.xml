@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_confidence_interval_proportion4_openfree">
+<head>
+<title>Confidence Intervals for Population Proportion p (4 of 4)</title>
+    <objref idref="explain_confidence_interval"/>
+    <objref idref="find_confidence_intervals"/>
+</head>
+<body>
+   
+<section>
+    <title>When Is It Safe to Use These Methods?</title>
+<body>
+<p>As we mentioned before, one of the most important things to learn with any inference method is the conditions under which it is safe to use it.</p>
+<p>As we did for the mean, the assumption we made in order to develop the methods in this unit was
+                    that the sampling distribution of the sample proportion, <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>,<?oxy_comment_start author="mmyers" timestamp="20101126T105632-0500" comment="is new wording OK? (I&apos;m trying to avoid using &quot;distribution&quot; twice."?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T105542-0500"?>is roughly
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T105549-0500" content="has a "?>normal<?oxy_delete author="mmyers" timestamp="20101126T105555-0500" content=" distribution"?>.<?oxy_comment_end?>
+                    Recall from module 4 of the Probability unit that
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T105758-0500"?>the
+                    <?oxy_insert_end?>conditions under which this happens are that<?oxy_comment_start author="mmyers" timestamp="20101126T105838-0500" comment="suggest using asterisks for multiplication here and below"?>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>⋅</m:mo>
+                            <m:mi>p</m:mi>
+                            <m:mo>≥</m:mo>
+                            <m:mn>10</m:mn>
+                        </m:mrow>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>⋅</m:mo>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>−</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                            </m:mfenced>
+                            <m:mo>≥</m:mo>
+                            <m:mn>10</m:mn>
+                        </m:mrow>
+                    </m:math><?oxy_comment_end?>. Since p is unknown, we will replace it
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T105843-0500"?>with<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T105843-0500" content="by"?>
+                    its estimate, the sample proportion, and set</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>⋅</m:mo>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+<m:mo>≥</m:mo>
+<m:mn>10</m:mn>
+</m:mrow>
+</m:math> and <m:math overflow="scroll">
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>⋅</m:mo>
+<m:mfenced open="(" close=")">
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>−</m:mo>
+<m:mover>
+<m:mi>p</m:mi>
+<m:mo stretchy="true">ˆ</m:mo>
+</m:mover>
+</m:mrow>
+</m:mfenced>
+<m:mo>≥</m:mo>
+<m:mn>10</m:mn>
+</m:mrow>
+</m:math>
+</p>
+<p>to be the conditions under which it is safe to use the methods we developed in this section.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Let's Summarize</title>
+<body>
+<p>In general, a confidence interval for
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T110200-0500"?>the
+                    <?oxy_insert_end?>unknown population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T110221-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T110222-0500"?>)<?oxy_insert_end?>
+                    is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:msup>
+                                <m:mi>z</m:mi>
+                                <m:mo>*</m:mo>
+                            </m:msup>
+                            <m:mo>⋅</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>, where z* is 1.645 for 90% confidence, 2 for 95% confidence, and 2.576
+                    for 99% confidence.</p>
+<p>To obtain a desired margin of error
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T110210-0500"?>(<?oxy_insert_end?>m<?oxy_insert_start author="mmyers" timestamp="20101126T110212-0500"?>)<?oxy_insert_end?>
+                    in a confidence interval
+                    for<?oxy_insert_start author="mmyers" timestamp="20101126T110248-0500"?>
+                    an<?oxy_insert_end?> unknown population proportion, a conservative sample
+                    size<?oxy_delete author="mmyers" timestamp="20101126T110541-0500" content=" to take"?>
+                    is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:msup>
+                                    <m:mi>m</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>.</p>
+<p>The margin of error of a poll is determined (conservatively) by <m:math overflow="scroll">
+<m:mrow>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>.</p>
+<p>The methods developed in this unit are safe to use as long as
+                        <?oxy_comment_start author="mmyers" timestamp="20101126T110633-0500" comment="Suggest using asterisks rather than dots for multiplication"?><m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>⋅</m:mo>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>≥</m:mo>
+                            <m:mn>10</m:mn>
+                        </m:mrow>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>⋅</m:mo>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>−</m:mo>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:mfenced>
+                            <m:mo>≥</m:mo>
+                            <m:mn>10</m:mn>
+                        </m:mrow>
+                    </m:math> .<?oxy_comment_end?></p>
+<activity idref="_u5_m1_lbd6" purpose="learnbydoing"/>
+<p> </p>
+</body>
+</section>
+<section>
+<title>End<?oxy_insert_start author="mmyers" timestamp="20101126T110643-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T110643-0500" content=" "?>of<?oxy_insert_start author="mmyers" timestamp="20101126T110645-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T110645-0500" content=" "?>Lesson
+                Questions</title>
+<body>
+<activity purpose="myresponse" idref="_u5_m01_confd_interval_prop4_feedback"/>
+</body>
+</section>
+   <!-- <section>
+        <title>Checkpoint</title>
+        <body>
+            <p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>
+            <p>
+                
+                    
+            </p>
+            <activity idref="_u5_m1_checkpoint1" purpose="checkpoint"/>
+        </body>
+    </section>-->
+ 
+</body>
+</workbook_page>

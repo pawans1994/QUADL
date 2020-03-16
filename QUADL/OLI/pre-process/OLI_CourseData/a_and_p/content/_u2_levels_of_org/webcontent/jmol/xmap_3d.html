@@ -1,0 +1,229 @@
+<HTML>
+<HEAD><TITLE>
+Fitting an X-ray density Map
+</TITLE>
+    <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+    <script type="text/javascript">
+        jmolInitialize("./jmol");
+        jmolSetAppletColor("white");
+    </script>
+
+<TABLE WIDTH="800" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TH>&nbsp;</TH>
+<TH Colspan=2 align=left>Biochemistry I</TH>
+<TH colspan=2 align=right>Map Fitting in X-Ray Diffraction</TH>
+
+<TR>
+
+<TD>&nbsp;</TD>
+
+    <TD VALIGN=TOP WIDTH=420 bgcolor="#eeeeee">
+    <script type="text/javascript">
+    jmolApplet([420,420],
+    "load ./jmol/pdbs/xmap_ala.pdb;rotate z 138.24; rotate y 88.32; rotate z -19.69;select all;color green;wireframe off;spacefill off;set specular on;select SUR;wireframe;select all","xmap");
+    </script><BR>
+        <script type="text/javascript">
+            jmolSetTarget("xmap") 
+            jmolRadioGroup([
+            ["background white;color labels black","white",true],
+            ["background gray;color labels black","gray",false],
+            ["background [100,100,255];color labels black","Lt blue",false],
+            ["background black;color label yellow","black",false]]," ","Background color")
+        </script>
+        <script type="text/javascript">
+            jmolSetTarget("xmap")
+            jmolCheckbox("spin on","spin off", "Spin", false)
+        </script>
+                    &nbsp;<script type="text/javascript">
+                    jmolSetTarget("xmap") 
+                    jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69","","","");  
+                </script>&nbsp;Reset orientation
+            
+<TD bgcolor="#eeeeee" >&nbsp;</TD>
+        <TD valign=top width=380 bgcolor="#eeeeee">
+           <b>Suggestions for Use:</b>Part of the electron density map of the protein is shown. To aid in map fitting, the partial sequence of this protein is:&nbsp;<i>Arg-Leu-Gly-Phe-Gly-Phe-Val-Arg-Ser-Met-Gly</i>
+            <ol><li>The buttons in the left column will generate a poly-alanine chain.</li>
+            <li>The middle set of buttons will zoom in on the indicated residue, the <font face="symbol">b</font>-carbon is colored cyan &amp; spacefilled.</li>
+                <li>The right set of buttons adds the sidechain. </li></ol>
+
+
+<TABLE WIDTH=400 BORDER=1 CELLPADDING=1 CELLSPACING=1>
+
+<TH>Growing Polyala<BR> Chain (N&nbsp;-->&nbsp;C)</TH>
+<TH>Individual C<sub><font face='symbol'>b</sub></TH>
+<TH>Placement of <BR> Side Chains</TH>
+<TR>
+<TD>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("xmap") 
+jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+</script>&nbsp;61
+</TD>
+    
+<TD>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("xmap") 
+jmolButton("set windowCentered off;center atomno=501;set windowCentered on;zoomto 2.0 200;select 61 and *.CB;color cyan;spacefill 40%","","",""); 
+</script>&nbsp;61
+</TD>
+    
+<TD>
+    &nbsp;&nbsp;<script type="text/javascript">
+        jmolSetTarget("xmap") 
+        jmolButton("restrict (61 and mainchain) or (62-67 and (mainchain or *.CB));wireframe 100;color cpk;select SUR; wireframe;select all","","",""); 
+    </script>&nbsp;61
+</TD>
+    
+</TR>
+<TR>
+    <TD>
+        &nbsp;&nbsp;<script type="text/javascript">
+            jmolSetTarget("xmap") 
+            jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-62 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+        </script>&nbsp;62
+    </TD>
+    
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("set windowCentered off;center 62;set windowCentered on;zoomto 2.0 200;select 62 and *.CB;color cyan;spacefill 40%","","",""); 
+            </script>&nbsp;62
+        </TD>
+    
+            <TD>
+                &nbsp;&nbsp;<script type="text/javascript">
+                    jmolSetTarget("xmap") 
+                    jmolButton("select 62 and (sidechain or *.ca);wireframe 100;spacefill off;color cpk;select SUR; wireframe;select all","","",""); 
+                </script>&nbsp;62
+   </TD></TR>             
+ <TR>
+                    <TD>
+                        &nbsp;&nbsp;<script type="text/javascript">
+                            jmolSetTarget("xmap") 
+                            jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-63 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+                        </script>&nbsp;63
+                      </TD>  
+                        <TD>
+                            &nbsp;&nbsp;<script type="text/javascript">
+                                jmolSetTarget("xmap") 
+                                jmolButton("set windowCentered off;center 63;set windowCentered on;zoomto 2.0 200;select 63 and *.CB;color cyan;spacefill 40%","","",""); 
+                            </script>&nbsp;63
+                        </TD>
+     
+                            <TD>
+                                &nbsp;&nbsp;<script type="text/javascript">
+                                    jmolSetTarget("xmap") 
+                                    jmolButton("restrict (61 and mainchain) or 62 or (63 and mainchain) or (64-67 and (mainchain or *.CB));wireframe 100;color cpk;select 61 and *.CB;wireframe off;select SUR;wireframe;select all","","",""); 
+                                </script>&nbsp;63
+                                </TD></TR>
+
+<TR>
+<TD>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("xmap") 
+jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-64 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+</script>&nbsp;64
+</TD>
+                                        
+<TD>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("xmap") 
+jmolButton("set windowCentered off;center 64;set windowCentered on;zoomto 2.0 200;select 64 and *.CB;color cyan;spacefill 40%","","",""); 
+</script>&nbsp;64
+</TD>
+<TD>
+&nbsp;&nbsp;<script type="text/javascript">
+jmolSetTarget("xmap") 
+jmolButton("select 64 and (sidechain or *.ca);wireframe 100;spacefill off;color cpk;select SUR; wireframe;select all","","",""); 
+</script>&nbsp;64
+</TD>
+</TR>
+    
+    <TR>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-65 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+            </script>&nbsp;65
+        </TD>
+        
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("set windowCentered off;center 65;set windowCentered on;zoomto 2.0 200;select 65 and *.CB;color cyan;spacefill 40%","","",""); 
+            </script>&nbsp;65
+        </TD>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("select 65 and (sidechain or *.ca);wireframe 100;spacefill off;color cpk;select SUR; wireframe;select all","","",""); 
+            </script>&nbsp;65
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-66 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+            </script>&nbsp;66
+        </TD>
+        
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("set windowCentered off;center 66;set windowCentered on;zoomto 2.0 200;select 66 and *.CB;color cyan;spacefill 40%","","",""); 
+            </script>&nbsp;66
+        </TD>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("select 66 and (sidechain or *.ca);wireframe 100;spacefill off;color cpk;select SUR; wireframe;select all","","",""); 
+            </script>&nbsp;66
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("reset;rotate z 138.24; rotate y 88.32; rotate z -19.69;restrict 61-67 and (mainchain or *.CB);wireframe 100;spacefill off;color cpk;select SUR; wireframe on;select all","","","");  
+            </script>&nbsp;67
+        </TD>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("set windowCentered off;center 67;set windowCentered on;zoomto 2.0 200;select 67 and *.CB;color cyan;spacefill 40%","","",""); 
+            </script>&nbsp;67
+        </TD>
+        <TD>
+            &nbsp;&nbsp;<script type="text/javascript">
+                jmolSetTarget("xmap") 
+                jmolButton("select 67 and (sidechain or *.ca);wireframe 100;spacefill off;color cpk;select SUR; wireframe;select all","","",""); 
+            </script>&nbsp;67
+        </TD>
+    </TR>
+   
+    </Table>
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;</td>
+<TD colspan=3>
+    
+    <P>
+The electron density map<sup>1</sup> associated with a short segment (residues 61-67) of a <font face="symbol">b</font>-stand within a protein is shown.  This 'chicken-wire' representation indicates which regions of space have high electron density (inside the chicken wire) or low electron density (outside).
+            
+<BR> &nbsp; The crystallographer places the correct residue into the cage based on the electron density.  The mainchain atoms are usually built into the electron density first as a polyalanine chain, followed by placement of the side-chains. The placement of the side-chains is guided by the known primary structure of the protein.
+  
+<P> <sup>1</sup>The electron density map is obtained by Fourier transformation of the scattered X-rays.  In this particular illustration the molecular surface is shown instead, as calculated with M.L. Connolly's surface program (<I>Science</I> 221, 709-713.)
+
+</TD> </TR>
+
+</TABLE>
+
+
+</BODY>
+</HTML>
+

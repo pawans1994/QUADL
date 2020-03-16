@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_ttest_interp_pval_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_ttest_interp_pval">
+        <!-- LO: In a given context, carry out the inferential method for comparing groups and draw 
+            the appropriate conclusions. 
+            (interp_ttest_interp_pval) -->
+        <body>
+            <p>College Students and Drinking Habits: A public health official is studying
+                differences in drinking habits among students at two different universities. They
+                collect a random sample of students independently from each of the two universities
+                and ask each student how many alcoholic drinks they consumed in the previous
+                week.</p>
+            <image src="../webcontent/chkpt_two_independent_samples/image1.png" />
+            <p>The official conducts a two-sample t-test to determine whether these data provide
+                significant evidence that students at University 1 drink more than students at
+                University 2. The test statistic is t = 2.64 with a p-value 0.005.</p>
+            <p>Which of the following is an appropriate conclusion?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">The samples provide significant evidence that students at University 1
+                drink more than students at University 2.</choice>
+            <choice value="B">The samples do not provide statistically significant evidence that
+                there is a difference in drinking habits at the two universities.</choice>
+            <choice value="C">We cannot use the t-test in this case because the variables (number of
+                drinks) are likely skewed to the right at each university.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. A p-value this small indicates statistically significant
+                    results.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A p-value this small indicates statistically significant
+                    results.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Although the two variables are likely skewed to the right, we
+                    can proceed with a two-sample t-test because we have large enough
+                    samples.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_ttest_interp_pval">
+        <!-- LO: In a given context, carry out the inferential method for comparing groups and draw 
+            the appropriate conclusions. 
+            (interp_ttest_interp_pval) -->
+        <body>
+            <p>A journalist is interested in whether there is a significant difference in the salary
+                offered to electrical engineering and chemical engineering graduates at the
+                University of Texas at Austin. She reviews the statistics for starting annual
+                salaries for 2013–2014 and finds the following:</p>
+            <image src="../webcontent/starting_annual_salaries_13-14.png" height="300" width="600" />
+            <p>The test statistic is t = 2.4693, with a p-value of 0.0142. Which of the following is
+                an appropriate conclusion?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">The samples provide evidence that there is a statistically significant
+                difference between the starting salary of chemical engineering and electrical
+                engineering graduates at the University of Texas at Austin for 2013–2014.</choice>
+            <choice value="B">The samples do not provide statistically significant evidence that
+                there is a difference in starting salaries of chemical engineering and electrical
+                engineering graduates at the University of Texas at Austin for 2013–2014.</choice>
+            <choice value="C">We cannot use the t-test in this case because the variables (starting
+                salary of engineering graduates) may not be normally distributed.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. A p-value this small indicates statistically significant
+                    results.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A p-value this small indicates statistically significant
+                    results.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Although the two variables may not be normally distributed, we can proceed
+                    with a two-sample t-test because we have large enough samples.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

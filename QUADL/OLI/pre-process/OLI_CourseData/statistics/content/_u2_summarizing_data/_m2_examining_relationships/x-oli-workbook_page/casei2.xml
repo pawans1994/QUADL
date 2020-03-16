@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="casei2">
+    <head>
+        <title>Case C→Q (2 of 2)</title>
+        <objref idref="compare_quantitative_distributions"/>
+    </head>
+    <body>
+
+        <p>Here is another example:</p>
+        <example>
+            <title>SSHA</title>
+            <p>The Survey of Study Habits and Attitudes (SSHA) is a psychological test designed to
+                measure the motivation, study habits, and attitudes toward learning of college
+                students. Is there a relationship between <em>gender</em> and <em>SSHA scores</em>?
+                In other words, is there a "gender effect" on SSHA scores? Data were collected from
+                40 randomly selected college students, and here is what the raw data look like: </p>
+            <image style="block" src="../webcontent/casei5.gif"
+                alt="A table of the data. There are
+three columns: Student, Gender, and SSHA Score. Gender is the
+Explanatory variable, and SSHA Score is the Response variable.
+Some example data:
+    Student 1, Female, 154;
+    Student 2, Female, 109;
+    Student 3, Male, 108;
+    Student 4, Female, 115;
+    ... (abbreviated) ...
+    Student 40, Male, 140;"/>
+            <p>(Source: Moore, David S., and George P. McCabe. (2003). <em style="italic">Introduction to the Practice of Statistics</em>, 4th ed. New York: W. H. Freeman.)</p>
+            <p>Side-by-side boxplots supplemented by descriptive statistics allow us to compare the
+                distribution of SSHA scores within each category of the explanatory
+                variable&#8212;gender:</p>
+            <image style="block" src="../webcontent/casei7.gif"
+                alt="Three box plots. The vertical axis
+is labeled SSHA Score. There are two boxplots, one for Female and one for Male.
+The boxplot characteristics are summarized in the table below."/>
+            <table title="Descriptive Statistics: SSHA Score by Gender">
+                <tr>
+                    <th>Statistic</th>
+                    <th>Female</th>
+                    <th>Male</th>
+                </tr>
+                <tr>
+                    <th>min</th>
+                    <td>103</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <th>Q1</th>
+                    <td>128.75</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <th>Median</th>
+                    <td>153</td>
+                    <td>114.5</td>
+                </tr>
+                <tr>
+                    <th>Q3</th>
+                    <td>163.75</td>
+                    <td>144.5</td>
+                </tr>
+                <tr>
+                    <th>Max</th>
+                    <td>200</td>
+                    <td>187</td>
+                </tr>
+            </table>
+            <!--   RS 07/28/10 - replaced by table above
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<image style="block" src="../webcontent/casei6excel.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<image style="block" src="../webcontent/casei6.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <image style="block" src="../webcontent/casei6r.gif"/>
+    </alternative>
+</alternatives>-->
+            <p>In the following activities, let's explore the Survey of Study Habits and Attitudes (SSHA) to determine if there is there a "gender effect" on SSHA scores.<!--Let's summarize our results and interpret them: By examining the side-by-side
+                boxplots and the numerical summaries, we see that in general females perform better
+                on the SSHA than males. The median SSHA score of females is higher than the median
+                score for males (153 vs. 114), and in fact, it is even higher than the third
+                quartile of the males' distribution (144.5). On the other hand, the males' scores
+                display more variability, both in terms of IQR (49.5 vs. 35) and in terms of the
+                full range of scores (117 vs. 97). Based on these results, it seems that there is a
+                gender effect on SSHA score. It should be noted, though, that our sample consists of
+                only 20 males and 20 females, so we should be cautious about making any kind of
+                generalizations beyond this study. One interesting question that comes to mind is,
+                "Why did we observe this relationship between gender and SSHA scores?" In other
+                words, is there maybe an explanation for why females score higher on the SSHA? Let's
+                leave it to the psychologists to try and answer that one. --></p>
+        </example>
+        <wb:inline idref="u1_m2_casecq_lbd_tutor1" purpose="learnbydoing"/>
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <ul>
+                    <li>The relationship between a categorical explanatory variable and a
+                        quantitative response variable is summarized using: <ul>
+                            <li>
+                                <em>Data display:</em> Side-by-side boxplots</li>
+                            <li>
+                                <em>Numerical summaries:</em> Descriptive statistics</li>
+                        </ul>
+                    </li>
+                    <li>Exploring the relationship between a categorical explanatory variable and a
+                        quantitative response variable amounts to comparing the distributions of the
+                        quantitative response for each category of the explanatory variable. In
+                        particular, we look at how the distribution of the response variable differs
+                        between the values of the explanatory variable. </li>
+                </ul>
+            </body>
+        </section>
+    </body>
+</workbook_page>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="z_scores_tutor_5">
+    <title>tutor</title>
+    <page>
+
+        <question id="q1">
+            <!--LO:Interpreting z-score-->
+            <body><p>Cindy works for a competing accounting firm called “Ace Pro Accountants.” The
+                    hourly salary rate for accountants follow a normal distribution, with a mean of
+                    $24 and a standard deviation of $3. Cindy earns $18 an hour.</p><p> Whose salary
+                    is lower relative to his/her company’s mean salary: Tom or Cindy’s?</p></body>
+            <multiple_choice shuffle="false" select="single">
+                <choice value="A"><p>Tom</p></choice>
+                <choice value="B"><p>Cindy</p></choice>
+                <choice value="C"><p>They are both equally low.</p></choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. While it is true that Tom’'s hourly salary
+                        ($22.50) is higher than Cindy's ($18), it makes more sense to compare their
+                        z-scores. In other words, it would make more sense to compare their hourly
+                        salaries relative to other accountants in their respective companies. Try
+                        again.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct! Indeed, Cindy's z-score is -2, while Tom’s z-score is
+                        (22.50-27) / 4 = -1.125. Cindy’s hourly salary is lower, since she scored 2 standard
+                        deviations below the mean, while Tom scored only 1.125 standard deviations
+                        below the mean.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. In order to decide which score is more
+                        impressive, compare the z-scores of both Tom's and Cindy’s hourly salaries.
+                        Bear in mind that each of the hourly salary rates come from a different
+                        normal distribution.</feedback>
+                </response>
+                <hint>Use z-scores to compare the relative position of the salaries.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

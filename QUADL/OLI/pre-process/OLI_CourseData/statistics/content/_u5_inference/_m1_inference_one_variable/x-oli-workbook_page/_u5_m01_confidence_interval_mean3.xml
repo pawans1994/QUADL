@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_mean3">
+    <head>
+        <title>Confidence Intervals for the Population Mean (3 of 8)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+    <body>
+        
+        
+        <section>
+            <title>Other Levels of Confidence</title>
+            <body>
+                <p>The most commonly used level of confidence is 95%. However, we may wish to
+                    increase our level of confidence and produce an interval that is almost certain
+                    to contain μ. Specifically, we may want to report an interval for which we are
+                    99% confident—rather than only 95% confident—that it contains the unknown population mean.</p>
+                <p>Using the same reasoning as in the last comment, in order to create a 99%
+                    confidence interval for μ, we should ask: There is a probability of 0.99 that any
+                    normal random variable takes values within how many standard deviations of its
+                    mean? The precise answer is 2.576, and therefore, a 99% confidence interval for
+                    μ is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>576</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>.
+                </p>
+                <p>Another commonly used level of confidence is a 90% level of confidence. Since
+                    there is a probability of 0.90 that any normal random variable takes values
+                    within 1.645 standard deviations of its mean, the 90% confidence interval for μ
+                    is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>645</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>. </p>
+                <example>
+                    
+                    <p>Let's go back to our first example, the IQ example:</p>
+                    <p>The IQ level of students at a particular university has an unknown mean, μ,
+                        and a known standard deviation, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>15</m:mn>
+                            </m:mrow>
+                        </m:math>. A simple random sample of 100 students is found to have a sample
+                        mean IQ, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>115</m:mn>
+                            </m:mrow>
+                        </m:math>. Estimate μ with 90%, 95%, and 99% confidence intervals.</p>
+                    <p> A 90% confidence interval for μ is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>645</m:mn>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>645</m:mn>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>15</m:mn>
+                                    <m:msqrt>
+                                        <m:mn>100</m:mn>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                            <m:mo>=</m:mo>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>112</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>5</m:mn>
+                                    <m:mo>,</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mn>117</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>5</m:mn>
+                                </m:mrow>
+                            </m:mfenced>
+                        </m:mrow>
+                    </m:math>.</p>
+                    <p> A 95% confidence interval for μ is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>15</m:mn>
+                                    <m:msqrt>
+                                        <m:mn>100</m:mn>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>=</m:mo>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>112</m:mn>
+                                    <m:mo>,</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mn>118</m:mn>
+                                </m:mrow>
+                            </m:mfenced>
+                        </m:mrow>
+                    </m:math>. </p>
+                    <p>A 99% confidence interval for μ is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>576</m:mn>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>576</m:mn>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>15</m:mn>
+                                    <m:msqrt>
+                                        <m:mn>100</m:mn>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mn>115</m:mn>
+                            <m:mo>±</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>=</m:mo>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>111</m:mn>
+                                    <m:mo>,</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mn>119</m:mn>
+                                </m:mrow>
+                            </m:mfenced>
+                        </m:mrow>
+                    </m:math>. </p>
+                </example>
+                <p>The purpose of this next activity is to give you guided practice at calculating and
+                    interpreting confidence intervals, and drawing conclusions from them.</p>
+                <!--<activity idref="_u5_m1_dig21" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m1_confintmean3_tutor1" purpose="didigetthis"/>
+                <p>Note from the previous example and the previous "Did I Get This?" activity, that
+                    the more confidence I require, the wider the confidence interval for μ
+                    (pronounced and sometimes noted as "mu"). The 99% confidence interval is wider
+                    than the 95% confidence interval, which is wider than the 90% confidence
+                    interval.</p>
+                
+                <image style="block" src="../webcontent/image058.gif" alt="A number line illustrating
+                    confidence intervals for &mu;. x-bar is marked at 115. The interval 112.5 and 117.5 is the 90% confidence
+                    interval. Enclosing this interval is the interval 112 and 118, which is the 95% confidence interval. Even
+                    larger is the 99% confidence interval, ranging from 111 to 119."/>
+                <p>This is not very surprising, given that in the 99% interval we multiply the
+                    standard deviation by 2.576, in the 95% by 2, and in the 90% only by 1.645.
+                    Beyond this numerical explanation, there is a very clear intuitive explanation
+                    and an important implication of this result.</p>
+                <p>Let's start with the intuitive explanation. The more certain I want to be that
+                    the interval contains the value of μ, the more plausible values the interval
+                    needs to include in order to account for that extra certainty. I am 95% certain
+                    that the value of μ is one of the values in the interval (112,118). In order to
+                    be 99% certain that one of the values in the interval is the value of μ, I need
+                    to include more values, and thus provide a wider confidence interval.</p>
+                <activity idref="_u5_m1_lbd17" purpose="learnbydoing"/>
+                <p>In our example, the <em>wider</em> 99% confidence interval (111, 119) gives us a
+                    <em>less precise</em> estimation about the value of μ than the narrower 90%
+                    confidence interval (112.5, 117.5), because the smaller interval "narrows in" on
+                    the plausible values of μ.</p>
+                <p>The important practical implication here is that researchers must decide whether
+                    they prefer to state their results with a higher level of confidence or produce
+                    a more precise interval. In other words,</p>
+                <p>
+                    <em>There is a trade-off between the level of confidence and the precision with
+                        which the parameter is estimated</em>.</p>
+                <p>The price we have to pay for a higher level of confidence is that the unknown
+                    population mean will be estimated with less precision (i.e., with a wider
+                    confidence interval). If we would like to estimate μ with more precision (i.e.,
+                    a narrower confidence interval), we will need to sacrifice and report an
+                    interval with a lower level of confidence.</p>
+                
+                <!--<activity idref="_u5_m1_dig3" purpose="didigetthis"/>-->
+                <section purpose="didigetthis">
+                    <title>Did I Get This?</title>
+                    <body>
+                        
+                        <p> In a recent study, 1,115 males 25 to 35 years of age were randomly chosen and asked about
+                            their exercise habits. Based on the study results, the researchers estimated the mean
+                            time that a male 25 to 35 years of age spends exercising with 90%, 95%, and 99%
+                            confidence intervals. These were (not necessarily in the same order):</p>
+                        <image src="../webcontent/_u5_m1_dig3a.gif" alt="Three number lines illustrating
+                            three confidence intervals. The first is shows an interval of (3,4). The second, an interval of (2.5, 4.5),
+                            and the third, (2,5)."/>
+                        
+                        <wb:inline idref="u4_m1_confintmean3_tutor2" purpose="didigetthis"/>
+                        
+                    </body>
+                </section>
+                <p><em>Did You Get It?</em>  If so, then go ahead and move on to the next page. If not yet, then click the link below for some additional practice.</p>
+                <activity idref="_u5_m1_dig3_02" purpose="didigetthis"/>
+                
+            </body>
+        </section>
+    </body>
+</workbook_page>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_mu4">
+<head>
+    <title>Hypothesis Testing for the Population Mean (4 of <!--9-->9)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+</head>
+<body>
+   
+<p>So far, we've discussed the first three steps in the hypothesis testing process of the z-test for
+            the population mean
+            <?oxy_insert_start author="mmyers" timestamp="20101127T221904-0500"?>(<?oxy_insert_end?>μ<?oxy_insert_start author="mmyers" timestamp="20101127T221908-0500"?>)<?oxy_insert_end?>.
+            The last step is to draw conclusions.</p>
+<section>
+<title>4. Drawing Conclusions</title>
+<body>
+<p> Here we assess the significance of the results (based on the p-value compared with some significance level of choice), and state our conclusions in context.</p>
+<example>
+<title>1</title>
+<p>Here the p-value is quite large (.16) which means that it is not very surprising to get data like
+                        those observed when
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T221951-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T221949-0500" content="Ho"?>
+                        is true. The results are therefore not significant, and so we do not have
+                        enough evidence to reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T222008-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T222005-0500" content="Ho"?>
+                        and conclude that the mean SAT-M of all Ross College students is higher than
+                        the national mean (500).</p>
+<p> Note that even though the average SAT-M in our sample was 550 (which is substantially larger
+                        than 500), since this result was based on a sample of only 4
+                        students<?oxy_insert_start author="mmyers" timestamp="20101127T222030-0500"?>,<?oxy_insert_end?>
+                        it does not provide enough evidence to conclude that the mean SAT-M is
+                        higher than 500. We'll further explore this point in the next activity. Here
+                        is the completed figure representing the hypothesis testing process for
+                        thi<?oxy_comment_start author="mmyers" timestamp="20101127T222134-0500" comment="use subscripts for Ho and Ha below"?>s
+                        examp<?oxy_comment_end?>le:</p>
+<image style="block" src="../webcontent/image343.gif" alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. Our hypotheses are H_0: &mu; = 500 and H_a: &mu; &gt; 500,
+assuming SD = 100. We take a sample from the population of size n = 4, represented by a smaller
+circle. For this sample, x-bar = 550, and since our conditions are met, we can calculate that z = 1.
+We also calculate that the p-value = .159 . This p-value is too high so we conclude that we
+cannot reject H_0."/>
+</example>
+<example>
+<title>2</title>
+<p>In this
+                        example<?oxy_insert_start author="mmyers" timestamp="20101127T222157-0500"?>,<?oxy_insert_end?>
+                        the p-value is quite small (.012). In particular, for a significance level
+                        of .05, the p-value
+                        indicate<?oxy_insert_start author="mmyers" timestamp="20101127T222212-0500"?>s<?oxy_insert_end?>
+                        that the results are significant.</p>
+<p>The data provide enough evidence for us to reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T222240-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T222237-0500" content="Ho"?>
+                        and conclude that the mean concentration level in the shipment is not the
+                        required
+                        250<?oxy_insert_start author="mmyers" timestamp="20101127T222256-0500"?>
+                        ppm<?oxy_insert_end?>.</p>
+<p> Here is the completed figure representing the hypothesis testing process for this
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T222357-0500" comment="use subscripts for Ho and Ha below"?>example:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image344.gif" alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. Our hypotheses
+are H_0:mean = 250, and H_a: mean is not 250. We assume that SD = 12. Selected from the population is a 
+sample of size n=100, represented by a smaller circle. x-bar for this sample is 247, and because our conditions
+are met, we can calculate that z = -2.5, and that the p-value = .012. This p-value is low enough to let
+us conclude that we can reject H_0."/>
+</example>
+<activity idref="_u5_m1_lbd13" purpose="learnbydoing"/>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

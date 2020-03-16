@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd13">
+    <head>
+        <title>Case Q→Q</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to complete our discussion about our example that
+            examines the relationship between vocalization soon after birth and IQ at age three. So
+            far we explored the data using a scatterplot supplemented with the correlation r: </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R</title>
+                    <image style="block" src="../../webcontent/image427_r.gif"
+                        alt="A scatterplot which has
+baby$cry.count on the horizontal axis and baby$IQ on the vertical axis."
+                    />
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch</title>
+                    <image style="block" src="../../webcontent/image427_Statcrunch.gif"
+                        alt="A scatterplot which
+has cry count on the horizontal axis and IQ on the vertical axis. r = 0.4"
+                    />
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab</title>
+                    <image style="block" src="../../webcontent/image427.gif"
+                        alt="A scatterplot which has cry count
+on the horizontal axis and IQ on the vertical axis. r = 0.4"
+                    />
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007</title>
+                    <image style="block" src="../../webcontent/image427_excel.gif"
+                        alt="A scatterplot which has cry
+count on the horizontal axis and IQ on the vertical axis. r = 0.4"
+                    />
+                </alternative>
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003</title>
+                    <image style="block" src="../../webcontent/image427_excel.gif"
+                        alt="A scatterplot which has cry
+count on the horizontal axis and IQ on the vertical axis. r = 0.4"
+                    />
+                </alternative> -->
+                <alternative value="ti">
+                    <title>TI Calculator</title>
+                    <image style="block" src="../../webcontent/image427_ti.png"
+                        alt="Two TI screens. The first shows a
+scatterplot of crying vs. IQ. The second shows: LinReg
+    y = a+bx
+    a = 90.75498851
+    b = 1.536351811
+    r&sup2; = .161458103
+    r = .4018184951"
+                    />
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>and discovered that the data display a moderately weak positive linear relationship. In
+            addition, when we carried out the t-test for assessing the significance of this linear
+            relationship:</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R</title>
+                    <image style="block" src="../../webcontent/image428_r.gif"
+                        alt=">summary(lm(IQ~cry.count,baby))
+        call: lm(formula = IQ ~ cry.count, data = baby)
+        Residuals:  Min = -31.482, 1Q = -11.593, Median = -2.591, 3Q = 10.386, Max = 51.272
+        Coefficients: (Intercept): Estimate = 90.7550, Std. Error = 10.4734, t-value = 8.665, Pr(>|t|) = 2.47e-10 ***
+        cry.count: estimate = 1.5364, Std. Error = 0.5835, t value = 2.633, Pr(>|t|) = 0.0124 *
+        
+        --- Signif, codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+        
+        Residual standard error: 17.99 on 36 degrees of freedom
+        Multiple R-squared: 0.1615,  Adjusted R-Squared: 0.1382
+        F-statistic: 6.932 on 1 and 36 DF, P-value: 0.01240"
+                    />
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch</title>
+                    <image style="block" src="../../webcontent/image428_StatCrunch.gif"
+                        alt="Simple linear regression results:
+        Dependent Variable: IQ
+        Independent Variable: cry count
+        IQ = 90.75499 + 1.5353518 cry count
+        
+        Parameter estimates:
+        Intercept: estimate = 90.75499, Std. Err. = 10.47342, Alternative &ne; 0, DF = 36, T-Stat = 8.665267, P-Value: &lt; 0.0001
+        Slope: estimate: 1.5363518, Std. Err. = 0.5835417, Alternative &ne; 0, DF = 36, T-Stat = 2.6328056, P-Value: 0.0124"
+                    />
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab</title>
+                    <image style="block" src="../../webcontent/image428.gif"
+                        alt="Regression Analysis: IQ versus cry count. The regression
+equation is IQ = 90.8 + 1.54 cry count.
+            Predictor: Constant   Coef = 90.75, SE Coef = 10.47,  T = 8.67,  P = 0.000
+            Predictor: cry count  Coef = 1.5364, SE Coef = 0.5835, T = 2.63, P = 0.012"
+                    />
+                </alternative>
+
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <image style="block" src="../../webcontent/image428_excel.gif"
+                        alt="Summary Output:
+        Regression Statisitics:
+        Multiple R = 0.401818495
+        R Square = 0.151458103
+        Adjusted R Square = 0.138165272
+        Standard Error = 17.9941816
+        Observations = 38
+        
+        ANOVA
+        Regression: df = 1, Ss = 2244.407845, MS = 2244.407845, F = 6.931665224, Significance F = 0.012397394
+        Residual: df = 36, SS = 11656.46058, MS = 323.7905716
+        Total: df = 37, SS = 13900.86842
+        
+        Intercept: Coefficients = 90.75498851, Standard Error = 10.4734043, t Stat = 8.665267389, P-Value = 2.46612E-10,
+        Lower 95% = 69.51390752, Upper 95% = 111.9960695
+        X Variable 1: Coefficients = 1.536351811, Standard Error = 0.583541688, t Stat = 2.63280558, P-Value = 0.012397394,
+        Lower 95% = 0.352875525, Upper 95% = 2.719829199"
+                    />
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003</title>
+                    <image style="block" src="../../webcontent/image428_excel.gif"
+                        alt="Summary Output:
+        Regression Statisitics:
+        Multiple R = 0.401818495
+        R Square = 0.151458103
+        Adjusted R Square = 0.138165272
+        Standard Error = 17.9941816
+        Observations = 38
+        
+        ANOVA
+        Regression: df = 1, Ss = 2244.407845, MS = 2244.407845, F = 6.931665224, Significance F = 0.012397394
+        Residual: df = 36, SS = 11656.46058, MS = 323.7905716
+        Total: df = 37, SS = 13900.86842
+        
+        Intercept: Coefficients = 90.75498851, Standard Error = 10.4734043, t Stat = 8.665267389, P-Value = 2.46612E-10,
+        Lower 95% = 69.51390752, Upper 95% = 111.9960695
+        X Variable 1: Coefficients = 1.536351811, Standard Error = 0.583541688, t Stat = 2.63280558, P-Value = 0.012397394,
+        Lower 95% = 0.352875525, Upper 95% = 2.719829199"
+                    />
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Calculator</title>
+                    <image style="block" src="../../webcontent/image428_ti.png"
+                        alt="Regression Analysis: IQ versus Cry Count
+TI Output: LinRegTTest
+    y = a + bx
+    &beta; &ne; 0 and &rho; &ne; 0
+    t = 2.63280558
+    p = .0123973937
+    df = 36
+    a = 90.75498851
+    b = 1.536351811
+    s = 17.9941816
+    r&sup2; = .161458103
+    r = .4018184951"
+                    />
+                </alternative>
+            </alternatives>
+        </pullout>
+
+        <p>we concluded (based on the small p-value of 0.012) that the data provide fairly strong
+            evidence of a moderately weak linear relationship between cry count soon after birth and
+            IQ and age 3. </p>
+        <p>We would now like to consider using the least squares regression line for predicting IQ
+            at age 3 based on cry count soon after birth. Plot the least squares regression line on
+            the scatterplot:</p>
+
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/baby-crying-IQ.RData" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        R.</p>
+                    <p>The data have been loaded into the data frame <code>baby</code>. Enter the
+                        command <code>baby</code> to see the data. The two variables in the data
+                        frame are <code>cry.count</code> and <code>IQ</code>.</p>
+                    <p>Let's rerun the previous Learn by Doing code to acquire the plot and
+                        equation.</p>
+                    <ul style="none">
+                        <li><code>plot(baby$cry.count,baby$IQ, xlab="Number of Crying Events",
+                                ylab="IQ")</code></li>
+                        <li><code>model=lm(baby$IQ~baby$cry.count)</code></li>
+                        <li><code>abline(model)</code></li>
+                        <li><code>cf=coef(model)</code></li>
+                        <li><code>cf</code></li>
+                        <li><code>legend(10,160,legend=paste("IQ = ", round(cf[1],1), "+",
+                                round(cf[2],2), "(cry.count)"))</code></li>
+                    </ul>
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/baby-crying-IQ.RData" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in R. </p>
+                    
+                <p>The data have been loaded into the variable "baby." Enter the command <code>baby</code> to see the data. </p>
+                             
+                    <p>To plot the data, enter the command:</p>
+                <code>plot(baby$cry.count,baby$IQ)</code>
+                    <p>Add the regression line and the regression equation using these commands: </p>
+                <code>L = lm(baby$IQ ~ baby$cry.count);</code>
+                    <code>abline(L);</code>
+                <code>abline(L);</code>
+                <code>cf=coefficients(L);</code>
+                <code>legend(10,150,legend=paste("IQ = ", round(cf[1],1), "+", round(cf[2],2), "(cry.count)"))</code>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <ul>
+                        <li>Choose: Stat → Regression → Simple Linear </li>
+                        <li>Select explanatory and response variables </li>
+                        <li>Press Compute! </li>
+
+                    </ul>
+                    <p>The fitted line plot will be on the second page of the output. (Press Next to
+                        see it).</p>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <ul>
+                        <li>Choose: Stat → Regression → Fitted Line Plot.</li>
+                        <li>Enter the response and explanatory variables.</li>
+                        <li>Click "OK."</li>
+                    </ul>
+
+                </alternative>
+
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+                    <ul>
+
+                        <li>Select all of the data in columns A and B, and then choose <code
+                                style="inline">Scatter</code> in the <code style="inline"
+                                >Charts</code> group on the <code style="inline">Insert</code> tab
+                            (click on the picture of the scatterplot).</li>
+                        <li> Choose the first scatterplot option (Scatter with only Markers). Now we
+                            have a scatterplot.</li>
+                        <li>Right-click on one of the data points in the scatterplot, and choose
+                                <code style="inline">Add Trendline</code> from the pop-up menu.</li>
+                        <li>Make sure that <code style="inline">Trendline Options</code> is selected
+                            on the left, and then choose <code style="inline">Linear</code> under
+                                <code style="inline">Trend/Regression type</code>.</li>
+                        <li>At the bottom of the window, make sure that <code style="inline">Display
+                                Equation on chart</code> and <code style="inline">Display R-squared
+                                value on chart</code> are checked.</li>
+                        <li>Click <code style="inline">Close</code>.</li>
+
+
+
+
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <ul>
+                        <li>Right-click on one of the data points in the scatterplot, and choose
+                                <code style="inline">Add Trendline</code> from the pop-up menu.</li>
+                        <li>Under <code style="inline">Type</code>, select <code style="inline"
+                                >Linear</code>.</li>
+                        <li>Under <code style="inline">Options</code>, make sure that <code
+                                style="inline">Display equation on chart</code> and <code
+                                style="inline">Display R-squared value on chart</code> are
+                            checked.</li>
+                        <li>Click <code style="inline">OK</code>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Linear Regression Line (Line of Best Fit)&#8212;plot on
+                        scatterplot</em></p>
+                    <ul>
+
+                        <li>The TI calculator stores the last regression line that you calculated
+                            until you calculate another one. If the last correlation, linear
+                            regression t-test, and StatPlot you did with your TI were for this
+                            example, <em style="bold">skip the next two steps</em>. Otherwise: <ul>
+                                <li>Follow TI instructions to display a Scatterplot. (Learn by Doing
+                                    Case Q→Q (2 of 3) first one on the page)</li>
+                                <li>Follow TI directions for Correlation (Learn by Doing Case Q→Q (2
+                                    of 3) first one on the page) OR Linear Regression T-Test (Learn
+                                    by Doing Case Q→Q (2 of 3) second one on the page). Either of
+                                    these calculate the regression line. </li>
+                            </ul>
+                        </li>
+
+                        <li>Choose <code style="inline">y=</code></li>
+                        <li>Now cut and paste the values for <code style="inline">a</code> and <code
+                                style="inline">b</code>.</li>
+                        <li>To get the y-intercept (a): <ul>
+                                <li>Choose <code style="inline">VARS/5:Statistics.</code></li>
+                                <li>Choose <code style="inline">EQ</code> (right arrow twice).</li>
+                                <li>Choose <code style="inline">2:a</code></li>
+                            </ul></li>
+                        <li>Press the <code style="inline">+</code> button.</li>
+                        <li>To get the slope (b): <ul>
+                                <li>Choose <code style="inline">VARS/5:Statistics</code>.</li>
+                                <li>Choose <code style="inline">EQ</code> (right arrow twice).</li>
+                                <li>Choose <code style="inline">3:b</code>.</li>
+                            </ul></li>
+                        <li>Press the <code style="inline">X,T, &#920;, n</code> button.</li>
+                    </ul>
+                    <p>You should see: <image style="inline" src="../../webcontent/image521.jpg"
+                            alt="Plot1 Plot2 Plot3
+    Y_1 = a + bX
+    Y_2 = 
+    Y_3 =
+    ..."
+                        /></p>
+                    <p>Note: As long as you don’t change <code style="inline">Y1</code>, each time
+                        you find another regression line, a and b will automatically save the new
+                        values and the new line will be graphed.</p>
+                    <p>You can toggle <code style="inline">Y1</code> on and off. When the = is
+                        highlighted, the graph is ON. To turn it OFF, use the left arrow to
+                        highlight the =, then press <code style="inline">ENTER</code>. Repeat to
+                        turn graph back on.</p>
+                    <p>If you’ve set up the scatterplot and set up <code style="inline">Y1=</code>,
+                        you can <code style="inline">ZOOM/9:ZoomStat</code> to see the regression
+                        line plotted on the scatterplot.</p>
+                    <p>You should see a graph window with the scatterplot and the regression plotted
+                        on it. </p>
+
+
+                    <p><em>Linear Regression Line (Line of Best Fit)&#8212;use for predictions</em>
+                    </p>
+                    <p>Method 1: (low tech) Write down the a (y-intercept) and b (slope) values for
+                        the regression line (y = a + bx). </p>
+                    <ul>
+                        <li>To find the predicted y-value for any x, simply add the value of a plus
+                            the value of b times x. </li>
+                        <li>Note: Remember order of operations. Multiplication comes before
+                            addition. If you use your TI, the TI follows the standard order of
+                            operations. However, it is wrong to use: </li>
+                        <li>a + b ENTER </li>
+                        <li>* x ENTER </li>
+                        <li>This will force the addition to be performed before the multiplication,
+                            which is incorrect. </li>
+                    </ul>
+
+                    <p>Method 2: If you’ve set Y1 = a + bx. </p>
+                    <ul>
+                        <li>Be sure Y1 is turned ON (= sign will be highlighted. If not, left arrow
+                            till = is highlighted and press ENTER.) </li>
+                        <li>Go to a home screen (press 2ND/QUIT). </li>
+                        <li>Choose Y1 (VARS/Y-VARS/1:Function/1:Y1). </li>
+                        <li>Press left parenthesis, the x-value, right parenthesis. </li>
+                        <li>For example, to find the predicted y-value when x is 25, we want Y1(25). </li>
+                        <li>Press ENTER.</li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m4_qq3_lbd_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m4_qq3_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

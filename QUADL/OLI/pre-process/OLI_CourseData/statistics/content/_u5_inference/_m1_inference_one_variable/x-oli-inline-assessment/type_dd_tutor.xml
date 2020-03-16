@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<assessment id="type_dd_tutor">
+    <title>DynaDrop Assessment</title>
+    <question id="q1">
+        <body>
+            <custom type="javascript" layout="../webcontent/dynadrop_type_layout.xml" src="../../../webcontent/DynaDrop.js" height="200" width="550" id="dragDrop">
+                <param name="showInputs">false</param>
+            </custom>
+         
+        </body>
+        
+        <fill_in_the_blank id="typeIError" shuffle="false">
+            <choice value="dropAreaA">dropAreaA</choice>
+            <choice value="dropAreaB">dropAreaB</choice>
+            <choice value="dropAreaC">dropAreaC</choice>
+            <choice value="dropAreaD">dropAreaD</choice>
+        </fill_in_the_blank>
+        
+        <fill_in_the_blank id="typeIIError" shuffle="false">
+            <choice value="dropAreaA">dropAreaA</choice>
+            <choice value="dropAreaB">dropAreaB</choice>
+            <choice value="dropAreaC">dropAreaC</choice>
+            <choice value="dropAreaD">dropAreaD</choice>
+        </fill_in_the_blank>
+        
+        <fill_in_the_blank id="correctDecision1" shuffle="false">
+            <choice value="dropAreaA">dropAreaA</choice>
+            <choice value="dropAreaB">dropAreaB</choice>
+            <choice value="dropAreaC">dropAreaC</choice>
+            <choice value="dropAreaD">dropAreaD</choice>
+        </fill_in_the_blank>
+        
+        <fill_in_the_blank id="correctDecision2" shuffle="false">
+            <choice value="dropAreaA">dropAreaA</choice>
+            <choice value="dropAreaB">dropAreaB</choice>
+            <choice value="dropAreaC">dropAreaC</choice>
+            <choice value="dropAreaD">dropAreaD</choice>
+        </fill_in_the_blank>
+        
+        
+        <part id="p1">
+            <response input="typeIError" match="dropAreaA" score="10">
+                <feedback>Correct. A type I error occurs when the H<sub>0</sub> is true, but, we reject it (H<sub>0</sub>) and, thus, accept the H<sub>a</sub>.</feedback>
+            </response>
+            <response input="typeIError" match="dropAreaB">
+                <feedback>Incorrect. A type I error occurs when the H<sub>0</sub> is true, but we reject it (H<sub>0</sub>) and, thus, accept the H<sub>a</sub>.  Please try again.</feedback>
+            </response>
+            <response input="typeIError" match="dropAreaC">
+                <feedback>Incorrect.  A type I error occurs when the H<sub>0</sub> is true, but we reject it (H<sub>0</sub>) and , thus, accept the H<sub>a</sub>.  Please try again.</feedback>
+            </response>
+            <response input="typeIError" match="dropAreaD">
+                <feedback>Incorrect.  A Type I error occurs when the H<sub>0</sub> is true, but we reject it (H<sub>0</sub>) and, thus, accept the H<sub>a</sub>.  Please try again.</feedback>
+            </response>
+        </part>
+        
+        <part id="p2">
+            <response input="typeIIError" match="dropAreaA">
+                <feedback>That is incorrect. A type II error occurs when we fail to reject the H<sub>0</sub>, when it (H<sub>0</sub>) is false. Please try again.</feedback>
+            </response>
+            <response input="typeIIError" match="dropAreaB">
+                <feedback>Incorrect. A type II error occurs when we fail to reject the H<sub>0</sub>, when it is false. Please try again.</feedback>
+            </response>
+            <response input="typeIIError" match="dropAreaC">
+                <feedback>Incorrect. A type II error occurs when we fail to reject the H<sub>0</sub>, when it (H<sub>0</sub>) is false. Please try again.</feedback>
+            </response>
+            <response input="typeIIError" match="dropAreaD" score="10">
+                <feedback>Correct. A Type II error occurs when we fail to reject the H<sub>0</sub>, when it (H<sub>0</sub>) is false.</feedback>
+            </response>
+        </part>
+        
+        <part id="p3">
+            <response input="correctDecision1" match="dropAreaA">
+                <feedback>That is incorrect. When the H<sub>0</sub> is true, to be a correct decision, we need to fail to reject the H<sub>0</sub>. Please try again.</feedback>
+            </response>
+            <response input="correctDecision1" match="dropAreaB" score="10">
+                <feedback>Correct. We do not reject H<sub>0</sub> when it is true.</feedback>
+            </response>
+            <response input="correctDecision1" match="dropAreaC" score="10">
+                <feedback>Correct. This would be a correct decision, as the H<sub>0</sub> is
+                    rejected, when it is false.</feedback>
+            </response>
+            <response input="correctDecision1" match="dropAreaD">
+                <feedback>That is incorrect. When the H<sub>0</sub> is false, to be a correct decision, we would need reject the H<sub>0</sub>. Please try again.</feedback>
+            </response>
+        </part>
+        
+        <part id="p4">
+            <response input="correctDecision2" match="dropAreaA">
+                <feedback>That is incorrect. When the H<sub>0</sub> is true, to be a correct decision, we need to fail to reject the H<sub>0</sub>. Please try again.</feedback>
+            </response>
+            <response input="correctDecision2" match="dropAreaB" score="10">
+                <feedback>Correct. We do not reject H<sub>0</sub> when it is true.</feedback>
+            </response>
+            <response input="correctDecision2" match="dropAreaC" score="10">
+                <feedback>Correct. This would be a correct decision, as the H<sub>0</sub> is
+                    rejected, when it is false.</feedback>
+            </response>
+            <response input="correctDecision2" match="dropAreaD">
+                <feedback>That is incorrect. When the H<sub>0</sub> is false, to be a correct decision, we would need reject the H<sub>0</sub>. Please try again.</feedback>
+            </response>
+        </part>
+        
+
+    </question>
+</assessment>

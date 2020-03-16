@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="recog_simpson_paradox_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_recog_simpson_paradox" select="multiple">
+        <body>
+            <p>A study was done on the timeliness of flights categorized as either "on time" or
+                "delayed" of two major airlines: StatsAir and AirMedian. Data were collected over a
+                period of time from five major cities and it was found that StatsAir does better
+                overall (i.e., has a smaller percentage of flights categorized as delayed). However,
+                in each of the five cities separately, AirMedian does better (i.e., has a smaller
+                percentage of flights categorized as delayed in each city).</p>
+            <p>Which of the following is correct? Check all that apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">This is an example of Simpson's paradox.</choice>
+            <choice value="B">"City" is a lurking variable in this example.</choice>
+            <choice value="C">This is an example of a negative association between
+                variables.</choice>
+        </input>
+        <part>
+            <response match="A" score="7">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. However,
+                    there is at least one other correct answer.</feedback>
+            </response>
+            <response match="B" score="7">
+                <feedback>Incorrect. You are correct that "city" is a lurking variable, because
+                    there is an association that is seen a particular way for each of several groups
+                    separately but reverses when the groups are combined. However, there is at least
+                    one other correct answer.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It is appropriate to call an association positive or negative
+                    only when the variables are quantitative. But in this case, both variables
+                    ("timeliness" and "city") are categorical. </feedback>
+            </response>
+            <response match="A,B" score="10">
+                <feedback>Correct. This is an example of Simpson’s paradox, because there is an
+                    association that is seen a particular way for each of several groups separately
+                    but reverses when the groups are combined. Such reversal typically indicates a
+                    lurking variable, which in this case is "city."</feedback>
+            </response>
+            <response match="A,C" score="3">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. However, it
+                    is appropriate to call an association positive or negative only when the
+                    variables are quantitative. But in this case, both variables ("timeliness" and
+                    "city") are categorical.</feedback>
+            </response>
+            <response match="B,C" score="3">
+                <feedback>Incorrect. You are correct that "city" is a lurking variable, because
+                    there is an association that is seen a particular way for each of several groups
+                    separately but reverses when the groups are combined. However, it is appropriate
+                    to call an association positive or negative only when the variables are
+                    quantitative. But in this case, both variables ("timeliness" and "city") are
+                    categorical.</feedback>
+            </response>
+            <response match="A,B,C" score="7">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "city."
+                    However, it is appropriate to call an association positive or negative only when
+                    the variables are quantitative. But in this case, both variables ("timeliness"
+                    and "city") are categorical.</feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q2_recog_simpson_paradox" select="multiple">
+        <body>
+            <p>A study of admission rates of men and women into graduate programs for several majors
+                at a certain university was conducted. The study found that overall a higher
+                percentage of men were admitted than women. However, when looking at each major
+                program separately it was found that the rate of admission for women was higher than
+                that for men.</p>
+            <p>Which of the following statements is true? Check all that apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">This is an example of Simpson’s paradox.</choice>
+            <choice value="B">This is an example of a negative association between
+                variables.</choice>
+            <choice value="C">“Type of major” may be a lurking variable in this study.</choice>
+            <choice value="D">This situation is mathematically impossible.</choice>
+        </input>
+        <part>
+            <response match="A" score="8">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox, there is at least one other correct response.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the variables in this example are both categorical, it is
+                    not appropriate to describe the association as negative or positive.</feedback>
+            </response>
+            <response match="C" score="8">
+                <feedback>Incorrect. While you are correct that “type of major” is a lurking
+                    variable, there is at least one other correct response.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This situation can occur mathematically. Remember that it is
+                    possible to observe an association when looking at groups separately that can
+                    reverse when groups are combined.</feedback>
+            </response>
+            <response match="A,B" score="5">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox, this is not an example of a negative association: since the variables
+                    in this example are both categorical, it is not appropriate to describe the
+                    association as negative or positive. Additionally, there is at least one other
+                    correct response.</feedback>
+            </response>
+            <response match="A,C" score="10">
+                <feedback>Correct. This is an example of Simpson’s paradox in which an observed
+                    association disappears when the additional variable “type of major” is
+                    considered. Thus “type of major” is a lurking variable that may explain the
+                    difference in admission rates between men and women at this
+                    university.</feedback>
+            </response>
+            <response match="A,D" score="5">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox, this situation can occur mathematically. Remember that it is possible
+                    to observe an association when looking at groups separately that can “reverse”
+                    when groups are combined.</feedback>
+            </response>
+            <response match="B,C" score="5">
+                <feedback>Incorrect. You are correct that “type of major” is a lurking variable.
+                    However, since the variables in this example are both categorical, it is not
+                    appropriate to describe the association as negative or
+                    positive.<!--inserted missing feedback, 10/8 ~carol--></feedback>
+            </response>
+            <response match="B,D" score="0">
+                <feedback>Incorrect. Since the variables in this example are both categorical, it is
+                    not appropriate to describe the association as negative or positive. Also, this
+                    situation can occur mathematically. Remember that it is possible to observe an
+                    association when looking at groups separately that can reverse when groups are
+                    combined.<!--inserted MORE missing feedback, 10/8 ~carol--></feedback>
+            </response>
+            <response match="C,D" score="5">
+                <feedback>Incorrect. You are correct that “type of major” is a lurking variable.
+                    However, this situation can occur mathematically. Remember that it is possible
+                    to observe an association when looking at groups separately that can reverse
+                    when groups are
+                    combined.<!--inserted YET MORE missing feedback, 10/8 ~carol--></feedback>
+            </response>
+            <response match="A,B,C" score="8">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox and that “type of major” is a lurking variable, this is not an example
+                    of a negative association, since the variables in this example are both
+                    categorical it is not appropriate to describe the association as negative or
+                    positive.</feedback>
+            </response>
+            <response match="A,B,D" score="3">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox, it is not appropriate to label the association as “negative” since the
+                    variables are both categorical. Also, this situation can occur mathematically.
+                    Remember that it is possible to observe an association when looking at groups
+                    separately that can reverse when groups are combined.</feedback>
+            </response>
+            <response match="A,C,D" score="8">
+                <feedback>Incorrect. While you are correct that this is an example of Simpson’s
+                    paradox and that “type of major” is a lurking variable, it is not appropriate to
+                    label the association as negative, since the variables are both categorical.
+                    Also, this situation can occur mathematically. Remember that it is possible to
+                    observe an association when looking at groups separately that can reverse when
+                    groups are combined.</feedback>
+            </response>
+            <response match="B,C,D" score="3">
+                <feedback>Incorrect. You are correct that “type of major” is a lurking variable.
+                    However, since the variables in this example are both categorical, it is not
+                    appropriate to describe the association as negative or positive. Also, this
+                    situation can occur mathematically. Remember that it is possible to observe an
+                    association when looking at groups separately that can reverse when groups are
+                    combined.<!--inserted even MORE missing feedback, 10/8 ~carol--></feedback>
+            </response>
+            <response match="A,B,C,D" score="5">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox
+                    and that “type of major” is a lurking variable. However, since the variables in
+                    this example are both categorical, it is not appropriate to describe the
+                    association as negative or positive. Also, this situation can occur
+                    mathematically. Remember that it is possible to observe an association when
+                    looking at groups separately that can reverse when groups are
+                    combined.<!--and MORE missing feedback, 10/8 ~carol--></feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. At least one answer is
+                    correct.<!--and more missing feedback, 10/8 ~carol--></feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q3_recog_simpson_paradox" select="multiple">
+        <body>
+            <p>A study was done of all homicide convictions in the State of Florida between 1976 and
+                1980 in order to examine if the application of the death sentence was racially
+                biased. The data showed that a larger percentage of white suspects (11.2%) were
+                sentenced to death than black suspects (8.5%). However, if the race of the victim
+                was included in the analysis, the study found that for white victims, a larger
+                percentage of black suspects (19.3%) were sentenced to death than white suspects
+                (12.3%).</p>
+            <p>Which of the following is correct? Check all that apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">“Race of the suspect” is a lurking variable in this
+                situation.</choice>
+            <choice value="B">“Race of the victim” is a lurking variable in this situation.</choice>
+            <choice value="C">This is an example of Simpson’s paradox.</choice>
+            <choice value="D">This is an example of a negative association.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. “Race of the suspect” is the <em style="italic">explanatory</em> variable in this situation, because we are investigating
+                    if race of the suspect impacts whether or not the death penalty is used.
+                    Additionally, there is at least one correct answer.</feedback>
+            </response>
+            <response match="B" score="8">
+                <feedback>Incorrect. You are correct that “race of the victim” is a lurking
+                    variable, because there is an association that is seen a particular way for each
+                    of several groups separately but reverses when the groups are combined. However,
+                    there is at least one other correct answer.</feedback>
+            </response>
+            <response match="C" score="8">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. However,
+                    there is at least one other correct answer.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It is only appropriate to call an association positive or
+                    negative when the variables are quantitative. But in this case, both variables
+                    ("race of suspect” and "use of death penalty") are categorical. </feedback>
+            </response>
+            <response match="A,B" score="5">
+                <feedback>Incorrect. You are correct that “race of the victim” is a lurking
+                    variable, because there is an association that is seen a particular way for each
+                    of several groups separately but reverses when the groups are combined. However,
+                    “race of suspect” is the explanatory variable in the study. Additionally, there
+                    is at least one other correct answer.</feedback>
+            </response>
+            <response match="A,C" score="5">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. However,
+                    “race of suspect” is the explanatory variable in the study. Additionally, there
+                    is at least one other correct answer.</feedback>
+            </response>
+            <response match="A,D" score="0">
+                <feedback>Incorrect. It is only appropriate to call an association positive or
+                    negative when the variables are quantitative. But in this case, both variables
+                    ("race of suspect” and "use of death penalty") are categorical. Additionally,
+                    “race of suspect” is the explanatory variable in the study. There is at least
+                    one correct answer.</feedback>
+            </response>
+            <response match="B,C" score="10">
+                <feedback>Correct. This is an example of Simpson’s paradox, because there is an
+                    association that is seen a particular way for each of several groups separately
+                    but reverses when the groups are combined. Such reversal typically indicates a
+                    lurking variable, which in this case is "race of victim."</feedback>
+            </response>
+            <response match="B,D" score="5">
+                <feedback>Incorrect. You are correct that “race of the victim” is a lurking
+                    variable, because there is an association that is seen a particular way for each
+                    of several groups separately but reverses when the groups are combined. However,
+                    it is only appropriate to call an association positive or negative when the
+                    variables are quantitative. But in this case, both variables ("race of suspect”
+                    and "use of death penalty") are categorical. Additionally, there is at least one
+                    other correct answer.</feedback>
+            </response>
+            <response match="C,D" score="5">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. However, it
+                    is only appropriate to call an association positive or negative when the
+                    variables are quantitative. But in this case, both variables ("race of suspect”
+                    and "use of death penalty") are categorical. Additionally, there is at least one
+                    other correct answer.</feedback>
+            </response>
+            <response match="A,B,C" score="8">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "race of
+                    victim." However, “race of suspect” is the explanatory variable in the study.
+                </feedback>
+            </response>
+            <response match="A,B,D" score="3">
+                <feedback>Incorrect. You are correct that “race of the victim” is a lurking
+                    variable, because there is an association that is seen a particular way for each
+                    of several groups separately but reverses when the groups are combined. However,
+                    “race of suspect” is the explanatory variable in the study and it is only
+                    appropriate to call an association positive or negative when the variables are
+                    quantitative. But in this case, both variables ("race of suspect” and "use of
+                    death penalty") are categorical.</feedback>
+            </response>
+            <response match="A,C,D" score="3">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "race of
+                    victim." However, “race of suspect” is the explanatory variable in the study and
+                    it is only appropriate to call an association positive or negative when the
+                    variables are quantitative. But in this case, both variables ("race of suspect”
+                    and "use of death penalty") are categorical. </feedback>
+            </response>
+            <response match="B,C,D" score="8">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "race of
+                    victim." However, it is only appropriate to call an association positive or
+                    negative when the variables are quantitative. But in this case, both variables
+                    ("race of suspect” and "use of death penalty") are categorical. </feedback>
+            </response>
+
+            <response match="A,B,C,D" score="8">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but reverses when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "race of
+                    victim." However, “race of suspect” is the explanatory variable in the study and
+                    it is only appropriate to call an association positive or negative when the
+                    variables are quantitative. But in this case, both variables ("race of suspect”
+                    and "use of death penalty") are categorical.</feedback>
+            </response>
+
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one correct answer.</feedback>
+            </response>
+
+        </part>
+    </multiple_choice>
+
+</pool>

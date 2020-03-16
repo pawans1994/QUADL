@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_two_independent_samples6">
+    <head>
+        <title>Two Independent Samples (6 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Confidence Interval for <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> (Two-Sample t Confidence Interval) </title>
+            <body>
+                <p> So far we've discussed the two-sample t-test, which checks whether there is
+                    enough evidence stored in the data to reject the claim that <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math> (or equivalently, that <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> ) in favor of one of the three possible alternatives. </p>
+                <p>If we would like to estimate <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> we can use the natural point estimate, <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> , or preferably, a 95% confidence interval which will provide us with
+                    a set of plausible values for the difference between the population means
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> . </p>
+                <p> In particular, if the test has rejected <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mn>o</m:mn>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math> , a confidence interval for <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> can be insightful since it quantifies the effect that the categorical
+                    explanatory variable has on the response. </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>We will not go into the formula and calculation of the confidence interval, but
+                    rather ask our software to do it for us, and focus on interpretation.</p>
+            </body>
+        </section>
+        <example>
+            <p>Recall our leading example about the looks vs. personality score of females and
+                males:</p>
+            <image style="block" src="../webcontent/image047.gif" alt="The Gender(X) Variable has two
+categories, which gives us Population 1: Females and Population 2: Males. Each population has its own
+Y-Mean &mu;, so population 1's mean is &mu;_1 and population 2's mean is &mu;_2. For each population
+we take an SRS. For Population 1, an SRS of size 150 is taken, and for population 2 an SRS of
+size 85 is taken."/>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch</title>
+                    <p>Here again is the output:</p>
+                    <image style="block" src="../webcontent/image196_statcrunch.gif" alt="Two
+                Sample T - Test and CI: Score(Y),Gender (X)
+                Summary statistics for Score (Y):
+                For Gender(X) = Female: n = 150, Mean = 10.733334, Std. Dev. = 4.254751, Std. Err. = 0.347399
+                For Gender(X) = Male: n = 85, Mean = 13.3294115, Std. Dev. = 4.0189676, Std. Err. = 0.43591824
+                
+                Hypothesis test results: &mu;_1: mean of score (Y) where X = Female. &mu;_2: mean of score (Y)
+where X = Male. &mu;_1 - &mu;_2: mean difference. H_0: &mu;_1 - &mu;_2 = 0, H_A: &mu;_1 - &mu;_2 &ne; 0
+                
+                Difference: &mu;_1 - &mu;_2
+                Sample Mean: -2.5960784
+                Std. Err.: 0.55741435
+                DF: 182.97267
+                T-Stat: -4.657358
+                P-Value: &lt; 0.0001
+                
+                95% Confidence Interval Results:
+                Difference: &mu;_1 - &mu;_2
+                Sample Mean: -2.5960784
+                Std. Err.: 0.55741435
+                DF: 182.97267
+                L. Limit: -3.6958647
+                U. Limit: -1.4962921"/>
+                </alternative>
+                <alternative value="r">
+                    <title>R</title>
+                    <p>Here again is the output:</p>
+                    <image style="block" src="../webcontent/image192_r.gif" alt="R output:
+                > t.test(looks$Score~looks$Gender)
+                Welch Two Sample t-test
+                data: looks$Score by looks$Gender
+                t = -4.6574, df = 182.973, p-value = 6.143e-06
+                alternative hypothesis: true difference in means is not equal to 0
+                95 percent confidence interval:
+                -3.695865  -1.496292
+                sample estimates:
+                mean in group Female 10.73333
+                mean in group Male 13.32941"/>
+                </alternative>
+               <alternative value="minitab">
+                    <title>Minitab</title>
+                    <p>Here again is the output:</p>
+                   <image style="block" src="../webcontent/image196.gif" alt="Two-Sample T-Test and Cl:
+               Score(Y), Gender(X)
+               Two-sample T for Score (Y)
+               Gender (X) = Female: N = 150, Mean = 10.73, StDev = 4.25, SE Mean = 0.35
+               Gender (X) = Male: N = 85, Mean = 13.33, StDev = 4.02, SE Mean = 0.44
+               
+               Difference = mu (Female) - mu (Male)
+               Estimate for difference: -2.59608
+               95% CI for difference: (-3.69590, -1.49625)
+               T-Test of difference = 0 (vs not =): T-Value = -4.66 P-Value = 0.000  DF = 182"/>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007</title>
+                    <p>In this case, Excel tells us that the 95% confidence interval is (-3.69590,
+                        -1.49625).</p>
+                </alternative>
+             <!--    <alternative value="excel2003">
+                    <title>Excel 2003</title>
+                    <p>In this case, Excel tells us that the 95% confidence interval is (-3.69590,
+                        -1.49625).</p>
+                </alternative>--> 
+                <alternative value="ti">
+                    <title>TI Calculator</title>
+                    <p>Here is the output for STAT/TESTS/0:2-SampTInt:</p>
+                    <image style="block" src="../webcontent/image522.png" alt="2-SampTTest
+                &mu;_1; &ne; &mu;_2
+                t = -4.6574
+                p = 6.1423
+                df = 182.97
+                x-bar_1 = 10.733
+                x-bar_2 = 13.330
+                Sx_1 = 4.2548
+                Sx_2 = 4.0190
+                n_1 = 150
+                n_2 = 85"/>
+                </alternative>
+            </alternatives>
+            <p>Recall that we rejected the null hypothesis in favor of the two-sided alternative and
+                concluded that the mean score of females is different from the mean score of males.
+                It would be interesting to supplement this conclusion with more details about this
+                difference between the means, and the 95% confidence interval for <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> does exactly that. </p>
+            <p>According to the output the 95% confidence interval for <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> is roughly (-3.7, -1.5). First, note that the confidence interval is
+                strictly negative suggesting that μ<sub>1</sub> is lower than μ<sub>2</sub> .
+                Furthermore, the confidence interval tells me that we are 95% confident that the
+                mean "looks vs. personality score" of females ( μ<sub>1</sub> ) is between 1.5 and
+                3.7 points lower than the mean looks vs. personality score of males ( μ<sub>2</sub>
+                ). The confidence interval therefore quantifies the effect that the explanatory
+                variable (gender) has on the response (looks vs personality score). </p>
+        </example>
+        <activity idref="_u5_m2_lbd3" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

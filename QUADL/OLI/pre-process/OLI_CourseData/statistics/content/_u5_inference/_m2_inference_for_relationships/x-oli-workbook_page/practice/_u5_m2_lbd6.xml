@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd6">
+    <head>
+        <title>ANOVA</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in carrying out the ANOVA
+            F-test and to teach you how to obtain the ANOVA F-test's output using statistical
+            software. </p>
+        <section>
+            <title>Background: Critical Flicker Frequency (CFF) and Eye Color</title>
+            <body>
+                <p>There is various flickering light in our environment; for instance, light from
+                    computer screens and fluorescent bulbs. If the frequency of the flicker is below
+                    a certain threshold, the flicker can be detected by the eye. Different people
+                    have slightly different flicker "threshold" frequencies (known as the <em
+                        style="italic">critical flicker frequency</em>, or CFF). Knowing the
+                    critical threshold frequency below which flicker is detected can be important
+                    for product manufacturing as well as tests for ocular disease. Do people with
+                    different eye color have different threshold flicker sensitivity? A 1973 <link
+                        href="http://www.statsci.org/data/general/flicker.html" target="new"
+                        >study</link> ("The Effect of Iris Color on Critical Flicker Frequency," <em
+                        style="italic">Journal of General Psychology</em> [1973], 91–95) obtained
+                    the following data from a random sample of 19 subjects.</p>
+                <image style="block" src="../../webcontent/image418.gif"
+                    alt="A table with two rows,
+labeled &quot;Eye Color&quot; and &quot;Threshold Frequency (CFF).&quot; Here is the data in the table,
+organized by row (Eye Color, Threshold Frequency (CFF)):
+                Brown, 26.8
+                Brown, 27.9
+                Brown, 23.7
+                Brown, 25
+                Brown, 26.3
+                Brown, 24.8
+                Brown, 25.7
+                Brown, 24.5
+                Green, 26.4
+                Green, 24.2
+                Green, 28
+                Green, 26.9
+                Green, 29.1
+                Blue, 25.7
+                Blue, 27.2
+                Blue, 29.9
+                Blue, 28.5
+                Blue, 29.4
+                Blue, 28.3"/>
+                <p>Do these data suggest that people with different eye color have different
+                    threshold sensitivity to flickering light? In other words, do the data suggest
+                    that threshold sensitivity to flickering light is related to eye color? </p>
+                <p>
+                    <em>Comment: </em>We recommend that before starting, you create for yourself a
+                    figure that summarizes this problem, similar to the figures that we presented
+                    for the examples that we used in this part. </p>
+                <wb:inline idref="u4_m3_anova6_lbd_tutor1" purpose="learnbydoing"/>
+                <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="301">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor6a</param>
+                </flash>
+            -->
+                <wb:inline idref="u4_m3_anova6_lbd_tutor2" purpose="learnbydoing"/>
+                <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="376">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor6b</param>
+                </flash>
+            -->
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default>
+                            <pref:value preference="statistics.package"/>
+                        </default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>To open R with the data set preloaded, right-click <link
+                                    href="../../../webcontent/r/flicker.RData" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in R.</p>
+                            <p>The data have been loaded into the data frame <code>flicker</code>.
+                                Enter the command <code>flicker</code> to see the data. The two
+                                variables in the data frame are <code>color</code> and
+                                    <code>cff</code>.</p>
+                            <p>Now use R to create side-by-side boxplots of CFF by eye color, and
+                                supplement them with the descriptive statistics of CFF by eye color.
+                                Use the output to check whether the conditions that allow us to
+                                safely use the ANOVA F-test are met.</p>
+                            <p>To do this in R, enter the commands:</p>
+                            <ul style="none">
+                                <li><code>boxplot(flicker$cff~flicker$color,xlab="Eye
+                                        Color",ylab="CFF")</code></li>
+                                <li><code>tapply(flicker$cff, flicker$color, mean)</code></li>
+                                <li><code>tapply(flicker$cff, flicker$color, sd)</code></li>
+                            </ul>
+                            <!--<p>To open R with the dataset preloaded, right-click <link
+                                href="../../../webcontent/r/flicker.RData" target="self">here</link>
+                            and choose "Save Target As" to download the file to your computer. Then
+                            find the downloaded file and double-click it to open it in R.</p>
+                        <p>The data have been loaded into the variable
+                                <?oxy_insert_start author="mmyers" timestamp="20101129T101723-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T101722-0500" content="&apos;"?>flicker<?oxy_delete author="mmyers" timestamp="20101129T101725-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101129T101730-0500"?>"<?oxy_insert_end?>
+                                Enter the command <code>flicker</code> to see the data.</p>
+                        <p>Now use R to create side-by-side boxplots of CFF by eye color, and
+                            supplement them with the descriptive statistics of CFF by eye color. Use
+                            the output to check whether the conditions that allow us to safely use
+                            the ANOVA F-test are met.</p>
+                        <p>To do this in R, enter the commands:</p>
+                        <code>boxplot(cff~color,flicker)</code>
+                        <code>tapply(flicker$cff, flicker$color, sd)</code>-->
+                            <!--<wb:inline idref="_u5_m2_lbdtutor6c_r"/>-->
+                            <!--
+                            <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="641">
+                            <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6c_r.xml</param>
+                            <param name="problem_name">_u5_m2_lbdtutor6c_r</param>
+                            </flash>
+                        -->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To open this file in StatCrunch you must first right-click <link
+                                    href="../../../webcontent/excel/flicker.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Next click <link href="http://www.statcrunch.com/"
+                                    target="new">here </link>to open StatCrunch in a separate window
+                                and login using your username and password.</p>
+                            <ul>
+                                <li>Click on the link “Open StatCrunch” at the top of the My
+                                    StatCrunch page. </li>
+                                <li>To open the data set select the “My computer” link under Load a
+                                    data set from box on the left side of the page.</li>
+                                <li>Select the "Browse" or “Choose File” (depending on which browser
+                                    you're using and select the data set you downloaded</li>
+                                <li>Scroll to the bottom of the page and click on “Load File”</li>
+                            </ul>
+                            <p> Note that the data are given in both “stacked form” and in the
+                                “unstacked form”. </p>
+                            <p>Now use StatCrunch to create side-by-side boxplots of CFF by eye
+                                color and supplement them with the descriptive statistics of CFF by
+                                eye color. Use the output to check whether the conditions that allow
+                                us to safely use the ANOVA F-test are met. </p>
+                            <p>StatCrunch Instructions:</p>
+                            <p>BoxPlots</p>
+                            <ul>
+                                <li>Choose: Graphics → Boxplot </li>
+                                <li>Select the column variables (eye colors)</li>
+                                <li>Press: Create Graph</li>
+                            </ul>
+                            <p>Descriptive Statistics</p>
+                            <ul>
+                                <li>Choose: Stat → Summary Stats → Columns </li>
+                                <li>Select the column variables (eye colors)</li>
+                                <li>Press: Calculate</li>
+                            </ul>
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To open Minitab with the data in the worksheet, right-click <link
+                                    href="../../../webcontent/minitab/flicker.mtw" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Minitab. Note: a dialog box will likely appear that says
+                                "A copy of the content of this file will be added to the current
+                                project"&#8212;just click "OK."</p>
+                            <p>Note that the data are given in both the "stacked form" (c1-c2) and
+                                in the "unstacked form" (c3-c5).</p>
+                            <p>Now use Minitab to create side-by-side boxplots of CFF by eye color,
+                                and supplement them with the descriptive statistics of CFF by eye
+                                color. Use the output to check whether the conditions that allow us
+                                to safely use the ANOVA F-test are met.</p>
+                            <p>
+                                <em>Minitab Commands</em>
+                            </p>
+                            <p><em>Boxplots: </em>Choose Graph → Boxplot. Select "With Groups," and
+                                click "OK." Under "Graph variables" enter the response variable and
+                                under "Categorical variables..." enter the explanatory variable. (To
+                                have the means marked in the boxplots click "Data View" and check
+                                "Mean symbol"). </p>
+                            <p>
+                                <em>Descriptive Statistics: </em>Choose Stat → Basic Statistics →
+                                Display Descriptive Statistics. Under "Variables." enter the
+                                response, and under "By variable" enter the explanatory. Click
+                                "OK."</p>
+                            <!--<wb:inline idref="u4_m3_anova6_lbd_tutor3"/>-->
+                            <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="641">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6c.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor6c</param>
+                    </flash>
+                -->
+                            <p>
+                                <em>Comment:</em> Note in the output that Minitab chose "blue" as
+                                group 1, "brown" as group 2, and "green" as group 3 (which is not
+                                the same as our choice). Minitab orders the groups in alphabetical
+                                order of the groups' names, and not by the order that the groups
+                                appear in the data. It really does not make a big difference here,
+                                but is something you should be aware of.</p>
+                            <p> </p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2013 and 2016 Instructions</title>
+                            <p>To open the dataset, click <link
+                                    href="../../../webcontent/excel/flicker.xls" target="self"
+                                    >here</link> to download the file to your computer. Then find
+                                the downloaded file and double-click it to open it in Excel. When
+                                Excel opens you may have to enable editing.</p>
+
+                            <p>Note that the data are given in both the "stacked form" (columns 1
+                                and 2) and in the "unstacked form" (columns 3-5).</p>
+
+                            <p>Now use Excel to create side-by-side boxplots of CFF by eye color,
+                                and supplement them with the descriptive statistics of CFF by eye
+                                color. Use the output to check whether the conditions that allow us
+                                to safely use the ANOVA F-test are met.</p>
+                            <p>
+                                <em>Excel Commands</em>
+                            </p>
+                            <p>
+                                <em>Descriptive Statistics:</em>
+                            </p>
+                            <p>First we need to create a table that will list each statistical
+                                measure and the value for each eye color. </p>
+                            <ul>
+                                <li>To create this table, first make the row and column labels: in
+                                    an empty section of your worksheet, pick a cell and type <code
+                                        style="inline">Statistic</code>. Then move one cell to the
+                                    right and type <code style="inline">Blue</code>. Move one cell
+                                    to the right and type <code style="inline">Brown</code>, and
+                                    then another cell to the right and type <code style="inline"
+                                        >Green</code>. Now, in the cell underneath <code
+                                        style="inline">Statistic</code>, type <code style="inline"
+                                        >min</code>. Move down one cell and type <code
+                                        style="inline">Q1</code>, then underneath that <code
+                                        style="inline">Median</code>, then <code style="inline"
+                                        >Q3</code>, then <code style="inline">Max</code>, then <code
+                                        style="inline">St Dev</code>, and finally, <code
+                                        style="inline">n</code>.</li>
+                            </ul>
+                            <p>Now for each statistic, we'll enter the formula to calculate that
+                                statistic and the range of data that corresponds to each eye color.
+                                Here are the formulas you'll need:</p>
+                            <ul>
+                                <li>
+                                    <code style="inline">min: </code>
+                                    <code style="inline">=min([range])</code>
+                                </li>
+                                <li>
+                                    <code style="inline">Q1: </code>
+                                    <code style="inline">=quartile([range],1)</code>
+                                </li>
+                                <li>
+                                    <code style="inline">Median: </code>
+                                    <code style="inline">=median([range])</code>
+                                </li>
+                                <li>
+                                    <code style="inline">Q3: </code>
+                                    <code style="inline">=quartile([range],3)</code>
+                                </li>
+                                <li>
+                                    <code style="inline">Max: </code>
+                                    <code style="inline">=max([range])</code>
+                                </li>
+                                <li>
+                                    <code style="inline">St Dev: </code>
+                                    <code style="inline">=stdev([range])</code>
+                                </li>
+                                <li>
+                                    <code style="inline">n: </code>
+                                    <code style="inline">=count([range])</code>
+                                </li>
+                            </ul>
+                            <p>
+                                <em>Side-by-Side Boxplots:</em>
+                            </p>
+                            <p>Unfortunately, Excel can't create boxplots directly, so we have to
+                                create a column graph and alter it so that we get boxplots. We start
+                                by using our Descriptive Statistics to create a new table that will
+                                be the basis for our column graph:</p>
+                            <ul>
+                                <li>Right below your Descriptive Statistics table, type <code
+                                        style="inline">25th Percentile</code>. Move down one cell
+                                    and type <code style="inline">50th Percentile</code>, then
+                                    underneath that <code style="inline">75th Percentile</code>,
+                                    then <code style="inline">Lower limit</code>, and finally <code
+                                        style="inline">Upper limit</code>.</li>
+                                <li>The <code style="inline">25th Percentile</code> values are the
+                                    same as those for Q1, so select the values for Q1, right-click
+                                    and select <code style="inline">Copy</code>, and then select the
+                                    empty cells in the <code style="inline">25th Percentile</code>
+                                    row and right-click and select <code style="inline">Paste
+                                        Special</code>. In the pop-up window, choose <code
+                                        style="inline">Values</code> and click <code style="inline"
+                                        >OK</code>.</li>
+                                <li>The <code style="inline">50th Percentile</code> values are equal
+                                    to <code style="inline">Median - Q1</code>, so enter the
+                                    necessary formulas to calculate those values from the values in
+                                    your Descriptive Statistics table. For example, if the value for
+                                    Blue Median is in cell M4, and the value for Blue Q1 is in cell
+                                    M3, the correct formula for calculating the 50th Percentile for
+                                    Blue would be <code style="inline">=M4-M3</code>.</li>
+                                <li>The <code style="inline">75th Percentile</code> values are equal
+                                    to <code style="inline">Q3 - Median</code>.</li>
+                                <li>The <code style="inline">Lower limit</code> values are equal to
+                                        <code style="inline">Q1 - min</code>.</li>
+                                <li>The <code style="inline">Upper limit</code> values are equal to
+                                        <code style="inline">Max - Q3</code>.</li>
+                            </ul>
+                            <p>Now we can finally create our boxplots:</p>
+                            <ul>
+                                <li>Highlight the values in the <code style="inline">25th
+                                        Percentile</code>, <code style="inline">50th
+                                        Percentile</code>, and <code style="inline">75th
+                                        Percentile</code> rows, and then choose <code style="inline"
+                                        >Column</code> in the <code style="inline">Charts</code>
+                                    group on the <code style="inline">Insert</code> tab.</li>
+                                <li>In the pull-down menu, choose the second option under <code
+                                        style="inline">2-D Column</code> (labeled <code
+                                        style="inline">Stacked Column</code> if you hover your mouse
+                                    over it).</li>
+                                <li>Excel will create a stacked column graph for you. The idea here
+                                    is that the top two boxes in each column will make up our
+                                    boxplots. We'll add error bars for the min and Max values, and
+                                    simply remove the bottom box.</li>
+                                <li>Click on the top box in one of the columns to select it, and
+                                    then click on the plus (+) symbol to bring up the Chart Elements
+                                    menu options. Click on the <code style="inline">Error Bars
+                                    </code>box to select it, then select the right arrow symbol to
+                                    see the error bars menu. Click on <code style="inline">More
+                                        Options</code> to bring up the <code style="inline">Format
+                                        Error Bars</code> menu.</li>
+
+                                <li>In the pop-up window, choose <code style="inline">Vertical Error
+                                        Bars</code> make sure the direction is set to <code
+                                        style="inline">Both</code> and the End Style is set to Cap.
+                                    Under <code style="inline">Error Amount</code> click Custom and
+                                    then click the <code style="inline">Specify Value button</code>. </li>
+
+                                <li>In the pop-up window, in the <code style="inline">Positive Error
+                                        Value</code> box, enter the range of values in the <code
+                                        style="inline">Upper limit</code> row in the table we
+                                    created (or click and drag to select those values). Click <code
+                                        style="inline">OK</code>.</li>
+
+                                <li>Choose <code style="inline">Custom</code> under <code
+                                        style="inline">Error Amount</code> and then click the <code
+                                        style="inline">Specify Value</code> button.</li>
+                                <li>In the pop-up window, in the <code style="inline">Positive Error
+                                        Value</code> box, enter the range of values in the <code
+                                        style="inline">Upper limit</code> row in the table we
+                                    created (or click and drag to select those values). Click <code
+                                        style="inline">OK</code>.</li>
+                                <li>Now repeat the error bar steps for the <em style="bold">bottom
+                                        box</em> in the columns except choose the <code
+                                        style="inline">Negative Error Value</code> box and enter the
+                                    range of values in the <code style="inline">Lower limit</code>
+                                    row in the table we created (or click and drag to select those
+                                    values). Click <code style="inline">OK</code></li>
+                                <li>Right-click on the top box in one of the columns and choose
+                                        <code style="inline">Format Data Series</code>. In the
+                                    pop-up window, choose the Fill (paint can symbol) on the left,
+                                    and under the Fill menu specify <code style="inline">No
+                                        fill</code>. Under the Border menu specify <code
+                                        style="inline">Solid Line</code>.</li>
+
+
+                                <li>Repeat for the middle box in the columns.</li>
+
+                                <li>Repeat for the bottom box in the columns, except this time
+                                    specify <code style="inline">No fill</code> and <code
+                                        style="inline">No line</code>. This will cause the bottom
+                                    box to simply disappear.</li>
+
+                                <li>Click on the legend and hit the Delete key to remove it.</li>
+                                <li>Click on the horizontal lines in the background of the graph and
+                                    hit the Delete key to remove them.</li>
+                                <li>Finally, right-click on the y-axis, and choose <code
+                                        style="inline">Format Axis</code> from the pop-up menu.
+                                    Under Axis Options next to <code style="inline"
+                                        >Bounds/Minimum</code>
+                                    <code style="inline">20</code> in the text box.</li>
+                            </ul>
+                        </alternative>
+                        <!--  <alternative value="excel2003">
+                        <title>Excel 2003 Instructions</title>
+                        <p>To open Excel with the data in the worksheet, right-click <link
+                                href="../../../webcontent/excel/flicker.xls" target="self"
+                                >here</link> and choose "Save Target As" to download the file to
+                            your computer. Then find the downloaded file and double-click it to open
+                            it in Excel. </p>
+                        <p>Note that the data are given in both the "stacked form" (columns 1 and 2)
+                                and in the "unstacked form" (columns 3-5).</p>
+                        <p>Now use Excel to create side-by-side boxplots of CFF by eye color, and
+                            supplement them with the descriptive statistics of CFF by eye color. Use
+                            the output to check whether the conditions that allow us to safely use
+                            the ANOVA F-test are met.</p>
+                        <p>
+                            <em>Excel Commands</em>
+                        </p>
+                        <p>
+                            <em>Descriptive Statistics:</em>
+                        </p>
+                        <p>First we need to create a table that will list each statistical measure
+                            and the value for each eye color. </p>
+                        <ul>
+                            <li>To create this table, first make the row and column labels: in an
+                                empty section of your worksheet, pick a cell and type <code
+                                    style="inline">Statistic</code>. Then move one cell to the right
+                                and type <code style="inline">Blue</code>. Move one cell to the
+                                right and type <code style="inline">Brown</code>, and then another
+                                cell to the right and type <code style="inline">Green</code>. Now,
+                                in the cell underneath <code style="inline">Statistic</code>, type
+                                    <code style="inline">Q1</code>. Move down one cell and type
+                                    <code style="inline">min</code>, then underneath that <code
+                                    style="inline">Median</code>, then <code style="inline"
+                                    >Max</code>, then <code style="inline">Q3</code>, then <code
+                                    style="inline">St Dev</code>, and finally, <code style="inline"
+                                    >n</code>.</li>
+                        </ul>
+                        <p>Now for each statistic, we'll enter the formula to calculate that
+                            statistic and the range of data that corresponds to each eye color. Here
+                            are the formulas you'll need:</p>
+                        <ul>
+                            <li>
+                                <code style="inline">Q1: </code>
+                                <code style="inline">=quartile([range],1)</code>
+                            </li>
+                            <li>
+                                <code style="inline">min: </code>
+                                <code style="inline">=min([range])</code>
+                            </li>
+                            <li>
+                                <code style="inline">Median: </code>
+                                <code style="inline">=median([range])</code>
+                            </li>
+                            <li>
+                                <code style="inline">Max: </code>
+                                <code style="inline">=max([range])</code>
+                            </li>
+                            <li>
+                                <code style="inline">Q3: </code>
+                                <code style="inline">=quartile([range],3)</code>
+                            </li>
+                            <li>
+                                <code style="inline">St Dev: </code>
+                                <code style="inline">=stdev([range])</code>
+                            </li>
+                            <li>
+                                <code style="inline">n: </code>
+                                <code style="inline">=count([range])</code>
+                            </li>
+                        </ul>
+                        <p>
+                                <em>Side-by-Side Boxplots:</em>
+                            </p>
+                        <ul>
+                            <li>Highlight the table you just created, including the row and column
+                                    labels <code style="inline">but not the rows containing St Dev
+                                        and n</code>, and then select <code style="inline">Insert →
+                                        Chart</code> from the top menu bar. </li>
+                            <li>When the Chart Wizard window opens, select <code style="inline">Line
+                                    Chart</code>, and then click <code style="inline">Next</code>.
+                                In Step 2, make sure <code style="inline">Rows</code> is selected,
+                                and then click <code style="inline">Finish</code>.</li>
+                            <li>What we have now is a line chart, because Excel can't generate
+                                boxplots directly, but we're going to make boxplots from this line
+                                chart. </li>
+                            <li>Right click on any line on the graph and choose <code style="inline"
+                                    >Format Data Series</code> from the pop-up menu. Then select the
+                                    <code style="inline">Options</code> tab and check the boxes next
+                                to <code style="inline">High-low lines</code> and <code
+                                    style="inline">Up/down bars</code> and click <code
+                                    style="inline">OK</code>.</li>
+                            <li>Now to get rid of the lines, right click on each line in the graph
+                                in turn, choose <code style="inline">Format Data Series</code> from
+                                the pop-up menu, select the <code style="inline">Patterns</code> tab
+                                and select <code style="inline">None</code> under <code
+                                    style="inline">Line</code> and then click <code style="inline"
+                                    >OK</code>.</li>
+                        </ul>
+                    </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p>Enter the data for people with blue eyes in L1. </p>
+                            <p>Enter the data for people with brown eyes in L2. </p>
+                            <p>Enter the data for people with green eyes in L3 </p>
+                            <p>Now use your TI graphing calculator to create side-by-side boxplots
+                                of CFF by eye color, and supplement them with the descriptive
+                                statistics of CFF by eye color. Use the output to check whether the
+                                conditions that allow us to safely use the ANOVA F-test are met. </p>
+                            <p><em>Boxplot</em></p>
+                            <ul>
+                                <li>Either clear any equations you may have in your calculator by
+                                    choosing <code style="inline">Y=/CLEAR</code>, or else toggle
+                                    them off by choosing <code style="inline">Y=</code> and then
+                                    pressing the left arrow until <code style="inline">=</code> is
+                                    selected and pressing <code style="inline">ENTER</code>.</li>
+                                <li>Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                                <li>Choose <code style="inline">4:PlotsOff</code>. Hit <code
+                                        style="inline">ENTER</code>. </li>
+                                <li>You should see: <image src="../../webcontent/image504.jpg"
+                                        alt="PlotsOff    Done"/>
+                                </li>
+                                <li>Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                                <li>Choose one of the available plots. For example, choose <code
+                                        style="inline">1:Plot1…Off</code>. </li>
+                                <li>Turn the plot <code style="inline">ON</code> by using arrows to
+                                    highlight the word <code style="inline">ON</code>, then press
+                                        <code style="inline">ENTER</code>. </li>
+                                <li>Choose the <code>Type</code>: The fourth graph is a modified
+                                    boxplot.</li>
+
+                                <li>Choose the correct <code style="inline">Xlist</code>: <ul>
+                                        <li>To access one of the built-in lists, such as L1, press
+                                                <code>2ND/ 1</code>.</li>
+
+                                        <!--    <li>To access a list you named, use the <code style="inline"
+                                                >LIST</code> menu. Press <code style="inline"
+                                                >2nd/LIST/NAMES/</code> and choose the appropriate
+                                            list. </li>-->
+
+                                        <li>To access a list you named, use the <code>LIST</code>
+                                            menu. Press <code>2nd/LIST/NAMES/</code> to choose the
+                                            appropriate list.</li>
+
+                                        <li>Leave <code>Freqlist:</code> blank</li>
+                                        <li>Use the down arrow to high <code>Calculate</code> and
+                                            press <code>ENTER</code>.</li>
+
+                                    </ul></li>
+                                <li>Choose <code style="inline">Freq: 1</code> (the number one). </li>
+                                <li>Choose the <code style="inline">Mark</code> you prefer. </li>
+                                <li>You should see: <image src="../../webcontent/image505.jpg"
+                                        alt="Plot1   Plot2    Plot3
+        On   Off
+        Type: (scatter plot), (line graph), (histogram), (*modified box plot), (box plot), (line graph)
+        Xlist: L_1
+        Freq: 1
+        Mark: box, + , ."
+                                    />
+                                </li>
+                                <li>To view the boxplot, choose <code style="inline">ZOOM/9:
+                                        ZoomStat</code>. </li>
+                                <li>If you want to change the viewing window, choose <code
+                                        style="inline">WINDOW</code> and set <code style="inline"
+                                        >Xmin</code>, <code style="inline">Xmax</code>, <code
+                                        style="inline">Xscl</code> (distance between tick marks on
+                                    x-axis), <code style="inline">Ymin</code>, <code style="inline"
+                                        >Ymax</code>, <code style="inline">Yscl</code> (distance
+                                    between tick marks on y-scale), <code style="inline">Xres</code>
+                                    (leave <code style="inline">Xres</code> at 1). </li>
+                                <li>You can choose <code style="inline">TRACE</code> and then use
+                                    the left/right arrows to display <code style="inline"
+                                        >minX</code>, <code style="inline">Q1</code>, <code
+                                        style="inline">Med</code>, <code style="inline">Q3</code>,
+                                        <code style="inline">maxX</code>. </li>
+                            </ul>
+                            <p><em>Side-by-Side Boxplots</em></p>
+                            <ul>
+                                <li>You can display up to 3 boxplots on one screen by turning on
+                                    three Stat Plots (one for L1, L2, and L3). . Once you’ve got all
+                                    the boxplots turned on, you can <code style="inline"
+                                        >ZOOM/9:ZoomStat</code> to see all boxplots on the same
+                                    screen. </li>
+                                <li>If you have side-by-side boxplots displayed, you can choose
+                                        <code style="inline">TRACE</code>, then use the up/down
+                                    arrows to choose one of the boxplots and the left/right arrows
+                                    to display <code style="inline">minX</code>, <code
+                                        style="inline">Q1</code>, <code style="inline">Med</code>,
+                                        <code style="inline">Q3</code>, <code style="inline"
+                                        >maxX</code>. </li>
+                            </ul>
+                            <p><em>Descriptive Statistics including 5-number summary</em></p>
+                            <ul>
+                                <li>Choose <code style="inline">STAT/CALC/1:1-Var Stats</code>.
+                                    Specify which list the data are in. For example, if the data are
+                                    in L1, you enter <code style="inline">2ND/1</code> to choose L1. <ul>
+                                        <li>Note: If you don’t specify any particular list, the
+                                            default list is L1.</li>
+                                        <li> To access one of the built-in lists, such as L1, press
+                                                <code style="inline">2ND/1</code>.</li>
+                                        <li>To access a list you named, use the <code style="inline"
+                                                >LIST</code> menu. Press <code style="inline"
+                                                >2nd/LIST/NAMES/</code> to choose the appropriate
+                                            list.</li>
+                                    </ul></li>
+                                <li>Press <code style="inline">ENTER</code>.</li>
+                                <li>The calculator will display: <table rowstyle="plain">
+                                        <tr>
+                                            <td><m:math overflow="scroll">
+                                                  <m:mrow>
+                                                  <m:mover>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mo>¯</m:mo>
+                                                  </m:mover>
+                                                  </m:mrow>
+                                                </m:math></td>
+                                            <td>sample mean (this value is also the population mean
+                                                if the data in L1 are population data)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#931;x</td>
+                                            <td>sum of the x-values</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#931;x<sup>2</sup></td>
+                                            <td>sum of the squared x-values</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sx</td>
+                                            <td>sample standard deviation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#963;x</td>
+                                            <td>population standard deviation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>n</td>
+                                            <td>sample size</td>
+                                        </tr>
+                                        <tr>
+                                            <td>minX</td>
+                                            <td>minimum data value</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#8595;Q1</td>
+                                            <td>first quartile (the down arrow indicates to use the
+                                                down arrow to view the remaining statistics) </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Med</td>
+                                            <td>median</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Q3</td>
+                                            <td>third quartile</td>
+                                        </tr>
+                                        <tr>
+                                            <td>maxX</td>
+                                            <td>maximum data value</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </alternative>
+                    </alternatives>
+                </pullout>
+                <wb:inline idref="u4_m3_anova6_lbd_tutor3" purpose="learnbydoing">
+                    <param name="tabPreference"><pref:value preference="statistics.package"
+                        /></param>
+                </wb:inline>
+                <wb:inline idref="u4_m3_anova6_lbd_tutor4" purpose="learnbydoing"/>
+                <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="390">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6d.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor6d</param>
+                </flash>
+            -->
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default>
+                            <pref:value preference="statistics.package"/>
+                        </default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>For the next question, we need to carry out the ANOVA F-test using R.
+                                To do this, we use the <code>aov()</code> command. Similar to the
+                                    <code>lm()</code> command, the <code>aov()</code> command
+                                produces more output than we need, so we will save the output to a
+                                variable name and then use other commands to extract the information
+                                of interest. We choose here a generic name, <code>cff.aov</code>,
+                                but any name would work within the code as long as it is used
+                                throughout.</p>
+                            <ul style="none">
+                                <li><code>cff.aov=aov(cff~color,flicker)</code></li>
+                            </ul>
+                            <p>Now we can extract the ANOVA table from <code>cff.aov</code> using
+                                either <code>summary()</code> or <code>anova()</code>, which both
+                                return the same result.</p>
+                            <ul style="none">
+                                <li><code>summary(cff.aov)</code></li>
+                                <li><code>anova(cff.aov)</code></li>
+                            </ul>
+                            <p><em style="bold">Note:</em> For more advanced analysis of assumptions
+                                for ANOVA, we can use functions such as <code>plot(cff.aov,1)</code>
+                                for residual plots, <code>plot(cff.aov,2)</code> for normal QQ
+                                plots, and <code>residuals(cff.aov)</code> to extract the
+                                residuals.</p>
+                            <!--<p>For the next question you'll need to carry out the ANOVA F-test using R.
+                            To do this, enter the following command:</p>
+                        <code>summary(aov(cff~color,flicker))</code>-->
+                            <!--<wb:inline idref="_u5_m2_lbdtutor6e_r"/>-->
+                            <!--
+                            <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="724">
+                            <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6e_r.xml</param>
+                            <param name="problem_name">_u5_m2_lbdtutor6e_r</param>
+                            </flash>
+                        -->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>For the next question you’ll need to carry out the ANOVA F-test using
+                                StatCrunch. Here are the instructions:</p>
+                            <p>Choose: Stat → ANOVA → One Way</p>
+                            <p>Depending on the format of the data, select one of the following
+                                options:</p>
+                            <ul>
+                                <li>For stacked data: select the compare values in a single column
+                                    option, and then specify the column containing the samples
+                                    (Responses In) and the column containing the population
+                                    identifiers (Factors). </li>
+                                <li>For unstacked data: select the compare selected columns option
+                                    and then select the columns containing the samples. </li>
+                            </ul>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>For the next question you'll need to carry out the ANOVA F-test using
+                                Minitab. Here are the instructions:</p>
+                            <p>
+                                <em>For stacked data: </em>Choose Stats → ANOVA → One-way. Enter the
+                                response and explanatory variables, and click "OK."</p>
+                            <p>
+                                <em>For unstacked data: </em>Choose Stats → ANOVA → One-way
+                                (Unstacked). Enter the columns where the samples are, and click
+                                "OK."</p>
+                            <!--<wb:inline idref="u4_m3_anova6_lbd_tutor5"/>-->
+                            <!--
+                        <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="724">
+                        <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor6e.xml</param>
+                        <param name="problem_name">_u5_m2_lbdtutor6e</param>
+                        </flash>
+                    -->
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2013 and 2016 Instructions</title>
+
+                            <p>For the next question you'll need to carry out the ANOVA F-test using
+                                Excel. Here are the instructions:</p>
+
+                            <p><em>Note:</em>Before you begin check to make sure you have the Excel
+                                Data Analysis Toolpack installed. Under the Data tab you should see
+                                a Data Analysis option. If you do not follow these steps to install
+                                the Data Analysis Toolpack:</p>
+                            <ul>
+
+
+                                <li> Step 1: Click the “File” tab and then click “Options.” The
+                                    Options window will open.</li>
+                                <li>Step 2: Click “Add-Ins.” Add-Ins is listed at the bottom of the
+                                    left-hand column.</li>
+                                <li> Step 3: Click the “Go” button, next to Manage Excel Add-Ins.
+                                    Manage Excel Add-Ins is at the very bottom of the pop up window,
+                                    underneath the list of Add-In options.</li>
+                                <li>Step 4: Check the “Analysis Toolpak” check box.</li>
+                                <li> Step 5: Click “OK.” The Data Analysis Toolpak is now loaded
+                                    into Excel.</li>
+                                <li> Step 6: Click the “Data” tab and then click “Data Analysis” —
+                                    located at the far right of the Toolbar in the Analysis group —
+                                    to access the Toolpak.</li>
+                            </ul>
+
+                            <p>You are now ready to conduct the ANOVA F-test using Excel.</p>
+                            <ul>
+                                <li>Choose <code style="inline">Data Analysis</code> in <code
+                                        style="inline">Data</code> tab. In the pop-up window, choose
+                                        <code style="inline">Anova: Single Factor</code> and click
+                                        <code style="inline">OK</code>.</li>
+                                <li>In the next window, enter the range of input data, including the
+                                    column labels, next to <code style="inline">Input
+                                    Range</code>&#8212;in this case, the range is C1:E9.</li>
+                                <li>Make sure that <code style="inline">Labels in First Row</code>
+                                    is checked, and click <code style="inline">OK</code>.</li>
+                            </ul>
+                        </alternative>
+                        <!--    <alternative value="excel2003">
+                        <title>Excel 2003 Instructions</title>
+                        <p>For the next question you'll need to carry out the ANOVA F-test using
+                            Excel. Here are the instructions:</p>
+                        <ul>
+                            <li>Choose <code style="inline">Tools → Data Analysis</code> from the
+                                    menu bar. In the pop-up window, choose <code style="inline"
+                                        >Anova: Single Factor</code>.</li>
+                            <li>In the next window, enter the range of input data, including the
+                                    column labels, next to <code style="inline">Input
+                                    Range</code>&#8212;in this case, the range is C1:E9.</li>
+                            <li>Make sure that <code style="inline">Labels in First Row</code> is
+                                    checked, and click "OK."</li>
+                        </ul>
+                    </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p><em>ANOVA F Test</em>
+                            </p>
+                            <ul>
+                                <li>TI83: Choose <code style="inline">STAT/TESTS/F:ANOVA</code>
+                                </li>
+                                <li>TI84: Choose <code style="inline">STAT/TESTS/H:ANOVA</code>
+                                </li>
+                                <li>You should see: <image src="../../webcontent/image506.jpg"
+                                        alt="ANOVA("/></li>
+                                <li>Enter the lists, separated by commas. </li>
+                                <li>To access one of the built-in lists, such as L3, press <code
+                                        style="inline">2ND/ 3</code>. </li>
+                                <li>NOTE: The comma key is found over the 7 key. </li>
+                                <li>Close with the right parenthesis, then press <code
+                                        style="inline">ENTER</code>.</li>
+                                <li>You should see: <image src="../../webcontent/image507.jpg"
+                                        alt="ANOVA(L_1, L_2, L_3)"/></li>
+                                <li>Press <code style="inline">ENTER</code>. </li>
+                            </ul>
+                        </alternative>
+                    </alternatives>
+                </pullout>
+                <wb:inline idref="u4_m3_anova6_lbd_tutor5" purpose="learnbydoing">
+                    <param name="tabPreference"><pref:value preference="statistics.package"
+                        /></param>
+                </wb:inline>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

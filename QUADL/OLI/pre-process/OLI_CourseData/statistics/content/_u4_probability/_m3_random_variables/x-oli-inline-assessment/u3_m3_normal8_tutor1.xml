@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal8_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>Recall the example from the last activity:</p>
+      <p>According to the College Board website, the scores on the math part of the SAT (SAT-M) in a recent year had a mean of 507 and standard deviation of 111. Assume that SAT scores follow a normal distribution.</p>
+   </content>
+   <question id="q1">
+      <body>
+         <p>One of the criteria for admission to a certain engineering school is an SAT-M score in the top 2% of scores. How does this translate to an actual SAT-M score? In other words, how high must a student score on the SAT-M in order for his application to be considered? A different way to ask the same question is, What is the 98th percentile of the SAT-M distribution?</p>
+         <p><em>Guidance:</em> Recall that our normal table only works with "less than"
+            probabilities, so we need to rephrase our problem accordingly. Looking for the SAT-M
+            score that 2% of students scored higher than is the same as looking for the SAT-M score
+            that 98% of the students scored lower than.</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We are looking for the value x so that P(X &gt; x) = 0.02. The same value also
+               satisfies P(X &lt; x) = 0.98. This way of posing the problem works best for us,
+               since our table is set up to work with "less than" rather than "greater than." Now we
+               look in the <em style="italic">body</em> of the table for the probability of 0.98 (or the closest
+               thing to it). We can't find 0.98, but we can get pretty close: 0.9798.</p>
+            <p>Looking at the margins, we see that this probability corresponds to a z-score of
+               2.05. This means that in order to be in the top 2% of SAT-M scores (and thus be
+               considered for the engineering school), a student must score more than 2.05 standard
+               deviations above the mean. 2.05 standard deviations above the mean is a score of 507
+               + 2.05(111) = 734.55. Since SAT-M scores are whole numbers, we conclude that in order
+               to be considered for the engineering school, a student must have an SAT-M score of at
+               least 735.</p>
+         </explanation>
+      </part>
+   </question>
+</assessment>

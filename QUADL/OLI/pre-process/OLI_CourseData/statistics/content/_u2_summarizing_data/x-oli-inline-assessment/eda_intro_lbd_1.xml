@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="eda_intro_lbd_1">
+    <title>Tutor</title>
+
+ <content><p>We took a random sample from the 2000 U.S. Census. Here is part of the dataset:</p>
+     <image src="../webcontent/eda_intro_lbd.png"/></content>
+    <question id="q1">        
+        <body><p>Who are the individuals described by this data?</p></body>
+
+        <multiple_choice shuffle="true">
+            <choice value="A">States</choice>
+            <choice value="B">People living in the United States in the year 2000</choice>
+            <choice value="C">People with families in the year 2000</choice>
+
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. State is a variable.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The U.S. Census is completed by people living in the United States.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. People with families are a subset of this sample, but the individuals represent a larger group.</feedback>
+            </response>
+            
+            <hint>Individuals are the people or objects described by the data.</hint>
+        </part>
+    </question>
+    <question id="q2">        
+        <body><p>What type of variable is zipcode?</p></body>
+        
+        <multiple_choice shuffle="true">
+            <choice value="A">Categorical</choice>
+            <choice value="B">Quantitative</choice>
+                        
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Zipcode is a categorical variable because it categorizes individuals by geographic location.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A quantitative variable has numerical values that can be averaged. A zip code is a number, but it does not make sense to average zip codes.</feedback>
+            </response>
+            
+            <hint>A categorical variable puts individuals into categories. A quantitative variable is a numerical measurement that can be averaged.</hint>
+        </part>
+    </question>
+    <question id="q3">        
+        <body><p>What type of variable is Family_Size?</p></body>
+        
+        <multiple_choice shuffle="true">
+            <choice value="A">Categorical</choice>
+            <choice value="B">Quantitative</choice>
+            
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Family_Size is a variable with numerical values that can be averaged. Since Family_Size is a count rather than a grouping (0–2 kids, 3–4 kids, more than 4 kids), it is quantitative.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Family_Size is a variable with numerical values that can be averaged.</feedback>
+            </response>
+
+            <hint>A categorical variable puts individuals into categories. A quantitative variable is a numerical measurement that can be averaged.</hint>
+        </part>
+    </question>
+    <question id="q4">        
+        <body><p>What type of variable is Annual_income?</p></body>
+        
+        <multiple_choice shuffle="true">
+            <choice value="A">Categorical</choice>
+            <choice value="B">Quantitative</choice>
+            
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Annual_income is a variable with numerical values that can be averaged. Since Annual_income is reported as numerical values rather than a grouping (less than $1,000, $1000–$10,000, $10,001–$20,000, more than $20,000), it is quantitative.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Annual_income is a variable with numerical values that can be averaged.</feedback>
+            </response>
+            
+            <hint>A categorical variable puts individuals into categories. A quantitative variable is a numerical measurement that can be averaged.</hint>
+        </part>
+    </question>
+</assessment>

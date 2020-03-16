@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd11">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you hands-on practice in following up a test for
+            the population proportion p in which H<sub>o</sub> has been rejected with a confidence
+            interval, and getting a sense of how the confidence interval is a natural and
+            informative supplement to the test in these cases.</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>Recall from a previous activity the results of a study on the safety of airplane drinking
+            water that was conducted by the U.S. Environmental Protection Agency (EPA). A study
+            found that out of a random sample of 316 airplanes tested, 40 had coliform bacteria in
+            the drinking water drawn from restrooms and kitchens. As a benchmark comparison, in 2003
+            the EPA found that about 3.5% of the U.S. population have coliform bacteria-infected
+            drinking water. The question of interest is whether, based on the results of this study,
+            we can conclude that drinking water on airplanes is more contaminated than drinking
+            water in general. Let p be the proportion of contaminated drinking water on
+            airplanes.</p>
+        <p>In a previous activity we tested H<sub>o</sub>: p = .035 vs. H<sub>a</sub>: p &gt; .035
+            and found that the data provided extremely strong evidence to reject H<sub>o</sub> and
+            conclude that the proportion of contaminated drinking water in airplanes is larger than
+            the proportion of contaminated drinking water in general (which is .035). </p>
+        <p>Now that we've concluded that, all we know about p is that we have very strong evidence
+            that it is higher than .035. However, we have no sense of its magnitude. It will make
+            sense to follow up the test by estimating p with a 95% confidence interval.</p>
+        <wb:inline idref="u4_m2_testprop13_lbd_tutor1"
+            purpose="learnbydoing"/>
+        
+        <!-- RS 08-02-10 Commented out until we can figure out how to handle the minitab-only option
+            <pullout><alternatives group="statistics.package">
+            <default><pref:value preference="statistics.package"/></default>
+            <alternative value="excel">
+                <title>Excel 2007 Instructions</title>
+                <p>
+                    <!-\- There is no excel option here, because the point of the minitab exercise is to show how to calculate the CI in Minitab rather than by hand.  If you do it in Excel, you can only do it by hand in the first place. -\->
+                </p>
+            </alternative>
+            <alternative value="minitab">
+                <title>Minitab Instructions</title>
+                <p>
+                    <em>Comment: </em>The confidence interval for the population proportion p will
+                    appear in the Minitab output only in case the two-sided alternative (not equal)
+                    is selected. Therefore, if following a one sided-test where Ho has been rejected
+                    you would like to estimate p with a 95% confidence interval (as is the case
+                    here), you'll need to ask Minitab to carry out the two-sided test (even though
+                    it is of no interest to you as a test) just in order to retrieve that confidence
+                    interval from the output.</p>
+                <ul>
+                    <li>Choose: Stat -&gt; Basic statistics -&gt; 1 Proportion</li>
+                    <li>Choose "Summarized data" (which is the case here) and <ul>
+                            <li>Next to "Number of trials" enter the sample size</li>
+                            <li>Next to "Number of events" enter the number of "successes" in the
+                                sample.</li>
+                        </ul>
+                    </li>
+                    <li>Click "Option" and make sure the two-sided test (not equal) is chosen, and
+                        check: "Use test....normal distribution". Note that next to "Test
+                        proportion" you have 0.5, which is actually not the null value in this
+                        example. However, since all we are interested in is the CI we really do not
+                        need to change the 0.5 to 0.35.</li>
+                    <li>Click OK twice.</li>
+                </ul>
+                <wb:inline
+                    idref="u4_m2_testprop13_lbd_tutor2" purpose="learnbydoing"/>
+                <!-\-
+                        <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="501">
+                            <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor11b.xml</param>
+                            <param name="problem_name">_u5_m1_lbdtutor11b</param>
+                        </flash>
+                    -\->
+            </alternative>
+            <alternative value="r">
+                <title>R Instructions</title>
+                <p>
+                    <!-\- There is no r option here. -\->
+                </p>
+            </alternative>
+            <alternative value="ti">
+                <title>TI Instructions</title>
+                <p></p>
+            </alternative>
+        </alternatives></pullout>-->
+    </body>
+</workbook_page>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="represent_samp_size_2_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_represent_samp_size_2" select="single">
+        <!-- LO: represent_samp_size -->
+        <body>
+            <p>Suppose that a candy company makes a candy bar whose weight is supposed to be 50
+                grams, but in fact, the weight varies from bar to bar according to a normal
+                distribution with mean μ = 50 grams and standard deviation σ = 2 grams. </p>
+            <p>If the company sells the candy bars in packs of 4 bars, what can we say about the
+                likelihood that the <em style="italic">average </em>weight of the bars in a randomly
+                selected pack is 4 or more grams <em>lighter</em> than advertised? </p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is no way to evaluate this likelihood, since the sample size (n
+                = 4) is too small. </choice>
+            <choice value="B">There is about a 16% chance of this occurring. </choice>
+            <choice value="C">There is about a 5% chance of this occurring. </choice>
+            <choice value="D">There is about a 2.5% chance of this occurring. </choice>
+            <choice value="E">It is extremely unlikely for this to occur; the probability is very
+                close to 0. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The sampling distribution of x-bar is normally distributed
+                    regardless of sample size and the sampling distribution will have a mean μ and
+                    standard deviation dependent on the sample size.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The question is asking for P(X̄ ≤ 46). You should be using
+                    the sampling distribution of x-bar to find the requested probability.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The question is asking for P(X̄ ≤ 46). You should be using
+                    the sampling distribution of x-bar to find the requested probability.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The question is asking for P(X̄ ≤ 46). You should be using
+                    the sampling distribution of x-bar to find the requested probability.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Here we need to find the likelihood that the average weight of 4
+                    bars is 4 grams or more below the advertised weight of 50 grams. In other words,
+                    we need to find the likelihood that x-bar is 46 grams or less: P(X̄ ≤ 46).
+                    The sampling distribution of x-bar is normal with the mean = 50 grams and the
+                    standard deviation = 1 gram. The z-score of 46 is then −4, and therefore
+                    P(X̄ ≤ 46) = P(Z &lt; −4) ≈ 0. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_represent_samp_size_2" select="single">
+        <!-- LO: represent_samp_size -->
+        <body>
+            <p>Suppose that a candy company packages a bag of jelly beans whose weight is supposed
+                to be 30 grams, but in fact, the weight varies from bag to bag according to a normal
+                distribution with mean μ = 30 grams and standard deviation σ = 3 grams.</p>
+            <p>If the company sells the jelly beans in packs of 9 bags, what can we say about the
+                likelihood that the average weight of the bags in a randomly selected pack is 2 or
+                more grams lighter than advertised?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">There is no way to evaluate this likelihood, since the sample size (n
+                = 9) is too small.</choice>
+            <choice value="B">There is about a 16% chance of this occurring. </choice>
+            <choice value="C">There is about a 5% chance of this occurring. </choice>
+            <choice value="D">There is about a 2.5% chance of this occurring. </choice>
+            <choice value="E">It is extremely unlikely for this to occur; the probability is very
+                close to 0. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The distribution of bag weight is normally distributed so the
+                    sample size does not need to be large for the distribution of the sample mean to
+                    be normal. Determine the mean and standard deviation for the sampling
+                    distribution of x̄ and use this information to find the requested
+                    probability.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The question is asking for P(x̄ ≤ 28). You should be
+                    using the sampling distribution of x̄ to find the requested probability.
+                    Start by calculating the standard deviation of x̄ as σ/√(n).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The question is asking for P(x̄ ≤ 28). You should be
+                    using the sampling distribution of x̄ to find the requested probability.
+                    Start by calculating the standard deviation of x̄ as σ/√(n).</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The question is asking for P(x̄ ≤ 28). The
+                    distribution of x-bar is normal with a mean = 30g and standard deviation = 3/√(9) = 1. So P(x̄ ≤ 28) = P(z ≤ 2) = 0.025, so there is about a
+                    2.5% chance that the mean bag weight will be less than 28g.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The question is asking for P(x̄ ≤ 28). You should be
+                    using the sampling distribution of x̄ to find the requested probability.
+                    Start by calculating the standard deviation of x̄ as σ/√(n).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

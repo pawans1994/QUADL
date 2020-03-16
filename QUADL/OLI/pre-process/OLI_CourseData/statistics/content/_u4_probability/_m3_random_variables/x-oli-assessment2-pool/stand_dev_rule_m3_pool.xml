@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="stand_dev_rule_m3_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_stand_dev_rule_m3">
+        <body>
+            <p>Suppose the scores on an exam are normally distributed with a mean μ = 75 points, and
+                standard deviation σ = 8 points.</p>
+            <p>The instructor wanted to "pass" anyone who scored above 69. What proportion of exams
+                will have passing scores?</p>
+            <link href="../webcontent/normal_table.pdf" target="self">Click here to download the normal table</link>
+                
+                    
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.1587</choice>
+            <choice value="B">0.75</choice>
+            <choice value="C">0.2266</choice>
+            <choice value="D">0.7734</choice>
+            <choice value="E">−0.75</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the proportion of exams that are below one standard
+                    deviation from the mean (exam score = 67, z = −1.00). You want to find the
+                    proportion of exams that have a score above 69 points. This is equivalent to
+                    finding the probability that a given exam has a score of at least 69
+                    points.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It appears you switched μ and the sample mean in calculating
+                    the z-score for an exam score of 69 (it should be 69 − 75 instead of 75 − 69).
+                    Additionally, this is a z-score, but you want to find the proportion of exams
+                    that have a score above 69 points. This is equivalent to finding the probability
+                    that a given exam has a score of at least 69 points.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems that you have found the proportion of exams that have
+                    a score <em style="italic">below</em> 69 points. You want to find the proportion
+                    of exams that have scores <em style="italic">above</em> 69 points. </feedback>
+            </response>
+            <response match="D" score="10">
+
+                <feedback>Correct. Let the random variable <em style="bold">X</em> represent the
+                    score on the exam. We are given that <em style="bold">X</em> is normal with
+                    a mean of 75 and standard deviation of 8, and we need to find P(X &lt; 69).
+                    <image style="block" src="../webcontent/6_formula4.gif" /></feedback>
+
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The z-score for 69 points is −0.75. However, this is not the
+                    proportion of exams that passed. Remember that a proportion can’t be negative.
+                    You should find P(Z &gt; −0.75)</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <numeric id="q2_stand_dev_rule_m3">
+
+        <body><p>Suppose the time to complete a 200-meter backstroke swim for female competitive
+
+                swimmers is normally distributed with a mean μ = 141 seconds and a standard
+                deviation σ = 7 seconds. Suppose that to qualify for the Nationals, a woman must
+                complete the 200-meter backstroke in less than 128 seconds. What proportion of
+                competitive female swimmers will qualify for the Nationals? Give your answer to four
+                (4) decimal places.</p>
+
+            <link href="../webcontent/normal_table.pdf" target="self">Click here to download the normal table</link>
+
+            <p><input_ref input="A" /></p>
+            
+            
+        </body>
+
+        <input labels="false" shuffle="false">
+            <choice value="A" />
+
+
+        </input>
+
+
+
+        <part>
+            <response input="A" match="0.0314" score="10">
+                <feedback>Correct. Let X represent the completion time for a 200-meter backstroke.
+                    We are given that X is normal with μ = 141 and σ = 7 and are asked to find P(X
+                    &lt; 128) = P( z &lt; (128 − 141)/7 ) = P(Z &lt; −1.86). Looking up this z-score
+                    on the standard normal cumulative probability table gives us 0.0314.</feedback>
+            </response>
+
+            <response input="A" match="0.9686" score="0">
+                <feedback>Incorrect. It appears that you calculated the probability of completing a
+                    200-meter backstroke in more than 128 seconds, P(X &gt; 128). You need to
+                    calculate the probability of completing the 200-meter backstroke in less than
+                    128 seconds, P(X &lt; 128).</feedback>
+            </response>
+
+            <response input="A" match="*" score="0">
+                <feedback>Incorrect. Let X represent the completion time for a 200-meter backstroke.
+                    We are given that X is normal with μ = 141 and σ = 7 and asked to find P(X &lt;
+                    128). You must first calculate the z-score for X = 128 and then use the standard
+                    normal cumulative probability table to find the proportion less than this
+                    z-score.</feedback>
+            </response>
+
+        </part>
+
+    </numeric>
+
+
+
+</pool>

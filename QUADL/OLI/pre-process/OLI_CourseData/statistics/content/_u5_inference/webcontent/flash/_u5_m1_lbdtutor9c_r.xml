@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">Now that we have established that it is safe to use the z-test for p for our problem, carry out the test using R. Paste the output in window below. </mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">Here is the R output:
+
+&gt; p = prop.test(40,316,0.035,alternative="greater",conf.level=0.95, correct=FALSE); p
+
+       1-sample proportions test without continuity correction
+        
+data:  40 out of 316, null probability 0.035
+X-squared = 78.472, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: true p is greater than 0.035
+95 percent confidence interval:
+ 0.09895287 1.00000000
+sample estimates:
+        p
+0.1265823
+
+&gt; z = sqrt(p$statistic); z
+X-squared
+ 8.858441
+ 
+A lot of information is returned; let's review it item by item. The data we entered is echoed back: we have a random sample of 316 airplanes, out of which 40 were found to have contaminated water. The null hypothesis was that the proportion of planes with contaminated water is 0.035.  The chi-squared statistic for the test was 78.472 with one degree of freedom. The most important result is next: the p-value of the test was 2.2e-16, which is essentially 0. The alternate hypothesis for our test was that the proportion of planes with contaminated water was greater than 0.035.</mattext>
+</material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

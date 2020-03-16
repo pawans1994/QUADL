@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_binomial4_openfree">
+    <head>
+        <title>Binomial Random Variables (4 of 4)</title>
+        <objref idref="fit_binomial_model"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Mean and Standard Deviation of the Binomial Random Variable</title>
+            <body>
+                <p>Now that we understand how to find probabilities associated with a random
+                    variable X which is binomial, using either its probability distribution formula
+                    or software, we are ready to talk about the mean and standard deviation of a
+                    binomial random variable. Let's start with an example:</p>
+                <example>
+                    <title>Blood Type B&#8212;Mean</title>
+
+                    <p>Overall, the proportion of people with blood type B is .1. In other words,
+                        roughly 10% of the population has blood type B.</p>
+                    <p>Suppose we sample 120 people at random. On average, how many would you expect
+                        to have blood type B? </p>
+                    <p>The answer, 12, seems obvious; automatically, you'd multiply the number of
+                        people, 120, by the probability of blood type B, .1. This suggests the
+                        general formula for finding the mean of a binomial random variable:</p>
+                </example>
+                <p>
+                    <em>Claim:</em>
+                </p>
+                <p>If X is binomial with parameters n and p, then</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                    </m:math>
+                </p>
+                <p>Although the formula for mean is quite intuitive, it is not at all obvious what
+                    the variance and standard deviation should be. It turns out that:</p>
+                <p>
+                    <em>Claim:</em>
+                </p>
+                <p>If X is binomial with parameters n and p, then</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                        <m:mo>=</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>-</m:mo>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>;</m:mo>
+                        <m:mi/>
+                        <m:msub>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mi>p</m:mi>
+                                <m:mo>(</m:mo>
+                                <m:mn>1</m:mn>
+                                <m:mo>-</m:mo>
+                                <m:mi>p</m:mi>
+                                <m:mo>)</m:mo>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math>
+                </p>
+                <p>For those who are interested, click the button below to see how these formulas
+                    were derived.</p>
+                <activity idref="binomial_formulas" purpose="learnmore"/>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>The binomial mean and variance are special cases of our general formulas for the
+                    mean and variance of any random variable.</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>+</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:munderover>
+                            <m:mo>∑</m:mo>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:munderover>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math>
+                </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                        <m:mo>=</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msup>
+                            <m:mo>)</m:mo>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msup>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msup>
+                            <m:mo>)</m:mo>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msup>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>+</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mo>+</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msup>
+                            <m:mo>)</m:mo>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msup>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math>
+                </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mo>=</m:mo>
+                        <m:munderover>
+                            <m:mo>∑</m:mo>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:munderover>
+                        <m:mo>(</m:mo>
+                        <m:msub>
+                            <m:mi>x</m:mi>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>-</m:mo>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:msup>
+                            <m:mo>)</m:mo>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msup>
+                        <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mrow>
+                                <m:mi>i</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math>
+                </p>
+                <p>Clearly it is much simpler to use the "shortcut" formulas</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                        <m:mo>=</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>-</m:mo>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>;</m:mo>
+                        <m:mi/>
+                        <m:msub>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mi>p</m:mi>
+                                <m:mo>(</m:mo>
+                                <m:mn>1</m:mn>
+                                <m:mo>-</m:mo>
+                                <m:mi>p</m:mi>
+                                <m:mo>)</m:mo>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math> than it would be to calculate the mean and variance or standard
+                    deviation from scratch.</p>
+                <example>
+                    <title>Blood Type B&#8212;Standard Deviation</title>
+
+                    <p>Suppose we sample 120 people at random. The number with blood type B should
+                        be about 12, give or take how many? In other words, what is the standard
+                        deviation of the number X who have blood type B? </p>
+                    <p>Since n = 120 and p = .1,</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:msubsup>
+                                <m:mi>σ</m:mi>
+                                <m:mrow>
+                                    <m:mi>X</m:mi>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mn>2</m:mn>
+                                </m:mrow>
+                            </m:msubsup>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>(</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>8</m:mn>
+                            <m:mo>;</m:mo>
+                            <m:mi/>
+                            <m:msub>
+                                <m:mi>σ</m:mi>
+                                <m:mrow>
+                                    <m:mi>X</m:mi>
+                                </m:mrow>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>8</m:mn>
+                                </m:mrow>
+                            </m:msqrt>
+                            <m:mo>≈</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>3</m:mn>
+                        </m:math>
+                    </p>
+                    <p>In a random sample of 120 people, we should expect there to be about 12 with
+                        blood type B, give or take about 3.3.</p>
+                </example>
+            </body>
+        </section>
+        <!--<activity idref="_u4_m3_dig10" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>A Gallup Poll in May 2004 estimated that roughly 70% of U.S. adults are in favor
+                    of the death penalty for a person convicted of murder. A random sample of 750
+                    U.S. adults is chosen. Let X be the number of adults (out of 750) who favor the
+                    death penalty.</p>
+                <wb:inline idref="u3_m3_binomial4_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u3_m3_binomial4_tutor2" purpose="didigetthis"/>
+            </body>
+        </section>
+
+
+        <section>
+            <title>Learn By Doing</title>
+            <body>
+
+                <!--  <p>Before we move on to continuous random variables, let's investigate the shape of
+                    binomial distributions. Click <link
+                        href="http://www.stat.tamu.edu/~west/applets/binomialdemo1.html"
+                        target="new">here</link> to launch an applet in a new window. Using this
+                    applet, answer the following questions:</p>-->
+                <p>Before we move on to continuous random variables, let's investigate the shape of
+                    binomial distributions. Using the applet below we will see that for different
+                    values of n and p, binomial distributions can be symmetric, skewed right or
+                    skewed left. </p>
+
+                <iframe
+                    src="../../../webcontent/html_activities/binomial_random_var/binomialRVs.html"
+                    height="700" width="600"/>
+
+
+                <wb:inline idref="u3_m3_binomial4_tutor3" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m3_binomial4_tutor4" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m3_binomial4_tutor5" purpose="learnbydoing"/>
+            </body>
+        </section>
+
+        <!-- <section>
+        <title>Checkpoint</title>
+        <body>
+            <p>This checkpoint will test your understanding of the material you have learned thus far in this module.</p>
+            <p>
+                
+                    
+            </p>
+            <activity idref="_u4_m3_checkpoint3" purpose="checkpoint"/>
+        </body>
+    </section>-->
+
+    </body>
+</workbook_page>

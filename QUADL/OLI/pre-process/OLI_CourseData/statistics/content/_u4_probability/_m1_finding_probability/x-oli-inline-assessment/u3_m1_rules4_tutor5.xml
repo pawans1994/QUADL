@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author version 1.1-->
+<assessment id="u3_m1_rules4_tutor5">
+	<title>Tutor</title>
+	
+	
+		<question id="q1">
+			<!--LO: Apply probability rules in order to find the likelihood of an event.Sub-objective: rule4        Probability rule 4     -->
+			<body>
+				<p>The probabilities in this table were calculated from data describing the highest
+					level of educational attainment in 2005 for U.S. adults 25 years old or older.
+					(Source: U.S. Census Bureau, <em style="italic">Current Population Survey</em>, March 2005)</p>
+				<image src="../webcontent/u3_m1_rules4_tutor5.png" alt="table of probability of highest level of education attained"/>
+				
+				<p>What is the probability that a randomly selected U.S. adult in this age category
+					has not graduated from high school?</p>
+			</body>
+			<multiple_choice shuffle="false">
+				<choice value="A">0.085</choice>
+				<choice value="B">0.148</choice>
+				<choice value="C">It is impossible to tell since the events “no high school” and
+					“some high school” are not disjoint.</choice>
+			</multiple_choice>
+			<part>
+				<response match="A" score="0">
+					<feedback>Incorrect. 0.085 is the probability that a randomly selected
+						adult attended high school but did not graduate. The event “has not
+						graduated from high school” is composed of two outcomes from the table.
+					</feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback>Correct. P(has not graduated from high school) = P(“no high school”
+						or “some high school”) = 0.063 + 0.085 = 0.148. We can add these
+						probabilities since the events “no high school” and “some high school” are
+						disjoint. These events are disjoint because the table describes the highest
+						level of educational attainment for an individual.</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Incorrect. The events “no high school” and “some high school”
+						are disjoint because the table describes the <em style="italic">highest</em> level of educational
+						attainment. </feedback>
+				</response>
+			</part>
+		</question>
+	
+</assessment>

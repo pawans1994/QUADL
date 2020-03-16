@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="deviation1">
+    <head>
+        <title>Standard Deviation (1 of 3)</title>
+        <objref idref="relate_center_and_spread"/>
+    </head>
+    <body>
+      
+        <section>
+            <title>Introduction</title>
+            <body>
+                <p>So far, we have introduced two measures of spread; the range (covered by all the
+                    data) and the inter-quartile range (IQR), which looks at the range covered by
+                    the middle 50% of the distribution. We also noted that the IQR should be paired
+                    as a measure of spread with the median as a measure of center. We now move on to
+                    another measure of spread, the <em>standard deviation</em>, which quantifies the
+                    spread of a distribution in a completely different way.</p>
+            </body>
+        </section>
+        <section>
+            <title>Idea</title>
+            <body>
+                <p>The idea behind the standard deviation is to quantify the spread of a
+                    distribution by measuring how far the observations are from their mean, <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>. The standard deviation gives the average (or typical distance)
+                    between a data point and the mean, <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>.</p>
+            </body>
+        </section>
+        <section>
+            <title>Notation</title>
+            <body>
+                <p>There are many notations for the standard deviation: SD, s, Sd, StDev. Here,
+                    we'll use <em>SD</em> as an abbreviation for standard deviation, and use
+                        <em>s</em> as the symbol.</p>
+
+            </body>
+        </section>
+        <section>
+            <title>Calculation</title>
+            <body>
+                <p>In order to get a better understanding of the standard deviation, it would be
+                    useful to see an example of how it is calculated. In practice, we will use a
+                    computer to do the calculation.</p>
+                <example>
+                    <title>Video Store Customers</title>
+                    <p>The following are the number of customers who entered a video store in 8
+                        consecutive hours:
+                            <!--:WARNING: The element stats:data is no longer supported.--><!--This instance of the element has been converted to a pullout.--><formula
+                            style="block">7, 9, 5, 13, 3, 11, 15, 9</formula>
+                    </p>
+                    <p>To find the standard deviation of the number of hourly customers:</p>
+                    <ol>
+                        <li>Find the mean, <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>x</m:mi>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:math> of your data: <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mfrac>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>7</m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn>9</m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn>5</m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mtext> . . . </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn>9</m:mn>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                        <m:mn>8</m:mn>
+                                    </m:mfrac>
+                                    <m:mtext> </m:mtext>
+                                    <m:mspace width="0.3em"/>
+                                    <m:mo>=</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mspace width="0.3em"/>
+                                    <m:mn>9</m:mn>
+                                </m:mrow>
+                            </m:math>
+                        </li>
+                        <li>Find the deviations from the mean: the difference between each
+                            observation and the mean <p>
+                                <formula style="block">(7 - 9), (9 - 9), (5 - 9), (13 - 9), (3 - 9),
+                                    (11 - 9), (15 - 9), (9 - 9)</formula>
+                            </p>
+                            <p>
+                                <formula style="block"> -2, 0, -4, 4, -6, 2, 6, 0</formula>
+                            </p>Since the standard deviation is the average (typical) distance
+                            between the data points and their mean, it would make sense to average
+                            the deviations we got. Note, however, that the sum of the deviations
+                            from the mean, <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>x</m:mi>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:math> is 0 (add them up and see for yourself). This is always the
+                            case, and is the reason why we have to do a more complicated calculation
+                            to determine the standard deviation: </li>
+                        <li>Square each of the deviations: <p>The first few are </p>
+                            <formula style="block">(-2)<sup>2</sup> = <em>4</em>, (0)<sup>2</sup> =
+                                    <em>0</em>, (-4)<sup>2</sup> = <em>16</em>, and the rest are
+                                    <em>16, 36, 4, 36, 0.</em>
+                            </formula><p/>
+                        </li>
+                        <li>Average the square deviations by adding them up, and dividing by n - 1,
+                            (one less than the sample size):<p/>
+                            <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mfrac>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>4 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 0 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 16 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 16 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 36 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 4 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mn> 36 </m:mn>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mo>+</m:mo>
+                                                <m:mtext> </m:mtext>
+                                                <m:mspace width="0.3em"/>
+                                                <m:mn> 0</m:mn>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                        <m:mrow>
+                                            <m:mo>(</m:mo>
+                                            <m:mn>8 </m:mn>
+                                            <m:mtext> </m:mtext>
+                                            <m:mspace width="0.3em"/>
+                                            <m:mo>−</m:mo>
+                                            <m:mtext> </m:mtext>
+                                            <m:mspace width="0.3em"/>
+                                            <m:mn> 1</m:mn>
+                                            <m:mo>)</m:mo>
+                                        </m:mrow>
+                                    </m:mfrac>
+                                    <m:mtext> </m:mtext>
+                                    <m:mo>=</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mfrac>
+                                        <m:mn>112</m:mn>
+                                        <m:mn>7</m:mn>
+                                    </m:mfrac>
+                                    <m:mtext> </m:mtext>
+                                    <m:mspace width="0.3em"/>
+                                    <m:mo>=</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mspace width="0.3em"/>
+                                    <m:mn>16</m:mn>
+                                </m:mrow>
+                            </m:math>
+                            <ul>
+                                <li><p>the reason why we "sort of" average the square deviations
+                                        (divide by n - 1) rather than take the actual average
+                                        (divide by n) is beyond the scope of the course at this
+                                        point, but will be addressed later.</p></li>
+                                <li><p>This average of the squared deviations is called the <em
+                                            style="bold">variance</em> of the data.</p></li>
+
+                            </ul>
+                            <!--   <em style="bold">Why is variance important?</em>
+                            <p><em style="bold">Variance is an important measure of spread, since it
+                                    is used in the Analysis of Variance (ANOVA), a hypothesis
+                                    testing technique that is used to analyze more than two means.
+                                </em></p> -->
+                        </li>
+
+
+                        <li>
+                            <p>The SD of the data is the square root of the variance: <m:math
+                                    overflow="scroll">
+                                    <m:mrow>
+                                        <m:mi>SD</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>=</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:msqrt>
+                                            <m:mn>16</m:mn>
+                                        </m:msqrt>
+                                        <m:mtext> </m:mtext>
+                                        <m:mo>=</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>4</m:mn>
+                                    </m:mrow>
+                                </m:math>
+                            </p>
+                            <ul>
+                                <li>Why do we take the square root? Note that 16 is an average of
+                                    the squared deviations, and therefore has different units of
+                                    measurement. In this case 16 is measured in "squared customers,"
+                                    which obviously cannot be interpreted. We therefore take the
+                                    square root in order to compensate for the fact that we squared
+                                    our deviations, and in order to go back to the original unit of
+                                    measurement.</li>
+                            </ul>
+                            <p>Recall that the average number of customers who enter the store in an
+                                hour is 9. The interpretation of SD = 4 is that on average, the
+                                actual number of customers that enter the store each hour is 4 away
+                                from 9.</p>
+                        </li>
+                    </ol>
+                </example>
+                <p><em style="bold">Comment:</em></p>
+                <p>The importance of the numerical figure that we found in #4 above called the
+                    variance (=16 in our example) will be discussed much later in the course when we
+                    get to the inference part.</p>
+                <activity idref="deviation1lbd" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <section>
+            <title>Properties of the Standard Deviation</title>
+            <body>
+                <ol>
+                    <li><p>It should be clear from the discussion thus far that the SD should be
+                            paired as a measure of spread with the mean as a measure of
+                        center.</p></li>
+                    <li><p>Note that the only way, mathematically, in which the SD = 0, is when all
+                            the observations have the same value (Ex: 5, 5, 5, ... , 5), in which
+                            case, the deviations from the mean (which is also 5) are all 0. This is
+                            intuitive, since if all the data points have the same value, we have no
+                            variability (spread) in the data, and expect the measure of spread (like
+                            the SD) to be 0. Indeed, in this case, not only is the SD equal to 0,
+                            but the range and the IQR are also equal to 0. Do you understand
+                            why?</p></li>
+                    <li><p>Like the mean, the SD is strongly influenced by outliers in the data.
+                            Consider the example concerning video store customers: 3, 5, 7, 9, 9,
+                            11, 13, 15 (data ordered). If the largest observation was wrongly
+                            recorded as 150, then the average would jump up to <m:math
+                                overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>x</m:mi>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                    <m:mtext> </m:mtext>
+                                    <m:mo>=</m:mo>
+                                    <m:mtext> </m:mtext>
+                                    <m:mn>25</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>9</m:mn>
+                                </m:mrow>
+                            </m:math>, and the standard deviation would jump up to SD = 50.3. Note
+                            that in this simple example, it is easy to see that while the standard
+                            deviation is strongly influenced by outliers, the IQR is not. The IQR
+                            would be the same in both cases, since, like the median, the calculation
+                            of the quartiles depends only on the order of the data rather than the
+                            actual values.</p></li>
+                </ol>
+                <p>The last comment leads to the following very important conclusion:</p>
+            </body>
+        </section>
+        <section>
+            <title>Choosing Numerical Summaries</title>
+            <body>
+                <p>Use <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> (the mean) and the standard deviation as measures of center and spread
+                        <?oxy_comment_start author="mmyers" timestamp="20101019T180553-0400" comment="use italics for emphasis rather than bold"?><em>only</em><?oxy_comment_end?>
+                    for reasonably symmetric distributions with no outliers.</p>
+                <p>Use the five-number summary (which gives the median, IQR and range) for all other
+                    cases.</p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

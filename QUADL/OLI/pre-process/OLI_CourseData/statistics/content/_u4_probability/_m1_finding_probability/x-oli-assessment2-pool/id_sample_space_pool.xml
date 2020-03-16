@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="id_sample_space_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_id_sample_space">
+        <!--LO:Determine the sample space of a given random experiment.Sub-objective: samplespace    Identifying sample space  -->
+        <body>
+            <p>A person in a casino decides to play blackjack until he wins a game, but he will not
+                play more than 3 games. Let W denote a win and L denote a loss. What is the sample
+                space for this random experiment?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">S = {WWW, WWL, WLW, , WLL, LWW, LWL, LLW, LLL}</choice>
+            <choice value="B">S = {W, LW, LLW}</choice>
+            <choice value="C">S = {W, LW, LLW, LLL}</choice>
+            <choice value="D">S = {W, WW, WWW}</choice>
+            <choice value="E">S = {W, WL, WWL, WWW}</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The person stops playing when he wins or if he plays three
+                    games without winning. So not all of the options in this set are outcomes for
+                    this experiment (for example WWW is not possible) and other possibilities are
+                    missing (for example W).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. One option is missing. The person could also lose all 3
+                    games.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The person stops playing when he wins or if he plays three games
+                    without winning.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The person stops playing when he wins a game, so WW and WWW are
+                    not outcomes for this random experiment.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The person stops playing when he wins a game, so W is the only
+                    outcome in this set that comes from this random experiment.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_id_sample_space">
+        <!--LO: Determine the sample space of a given random experiment.
+            Sub-objective: samplespace  Identifying sample space  -->
+        <body>
+            <p>A person in a casino decides to play 3 games of blackjack. Let W denote a win and L
+                denote a loss. Define the event A as “the person wins at least one game of
+                blackjack.” What are the possible outcomes for this event?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">{W, LW, LLW}</choice>
+            <choice value="B">{W, WW, WWW}</choice>
+            <choice value="C">{WWW, WWL, WLW, WLL, LWW, LWL, LLW, LLL}</choice>
+            <choice value="D">{WWW, WWL, WLW, WLL, LWW, LWL, LLW}</choice>
+            <choice value="E">{WWL, LWL, LLW}</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. {W, LW, LLW} does not describe outcomes for this random
+                    experiment because the person decided to play 3 games (regardless of whether he
+                    wins or losses), so each outcome must show the result for each of the 3
+                    games.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. {W, WW, WWW} does not describe outcomes for this random
+                    experiment because the person decided to play 3 games, so each outcome must show
+                    the result for each of the 3 games.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the entire sample space for the random experiment in
+                    which a person plays 3 games of blackjack.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Event A is all outcomes in the sample space except
+                    LLL.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. {WLL, LWL, LLW} are the outcomes for the event “wins EXACTLY
+                    one game of blackjack”.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_id_sample_space">
+        <!--LO: Determine the sample space of a given random experiment.
+            Sub-objective: samplespace  Identifying sample space  -->
+        <body>
+            <p>A person trying to gain access to a bank vault must pass through a series of three
+                security doors. If an attempt to pass through a door is a failure, then the person
+                will not make any further attempts. Let P denote a successful pass and F denote a
+                failed pass. What is the sample space for this random experiment?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">S = {F, PF, PPF, PPP}</choice>
+            <choice value="B">S= {F, PF, PPF}</choice>
+            <choice value="C">S = {F, FP, FFP, FFF}</choice>
+            <choice value="D">S = {P, PP, PPP}</choice>
+            <choice value="E">S ={PPP, FPP, PFP, PPF, FFP, FPF, PFF, FFF}</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The person stops going when he fails to access a door or when he
+                    passes through all three doors.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Not quite right. One outcome is missing: the person can also pass through
+                    all three doors.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The person stops going when he fails to access a door, so FP,
+                    FFP, and FFF are not outcomes for this random experiment.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The person continues to try the next door if a pass is
+                    successful, so P and PP are not outcomes for this random experiment.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The person stops going when he fails to access a door or when
+                    he passes through all three doors. So not all of these are possible outcomes for
+                    this random experiment. For example, PFP and FFF are not possible, and other
+                    possible outcomes, such as F, are missing.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <!-- added, may need to be removed if qa doesn't go through -->
+    <multiple_choice id="q4_id_sample_space">
+
+        <body>
+            <p>A person must enter a 4 digit code to gain access to his cell phone. He will enter
+                codes until he is successful, however he cannot try more than 3 times or the phone
+                will lock him out. Let S denote a successful attempt and F denote a failed attempt.
+                What is the sample space for this random experiment? </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">{SSS, SSF, SFS, FSS, SFF, FSF, FFS, FFF}</choice>
+            <choice value="B">{S, FS, FFS}</choice>
+            <choice value="C">{S, FS, FFS, FFF} </choice>
+            <choice value="D">{S, SS, SSS} </choice>
+            <choice value="E">{S, SF, SSF, SSS}</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The person stops trying when he successfully enters a code. So
+                    not all of the options in this set are outcomes for this experiment (for example
+                    SSS is not possible) and other possibilities are missing (for example
+                    S).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Not quite right. One option is missing. The person could also fail at all
+                    3 attempts. </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The person stops trying when he successfully enters the code or
+                    when he has failed at all 3 attempts.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The person stops trying when he successfully enters the code,
+                    so SS and SSS are not outcomes for this random experiment.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect.The person stops trying when he successfully enters the code, so
+                    S is the only outcome in this set that comes from this random
+                    experiment.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q5_id_sample_space">
+
+        <body>
+            <p>A couple decides to have three children. Let A define the event that the couple has
+                at least 1 girl. What are the possible outcomes for this event? (G=girl, B=boy) </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">{G, BG, BBG}</choice>
+            <choice value="B">{G, GG, GGG} </choice>
+            <choice value="C">{BBB, BBG, BGB, GBB, GGB, GBG, BGG, GGG} </choice>
+            <choice value="D">{GGG, GGB, GBG, BGG, GBB, BGB, BBG}</choice>
+            <choice value="E">{GBB, BGB, BBG}</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. {G, BG, BBG} does not describe outcomes for this random
+                    experiment because the couple wants 3 children regardless of whether or not they
+                    have a girl, so each outcome must show the result for all 3 births. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect.{G, GG, GGG} does not describe outcomes for this random
+                    experiment because the couple wants 3 children regardless of whether or not they
+                    have a girl, so each outcome must show the result for all 3 births.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the entire sample space for the random experiment in
+                    which a couple has 3 children. Event A is the event that the couple has at <em style="italic">least</em>
+                    one girl. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Event A is all outcomes in the sample space except BBB. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. {GBB, BGB, BBG}  are the outcomes for the event “ EXACTLY one girl”.
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

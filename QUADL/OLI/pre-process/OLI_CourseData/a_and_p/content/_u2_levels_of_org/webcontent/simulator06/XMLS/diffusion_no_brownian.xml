@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="Passive Diffusion" version="1" date="3/1/06">
+    <name>&lt;b&gt; &lt;/b&gt;</name>
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+            <actions>
+                <action event="record light"/> 
+               <!-- <action event="create" name="bilayer" url="swfs/bilayer.swf"  x="0" y="250" xscale="1.2"  yscale="1"/>-->
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="0" y="0" xscale="1"  yscale="1"/> 
+                <action event="create" name="button" url="tools/button.swf"  x="25" y="450" xscale="1"  yscale="1"/>
+                <action event="settimer" timer='9' advance='yes' resettimer='0' />              
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible"/>
+                 <title>Passive Diffusion</title>
+                 <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium"
+                 </text>
+                 <object name="button" state="invisible"/>
+            </objects>
+             <nextbutton text="Add Ink"  state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="begin">
+            <actions>
+                <action event="record light"/> 
+                <action event="initialize" name="button" data="Add Ink"/>  
+            </actions>
+            <objects>
+                <title> </title>
+                <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;
+                </text>
+                <object name="button" state="visible"/>
+                <object name="button" state="visible"/>
+            </objects>
+            <nextbutton text="Add Ink"  state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+      
+        <step id="startmolecules">
+            <objects>
+                
+                <object name="bilayer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="button" state="visible"/>
+            </objects>
+            <actions> 
+                <action event="initialize"  name="button" params="object=box1,action=reset"  data="Reset"/>  
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=750,topBorder=0,bottomBorder=500,leftBorder2=0,rightBorder2=750,topBorder2=0,bottomBorder2=500">
+                    <molecules>
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule-->     
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "40"  cast= "moleculeC1"  eq1="500" eq2="200"  angle1= "45" angle2= "315" x="50" y="50" offset="40" rotationVelocity="5"  rotation="30"   polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"  brownian=".05" mybounce="true" />            
+                        <molecule numMolecules= "50"  injectionforce= "30" velocity= "80"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "0" angle2= "355" x="50" y="50" offset="20" rotationVelocity="5"  rotation="30"   polarity = "0,0,0,0,.4,1,1,.4" mytype="ligand"  myID="2"  brownian="0" mybounce="true" />   
+                        <molecule numMolecules= "1"  injectionforce= "30" velocity= "80"  cast= "ligand3"  eq1="500" eq2="200"  angle1= "0" angle2= "355" x="50" y="50" offset="20" rotationVelocity="5"  rotation="30"   polarity = "0,0,0,0,.4,1,1,.4" mytype="ligand"  myID="3"  brownian="0" mybounce="true" />   
+                        
+                        <!--   don't add new bindswith parameters until we completely implement the parser for this-->
+                    </molecules>
+                </action>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+   
+        
+    </steps>
+</simulation>

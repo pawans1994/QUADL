@@ -1,0 +1,116 @@
+<HTML>
+<HEAD><TITLE>
+Biochemistry - Water and Ice
+</TITLE>
+<script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+
+<BODY  BGCOLOR="#B0C4DE" TEXT="#000000">
+
+<script type="text/javascript">
+jmolInitialize("./jmol");
+jmolSetAppletColor("gray");
+</script>
+
+<TABLE WIDTH=800 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<TH Colspan=3 align=left>Biochemistry I</TH>
+    <TH colspan=3 align=right>Ice and Water</TH>
+   
+
+<TR><TD>&nbsp;</td><TD>Ice</td><TD>&nbsp;</td><TD>Water</td><td>&nbsp;</td>
+
+<TR VALIGN=TOP>
+<TD WIDTH=5></TD>
+
+<TD VALIGN=TOP WIDTH=400 bgcolor="#eeeeee">
+
+<script type="text/javascript">
+jmolApplet([400,400],
+"load ./jmol/pdbs/ice.pdb;color cpk;wireframe 60;spacefill 120","ice");
+</script>
+<br>
+
+<script type="text/javascript">
+jmolSetTarget("ice") 
+jmolRadioGroup([["background white","white",true],
+["background gray","gray",false],
+["background [100,100,255]","Lt blue",false],
+["background black","black",false]]," ","Background color")
+</script>
+
+<script type="text/javascript">
+jmolSetTarget("ice")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+    <br>
+        <script type="text/javascript">
+            jmolSetTarget("ice")
+            jmolCheckbox("set measurements ANGSTROMS;monitor 1 36;monitor 1 59;monitor 3 4;monitor 2 79;color monitors yellow;font monitor 20 SERIF bold;set monitors 0.1;select all","monitor off", "+/- Hbonds", false)
+        </script>
+        <script type="text/javascript">
+            jmolSetTarget("ice")
+            jmolCheckbox("set windowCentered off;center atomno=1;set windowCentered on;zoomto 1.0 250","zoomto 0.5 100", "+/- Zoom", false)
+        </script>
+     
+        </TD>
+ 
+<TD>&nbsp;</TD>
+
+    <TD VALIGN=TOP WIDTH=400 bgcolor="#eeeeee">
+<script type="text/javascript">
+jmolApplet([400,400],"load ./jmol/pdbs/water_c.pdb;color cpk;wireframe 60;spacefill 120","water");
+</script>
+<BR>
+
+<script type="text/javascript">
+jmolSetTarget("water") 
+jmolRadioGroup([["background white","white",true],
+["background gray","gray",false],
+["background [100,100,255]","Lt blue",false],
+["background black","black",false]]," ","Background color")
+</script>
+
+<script type="text/javascript">
+jmolSetTarget("water")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+   <br>        <script type="text/javascript">
+            jmolSetTarget("water") 
+            jmolButton("zap;load ./jmol/pdbs/water.pdb;select atomno=3,atomno=4;color white;spacefill 120;select oxygen;color red;spacefill 140;wireframe 60;select atomno=1,atomno=5;color yellow;select all;wireframe 60", "","","Single Molecule");
+   </script>&nbsp;Single Molecule&nbsp;&nbsp;
+      
+            <script type="text/javascript">
+                jmolSetTarget("water") 
+                jmolButton("zap;load ./jmol/pdbs/water_c.pdb;wireframe 0.3;spacefill 0.5","","","Water Cluster");
+            </script>&nbsp;Water Cluster&nbsp;&nbsp;
+                   
+<script type="text/javascript">
+jmolSetTarget("water")
+jmolCheckbox("set measurements ANGSTROMS;monitor 9447 7145;monitor 7147 8908;color monitors yellow;font monitor 20 SERIF bold;set monitors 0.1;select all","monitor off", "+/- Hbonds", false)
+</script>
+</TD>
+
+
+<TD WIDTH=195 BGCOLOR="#eeeeee" VALIGN="TOP"><FONT COLOR="#000000">
+
+
+</TD>
+</TR>
+</TABLE>
+
+<HR>
+<p>Water</P>
+<UL>
+<LI>The two lone pair orbitals coloured yellow have a partial negative charge (click on '<B>Single Molecule</B>').
+<LI>The two hydrogens carry a partial positive charge.
+<LI>Hydrogen bonds are formed between the electronegative oxygen and electropositive hydrogen.
+<LI>Note that many of the hydrogen bonds observed in ice are maintained in liquid water.
+</UL>
+
+
+<TT>Last modified Dec 13, 2007.<TT>
+
+</BODY>
+</HTML>
+

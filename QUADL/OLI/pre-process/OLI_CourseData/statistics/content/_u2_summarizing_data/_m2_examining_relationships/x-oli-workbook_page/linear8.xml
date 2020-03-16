@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="linear8">
+    <head>
+        <title>Linear Relationships (8 of 8)</title>
+        <objref idref="use_least_squares_regression"/>
+    </head>
+    <body>
+       
+        <p>Let's go back now to our motivating example, in which we wanted to predict the maximum
+            distance at which a sign is legible for a 60-year-old. Now that we have found the least
+            squares
+            <?oxy_comment_start author="mmyers" timestamp="20101101T150137-0400" comment="Suggest replacing graphic to clarify formula to &quot;Distance = 576 + (-3 * Age)&quot;"?>regression
+            line<?oxy_comment_end?>, this prediction becomes quite easy: <image style="block"
+                src="../webcontent/linear15.gif"
+                alt="The scatterplot for Driver Age and Sign Legibility
+Distance. Now that we have a regression line, finding out the maximum distance at which a sign is legible
+for a 60-year-old person is easy. We simply check at what y coordinate does the regression line cross
+a vertical line at x = 60. This happens to be at y = 396."
+            />
+        </p>
+        <p>Practically, what the figure tells us is that in order to find the predicted legibility
+            distance for a 60-year-old, we plug Age = 60 into the regression line equation, to find
+            that: <formula style="block">Predicted distance = 576 + (- 3 * 60) = 396</formula>
+        </p>
+        <p>396 feet is our best prediction for the maximum distance at which a sign is legible for a
+            60-year-old.</p>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p><em>Background: </em>A statistics department is interested in tracking the
+                    progress of its students from entry until graduation. As part of the study, the
+                    department tabulates the performance of 10 students in an introductory course
+                    and in an upper-level course required for graduation. The scatterplot below
+                    includes the least squares line (the line that best explains the upper-level
+                    course average based on the lower-level course average), and its equation: </p>
+                <image src="../webcontent/linear21.gif" alt="The scatterplot for Introductory
+Course Average vs. Upper Level Course Average. In addition to the data plotted on the scatterplot,
+we have a least squares regression line. The line's equation is Y = -1.4 + X."/>
+                <wb:inline idref="u1_m2_linear8_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u1_m2_linear8_tutor2" purpose="didigetthis"/>
+                <wb:inline idref="u1_m2_linear8_tutor3" purpose="didigetthis"/>
+            </body>
+        </section>
+        <!--<activity idref="linear8selfassess" purpose="didigetthis"/>-->
+        <p><em>Did You Get It?</em> If so, then go ahead and
+            <?oxy_comment_start author="mmyers" timestamp="20101101T162449-0400" comment="Is it OK for students to skip the comments and other information below the self-assessment? If not, reword to &quot;move on to the comment section.&quot;"?>move
+            on to the next page<?oxy_comment_end?>. If not, then click the link below for some
+            additional practice.</p>
+        <activity idref="linear8selfassess_02" purpose="didigetthis"/>
+        <section>
+            <title>Comment About Predictions</title>
+            <body>
+                <p>Suppose a government agency wanted to design a sign appropriate for an even wider
+                    range of drivers than were present in the original study. They want to predict
+                    the maximum distance at which the sign would be legible for a 90-year-old. Using
+                    the least squares regression line again as our summary of the linear dependence
+                    of the distances upon the drivers' ages, the agency predicts that 90-year-old
+                    drivers can see the sign at no more than 576 + (- 3 * 90) = 306 feet: <image
+                        style="block" src="../webcontent/linear16.gif"
+                        alt="
+The scatterplot for Driver Age vs. Sign Legibility Distance. The scales of both axes have been
+enlarged so that the regression line has room on the right to be extended past where data exists.
+The regression line is negative, so it grows from the upper left to the lower right of the plot.
+Where the regression line is creating an estimate in between existing data, it is red. Beyond that,
+where there are no data points, the line is green. This area is x&gt;82. The equation of the
+regression line is Distance = 576 - 3 * Age"
+                    />
+                </p>
+                <p>(The green segment of the line is the region of ages beyond 82, the age of the
+                    oldest individual in the study.)</p>
+              
+                <inquiry>
+                    <question>Is our prediction for 90-year-old drivers reliable?</question>
+                    <answer>Our original age data ranged from 18 (youngest driver) to 82 (oldest
+                        driver), and our regression line is therefore a summary of the linear
+                        relationship
+                            <?oxy_comment_start author="mmyers" timestamp="20101101T190711-0400" comment="use italics rather than bold for emphasis"?><em>in
+                            that age range only. <?oxy_comment_end?></em> When we plug the value 90
+                        into the regression line equation, we are assuming that the same linear
+                        relationship extends beyond the range of our age data (18-82) into the green
+                        segment. <em>There is no justification for such an assumption.</em> It might
+                        be the case that the vision of drivers older than 82 falls off more rapidly
+                        than it does for younger drivers. (i.e., the slope changes from -3 to
+                        something more negative). Our prediction for age = 90 is therefore
+                            <em><?oxy_comment_start author="mmyers" timestamp="20101101T190919-0400" comment="use italics instead of bold for emphasis. Keep bold on above sentence (there is no justification ...) for added emphasis."?>not
+                            reliable.<?oxy_comment_end?></em>
+                    </answer>
+                </inquiry>
+                <!--
+				<stats:question>Is our prediction for 90 year-old drivers reliable?</stats:question>
+				<stats:answer>Our original age data ranged from 18 (youngest driver) to 82 (oldest driver), and our regression line is therefore a summary of the linear relationship <em>in that age range only! </em> When we plug the value 90 into the regression line equation, we are assuming that the same linear relationship extends beyond the range of our age data (18-82) into the green segment. <em>There is no justification for such an assumption!</em> It might be the case that the vision of drivers older than 82 falls off more rapidly than it does for younger drivers. (i.e., the slopes changes from -3 to something more negative). Our prediction for age = 90, is therefore <em>not reliable!</em></stats:answer>
+-->
+            </body>
+        </section>
+        <section>
+            <title>In General</title>
+            <body>
+                <p>Prediction for ranges of the explanatory variable that are not in the data is
+                    called <em>extrapolation</em>. Since there is no way of knowing whether a
+                    relationship holds beyond the range of the explanatory variable in the data,
+                    extrapolation is not reliable, and should be avoided. In our example, like most
+                    others, extrapolation can lead to very poor or illogical predictions. </p>
+                <activity idref="linear8lbd" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <ul>
+                    <li>A special case of the relationship between two quantitative variables is the
+                            <em>linear </em>relationship. In this case, a straight line simply and
+                        adequately summarizes the relationship.</li>
+                    <li>When the scatterplot displays a linear relationship, we supplement it with
+                        the <em>correlation coefficient (r)</em>, which measures the
+                            <em>strength</em> and
+                        <?oxy_comment_start author="mmyers" timestamp="20101101T191151-0400" comment="make bold to indicate terminology"?>direction<?oxy_comment_end?>
+                        of a linear relationship between two quantitative variables. The correlation
+                        ranges between -1 and 1. Values near -1 indicate a strong negative linear
+                        relationship, values near 0 indicate a weak linear relationship, and values
+                        near 1 indicate a strong positive linear relationship.</li>
+                    <li>The correlation is only an appropriate numerical measure for linear
+                        relationships, and is sensitive to outliers. Therefore, the correlation
+                        should only be used as a supplement to a scatterplot (after we look at the
+                        data).</li>
+                    <li>The most commonly used criterion for finding a line that summarizes the
+                        pattern of a linear relationship is "least squares." The <em>least squares
+                            regression line </em> has the smallest sum of squared vertical
+                        deviations of the data points from the line.</li>
+                    <li>The slope of the least squares regression line can be interpreted as the
+                        average change in the response variable when the explanatory variable
+                        increases by 1 unit.</li>
+                    <li>The least squares regression line predicts the value of the response
+                        variable for a given value of the explanatory variable.
+                            <em>Extrapolation</em> is prediction of values of the explanatory
+                        variable that fall outside the range of the data. Since there is no way of
+                        knowing whether a relationship holds beyond the range of the explanatory
+                        variable in the data, extrapolation is not reliable, and should be
+                        avoided.</li>
+                </ul>
+            </body>
+        </section>
+        <section>
+            <title>Section Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="linear8_feedback"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

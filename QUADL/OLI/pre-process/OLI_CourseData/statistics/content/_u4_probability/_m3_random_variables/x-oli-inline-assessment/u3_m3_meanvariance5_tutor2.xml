@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance5_tutor2">
+   <title>Tutor</title>
+ 
+   <question id="q1">
+    <body><p>In <input_ref input="A"/> distribution, it is more likely to find values that are further from
+            the mean.</p>
+    <p>Therefore, it is more likely that the standard deviation for this distribution is <input_ref input="B"/>.</p>
+    </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">Xavier's</choice>
+         <choice value="two">Yves'</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">smaller</choice>
+         <choice value="two">larger</choice>
+      </fill_in_the_blank>
+      <part>
+         <response input="A" name="Xavier's" match="one" score="1">
+            <feedback>Correct. The
+               probabilit<?oxy_insert_start author="mmyers" timestamp="20101121T161114-0500"?>i<?oxy_insert_end?>es
+               of the values that are further from the mean are larger in Xavier's distribution than
+               in Yves', making them more likely.</feedback>
+         </response>
+         <response input="A" name="Yves" match="two" score="0">
+            <feedback>Incorrect. The
+               probabilit<?oxy_insert_start author="mmyers" timestamp="20101121T161116-0500"?>i<?oxy_insert_end?>es
+               of the values that are further from the mean are larger in Xavier's distribution than
+               in Yves', making them more likely.</feedback>
+         </response>
+      </part>
+      
+      <part>
+         <response input="B" match="one" score="0">
+            <feedback>Incorrect.  When it is more likely (probable) to find values further from the mean, it is more likely that the standard deviation will be larger.</feedback>
+         </response>
+         <response input="B" match="two" score="1">
+            <feedback>Correct.  When it is more likely (probable) to find values further from the mean, it is more likely that the standard deviation will be larger.</feedback>
+         </response>
+      </part>
+      
+   </question>
+      
+
+  
+</assessment>

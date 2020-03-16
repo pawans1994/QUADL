@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_test_stat_pop_mean_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_test_stat_pop_mean">
+        <!-- LO: compu_test_stat -->
+        <body>
+            <p>The Wechsler Adult Intelligence Scale (IQ test) is constructed so that Full Scale IQ
+                scores follow a normal distribution, with a mean of 100, and a standard deviation of
+                15. The mayor of Smart Town believes the county’s residents are smarter than the
+                national average and wants to use it (the intelligence of the residents) as a
+                marketing tool to bring industries to the area.</p>
+            <p>A researcher is hired to conduct a study to determine whether Smart County’s
+                residents have, on average, higher Full Scale IQs than the population. A random
+                sample of 100 people from Smart County were given the IQ test and were found to have
+                an average Full Scale IQ of 105.</p>
+            <p>What is the value of the test statistic used to determine whether the mean Full Scale
+                IQ score of the Smart County residents is higher than the national average?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.333</choice>
+            <choice value="B">−0.333</choice>
+            <choice value="C">3.33</choice>
+            <choice value="D">−3.33</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the population mean was correctly subtracted from the
+                    sample mean (105 − 100), it looks like the population standard deviation was
+                    used in the denominator, rather than the standard deviation of the sample
+                    means.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like the sample mean was subtracted from the
+                    population mean. In addition, it looks like the population standard deviation
+                    was used in the denominator, rather than the standard deviation of the sample
+                    means.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The correct test statistic is (105 − 100)/(15/√100), or (105 − 100)/(15/10) = 5/1.5, or 3.33.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It looks like the sample mean was subtracted from the
+                    population mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_compu_test_stat_pop_mean">
+        <!-- LO: compu_test_stat -->
+        <body>
+            <p>The dean of the engineering school at a technical university wants to emphasize the
+                importance of having students who are gifted at reading and writing as well as math.
+                She wants to know if she can accurately claim that graduate students in engineering
+                programs at her school have significantly higher scores on the verbal reasoning
+                section of the GRE (a standardized test used in the admissions process for many
+                graduate programs) than the national average for engineering students. The national
+                average for the verbal reasoning GRE score for engineering students was 150 with a
+                standard deviation of 9. A random sample of 49 engineering graduate students at her
+                school were found to have an average verbal reasoning GRE score of 153.</p>
+            <p>What is the value of the test statistic used to determine whether the mean verbal
+                reasoning GRE score of the engineering graduate students at the technical university
+                is higher than the national average?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">136.33</choice>
+            <choice value="B">−136.33</choice>
+            <choice value="C">2.33</choice>
+            <choice value="D">−2.33</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. While the population mean was correctly subtracted from the
+                    sample mean (153 − 150), it looks like the population standard deviation, rather
+                    than the standard deviation of the sample means, was used in the
+                    denominator.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like the sample mean was subtracted from the
+                    population mean. In addition, it looks like the population standard deviation,
+                    rather than the standard deviation of the sample means, was used in the
+                    denominator.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The correct test statistic is (153 − 150)/(9/√49), or (153 −
+                    150)/(9/7) = 3/1.286, or 2.33.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It looks like the sample mean was subtracted from the
+                    population mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

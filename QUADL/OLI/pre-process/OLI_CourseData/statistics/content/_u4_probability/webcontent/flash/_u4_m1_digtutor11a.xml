@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m1_digtutor11a" title="_u4_m1_digtutor11a">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">Which of the following is a correct representation of the given information in a two-way probability table?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <matimage label="" uri="../../webcontent/dig003.jpg"></matimage></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <matimage label="" uri="../../webcontent/dig004.jpg"></matimage></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <matimage label="" uri="../../webcontent/dig005.jpg"></matimage></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <matimage label="" uri="../../webcontent/dig006.jpg"></matimage></material></response_label>
+          <!--<response_label ident="Res5">
+            <material>
+              <matimage label="" uri="../../webcontent/dig007.jpg"></matimage></material></response_label>--></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <!--<respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition>--></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect. 0.10 is not the probability of a suicide committed by a man using a gun, but the probability of a suicide committed by a woman not using a gun.  Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. 0.10 is not the probability of a suicide committed by a woman, but the probability of a suicide committed by a woman not using a gun.  Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Correct. The given information was P(M) = .56, P(G) = .56, and P(F and not G) = .10.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. 0.56 is not the probability of a suicide committed by a man using a gun, but the probability of a suicide committed using a gun.  Please try again.</mattext></material></itemfeedback>
+    <!--<itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Incorrect.   0.10 is not the probability of a suicide committed by a woman using a gun, but the probability of a suicide committed by a woman not using a gun.</mattext></material></itemfeedback>--></item></questestinterop>

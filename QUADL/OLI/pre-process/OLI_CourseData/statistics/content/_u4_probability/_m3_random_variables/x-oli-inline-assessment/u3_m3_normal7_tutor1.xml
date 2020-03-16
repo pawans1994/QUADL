@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal7_tutor1">
+   <title>Tutor</title>
+<page>   
+   <question id="q1">
+      <body>
+         <p>What is the probability that a randomly chosen student (from all those taking the SAT-M
+               that year) scored above 700? In other words, what proportion of students who took the
+               SAT scored above 700? Yet another, more technical way to ask this question is, What
+               is P(X &gt; 700), where X represents the random variable SAT-M score?</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We are given that the random variable X representing the SAT-M score has a normal
+                  distribution with a mean of 507 and a standard deviation of 111, and we are asked
+                  to find P(X &gt; 700). The z-score of 700 is (700 − 507)/111 = 1.74
+                  (rounded), and therefore:</p>
+            <p>P(X &gt; 700) = P(Z &gt; 1.74) = (by symmetry) P(Z &lt; −1.74) = (using the table) 0.0409.</p>
+            <p>We conclude that roughly 4.1% of the students score above 700 on the SAT-M.</p>
+         </explanation>
+      </part>
+   </question>
+</page></assessment>

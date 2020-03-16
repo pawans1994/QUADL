@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd7">
+    <head>
+        <title>ANOVA</title>
+    </head>
+    <body>
+        <pullout><alternatives group="statistics.package">
+            <default><pref:value preference="statistics.package"/></default>
+            <alternative value="r">
+                <title>R</title>
+                <p>Recall the flickering threshold example from the previous activity. Here again is
+                    the output of the F-test: </p>
+                <image style="block" src="../../webcontent/image419_r.gif"/>
+                <p>We rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112046-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112043-0500" content="Ho"?>
+                        (p-value of .023) and concluded that
+                        <?oxy_delete author="mmyers" timestamp="20101129T112059-0500" content="the "?>CFF
+                        is related to eye color.</p>
+                <p>Here is a graph of the confidence intervals for each eye color:</p>
+                <image style="block" src="../../webcontent/image419_excel2.gif" alt="Blue: Mean = 28.167,
+StDev = 1.528, and the Individual 95% Confidence Interval for Mean is about (26.8, 29.3).
+        Brown: Mean = 25.588, StDev = 1.364, and the Individual 95% Confidence Interval for Mean is about (24.1, 26.8)
+        Green: Mean = 26.92, StDev = 1.843, and the Individual 95% Confidence Interval for Mean is about (25.5, 28.0)"/>
+            </alternative>
+            <alternative value="minitab">
+                <title>Minitab</title>
+                <p>Recall the flickering threshold example from the previous activity. Here again is
+                    the Minitab output of the F-test: </p>
+                <image style="block" src="../../webcontent/image419.gif" alt="One-Way ANOVA: CFF versus Color:
+        Source: Color: DF = 2, SS = 23.00, MS = 11.50, F = 4.80, P = 0.023
+        Source: Error: DF = 16, SS= 38.31, MS = 2.39
+        Source: Total: DF = 18, SS = 61.31
+        
+        S = 1.547, R-Sq = 37.51%, R-Sq(adj) = 29.70%
+        
+        Blue: Mean = 28.167, StDev = 1.528, and the Individual 95% Confidence Interval for Mean is about (26.8, 29.3).
+        Brown: Mean = 25.588, StDev = 1.364, and the Individual 95% Confidence Interval for Mean is about (24.1, 26.8)
+        Green: Mean = 26.92, StDev = 1.843, and the Individual 95% Confidence Interval for Mean is about (25.5, 28.0)"/>
+                <p>We rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112141-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112139-0500" content="Ho"?>
+                        (p-value of .023) and concluded that
+                        <?oxy_delete author="mmyers" timestamp="20101129T112144-0500" content="the "?>CFF
+                        is related to eye color.</p>
+            </alternative>
+            <alternative value="excel">
+                <title>Excel 2007</title>
+                <p>Recall the flickering threshold example from the previous activity. Here again is
+                    the Excel output of the F-test: </p>
+                <image style="block" src="../../webcontent/image419_excel.gif" alt="Anova: Single Facotr
+SUMMARY:
+        Blue: Count = 6, Sum = 169, Average = 28.16667, Variance = 2.33467
+        Brown: Count = 8, Sum = 204.7, Average = 25.5875, Variance = 1.86411
+        Green: Count = 5, Sum = 134.6, Average = 26.92, Variance = 3.397
+        
+    ANOVA:
+        Source of Variation: Between Groups: SS = 22.997, df = 2, MS = 11.49864, F = 4.80235, P-value = 0.02325, F-crit = 3.6337
+        Source of Variation: Within Groups: SS = 38.31, df = 16, MS = 2.39438
+        Total: SS = 61.307, df = 18"/>
+                <p>We rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112154-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112152-0500" content="Ho"?>
+                        (p-value of .023) and concluded that
+                        <?oxy_delete author="mmyers" timestamp="20101129T112157-0500" content="the "?>CFF
+                        is related to eye color.</p>
+                <p>Here is a graph of the confidence intervals for each eye color:</p>
+                <image style="block" src="../../webcontent/image419_excel2.gif" alt="Blue: Mean = 28.167,
+StDev = 1.528, and the Individual 95% Confidence Interval for Mean is about (26.8, 29.3).
+        Brown: Mean = 25.588, StDev = 1.364, and the Individual 95% Confidence Interval for Mean is about (24.1, 26.8)
+        Green: Mean = 26.92, StDev = 1.843, and the Individual 95% Confidence Interval for Mean is about (25.5, 28.0)"/>
+            </alternative>
+        <!--      <alternative value="excel2003">
+                <title>Excel 2003</title>
+                <p>Recall the flickering threshold example from the previous activity. Here again is
+                    the Excel output of the F-test: </p>
+                <image style="block" src="../../webcontent/image419_excel.gif" alt="Anova: Single Facotr
+    SUMMARY:
+       Blue: Count = 6, Sum = 169, Average = 28.16667, Variance = 2.33467
+       Brown: Count = 8, Sum = 204.7, Average = 25.5875, Variance = 1.86411
+       Green: Count = 5, Sum = 134.6, Average = 26.92, Variance = 3.397
+    
+    ANOVA:
+        Source of Variation: Between Groups: SS = 22.997, df = 2, MS = 11.49864, F = 4.80235, P-value = 0.02325, F-crit = 3.6337
+        Source of Variation: Within Groups: SS = 38.31, df = 16, MS = 2.39438
+        Total: SS = 61.307, df = 18"/>
+                <p>We rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112211-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112208-0500" content="Ho"?>
+                        (p-value of .023) and concluded
+                        that<?oxy_delete author="mmyers" timestamp="20101129T112216-0500" content=" the"?>
+                        CFF is related to eye color.</p>
+                <p>Here is a graph of the confidence intervals for each eye color:</p>
+                <image style="block" src="../../webcontent/image419_excel2.gif" alt="Blue: Mean = 28.167,
+StDev = 1.528, and the Individual 95% Confidence Interval for Mean is about (26.8, 29.3).
+        Brown: Mean = 25.588, StDev = 1.364, and the Individual 95% Confidence Interval for Mean is about (24.1, 26.8)
+        Green: Mean = 26.92, StDev = 1.843, and the Individual 95% Confidence Interval for Mean is about (25.5, 28.0)"/>
+            </alternative>-->
+            <alternative value="ti">
+                <title>TI Calculator</title>
+                <p>Recall the flickering threshold example from the previous activity. Here again is
+                    the output of the F-test: </p>
+                <image src="../../../../webcontent/inline_assessment/_u5_m2_lbdtutor6e_image1_ti.jpg"/>
+                <p>We rejected
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T112229-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T112227-0500" content="Ho"?>
+                        (p-value of .023) and concluded that
+                        <?oxy_delete author="mmyers" timestamp="20101129T112232-0500" content="the "?>CFF
+                        is related to eye color.</p>
+                <p>Here is a graph of the confidence intervals for each eye color:</p>
+                <image style="block" src="../../webcontent/image419_excel2.gif" alt="Blue: Mean = 28.167,
+StDev = 1.528, and the Individual 95% Confidence Interval for Mean is about (26.8, 29.3).
+        Brown: Mean = 25.588, StDev = 1.364, and the Individual 95% Confidence Interval for Mean is about (24.1, 26.8)
+        Green: Mean = 26.92, StDev = 1.843, and the Individual 95% Confidence Interval for Mean is about (25.5, 28.0)"/>
+            </alternative>
+        </alternatives></pullout>
+        <wb:inline idref="u4_m3_anova7_lbd_tutor1"
+            purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="361">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor7a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor7a</param>
+                </flash>
+            -->
+    </body>
+</workbook_page>

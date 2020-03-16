@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m04_behavior_of_proportion2">
+    <head>
+        <title>Behavior of Sample Proportion (2 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_proportion"/>
+    </head>
+    <body>
+      
+        <!--<p>The results we got in our simulations are not surprising. Advanced probability theory confirms that by saying the following:</p>-->
+        <p>Again<?oxy_insert_start author="mmyers" timestamp="20101122T171804-0500"?>,<?oxy_insert_end?>
+            the simulation<?oxy_insert_start author="mmyers" timestamp="20101122T171818-0500"?>s<?oxy_insert_end?>
+            <?oxy_insert_start author="mmyers" timestamp="20101122T171828-0500"?>on the previous
+            page <?oxy_insert_end?>reinforced what makes sense to our intuition. Larger random
+            samples will better approximate the population proportion. When the sample size is
+            large, sample proportions will be closer to p. In other words, the sampling distribution
+            for large samples has less variability. Advanced probability theory confirms our
+            observations and gives a more precise way to describe the standard deviation of the
+            sample proportions. This is described next. </p>
+        <section>
+            <title>The Sampling Distribution of the Sample Proportion</title>
+            <body>
+                <p>If repeated random samples of a given size n are taken from a population of
+                    values for a categorical variable, where the proportion in the category of
+                    interest is p, then the mean of all sample proportions
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T171913-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T171914-0500"?>)
+                    <?oxy_insert_end?>is the population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T171919-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101122T171920-0500"?>)<?oxy_insert_end?>.
+                    As for the spread of all sample proportions, theory dictates the behavior much
+                    more precisely than saying that there is less spread for larger samples. In
+                    fact, the standard deviation of all sample proportions
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T171933-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T171935-0500"?>)<?oxy_insert_end?>
+                    is exactly <m:math overflow="scroll">
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math>. </p>
+                <p>Since sample size n appears in the denominator of the square root, the standard
+                    deviation does decrease as sample size increases. Finally, the shape of the
+                    distribution of <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> will be approximately normal as long as the sample size n is large
+                    enough. The convention is to require both np and n(1 - p) to be at least 10.</p>
+                <p>We can summarize all of the above by the following:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> has a normal distribution with
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T172010-0500"?>a
+                    <?oxy_insert_end?>mean
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T172014-0500"?>of
+                        <?oxy_insert_end?><m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mi>p</m:mi>
+                    </m:math> and standard deviation <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math><?oxy_delete author="mmyers" timestamp="20101122T172028-0500" content=","?>
+                    (and as long as np and n(1 - p) are at least 10).</p>
+                <p>Let's apply this result to our example and see how it compares with our
+                    simulation.</p>
+                <p>In our
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T172039-0500"?>example,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T172038-0500" content="case"?>
+                    n = 25 (sample size) and p = 0.6. Note that np = 15 &#8805; 10 and n(1 - p) = 10
+                    &#8805; 10. Therefore we can conclude that <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T172057-0500"?>
+                    <?oxy_insert_end?>is approximately a normal distribution with mean p<?oxy_insert_start author="mmyers" timestamp="20101122T172109-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101122T172110-0500"?>
+                    <?oxy_insert_end?>0.6 and standard deviation <m:math overflow="scroll">
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                        <m:mo>=</m:mo>
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>6</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>6</m:mn>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                        <m:mn>5</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                        <m:mo>=</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mn>9</m:mn>
+                        <m:mn>7</m:mn>
+                    </m:math> (which is very close to what we saw in our simulation).</p>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>According to the National Postsecondary Student Aid Study conducted by
+                            the U.S. Department of Education in 2008, 62% of graduates from public
+                            universities had student loans.</p>
+                        <wb:inline
+                            idref="u3_m4_proportion2_tutor2" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion2_tutor3" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion2_tutor4" purpose="learnbydoing"/>
+                    </body>
+                </section>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <wb:inline
+                            idref="u3_m4_proportion2_tutor5" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion2_tutor6" purpose="learnbydoing"/>
+                    </body>
+                </section>
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>The proportion of left-handed people in the general population is about 0.10. To
+                    simulate this population, we constructed a collection in which p = 0.10. We then
+                    conducted four
+                    simulations<?oxy_insert_start author="mmyers" timestamp="20101122T175214-0500"?>,<?oxy_insert_end?>
+                    drawing random samples of different sizes from this collection. Here you see the
+                    resulting sampling distributions and corresponding summary tables:</p>
+                <image src="../webcontent/tutors/9_1_img1.gif" alt="A set of sampling distributions
+and tables for N=20, 50, 100, and 200 . For each sample size, 1005 samples were taken. For N=200,
+the resulting distribution histogram very closely resembles a normal shape. The mean is 0.100095,
+and the stdDev is 0.0221608 . For N=100, the distribution histogram is also an approximation of
+a normal curve. Since the scale for this histogram is the same as for N=200, the bars are wider.
+The mean is 0.100557, and the stdDev is 0.0287191 . For N=50, the histogram has even wider bars.
+The left part of the normal curve has been cut off because it rests below a proportion of 0, which
+cannot happen. So, the histogram is right skewed. The mean is 0.102706, and the stdDdev is
+0.0418382 . For N=20, the histogram suffers the same problem as for N=50, except on a much worse
+level. The mean is 0.100896, and the stdDev is 0.067461 ."/>
+                <wb:inline
+                    idref="u3_m4_proportion2_tutor1" purpose="didigetthis"/>
+            </body>
+        </section>
+        
+  
+        
+    </body>
+</workbook_page>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="condition_using_CI_for_means_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_condition_using_CI_for_means">
+        <!-- LO: condition_using_CI_for_means -->
+        <body>
+            <p>Assuming data come from a random sample, under which of the following conditions
+                should we <em style="bold">not</em> calculate a confidence interval for a population
+                mean?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Population is normally distributed and sample size is 20
+                individuals.</choice>
+            <choice value="B">Population distribution is unknown and sample size is 50
+                individuals.</choice>
+            <choice value="C">Population distribution is unknown and sample size is 20
+                individuals.</choice>
+            <choice value="D">Population is normally distributed and sample size is 50
+                individuals.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Recall that a confidence interval for a population mean
+                    requires a large sample size (n &gt; 30) only if the population shape is unknown.
+                    The population is normally distributed so a smaller sample size is sufficient in
+                    this case.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A large sample size (n &gt; 30) is sufficient for calculating the
+                    confidence interval for a population mean, even if population shape is
+                    unknown.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. When the population distribution is unknown, a large sample size
+                    (n &gt; 30) is required to calculate the confidence interval for a population
+                    mean.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The population is normally distributed and the sample size is
+                    large (n &gt; 30) so we can calculate a confidence interval for a population
+                    mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_condition_using_CI_for_means" select="multiple">
+        <!-- LO: condition_using_CI_for_means -->
+        <body>
+            <p>In which of the following scenarios can we calculate a confidence interval for the
+                population mean? Check all that apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">A random sample of 60 cell phone calls is selected and the mean length
+                of calls is determined to be 3.25 minutes with a standard deviation of 4.2
+                minutes.</choice>
+            <choice value="B">A random sample of 15 women athletes is selected and their mean weight
+                is determined to be 136 pounds. Female athlete weights are known to be normally
+                distributed with a population standard deviation of 20 pounds.</choice>
+            <choice value="C">A random sample of 14 cell phone calls is selected and the mean length
+                of calls is determined to be 3.25 minutes with a standard deviation of 4.2
+                minutes.</choice>
+            <choice value="D">A random sample of 35 women athletes is selected and their mean weight
+                is determined to be 136 pounds. Female athlete weights are known to be normally
+                distributed with a population standard deviation of 20 pounds.</choice>
+        </input>
+        <part>
+            <response match="A" score="5">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated in this case (60 cell phones) because the sample size is
+                    sufficiently large (n &gt; 30) even though we do not know if the population is
+                    normally distributed. However, there is at least one other correct
+                    option.</feedback>
+            </response>
+            <response match="B" score="5">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated in this case (15 women athletes), regardless of the small
+                    sample size, because the population is normally distributed. However, there is
+                    at least one other correct option.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A confidence interval for the population mean cannot be
+                    calculated in this case (14 cell phones) because the sample size is small and we
+                    do not know if the population is normally distributed. Additionally, there is at
+                    least one correct option.</feedback>
+            </response>
+            <response match="D" score="5">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated in this case (35 women athletes) because the sample size
+                    is sufficiently large (n &gt; 30) and the population is normally distributed.
+                    However there is at least one other correct option.</feedback>
+            </response>
+            <response match="A,B" score="8">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated when the sample size is sufficiently large (n &gt; 30) (in the
+                    scenario with 60 cell phones). You are also correct that a confidence interval
+                    for the population mean can be calculated, regardless of the small sample size,
+                    because the population is normally distributed (in the scenario with 15 women
+                    athletes). However, there is at least one other correct option.</feedback>
+            </response>
+            <response match="A,C" score="3">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated when the sample size is sufficiently large (n &gt; 30) (in the
+                    scenario with 60 cell phones). However, a confidence interval for the population
+                    mean cannot be calculated when the sample size is small and we do not know if
+                    the population is normally distributed (in the scenario with 14 cell phones).
+                    Additionally, there is at least one correct option.</feedback>
+            </response>
+            <response match="A,D" score="8">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated when the sample size is sufficiently large (n &gt; 30) (in the
+                    scenario with 60 cell phones) even though in one scenario we do not know if the
+                    population is normally distribution (35 women athletes). However, there is at
+                    least one other correct option.</feedback>
+            </response>
+            <response match="B,C" score="3">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated, regardless of the small sample size, because the
+                    population is normally distributed (in the scenario with 15 women athletes).
+                    However, a confidence interval for the population mean cannot be calculated when
+                    the sample size is small and we do not know if the population is normally
+                    distributed (in the scenario with 14 cell phones). Additionally, there is at
+                    least one other correct option.</feedback>
+            </response>
+            <response match="B,D" score="8">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated, regardless of the small sample size, because the
+                    population is normally distributed (in the scenario with 15 women athletes). You
+                    are also correct that a confidence interval for the population mean can be
+                    calculated when the sample size is sufficiently large (n &gt; 30) (in the scenario
+                    with 35 women athletes). However, there is at least one other correct
+                    option.</feedback>
+            </response>
+            <response match="C,D" score="3">
+                <feedback>Incorrect. You are correct that a confidence interval for the population
+                    mean can be calculated when the sample size is sufficiently large (n &gt; 30) (in the
+                    scenario with 35 women athletes). However, a confidence interval for the
+                    population mean cannot be calculated when the sample size is small and we do not
+                    know if the population is normally distributed (in the scenario with 14 cell
+                    phones). Additionally there is at least one other correct option.</feedback>
+            </response>
+            <response match="A,B,C" score="5">
+                <feedback>Incorrect. You are correct that the population mean can be calculated when
+                    the population is normally distributed, regardless of sample size (15 women
+                    athletes scenario), or when the sample size is sufficiently large (n &gt; 30),
+                    regardless of population shape (60 cell phone scenario). However, in the
+                    scenario with 14 cell phones neither condition is met.</feedback>
+            </response>
+            <response match="A,B,D" score="10">
+                <feedback>Correct. A confidence interval for the population mean can be calculated
+                    when the population is normally distributed, regardless of sample size, or when
+                    the sample size is sufficiently large (n &gt; 30), regardless of population
+                    shape.</feedback>
+            </response>
+            <response match="A,C,D" score="5">
+                <feedback>Incorrect. You are correct that the population mean can be calculated when
+                    the sample size is sufficiently large (n &gt; 30), regardless of population shape
+                    (60 cell phone and 35 women athletes scenarios). However, in the scenario with
+                    14 cell phones a confidence interval for the population mean cannot be
+                    calculated because the sample size is small and we do not know if the population
+                    is normally distributed.</feedback>
+            </response>
+            <response match="B,C,D" score="5">
+                <feedback>Incorrect. You are correct that the population mean can be calculated when
+                    the population is normally distributed, regardless of sample size (15 women
+                    athletes scenario), or when the sample size is sufficiently large (n &gt; 30),
+                    regardless of population shape (35 women athletes scenario). However, in the
+                    scenario with 14 cell phones neither condition is met.</feedback>
+            </response>
+            <response match="A,B,C,D" score="8">
+                <feedback>Incorrect. At least one of the answer choices you selected is incorrect.<!--[added feedback 9/25/15 ~carol]--></feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. At least one answer choice is correct.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

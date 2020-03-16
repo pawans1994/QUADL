@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m3_inlinetutor1" title="_u4_m3_inlinetutor1">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">Recall that the mean number of defective products in an hour for Xaviers production line (the mean of X) was 1.8. Based on your observation, which of the following do you think is true about the mean of Y?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">The mean of Y is greater than 1.8</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">The mean of Y is less than 1.8</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">The mean of Y is roughly equal to 1.8</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition></resprocessing>
+    <itemfeedback ident="hint">
+      <hint>
+        <hintmaterial>
+          <material>
+            <mattext texttype="text/plain">Look at both distributions. Where is most of the "weight" (probability), on the smaller values or on larger values?</mattext></material></hintmaterial></hint></itemfeedback>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Good Job! Indeed, the probability distribution of Y has most of the weight (80%) on the larger values (3,4), while the distribution of X has most of the "weight" (70%) on the smaller values (0,1,2). Since the mean is a weighted average of the values weighted by their probabilities, we would expect the mean of Y to be larger than the mean of X which is 1.8</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Note that the probability distribution of Y has most of the weight (80%) on the larger values (3,4), while the distribution of X has most of the "weight" (70%) on the smaller values (0,1,2). Recall the the mean of a random variable is a weighted average of it's values weighted by the corresponding probabilities, and try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Note that the probability distribution of Y has most of the weight (80%) on the larger values (3,4), while the distribution of X has most of the "weight" (70%) on the smaller values (0,1,2). Recall the the mean of a random variable is a weighted average of it's values weighted by the corresponding probabilities, and try again.</mattext></material></itemfeedback></item></questestinterop>

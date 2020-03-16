@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m2_casecc1_tutor1">
+    <title>Tutor</title>
+   <question id="q1">
+<body>
+	<p>The number of <em>females</em> in our sample who feel that they are <em>underweight</em> is <input_ref input="A"/>.</p>
+	<p>The number of <em>males</em> in our sample who feel that they are <em>about right</em> is <input_ref input="B"/>.</p>
+	<p>The <em>total</em> number of <em>females</em> in our sample is <input_ref input="C"/>.</p>
+	<p>The <em>total</em> number of students who feel they are <em>overweight</em> is <input_ref input="D"/>.</p>
+</body>
+<fill_in_the_blank id="A" shuffle="false">
+   <choice value="one">37</choice>
+   <choice value="two">110</choice>
+   <choice value="three">163</choice>
+   <choice value="four">760</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="B" shuffle="false">
+   <choice value="one">295</choice>
+   <choice value="two">440</choice>
+   <choice value="three">560</choice>
+   <choice value="four">855</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="C" shuffle="false">
+   <choice value="one">440</choice>
+   <choice value="two">560</choice>
+   <choice value="three">760</choice>
+   <choice value="four">1200</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="D" shuffle="false">
+   <choice value="one">110</choice>
+   <choice value="two">163</choice>
+   <choice value="three">235</choice>
+   <choice value="four">1200</choice>
+</fill_in_the_blank>
+<part>
+    <response input="A" name ="37" match="one" score="1">
+       <feedback>Correct. Since we want those students who are female and responded "underweight," we are looking for the intersection between the Female row and the Underweight column.<!--163Incorrect. You found the number of students who are female and responded "overweight." However, we want the number who are female and responded <em style="italic">"underweight."</em> Look for the number where the Female row and the Underweight column intersect.--></feedback>
+   </response>
+   <response input="A" name ="110" match="two">
+       <feedback>Incorrect. You found the total number of students who responded "underweight." However, we want the number who are <em style="italic">female</em> and responded "underweight." Look for the number where the Female row and the Underweight column intersect.<!--760Incorrect. You found the total number of students who are female. However, we want the number who are female and <em style="italic">responded "underweight."</em> Look for the number where the Female row and the Underweight column intersect.--></feedback>
+   </response>
+   <response input="A" name ="163" match="three">
+       <feedback>Incorrect. You found the number of students who are female and responded "overweight." However, we want the number who are female and responded <em style="italic">"underweight."</em> Look for the number where the Female row and the Underweight column intersect.<!--110 Incorrect. You found the total number of students who responded "underweight." However, we want the number who are <em style="italic">female</em> and responded "underweight." Look for the number where the Female row and the Underweight column intersect.--></feedback>
+   </response>
+   <response input="A" name ="760" match="four">
+       <feedback>Incorrect. You found the total number of students who are female. However, we want the number who are female and <em style="italic">responded "underweight."</em> Look for the number where the Female row and the Underweight column intersect.<!--37 Correct. Since we want those students who are female and responded "underweight," we are looking for the intersection between the Female row and the Underweight column.--></feedback>
+   </response>
+    <hint>To be counted, a student must be female and must have responded "underweight."</hint>
+</part>
+<part>
+    <response input="B" name ="295" match="one" score="1">
+       <feedback>Correct. Since we want the number who are <em style="italic">male</em> and responded "about right," we are looking for the intersection between the Male row and the About Right column.<!--855 Incorrect. You found the total number of students who responded "about right." We are only looking for the <em style="italic">males</em>
+                    with that response.--></feedback>
+   </response>
+   <response input="B" name ="440" match="two">
+       <feedback>Incorrect. You found the total number of students who are male. We are looking for the males who <em style="italic">responded "about right."</em><!--295 Correct. Since we want the number who are <em style="italic">male</em> and responded "about right," we are looking for the intersection between the Male row and the About Right column.--></feedback>
+   </response>
+   <response input="B" name ="560" match="three">
+       <feedback>Incorrect. You found the <em style="italic">females</em> instead of the males who responded "about
+           right."<!--440 Incorrect. You found the total number of students who are male. We are looking for the males who <em style="italic">responded "about right."</em>--></feedback>
+   </response>
+   <response input="B" name ="855" match="four">
+       <feedback>Incorrect. You found the total number of students who responded "about right." We are only looking for the <em style="italic">males</em>
+           with that response.<!--560 Incorrect. You found the <em style="italic">females</em> instead of the males who responded "about
+                    right."--></feedback>
+   </response>
+    <hint>To be counted, a student must be male and must have responded "about right."</hint>
+</part>
+<part>
+   <response input="C" name ="440" match="one">
+       <feedback>Incorrect. You found the total number of males. However, we want the total number of
+           <em style="italic">females</em>.<!--760 Correct. The number in the Total column that is in the Female row is 760.--></feedback>
+   </response>
+   <response input="C" name ="560" match="two">
+       <feedback>Incorrect. You found the number of females who responded "about
+           right." However, we want the <em style="italic">total number</em> of females. Look for the
+           number in the Female row that represents the total.<!--440 Incorrect. You found the total number of males. However, we want the total number of
+           <em style="italic">females</em>.--></feedback>
+   </response>
+    <response input="C" name ="760" match="three" score="1">
+           <feedback>Correct. The number in the Total column that is in the Female row is 760.<!--560 Incorrect. You found the number of females who responded "about
+               right." However, we want the <em style="italic">total number</em> of females. Look for the
+                    number in the Female row that represents the total.--></feedback>
+   </response>
+   <response input="C" name ="1200" match="four">
+       <feedback>Incorrect. You found the total number of students. However, we are only counting the total number of <em style="italic">females</em>. Look for the number in the Female row that represents the total.</feedback>
+   </response>
+    <hint>Look for the appropriate number in the Female row.</hint>
+</part>
+<part>
+   <response input="D" name ="110" match="one">
+       <feedback>Incorrect. You found the total number of students who responded "underweight." We want the total number who responded <em style="italic">"overweight."</em></feedback>
+   </response>
+   <response input="D" name ="163" match="two">
+       <feedback>Incorrect. You found the number of students who are female and
+           responded "overweight." We want the <em style="italic">total number of students</em> who
+                    responded "overweight."</feedback>
+   </response>
+   <response input="D" name ="235" match="three" score="1">
+       <feedback>Correct. The total of the Overweight column is 235.</feedback>
+   </response>
+   <response input="D" name ="1200" match="four">
+       <feedback>Incorrect. You found the total number of students. We want only those <em style="italic">who responded "overweight."</em></feedback>
+   </response>
+    <hint>Look for the appropriate number in the Overweight column.</hint>
+</part>
+   </question>
+</assessment>

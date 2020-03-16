@@ -1,0 +1,68 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+       <item ident="allosteric_mt1">
+         <presentation>
+           <material>
+             <mattext texttype="text/plain">Determine the velocity for different substrate concentrations.  The velocity of the enzyme reaction in the presence of the allosteric activator  will be plotted as blue points.   The black curve corresponds to the data in the absence of inhibitor.
+
+&lt;b&gt;The velocity is higher when the activator is present because:&lt;/b&gt;
+             
+             </mattext></material>
+           <response_lid rcardinality="Single" ident="LID_01">
+             <render_choice>
+               <response_label ident="Res1">
+                 <material>
+                   <mattext texttype="text/plain">The number of enzyme molecules in a form that can bind substrates is higher when the activator is present. increased.</mattext></material></response_label>
+               <response_label ident="Res2">
+                 <material>
+                   <mattext texttype="text/plain">The activator increases how frequently substrates collide with the enzyme.</mattext></material></response_label>
+               <response_label ident="Res3">
+               <material>
+                 <mattext texttype="text/plain">The activator has an attractive force towards the substrate.</mattext></material></response_label>
+               </render_choice>
+           </response_lid>
+         </presentation>
+         <resprocessing>
+           <outcomes>
+             <decvar varname="SCORE" vartype="integer"/></outcomes>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_01">Res1</varequal>
+             </conditionvar>
+             <setvar varname="SCORE">10</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/>
+           </respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_02">Res2</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_03">Res3</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+        </resprocessing>
+         <itemfeedback ident="hint">
+           <hint>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">Compare enzymes with activator bound to those without?</mattext></material>
+             </hintmaterial>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">The enzymes with activator bound can bind substrate and are therefore active. </mattext></material>
+             </hintmaterial>
+             </hint>
+         </itemfeedback>
+         <itemfeedback ident="FeedBack0">
+           <material>
+             <mattext texttype="text/plain">Correct.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack1">
+           <material>
+             <mattext texttype="text/plain">Incorrect.  The rate of collisions is the same.  The activator increases the concentration of enzymes that are functional, therefore increasing the rate.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack2">
+           <material>
+             <mattext texttype="text/plain">Incorrect.  There is no attractive force! he activator increases the concentration of enzymes that are functional, therefore increasing the rate. </mattext></material></itemfeedback>
+        </item>
+     </questestinterop>

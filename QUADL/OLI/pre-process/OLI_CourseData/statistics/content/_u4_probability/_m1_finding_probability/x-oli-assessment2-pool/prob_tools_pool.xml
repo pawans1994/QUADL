@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="prob_tools_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_prob_tools">
+        <!-- LO: prob_tools -->
+        <!-- LO: When appropriate, use tools such as Venn diagrams or probability tables as aids 
+            for finding probabilities. 
+            (use_tools_to_find_probabilities) -->
+        <body>
+            <p>According to the information that comes with a certain prescription drug, when taking
+                this drug, there is a 20% chance of experiencing nausea (N) and a 50% chance of
+                experiencing decreased sexual drive (D). The information also states that there is a
+                15% chance of experiencing both side effects. </p>
+            <p>What is the probability of experiencing only nausea?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.05</choice>
+            <choice value="B">0.10</choice>
+            <choice value="C">0.20</choice>
+            <choice value="D">0.35</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The probability of experiencing only nausea is P(N) − P(N and D)
+                    = 0.2 − 0.15 = 0.05. You could also build a probability table to find P(N and
+                    "not D").</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You may have correctly determined that we want P(only N) = P(N
+                    and "not D"), but you may have tried to calculate this probability multiplying
+                    P(N) and P(not D). This does not work because these events are not independent.
+                    Instead, you could calculate P(only N) = P(N) − P(N and D) = or build a
+                    probability table to find P(N and "not D").</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 0.20 is the probability of experiencing nausea. P(N) includes
+                    the people who experienced both side effects. The probability of experiencing
+                    <em style="italic">only</em> nausea is P(N) − P(N and D). You could also build a probability table to
+                    find P(N and "not D").</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have added P(N) = 0.20 and P(N and D) = 0.15, but this
+                    is incorrect because P(N) includes the people who experienced both side effects.
+                    The probability of experiencing <em style="italic">only</em> nausea is P(only N)
+                    = P(N) − P(N and D) = 0.2 − 0.15 = 0.05. You could also build a probability
+                    table to find P(N and "not D").</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_prob_tools">
+        <!-- LO: prob_tools -->
+        <!-- LO: When appropriate, use tools such as Venn diagrams or probability tables as aids 
+            for finding probabilities. 
+            (use_tools_to_find_probabilities) -->
+        <body>
+            <p>According to the information that comes with a certain prescription drug, when taking
+                this drug, there is a 20% chance of experiencing nausea (N) and a 50% chance of
+                experiencing decreased sexual drive (D). The information also states that there is a
+                15% chance of experiencing both side effects.</p>
+            <p>What is the probability of experiencing neither of the side effects?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.10</choice>
+            <choice value="B">0.40</choice>
+            <choice value="C">0.45</choice>
+            <choice value="D">0.70</choice>
+            <choice value="E">0.85</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You may have computed P(N and D) = P(N) * P(D). This is incorrect
+                    because N and D are not independent events. In your probability table identify
+                    P("not N" and "not D").</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You may have found P(exactly one side effect) = P(N and "not D") +
+                    P("not N" and D) = 0.05 + 0.35. In your probability table, identify P("not N" and
+                    "not D").</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. You want to compute P(neither side effect) = P((not N) and (not
+                    D)) = 0.45.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have incorrectly assumed that N and D are disjoint
+                    events and computed P(N or D). You want to compute P(no side effects). Try
+                    making a probability table and using it to find P(no side effects) = P("not N"
+                    and "not D").</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. You may have interpreted "neither side effect" as {N and "not
+                    D," "not N" and D, "not N" and "not D"} and added these three probabilities from
+                    your probability table. But the sample space for this event is only ("not N" and
+                    "not D").</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_prob_tools">
+        <!-- LO: prob_tools -->
+        <!-- LO: When appropriate, use tools such as Venn diagrams or probability tables as aids 
+            for finding probabilities. 
+            (use_tools_to_find_probabilities) -->
+        <body>
+            <p>An engineering school reports that 55% of its students were male (M), 40% of its
+                students were between the ages of 18 and 20 (A), and that 25% were both male and
+                between the ages of 18 and 20.</p>
+            <p>What is the probability of a random student being female between the ages of 18 and
+                20? Assume P(F) = P(not M).</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.15</choice>
+            <choice value="B">0.16</choice>
+            <choice value="C">0.30</choice>
+            <choice value="D">0.40</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The probability of being female between the ages of 18 and 20 is
+                    P(A) − P(M and A) which equals 0.40 − 0.25 = 0.15. You could also build a
+                    probability table to find P(A and 'not M').</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You may have correctly assumed we wanted to find P(not M and A)
+                    but done so by multiplying P(not M) by P(A). P(not M and A) = P(A) − P(M and
+                    A).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You may have subtracted P(A) from P(M) but that gives the
+                    probability of males not in the age group, rather than the probability of
+                    females who are in the age group. We want to find find P(not M and A) = P(A) −
+                    P(M and A).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 0.40 is the probability of being in the correct age group,
+                    P(A), but that includes both males and females. We want to find find P(not M and
+                    A) = P(A) − P(M and A).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_prob_tools">
+        <!-- LO: prob_tools -->
+        <!-- LO: When appropriate, use tools such as Venn diagrams or probability tables as aids 
+            for finding probabilities. 
+            (use_tools_to_find_probabilities) -->
+        <body>
+            <p>According to the information that comes with a certain prescription drug, when taking
+                this drug, there is a 20% chance of experiencing nausea (N) and a 50% chance of
+                experiencing decreased sexual drive (D). The information also states that there is a
+                15% chance of experiencing both side effects.</p>
+            <p>What formula will give you the probability of experiencing neither of these side
+                effects?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">P("not N" and "not D")</choice>
+            <choice value="B">P(N or D)</choice>
+            <choice value="C">1 − P(N and D)</choice>
+            <choice value="D">1 − P("not N" and "not D")</choice>
+            <choice value="E">P(N and D)</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. You want to compute P((not N) and (not D)) = 1 − P(N and D) = 1 −
+                    [P(N) +P(D) − P(N and D)], which equals P(neither side effect).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. P(N or D) = (P(N) + P(D) − P(N and D) is the probability of
+                    nausea <em style="italic">or</em> decreased sexual drive occurring. However, N and
+                    D are dependent events so this is not the correct formula.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 1 − P(N and D) = 1 − P(one side effect), which is not equal to
+                    the probability of neither side effect occurring.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 1 − P("not N" or "not D") is 1 − P(neither side effect),
+                    whereas you want P(neither side effect) only.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. P(N and D) is the probability that both side effects occur. You
+                    want the probability that <em style="italic">neither</em> side effect
+                    occurs.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q5_prob_tools">
+        <!-- LO: prob_tools -->
+        <!-- LO: When appropriate, use tools such as Venn diagrams or probability tables as aids 
+            for finding probabilities. 
+            (use_tools_to_find_probabilities) -->
+        <body>
+            <p>An engineering school reports that 55% of its students were male (M), 40% of its
+                students were between the ages of 18 and 20 (A), and that 25% were both male and
+                between the ages of 18 and 20.</p>
+            <p>What is the probability of a random student being a female who is not between the
+                ages of 18 and 20?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0.27</choice>
+            <choice value="B">0.25</choice>
+            <choice value="C">0.30</choice>
+            <choice value="D">0.45</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You may have found P(F) * P(not A), but that assumes the events
+                    are independent, and they are not. We want to find P(not M and not A), or P(F and
+                    not A). Use the Complement Rule with the General Addition Rule to get P(F and
+                    not A) = 1 − (P(M)+P(A) − P(M and A)).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You seem to have found P(F) = P(not M). Use the Complement Rule
+                    with the General Addition Rule to get P(F and not A) = 1 − (P(M) + P(A) − P(M and
+                    A)).</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Use the Complement Rule with the General Addition Rule to get P(F
+                    and not A) = 1 − (P(M) + P(A) − P(M and A)), which equals 1 − (0.55 + 0.40 − 0.25) =
+                    1 − 0.70 = 0.30.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You seem to have found P(F) = P(not M). Use the Complement Rule
+                    with the General Addition Rule to get P(F and not A) = 1 − (P(M) + P(A) − P(M and
+                    A)).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

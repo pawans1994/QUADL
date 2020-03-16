@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_probability_trees3">
+<head>
+<title>Probability Trees (3 of 3)</title>
+    <objref idref="use_probability_trees"/>
+</head>
+<body>
+   
+<p>Here is a more practical example:</p>
+<example>
+
+<p>Polygraph (lie-detector) tests are often routinely administered to employees or prospective employees in sensitive positions. A National Research Council study in 2002, headed by Stephen Fienberg from CMU, found that lie detector results are "better than chance, but well below perfection." Typically, the test may conclude someone is a spy 80% of the time when he or she actually is a spy, but 16% of the time the test will conclude someone is a spy when he or she is not.</p>
+<p>Let us assume that 1 in 1,000, or .001, of the employees in a certain highly classified workplace
+                are actual spies.</p>
+<p>Let <em>S</em> be the event of being a spy, and <em>D</em> be the event of the polygraph detecting the employee to be a spy. </p>
+<p>Let's first express the information using probability notations involving events S and D.</p>
+<p>We are given:</p>
+    <ul>
+        <li>1 in 1,000, or 0.001, of the employees are actual spies → <em>P(S) = 0.001</em></li>
+        <li>The test may conclude someone is a spy 80% of the time when he or she actually is a spy → <em>P(D | S) = 0.80</em></li>
+        <li>16% of the time, the test will conclude someone is a spy when he or she is not → <em>P(D | not S) = 0.16</em></li>
+    </ul>
+<p>(a) Let's create a tree diagram for this problem, starting, as usual, with the event for which a
+                nonconditional probability is given, S. It also makes sense that we start with S,
+                since the natural order is that first a person becomes a spy, and then he/she is
+                either detected or not.</p>
+<p>Note that marked in red are the probabilities that are given, and the rest are completed using
+                the Complement Rule as explained earlier.</p>
+<image style="block" src="../webcontent/image014.gif" alt="A probability tree. We will be naming paths
+through the tree with the notation &quot;{first branch-off: probability of branch-off; second branch-off:
+probability of branch-off; ...}&quot;. Here is the tree:
+        {S: 0.001 (red), D: 0.80 (red)};
+        {S: 0.001 (red), not D: 0.20};
+        {not S: 0.999, D: 0.16 (red)};
+        {not S: 0.999, not D: 0.84};"/>
+<p>(b) What is the probability that a randomly chosen employee is not a spy, and the test does not detect the employee as one? In other words, what is P(not S and not D)?</p>
+<image style="block" src="../webcontent/image015.gif" alt="In the probability tree we take the path
+{not S: 0.999, not D: 0.84}."/>
+<p>P(not S and not D) = P(not S) * P(not D | not S) = 0.999 * 0.84 = 0.83916</p>
+<p>(c) What is the probability that a randomly chosen employee <em>is</em> a spy, and the test does <em>not</em> detect the employee as one? (This would be an incorrect conclusion.) In other words, what is P(S and not D)?</p>
+<image style="block" src="../webcontent/image016.gif" alt="In the probability tree we take the path
+{S: 0.001, not D: 0.20}."/>
+<p>P(S and not D) = P(S) * P(not D | S) = 0.001 * 0.20 = 0.0002</p>
+<p>(d) Suppose the polygraph detects a spy; are you convinced that the employee is actually a spy? Find the probability of an employee actually being a spy, given that the test claims he or she is. In other words, find P(S | D).</p>
+<p>Applying Bayes Rule, we have</p>
+<p>P(S | D) = P(S) * P(D | S) / [P(S) * P(D | S) + P(not S) * P(D | not S)]</p>
+<p>= 0.001 * 0.80/[0.001 * 0.80 + 0.999 * 0.16] = 0.0008/0.16064 = 0.005</p>
+<p>The study's conclusion, that more accurate tests than the traditional polygraph are sorely needed, is supported by our answer to part (d): if someone is detected as being a spy, the probability is only 0.005, or half of one percent, that he or she actually is one.</p>
+<image style="block" src="../webcontent/image017.gif" alt="In order to calculate P(S | D), we attempt to calculate
+P(S | D) = P(S and D)/P(D). First, we note that P(S and D) comes from the tree path {S: 0.001, D: 0.80}, so P(S and D) = 
+P(S) and P(D|S) = 0.001 * 0.80 = 0.0008. We also note that P(not S and D) comes from the tree path {not S: 0.999, D: 0.16 },
+so P(not S and D) = P(not S) and P(D | not S) = 0.999 * 0.16 = 0.15984. So, now we can calculate P(D) = P(S and D) or
+P(not S and D) = 0.0008 + 0.15984 = 0.16064. Now, we can calculate P(S | D) = P(S and D)/P(D) = 0.0008/0.16064 = 0.005."/>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>This example helps to highlight how different P(B | A) may be from P(A | B): the probability of being detected, given that an employee is a spy, is P(D | S) = 0.80. In contrast, the probability of being a spy, given that an employee has been detected by the polygraph, is P(S | D) = 0.005.</p>
+</body>
+</section>
+<!--<activity idref="_u4_m2_lbd4" purpose="learnbydoing"/>-->
+    <p>The purpose of the next activity is to give you guided practice in using the information
+            displayed in probability trees in order to answer real-life problems.</p>
+    <section purpose="learnbydoing">
+        <title>Learn By Doing</title>
+        <body>
+            <p>Let's consider the engine overheating example again, where H is the event that the
+                    engine overheats and W is the event that a warning light turns on. We are given
+                    that:</p>
+            <p>P(H) = 0.03</p>
+            <p>P(W | H) = 0.98</p>
+            <p>P(W | not H) = 0.01</p>
+            <p>and in a previous activity we displayed the information using a probability tree:</p>
+            <image src="../webcontent/lbd002.gif" alt="Here is the probability tree with paths through the tree shown in &quot;{
+1st branch-off: probability of 1st branch off, 2nd branch-off: probability of 2nd branch off}&quot;:
+            {H: 0.03, W: 0.98};
+            {H: 0.03, not W: 0.02};
+            {not H: 0.97, W: 0.01};
+            {not H: 0.97, not W: 0.99};"/>
+    <wb:inline idref="u3_m2_trees3_tutor1" purpose="learnbydoing"/>
+            <wb:inline idref="u3_m2_trees3_tutor2" purpose="learnbydoing"/>
+        </body>
+    </section>
+</body>
+</workbook_page>

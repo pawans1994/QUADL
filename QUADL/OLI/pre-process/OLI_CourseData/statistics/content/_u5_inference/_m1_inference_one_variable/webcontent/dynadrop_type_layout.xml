@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dragdrop PUBLIC " -//Carnegie Mellon University//DTD Dynadrop Layout 3.8//EN" "http://oli.cmu.edu/dtd/oli_dynadrop_layout_1_0.dtd">
+<dragdrop>
+    
+    <targetGroup>
+        <!--
+            * Need to make sure the number of items is equal in headerRow and contentRows.
+            * As a HTML reference, think of targetGroup as <table>, headerRow/contentRow as <tr>, and text/target as <td>.
+            * Text can be empty if needed for an empty area.
+            * <img/> source points to the image file RELATIVE to the Workbook Document, NOT this Layout Document
+            * NOTE to course devs: Self-closing tags are identical to empty tags. Example: <text/> is the same thing as <text></text>
+            * <br/> is always a self-closing tag that will never have child elements
+        -->
+        <headerRow>
+            <text/>
+            <text>
+                We reject the Ho
+            (accept Ha).
+            </text>
+            <text>
+               We fail to reject the Ho
+                (not enough evidence to accept Ha).
+            </text>
+        </headerRow>
+        
+        <contentRow>
+            <text>
+                Ho is true
+                
+            </text>
+            <target assessmentId="dropAreaA"/>
+            <target assessmentId="dropAreaB"/>
+        </contentRow>
+        
+        <contentRow>
+            <text>
+             Ho is false
+              (Ha is true)
+                
+            </text>
+            <target assessmentId="dropAreaC"/>
+            <target assessmentId="dropAreaD"/>
+        </contentRow>
+        
+    </targetGroup>
+    
+    <initiatorGroup shuffle="true">
+        <initiator assessmentId="typeIError">Type I error</initiator>
+        <initiator assessmentId="typeIIError">Type II error</initiator>
+        <initiator assessmentId="correctDecision1">Correct Decision</initiator>
+        <initiator assessmentId="correctDecision2">Correct Decision</initiator>
+    </initiatorGroup>
+    
+</dragdrop>
+

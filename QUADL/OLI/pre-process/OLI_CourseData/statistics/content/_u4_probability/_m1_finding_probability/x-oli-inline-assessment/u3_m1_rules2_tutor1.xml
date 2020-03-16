@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u3_m1_rules2_tutor1">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+      <body>
+         <p>What is the probability that a patient taking this drug will not experience insomnia?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.14</choice>
+         <choice value="Res2">0.86</choice>
+         <choice value="Res3">0.74</choice>
+         <choice value="Res4">0.26</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect.  Note that 0.14 is P(I), and you are asked to find P(not I). </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. Indeed, using the complement rule, P(not I) = 1 - P(I) = 1 - 0.14 =
+                  0.86.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>This is not quite
+                  right.<?oxy_comment_start author="mmyers" timestamp="20101130T155828-0500" comment="change correct?"?>
+                  0.74 is<?oxy_comment_end?> the probability that a patient does not experience
+                  headaches, P(not H), and you are asked to find P(not I).</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. 0.26 is the probability that a patient experiences headaches, P(H), and you are asked to find P(not I).</feedback>
+         </response>
+      </part>
+   </question></page>
+</assessment>

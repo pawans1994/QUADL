@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd10">
+    <head>
+        <title>Case C→C</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to draw our conclusion regarding the relationship between
+            participation in the 9/11 rescue and risk of alcohol problems among New York
+            firefighters and first responders. </p>
+        <pullout><alternatives group="statistics.package">
+            <default>
+                <pref:value preference="statistics.package"/>
+            </default>
+            <alternative value="r">
+                <title>R Instructions</title>
+                <p>In the previous activity, we entered observed counts into R and calculated expected counts. This time we enter the same observed counts and conduct a chi-squared test for association on the data.</p>
+                <p>Use the following command to create a data frame of the actual counts into R:</p>
+                <ul style="none">
+                    <li><code>data = data.frame(no.risk=c(793,441), moderate.to.severe.risk=c(309,110), row.names=c("participated","did.not.participate"))</code></li>
+                    <li><code>data</code></li>
+                </ul>
+                <p>Then use this command to calculate the test statistic and p-value for the chi-square test for association (independence):</p>
+                <ul style="none">
+                    <li><code>chisq.test(data)</code></li>
+                </ul>
+                
+                
+                <!--<p>In the previous activity, we entered observed counts into R and calculated
+                        expected counts. This time we will enter the same observed counts and
+                        conduct a chi-square test on the data.</p>
+                <p>To enter the data, use the command:</p>
+                <code>data = data.frame(no.risk=c(793,441), moderate.to.severe.risk=c(309,110), row.names=c("participated","did.not.participate"));
+                    data
+                </code>
+                <p>Then enter this command to calculate the p-value for the chi-square test:</p>
+                <code>chisq.test(data)</code>-->
+                <!--<wb:inline idref="_u5_m2_lbdtutor10a_r"/>-->
+                <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="346">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor10a_r.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor10a_r</param>
+                    </flash>
+                -->
+            </alternative>
+            <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>In the previous activity, we carried out the chi-square test using StatCrunch and obtained the following output:</p>
+                    <p><em>Contingency table results:</em></p>
+                    <p>Rows: 911</p>
+                    <p>Columns: None</p>
+                <image src="../../../../webcontent/inline_assessment/lbd012_statcrunch.gif"/>
+                </alternative>
+
+            <alternative value="minitab">
+                <title>Minitab Instructions</title>
+                <p>In the previous activity, we carried out the chi-square test using Minitab and
+                        obtained the following output:</p>
+                <image style="block" src="../../webcontent/image424.gif" alt="Chi-Square Test: No Risk, M to S Risk
+        Population 1: No Risk: Observed: 783, Expected: 822.67, Chi-Square contribution: 1.070.
+        Population 1: M to S Risk: Observed: 309, Expected: 279.33, Chi-Square contribution: 3.151
+        Population 1: Total: 1102
+        
+        Population 2: No Risk: Observed: 441, Expected: 441.33, Chi-Square contribution: 2.140.
+        Population 2: M to S Risk: Observed: 110, Expected: 139.67, Chi-Square contribution: 6.302
+        Population 2: Total: 551
+        
+        Total No Risk: 1234, Total M to S Risk: 419, Total Total: 1653
+        
+        Chi-Sq: 12.662, DF = 1, P-Value = 0.000"/>
+                <!--<wb:inline idref="u4_m4_qq1_lbd1_tutor1"/>-->
+                <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="346">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor10a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor10a</param>
+                    </flash>
+                -->
+            </alternative>
+
+
+            <alternative value="excel">
+                <title>Excel 2007 Instructions</title>
+                <p>In the previous activity, we created a table of expected counts to go along with
+                        our table of observed counts. In this activity, we will use both of these
+                        tables to conduct a chi-square test on the data.</p>
+                <p>To do this in Excel, we first need to re-create both the table of observed counts
+                        and table of expected counts from the last exercise. Here are the data again
+                        for your convenience:<image style="block"
+                            src="../../webcontent/image424_excel.gif"
+                            alt="Observed Data:
+    Participated, No Risk: 783; Participated, Moderate to Severe Risk: 309
+    Did not Participate, No Risk: 441; Did not Participate, Moderate to Severe Risk: 110
+    
+    Expected Data:
+    Participated, No Risk: 823; Participated, Moderate to Severe Risk: 279
+    Did not Participate, No Risk: 411; Did not Participate, Moderate to Severe Risk: 140"
+                        />
+                    </p>
+               <p> Now use the <code style="inline">CHITEST</code> function in Excel to
+                        calculate the p-value given the data in our tables. To do this, pick an
+                        empty cell and type <code style="inline">=CHITEST([actual range], [expected
+                            range])</code> where [actual range] is the range of observed data in our
+                        table (without row/column headers or totals) and [expected range] is the
+                        range of expected data in our table (again without row/column headers or
+                        totals). </p>
+                <p>For example, assuming that the top left cell in the table above is A1, the formula would be <code style="inline">=CHITEST(B3:C4, B8:C9)</code>.</p>
+            </alternative>
+           <!--   <alternative value="excel2003">
+                <title>Excel 2003 Instructions</title>
+                <p>In the previous activity. we created a table of expected counts to go along with
+                        our table of observed counts. In this activity, we will use both of these
+                        tables to conduct a chi-square test on the data.</p>
+                <p>To do this in Excel, we first need to re-create both the table of observed counts
+                        and table of expected counts from the last exercise. Here are the data again
+                        for your convenience:<image style="block"
+                            src="../../webcontent/image424_excel.gif"
+                            alt="Observed Data:
+    Participated, No Risk: 783; Participated, Moderate to Severe Risk: 309
+    Did not Participate, No Risk: 441; Did not Participate, Moderate to Severe Risk: 110
+    
+    Expected Data:
+    Participated, No Risk: 823; Participated, Moderate to Severe Risk: 279
+    Did not Participate, No Risk: 411; Did not Participate, Moderate to Severe Risk: 140"
+                        />
+                    </p>
+                <p> Now use the <code style="inline">CHITEST</code> function in Excel to
+                    calculate the p-value given the data in our tables. To do this, pick an
+                    empty cell and type <code style="inline">=CHITEST([actual range], [expected
+                        range])</code> where [actual range] is the range of observed data in our
+                    table (without row/column headers or totals) and [expected range] is the
+                    range of expected data in our table (again without row/column headers or
+                    totals). </p>
+                <p>For example, assuming that the top left cell in the table above is A1, the formula would be <code style="inline">=CHITEST(B3:C4, B8:C9)</code>.</p>
+            </alternative>-->
+            <alternative value="ti">
+                <title>TI Instructions</title>
+                <p>In the previous activity, we carried out the chi-square test and obtained the
+                        following output:</p>
+                <image style="block" src="../../webcontent/image515.png" alt="Output for Observed:
+MATRIX[A] 2x2     [ 793 309 ] [ 441 110 ]
+        Output for Expected: MATRIX[B] 2x2     [ 822.67 279.33 ] [ 411.33 139.67 ]
+        
+        &chi;&sup2;-Test: &chi;&sup2; = 12.66174866, p = 3.732199e-4, df = 1"/>
+            </alternative>
+        </alternatives></pullout>
+        <wb:inline
+            idref="u4_m4_qq1_lbd1_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules2_tutor3">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+      <body>
+         <p>The probability of "not L" is:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.86</choice>
+         <choice value="Res2">0.74</choice>
+         <choice value="Res3">1.6</choice>
+         <choice value="Res4">0.65</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Note that .86 is
+                  P(<?oxy_delete author="mmyers" timestamp="20101108T115653-0500" content=" "?>not
+                  I), and you are asked to find P(not L). </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. Note that .74 is
+                  P(<?oxy_delete author="mmyers" timestamp="20101108T115656-0500" content=" "?>not
+                  H), and you are asked to find P(not L). </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>This answer must be
+                  wrong<?oxy_insert_start author="mmyers" timestamp="20101108T115714-0500"?>,<?oxy_insert_end?>
+                  since the probability of any event takes values only between 0 and 1. Therefore,
+                  whatever method you used to get to this answer is incorrect, and you should avoid
+                  using it again. You are asked to find P(not L). Note that P(L) is given in the
+                  problem description, so all you need to do is to apply the complement
+                  rule.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct.  Indeed, using the complement rule, P(not L) = 1 - P(L) = 1 - 0.35 =
+               0.65.</feedback>
+         </response>
+      </part>
+   </question></page>
+</assessment>

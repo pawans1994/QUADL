@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_mean4">
+    <head>
+        <title>Confidence Intervals for the Population Mean (4 of 8)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+    <body>
+
+        <p>So far, we've developed the confidence interval for the population mean from scratch,
+            based on results from probability, and discussed the trade-off between the level of
+            confidence and the precision of the interval. The price you pay for a higher level of
+            confidence is a lower level of precision of the interval (i.e., a wider interval).</p>
+        <p>Is there a way to bypass this trade-off? In other words, is there a way to increase the
+            precision of the interval (i.e., make it narrower) <em style="italic">without</em>
+            compromising on the level of confidence? We will answer this question shortly, but first
+            we need to get a deeper understanding of the different components of the confidence
+            interval and its structure.</p>
+        <section>
+            <title>Understanding the general structure of the confidence intervals</title>
+            <body>
+                <p>We explored the confidence interval for μ for different levels of confidenceand
+                    found that, in general, it has the following form:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:msup>
+                                <m:mi>z</m:mi>
+                                <m:mo>*</m:mo>
+                            </m:msup>
+                            <m:mo>⋅</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> , </p>
+                <p>where z* is a general notation for the multiplier that depends on the level of
+                    confidence. As we discussed before:</p>
+                <p>For a 90% level of confidence, z* = 1.645</p>
+                <p>For a 95% level of confidence, z* = 2 (or 1.96 if you want to be really
+                    precise)</p>
+                <p>For a 99% level of confidence, z* = 2.576</p>
+                <p>To start our discussion about the structure of the confidence interval, let's
+                    denote the <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>z</m:mi>
+                                <m:mo>*</m:mo>
+                            </m:msup>
+                            <m:mo>⋅</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> formula by m.</p>
+                <p>The confidence interval, then, has the form: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mi>m</m:mi>
+                        </m:mrow>
+                    </m:math>:</p>
+                <image style="block" src="../webcontent/image062.gif"
+                    alt="A formula: x-bar &plusmn; z-star
+&times; &sigma;/&radic;n
+                Note that z-star &times; &sigma;/&radic;n is m."/>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is the sample mean, the point estimator for the unknown population
+                    mean (μ).</p>
+                <p>
+                    <em>m</em> is called the <em style="italic">margin of error</em>, since it
+                    represents the maximum estimation error for a given level of confidence.</p>
+                <p> For example, for a 95% confidence interval, we are 95% sure that our estimate
+                    will not depart from the true population mean by more than m, the margin of
+                    error.</p>
+                <p>m is further made up of the product of two components:</p>
+                <p> z*, the confidence multiplier, and</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>, which is the standard deviation of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, the point estimator of μ.</p>
+                <p>Here is a summary of the different components of the confidence interval and its
+                    structure:</p>
+                <image style="block" src="../webcontent/image063.gif"
+                    alt="x-bar is the point estimator. It is
+either added to or subtracted by the margin of error (m). The margin of error is composed of the
+confidence multiplier, z-star, which is multiplied by the standard deviation of the point estimator,
+which is &sigma;/&radic;n ."/>
+                <p>This structure:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi mathvariant="italic">estimate</m:mi>
+                            <m:mo>±</m:mo>
+                            <m:mi mathvariant="italic">margin</m:mi>
+                            <m:mtext> </m:mtext>
+                            <m:mi mathvariant="italic">of</m:mi>
+                            <m:mtext> </m:mtext>
+                            <m:mi mathvariant="italic">error</m:mi>
+                        </m:mrow>
+                    </m:math> ,</p>
+                <p>where the margin of error is further composed of the product of a confidence
+                    multiplier and the standard deviation (or, as we'll see, the standard error) is
+                    the general structure of all confidence intervals that we will encounter in this
+                    course.</p>
+                <p>Obviously, even though each confidence interval has the same components, what
+                    these components actually are is different from confidence interval to
+                    confidence interval, depending on what unknown parameter the confidence interval
+                    aims to estimate.</p>
+                <p>Since the structure of the confidence interval is such that it has a margin of
+                    error on either side of the estimate, it is centered at the estimate (in our
+                    case, <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>), and its width (or length) is exactly twice the margin of error:</p>
+                <image style="block" src="../webcontent/image065.gif"
+                    alt="A number line, on which the estimate has
+been placed. To the left and to the right are two intervals with the size m. So, the confidence interval,
+which comprises of both margins of errors (the left one and right one) is of width 2m."/>
+                <p>The margin of error, m, is therefore "in charge" of the width (or precision) of
+                    the confidence interval, and the estimate is in charge of its location (and has
+                    no effect on the width).</p>
+                <!--<activity idref="_u5_m1_dig4" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m1_confintmean4_tutor1" purpose="didigetthis"/>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

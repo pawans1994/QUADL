@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_continuous_probability_dist2">
+<head>
+<title>Probability Distribution (2 of 2)</title>
+    <objref idref="explain_density_function"/>
+</head>
+<body>
+   
+<p>Now consider another random variable X = foot length of adult males. Unlike shoe size, this
+            variable is not limited to distinct, separate values, because foot lengths can take any
+            value over a <em>continuous</em> range of
+            possibilities<?oxy_insert_start author="mmyers" timestamp="20101121T224947-0500"?>,<?oxy_insert_end?>
+            so we cannot present
+            <?oxy_insert_start author="mmyers" timestamp="20101121T224955-0500"?>this
+            variable<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T224954-0500" content="it"?>
+            with a probability histogram or a table. The probability distribution of foot length (or
+            any other continuous random variable) can be represented by a smooth curve called a
+                <em>probability density curve.</em>
+        </p>
+<image style="block" src="../webcontent/image104.gif" alt="A probability density curve. The horizontal axis
+is labeled X=Male Foot Length. On this graph, a curve is drawn. The curve appears to be a bell curve (looks like
+the cross section of a bell), centered at x=11. The area below the curve is equal to 1."/>
+<p></p>
+<p>Like the modified probability histogram above, the total area under the density curve equals 1, and the curve represents probabilities by area. </p>
+<p>The probability that X gets values in any interval is represented by the area above this interval
+            and below the density curve. In our foot length example, if our interval of interest is
+            between 10 and 12 (marked in red below), and we would like to know P(10<?oxy_insert_start author="mmyers" timestamp="20101121T225117-0500"?>
+            <?oxy_insert_end?>&lt;<?oxy_insert_start author="mmyers" timestamp="20101121T225117-0500"?>
+            <?oxy_insert_end?>X<?oxy_insert_start author="mmyers" timestamp="20101121T225120-0500"?>
+            <?oxy_insert_end?>&lt;<?oxy_insert_start author="mmyers" timestamp="20101121T225120-0500"?>
+            <?oxy_insert_end?>12), the probability that a randomly chosen male has a foot length
+            anywhere between 10 and 12 inches, we'll have to find the area above our interval of
+            interest (10,12) and below our density curve, shaded in blue:</p>
+<image style="block" src="../webcontent/image105.gif" alt="The area under the curve and above the horizontal
+axis from X=10 to X=12 has been shaded in blue. This area is P(10 &lt; X &lt; 12)."/>
+<p> If<?oxy_insert_start author="mmyers" timestamp="20101121T225136-0500"?>,<?oxy_insert_end?> for
+            example, we are interested in P(X &lt; 9), the probability that a randomly chosen male
+            has a foot length
+            <?oxy_insert_start author="mmyers" timestamp="20101121T225146-0500"?>of
+            <?oxy_insert_end?>less than 9 inches, we'll have to find the area shaded in blue
+            below:</p>
+<image style="block" src="../webcontent/image106.gif" alt="The area under the curve and above the horizontal
+axis from X = 6 (the left end of the graph) to X = 9 has been shaded. This area is P(X &lt; 9)."/>
+<section>
+<title>Comments</title>
+<body>
+    <ol>
+
+    
+  <li>  <p>We have seen that for a <em>discrete</em> random variable like shoe size, whether we have a
+                            strict inequality or not <em>does matter</em> when solving for
+                            probabilities. In contrast, for a <em>continuous</em> random variable
+                            like foot length, the probability of a foot length
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T225237-0500"?>of
+                            <?oxy_insert_end?>less than or equal to 9 will be the same as the
+                            probability of a foot length
+                            <?oxy_insert_start author="mmyers" timestamp="20101121T225247-0500"?>of
+                            <?oxy_insert_end?>strictly less than 9. In other words,</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>&lt;</m:mo>
+<m:mn>9</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>≤</m:mo>
+<m:mn>9</m:mn>
+<m:mo>)</m:mo>
+</m:math>.</p>
+<p>Visually, in terms of our density curve, the area under the curve up to and including a certain point is the same as the area up to and excluding the point, because there is no area over a single point.  
+    Conceptually, because a continuous random variable has infinitely many possible values, technically the probability of any single value occurring is zero! </p></li>
+<li><p> It should be clear now why the total area under any probability density curve must be 1. The
+                            total area under the curve represents P(X gets a value in the interval
+                            of its possible values). Clearly, according to the rules of probability
+                            this must be
+                            <?oxy_comment_start author="mmyers" timestamp="20101121T225424-0500" comment="addition OK?"?>1<?oxy_insert_start author="mmyers" timestamp="20101121T225404-0500"?>,
+                            or always true<?oxy_insert_end?>.<?oxy_comment_end?></p></li>
+<li><p>Density curves, like probability histograms, may have any shape imaginable as long as the total area underneath the curve is 1.</p></li>
+    </ol>
+    <p> </p>
+</body>
+</section>
+<section>
+<title>Let's Summarize</title>
+<body>
+<p>The probability distribution of a continuous random variable is represented by a probability density curve.</p>
+<p>The probability that X gets a value in any interval of interest is the area above this interval and below the density curve.</p>
+<image style="block" src="../webcontent/image108.gif" alt="A probability density curve. The vertical axis is labeled
+&quot;Density&quot; and the horizontal axis is labeled &quot;X.&quot; The density curve of x has been drawn on
+the graph, and on the horizontal axis, two points a and b, a &lt; b, have been marked. The area under the density
+curve and above the horizontal axis from a &lt; X &lt; b has been shaded. This area is P(a &le; X &le; b)."/>
+<p>Now that we see how probabilities are found for continuous random variables, we understand why it is more complicated than finding probabilities in the discrete case. As anyone who has studied calculus can attest, finding the area under a curve can be difficult. The general approach is to use <em>integrals.</em> For those of you who did study calculus, the following should be familiar....</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>a</m:mi>
+<m:mo>≤</m:mo>
+<m:mi>X</m:mi>
+<m:mo>≤</m:mo>
+<m:mi>b</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mi>area between a and b and below the density curve</m:mi>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:msubsup>
+<m:mo>∫</m:mo>
+<m:mrow>
+<m:mi>a</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mi>b</m:mi>
+</m:mrow>
+</m:msubsup>
+<m:mi>f</m:mi>
+<m:mo>(</m:mo>
+<m:mi>x</m:mi>
+<m:mo>)</m:mo>
+<m:mi>d</m:mi>
+<m:mi>x</m:mi>
+</m:math>
+
+, where f(x) represents the density curve.</p>
+<p>For those who did not study calculus, don't worry about it. This
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T225619-0500"?>kind of
+                    calculation <?oxy_insert_end?>is definitely beyond the scope of this course.</p>
+<p>In this
+                    course<?oxy_insert_start author="mmyers" timestamp="20101121T225552-0500"?>,<?oxy_insert_end?>
+                    we will encounter several important density
+                    curves<?oxy_insert_start author="mmyers" timestamp="20101121T225608-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T225606-0500" content="---"?>those
+                    for normal random variables, t random variables, chi-square random variables,
+                    and F random variables. Normal and t distributions are bell-shaped
+                    (single-peaked and symmetric) like the density curve in the foot length example;
+                    chi-square and F distributions are single-peaked and skewed
+                    right<?oxy_insert_start author="mmyers" timestamp="20101121T225655-0500"?>,<?oxy_insert_end?>
+                    like in the figure above.</p>
+<p>Rather than get bogged down in the calculus of solving for areas under curves, we will find probabilities for the above-mentioned random variables by consulting tables. Also, statistical software automatically provides such probabilities in the appropriate context.</p>
+<p>In the next
+                    section<?oxy_insert_start author="mmyers" timestamp="20101121T225711-0500"?>,<?oxy_insert_end?>
+                    we will study in more depth one of those random variables, the normal random
+                    variable, and see how we can find probabilities associated with it using
+                    software and tables.</p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

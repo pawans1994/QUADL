@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m2_trees1_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Consider again the following example:</p>
+         <p>An overheating engine can quickly cause serious damage to
+            <?oxy_insert_start author="mmyers" timestamp="20101111T155422-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T155421-0500" content="the"?>
+            car, and therefore a dashboard red warning light is supposed to come on if that happens.
+            In a certain model car, there is a 3% chance of the engine overheating (event H). The
+            probability of the warning light showing up (event W) when it should (i.e., when the
+            engine is really overheating) is 0.98,
+            however<?oxy_insert_start author="mmyers" timestamp="20101111T155515-0500"?>,<?oxy_insert_end?>
+            1% of the time the warning light appears for no apparent reason (i.e., when the engine
+            temperature is normal).</p>
+         <p>In an activity in the previous part we identified the information that this problem provides:</p>
+         <p>P(H) = .03</p>
+         <p>P(W | H) = .98</p>
+         <p>P(W | not H) = .01</p>
+         <p>Which of the following is a correct representation of the given information in a probability tree?</p>
+         <image src="../../webcontent/flash/_u4_m2_digtutor6a_image1.gif" alt="four different probability trees"/>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">A</choice>
+         <choice value="Res2">B</choice>
+         <choice value="Res3">C</choice>
+         <choice value="Res4">D</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. The problem with this tree
+               <?oxy_insert_start author="mmyers" timestamp="20101111T160020-0500"?>is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160018-0500" content="are"?>
+               the probabilities in the two second branch-offs. Note, for example, that we are given
+               that P(W | H) = .98, and according to your tree, it is .99. Also, we are given that
+               P(W | not H) is .01, and according to your tree it is .98.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. While you were right to choose a tree that depicts
+               the fact that H occurs naturally before W, your probabilities are incorrect. Note
+               that P(H) = .03 and not .98 as your tree suggests. (.98 is P(W | H), and should appear in
+               the second branch-off.). Also, note that the probabilities of the first two branches
+               do not sum to 1 as they should.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. While the probabilities are in the right place, you
+               are mixing up the events H (engine overheating) and W (warning light shows up). Note
+               that the natural order is that first H happens and then W. According to the tree you
+               chose<?oxy_insert_start author="mmyers" timestamp="20101111T160156-0500"?>,<?oxy_insert_end?>
+               W happens before H.</feedback>
+         </response>
+         <response match="Res4" score="1">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101111T160003-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T160003-0500" content="J"?>ob!
+               Note that the tree you chose depicts the fact that the natural order is that H
+               happens first (engine overheats), and then W (warning light shows up). The
+               probabilities of each branch are also correct, starting with the non-conditional
+               probabilities for the first branch-off, and conditional probabilities for the second
+               branch-off, making sure that the probabilities of branches branching off the same
+               point add up to 1.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintmean4_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>Suppose the mean hours slept (per day) among a sample of college students was 7.1, and
+            a 95% confidence interval for the population mean hours slept was constructed. Which one
+            of the following could it be?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">(7.1, 8.1)</choice>
+            <choice value="B">(6.9, 7.3)</choice>
+            <choice value="C">(7.0, 7.3)</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. The confidence interval must be centered at the estimate (the
+                    sample mean, in this case).</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The confidence interval must be centered at the sample mean (7.1
+                    in our case), and this is the only interval of the three that satisfies this
+                    requirement.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. The confidence interval must be centered at the estimate (the
+                    sample mean, in this case).</feedback>
+            </response>
+        </part>
+    </question>
+    <question id="q2">
+        <body>Suppose that based on a random sample, a 95% confidence interval for the mean hours
+            slept (per day) among graduate students was found to be (6.5, 6.9). What is the margin
+            of error of this confidence interval?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">6.7</choice>
+            <choice value="B">0.4</choice>
+            <choice value="C">0.2</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Because 6.7 is the center of the confidence interval, it must
+                    be the sample mean. Recall that the width of the confidence interval is twice
+                    the margin of error.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. 0.4 is the width of the confidence interval. Recall that the
+                    width is twice the margin of error.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Because the width of the confidence interval is 0.4 (6.9 - 6.5),
+                    the margin of error must be 0.4 / 2 = 0.2.</feedback>
+            </response>
+        </part>
+    </question>
+    <question id="q3">
+        <body>Suppose that based on a random sample, a 99% confidence interval for the mean hours
+            slept (per day) among college freshmen was found to be (6.5, 7.3). What is the sample
+            mean x&#772;?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">0.8</choice>
+            <choice value="B">0.4</choice>
+            <choice value="C">6.9</choice>
+
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. The width of the confidence interval is 0.8. Recall that the
+                    confidence interval for the population mean µ is centered at the sample
+                    mean.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. 0.4 is half the width of the confidence interval and is
+                    therefore the margin of error. Recall that the confidence interval for the
+                    population mean µ is centered at the sample mean.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. 6.9 is the center of the confidence interval [(6.5 + 7.3)/2] and
+                    is therefore the sample mean.</feedback>
+            </response>
+
+        </part>
+    </question>
+    <question id="q4">
+        <body><p>In a recent study, a random sample of “Intro Stats” students taking an introductory
+                statistics course were asked about the number of hours they spend each week studying
+                for their statistics class. Using the collected data, a 95% confidence interval and
+                a 99% confidence interval for the population mean were constructed.</p>
+            <p>Which of the following could represent the 95% and 99% confidence intervals?
+            </p></body>
+        <multiple_choice shuffle="false">
+            <choice value="A">95%: (5.4, 6.8); 99%: (5.5, 6.7)</choice>
+            <choice value="B">95%: (5.4, 6.8); 99%: (5.3, 7.0)</choice>
+            <choice value="C">95%: (5.4, 6.8); 99%: (5.3, 6.9)</choice>
+            <choice value="D">95%: (5.4, 6.8); 99%: (5.5, 6.6)</choice>
+
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Recall that the 99% confidence interval is wider than the 95%
+                    confidence interval</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect: It is true that the 99% confidence interval must be wider than
+                    the 95% confidence interval, however since both confidence intervals were
+                    constructed using the same data, they must both be centered at the same sample
+                    mean. In this case, the 95% confidence interval is centered at 6.1 ((6.8 + 5.4)
+                    / 2) and the 99% confidence interval is centered at 6.15 ((7.0 + 5.3) / 2).
+                </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The 99% confidence interval is wider than the 95% confidence
+                    interval, and since both confidence intervals were constructed using the same
+                    data, they are both centered at the same sample mean (6.1 in this
+                    case).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall that the 99% confidence interval must be wider than the
+                    95% confidence interval. Also, since both confidence intervals were constructed
+                    using the same data, they should both be centered at the same sample mean. In
+                    this case, the 95% confidence interval is centered at 6.1 ((6.8 + 5.4) / 2) and
+                    the 99% confidence interval is centered at 6.05 ((6.6 + 5.5) / 2).</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

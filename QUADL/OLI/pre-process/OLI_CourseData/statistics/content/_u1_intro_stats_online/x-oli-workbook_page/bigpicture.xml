@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.0//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+	xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+	id="bigpicture">
+	<head>
+		<title>The Big Picture</title>
+	</head>
+	<body>
+				<p>In a nutshell, what statistics is all about is <em>converting data into useful
+				information</em>. Statistics is therefore a process <!--where we are:-->in which we</p>
+		<ul>
+			<li>Collect data, <!--collecting data, --></li>
+			<li>Summarize data, and <!--summarizing data, and--></li>
+			<li>Interpret data. <!--interpreting data. --></li>
+		</ul>
+		<p>To really understand how this process works, we need to put it in a context. We will do that by
+			introducing one of the central ideas of this course&#8212;the <em>Big Picture of
+				Statistics</em>. We will introduce the Big Picture by building it gradually and
+			explaining each step. At the end of the introductory explanation, once you have the full
+			Big Picture in front of you, we will show it again using a concrete example. </p>
+		<p>The process of statistics starts when we identify what group we want to study or learn
+			something about. We call this group the <em>population</em>. Note that the word
+			<em style="italic">population</em> here (and in the entire course) <!--is not just used to refer-->does not refer only to people; it is
+			used in the broader statistical sense<!--, where population can--> to refer not only to people,
+			but also to animals, <!--things etc-->objects, and so on. For example, we might be interested in </p>
+		<ul>
+			<li>The opinions of the population of U.S. adults about the death penalty</li>
+			<li>How the population of mice react to a certain chemical</li>
+			<li>The average price of the population of all one-bedroom apartments in a certain city</li>
+		</ul>
+		<p>Population, then, is the entire group that is the target of our interest:</p>
+		<image style="inline" src="../webcontent/population.png" alt="Pictorial representation of a population"/>
+		<p>In most cases, the population is so large that, as much as we want to, there is absolutely no
+			way we can study all of it (imagine trying to get the opinions of <em style="italic">all</em> U.S.
+			adults about the death penalty). A more practical approach would be to examine and
+			collect data only from a subgroup of the population, which we call a <em style="italic">sample</em>. We call
+			this first step, which involves choosing a sample and collecting data from it,
+				<em>producing data</em>.</p>
+		<image style="inline" src="../webcontent/data.png" alt="Producing data is visualized as taking a subset of
+ the population, and creating a new set of points."/>
+		<p>It should be noted that since, for practical reasons, we need to compromise and examine only a
+			sub-group of the population rather than the whole population, we should make an effort
+			to choose a sample in such a way that it will represent the population well. For
+			example, if we choose a sample from the population of U.S. adults, and ask their
+			opinions about the death penalty, we do not want our sample to consist of only
+			Republicans or only Democrats.</p>
+		<p>Once the data have been collected, what we have is a long list of answers to questions, or
+			numbers, and in order to explore and make sense of the data, we need to summarize that
+			list in a meaningful way. This second step, which consists of summarizing the collected
+			data, is called <em>exploratory data analysis</em>.</p>
+		<image style="inline" src="../webcontent/eda.png" alt="Exploratory data analysis is performed on
+the data which is a subset of the population."/>
+		<p>Now we've obtained the sample results and summarized them, but we are not done. Remember that
+			our goal is to study the population, so what we want is to be able to draw conclusions
+			about the population based on the sample results. Before we can do so, we need to look
+			at how the sample we're using may differ from the population as a whole, so that we can
+			factor that into our analysis. To examine this difference, we use <em>probability</em>. </p>
+		<p>In essence, probability is the "machinery" that allows us to draw conclusions about the
+			population based on the data collected about the sample.</p>
+
+		<image style="inline" src="../webcontent/probability.png" alt="The data and summarization of the data
+created from data analysis are examined using probability, which is the first step in allowing us to
+draw conclusions about the population based on the data."/>
+		
+		<p>Finally, we can use what we've discovered about our sample to draw conclusions about our population.  
+			We call this final step in the process
+				<em>inference</em>.</p>
+		<image style="block" src="../webcontent/inference.png" alt="First, a set of data was created from a
+subset of the population. Then, we perform exploratory data analysis on the data. With these results, we
+apply probability which is our first step in drawing conclusions about the population from the data. After
+we have applied probability to the data, we can draw conclusions. This is called inference, the second step
+in drawing conclusions."/>
+		<p>This is the <em>Big Picture of statistics</em>. </p>
+		<p/>
+		<example>
+			<p>At the end of April 2005, a poll was conducted (by ABC News and the <em style="italic">Washington Post</em>) for the
+				purpose of learning the opinions of U.S. adults about the death penalty. </p>
+			<p>
+				<em>1. Producing Data:</em> A (representative) sample of 1,082 U.S. adults was
+				chosen, and each adult was asked whether he or she favored or opposed the death
+				penalty. </p>
+			<p>
+				<em>2. Exploratory Data Analysis (EDA):</em> The collected data were summarized, and
+				it was found that 65% of the sampled adults favor the death penalty for persons
+				convicted of murder. </p>
+			<p>
+				<em>3 and 4. Probability and Inference:</em> Based on the sample result (of 65%
+				favoring the death penalty) and our knowledge of probability, it was concluded (with
+				95% confidence) that the percentage of those who favor the death penalty in the
+				population is within 3% of what was obtained in the sample (i.e., between 62% and
+				68%). The following figure summarizes the example: </p>
+			
+			<image style="inline" src="../webcontent/big_picture_example.png" alt="A visual representation 
+of the poll conducted about the opinions of U.S. adults about the death penalty. The large population, which 
+represents the U.S. adults, and data was produced from 1082 of these adults by asking them about the death 
+penalty. In the data set, we have 1082 responses, and exploratory data analysis tells us that 65% are in
+in favor of the death penalty. Using both probability and inference, we can draw the conclusion that we are
+95% sure that the population percentage is within 3% of 65% (i.e., between 62% and 68%). This brings us back
+to where we started, the population."/>
+		</example>
+		<p/>
+		
+		
+		
+		<section>
+			<title>Course Structure</title>
+			<body>
+				<p>The structure of this entire course is based on the Big Picture. The course has 
+					<!--four units, one-->one unit for each of the steps in the Big Picture. As the figure below shows, we
+					start this course with EDA (even though it is second in the process of
+					statistics), continue to discuss producing data, then <!--go on-->proceed to
+					probability, so that at the end we’ll be able to discuss inference. The
+					following figure summarizes the structure of the course. </p>
+			</body>
+		</section>
+	
+			<image style="inline" src="../webcontent/big_picture_units.png" alt="Producing data (step 1 in
+the big picture) is covered in Unit 2. Exploratory data analysis (step 2) is covered in Unit 1.
+Probability (step 3) is covered in Unit 3, and inference (step 4) is covered in Unit 4."/>
+			<p>As you’ll see, the Big Picture is the basis upon which the entire course is built, both 
+			conceptually and structurally. We will refer to it often, and having it in mind will help you
+			as you go through the course.</p>
+		
+	</body>
+</workbook_page>

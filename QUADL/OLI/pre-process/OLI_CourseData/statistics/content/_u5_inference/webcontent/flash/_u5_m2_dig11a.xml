@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u5_m2_dig11a" title="question_1">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">We test the following hypotheses:
+          H<sub>0</sub>: There is not a linear relationship between the response time and the damage in a fire.&lt;br&gt;
+          H<sub>a</sub>: There is a linear relationship between the response time and the damage in a fire.&lt;br&gt;And we get a p-value of 0.029. Which of the following is the appropriate conclusion?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">It is quite unlikely to get data like that observed just by chance. Therefore, the data provides sufficient evidence to conclude that there is a significant relationship between response time and damage in a fire.</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">It is quite unlikely to get data like that observed just by chance. Therefore, the data provides sufficient evidence to conclude that response time and damage in a fire are dependent.</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">It is quite likely to get data like that observed just by chance. Therefore, the data does not provide sufficient evidence to conclude that there is a significant linear relationship between response time and damage in a fire.</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">It is quite likely to get data like that observed just by chance. Therefore, the data provides sufficient evidence to conclude that there is a significant linear relationship between response time and damage in a fire.</mattext></material></response_label>
+          <response_label ident="Res5">
+            <material>
+              <mattext texttype="text/plain">It is quite unlikely to get data like that observed just by chance. Therefore, the data provides sufficient evidence to conclude that there is a significant linear relationship between response time and damage in a fire.</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res5</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect. Please try again.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack4">
+      <material>
+        <mattext texttype="text/plain">Correct. When we have a p-value &lt; 0.05, it is unlikely that the observed data could happen by chance. Thus, we would reject the null hypothesis (of no linear correlation between response time and damage in a fire) and conclude that there is indeed significant evidence of a linear relationship between them.</mattext></material></itemfeedback></item></questestinterop>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion2_tutor4">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>Which distribution is a plausible representation of the sampling distribution for
+                    random samples of 30 students?</p>
+                <image src="../webcontent/tutors/9_2_img1.gif" alt="four different sample distributions"/>
+                <input_ref input="C"/>
+            </body>
+            <multiple_choice id="C" shuffle="false">
+                <choice value="one">A</choice>
+                <choice value="two">B</choice>
+                <choice value="three">C</choice>
+                <choice value="four">D</choice>
+            </multiple_choice>
+            <part id="p3">
+                <response input="C" match="one">
+                    <feedback>Incorrect. The mean of the sampling distribution should
+                        be p = 0.62. The mean of this distribution is 0.50.</feedback>
+                </response>
+                <response input="C" match="two" score="1">
+                    <feedback>Correct. The mean of the sampling distribution should be p = 0.62
+                        with standard deviation sqrt( p(1 - p) / n ) = sqrt( 0.62(1 - 0.62 ) / 30) =
+                        0.09. Typical values should fall within one standard deviation of the mean,
+                        from about 0.53 to 0.71. This distribution fits this description, as shown
+                        in <link href="javascript:loadImage('../webcontent/tutors/9_2_img2.gif')"
+                            >the graph</link>. </feedback>
+                </response>
+                <response input="C" match="three">
+                    <feedback>Incorrect. The mean of the sampling distribution should
+                        be p = 0.62 with
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173725-0500"?>a
+                        <?oxy_insert_end?>standard
+                        deviation<?oxy_insert_start author="mmyers" timestamp="20101122T173727-0500"?>
+                        of<?oxy_insert_end?> sqrt( p(1 - p) / n ) = sqrt( 0.62(1 - 0.62) / 30 )
+                        &#8773; 0.09. Graph C has a mean of approximately 0.62, but the standard
+                        deviation looks larger than 0.09. To see this, mark
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173804-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T173803-0500" content="one"?>
+                        standard deviation
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173639-0500"?>on
+                        <?oxy_insert_end?>either side of the mean. The Standard Deviation Rule tells
+                        us that 68% of the sample proportions will fall within this range.
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173652-0500"?>It
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T173653-0500" content="L"?><?oxy_insert_start author="mmyers" timestamp="20101122T173654-0500"?>l<?oxy_insert_end?>ooks
+                        like less than half of the values fall between 0.53 and 0.71 in <link
+                            href="javascript:loadImage('../webcontent/tutors/9_2_img3.gif')">Graph
+                            C</link>. </feedback>
+                </response>
+                <response input="C" match="four">
+                    <feedback>Incorrect. The mean of the sampling distribution should
+                        be p = 0.62 with
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173714-0500"?>a
+                        <?oxy_insert_end?>standard
+                        deviation<?oxy_insert_start author="mmyers" timestamp="20101122T173719-0500"?>
+                        of<?oxy_insert_end?> sqrt( p(1-p) / n) = sqrt( 0.62(1 - 0.62) / 30 ) &#8773;
+                        0.09. Graph D has a mean of approximately 0.62, but the standard deviation
+                        looks smaller than 0.09. To see this, mark
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173758-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T173756-0500" content="one"?>
+                        standard deviation
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173811-0500"?>on
+                        <?oxy_insert_end?>either side of the mean. The Standard Deviation Rule tells
+                        us that 68% of the sample proportions will fall within this range.
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T173823-0500"?>It
+                        l<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T173828-0500" content="L"?>ooks
+                        like most of the values fall between 0.53 and 0.71 in <link
+                            href="javascript:loadImage('../webcontent/tutors/9_2_img4.gif')">Graph
+                            D</link>. </feedback>
+                </response>
+                <hint>The distribution of sample proportions has a mean of p and a standard
+                    deviation of sqrt( p(1 - p) / n) .</hint>
+                <hint>p is the population proportion. In this scenario, p is the proportion of
+                    graduates from public universities who have student loans. n is the sample
+                    size.</hint>
+                <hint> Plug in p = 0.62 and n = 30. Look for a graph with
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T173859-0500"?>a
+                    <?oxy_insert_end?>mean
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T173901-0500"?>of
+                    <?oxy_insert_end?>approximately 0.62 and standard deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T173905-0500"?>of
+                    <?oxy_insert_end?>approximately 0.09. We know from the Standard Deviation Rule
+                    that roughly 68% of the sample proportions will fall within
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T173914-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T173913-0500" content="one"?>
+                    standard deviation of the mean.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

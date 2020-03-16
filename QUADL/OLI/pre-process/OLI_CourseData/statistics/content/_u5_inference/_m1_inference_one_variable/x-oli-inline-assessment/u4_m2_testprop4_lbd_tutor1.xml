@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop4_lbd_tutor1" max_attempts="100">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>Use the graph to approximate the test statistic if p-hat = 0.75: <input_ref
+                    input="A"/></body>
+            <numeric id="A"/>
+            <part>
+                <response input="A" match="1.5" score="10">
+                    <feedback>Correct. The test statistic is the number of standard deviations
+                        p-hat = 0.75 is from p<sub>0</sub> = 0.60. Since p-hat is halfway between the line indicating 1 standard deviation and the 
+                        line indicating 2 standard deviations, that makes p-hat 1.5 standard deviations above p<sub>0</sub>.</feedback>
+                </response>
+                <response input="A" match="*">
+                    <feedback>Incorrect. The test statistic is the number of standard
+                        deviations p-hat = 0.75 is from p<sub>0</sub> = 0.60.</feedback>
+                </response>
+                <hint>The test statistic is the number of standard deviations
+                    p-hat = 0.75 is from p<sub>o</sub> = 0.60.</hint>
+                <hint>p-hat is halfway between the line that is 1 standard deviation and the line that is 2 standard deviations 
+                    above p<sub>o</sub>.</hint>
+                <hint>p-hat = 0.75 is 1.5 standard deviations above p<sub>0</sub> = 0.60.</hint>
+                <hint>The test statistic is approximately 1.5.</hint>
+            </part>
+        </question>
+        <question id="q2">
+            <body>Use the graph to approximate the test statistic if p-hat = 0.40: <input_ref
+                input="B"/></body>
+            <numeric id="B"/>
+            <part>
+                <response input="B" match="-2" score="10">
+                    <feedback>Correct. The test statistic is the number of standard deviations
+                        p-hat = 0.40 is from p<sub>0</sub> = 0.60. Now p-hat is at the line that is 2 standard deviations below p<sub>0</sub>. 
+                        Since p-hat is below p<sub>0</sub>, the test statistic is negative.</feedback>
+                </response>
+                <response input="B" match="*">
+                    <feedback>Incorrect. The test statistic is the number of standard
+                        deviations p-hat = 0.40 is from p<sub>0</sub> = 0.60.</feedback>
+                </response>
+                <hint>The test statistic is the number of standard deviations
+                    p-hat = 0.40 is from p<sub>0</sub> = 0.60.</hint>
+                <hint>p-hat is at the line that is 2 standard deviations below p<sub>0</sub>.</hint>
+                <hint>Since p-hat is below
+                    p<sub>0</sub>, the test statistic is negative.</hint>
+                <hint>The test statistic is approximately -2.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

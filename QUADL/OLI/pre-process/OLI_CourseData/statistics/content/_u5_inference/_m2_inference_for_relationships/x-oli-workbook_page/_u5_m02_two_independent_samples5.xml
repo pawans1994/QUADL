@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m02_two_independent_samples5">
+<head>
+<title>Two Independent Samples (5 of 7)</title>
+    <objref idref="carry_out_inferential_method_groups"/>
+    <objref idref="specify_hypotheses_for_groups"/>
+</head>
+<body>
+    
+<p>Let's look at another example, and then you'll do one yourself.</p>
+<example>
+
+<p>According to the National Health And Nutrition Examination Survey (NHANES) sponsored by the U.S.
+                government, a random sample of 712 males between 20 and 29 years of age and a random
+                sample of 1,001 males over the age of 75 were chosen, and the weight of each of the
+                males was recorded (in kg). Here is a summary of the results (source:
+                http://www.cdc.gov/nchs/data/ad/ad347.pdf):</p>
+<image style="block" src="../webcontent/image194.gif" alt="For males 20-29 years old, n = 712, Y-bar
+= 83.4, S = 18.7.   For males 75+ years old, n = 1001, Y-bar = 78.5, S = 19.0"/>
+<p>Do the data provide evidence that the younger male population weighs more (on average) than the
+                older male population? (Note that here the data are given in a summarized form,
+                unlike the previous problem, where the raw data were given.)</p>
+<p>Here is a figure that summarizes this example:</p>
+<image style="block" src="../webcontent/image043.gif" alt="We have two populations, from the two categories
+in the variable Age Group(X). Population 1 is Males 20-29 years old, and Population 2 is Males 75+ years old.
+Population 1's Weight (Y) mean is &mu;_1, and population 2's weight (Y) mean is &mu;_2. For population 1, a
+SRS of size 712 is generated. It has a mean of 83.4 and SD of 18.7 . For population 2, another SRS is
+generated of size 1001. It has a mean of 78.5 and SD of 19.0 ."/>
+<p>Note that we defined the younger age group and the older age group as population 1 and population
+                                                  2, respectively, and μ<sub>1</sub> and
+                                                  μ<sub>2</sub> as the mean weight of population 1
+                                                  and population 2, respectively. </p>
+<p>
+<em>Step 1:</em>
+</p>
+<p>Since we want to test whether the older age group (population 2) weighs less on average than the younger age group (population 1), we are testing:</p>
+<image style="block" src="../webcontent/image044.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,  H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+<p>or equivalently,</p>
+<image style="block" src="../webcontent/image045.gif" alt="H_0: &mu;_1 = &mu;_2,  H_a: &mu;_1 &gt; &mu;_2"/>
+<p>
+<em>Step 2:</em>
+</p>
+<p>We can safely use the two-sample t-test in this case since:</p>
+<ol style="lower-roman">
+      <li><p>The samples are independent, since each of the samples was chosen at random.</p></li>
+<li><p>Both sample sizes are very large (712 and 1,001), 
+                                                  and therefore we can proceed regardless of whether
+                                                  the populations are normal or not.</p></li></ol>
+
+    
+    <p>It is possible from these data to calculate the t-statistic of 5.31 and the p-value of 0.000.
+                                                  The t-value is quite large, and the p-value
+                                                  correspondingly small, indicating that our data
+                                                  are very different from what is claimed in the
+                                                  null hypothesis.</p>
+    
+    
+   <!-- RS  07/28/10  Generalized to eliminate alternatives
+       <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>To find the test statistic we'll use Excel.  In this case Excel tells us that the test statistic is 5.31, which is quite large, indicating that our data are very different from what is claimed in the null hypothesis.  Excel also reports a p-value of 0.000.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>To find the test statistic we'll use the output:</p>
+<image style="block" src="../webcontent/image195.gif"/>
+<p>We find the test statistic is 5.31, which is quite large, indicating that our data are very different from what is claimed in the null hypothesis.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>It is possible from these data to calculate the t-statistic of 5.31 and the p-value of 0.000. The t-value is quite large and the p-value correspondingly small, indicating that our data are very different from what is claimed in the null hypothesis.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<p>
+<em>Step 3:</em>
+</p>
+                <p>The p-value is essentially 0, indicating that it would be 
+                                                
+                                                   nearly impossible to observe a
+                                                  difference between the sample mean weights of 4.9
+                                                  (or more) if the mean weights in the age group
+                                                  populations were the same (i.e., if H<sub>o</sub>
+                                                  were true).</p>
+<p>
+<em>Step 4:</em>
+</p>
+<p>A p-value of 0 (or very close to it) indicates that the data provide strong evidence against
+                                                  H<sub>o</sub>, so we reject it and conclude that
+                                                  the mean weight of males 20-29 years old is higher
+                                                  than the mean weight of males 75 years old and
+                                                  older. In other words, males in the younger age
+                                                  group weigh more, on average, than males in the
+                                                  older age group.</p>
+</example>
+<p>Now you try one!</p>
+<activity idref="_u5_m2_lbd2" purpose="learnbydoing"/>
+</body>
+</workbook_page>

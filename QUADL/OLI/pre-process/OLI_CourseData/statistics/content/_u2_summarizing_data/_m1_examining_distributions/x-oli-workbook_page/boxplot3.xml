@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+   xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+   id="boxplot3">
+   <head>
+      <title>Boxplot (3 of 3)</title>
+      <objref idref="compare_quantitative_distributions"/>
+   </head>
+   <body>
+
+      <section>
+         <title>Side-By-Side (Comparative) Boxplots</title>
+         <body>
+            <p>As we learned in the beginning of this module, the distribution of a quantitative
+               variable is best represented graphically by a histogram. Boxplots are most useful
+               when presented side-by-side for comparing and contrasting distributions from two or
+               more groups. </p>
+         </body>
+      </section>
+      <example>
+         <title>Best Actor/Actress Oscar Winners</title>
+         <p>So far we have examined the age distributions of Oscar winners for males and females
+            separately.</p>
+         <p>It will be interesting to <em style="italic">compare</em> the age distributions of
+            actors and actresses who won best acting Oscars. To do that we will look at side-by-side
+            boxplots of the age distributions by gender. <!-- <image style="block"
+               src="../webcontent/boxplot7.gif" alt="A box plot, titled &quot;Side-By-Side (Comparative)
+Boxplots - Age of Best Actor/Actress Oscar Winners (1970-2001). On the left is the axis labeled &quot;Age
+&quot;, And it goes from 20 to 80. There are two box-plots represented here, one for actors and one for
+actresses."/> -->
+            <iframe src="https://plot.ly/~OLI_Stanford/134.embed?link=false" height="600"
+               width="700"
+               title="Side-By-Side (Comparative) Boxplots of Best Actor/Actress Oscar Winners (1970-2013)"
+            > </iframe> Recall also that we found the five-number summary and means for both
+            distributions. For the Best Actress dataset, we did the calculations by hand. For the
+            Best Actor dataset, we used statistical software, and here are the results we got: </p>
+
+         <alternatives group="statistics.package">
+            <default><pref:value preference="statistics.package"/></default>
+            <alternative value="StatCrunch">
+               <title>StatCrunch</title>
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+               <!--   <image style="block" src="../webcontent/boxplot3/boxplot3_image1.png"
+            alt="Side-by-side boxplots comparing age distributions of Oscar-winning actors and actresses"/>-->
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (34.5) is lower than for the males (43.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (42) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do.</p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 47). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see slightly more
+                  spread in the ages of males (IQR = 12.5) than females (IQR = 11.5). We conclude
+                  that among all the winners, the actors' ages are more alike than the actresses'
+                  ages. However, the middle 50% of the age distribution of actresses is more
+                  homogeneous than the actors' age distribution.</p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+            </alternative>
+            <alternative value="r">
+               <title>R</title>
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+               <!--   <image style="block" src="../webcontent/boxplot3/boxplot3_image1.png"
+          alt="Side-by-side boxplots comparing age distributions of Oscar-winning actors and actresses"/>-->
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (34.5) is lower than for the males (43.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (42) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do.</p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 47). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see slightly more
+                  spread in the ages of males (IQR = 12.5) than females (IQR = 11.5). We conclude
+                  that among all the winners, the actors' ages are more alike than the actresses'
+                  ages. However, the middle 50% of the age distribution of actresses is more
+                  homogeneous than the actors' age distribution.</p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+            </alternative>
+
+            <alternative value="minitab">
+               <title>Minitab</title>
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+               <!--  <image style="block" src="../webcontent/boxplot3/boxplot3_image1.png"
+            alt="Side-by-side boxplots comparing age distributions of Oscar-winning actors and actresses"/> -->
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (34.5) is lower than for the males (43.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (42) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do.</p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 47). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see slightly more
+                  spread in the ages of males (IQR = 12.5) than females (IQR = 11.5). We conclude
+                  that among all the winners, the actors' ages are more alike than the actresses'
+                  ages. However, the middle 50% of the age distribution of actresses is more
+                  homogeneous than the actors' age distribution.</p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+            </alternative>
+            <alternative value="excel">
+               <title>Excel 2013 and 2016 Instructions</title>
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+               <!--     <image style="block" src="../webcontent/boxplot3/boxplot3_image1.png"
+            alt="Side-by-side boxplots comparing age distributions of Oscar-winning actors and actresses"/>-->
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (34.5) is lower than for the males (43.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (42) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do.</p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 47). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see slightly more
+                  spread in the ages of males (IQR = 12.5) than females (IQR = 11.5). We conclude
+                  that among all the winners, the actors' ages are more alike than the actresses'
+                  ages. However, the middle 50% of the age distribution of actresses is more
+                  homogeneous than the actors' age distribution.</p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+            </alternative>
+            <!--   <alternative value="excel2003">
+               <title>Excel 2003</title>
+
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+             
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (35) is lower than for males (42.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (41.5) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do. </p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 45). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see more spread in
+                  the ages of males (IQR = 11) than females (IQR = 9.5). We conclude that among all
+                  the winners, the actors' ages are more alike than the actresses' ages. However,
+                  the middle 50% of the age distribution of actresses is more homogeneous than the
+                  actors' age distribution. </p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+                  </alternative>-->
+            <alternative value="ti">
+               <title>TI Calculator</title>
+
+               <ul>
+                  <li>Actors: min = 31, Q1 = 38, M = 43.5, Q3 = 50.5, Max = 76</li>
+                  <li>Actresses: min = 21, Q1 = 30.5, M = 34.5, Q3 = 42, Max = 80</li>
+               </ul>
+               <!--    <image style="block" src="../webcontent/boxplot3/boxplot3_image1.png"
+            alt="Side-by-side boxplots comparing age distributions of Oscar-winning actors and actresses"/>-->
+               <p>Based on the graph and numerical measures, we can make the following comparison
+                  between the two distributions: </p>
+               <p>
+                  <em>Center:</em> The graph reveals that the age distribution of the males is
+                  higher than the females' age distribution. This is supported by the numerical
+                  measures. The median age for females (34.5) is lower than for the males (43.5).
+                  Actually, it should be noted that even the third quartile of the females'
+                  distribution (42) is lower than the median age for males. We therefore conclude
+                  that in general, actresses win the Best Actress Oscar at a younger age than actors
+                  do.</p>
+               <p>
+                  <em>Spread:</em> Judging by the range of the data, there is much more variability
+                  in the females' distribution (range = 59) than there is in the males' distribution
+                  (range = 47). On the other hand, if we look at the IQR, which measures the
+                  variability only among the middle 50% of the distribution, we see slightly more
+                  spread in the ages of males (IQR = 12.5) than females (IQR = 11.5). We conclude
+                  that among all the winners, the actors' ages are more alike than the actresses'
+                  ages. However, the middle 50% of the age distribution of actresses is more
+                  homogeneous than the actors' age distribution.</p>
+               <p>
+                  <em>Outliers:</em> We see that we have outliers in both distributions. There is
+                  only one high outlier in the actors' distribution (76, Henry Fonda, <em
+                     style="italic">On Golden Pond</em>), compared with three high outliers in the
+                  actresses' distribution. </p>
+            </alternative>
+         </alternatives>
+
+      </example>
+
+
+
+
+      <example>
+         <title>Temperature of Pittsburgh vs. San Francisco</title>
+         <p>In order to compare the average high temperatures of Pittsburgh to those in San
+            Francisco we will look at the following side-by-side boxplots, and supplement the graph
+            with the descriptive statistics of each of the two distributions.</p>
+         <image style="block" src="../webcontent/boxplot8.gif"
+            alt="A box plot titled &quot;Average High Temperature:
+San Francisco vs. Pittsburgh&quot;. The vertical axis is in units of Temperature (F), and it goes from 30-80.
+There are two box plots, one for Pittsburgh and one for San Francisco."/>
+         <table>
+            <tr>
+               <th>Statistic</th>
+               <th>San Francisco</th>
+               <th>Pittsburgh</th>
+            </tr>
+            <tr>
+               <th>min</th>
+               <td>56.3</td>
+               <td>33.7</td>
+            </tr>
+            <tr>
+               <th>Q1</th>
+               <td>60.2</td>
+               <td>41.2</td>
+            </tr>
+            <tr>
+               <th>Median</th>
+               <td>62.7</td>
+               <td>61.4</td>
+            </tr>
+            <tr>
+               <th>Q3</th>
+               <td>65.35</td>
+               <td>77.75</td>
+            </tr>
+            <tr>
+               <th>Max</th>
+               <td>68.7</td>
+               <td>82.6</td>
+            </tr>
+         </table>
+
+         <!--   RS 07/28/10 - replaced by table above
+     <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007</title>
+<image style="block" src="../webcontent/boxplot9excel.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab</title>
+<image style="block" src="../webcontent/boxplot9.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab</title>
+<image style="block" src="../webcontent/boxplot9r.gif"/>
+</alternative>
+</alternatives>-->
+         <p>When looking at the graph, the similarities and differences between the two
+            distributions are striking. Both distributions have roughly the same center (medians are
+            61.4 for Pitt, and 62.7 for San Francisco). However, the temperatures in Pittsburgh have
+            a much larger variability than the temperatures in San Francisco (Range: 49 vs. 12. IQR:
+            36.5 vs. 5). </p>
+         <p>The practical interpretation of the results we got is that the weather in San Francisco
+            is much more consistent than the weather in Pittsburgh, which varies a lot during the
+            year. Also, because the temperatures in San Francisco vary so little during the year,
+            knowing that the median temperature is around 63 is actually very informative. On the
+            other hand, knowing that the median temperature in Pittsburgh is around 61 is
+            practically useless, since temperatures vary so much during the year, and can get much
+            warmer or much colder. </p>
+         <p>Note that this example provides more intuition about variability by interpreting small
+            variability as consistency, and large variability as lack of consistency. Also, through
+            this example we learned that the center of the distribution is more meaningful as a
+            typical value for the distribution when there is little variability (or, as
+            statisticians say, little "noise") around it. When there is large variability, the
+            center loses its practical meaning as a typical value. </p>
+      </example>
+      <activity idref="boxplot3lbd" purpose="learnbydoing"/>
+      <section>
+         <title>Let's Summarize</title>
+         <body>
+            <ul>
+               <li>The five-number summary of a distribution consists of the median (M), the two
+                  quartiles (Q1, Q3) and the extremes (min, Max).</li>
+               <li>The five-number summary provides a complete numerical description of a
+                  distribution. The median describes the center, and the extremes (which give the
+                  range) and the quartiles (which give the IQR) describe the spread.</li>
+               <li>The boxplot graphically represents the distribution of a quantitative variable by
+                  visually displaying the five number summary and any observation that was
+                  classified as a suspected outlier using the 1.5 (IQR) criterion. </li>
+               <li>Boxplots are most useful when presented side-by-side to compare and contrast
+                  distributions from two or more groups. </li>
+            </ul>
+         </body>
+      </section>
+   </body>
+</workbook_page>

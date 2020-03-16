@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<link href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" type="text/css" rel="stylesheet">
+<assessment id="_u5_m1_checkpoint1" max_attempts="3" recommended_attempts="1">
+	<title>Estimation Checkpoint</title>
+<!-- 	<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+				following link:</em>
+			<link href="../webcontent/estimation_checkpoint_solutions.pdf">Solution Set</link>.</p>
+	</content> -->
+
+	<multiple_choice id="inference1-1" select="single">
+		<body> We say that a point estimator is <em>unbiased</em> if (choose one): </body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> its sampling distribution is centered exactly at the parameter it
+				estimates. </choice>
+			<choice value="B"> the standard deviation of its sampling distribution decreases as
+				the sample size increases. </choice>
+			<choice value="C"> its sampling distribution is normal. </choice>
+			<choice value="D"> its value is always equal to the parameter it estimates. </choice>
+			<choice value="E"> Choices (A), (B), and (C) are all true. </choice>
+		</input>
+		<part>
+			<response match="A" score="10">
+				<feedback> Correct. This is the definition of an unbiased estimator (see the second
+					page about Point Estimation). </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Incorrect. The standard deviation of the sampling
+					distribution will decrease as the sample size increases regardless of the bias
+					of the point estimator. Consider the remaining options. (A) is the correct
+					answer. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback> Incorrect. By the Central Limit Theorem, we know that
+					sampling distributions are mostly normal regardless of the bias of the point
+					estimator. Consider the remaining options. (A) is the correct answer.
+				</feedback>
+			</response>
+			<response match="D" score="0">
+				<feedback> Incorrect. The only requirement for a point estimator to be
+					unbiased is that the expected value of the point estimator is the same as the
+					associated population parameter value. Consider the remaining options. (A) is
+					the correct answer. </feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback> Incorrect. The standard deviation of the sampling
+					distribution will decrease as the sample size increases regardless of the bias
+					of the point estimator. By the Central Limit Theorem, we know that sampling
+					distributions are mostly normal regardless of the bias of the point estimator.
+					Consider the remaining options. (A) is the correct answer. </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+	<section id="assess_8_computeruse">
+		<content>
+			<p> The next four questions refer to the following information: </p>
+			<p> A study was conducted in order to estimate &#956;, the mean number of weekly hours
+				that U.S. adults use computers at home. Suppose a random sample of 81 U.S. adults
+				gives a mean weekly computer usage time of 8.5 hours and that from prior studies,
+				the population standard deviation is assumed to be &#963; = 3.6 hours. </p>
+		</content>
+		<multiple_choice id="inference1-2" select="single">
+			<body> Based on this information, what would be the point estimate for &#956;? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> 81 </choice>
+				<choice value="B"> 8.5 </choice>
+				<choice value="C"> 3.6 </choice>
+				<choice value="D"> None of the above. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. 81 represents the size of the sample, not
+						the point estimate for &#956;, the population mean. Consider the remaining
+						options. (B) is the right answer. </feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback> Correct. The point estimate for the population mean &#956; is the sample
+						mean, <m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>x</m:mi>
+									<m:mo>&macr;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math>. In this case, to estimate the mean number of weekly hours of
+						home-computer use among the population of U.S. adults, we used the sample
+						mean obtained from the sample, therefore <m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>x</m:mi>
+									<m:mo>&macr;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math> = 8.5. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. 3.6 is the assumed population standard
+						deviation, not the point estimate for &#956;, the population mean. Consider the
+						remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. It may be helpful to review the section on
+						point estimation and then try this question again. (B) is the right answer.
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-3" select="single">
+			<body> We are 95% confident that the mean number of weekly hours that U.S. adults use
+				computers at home is: </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> between 8.1 and 8.9. </choice>
+				<choice value="B"> between 7.8 and 9.2. </choice>
+				<choice value="C"> between 7.7 and 9.3. </choice>
+				<choice value="D"> between 7.5 and 9.5. </choice>
+				<choice value="E"> between 7.3 and 9.7. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. It seems that you have found a 68%
+						confidence interval for the mean rather than a 95% confidence interval for
+						the mean. Consider the remaining options. (C) is the right answer.
+					</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that the standard deviation you
+						should be using for this calculation is <m:math display="inline">
+							<m:mrow>
+								<m:mfrac bevelled="true">
+									<m:mi>&sigma;</m:mi>
+									<m:msqrt>
+										<m:mi>n</m:mi>
+									</m:msqrt>
+								</m:mfrac>
+							</m:mrow>
+						</m:math> . Consider the remaining options. (C) is the right answer.
+					</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback> Correct. The 95% confidence interval for the mean, &#956;, is <m:math
+							display="block">
+							<m:mrow>
+								<m:mover>
+									<m:mi>x</m:mi>
+									<m:mo>&macr;</m:mo>
+								</m:mover>
+								<m:mo lspace="2px" rspace="2px">&PlusMinus;</m:mo>
+								<m:mn>2</m:mn>
+								<m:mo lspace="2px" rspace="2px">&sdot;</m:mo>
+								<m:mfrac>
+									<m:mi>&sigma;</m:mi>
+									<m:msqrt>
+										<m:mi>n</m:mi>
+									</m:msqrt>
+								</m:mfrac>
+								<m:mo>=</m:mo>
+								<m:mn>8.5</m:mn>
+								<m:mo lspace="2px" rspace="2px">&PlusMinus;</m:mo>
+								<m:mn>2</m:mn>
+								<m:mo lspace="2px" rspace="2px">&sdot;</m:mo>
+								<m:mfrac>
+									<m:mn>3.6</m:mn>
+									<m:msqrt>
+										<m:mn>81</m:mn>
+									</m:msqrt>
+								</m:mfrac>
+								<m:mo>=</m:mo>
+								<m:mn>8.5</m:mn>
+								<m:mo lspace="2px" rspace="2px">&PlusMinus;</m:mo>
+								<m:mo>.</m:mo>
+								<m:mn>8</m:mn>
+								<m:mo>=</m:mo>
+								<m:mo stretchy="false">(</m:mo>
+								<m:mn>7.7</m:mn>
+								<m:mo>,</m:mo>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mn>9.3</m:mn>
+								<m:mo stretchy="false">)</m:mo>
+								<m:mo>.</m:mo>
+							</m:mrow>
+						</m:math> .</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Remember that the standard deviation you
+						should be using for this calculation is <m:math display="inline">
+							<m:mrow>
+								<m:mfrac bevelled="true">
+									<m:mi>&sigma;</m:mi>
+									<m:msqrt>
+										<m:mi>n</m:mi>
+									</m:msqrt>
+								</m:mfrac>
+							</m:mrow>
+						</m:math>. Consider the remaining options. (C) is the right
+						answer.</feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. It seems that you have found a 99.7%
+						confidence interval for the mean rather than a 95% confidence interval for
+						the mean. Consider the remaining options. (C) is the right answer.
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-4" select="single">
+			<body> Which of the following will provide a more informative (i.e., narrower)
+				confidence interval than the one in problem 3? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> Using a sample of size 400 (instead of 81). </choice>
+				<choice value="B"> Using a sample of size 36 (instead of 81). </choice>
+				<choice value="C"> Using a different sample of size 81. </choice>
+				<choice value="D"> Using a 90% level of confidence (instead of 95%). </choice>
+				<choice value="E"> Using a 99% level of confidence (instead of 95%). </choice>
+				<choice value="F"> Both (A) and (D) are correct. </choice>
+				<choice value="G"> Both (A) and (E) are correct. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Although increasing the sample size will
+						provide a narrower confidence interval, there is a better option. Consider
+						the remaining options. (F) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that <m:math display="inline">
+							<m:mrow>
+								<m:msub>
+									<m:mi>&sigma;</m:mi>
+									<m:mover>
+										<m:mi>x</m:mi>
+										<m:mo>&macr;</m:mo>
+									</m:mover>
+								</m:msub>
+								<m:mo>=</m:mo>
+								<m:mfrac bevelled="true">
+									<m:mi>&sigma;</m:mi>
+									<m:msqrt>
+										<m:mi>n</m:mi>
+									</m:msqrt>
+								</m:mfrac>
+							</m:mrow>
+						</m:math> . As a result, decreasing the sample size will increase the
+						standard deviation of the sampling distribution of the mean. Consider the
+						remaining options. (F) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. This may cause the point estimator, <m:math
+							display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>x</m:mi>
+									<m:mo>&macr;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math> , to change. However, the width of the confidence interval will
+						stay the same. Consider the remaining options. (F) is the right answer.
+					</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Although decreasing the confidence level
+						will result in a narrower confidence interval, there is a better option.
+						Consider the remaining options. (F) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Increasing the confidence level will result
+						in a wider confidence interval. Consider the remaining options. (F) is the
+						right answer. </feedback>
+				</response>
+				<response match="F" score="10">
+					<feedback> Correct. In general, we can obtain a more informative (narrower)
+						confidence interval in one of two ways: compromising on the level of
+						confidence (in other words, choosing a lower level of confidence), or
+						increasing the sample size (that might be impossible in practice, though).
+					</feedback>
+				</response>
+				<response match="G" score="0">
+					<feedback> Incorrect. Increasing the confidence level will result
+						in a wider confidence interval. Consider the remaining options. (F) is the
+						right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-5" select="single">
+			<body> How large a sample of U.S. adults is needed in order to estimate &#956; with a
+				95% confidence interval of <em>length</em> 1.2 hours? </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> 6 </choice>
+				<choice value="B"> 12 </choice>
+				<choice value="C"> 20 </choice>
+				<choice value="D"> 36 </choice>
+				<choice value="E"> 144 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Remember that the sample size you should be
+						using is found by using the following equation: length = 2 * margin of
+						error. Consider the remaining options. (E) is the correct answer.
+					</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that the sample size you should be
+						using is found by using the following equation: length = 2 * margin of
+						error. Consider the remaining options. (E) is the correct answer.
+					</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Remember that the sample size you should be
+						using is found by using the following equation: length = 2 * margin of
+						error. Consider the remaining options. (E) is the correct answer.
+					</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Remember that the sample size you should be
+						using is found by using the following equation: length = 2 * margin of
+						error. Consider the remaining options. (E) is the correct answer.
+					</feedback>
+				</response>
+				<response match="E" score="10">
+					<feedback> Correct. We would like our confidence interval to be a 95%
+						confidence interval (implying that z* = 2) and the confidence interval
+						length should be
+						<?oxy_comment_start author="mmyers" timestamp="20101126T122527-0500" comment="new wording correct?"?>1.2,
+						therefore the <?oxy_comment_end?>margin of error (m) = 1.2 / 2 = .6. The
+						sample size we need in order to obtain this is: 144. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	<section id="assess_08_civilunions">
+		<content>
+			<p> These next two questions refer to the following information: </p>
+			<p> A researcher would like to estimate p, the proportion of U.S. adults who support
+				recognizing civil unions between gay or lesbian couples. </p>
+		</content>
+		<multiple_choice id="inference1-8" select="single">
+			<body>
+				<p>If the researcher would like to be 95% sure that the obtained sample proportion
+					would be within 1.5% of p (the proportion in the entire population of U.S.
+					adults), what sample size should be used? </p></body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> 17,778 </choice>
+				<choice value="B"> 4,445 </choice>
+				<choice value="C"> 1,112 </choice>
+				<choice value="D"> 67 </choice>
+				<choice value="E"> 45 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Remember that in order to estimate p with a
+						95% confidence interval with a margin of error of
+							<?oxy_comment_start author="mmyers" timestamp="20101126T122703-0500" comment="remove italic"?><em
+							style="italic">m</em><?oxy_comment_end?>, the sample size must be at
+						least
+							1/<?oxy_comment_start author="mmyers" timestamp="20101126T122712-0500" comment="remove italic"?><em
+							style="italic">m</em><?oxy_comment_end?><sup>2</sup>. (B) is the right
+						answer. </feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback> Correct. In order to estimate the population proportion, p, with a
+						95% confidence interval with a margin of error of m, we need a sample size
+						of (at least)
+							1/<?oxy_comment_start author="mmyers" timestamp="20101126T122803-0500" comment="remove italic on &quot;m&quot; here and throughout remaining feedback"?><em
+							style="italic">m</em><?oxy_comment_end?><sup>2</sup>. In this case, the
+						desired m is 1.5% = .015. Thus, the required n is 4,445 (remember, always
+						round up for sample size). </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Remember that in order to estimate p with a
+						95% confidence interval with a margin of error <em style="italic">m</em>,
+						the sample size must be at least 1/<em style="italic">m</em><sup>2</sup>.
+						(B) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Remember that in order to estimate p with a
+						95% confidence interval with a margin of error <em style="italic">m</em>,
+						the sample size must be at least 1/<em style="italic">m</em><sup>2</sup>.
+						(B) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Remember that in order to estimate p with a
+						95% confidence interval with a margin of error <em style="italic">m</em>,
+						the sample size must be at least 1/<em style="italic">m</em><sup>2</sup>.
+						(B) is the right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="inference1-9" select="single">
+			<body> Due to a limited budget, the researcher obtained opinions from a random sample of
+				only 2,222 U.S. adults. With this sample size, the researcher can be 95% confident
+				that the obtained sample proportion will differ from the true proportion (p) by no
+				more than (answers are rounded): </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> .04% </choice>
+				<choice value="B"> .75% </choice>
+				<choice value="C"> 2.1% </choice>
+				<choice value="D"> 3% </choice>
+				<choice value="E"> There is no way to figure this out without knowing the actual
+					sample proportion that was obtained. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Remember that for a sample size of n, the
+						sample proportion <m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>p</m:mi>
+									<m:mo stretchy="true">&circ;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math> will differ from the &quot;true&quot; population proportion by no more than
+						1/sqrt n. Consider the remaining options. (C) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Remember that for a sample size of n, the
+						sample proportion <m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>p</m:mi>
+									<m:mo stretchy="true">&circ;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math> will differ from the &quot;true&quot; population proportion by no more than
+						1/sqrt n. Consider the remaining options. (C) is the right answer. </feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback> Correct. Remember that for a sample size of n, the sample proportion
+							<m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>p</m:mi>
+									<m:mo stretchy="true">&circ;</m:mo>
+								</m:mover>
+							</m:mrow>
+							</m:math> will differ from the &quot;true&quot; population proportion by no more than
+						1/sqrt n. In this case, this is about 2.1%. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Remember that for a sample size of n, the
+						sample proportion <m:math display="inline">
+							<m:mrow>
+								<m:mover>
+									<m:mi>p</m:mi>
+									<m:mo stretchy="true">&circ;</m:mo>
+								</m:mover>
+							</m:mrow>
+						</m:math> will differ from the &quot;true&quot; population proportion by no more than
+						1/sqrt n. Consider the remaining options. (C) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. It may be helpful to look over this section
+						again. (C) is the right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+</assessment>

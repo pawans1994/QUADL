@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintprop2_tutor3">
+    <title>Tutor</title>
+    <page><question id="q1">
+        <body>Based on the
+                answer to the previous question, what
+                is the margin of error of the confidence interval for the number of U.S. adults who
+                use organic foods in preparing meals?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">0.01</choice>
+            <choice value="B">0.04</choice>
+            <choice value="C">0.08</choice>
+            <choice value="D">0.543</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. This uses the confidence level to calculate 1 − 0.99, but that
+                        is not the margin of error.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The interval is (0.503, 0.583) and the value for the sample
+                    proportion is 0.543. The margin of error is the distance between the sample
+                    proportion and either endpoint of the interval. Both 0.543 − 0.503 and 0.583 − 0.543
+                    = 0.04.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. This is the width of the confidence interval. The
+                    margin of error is the distance between the sample proportion and each of the
+                    endpoints of the interval.</feedback>
+            </response>
+            <response match="D">
+                <feedback>Incorrect. This is the sample proportion, not the margin of
+                    error.</feedback>
+            </response>
+        </part>
+    </question></page>
+</assessment>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial4_tutor2">
+   <title>Tutor</title>
+<page>   
+   <question id="q1">
+      <body>
+         <p>The mean and standard deviation of X are:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">&#956;<sub>X</sub> = 12.55, &#963;<sub>X</sub> = 525</choice>
+         <choice value="Res2">&#956;<sub>X</sub> = 525, &#963;<sub>X</sub> = 12.55</choice>
+         <choice value="Res3">&#956;<sub>X</sub> = 525, &#963;<sub>X</sub> = 157.5</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. It seems like you did the right calculations, but
+               just got the notation mixed up. &#956;<sub>X</sub> is the mean, and
+               &#963;<sub>X</sub> is the standard deviation.</feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+                  <?oxy_insert_start author="mmyers" timestamp="20101121T220552-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T220552-0500" content="J"?>ob!
+                  Indeed, since X is a binomial random variable, &#956;<sub>X</sub> = np = 750(.7) =
+                  525. &#963;<sup>2</sup><sub>X</sub> = np(1 - p) = 750(.7)(.3) = 157.5, and
+                  therefore &#963;<sub>X</sub> = sqrt(157.5) =
+                  12.55.<?oxy_insert_start author="mmyers" timestamp="20101121T220631-0500"?> (Note
+                  that "sqrt" stands for square root.)<?oxy_insert_end?></feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Your mean is correct. However, we are asking for
+               the standard deviation, &#963;<sub>X</sub>, and 157.5 is the variance. Get &#963;<sub>X</sub> by taking the square root of 157.5, 
+               and try again.</feedback>
+         </response>
+      </part>
+   </question>
+</page></assessment>

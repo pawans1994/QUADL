@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_mean_variance1">
+    <head>
+        <title>Mean and Variance of a Random Variable (1 of 5)</title>
+        <objref idref="find_mean_variance_discrete_random"/>
+    </head>
+    <body>
+
+        <p>In the Exploratory Data Analysis (EDA) section, we displayed the distribution of one
+            quantitative variable with a histogram, and supplemented it with numerical measures of
+            center and spread. We are doing the same thing here. We display the probability
+            distribution of a discrete random variable with a table, formula or histogram, and
+            supplement it with numerical measures of the center and spread of the probability
+            distribution. These measures are the <em>mean and standard deviation of the random
+                variable.</em>
+        </p>
+        <p>This section will be devoted to introducing these measures. As before, we'll start with
+            the numerical measure of center, the mean. Let's begin by revisiting an example we saw
+            in EDA. </p>
+
+        <section>
+            <title>World Cup Soccer</title>
+            <body>
+                <p>Recall that we used the following data from 3 World Cup tournaments (a total of
+                    192 games) to introduce the idea of a <em>weighted average</em>.</p>
+                <p>We've added a third column to our table that gives us relative frequencies.</p>
+                <table>
+                    <tr>
+                        <th>total # goals/game</th>
+                        <th>frequency</th>
+                        <th>relative frequency</th>
+                    </tr>
+                    <tr>
+                        <td align="center">0</td>
+                        <td align="center">17</td>
+                        <td align="center">17 / 192 = .089</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1</td>
+                        <td align="center">45</td>
+                        <td align="center">45 / 192 = .234</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2</td>
+                        <td align="center">51</td>
+                        <td align="center">51 / 192 = .266</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3</td>
+                        <td align="center">37</td>
+                        <td align="center">37 / 192 = .193</td>
+                    </tr>
+                    <tr>
+                        <td align="center">4</td>
+                        <td align="center">25</td>
+                        <td align="center">25 / 192 = .130</td>
+                    </tr>
+                    <tr>
+                        <td align="center">5</td>
+                        <td align="center">11</td>
+                        <td align="center">11 / 192 = .057</td>
+                    </tr>
+                    <tr>
+                        <td align="center">6</td>
+                        <td align="center">3</td>
+                        <td align="center">3 / 192 = .016</td>
+                    </tr>
+                    <tr>
+                        <td align="center">7</td>
+                        <td align="center">2</td>
+                        <td align="center">2 / 192 = .010</td>
+                    </tr>
+                    <tr>
+                        <td align="center">8</td>
+                        <td align="center">1</td>
+                        <td align="center">1 / 192 = .005</td>
+                    </tr>
+                </table>
+                <table rowstyle="plain">
+
+                    <tr>
+                        <td align="right"> the mean for this data </td>
+                        <td align="center">=</td>
+                        <td align="left">
+                            <m:math height="5" overflow="scroll">
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>17</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>45</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>51</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>3</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>37</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>4</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>25</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>5</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>11</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>6</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>3</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>7</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>8</m:mn>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:math></td>
+                    </tr>
+                    <tr>
+                        <td align="right"> distributing the division by 192 we get:</td>
+                        <td align="center">=</td>
+                        <td align="left">
+                            <m:math height="5" overflow="scroll">
+                                <m:mn>0</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>17</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>1</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>45</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>51</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>3</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>37</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>4</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>25</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>5</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>11</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>6</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>3</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>7</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                                <m:mo>+</m:mo>
+                                <m:mn>8</m:mn>
+                                <m:mo>(</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>192</m:mn>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>)</m:mo>
+                            </m:math></td>
+                    </tr>
+                </table>
+
+                <p>Notice that the mean is each number of goals per game multiplied by its relative
+                    frequency. Since we usually write the relative frequencies as decimals, we can
+                    see that: </p>
+                <table rowstyle="plain">
+                    <tr>
+                        <td align="right">mean number of goals per game</td>
+                        <td align="center">=</td>
+                        <td align="left"> 0(.089) + 1(.234) + 2(.266) + 3(.193) + 4(.130) + 5(.057)
+                            + 6(.016) + 7(.010) + 8(.005) </td>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td align="center">=</td>
+                        <td align="left">2.36, rounded to two decimal places</td>
+                    </tr>
+                </table>
+
+            </body>
+        </section>
+
+        <section>
+            <title>Mean of a Random Variable</title>
+            <body>
+                <p>In Exploratory Data Analysis, we used the mean of a sample of quantitative
+                    values&#8212;their arithmetic average&#8212;to tell the center of their
+                    distribution. We also saw how a weighted mean was used when we had a frequency
+                    table. These frequencies can be changed to relative frequencies. So we are
+                    essentially using the relative frequency approach to find probabilities. We can
+                    use this to find the mean, or center, of a probability distribution for a random
+                    variable by reporting its mean, which will be a weighted average of its values;
+                    the more probable a value is, the more weight it gets. As always, it is
+                    important to distinguish between a concrete sample of observed values for a
+                    variable versus an abstract population of all values taken by a random variable
+                    in the long run.</p>
+                <p>Whereas we denoted the mean of a sample as <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>, we now denote the mean of a random variable as <m:math
+                        overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math>. Let's see how this is done by looking at a specific example.</p>
+                <example>
+                    <title>Xavier's Production Line</title>
+
+                    <p>Xavier's production line produces a variable number of defective parts in an
+                        hour, with probabilities shown in this table: </p>
+                    <image style="block" src="../webcontent/image012.gif"
+                        alt="A probability distribution table with two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in columns (X: P(X=x)):
+        0: .15;
+        1: .30;
+        2: .25;
+        3: .20;
+        4: .10;"/>
+                    <p>How many defective parts are typically produced in an hour on Xavier's
+                        production line? If we sum up the possible values of X, each weighted with
+                        its probability, we have</p>
+                    <p>
+                        <m:math height="5" overflow="scroll">
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mrow>
+                                    <m:mi>X</m:mi>
+                                </m:mrow>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>5</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>+</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>+</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mn>5</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>+</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>+</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>(</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>8</m:mn>
+                        </m:math>
+                    </p>
+                </example>
+
+                <p>Here is the general definition of the mean of a discrete random variable:</p>
+                <!--:WARNING: The syntax of the definition element has changed.-->
+                <!--Please verify that the translated output below is correct.-->
+                <definition>
+                    <term>mean of a discrete random variable</term>
+                    <meaning>
+                        <material>
+                            <p>In general, for any discrete random variable X with probability
+                                distribution</p>
+                            <p>
+                                <image style="block" src="../webcontent/image011.gif"
+                                    alt="white space"/>
+                                <image style="block" src="../webcontent/image020.gif"
+                                    alt="A probability distribution table
+with two rows, labeled &quot;X&quot; and &quot;P(X=x)&quot;. Here is the data in the table,
+given in column format (X: P(X=x)):
+            x_1: p_1;
+            x_2: p_2;
+            x_3: p_3;
+            ...
+            x_n: p_n;"
+                                />
+                            </p>
+                            <p>the <em>mean</em> of X is defined to be</p>
+                            <p>
+                                <m:math overflow="scroll">
+                                    <m:msub>
+                                        <m:mi>μ</m:mi>
+                                        <m:mrow>
+                                            <m:mi>X</m:mi>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:mo>=</m:mo>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:mo>+</m:mo>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mrow>
+                                            <m:mn>2</m:mn>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mrow>
+                                            <m:mn>2</m:mn>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:mo>+</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>+</m:mo>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:mo>=</m:mo>
+                                    <m:munderover>
+                                        <m:mo>∑</m:mo>
+                                        <m:mrow>
+                                            <m:mi>i</m:mi>
+                                            <m:mo>=</m:mo>
+                                            <m:mn>1</m:mn>
+                                        </m:mrow>
+                                        <m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mrow>
+                                    </m:munderover>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mrow>
+                                            <m:mi>i</m:mi>
+                                        </m:mrow>
+                                    </m:msub>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mrow>
+                                            <m:mi>i</m:mi>
+                                        </m:mrow>
+                                    </m:msub>
+                                </m:math>
+                            </p>
+                        </material>
+                    </meaning>
+                </definition>
+                <image style="block" src="../webcontent/image011.gif" alt="white space"/>
+                <p>In general, the mean of a random variable tells us its "long-run" average value.
+                    It is sometimes referred to as the <em>expected value</em> of the random
+                    variable. But this expression may be somewhat misleading, because in many cases
+                    it is impossible for a random variable to actually equal its expected value. For
+                    example, the mean number of goals for a World Cup soccer game is 2.36. But we
+                    can never expect any single game to result in 2.36 goals, since it is not
+                    possible to score a fraction of a goal. Rather, 2.36 is the long-run average of
+                    all World Cup soccer games. In the case of Xavier's production line, the mean
+                    number of defective parts produced in an hour is 1.8. But the actual number of
+                    defective parts produced in any given hour can never equal 1.8, since it must
+                    take whole number values.</p>
+                <p>To get a better feel for the mean of a random variable, let's extend the
+                    defective parts example:</p>
+                <example>
+                    <title>Xavier's and Yves' Production Lines</title>
+
+                    <p>Recall the probability distribution of the random variable X, representing
+                        the number of defective parts in an hour produced by Xavier's production
+                        line.</p>
+                    <image style="block" src="../webcontent/image012.gif"
+                        alt="A probability distribution table with two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in columns (X: P(X=x)):
+        0: .15;
+        1: .30;
+        2: .25;
+        3: .20;
+        4: .10;"/>
+                    <p>The number of defective parts produced each hour by Yves' production line is
+                        a random variable Y with the following probability distribution:</p>
+                    <image style="block" src="../webcontent/image022.gif"
+                        alt="A probability distribution table with two rows, labeled &quot;Y&quot;
+and &quot;P(Y=y).&quot; The data in column format (Y: P(Y=y)):
+        0: .05;
+        1: .05;
+        2: .10;
+        3: .75;
+        4: .05;"/>
+                    <p>Look at both probability distributions. Both X and Y take the same possible
+                        values (0, 1, 2, 3, 4).</p>
+                    <p>However, they are very different in the way the probability is distributed
+                        among these values.</p>
+                </example>
+
+
+                <wb:inline idref="u3_m3_meanvariance1_tutor1" purpose="learnbydoing"/>
+                <!--<flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="297" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u4_m3_inlinetutor1.xml</param>
+<param name="problem_name">_u4_m3_inlinetutor1</param>
+</flash>-->
+                <!--<activity idref="_u4_m3_dig4" purpose="didigetthis"/>
+-->
+                <wb:inline idref="u3_m3_meanvariance1_tutor2" purpose="didigetthis"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

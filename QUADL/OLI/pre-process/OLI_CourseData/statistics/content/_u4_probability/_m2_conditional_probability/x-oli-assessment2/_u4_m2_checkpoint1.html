@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+
+<assessment id="_u4_m2_checkpoint1" max_attempts="3" recommended_attempts="1">
+	<title>Conditional Probability and Independence Checkpoint 1</title>
+
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+		
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/conditional_probability_checkpoint_1_solutions.pdf">Solution Set</link>.</p></content>	-->
+	
+	<section id="assess_05_basketball">
+		<content>
+			<p> The first three questions refer to the following information: </p>
+			<p> Suppose a basketball team had a season of games with the following characteristics: </p>
+			<ul>
+				<li> 60% of all the games were <em style="bold">at-home</em> games. Denote this by
+						<em style="bold">H</em> (the remaining were <em style="bold">away</em>
+					games). </li>
+				<li> 25% of all games were <em style="bold">wins</em>. Denote this by <em
+						style="bold">W</em> (the remaining were <em style="bold">losses</em>). </li>
+				<li> 20% of all games were at-home wins. </li>
+			</ul>
+		</content>
+		<multiple_choice id="prob2-1" select="single">
+			<body>
+				<p>
+					<em>Of the at-home games</em>, we are interested in finding what proportion were
+					wins. In order to figure this out, we need to find: </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; P(H) </choice>
+				<choice value="B"> &#160;&#160; P(W) </choice>
+				<choice value="C"> &#160;&#160; P(H and W) </choice>
+				<choice value="D"> &#160;&#160; P(H | W) </choice>
+				<choice value="E"> &#160;&#160; P(W | H) </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. P (<em style="bold">H</em>) represents the
+						proportion of games which were played at home. You should find the
+						proportion of home games which were wins. In other words, if you look only
+						at the home games, what proportion of them were wins? Consider the remaining
+						options. (E) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. P (<em style="bold">W</em>) represents the
+						proportion of games which were wins. You should find the proportion of home
+						games which were wins. In other words, if you look only at the home games,
+						what proportion of them were wins? Consider the remaining options. (E) is
+						the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. P (<em style="bold">H</em> and <em
+							style="bold">W</em>) represents the proportion of games which were
+						played at home and were wins. You should find the proportion of home games
+						which were wins. In other words, if you look only at the home games, what
+						proportion of them were wins? Consider the remaining options. (E) is the
+						right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. P (<em style="bold">H</em> |<em style="bold"
+							>W</em>) represents the proportion of wins which were played at home.
+						You should find the proportion of home games which were wins. In other
+						words, if you look only at the home games, what proportion of them were
+						wins? (E) is the right answer. </feedback>
+				</response>
+				<response match="E" score="10">
+					<feedback> Correct. We are limiting our interest to the home games only, so we condition on
+							<em style="bold">H</em>. Out of the home games, we are interested in the
+						probability of winning (<em style="bold">W</em>), therefore we are
+						interested in P (<em style="bold">W</em> | <em style="bold">H</em>). </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob2-2" select="single">
+			<body> Of the at-home games, what proportion of games were wins? (Note: Some answers are rounded
+				to two decimal places.) </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; .12 </choice>
+				<choice value="B"> &#160;&#160; .15 </choice>
+				<choice value="C"> &#160;&#160; .20 </choice>
+				<choice value="D"> &#160;&#160; .33 </choice>
+				<choice value="E"> &#160;&#160; .42 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. In general, P (<em style="bold">H</em> and <em style="bold"
+							>W</em>) * P (<em style="bold">H</em>) has no useful meaning. Recall
+						that you should be finding P (<em style="bold">W</em> | <em style="bold"
+							>H</em>), the proportion of home games which were wins. Consider the
+						remaining options. (D) is the right answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. It seems that you have incorrectly assumed that <em
+							style="bold">H</em> and <em style="bold">W</em> are independent events
+						and calculated P(<em style="bold">H</em> and <em style="bold">W</em>) rather
+						than calculating the proportion of home games which were wins, P (<em
+							style="bold">W</em> | <em style="bold">H</em>). Consider the remaining
+						options. (D) is the right answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. You have found P (<em style="bold">H</em> and <em
+							style="bold">W</em>). Recall that you should find P(<em style="bold"
+							>W</em> | <em style="bold">H</em>), the proportion of home games which
+						were wins. Consider the remaining options. (D) is the right answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback> Correct. Now we actually want to find P(<em style="bold">W</em> |<em style="bold"
+							>H</em>). We apply the definition of conditional <?oxy_comment_start author="mmyers" timestamp="20101111T134944-0500" comment="There a wierd error appearing just below this, and I can&apos;t see this onine, so I&apos;m nore it&apos;s displaying properly"?>probability:<?oxy_comment_end?>
+						<image style="block" src="../webcontent/5_formula1.gif"/>
+					</feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback>Incorrect. Recall that you should calculate P(<em
+							style="bold">W</em> |<em style="bold">H</em>), the proportion of home
+						games which were wins. Consider the remaining options. (D) is the right
+						answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob2-3" select="single">
+			<body> If the team won a game, how likely is it that this was a home game? (Note: Some
+				answers are rounded to 2 decimal places.) </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; .05 </choice>
+				<choice value="B"> &#160;&#160; .12 </choice>
+				<choice value="C"> &#160;&#160; .15 </choice>
+				<choice value="D"> &#160;&#160; .42 </choice>
+				<choice value="E"> &#160;&#160; .80 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. In general, P(<em style="bold">H</em> and <em style="bold"
+							>W</em>) * P(<em style="bold">W</em>) has no useful meaning. Recall that
+						you want to find P (<em style="bold">H</em> | <em style="bold">W</em>), the
+						probability that a win was a home game. Consider the remaining options. (E)
+						is the correct answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. In general, P(<em style="bold">H</em> and <em style="bold"
+							>W</em>) * P(<em style="bold">H</em>) has no useful meaning. Recall that
+						you should be finding P (<em style="bold">H</em> | <em style="bold">W</em>),
+						the probability that a win was a home game. Consider the remaining options.
+						(E) is the correct answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. It seems that you have incorrectly assumed
+						that <em style="bold">H</em> and <em style="bold">W</em> are independent
+						events and calculated P(<em style="bold">H</em> and <em style="bold">W</em>)
+						rather than calculating the proportion of wins which were home games, P(<em
+							style="bold">H</em> |<em style="bold">W</em>). Consider the remaining
+						options. (E) is the correct answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. Recall that you should calculate the probability that a win
+						was a home game, P(<em style="bold">H</em> | <em style="bold">W</em>).
+						Consider the remaining options. (E) is the correct answer. </feedback>
+				</response>
+				<response match="E" score="10">
+					<feedback> Correct. Given that the team won the game (<em style="bold">W</em>), how likely is
+						it that this was a home game (<em style="bold">H</em>)? Therefore, we are
+						interested in P(<em style="bold">H</em> | <em style="bold">W</em>). Again,
+						using the definition of conditional <?oxy_comment_start author="mmyers" timestamp="20101111T134806-0500" comment="Not sure what the error below means -- and I can&apos;t see this online, so I&apos;m not sure if it&apos;s displaying right."?>probability:<?oxy_comment_end?>
+						<image style="block" src="../webcontent/5_formula2.gif"/>
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+	<multiple_choice id="prob2-4" select="single">
+		<body> Let A and B be two independent events. If P(A) = .5, what can you say about P(A | B)? </body>
+		<input labels="false" shuffle="false">
+			<choice value="A"> &#160;&#160; Cannot find it since P(B) is not known. </choice>
+			<choice value="B"> &#160;&#160; Cannot find it since P(A and B) is not known. </choice>
+			<choice value="C"> &#160;&#160; Cannot find it since both P(B) and P(A and B) are not
+				known. </choice>
+			<choice value="D"> &#160;&#160; It is equal to .5. </choice>
+			<choice value="E"> &#160;&#160; It is equal to .25. </choice>
+		</input>
+		<part>
+			<response match="A" score="0">
+				<feedback> Incorrect. Recall that if A and B are independent, then P(A and B) =
+					P(A) * P(B). Although you don&apos;t know P (B), you can still use the definition of
+					conditional probability to find the correct answer. Consider the remaining
+					options. (D) is the right answer. </feedback>
+			</response>
+			<response match="B" score="0">
+				<feedback> Incorrect. Recall that if A and B events are independent, then P(A and
+					B) = P(A) * P(B). Using the definition of conditional probability, you should be
+					able to find the correct answer. Consider the remaining options. (D) is the
+					right answer. </feedback>
+			</response>
+			<response match="C" score="0">
+				<feedback> Incorrect. Recall the definition of conditional probability: P(A | B) =
+					P(A and B)/P(B) . When A and B are independent, this simplifies very nicely,
+					because P (A and B) = P(A) * P(B). Using these facts you should be able to find
+					the correct answer. Consider the remaining options. (D) is the right answer. </feedback>
+			</response>
+			<response match="D" score="10">
+				<feedback> Correct. If two events are independent, then P(A | B) = P(A) [knowing that B occurs
+					has no impact on the probability that A occurs]. Therefore, if we are given P(A)
+					= .5, and that A and B are independent, then it must also be true that P(A | B)
+					= .5. </feedback>
+			</response>
+			<response match="E" score="0">
+				<feedback> Incorrect. Recall the definition of conditional probability
+					and consider the remaining options. (D) is the right answer. </feedback>
+			</response>
+		</part>
+	</multiple_choice>
+		<multiple_choice id="Prob2-5" select="single">
+			<body>
+				<p> Dogs are inbred for such desirable characteristics as blue
+					eye color; but an unfortunate by-product of such inbreeding can be the emergence of
+					characteristics such as deafness. A 1992 study of Dalmatians (by Strain and others,
+					as reported in <em style="italic">The Dalmatians Dilemma</em>) found the following: </p>
+				<table>
+					<tr>
+						<td> (i) </td>
+						<td> 31% of all Dalmatians have blue eyes. </td>
+					</tr>
+					<tr>
+						<td> (ii) </td>
+						<td> 38% of all Dalmatians are deaf. </td>
+					</tr>
+					<tr>
+						<td> (iii) </td>
+						<td> 42% <em>of blue-eyed Dalmatians</em> are deaf. </td>
+					</tr>
+				</table>
+				<p> Based on the results of this study is "having blue eyes" independent of "being
+					deaf"? </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; No, since .31 * .38 is not equal to .42. </choice>
+				<choice value="B"> &#160;&#160; No, since .38 is not equal to .42. </choice>
+				<choice value="C"> &#160;&#160; No, since .31 is not equal to .42. </choice>
+				<choice value="D"> &#160;&#160; Yes, since .31 * .38 is not equal to .42. </choice>
+				<choice value="E"> &#160;&#160; Yes, since .38 is not equal to .42. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. P(blue eyes and deaf) = P(deaf | blue eyes) doesn&apos;t tell us
+					anything useful. Recall that having blue eyes and being deaf are independent if
+					knowing a Dalmatian has blue eyes doesn&apos;t change the probability that it is
+					deaf. Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback> Correct. Using B for blue-eyed and D for deaf , the information that was given is:
+					P(B) = .31; P(D) = .38; and P(D | B) = .42. Using this information, we can say
+					that the events B and D are not independent, since P(D) and P(D | B are not
+					equal. In other words, knowing the Dalmatian has blue eyes changes the
+					probability that the Dalmatian is deaf (from .38 to .42). </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Knowing that P(blue eyes) &#8800; P (deaf | blue eyes)
+					doesn&apos;t tell us anything. Recall that having blue eyes and being deaf are
+					independent if knowing a Dalmatian has blue eyes doesn&apos;t change the probability
+					that it is deaf. Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback> Incorrect. It does not make sense to compare P(blue eyes and deaf) to
+					P(deaf | blue eyes). Recall that having blue eyes and being deaf are independent
+					if knowing a Dalmatian has blue eyes doesn&apos;t change the probability that it is
+					deaf. Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Knowing that a Dalmatian has blue eyes
+						changes the probability that it is deaf. As a result, the two events cannot
+						be independent. Consider the remaining options. (B) is the right answer.
+					</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	
+</assessment>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop11_tutor3">
+    <title>Tutor</title>
+    <page>
+    <question id="q1">
+        <body>Consider again the two scenarios and studies from question 1 (but ignore the
+                information about the p-value of
+                <?oxy_insert_start author="mmyers" timestamp="20101127T163210-0500"?>the
+                <?oxy_insert_end?>test corresponding to study I). Which of the following (if any) is
+                not possible (at the .05 significance level)?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">H<sub>o</sub> is rejected in both tests.</choice>
+            <choice value="B">H<sub>o</sub> cannot be rejected in both tests.</choice>
+            <choice value="C">H<sub>o</sub> cannot be rejected in test I, but is rejected in test II.</choice>
+            <choice value="D">H<sub>o</sub> is rejected in test I, but cannot be rejected in test II.</choice>
+            <choice value="E">Any of the above is a possibility.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Recall that the p-value of the two-sided test is
+                        twice the p-value of a one-sided test (based on the same data). It could be
+                        the case, like in question 1, where the p-value of test I is .024 and the
+                        p-value of test II is therefore .024/2<?oxy_insert_start author="mmyers" timestamp="20101127T163306-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T163307-0500"?>
+                        <?oxy_insert_end?>.012. In both cases, the p-value is small enough to reject
+                            H<sub>o</sub> (at the .05 significance level).</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. Recall that the p-value of the two-sided test is
+                        twice the p-value of a one-sided test (based on the same data). It could be
+                        the case for example, that the p-value of test I is .24 and the p-value of
+                        test II is therefore .24/2<?oxy_insert_start author="mmyers" timestamp="20101127T163328-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T163329-0500"?>
+                        <?oxy_insert_end?>.12. In both cases the p-value H<sub>o</sub> cannot be
+                        rejected (at the .05 significance level).</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. Recall that the p-value of the two-sided test is
+                        twice the p-value of a one-sided test (based on the same data). It could be
+                        the case, for example, that the p-value of test I is .07 (i.e., not small
+                        enough for H<sub>o</sub> to be rejected at the .05 significance level), and
+                        the p-value of test II is therefore .07/2<?oxy_insert_start author="mmyers" timestamp="20101127T163414-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T163414-0500"?>
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T163417-0500" content="/"?>.035
+                        which is small enough to reject H<sub>o</sub> at the .05 significance
+                        level.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Good
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T163428-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T163428-0500" content="J"?>ob!
+                        Recall that the p-value of the two-sided test is twice the p-value of a
+                        one-sided test (based on the same data). If H<sub>o</sub> can be rejected in
+                        test I (at the .05 significance level), it means that the p-value is below
+                        .05. This implies that since the p-value of test II must be, then, below .05/2<?oxy_insert_start author="mmyers" timestamp="20101127T163512-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101127T163512-0500"?>
+                        <?oxy_insert_end?>.025, H<sub>o</sub> will also be rejected in that test.
+                        There is
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T163520-0500"?>no
+                        way<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T163523-0500" content="NO WAY"?>,
+                        then<?oxy_insert_start author="mmyers" timestamp="20101127T163527-0500"?>,<?oxy_insert_end?>
+                        that H<sub>o</sub>
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T163533-0500"?>can
+                        be<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T163532-0500" content="is"?>
+                        rejected in the two-sided test and not rejected in the one-sided
+                        test.</feedback>
+            </response>
+            <response match="E">
+                <feedback>Incorrect. Recall that the p-value of the two-sided test is
+                        twice the p-value of a one-sided test (based on the same data). This means
+                        that if the p-value of the two-sided test is small, then the p-value of the
+                        one-sided test is even
+                        smaller.<?oxy_delete author="mmyers" timestamp="20101127T163601-0500" content="..."?>
+                        </feedback>
+            </response>
+        </part>
+    </question></page>
+</assessment>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m04_behavior_of_mean1">
+    <head>
+        <title>Behavior of Sample Mean (1 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_mean"/>
+    </head>
+<body>
+   
+        <p> So far, we've discussed the behavior of the statistic <m:math overflow="scroll">
+                <m:mover accent="true">
+                    <m:mrow>
+                        <m:mi>p</m:mi>
+                    </m:mrow>
+                    <m:mo>ˆ</m:mo>
+                </m:mover>
+            </m:math>, the sample proportion, relative to the parameter p, the population proportion
+            (when the variable of interest is categorical). We are now moving on to explore the
+            behavior of the statistic <m:math overflow="scroll">
+                <m:mover accent="true">
+                    <m:mrow>
+                        <m:mi>X</m:mi>
+                    </m:mrow>
+                    <m:mo>¯</m:mo>
+                </m:mover>
+            </m:math>, the sample mean, relative to the parameter <m:math overflow="scroll">
+                <m:mi>μ</m:mi>
+            </m:math>, the population mean (when the variable of interest is quantitative).</p>
+        <section>
+            <title>Behavior of Sample Mean <m:math overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>X</m:mi>
+                        </m:mrow>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:math>
+            </title>
+            <body>
+                <example>
+                    <p>Birth weights are recorded for all babies in a town. The mean birth weight is
+                        3,500 grams, µ = 3,500 g. If we collect many random samples of 9 babies at a
+                        time, how do you think sample means will behave? </p>
+                    <p>Here again, we are working with a random variable, since random samples will
+                        have means that vary unpredictably in the short run but exhibit patterns in
+                        the long run. </p>
+                    <p>Based on our intuition and what we have learned about the behavior of sample
+                        proportions, we might expect the following about the distribution of sample
+                        means: </p>
+                    <p><em>Center</em>: Some sample means will be on the low side&#8212;say 3,000
+                        grams or so&#8212;while others will be on the high side&#8212;say 4,000
+                        grams or so. In repeated sampling, we might expect that the random samples
+                        will average out to the underlying population mean of 3,500 g. In other
+                        words, the mean of the sample means will be µ, just as the mean of sample
+                        proportions was p. </p>
+                    <p><em>Spread</em>: For large samples, we might expect that sample means will
+                        not stray too far from the population mean of 3,500. Sample means lower than
+                        3,000 or higher than 4,000 might be surprising. For smaller samples, we
+                        would be less surprised by sample means that varied quite a bit from 3,500.
+                        In others words, we might expect greater variability in sample means for
+                        smaller samples. So sample size will again play a role in the spread of the
+                        distribution of sample measures, as we observed for sample proportions. </p>
+                    <p><em>Shape</em>: Sample means closest to 3,500 will be the most common, with
+                        sample means far from 3,500 in either direction progressively less likely.
+                        In other words, the shape of the distribution of sample means should bulge
+                        in the middle and taper at the ends with a shape that is somewhat normal.
+                        This, again, is what we saw when we looked at the sample proportions. </p>
+                </example>
+                <!--                <example>
+
+                    <p>The "population" of all possible rolls X of a single die consists of the
+                        numbers {1, 2, 3, 4, 5, 6}, all occurring with equal probability of 1/6. We
+                        already have found that the mean of this population is <m:math
+                            overflow="scroll">
+                            <m:mi>μ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                        </m:math> and the standard deviation is <m:math overflow="scroll">
+                            <m:mi>σ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>7</m:mn>
+                        </m:math> (These can be found using the general formulas we introduced in
+                        the Random Variables module.) What would you expect to see in terms of the behavior of the sample
+                        mean roll <m:math overflow="scroll">
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>x</m:mi>
+                                </m:mrow>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:math> if random samples of size 2 were taken from the population of all
+                        rolls of a single die? In other words, if you rolled a die twice and
+                        averaged the two results, and then repeated this many times (each time
+                        recording the average you got), how would these averages behave?</p>
+                    <p>Due to sampling variability, sample mean in random samples of size 2 will
+                        take number values which vary according to the laws of chance: in other
+                        words, sample mean is a <em>random variable.</em> To summarize the behavior
+                        of any random variable, we focus on three features of its distribution: the
+                        center, the spread, and the shape.</p>
+                    <p>Based only on our intuition, we would expect the following:
+                        (<em>Comment:</em> obviously, again we know what to expect, so it's not
+                        really fair, but read along and try to see if the following makes intuitive
+                        sense to you.)</p>
+                    <p><em>Center</em>: some sample means will be on the low side - as low as
+                        (1+1)/2=1 - while others will be on the high side - as high as (6+6)/2=6. It
+                        is reasonable to expect all the sample means in repeated random samples to
+                        average out to the underlying population mean, 3.5. In other words, the mean
+                        of the distribution of <m:math overflow="scroll">
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>x</m:mi>
+                                </m:mrow>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:math> should be <m:math overflow="scroll">
+                            <m:mi>μ</m:mi>
+                        </m:math>.</p>
+                    <p><em>Spread</em>: for samples of 2, we would expect sample means to vary quite a bit,
+                        with extremes like 1 or 6 not unheard of. On the other hand, if we were
+                        taking samples of size 8, it would be virtually impossible (probability 1
+                        over 6 to the 8th, which is less than 1 in a million) to get a sample mean
+                        as low as 1 (all eight 1's) or a sample mean as high as 6 (all eight 6's).
+                        Thus, sample size plays a role in the spread of the distribution of sample
+                        mean: there should be less spread for larger samples, more spread for
+                        smaller samples.</p>
+                    <p><em>Shape</em>: sample means closest to 3.5 would be most common, and sample means far
+                        from 3.5 in either direction would be progressively less likely. In other
+                        words, the shape of the distribution of sample mean should be higher
+                        in the middle and lower at the ends: it should be somewhat <em>normal.</em>
+                    </p>
+                </example>-->
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>The
+                        <?oxy_comment_start author="mmyers" timestamp="20101122T191051-0500" comment="remove bold, no epmphasis needed"?><em>distribution</em>
+                    of the values of the sample mean (<m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>) in repeated <em>samples</em><?oxy_comment_end?> is called the
+                        <em>sampling distribution of </em>
+                    <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>. </p>
+                <!--<activity idref="_u4_m4_lbd3" purpose="learnbydoing"/>-->
+                
+                <youtube src="fqOOownnkA4"></youtube>
+              <!--   <flash src="../../../webcontent/OLICamtasiaController.swf" width="584" height="528" purpose="simulation">
+                    <param name="movieURL">../../webcontent/flash/walkthrough5.swf</param>
+                    <param name="movieFPS">15</param>
+                    <param name="LoggingLibraryPath">../../../webcontent/OLILoggingLibrary.swf</param>
+                </flash>--> 
+                <wb:inline
+                    idref="u3_m4_mean1_tutor1" purpose="learnbydoing"/>
+                <wb:inline
+                    idref="u3_m4_mean1_tutor2_1" purpose="learnbydoing"/>
+                <wb:inline
+                    idref="u3_m4_mean1_tutor3" purpose="learnbydoing"/>
+                
+            </body>
+        </section>
+    </body>
+</workbook_page>

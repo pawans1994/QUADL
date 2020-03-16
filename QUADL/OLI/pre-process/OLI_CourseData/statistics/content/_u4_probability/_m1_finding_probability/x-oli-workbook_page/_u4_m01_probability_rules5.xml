@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules5">
+    <head>
+        <title>Probability Rules (5 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+    </head>
+    <body>
+       
+        <p>Rule 4, the addition rule, deals with finding P(A <em>or</em> B). We are now moving on to
+            rule 5, which deals with yet another situation of frequent interest, finding P(A
+                <em>and</em> B), the probability that both events A and B occur. In other words,</p>
+        <p>
+            <em>P(A and B) = P(event A occurs and event B occurs)</em>
+        </p>
+        <p>For example, we might be interested in the probability that if two people are chosen at
+            random, both the first has blood type O <em>and</em> the second has blood type O. Since
+            a person with blood type O can donate blood to anyone, this probability might be of
+            particular interest in this context.</p>
+        <p>Using a Venn diagram, we can visualize "A and B," which is represented by the overlap
+            between events A and B:</p>
+        <image style="block" src="../webcontent/image019.gif" alt="A rectangle represents the entire
+sample space. Inside this rectangle are two circles, one for the occurrences in A and one for the occurrences
+in B. These two circles partially overlap. The area in the overlap contains the ocurrences for A and B."/>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>There is one special case for which we know what P(A and B) equals without
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T151412-0500"?>applying
+                    <?oxy_insert_end?>any rule.</p>
+
+
+                <wb:inline idref="u3_m1_rules5_tutor1" purpose="learnbydoing"/>
+                <!--<flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="281" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u4_m1_inlinetutor4.xml</param>
+<param name="problem_name">_u4_m1_inlinetutor4</param>
+</flash>-->
+            </body>
+        </section>
+        <p>So, if events <em style="bold">A and B are disjoint</em>, then (by definition) <em
+                style="bold">P(A and B)= 0.</em> But what if the events are not disjoint? </p>
+        <p>Recall that rule 4, the
+            <?oxy_insert_start author="mmyers" timestamp="20101108T151905-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151905-0500" content="a"?>ddition
+            <?oxy_insert_start author="mmyers" timestamp="20101108T151908-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151907-0500" content="r"?>ule,
+            has two versions. One is restricted to disjoint events, which we've already covered, and
+            we'll deal with the more general version later in this module.
+            <?oxy_insert_start author="mmyers" timestamp="20101108T151923-0500"?>The same is true of
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151933-0500" content="Exactly the same structure applies to "?>rule
+            5. <?oxy_insert_start author="mmyers" timestamp="20101108T151943-0500"?>Rule 5 has
+            <?oxy_insert_end?>two<?oxy_delete author="mmyers" timestamp="20101108T151949-0500" content="It will have two"?>
+            versions. The version we'll present here is restricted to a special case
+            <?oxy_insert_start author="mmyers" timestamp="20101108T152001-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152000-0500" content="which"?>
+            we'll now discuss, and there is a more general version
+            <?oxy_insert_start author="mmyers" timestamp="20101108T152015-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152014-0500" content="which"?>
+            we'll present in the next module.</p>
+        <p>The version of rule 5
+            <?oxy_insert_start author="mmyers" timestamp="20101108T152044-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152042-0500" content="which"?>
+            will be presented here applies to the special case
+            <?oxy_insert_start author="mmyers" timestamp="20101108T152059-0500"?>in
+            which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152058-0500" content="when"?>
+            the two events are <em>independent</em> of each other.</p>
+        <!--:WARNING: The syntax of the definition element has changed.-->
+        <!--Please verify that the translated output below is correct.-->
+        <definition>
+            <term>independent</term>
+            <meaning>
+                <material>
+                    <p>Two events A and B are said to be <em>independent</em> if
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T152207-0500"?><?oxy_comment_start author="mmyers" timestamp="20101108T152702-0500" comment="Statistics is complicated enough without throwing quantum phisics into the mix ;)"?>the
+                        fact
+                        that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152303-0500" content="knowing whether"?><?oxy_comment_end?>
+                        one event has occurred <em>does not affect</em> the probability that the
+                        other event
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T152725-0500"?>will
+                        <?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T152727-0500" content="s"?>.
+                        If whether
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T153129-0500"?>or not
+                        <?oxy_insert_end?>one event occurs <em>does affect</em> the probability that
+                        the other event
+                        <?oxy_insert_start author="mmyers" timestamp="20101108T152745-0500"?>will
+                        <?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T152747-0500" content="s"?>,
+                        then the two events are said to be <em>dependent.</em>
+                    </p>
+                </material>
+            </meaning>
+        </definition>
+
+        <p>Here are a few examples:</p>
+        <example>
+
+            <p>A woman's pocket contains two quarters and two nickels. She randomly extracts one of
+                the coins and, after looking at it, replaces it before picking a second coin.</p>
+            <p>Let Q1 be the event that the first coin is a quarter and Q2 be the event that the
+                second coin is a quarter.</p>
+            <p>Are Q1 and Q2 independent events?
+                    <em>Y<?oxy_insert_start author="mmyers" timestamp="20101108T152831-0500"?>es.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152829-0500" content="ES!"?></em>
+                Why?</p>
+            <p>Since the first coin that was selected is
+                    <?oxy_comment_start author="mmyers" timestamp="20101108T153454-0500" comment="remove bold. No emphasis needed"?><em>replaced</em><?oxy_comment_end?>,
+                whether <?oxy_insert_start author="mmyers" timestamp="20101108T153104-0500"?>or not
+                <?oxy_insert_end?>Q1 occurred (i.e., whether the first coin was a quarter) has no
+                effect on the probability that the second coin
+                <?oxy_insert_start author="mmyers" timestamp="20101108T152921-0500"?>will
+                be<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152922-0500" content="is"?>
+                a quarter, P(Q2). In either case (whether Q1 occurred or not), when <?oxy_insert_start author="mmyers" timestamp="20101108T152953-0500"?>she<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T152952-0500" content="we"?>
+                <?oxy_delete author="mmyers" timestamp="20101108T152940-0500" content="come to "?><?oxy_insert_start author="mmyers" timestamp="20101108T153722-0500"?>is
+                <?oxy_insert_end?>select<?oxy_insert_start author="mmyers" timestamp="20101108T153725-0500"?>ing<?oxy_insert_end?>
+                the second coin,
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153016-0500"?>she
+                has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153014-0500" content="we have"?>
+                in
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153028-0500"?>her<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153029-0500" content="our"?>
+                pocket:</p>
+            <image style="block" src="../webcontent/image020.gif" alt="The coins in the woman's pocket.
+There are 2 Quarters and 2 Nickels."/>
+            <p>and therefore the P(Q2)<?oxy_insert_start author="mmyers" timestamp="20101108T153044-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T153044-0500"?>
+                <?oxy_insert_end?>2/4<?oxy_insert_start author="mmyers" timestamp="20101108T153045-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T153046-0500"?>
+                <?oxy_insert_end?>1/2 regardless of whether Q1 occurred.</p>
+        </example>
+        <example>
+
+            <p>A woman's pocket contains two quarters and two nickels. She randomly extracts one of
+                the
+                coins<?oxy_insert_start author="mmyers" timestamp="20101108T153247-0500"?>,<?oxy_insert_end?>
+                and
+                    <?oxy_comment_start author="mmyers" timestamp="20101108T153314-0500" comment="remove bold -- no emphasis needed"?><em>without
+                    placing</em><?oxy_comment_end?> it back into her pocket, she picks a second
+                coin. As before, let Q1 be the event that the first coin is a quarter, and Q2 be the
+                event that the second coin is a quarter.</p>
+            <p>Are Q1 and Q2 independent events?
+                    <em>N<?oxy_insert_start author="mmyers" timestamp="20101108T153333-0500"?>o.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153330-0500" content="O!"?></em>
+                Q1 and Q2 are <em>not independent</em>. They are <em>dependent.</em> Why?</p>
+            <p>Since the first coin that was selected is
+                    <?oxy_comment_start author="mmyers" timestamp="20101108T153406-0500" comment="remove bold -- no emphasis needed"?><em>not
+                    replaced,</em><?oxy_comment_end?> whether Q1 occurred (i.e., whether the first
+                coin was a quarter) <em>does affect</em> the probability that the second coin is a
+                quarter, P(Q2).</p>
+            <p>If Q1 occurred (i.e., the first coin was a quarter), then when
+                <?oxy_delete author="mmyers" timestamp="20101108T153644-0500" content="we come to"?><?oxy_insert_start author="mmyers" timestamp="20101108T153644-0500"?>the woman<?oxy_insert_end?>
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153712-0500"?>is
+                <?oxy_insert_end?>select<?oxy_insert_start author="mmyers" timestamp="20101108T153714-0500"?>ing<?oxy_insert_end?>
+                the second coin,
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153658-0500"?>she
+                has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153742-0500" content="we have"?>
+                in
+                <?oxy_delete author="mmyers" timestamp="20101108T153747-0500" content="our"?><?oxy_insert_start author="mmyers" timestamp="20101108T153748-0500"?>her<?oxy_insert_end?>
+                pocket:</p>
+            <image style="block" src="../webcontent/image021.gif" alt="One Quarter and Two Nickels"/>
+            <p><?oxy_insert_start author="mmyers" timestamp="20101108T153804-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153803-0500" content="i"?>n
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153807-0500"?>this<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153811-0500" content="which"?>
+                case<?oxy_insert_start author="mmyers" timestamp="20101108T154022-0500"?>,<?oxy_insert_end?> P(Q2)<?oxy_insert_start author="mmyers" timestamp="20101108T153836-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T153836-0500"?>
+                <?oxy_insert_end?>1/3. However, if Q1 has not occurred (i.e., the first coin was not
+                a
+                quarter<?oxy_insert_start author="mmyers" timestamp="20101108T153857-0500"?>,<?oxy_insert_end?>
+                but a nickel), then when
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153936-0500"?>the woman
+                is<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153941-0500" content="we come to"?>
+                select<?oxy_insert_start author="mmyers" timestamp="20101108T153944-0500"?>ing<?oxy_insert_end?>
+                the second coin,
+                <?oxy_insert_start author="mmyers" timestamp="20101108T153949-0500"?>she
+                has<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T153951-0500" content="we have"?>
+                in
+                <?oxy_delete author="mmyers" timestamp="20101108T153954-0500" content="our"?><?oxy_insert_start author="mmyers" timestamp="20101108T153955-0500"?>her<?oxy_insert_end?>
+                pocket:</p>
+            <image style="block" src="../webcontent/image022.gif" alt="Two Quarters and One Nickel."/>
+            <p><?oxy_insert_start author="mmyers" timestamp="20101108T154006-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T154004-0500" content="i"?>n
+                <?oxy_insert_start author="mmyers" timestamp="20101108T154008-0500"?>this<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T154009-0500" content="which"?>
+                case<?oxy_insert_start author="mmyers" timestamp="20101108T154018-0500"?>,<?oxy_insert_end?> P(Q2)<?oxy_insert_start author="mmyers" timestamp="20101108T154025-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T154026-0500"?>
+                <?oxy_insert_end?>2/3.</p>
+            <p>In these last two examples, we could actually
+                <?oxy_insert_start author="mmyers" timestamp="20101108T154110-0500"?>have
+                done<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T154114-0500" content="do"?>
+                some calculation in order to check whether or not the two events are independent or
+                not. Sometimes we can just use common sense to guide us as to whether two events are
+                independent. Here is an example.</p>
+        </example>
+
+        <example>
+
+            <p>A family has 4 children, two of whom are selected at random. Let B1 be the event that
+                <?oxy_delete author="mmyers" timestamp="20101108T172716-0500" content="the first "?><?oxy_insert_start author="mmyers" timestamp="20101130T152640-0500"?>one<?oxy_insert_end?>
+                child has blue eyes, and B2 be the event that the
+                <?oxy_insert_start author="mmyers" timestamp="20101108T160843-0500"?>other<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T160842-0500" content="second"?>
+                chosen child has blue eyes. In this
+                case<?oxy_insert_start author="mmyers" timestamp="20101108T154234-0500"?>,<?oxy_insert_end?>
+                B1 and B2 are not
+                independent<?oxy_insert_start author="mmyers" timestamp="20101108T154301-0500"?>,<?oxy_insert_end?>
+                since we know that eye color is hereditary, so whether
+                <?oxy_insert_start author="mmyers" timestamp="20101108T154313-0500"?>or not
+                one<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T160905-0500" content="the first"?>
+                child is blue-eyed will increase or decrease the chances that the
+                <?oxy_insert_start author="mmyers" timestamp="20101108T160916-0500"?>other<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T160911-0500" content="second"?>
+                child has blue eyes, respectively.</p>
+        </example>
+
+        <example>
+
+            <p><?oxy_comment_start author="mmyers" timestamp="20101108T155321-0500" comment="I rewrote this to reflect the fact that if the two aren&apos;t chosen simultaneously, as a pair, the second choice is dependent on the first.(Once you choose one blue-eyed person, there will be one less blue-eyed person in the population you are choosing from, so the chances of choosing a blue-eyed person are lower.)
+                
+Alternatively, you could specify that you are re-insterting the first person back into the population before making your second choice.
+
+Saying that the population is &quot;very large&quot; makes the mathematical effect of the removal of one member of the population minimal, but it does not eliminate it. 
+
+I think that not including one or the other of these qualifiers will confuse students, because if you do not, this example contradicts the one about coins in your pocket. The only difference is that there the population is 4, and here it is millions.
+
+On page 7 of probability rules, I have suggested a place to insert a comment about how it is OK to assume that events are independent in very large populations because of the negligible mathematical consequences. I recommend placing that comment there, rather than here, to give students a chance to get used to the difference between dependent and independent events before adding a &quot;special case.&quot; In between here and there, I have recommended changing wording to &quot;simultaneously and at random or adding &quot;with replacement.&quot;
+
+(Unrelated: It was stated before that these blood type numbers are for the U.S., not for all humans.)"?>Two
+                people are selected at random from all
+                <?oxy_insert_start author="mmyers" timestamp="20101108T185016-0500"?>people in the
+                United States. Let B1 be the event that
+                <?oxy_delete author="mmyers" timestamp="20101108T154530-0500" content="the first person"?><?oxy_insert_start author="mmyers" timestamp="20101108T154530-0500"?>one
+                of the people<?oxy_insert_end?> has blue eyes and B2 be the event that the
+                <?oxy_insert_start author="mmyers" timestamp="20101108T154542-0500"?>other<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T154543-0500" content="second"?>
+                person has blue eyes. In this case, since
+                the<?oxy_insert_start author="mmyers" timestamp="20101108T173822-0500"?>y<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T173819-0500" content=" two"?>
+                were chosen at random, whether
+                <?oxy_delete author="mmyers" timestamp="20101108T154608-0500" content="the first person"?><?oxy_insert_start author="mmyers" timestamp="20101108T154608-0500"?>one
+                of them<?oxy_insert_end?> has blue eyes has no effect on the likelihood
+                <?oxy_delete author="mmyers" timestamp="20101108T154628-0500" content="of choosing an"?><?oxy_insert_start author="mmyers" timestamp="20101108T160716-0500"?>
+                that the <?oxy_insert_end?>other
+                <?oxy_insert_start author="mmyers" timestamp="20101108T160722-0500"?>one has blue
+                eyes<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T160728-0500" content="blue eyed person"?>,
+                and therefore B1 and B2 are independent. On the other hand<?oxy_insert_start author="mmyers" timestamp="20101108T154218-0500"?>
+                <?oxy_insert_end?>...<?oxy_delete author="mmyers" timestamp="20101108T154221-0500" content=".."?><?oxy_comment_end?></p>
+        </example>
+        <p><em style="bold">Note:</em></p>
+        <p>We can generalize what we learned in the last example and say that when two individuals
+            are selected at random from a large population (like in the example, the entire U.S.)
+            any event associated with one individual is independent of any event associated with the
+            other individual. The fact that the two are chosen from a large population is key to the
+            independence.</p>
+
+        <p>If we were to change the example to: There are 10 people in a room, 4 of which have blue
+            eyes. Two people are chosen at random. Let B1 be the event that the first person has
+            blue eyes and let B2 be the event that the second person has blue eyes. In this case,
+            since the two are chosen from a group of only 10 (rather than a large population) the
+            events B1 and B2 are not independent. Clearly, whether or not the first person has blue
+            eyes (i.e., whether or not B1 occurs) does have an effect on whether B2 occurs. You will
+            get more practice on this point in the activities below the next comment. </p>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>It is quite common for students to initially get confused about the distinction
+                    between the idea of <em>disjoint events</em> and the idea of <em>independent
+                        events</em>. The purpose of this comment (and the activity that follows it)
+                    is to help students develop more understanding about
+                    these<?oxy_delete author="mmyers" timestamp="20101108T173832-0500" content=" two"?>
+                    very different ideas. </p>
+                <p>The idea of <em>disjoint events</em> is about whether or not it is possible for
+                    the<?oxy_delete author="mmyers" timestamp="20101108T161107-0500" content=" two"?>
+                    events
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T161007-0500"?>to<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T161006-0500" content="can"?>
+                    occur at the same time (see
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T161014-0500"?>the
+                    <?oxy_insert_end?>examples on page 3 of
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T161229-0500"?>the
+                    <?oxy_insert_end?>Probability
+                    Rules<?oxy_insert_start author="mmyers" timestamp="20101108T161232-0500"?>
+                    section<?oxy_insert_end?>).</p>
+                <p>The idea of <em>independent events</em> is about whether or not
+                    the<?oxy_delete author="mmyers" timestamp="20101108T161359-0500" content=" two"?>
+                    events affect each other in the sense that the occurrence of one event affects
+                    the probability of the occurrence of the other (see
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T161323-0500"?>the
+                    <?oxy_insert_end?>examples above).</p>
+                <p>The following activity deals with the distinction between
+                    these<?oxy_delete author="mmyers" timestamp="20101108T161333-0500" content=" two"?>
+                    concepts.</p>
+
+            </body>
+        </section>
+        <!--<activity idref="_u4_m1_lbd6" purpose="learnbydoing"/>-->
+        <p>The purpose of this activity is to help you strengthen your understanding about the
+            concepts of disjoint events and independent events, and the distinction between
+            them.</p>
+        <section purpose="learnbydoing">
+            <title></title>
+            <body>
+                <p>In each of the following
+                    questions<?oxy_insert_start author="mmyers" timestamp="20101108T161454-0500"?>,<?oxy_insert_end?>
+                    you are presented with a random experiment and two events related to it. You are
+                    asked to decide whether the
+                    <?oxy_delete author="mmyers" timestamp="20101108T161510-0500" content="two "?>events
+                    are disjoint or
+                    not<?oxy_insert_start author="mmyers" timestamp="20101108T161515-0500"?>,<?oxy_insert_end?>
+                    and whether the events are independent or not.</p>
+                <wb:inline idref="u3_m1_rules5_tutor2" purpose="learnbydoing"/>
+                <!--   <wb:inline idref="u3_m1_rules5_tutor3" purpose="learnbydoing"/>-->
+            </body>
+        </section>
+        <section>
+            <title/>
+            <body>
+                <p>Let’s summarize the three parts of the activity:</p>
+                <ul>
+                    <li>In Example 1: A and B are <em style="bold">not disjoint</em> and <em
+                            style="bold">independent</em></li>
+                    <li>In Example 2: A and B are <em style="bold">not disjoint</em> and <em
+                            style="bold">not independent</em></li>
+                    <li>In Example 3: A and B are <em style="bold">disjoint</em> and <em
+                            style="bold">not independent</em>.</li>
+                </ul>
+                <p>Why did we leave out the case when the events are disjoint and independent? The
+                    reason is that this case DOES NOT EXIST!</p>
+               <!--  <image style="block" src="../webcontent/disjoint_not.png" alt="A table showing the
+relationship between independent and disjoint events. The column headings are: &quot;A,B Independent
+&quot; and &quot;A,B Not Independent.&quot; The row headings are &quot;A,B Disjoint&quot; and
+&quot;A,B Not Disjoint.&quot; Here are the cells of the table in &quot;Row, Column: Value&quot;
+format:
+    A,B Disjoint, A,B Independent: DOES NOT EXIST;
+    A,B Disjoint, A,B Not Independent: Example 3;
+    A,B Not Disjoint, A,B Independent: Example 1;
+    A,B Not Disjoint, A,B Not Independent: Example 2;"/>--> 
+                <table>
+                    <tr><td></td>
+                        <td><em style="bold">A and B Independent</em></td>
+                        <td><em style="bold">A and B Not Independent</em></td></tr>
+                    <tr><td><em style="bold">A and B Disjoint</em></td>
+                        <td><em style="highlight">DOES NOT EXIST</em></td>
+                        <td>Example 3</td></tr>
+                    <tr><td><em style="bold">A and B Not Disjoint</em></td>
+                        <td>Example 1</td>
+                        <td>Example 2</td></tr>
+                </table>
+                <p>If events are <em style="bold">disjoint</em> then they <em style="bold">must be
+                        not independent (dependent)</em></p>
+                <p>Why is that?</p>
+                <p>Recall: A and B disjoint means that they cannot happen together. In other words, A and B
+                    disjoint implies that if event A occurs then B does not and vice versa. Well… if
+                    that’s the case, knowing that event A has occurred dramatically changes the
+                    likelihood that event B occurs – that likelihood is <m:math display = 'inline'>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math>. This implies that A and B
+                    are not independent.</p>
+            </body>
+        </section>
+
+        <section purpose="didigetthis">
+            <title/>
+            <body>
+                <wb:inline idref="u3_m1_rules5_tutor4" purpose="didigetthis"/>
+                <wb:inline idref="u3_m1_rules5_tutor5" purpose="didigetthis"/>
+            </body>
+        </section>
+        <p>Now that we understand the idea of independent events, we can finally get to rule 5. As
+            mentioned before, Rule 5 actually has two versions, one for finding P(A and B) in the
+            special case <?oxy_insert_start author="mmyers" timestamp="20101108T172507-0500"?>in
+            which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T172505-0500" content="when"?>
+            the events A and B are independent, and a more general version for
+            <?oxy_insert_start author="mmyers" timestamp="20101108T172520-0500"?>use
+            <?oxy_insert_end?>when the events are not necessarily independent. We will first present
+            the version of rule 5 that is restricted to independent events, and in the next module
+            <?oxy_insert_start author="mmyers" timestamp="20101108T172545-0500"?>we will revisit
+            Rule 5
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T172557-0500" content="come back "?>and
+            present the more general version.</p>
+    </body>
+</workbook_page>

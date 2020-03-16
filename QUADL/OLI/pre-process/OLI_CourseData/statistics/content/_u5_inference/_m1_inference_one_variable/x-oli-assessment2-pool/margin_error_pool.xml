@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="margin_error_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_margin_error">
+        <!-- LO: margin_error -->
+        <body>
+            <p>A survey of a random sample of 1,500 young Americans found that 87% had earned their
+                high school diploma. Based on these results, the 95% confidence interval for the
+                proportion of young Americans who have earned their high school diploma is
+                (0.853,0.887) What is the margin of error for this confidence interval?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">0.017</choice>
+            <choice value="B">0.034</choice>
+            <choice value="C">0.87</choice>
+            <choice value="D">0.95</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The margin of error is half the length of the interval, so Length
+                    = 0.887 − 0.853 = 0.034 and 0.034/2 = 0.017.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the length of the interval. Remember the margin of
+                    error is equal to half the length of the interval.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It appears you found the midpoint of the interval which is the
+                    point estimate or sample proportion of young Americans who have earned a high
+                    school diploma. Remember the margin of error is equal to half the length of the
+                    interval.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It appears you gave the confidence level. Remember the margin
+                    of error is half the length of the interval.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_margin_error">
+        <!-- LO: margin_error -->
+        <body>
+            <p>A random sample of 30 students taking statistics at a community college found the
+                student’s mean GPA to be 3.25. A 95% confidence interval for the mean GPA of all
+                students taking statistics at this college was determined to be (3.07, 3.43). What
+                is the margin of error for this confidence interval?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">0.95</choice>
+            <choice value="B">3.25</choice>
+            <choice value="C">0.18</choice>
+            <choice value="D">0.36</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It appears you gave the confidence level. Remember the margin
+                    of error is half the length of the interval.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It appears you found the midpoint of the interval which is the
+                    point estimate or sample mean GPA. Remember the margin of error is equal to half
+                    the length of the interval.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The margin of error is half the length of the interval, so Length
+                    = 3.43 − 3.07 = 0.36 and 0.36/2 = 0.18.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the length of the interval. Remember the margin of
+                    error is equal to half the length of the interval.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

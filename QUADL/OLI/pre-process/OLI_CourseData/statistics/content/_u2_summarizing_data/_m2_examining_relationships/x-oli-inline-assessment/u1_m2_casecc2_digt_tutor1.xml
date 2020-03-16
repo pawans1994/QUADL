@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m2_casecc2_digt_tutor1">
+   <title>Tutor</title>
+   <page>
+      <question id="q1">
+         <body>
+            
+            <p>We wish to investigate the relationship between which two
+               categorical variables?</p>
+         </body>
+         <multiple_choice shuffle="false">
+            <choice value="Res4">Insured and uninsured</choice>
+            <choice value="Res3">Region and uninsured</choice>
+            <choice value="Res2">Region and United States</choice>
+            <choice value="Res1">Health insurance and region</choice>
+            <choice value="Res5">Health insurance and United States</choice>
+         </multiple_choice>
+         <part>
+            <response match="Res4" score="0">
+               <feedback>Incorrect. You have selected two responses for the same variable, health
+                  insurance. Please choose variables, not responses.</feedback>
+            </response>
+            <response match="Res3" score="0">
+               <feedback>Incorrect. You have selected one of the variables, region,
+                  which describes the entries for the rows. But your other selection, uninsured, is
+                  a response, not a variable.</feedback>
+            </response>
+            <response match="Res2" score="0">
+               <feedback>Incorrect. You have selected one of the variables, region,
+                  which describes the entries for the rows. These regions are in the United States,
+                  but United States is not the variable. You have not chosen a variable for the
+                  columns.</feedback>
+            </response>
+            <response match="Res1" score="10">
+               <feedback>Correct. The entries for rows can be represented by the variable region,
+                  while the entries for the columns can be represented by the variable health
+                  insurance.</feedback>
+            </response>
+            <response match="Res5" score="0">
+               <feedback>Incorrect. You have selected one of the variables, health
+                  insurance, which describes the entries for the columns. The row entries of
+                  Northeast, Midwest, South, and West are all in the United States, but there is a
+                  specific name for the variable.</feedback>
+            </response>
+         </part>
+      </question>
+   </page>
+ 
+</assessment>

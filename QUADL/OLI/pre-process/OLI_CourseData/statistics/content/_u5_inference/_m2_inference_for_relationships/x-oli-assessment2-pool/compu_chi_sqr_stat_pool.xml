@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_chi_sqr_stat_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_chi_sqr_stat">
+        <!-- LO: compu_chi_sqr_stat -->
+        <body>
+            <p>To determine if there is a relationship between grade performance and extracurricular
+                participation, North Carolina State conducted a study of 112 students, recording the
+                number of students in each of three extracurricular categories, and each of two
+                grade categories. Here are the results: <image style="block" src="../webcontent/assessment9q18image1.gif" /> Source:
+                Felder, et al., "A Study of Student Performance in an Introductory Chemical
+                Engineering Course," <em style="italic">1992 ASEE Annual Conference
+                    Proceedings</em>, pp. 1516–1519.</p>
+            <p>Which one of the following facts should make you the most worried about the
+                reliability of the results of the test in this case?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The 112 students were all students in a chemical engineering course
+                and not a random sample from the entire student body.</choice>
+            <choice value="B">Two of the observed counts are less than 5.</choice>
+            <choice value="C">Not all of the cells' contributions to the chi-squared statistic are
+                greater than 1.</choice>
+            <choice value="D">Two of the six expected counts are less than 5.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Although these students are all from the same course, they are
+                    still randomly chosen.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The observed counts being less than 5 is not the most worrisome
+                    issue.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This just implies that some cells have expected counts and
+                    observed counts that are very close in value.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since two of the six (or 33% of the) expected counts are less
+                    than 5. we should be concerned about the reliability of the results of the test.
+                    The fact that the random sample was not taken from among the entire university’s
+                    students but from a smaller sampling frame of students in a chemical engineering
+                    course should not harm the reliability of the test results (since the sample is
+                    still random) but should just affect how general our conclusions can
+                    be.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_compu_chi_sqr_stat">
+        <!-- LO: compu_chi_sqr_stat -->
+        <body>
+            <p>In a 2012 report from the U.S. Department of Education breaking down the race and
+                gender of every U.S. college graduate receiving a bachelor's degree in 2009–2010, we see
+                the following data for white, black, and Hispanic graduates. (Numbers are in
+                1000s.)</p>
+            <table>
+                <tr>
+                    <td> </td>
+                    <td colspan="3">Gender</td>
+                </tr>
+                <tr>
+                    <td>Race</td>
+                    <td>Males</td>
+                    <td>Females</td>
+                    <td>Both</td>
+                </tr>
+                <tr>
+                    <td>White (Expected)</td>
+                    <td>514 (508.32)</td>
+                    <td>654 (689.68)</td>
+                    <td>1198</td>
+                </tr>
+                <tr>
+                    <td>Black (Expected)</td>
+                    <td>56 (70.01)</td>
+                    <td>109 (94.99)</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>Hispanic (Expected)</td>
+                    <td>55 (59.40)</td>
+                    <td>85 (80.60)</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>625</td>
+                    <td>848</td>
+                    <td>1473</td>
+                </tr>
+            </table>
+            <p>Source: “Degrees cConferred by Sex and Race,” National Center for Education Statistics,
+                U.S. Department of Education. https://nces.ed.gov/fastfacts/display.asp?id=72</p>
+            <p>What is the contribution of Hispanic females to the chi-square test-statistic?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">0.24</choice>
+            <choice value="B">80.60</choice>
+            <choice value="C">60.71</choice>
+            <choice value="D">4.40</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. You have calculated the chi-square contribution of Hispanic
+                    females to the test statistics as the square of the difference between the
+                    observed and expected counts of Hispanic females divided by the expected count
+                    of Hispanic females.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You have calculated the <em style="italic">expected count</em>
+                    of Hispanic females. We are looking for the <em style="italic">contribution</em>
+                    to the chi-squared statistic which is the square of the difference between the
+                    observed and expected counts of Hispanic females divided by the expected count
+                    of Hispanic females.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You have calculated the percentage of Hispanic graduates that
+                    are women. We are looking for the <em style="italic">contribution</em> to the
+                    chi-squared statistic which is the square of the difference between the observed
+                    and expected counts of Hispanic females divided by the expected count of
+                    Hispanic females.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You have calculated the <em style="italic">difference</em>
+                    between the observed and expected count of Hispanic female graduates. We are
+                    looking for the <em style="italic">contribution</em> to the chi-squared
+                    statistic which is the square of the difference between the observed and
+                    expected counts of Hispanic females divided by the expected count of Hispanic
+                    females.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_compu_chi_sqr_stat">
+        <!-- LO: compu_chi_sqr_stat -->
+        <body>
+            <p>In a 2012 report from the U.S. Department of Education breaking down the race and
+                gender of every U.S. college graduate receiving a bachelor's degree in 2009–2010, we see
+                the following data for white, black, and Hispanic graduates. (Numbers are in
+                1000s.)</p>
+            <table>
+                <tr>
+                    <td> </td>
+                    <td colspan="3">Gender</td>
+                </tr>
+                <tr>
+                    <td>Race</td>
+                    <td>Males</td>
+                    <td>Females</td>
+                    <td>Both</td>
+                </tr>
+                <tr>
+                    <td>White (Expected)</td>
+                    <td>514 (508.32)</td>
+                    <td>654 (689.68)</td>
+                    <td>1198</td>
+                </tr>
+                <tr>
+                    <td>Black (Expected)</td>
+                    <td>56 (70.01)</td>
+                    <td>109 (94.99)</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>Hispanic (Expected)</td>
+                    <td>55 (59.40)</td>
+                    <td>85 (80.60)</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>625</td>
+                    <td>848</td>
+                    <td>1473</td>
+                </tr>
+            </table>
+            <p>Source: “Degrees Conferred by Sex and Race,” National Center for Education Statistics,
+                U.S. Department of Education. https://nces.ed.gov/fastfacts/display.asp?id=72</p>
+            <p>What is the chi-squared statistic for this data?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">2.80</choice>
+            <choice value="B">6.63</choice>
+            <choice value="C">2.06</choice>
+            <choice value="D">3.81</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You may have calculated the contribution of black males which
+                    is only part of the chi-squared statistic. You need to add all 6 contributions
+                    to get the chi-squared statistic which is calculated by summing across all 6
+                    cells the square of the difference between the observed and expected counts and
+                    dividing by the expected count for a given cell.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. You have successfully calculated the 6 contributions to the
+                    chi-squared statistic and added them together following this formula: <image style="block" src="../webcontent/observed_expected_equation.png" /></feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You may have calculated the contribution of black females which
+                    is only part of the chi-squared statistic. You need to add all 6 contributions
+                    to get the chi-squared statistic which is calculated by summing across all 6
+                    cells the square of the difference between the observed and expected counts and
+                    dividing by the expected count for a given cell.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have calculated the contribution of males which is only
+                    part of the chi-squared statistic. You need to add all 6 contributions to get
+                    the chi-squared statistic, not just the 3 for the males. This is calculated by
+                    which is calculated by summing across all 6 cells the square of the difference
+                    between the observed and expected counts and dividing by the expected count for
+                    a given cell.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

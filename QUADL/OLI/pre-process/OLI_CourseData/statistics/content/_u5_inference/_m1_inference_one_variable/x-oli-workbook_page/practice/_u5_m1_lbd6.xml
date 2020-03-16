@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd6">
+    <head>
+        <title>Confidence Intervals for Population Proportion p</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to learn how to use software to calculate a confidence
+            interval for the population proportion p (for a given level of confidence). Software is
+            particularly useful when raw data are given rather than data summaries, which are what
+            you would usually encounter in practice. </p>
+        <p>
+            <em>Background:</em> The U.S. federal ban on assault weapons expired in September 2004,
+            which meant that after 10 years (since the ban was instituted in 1994) there were
+            certain types of guns that could be manufactured legally again. A poll asked a random
+            sample of 1,200 eligible voters (among other questions) whether they were satisfied with
+            the fact that the law had expired. The datafile linked below contains the results of
+            this poll (Data were generated based on a poll conducted by NBC News/<em style="italic"
+                >Wall Street Journal</em> Poll). We would like to estimate p, the proportion of U.S.
+            eligible voters who were satisfied with the expiration of the law, with a 95% confidence
+            interval.</p>
+        <p>Before analyzing the data, answer the following question:</p>
+        <wb:inline idref="u4_m1_confintprop3_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="271">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor6a.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor6a</param>
+                </flash>
+            -->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/guns.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R. </p>
+                    <p>The data have been loaded into the data frame <code>support</code>. Enter the
+                        command <code>support</code> to see the data. The variable name in the data
+                        frame is <code>opinion</code>. </p>
+                    <p>This file contains 1,200 responses in the form "satisfied" and "not
+                        satisfied," which is too much to display. To check that all the data are
+                        loaded, count the data with the command: </p>
+                    <ul style="none">
+                        <li><code>n=length(support$opinion);n</code></li>
+
+                    </ul>
+                    <p>R should return 1,200 as the number of data. This is the sample size. </p>
+                    <p>We can get the summary counts using the <code>table()</code> command. </p>
+                    <ul style="none">
+                        <li><code>t=table(support$opinion);t</code></li>
+
+                    </ul>
+                    <p>Notice the first entry in the table is the "not satisfied" opinion. If we
+                        just wanted that term we can extract it from the table: </p>
+                    <ul style="none">
+                        <li><code>t[1]</code></li>
+                    </ul>
+                    <p>We can also extract the second entry, "satisfied," from the table: </p>
+                    <ul style="none">
+                        <li><code>t[2]</code></li>
+                    </ul>
+                    <p>To calculate confidence intervals for a single proportion we can use the
+                        command <code>prop.test()</code>. Here is the 95% confidence interval for
+                        the proportion of the population that is "not satisfied" with the expired
+                        law: </p>
+                    <ul style="none">
+                        <li><code>prop.test(t[1],n,conf.level=0.95)</code></li>
+                        <!-- I removed the $conf.int from Judith's code because without it then the output matches the compare part of the submit and compare below.      <li><code>prop.test(t[1],n,conf.level=0.95)$conf.int</code></li>-->
+                    </ul>
+                    <p>Or we can calculate the 95% confidence interval for the proportion of the
+                        population that is "satisfied" with the expired law: </p>
+                    <ul style="none">
+                        <li><code>prop.test(t[2],n,conf.level=0.95)$conf.int</code></li>
+                        <!-- I removed the $conf.int from Judith's code because without it then the output matches the compare part of the submit and compare below.      <li><code>prop.test(t[2],n,conf.level=0.95)$conf.int</code></li>-->
+                    </ul>
+                    <p><em>Note:</em> In R, be aware of the structure of your data at all times. In
+                        the created table <code>t</code>, the first <code>[1]</code> entry
+                        represented the "not satisfied" count, which is why <code>t[1]</code>
+                        extracted that value.</p>
+
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/guns.RData" target="self">here</link> and choose
+                    "Save Target As" to download the file to your computer. Then find the downloaded
+                    file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T111423-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T111422-0500" content="&apos;"?>support<?oxy_delete author="mmyers" timestamp="20101126T111425-0500" content="&apos;"?><?oxy_insert_start author="mmyers" timestamp="20101126T111426-0500"?>"<?oxy_insert_end?>.
+                        Enter the command <code>support</code> to see the data.</p>
+                <p>This file contains
+                        1<?oxy_insert_start author="mmyers" timestamp="20101126T111437-0500"?>,<?oxy_insert_end?>200
+                        responses in the form "satisfied" and "not
+                        satisfied<?oxy_insert_start author="mmyers" timestamp="20101126T111502-0500"?>,<?oxy_insert_end?>"<?oxy_delete author="mmyers" timestamp="20101126T111456-0500" content=","?>
+                        which is too much to display. To check that all the data are loaded, count
+                        the data with the command:</p>
+                <code>length(support$opinion)</code>
+                <p>R should return
+                        1<?oxy_insert_start author="mmyers" timestamp="20101126T111526-0500"?>,<?oxy_insert_end?>200
+                        as the number of data. This is the sample size.</p>
+                <p>To find out how many of the voters were satisfied, enter the command:</p>
+                <code>length(support[support=="satisfied"])</code>
+                <p>To calculate the 95% confidence interval for p using R, enter the command:</p>
+                <code>prop.test(length(support[support=="satisfied"]),length(support$opinion),conf.level=0.95)</code>
+                <p>R returns the sample proportion
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T111603-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T111604-0500"?>)<?oxy_insert_end?>
+                        of respondents who are satisfied that the law has expired and the 95%
+                        confidence interval for the population
+                        proportion<?oxy_insert_start author="mmyers" timestamp="20101126T111612-0500"?>,<?oxy_insert_end?>
+                        as well as additional information that we will study in later sections.</p>
+                <p><em>Note: Using
+                            R<?oxy_delete author="mmyers" timestamp="20101126T111633-0500" content=" - "?></em><?oxy_insert_start author="mmyers" timestamp="20101126T111659-0500"?>&#8212;<?oxy_insert_end?>the
+                        expression <code>length(support[support=="satisfied"])</code> returns the
+                        number of times <code>satisfied</code> appears in the
+                        data<?oxy_delete author="mmyers" timestamp="20101126T111714-0500" content=" "?>file.
+                        The expression <code>length(support$opinion)</code> is the total number of
+                        data. The name of the variable holding the data is <code>support</code>, and
+                        the name of the column within this variable holding the data is
+                            <code>opinion</code>. </p>
+-->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor6b_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="680">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor6b_r.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor6b_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/guns.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Next click
+                            <link href="http://www.statcrunch.com/" target="new">here</link> to open
+                        StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file
+                                -> on my computer.</em></li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p>To have StatCrunch calculate the 95% confidence interval for p:</p>
+                    <ul>
+                        <li>Choose: Stat → Proportions → One Sample → with data </li>
+                        <li>Values in: select variable column </li>
+                        <li>For Success: enter 1 </li>
+                        <li>Press: Next</li>
+                        <li>Perform: select Confidence Interval for p and enter level of confidence </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/guns.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: A
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <p>To have Minitab calculate the 95% confidence interval for p:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1 Proportion.</li>
+                        <li>Make sure "Samples in columns" is selected, and enter the variable's
+                            name under it.</li>
+                        <li>Click "Option," select your confidence level, and check "use test and
+                            interval based on the normal distribution."</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+
+                    <!--<wb:inline idref="u4_m1_confintprop3_lbd_tutor2"/>-->
+                    <!--
+                        <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="620">
+                            <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor6b.xml</param>
+                            <param name="problem_name">_u5_m1_lbdtutor6b</param>
+                        </flash>
+                    -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/guns.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>To calculate the 95% confidence interval for p using Excel, we're going to
+                        use the equation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>z</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>⋅</m:mo>
+                                <m:msqrt>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                            <m:mfenced open="(" close=")">
+                                                <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                  </m:mover>
+                                                </m:mrow>
+                                            </m:mfenced>
+                                        </m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mfrac>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math> for the confidence interval. We can calculate <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math> by using the equation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math> and the margin of error using the formula <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi>z</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>⋅</m:mo>
+                                <m:msqrt>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                            <m:mfenced open="(" close=")">
+                                                <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                  </m:mover>
+                                                </m:mrow>
+                                            </m:mfenced>
+                                        </m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mfrac>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>. Before we can do this, we first have to calculate the values for
+                        each of the variables in the equation:</p>
+                    <ul>
+                        <li>First, we need to calculate X (the number of people surveyed who are
+                            satisfied with the expiration of the law). These people are represented
+                            by a "1" in the dataset. To count all of the "1"s, we use the formula
+                                <code style="inline">=COUNTIF([range],1)</code>, where [range] is
+                            the range of data we want to count&#8212;in this case, A1:A1200. X
+                            should come to 142. To calculate <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:math> type =142/1200. To calculate 1-<m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:math> type = 1 - 0.11833.</li>
+
+                        <li>Since we're looking for a 95% confidence interval, we'll use a value of
+                            2 for z*.</li>
+                        <li>Another approach uses the <em>CONFIDENCE.NORM(a,s,n)</em> function that
+                            we have used previously. This approach is a shortcut compared to using
+                            the formula above but you must recognize what to enter for the standard
+                            deviation (s). In the formula above <m:math display = 'inline'>
+                                <m:mrow>
+                                    <m:msqrt>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy='true'>&circ;</m:mo>
+                                            </m:mover>
+                                            <m:mo stretchy='false'>(</m:mo>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>&minus;</m:mo>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy='true'>&circ;</m:mo>
+                                            </m:mover>
+                                            <m:mo stretchy='false'>)</m:mo>
+                                        </m:mrow>
+                                    </m:msqrt>
+                                </m:mrow>
+                            </m:math>
+                            represents the standard deviation (s)
+                            so use that value in the <em>CONFIDENCE.NORM</em> formula. In this example we
+                            would enter <em>=CONFIDENCE.NORM(0.05,0.323,1200)</em> where 0.05 is a =
+                            1-0.95, 0.323 is <m:math display = 'inline'>
+                                <m:mrow>
+                                    <m:msqrt>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy='true'>&circ;</m:mo>
+                                            </m:mover>
+                                            <m:mo stretchy='false'>(</m:mo>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>&minus;</m:mo>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy='true'>&circ;</m:mo>
+                                            </m:mover>
+                                            <m:mo stretchy='false'>)</m:mo>
+                                        </m:mrow>
+                                    </m:msqrt>
+                                </m:mrow>
+                            </m:math>
+                             and 1200 is the sample size n.</li>
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/guns.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                    <p>To calculate the 95% confidence interval for p using Excel, we're going to
+                        use the equation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>z</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>⋅</m:mo>
+                                <m:msqrt>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                            <m:mfenced open="(" close=")">
+                                                <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                  </m:mover>
+                                                </m:mrow>
+                                            </m:mfenced>
+                                        </m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mfrac>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math> for the confidence interval. We can calculate <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math> by using the equation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math> and the margin of error using the formula <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi>z</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>⋅</m:mo>
+                                <m:msqrt>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                            <m:mfenced open="(" close=")">
+                                                <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                  </m:mover>
+                                                </m:mrow>
+                                            </m:mfenced>
+                                        </m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mfrac>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>. Before we can do this, we first have to calculate the values for
+                        each of the variables in the equation:</p>
+                    <ul>
+                        <li>First, we need to calculate X (the number of people surveyed who are
+                            satisfied with the expiration of the law). These people are represented
+                            by a "1" in the dataset. To count all of the "1"s, we use the formula
+                                <code style="inline">=COUNTIF([range],1)</code>, where [range] is
+                            the range of data we want to count over&#8212;in this case,
+                            A1:A1200.</li>
+                        <li>Since we're looking for a 95% confidence interval, we'll use a value of
+                            2 for z*.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>The dataset contains a sample of 1,200 values. The maximum number of list
+                        elements on a TI83/84 is 999. </p>
+                    <p>This could be a good opportunity to try one of the other technologies
+                        available in OLI. </p>
+                    <p>Since the dataset is too large (n = 1,200) to store in one list, the 1,200
+                        values are split into two lists. </p>
+                    <p>To open a group of lists with the data loaded, right-click <link
+                            href="../../../webcontent/ti/guns.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+
+                    <p>L1 contains responses 1-600 (0 = not satisfied, 1 = satisfied) </p>
+                    <p>L2 contains responses 601-1,200 (0 = not satisfied, 1 = satisfied) </p>
+                    <p><em>Counts </em>
+                    </p>
+                    <p>TI 83/84 calculators do not have the built-in capability to count the number
+                        of data values in each category for a categorical variable. </p>
+                    <p>This could be a good opportunity to try one of the other technologies
+                        available in OLI. </p>
+                    <p>You can produce a table of counts by hand using your TI to help. </p>
+                    <p>Sort the gun law satisfaction lists (L1 and L2) in ascending order. </p>
+
+                    <ul>
+                        <li>Choose <code style="inline">STAT/EDIT/2:SortA(</code>
+                        </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image503.jpg"
+                                alt="TI Calculator
+display contents: SortA("/></li>
+                        <li>Before pressing <code style="inline">ENTER</code>, choose the list that
+                            you want to sort. </li>
+                        <li>To access one of the built-in lists, such as L1, press <code
+                                style="inline">2ND/ 1</code>. </li>
+                        <li>To access a list you named, use the <code style="inline">LIST</code>
+                            menu. Press <code style="inline">2nd/LIST/NAMES/</code> and choose the
+                            appropriate list. </li>
+                        <li>Press the right parenthesis, then <code style="inline">ENTER</code>. </li>
+
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image504.jpg"
+                                alt="TI Calculator
+                        display contents: SortA(L_1)              Done"
+                            /></li>
+                        <li>Check out the sorted list by choosing <code style="inline"
+                                >STAT/EDIT</code>. </li>
+                    </ul>
+                    <p>Counting: </p>
+                    <p>Count the number of values for each category. </p>
+                    <p>Note: Since the coded values for satisfaction with the federal ban on assault
+                        weapons uses 0 = not satisfied and 1 = satisfied, you can use <code
+                            style="inline">STAT/CALC/1:1-VarStats</code> and record the value for
+                        the sum of the x-values (&#8721;x). This is the number of "1" values. </p>
+                    <p>Total the values for both L1 and L2. </p>
+                    <p><em>To create a confidence interval:</em>
+                    </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/A:1-PropZInt</code>
+                        </li>
+                        <li>Use arrows to navigate in the menu. </li>
+                        <li><code style="inline">1-PropZInt</code>
+                        </li>
+                        <li>x: Enter the number of people surveyed who are satisfied with the
+                            expiration of the law (represented by a "1" in dataset) </li>
+                        <li>n: Enter the sample size. </li>
+                        <li>C-Level:0.95 (the confidence level given in problem) </li>
+                        <li>Choose <code style="inline">CALCULATE</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m1_confintprop3_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m1_confintprop3_lbd_tutor3" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="451">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor6c.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor6c</param>
+                </flash>
+            -->
+    </body>
+</workbook_page>

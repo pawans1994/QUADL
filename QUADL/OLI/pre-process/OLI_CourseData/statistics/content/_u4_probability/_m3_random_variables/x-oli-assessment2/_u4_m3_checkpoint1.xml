@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u4_m3_checkpoint1" max_attempts="3" recommended_attempts="1">
+    <title>Random Variables Checkpoint 1</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u4_m3_checkpoint1.pdf">Solution Set</link>.</p>
+    </content>-->
+    <section id="assess_06_accidents">
+        <content>
+            <p>The random variable X, representing the number of accidents in a certain intersection
+                in a week, has the following probability distribution: </p>
+            <table>
+                <tr>
+                    <td> x </td>
+                    <td> 0 </td>
+                    <td> 1 </td>
+                    <td> 2 </td>
+                    <td> 3 </td>
+                    <td> 4 </td>
+                    <td> 5 </td>
+                </tr>
+                <tr>
+                    <td> P(X=x) </td>
+                    <td> 0.20 </td>
+                    <td> 0.30 </td>
+                    <td> 0.20 </td>
+                    <td> 0.15 </td>
+                    <td> 0.10 </td>
+                    <td> 0.05 </td>
+                </tr>
+            </table>
+        </content>
+        <multiple_choice id="prob3-1" select="single">
+            <body>
+                <p>The random variable X, representing the number of accidents in a certain
+                    intersection in a week, has the following probability distribution: </p>
+                <table>
+                    <tr>
+                        <td> x </td>
+                        <td> 0 </td>
+                        <td> 1 </td>
+                        <td> 2 </td>
+                        <td> 3 </td>
+                        <td> 4 </td>
+                        <td> 5 </td>
+                    </tr>
+                    <tr>
+                        <td> P(X=x) </td>
+                        <td> 0.20 </td>
+                        <td> 0.30 </td>
+                        <td> 0.20 </td>
+                        <td> 0.15 </td>
+                        <td> 0.10 </td>
+                        <td> 0.05 </td>
+                    </tr>
+                </table>
+                <p>What is the probability that in a given week there will be at most 3
+                    accidents?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; 0.70 </choice>
+                <choice value="B"> &#160;&#160; 0.85 </choice>
+                <choice value="C"> &#160;&#160; 0.35 </choice>
+                <choice value="D"> &#160;&#160; 0.15 </choice>
+                <choice value="E"> &#160;&#160; 1.00 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. It seems that you have found the probability that in a
+                        given week there will be less than 3 accidents. Recall that you want to find
+                        the probability that in a given week there will be at most 3 accidents. In
+                        other words, what is the probability that in a given week there will be less
+                        than 4 accidents?</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. P(X &#8804; 3) = 0.20 + 0.30 + 0.20 + 0.15 = 0.85 or P(X &#8804;
+                        3) = 1 - P(X &#8804; 4) = 1 - (0.10 + 0.05) = 1 - 0.15 = 0.85 </feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have found the probability that in a
+                        given week there will be either 2 or 3 accidents. Recall that you want to
+                        find the probability that in a given week there will be at most 3 accidents.
+                        As a result, you must take into account the probability that in a given week
+                        there will be no accidents, 1 accident, 2 accidents, and 3
+                        accidents.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It seems that you have found the probability of the
+                        complementary event, that in a given week there will be more than 3
+                        accidents. Recall that you want to find the probability that in a given week
+                        there will be at most 3 accidents.</feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. Remember that if an event has probability 1 of occurring,
+                        then it must contain all outcomes in the sample space that have non-zero
+                        probability of occurring. Notice that the probability that in a given week
+                        there are more than 3 accidents is non-zero. This means that the probability
+                        that in a given week there are at most 3 accidents must not be equal to
+                        1.</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob3-2" select="single">
+            <body>
+                <p>The random variable X, representing the number of accidents in a certain
+                    intersection in a week, has the following probability distribution: </p>
+                <table>
+                    <tr>
+                        <td> x </td>
+                        <td> 0 </td>
+                        <td> 1 </td>
+                        <td> 2 </td>
+                        <td> 3 </td>
+                        <td> 4 </td>
+                        <td> 5 </td>
+                    </tr>
+                    <tr>
+                        <td> P(X=x) </td>
+                        <td> 0.20 </td>
+                        <td> 0.30 </td>
+                        <td> 0.20 </td>
+                        <td> 0.15 </td>
+                        <td> 0.10 </td>
+                        <td> 0.05 </td>
+                    </tr>
+                </table>
+                <p>By the third day of a particular week, 2 accidents have already occurred in the
+                    intersection. What is the probability that there will be less than a total of 4
+                    accidents during that week?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; 1.00 </choice>
+                <choice value="B"> &#160;&#160; 0.90 </choice>
+                <choice value="C"> &#160;&#160; 0.85 </choice>
+                <choice value="D"> &#160;&#160; 0.70 </choice>
+                <choice value="E"> &#160;&#160; 0.50 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The fact that 2 accidents have occurred over the course of
+                        the first 3 days in a week does not imply that these are the only accidents
+                        that will occur in the intersection for that entire week. However, this
+                        information does imply that there must be at least 2 accidents over the
+                        course of that week, because 2 accidents have already occurred.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It seems that you have found: given that 2 accidents have
+                        already occurred, the probability that less than 5 accidents will occur in
+                        that week. Recall that you want to find: given that 2 accidents have already
+                        occurred, the probability that less than 4 accidents will occur in the
+                        entire week.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have found the probability that in a
+                        given week there are at most 3 accidents. Recall that you are given the fact
+                        that two accidents have occurred in the first 3 days and you want to find
+                        the probability that there are less than 4 accidents in the week. You should
+                        be conditioning in some way on the fact that 2 accidents have already
+                        occurred during the week.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. We are given that 2 accidents have already happened. In other
+                        words, we are given X ≥ 2 and we need to find how likely X is to be less than
+                        4. <image style="block" src="../webcontent/6_formula1.gif"/>
+                    </feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. It seems that you have found the probability that in a
+                        given week there are at least 2 accidents. Recall that you want to find,
+                        given that 2 accidents have already occurred, the probability that less than
+                        4 accidents will occur in the entire week.</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob3-3" select="single">
+            <body>
+                <p>The random variable X, representing the number of accidents in a certain
+                    intersection in a week, has the following probability distribution: </p>
+                <table>
+                    <tr>
+                        <td> x </td>
+                        <td> 0 </td>
+                        <td> 1 </td>
+                        <td> 2 </td>
+                        <td> 3 </td>
+                        <td> 4 </td>
+                        <td> 5 </td>
+                    </tr>
+                    <tr>
+                        <td> P(X=x) </td>
+                        <td> 0.20 </td>
+                        <td> 0.30 </td>
+                        <td> 0.20 </td>
+                        <td> 0.15 </td>
+                        <td> 0.10 </td>
+                        <td> 0.05 </td>
+                    </tr>
+                </table>
+                <p>On average, how many accidents are there in the intersection in a week?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A"> &#160;&#160; 5.3 </choice>
+                <choice value="B"> &#160;&#160; 2.5 </choice>
+                <choice value="C"> &#160;&#160; 1.8 </choice>
+                <choice value="D"> &#160;&#160; 0.30 </choice>
+                <choice value="E"> &#160;&#160; 0.1667 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Notice that the maximum number of accidents allowed in a
+                        week in this distribution is 5. This implies that the average number of
+                        accidents in a week must be at most 5.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It seems that you have weighted each of the possible
+                        numbers of accidents in a week equally. Remember that the average, or mean,
+                        of a distribution is a weighted sum of the possible outcomes, in which each
+                        weight is equal to the probability of that outcome occurring.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. We need to find the mean of X, μx. μx = (0 * 0.20) + (1 *
+                        0.30) + (2 * 0.20) + (3 * 0.15) + (4 * 0.10) + (5 * 0.05) = 1.8.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. The average of a distribution is generally not the same as
+                        the most likely outcome of that distribution. Remember that the average, or
+                        mean, of a distribution is a weighted sum of the possible outcomes, where
+                        each weight is equal to the probability of that outcome
+                        occurring.</feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. The average of a distribution is generally not the same as
+                        1/|S|, where S is the sample space and |S| represents the number of outcomes
+                        in the sample space. Remember that the average, or mean, of a distribution
+                        is a weighted sum of the possible outcomes where each weight is equal to the
+                        probability of that outcome occurring.</feedback>
+                </response>
+            </part>
+        </multiple_choice>
+    </section>
+    <multiple_choice id="prob3-4" select="single">
+        <body>
+            <p> The following three histograms represent the probability distributions of the three
+                random variables X, Y, and Z. </p>
+            <p>
+                <image style="block" src="../webcontent/assessment6q4image1.gif"/>
+                <image style="block" src="../webcontent/assessment6q4image2.gif"/>
+                <image style="block" src="../webcontent/assessment6q4image3.gif"/>
+            </p>
+            <p> Which of the three random variables has the largest standard deviation? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> &#160;&#160; X </choice>
+            <choice value="B"> &#160;&#160; Y </choice>
+            <choice value="C"> &#160;&#160; Z </choice>
+            <choice value="D"> &#160;&#160; All three random variables have the same standard
+                deviation. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. All of these variables take on the same values (1 - 5), but the
+                    one with the largest standard deviation will take on values further from the
+                    mean much more often than values closer to the mean. There is another random
+                    variable other than X that has more values further from the mean.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. All of these variables take on the same values (1 - 5), but the
+                    one with the largest standard deviation will take on values further from the
+                    mean much more often than values closer to the mean. Most of the values for Y
+                    are close to the mean so this random variable would have the smallest standard
+                    deviation.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. All three random variables take the values 1, 2, 3, 4, 5, and it
+                    is pretty easy to see (by symmetry) that the mean of all three random variables
+                    is 3. The random variables are different, though, with respect to how likely
+                    they are to have values that are “far” from the mean. We see that out of the
+                    three random variables, random variable Z is the most likely to have values 1
+                    and 5 (which are the furthest from the mean), and therefore Z has the largest
+                    standard deviation. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Although the random variables take on the same values, they do
+                    not have equal standard deviations. For example, random variable X will have a
+                    larger standard deviation than random variable Y because it takes on values 2
+                    and 4 more often.<!-- Consider the remaining options. (C) is the right answer.-->
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</assessment>

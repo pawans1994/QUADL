@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop5_tutor7">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>Which one of the following statements is correct about using the z-test for
+                    p?</p></body>
+            <multiple_choice shuffle="false">
+                <choice value="A">It is safe to use the z-test for p.</choice>
+                <choice value="B">It is not safe to use the z-test for p, since the sample is not a
+                    random sample from the entire population (or cannot be considered as
+                    one).</choice>
+                <choice value="C">It is not safe to use the z-test for p since n * p<sub>o</sub> is
+                    not large enough.</choice>
+                <choice value="D">It is not safe to use the z-test for p since n * (1 -
+                        p<sub>o</sub>) is not large enough.</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Not all the conditions for using a z-test for p are met.
+                    </feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. The sample <em style="italic">is</em> a random sample from
+                        the entire population (all school children from the school district). It is
+                        not safe to use the z-test for p since n*p<sub>o</sub> is not large enough.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. n * p<sub>o</sub> = 40 * (0.8) = 32 &#8805; 10 as
+                        required. It is not safe to use the z-test for p since n * (1 - p<sub>o</sub>) is not
+                        large enough.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. Indeed n * (1 - p<sub>o</sub>) = 40 * (1 - 0.8) = 8 is not
+                        large enough since it is less than 10.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

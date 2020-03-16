@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_expect_count_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_expect_count">
+        <!-- LO: compu_expect_count -->
+        <body>
+            <p>To determine if there is a relationship between grade performance and extracurricular
+                participation, North Carolina State conducted a study of 112 students, recording the
+                number of students in each of three extracurricular categories, and each of two
+                grade categories. Here are the results: <image style="block" src="../webcontent/assessment9q18image1.gif" /> Source:
+                Felder, et al., "A Study of Student Performance in an Introductory Chemical
+                Engineering Course," <em style="italic">1992 ASEE Annual Conference
+                    Proceedings</em>, pp. 1516–1519.</p>
+            <p>What is the expected count of students with high extracurricular participation and
+                good grades?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">3</choice>
+            <choice value="B">5.86</choice>
+            <choice value="C">8</choice>
+            <choice value="D">112</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the <em style="italic">observed</em> number of students
+                    with high extracurricular participation and good grades. We find the <em style="italic">expected</em> number of students with high extracurricular
+                    participation and good grades by assuming independence between extracurricular
+                    activity and grades. Then multiply the probability of having high
+                    extracurricular participation and good grades with the total number of people in
+                    the table.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The expected count is (row total * column total)/table total =
+                    8 * 82/112 = 5.86.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the total number of <em style="italic">observed</em>
+                    students who had high extracurricular participation across both grade
+                    categories. We find the expected number of students with high extracurricular
+                    participation and good grades by assuming independence between extracurricular
+                    activity and grades. Then multiply the probability of having high
+                    extracurricular participation and good grades with the total number of people in
+                    the table.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the total number of students included in the study. We
+                    find the expected number of students with high extracurricular participation and
+                    good grades by assuming independence between extracurricular activity and
+                    grades. Then multiply the probability of having high extracurricular
+                    participation and good grades with the total number of people in the
+                    table.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_compu_expect_count">
+        <!-- LO: compu_expect_count -->
+        <body>
+            <p>In a 2012 report from the U.S. Department of Education breaking down the race and
+                gender of every U.S. college graduate receiving a bachelor's degree in 2009–2010, we see
+                the following data for white, black, and Hispanic graduates. (Numbers are in
+                1000s.)</p>
+            <table>
+                <tr>
+                    <td> </td>
+                    <td colspan="3">Gender</td>
+                </tr>
+                <tr>
+                    <td>Race</td>
+                    <td>Males</td>
+                    <td>Females</td>
+                    <td>Both</td>
+                </tr>
+                <tr>
+                    <td>White</td>
+                    <td>514</td>
+                    <td>654</td>
+                    <td>1198</td>
+                </tr>
+                <tr>
+                    <td>Black</td>
+                    <td>56</td>
+                    <td>109</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>Hispanic</td>
+                    <td>55</td>
+                    <td>85</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>625</td>
+                    <td>848</td>
+                    <td>1473</td>
+                </tr>
+            </table>
+            <p>Source: “Degrees Conferred by Sex and Race,” National Center for Education Statistics,
+                U.S. Department of Education. https://nces.ed.gov/fastfacts/display.asp?id=72</p>
+            <p>Rounding to the nearest thousand, what is the expected count of white males?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">625</choice>
+            <choice value="B">6</choice>
+            <choice value="C">514</choice>
+            <choice value="D">508</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This is the <em style="italic">observed</em> count of <em style="italic">all</em> reported males, not just whites. To calculate the
+                        <em style="italic">expected</em> count of white males multiply the total
+                    number of males by the total number of whites and divide by the total number of
+                    graduates.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the <em style="italic">difference</em> between the observed and expected counts of
+                    white males. To calculate the <em style="italic">expected</em> count of white
+                    males multiply the total number of males by the total number of whites and
+                    divide by the total number of graduates.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This is the <em style="italic">observed</em> count of white
+                    males. To calculate the <em style="italic">expected</em> count of white males
+                    multiply the total number of males by the total number of whites and divide by
+                    the total number of graduates.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. To calculate the <em style="italic">expected</em> count of white
+                    males multiply the total number of males (column total: 625) by the total number
+                    of whites (row: 1198) and divide by the total number of graduates
+                    (1473). So (625 * 1198) / 1473 = 508.32 = 508.
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

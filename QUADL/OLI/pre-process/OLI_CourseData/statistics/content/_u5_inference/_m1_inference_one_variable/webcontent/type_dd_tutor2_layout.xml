@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dragdrop>
+    <layoutStyles>
+        <![CDATA[
+		<style type="text/css">		
+#q1_target_container0 {  
+    margin: auto;
+    position:relative; <!-- This is important-->
+    width: 680px;  
+    height: 200px;
+   
+}	
+	.tbody .th {
+    text-align: center;
+}		
+			.target 
+			{  
+			  border: 2px;
+			  border-style: dashed;
+			  border-color: #999999; 
+			  display: inline-block; 
+			  position: absolute; 
+			  min-width: 170px;  
+			  width: 170px;  
+			  min-height: 40px; 
+			  height: 40px;
+			  
+			}
+			
+			
+			.initiator
+			{
+				display: inline-block;
+				min-height: 35px;
+				max-height: 35px;
+				height: 35px;
+				min-width: 170px;
+				max-width: 170px;
+				background: #ffc;
+				text-align: center;
+				padding: 3px;
+				cursor: move;
+				border-style: solid;
+    			border-width: 1px;
+    			border-color: black;
+			}
+			
+			.dragdropspacer
+			{
+				height: 35px;
+			}
+			
+		</style>
+		]]>
+    </layoutStyles>
+
+		
+	
+		
+    <targetArea>
+        <![CDATA[
+		<div id="q1_target_container0">
+		
+		
+<div id="toplabel0" style="position:absolute;top:0px; left:150px; width:175px; line-height:15px" ><b>We Reject the <i>H</i><sub>0</sub> </b></div>
+<div id="toplabel1" style="position:absolute;top:0px;  left:325px;width:190px; line-height:15px"><b>We Fail to Reject the <i>H</i><sub>0</sub></b></div>
+
+<div id="toplabel0b" style="position:absolute;top:20px; left:150px; width:175px; line-height:14px" >(accept <i>H</i><sub>a</sub>)</div>
+<div id="toplabel1b" style="position:absolute;top:20px;  left:325px;width:190px; line-height:14px">(not enough evidence to accept <i>H</i><sub>a</sub>)</div>
+
+
+<div id="leftlabel1" style="position:absolute;top:64px; left:0px"><b><i>H<sub>0</sub> is true</i></b></div>
+<div id="leftlabel2" style="position:absolute;top:106px; left:0px"><b><i>H</i><sub>0</sub> is false</b></div>
+
+<div id="leftlabel2b" style="position:absolute;top:126px; left:0px">(<i>H</i><sub>a</sub> is true)</div>
+
+
+<div input_ref="dropAreaA" class="target" style="left:150px; top:64px; width:175px; height:40px;"> </div>
+<div input_ref="dropAreaB" class="target"  style="left:325px; top:64px; width:175px; height:40px;"> </div>
+
+<div input_ref="dropAreaC" class="target"  style="left:150px; top:106px; width:175px; height:40px;"> </div>
+<div input_ref="dropAreaD" class="target"  style="left:325px; top:106px; width:175px; height:40px;"> </div>
+		    </div>
+			
+		]]>
+    </targetArea>
+    
+    <initiators>
+        <![CDATA[			
+			<div input_val="typeIError" class="initiator">Type I error</div>
+			<div input_val="typeIIError" class="initiator">Type II error</div>
+			<div input_val="correctDecision1" class="initiator">Correct Decision</div>
+			<div input_val="correctDecision2" class="initiator">Correct Decision</div>
+			
+		]]>
+    </initiators>
+    
+</dragdrop>

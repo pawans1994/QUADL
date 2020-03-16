@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_pval_m2_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_pval_m2">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>The mortality rate from melanoma (skin cancer) during the 1950s was recorded for each
+                of the 48 contiguous United States, plus Washington, D.C. (as reported by Fisher and
+                Van Belle (1993) and found at <link href="http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/" target="new">http://www.stat.psu.edu/~lsimon/stat501wc/sp05/data/</link></p>
+            <p>The following is the scatterplot of the data:</p>
+            <image style="block" src="../webcontent/assessment9q11image1.gif" />
+            <p>The following output is available:</p>
+            <image style="block" src="../webcontent/assessment9q13image1.gif" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data do not provide sufficient evidence to conclude that melanoma
+                mortality rate is linearly related to latitude.</choice>
+            <choice value="B">The data provide extremely strong evidence that melanoma mortality
+                rate is linearly related to latitude.</choice>
+            <choice value="C">The data provide moderately strong evidence that melanoma mortality
+                rate is linearly related to latitude.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value in the “Lat” row is extremely small
+                    (approximately 0). This indicates that there is evidence of a relationship that
+                    melanoma mortality rate is linearly related to latitude.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The p-value is so small that the statistical software program
+                    reports that it is 0. This means that it would be essentially impossible to get
+                    data like those observed if melanoma mortality rate and latitude were not
+                    linearly related. This is extremely strong evidence that the two variables are
+                    linearly related.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Notice that the p-value in the “Lat” row is extremely small
+                    (approximately 0).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_pval_m2">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>To determine if there is a relationship between grade performance and extracurricular
+                participation, North Carolina State conducted a study of 112 students, recording the
+                number of students in each of three extracurricular categories, and each of two
+                grade categories. Here are the results: <image style="block" src="../webcontent/assessment9q18image1.gif" /> Source: Felder, et al., "A Study
+                of Student Performance in an Introductory Chemical Engineering Course," <em style="italic">1992 ASEE Annual Conference Proceedings</em>, pp. 1516–1519.</p>
+            <p>The following is the (edited) output of the chi-squared test in this case: <image style="block" src="../webcontent/assessment9q20image1.gif" /></p>
+            <p>Using a significance level of 5%, based on the output which of the following is an
+                appropriate conclusion?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The data provide sufficient evidence to conclude that extracurricular
+                participation and grade performance are independent.</choice>
+            <choice value="B">The data do not provide sufficient evidence to conclude that
+                extracurricular participation and grade performance are independent.</choice>
+            <choice value="C">The data provide sufficient evidence to conclude that extracurricular
+                participation and grade performance are related.</choice>
+            <choice value="D">The data do not provide sufficient evidence to conclude that
+                extracurricular participation and grade performance are related.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You are correct that the p-value below 0.05 provides sufficient
+                    evidence to reject the null hypothesis. However, the null hypothesis is that the
+                    extracurricular participation and grade performance are independent, so by
+                    rejecting the null you conclude the opposite (i.e. they are not
+                    independent).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Notice that the p-value is below 0.05. This implies that the
+                    data do provide sufficient evidence to reject the null hypothesis. Also, the
+                    null hypothesis is that the extracurricular participation and grade performance
+                    are independent, so by rejecting the null you conclude the opposite (i.e. they
+                    are not independent). </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The p-value (0.046) is sufficiently small (less than 0.05) to
+                    reject H<sub>0</sub> in favor of the alternative hypothesis and conclude that
+                    extracurricular activity and grade performance are related.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Notice that the p-value is below 0.05. This implies that the
+                    data do provide sufficient evidence to reject the null hypothesis that there is
+                    no relationship between extracurricular participation and grade performance and
+                    conclude that there is a relationship.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_interp_pval_m2">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>Rainfall and corn crop yield reported for the 38 years from 1890 through 1927 give us
+                the scatterplot shown below with an r = 0.0426. Yield is the number of ears of corn
+                measured in metric tons per hectare, rainfall is in inches.</p>
+            <p><image style="block" src="../webcontent/crop_yield.png" /></p>
+            <p>Based on corn crop yield from Ezekiel, M. and K. A. Fox. (1959). <em style="italic">Methods of Correlation and Regression Analysis</em>. Wiley: New York.</p>
+            <p>The following edited output is available:</p>
+            <p><em style="italic">The regression equation is Yield = 23.55 + 0.78 Rain</em></p>
+            <table>
+                <tr>
+                    <td>Predictor</td>
+                    <td>Coef</td>
+                    <td>SE Coef</td>
+                    <td>T</td>
+                    <td>P</td>
+                </tr>
+                <tr>
+                    <td>Constant</td>
+                    <td>23.55</td>
+                    <td>3.24</td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Rain</td>
+                    <td>0.7755</td>
+                    <td>0.2938</td>
+                    <td>2.6391</td>
+                    <td>0.0122</td>
+                </tr>
+            </table>
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The data do not provide sufficient evidence to conclude that crop
+                yield is linearly related to rainfall.</choice>
+            <choice value="B">The data provide extremely strong evidence that crop yield is linearly
+                related to rainfall.</choice>
+            <choice value="C">The data provide moderately strong evidence that crop yield is
+                linearly related to rainfall.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value in the "Rain" row is extremely small
+                    (0.0122). This indicates that there is evidence of a relationship that crop
+                    yield is linearly related to rainfall.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The p-value is 0.012 which means that samples like this would
+                    only happen by chance 12 times out of 1000. This is strong evidence that crop
+                    yield is linearly related to rainfall.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Notice that the p-value in the "Rain" row is extremely small
+                    (0.0122). This is very strong evidence that crop yield is linearly related to
+                    rainfall.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_interp_pval_m2">
+        <!-- LO: interp_pval -->
+        <body>
+            <p>In a 2012 report from the U.S. Department of Education breaking down the race and
+                gender of every U.S. college graduate receiving a bachelor's degree in 2009–2010, we
+                see the following data for white, black, and Hispanic graduates. (Numbers are in
+                1000s.)</p>
+            <table>
+                <tr>
+                    <td> </td>
+                    <td colspan="3">Gender</td>
+                </tr>
+                <tr>
+                    <td>Race</td>
+                    <td>Males</td>
+                    <td>Females</td>
+                    <td>Both</td>
+                </tr>
+                <tr>
+                    <td>White (Expected)</td>
+                    <td>514 (508.32)</td>
+                    <td>654 (689.68)</td>
+                    <td>1198</td>
+                </tr>
+                <tr>
+                    <td>Black (Expected)</td>
+                    <td>56 (70.01)</td>
+                    <td>109 (94.99)</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>Hispanic (Expected)</td>
+                    <td>55 (59.40)</td>
+                    <td>85 (80.60)</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>625</td>
+                    <td>848</td>
+                    <td>1473</td>
+                </tr>
+            </table>
+            <p><em style="italic">Source:</em> “Degrees Conferred by Sex and Race,” National Center
+                for Education Statistics, U.S. Department of Education.
+                https://nces.ed.gov/fastfacts/display.asp?id=72</p>
+            <p>The following is the (edited) output of the chi-squared test in this case:</p>
+            <table>
+                <tr>
+                    <td colspan="4">Expected Values:</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>male</td>
+                    <td>female</td>
+                    <td>total</td>
+                </tr>
+                <tr>
+                    <td>white</td>
+                    <td>495.58724</td>
+                    <td>672.41276</td>
+                    <td>1168</td>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td>70.01018</td>
+                    <td>94.98982</td>
+                    <td>165</td>
+                </tr>
+                <tr>
+                    <td>hispanic</td>
+                    <td>59.40258</td>
+                    <td>80.59742</td>
+                    <td>140</td>
+                </tr>
+            </table>
+            <p><em style="italic">X<sup>2</sup><!--squared--> = 6.6251, df = 2, p-value =
+                    0.03642</em></p>
+            <p>Using a significance level of 5%, based on the output, which of the following is an
+                appropriate conclusion?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The data provide sufficient evidence to conclude that race and gender
+                in the awarding of bachelor’s degrees are independent.</choice>
+            <choice value="B">The data do not provide sufficient evidence to conclude that race and
+                gender in the awarding of bachelor’s degrees are independent.</choice>
+            <choice value="C">The data provide sufficient evidence to conclude that race and gender
+                in the awarding of bachelor’s degrees are related.</choice>
+            <choice value="D">The data do not provide sufficient evidence to conclude that race and
+                gender in the awarding of bachelor’s degrees are related.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You are correct that the p-value below 0.05 provides sufficient
+                    evidence to reject the null hypothesis. However, the null hypothesis is that
+                    gender and race are independent, so by rejecting the null you conclude the
+                    opposite (i.e., they are <em style="italic">not</em> independent).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Notice that the p-value is below 0.05. This implies that the
+                    data <em style="italic">do</em> provide sufficient evidence to reject the null
+                    hypothesis. Also, the null hypothesis is that gender and race are independent,
+                    so by rejecting the null you conclude the opposite (i.e., they are <em style="italic">not</em> independent).</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The p-value (0.036) is sufficiently small (less than 0.05) to
+                    reject H<sub>0</sub> in favor of the alternative hypothesis and conclude that
+                    race and gender in the awarding of bachelor’s degrees are related.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Notice that the p-value is below 0.05. This implies that the
+                    data <em style="italic">do</em> provide sufficient evidence to reject the null
+                    hypothesis that there is no relationship between gender and race, and conclude
+                    that race and gender in the awarding of bachelor’s degrees are
+                    related.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="spread2">
+<head>
+<title>Measures of Spread (2 of 5)</title>
+   <objref idref="relate_center_and_spread"/>
+</head>
+<body>
+   
+   <section>
+<title>Inter-Quartile Range (IQR)</title>
+<body>
+<p>While the range quantifies the variability by looking at the range covered by <em style="italic"
+                  >ALL</em> the data, the IQR measures the variability of a distribution by giving
+               us the range covered by the <em style="italic">MIDDLE 50%</em> of the data. </p>
+<p>The following picture illustrates this idea: (Think about the horizontal line as the data ranging from the min to the Max).
+</p>
+<image style="block" src="../webcontent/spread2.gif" alt="A horizontal line representing all of the data.
+The entire line represents the range of the data, and the leftmost point is the minimum data point. The rightmost
+point is the maximum data point. 25% of the range spanning the area between the leftmost point and 1/4 of the line
+from the leftmost point is labeled the Bottom 25% of the data. The area from the 1/4 point to the 3/4 point is
+labeled the middle 50% of the data. This is where the IQR is calculated. Indeed, the middle 50% represents half
+of the line. The rest of the line, the remaining 1/4 from the 3/4 point to the rightmost point, is the top 25% of
+the data."/>
+<p>
+Here is how the IQR is actually found:</p>
+<ol>
+<li>Arrange the data in increasing order, and find the median M. Recall that the median divides the
+                  data, so that 50% of the data points are below the median, and 50% of the data
+                  points are above the median. <image style="block" src="../webcontent/spread3.gif"
+                  alt="A line representing the range of the data. Once again, the leftmost point is the minimum,
+and the rightmost point is the maximum. At the middle is M, the median. All of the line to the left of M is the
+bottom 50% of the data, and all of the line to the right of M is the top 50% of the data."/>
+               </li>
+<li>Find the median of the lower 50% of the data. This is called the first quartile of the
+                  distribution, and the point is denoted by Q1. Note from the picture that Q1
+                  divides the lower 50% of the data into two halves, containing 25% of the data
+                  points in each half. Q1 is called the first quartile, since one quarter of the
+                  data points fall below it. <image style="block" src="../webcontent/spread4.gif"
+                  alt="The same line as the image above, except the bottom 50% has been split in half
+at the median of all of the data in the bottom 50%. This median is Q1. To the left of Q1 is 25% of 
+the data. This is between the minimum point and Q1. On the other side of Q1 is another 25% of the data.
+This is from Q1 to M. Together these two 25% sections make up the bottom 50% of the data. To the
+right of M is the top 50% of the data, so in total, to the right of Q1 is 25% of the data and the top
+50% of the data, for a total of 75% of the data."/>
+               </li>
+<li>Repeat this again for the top 50% of the data. Find the median of the top 50% of the data. This
+                  point is called the third quartile of the distribution, and is denoted by Q3. Note
+                  from the picture that Q3 divides the top 50% of the data into two halves, with 25%
+                  of the data points in each. Q3 is called the third quartile, since three quarters
+                  of the data points fall below it. <image style="block"
+                     src="../webcontent/spread5.gif" alt="The same line as the image above, except
+the top 50% has been split in half at the median of all of the data in the top 50%. This median is Q3.
+To the left of Q3 is 25% of the data. This is between M and Q3. On the other side of Q3 is another 25%
+of the data. This is from Q3 to the maximum point. Together these two 25% sections make up the top 50%
+of the data. To the left of M is the top 50% of the data, so in total, to the left of Q3 is 25% of the
+data and the bottom 50% of the data, for a total of 75% of the data."/>
+               </li>
+<li> The middle 50% of the data falls between Q1 and Q3, and therefore:
+
+<p>IQR = Q3 - Q1 </p>
+<image style="block" src="../webcontent/spread6.gif" alt="A line representing the range of data. The
+leftmost point is the minimum point and the rightmost point is the maximum point. 25% of the line
+starting at the minimum point is the area to the left of Q1. To the right of Q1, going right another
+25% of the line brings us to M. Going right another 25% brings us to Q3, and the last 25% brings us to
+the maximum point. The line segment between Q1 and Q3 is the middle 50% of the data, which is used for
+to calculate IQR = Q3-Q1"/>
+</li>
+</ol>
+</body>
+</section>
+<section>
+<title>Comments</title>
+<body>
+<ol>
+<li>
+<p>The last picture shows that Q1, M, and Q3 divide the data into four quarters with 25% of the data
+                     points in each, where the median is essentially the second quartile. The use of
+                     IQR = Q3 - Q1 as a measure of spread is therefore particularly appropriate when the
+                     median M is used as a measure of center.</p>
+</li>
+<li>
+<p>We can define a bit more precisely what is considered the bottom or top 50% of the data. The
+                     bottom (top) 50% of the data is all the observations whose position in the
+                     ordered list is to the left (right) of the location of the overall median M.
+                     The following picture will visually illustrate this for the simple cases of n = 7
+                     and n = 8.</p>
+<image style="block" src="../webcontent/spread7.gif" alt="Two sets of dots. The first set of dots
+consists of 7 dots. These dots represent data points, and they are ordered so that the dots are in a
+line, from least to greatest. The 4th dot is the middle dot, so this is the median. The bottom 50%
+of the data are the 3 dots to the left of the 4th dot, and the top 50% of the data are the 3 dots to
+the right of the 4th dot. In the second set of dots, we have 8 dots, arranged from least to greatest.
+There is no middle dot, so the median M is the average of the 4th and 5th dots. The 4 dots from the 1st
+to 4th dot are the bottom 50% of the data, and the four dots from the 5th to 8th are the top 50% of the
+data."/>
+<p>Note that when n is odd (as in n = 7 above), the median is <em>not</em> included in either the
+                     bottom or top half of the data; When n is even (as in n = 8 above), the data are
+                     naturally divided into two halves.</p>
+</li>
+</ol>
+</body>
+</section>
+</body>
+</workbook_page>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintprop3_digt_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>What is the minimum sample size necessary to estimate the proportion of automobile
+            accidents that are caused by an intoxicated driver, if we want to be 95% confident to
+            within 2% of the true proportion?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A"
+                >2<?oxy_insert_start author="mmyers" timestamp="20101126T103157-0500"?>,<?oxy_insert_end?>500</choice>
+            <choice value="B"
+                ><?oxy_comment_start author="mmyers" timestamp="20101126T103356-0500" comment="It&apos;s pretty obvious that all but one of these numbers is too small. Should another large number be added, as a plausible distractor?"?>50<?oxy_comment_end?></choice>
+            <choice value="C">25</choice>
+            <choice value="D">5</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T103212-0500"?>J<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T103211-0500" content="j"?>ob<?oxy_insert_start author="mmyers" timestamp="20101126T103216-0500"?>!<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T103215-0500" content="."?>
+                    The sample size
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T103227-0500"?>should
+                    be<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T103229-0500" content="is"?>
+                    at least 1 / (.02)<sup>2</sup> =
+                    2<?oxy_insert_start author="mmyers" timestamp="20101126T103222-0500"?>,<?oxy_insert_end?>500.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. It appears that you forgot to square the margin
+                    of error. Please try again.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. It appears that you changed 2% to a decimal
+                    incorrectly. Please try again.</feedback>
+            </response>
+            <response match="D">
+                <feedback>Incorrect. It appears that you changed 2% to a decimal
+                    incorrectly and forgot to square the margin of error. Please try
+                again.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

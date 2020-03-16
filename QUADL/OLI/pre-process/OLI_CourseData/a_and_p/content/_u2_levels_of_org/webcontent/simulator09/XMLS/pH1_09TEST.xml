@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="pH1_08" version="2">
+    <name>&lt;b&gt;Dissociation of Weak Electrolytes&lt;/b&gt;</name>
+ <!--   <intro filename="this_intro.swf"/>-->
+    <debugger state="on"/> 
+    <steps>
+        <step id="createIT">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;The Equilibrium state.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>Some molecules are weak electrolytes and exist in equilibrium between the starting molecule and its dissociated parts. For molecules that are weak electrolytes and act as acids, the ratio of the dissociated parts and the parent molecule is a constant in neutral water for each separate structure. 
+"&lt;/fade&gt;In the next few scenes we will explore just how this equilibrium behaves.
+When you are ready to continue click "Next.
+                    </text>
+                </object>
+                <object name="" state="visible"/>
+            </objects>
+            <actions>
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <!--<action event="create" name="beaker" url="swfs/beakerplain.swf"  x="325" y="5" xscale="2.18"  yscale="1.4"/> -->
+                <action event="create" name="pKFormula" url="tools/equationpKcalcAA1.swf"  x="330" y="400" xscale="1"  yscale="1"/>            
+                <action event="create" name="userinput" url="tools/userinput_textbox.swf"  x="12" y="410" xscale="1"  yscale="1"/>  
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="333" y="31" xscale="1"  yscale="1"/>
+                <action event="create" name="equation1" url="tools/equationpH1.swf"  x="410" y="315" xscale="1" yscale="1" />
+                <action event="create" name="inputs1" url="tools/DisplayVariable09.swf"  x="436" y="342" xscale="1" yscale="1" />
+                <action event="create" name="inputs2" url="tools/DisplayVariable09.swf"  x="555" y="342" xscale="1" yscale="1" />
+                <action event="create" name="inputs3" url="tools/DisplayVariable09.swf"  x="614" y="342" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="tools/castKeypHAA.swf"  x="420" y="285" xscale=".80" yscale=".8" />            
+                <action event="create" name="caption" url="swfs/caption-pH.swf"  x="410" y="333" xscale="1"  yscale="1"/> 
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> 
+                <action event="record light" />
+                <action event="settimer" timer='20' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+       <!-- <step id="wait">
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text>This is an intro - click the button to begin
+                    </text>
+                </object>
+                <object name="equation1" state="visible"/>
+                <object name="pKFormula" state="visible"/>
+                <object name="caption" state="visible"  />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="pause"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>-->
+ 
+        <step id="Clear Casts2">
+            <nextbutton text=" " state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="unload" name="inputs1"/>               
+                <action event="unload" name="box1"/> 
+                <action event="unload" name="beaker"/> 
+                <action event="create" name="expinputs" url="tools/inputs1pHeq09.swf"  x="420" y="340" xscale="1" yscale="1" />
+                <action event="create" name="userinput2" url="tools/equilibrium_grid09.swf"  x="10" y="310" xscale="1" yscale="1" />
+                <action event="reset" name="thegrapher" params="child=2,isvisible=0"/>
+                <action event="settimer" timer='2' advance='yes' resettimer='0' />
+            </actions>
+            <objects tutor="">
+                <object name="theexplainer" state="visible"  >
+                    <title>  </title>
+                    <text>
+                    </text>
+                </object>
+            </objects>
+        </step>
+        <step id="Experiment setup">
+            <nextbutton text="Begin Experiment" state="1" />
+            <actions>
+                <action event="record light"/> 
+                <action event="pause"/> 
+            </actions>
+            <objects tutor="">
+                <object name="pKFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Let's repeat the experiment beginning with a large concentration of HA per beaker of acid being added to neutral water. To simplify the calculations for the concentrations, you can assume each concentration is the same as the number of molecules per beaker.
+&lt;br&gt;&lt;br&gt;Using the formula for calculating &lt;b&gt;K&lt;/b&gt; at the right and the values from the boxes below the equation, calculate the equilibrium constant for HA in neutral water.
+&lt;br&gt;&lt;br&gt;&lt;b&gt;Click "Begin Experiment" to start&lt;/b&gt;.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <object name="expinputs" state="visible"/>
+               
+                <object name="castKey1" state="visible" />
+                <object name="userinput2" state="invisible" />
+                <object name="thegrapher" state="visible" />
+            </objects>
+        </step>
+        <step id="Experiment">
+            <nextbutton text="End Experiment" state="1" />
+            <actions>
+                <action event="initialize"  name="expinputs" params="1000,.0001" />
+                <action event="initialize"  name="userinput2" params=".0001,5000,10000"/>
+                <action event="initialize" name="thegrapher" params="child=3,color=0x0000FF,objectlink=inputs1.num_ES"  data="ymax=10000,y_label=HA,y_scale=10000&lt;br&gt;8000&lt;br&gt;6000&lt;br&gt;4000&lt;br&gt;2000&lt;br&gt;0" />
+                <action event="record light"/> 
+                <action event="continue"/> 
+            </actions>
+            <objects tutor="">
+                <object name="pKFormula" state="visible" />
+                <object name="equation1" state="visible" />
+                <object name="userinput2" state="visible" />
+                <object name="expinputs" state="visible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Calculating K, the Equilibrium Constant.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible"  >
+                    <text>Using the formula for &lt;b&gt;K&lt;/b&gt; at the right and the values from the boxes below the equation, calculate the equilibrium constant for HA in neutral water.
+                        &lt;br&gt;&lt;br&gt;Click the "&lt;b&gt;Pause&lt;/b&gt;" button when this dissociation has reached equilibrium. &lt;b&gt;Place your answer in the K column&lt;/b&gt; and then Click the "&lt;b&gt;Check it&lt;/b&gt;" button. Click "&lt;b&gt;Repeat&lt;/b&gt;" to try another experiment.
+                    </text>
+                </object>
+                <object name="box1" state="invisible"  />
+                <object name="beaker" state="invisible"  />
+                <!--<object name="inputs1" state="visible"/>
+                    <object name="inputs2" state="visible"/>
+                        <object name="inputs3" state="visible"/>-->
+                <object name="castKey1" state="visible" />
+                <object name="thegrapher" state="invisible" />
+            </objects>
+        </step>
+        <step id="FINISH">
+            <nextbutton text="Done" />
+            <!--Here is a chance to let the student return two steps and run the simulation again -->
+            <objects tutor="">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Review.&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+
+                    <text>Now that we have finished explaining how to calculate the equilibrium constant and pH, return to your text to take the practice quiz.
+                    </text>
+                </object>
+                <object name="equation1" state="visible" />
+                <object name="userinput2" state="visible" />
+                <object name="pKFormula" state="visible" />
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="pause" />
+            </actions>
+      </step>
+    </steps>
+</simulation>

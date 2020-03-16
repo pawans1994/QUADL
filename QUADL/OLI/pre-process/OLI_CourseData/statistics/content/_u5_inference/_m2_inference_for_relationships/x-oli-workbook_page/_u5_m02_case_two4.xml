@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_case_two4">
+    <head>
+        <title>Case C→C (4 of 5)</title>
+        <objref idref="carry_out_inferential_method_relationships"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Step 3: Finding the p-value</title>
+            <body>
+                <p>The p-value for the chi-square test for independence is the probability of
+                    getting counts like those observed, assuming that the two variables are not
+                    related (which is what is claimed by the null hypothesis). The smaller the
+                    p-value, the more surprising it would be to get counts like we did, if the null
+                    hypothesis were true.</p>
+                <p>Technically, the p-value is the probability of observing <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> at least as large as the one observed. Using statistical software, we
+                    find that the p-value for this test is 0.201. </p>
+            </body>
+        </section>
+        <!--  RS 07/28/10  Generalized to elminate alternatives widget
+    <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2013 and 2016 Instructions Instructions</title>
+<p>According to Excel, the p-value for this test is 0.201.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<image style="block" src="../webcontent/image186.gif"/>
+<p>According to Minitab, the p-value for this test is 0.201.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>According to R, the p-value for this test is 0.201.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+
+        <section>
+            <title> Step 4: Stating the conclusion in context</title>
+            <body>
+                <p>As usual, we use the magnitude of the p-value to draw our conclusions. A small
+                    p-value indicates that the evidence provided by the data is strong enough to
+                    reject H<sub>o</sub> and conclude (beyond a reasonable doubt) that the two
+                    variables are related. In particular, if a significance level of .05 is used, we
+                    will reject H<sub>o</sub> if the p-value is less than .05.</p>
+            </body>
+        </section>
+        <example>
+
+            <p>A p-value of .201 is not small at all. There is no compelling statistical evidence to
+                reject H<sub>o</sub>, and so we will continue to assume it may be true. Gender and
+                drunk driving may be independent, and so the data suggest that a law that forbids
+                sale of 3.2% beer to males and permits it to females is unwarranted. In fact, the
+                Supreme Court, by a 7-2 majority, struck down the Oklahoma law as discriminatory and
+                unjustified. In the majority opinion Justice Brennan wrote
+                (http://www.law.umkc.edu/faculty/projects/ftrials/conlaw/craig.html):</p>
+            <p>"Clearly, the protection of public health and safety represents an important function
+                of state and local governments. However, appellees' statistics in our view cannot
+                support the conclusion that the gender-based distinction closely serves to achieve
+                that objective and therefore the distinction cannot under [prior case law] withstand
+                equal protection challenge."</p>
+        </example>
+        <!--    <activity idref="u5_m2_cc4_digt" purpose="didigetthis"/>-->
+        <!--<activity idref="_u5_m2_lbd10" purpose="learnbydoing"/>-->
+
+        <section>
+            <title/>
+            <body>
+                <p>The purpose of this activity is to draw our conclusion regarding the relationship
+                    between participation in the 9/11 rescue and risk of alcohol problems among New
+                    York firefighters and first responders. </p>
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default>
+                            <pref:value preference="statistics.package"/>
+                        </default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>In the previous activity, we entered observed counts into R and
+                                calculated expected counts. This time we enter the same observed
+                                counts and conduct a chi-squared test for association on the
+                                data.</p>
+                            <p>Use the following command to create a data frame of the actual counts
+                                into R:</p>
+                            <ul style="none">
+                                <li><code>data = data.frame(no.risk=c(793,441),
+                                        moderate.to.severe.risk=c(309,110),
+                                        row.names=c("participated","did.not.participate"))</code></li>
+                                <li><code>data</code></li>
+                            </ul>
+                            <p>Then use this command to calculate the test statistic and p-value for
+                                the chi-square test for association (independence):</p>
+                            <ul style="none">
+                                <li><code>chisq.test(data)</code></li>
+                            </ul>
+
+
+
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>In the previous activity, we carried out the chi-square test using
+                                StatCrunch and obtained the following output:</p>
+                            <p><em>Contingency table results:</em></p>
+                            <p>Rows: 911</p>
+                            <p>Columns: None</p>
+                            <image src="../../../webcontent/inline_assessment/lbd012_statcrunch.gif"
+                            />
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>In the previous activity, we carried out the chi-square test using
+                                Minitab and obtained the following output:</p>
+                            <image style="block" src="../webcontent/image424.gif"
+                                alt="Chi-Square Test: No Risk, M to S Risk
+                Population 1: No Risk: Observed: 783, Expected: 822.67, Chi-Square contribution: 1.070.
+                Population 1: M to S Risk: Observed: 309, Expected: 279.33, Chi-Square contribution: 3.151
+                Population 1: Total: 1102
+                
+                Population 2: No Risk: Observed: 441, Expected: 441.33, Chi-Square contribution: 2.140.
+                Population 2: M to S Risk: Observed: 110, Expected: 139.67, Chi-Square contribution: 6.302
+                Population 2: Total: 551
+                
+                Total No Risk: 1234, Total M to S Risk: 419, Total Total: 1653
+                
+                Chi-Sq: 12.662, DF = 1, P-Value = 0.000"/>
+
+                        </alternative>
+
+
+                        <alternative value="excel">
+                            <title>Excel 2013 and 2016 Instructions Instructions</title>
+                            <p>In the previous activity, we created a table of expected counts to go
+                                along with our table of observed counts. In this activity, we will
+                                use both of these tables to conduct a chi-square test on the
+                                data.</p>
+                            <p>To do this in Excel, we first need to re-create both the table of
+                                observed counts and table of expected counts from the last exercise.
+                                Here are the data again for your convenience:<image style="block"
+                                    src="../webcontent/image424_excel.gif"
+                                    alt="Observed Data:
+                    Participated, No Risk: 783; Participated, Moderate to Severe Risk: 309
+                    Did not Participate, No Risk: 441; Did not Participate, Moderate to Severe Risk: 110
+                    
+                    Expected Data:
+                    Participated, No Risk: 823; Participated, Moderate to Severe Risk: 279
+                    Did not Participate, No Risk: 411; Did not Participate, Moderate to Severe Risk: 140"
+                                />
+                            </p>
+                            <p> Now use the <code style="inline">CHITEST</code> function in Excel to
+                                calculate the p-value given the data in our tables. To do this, pick
+                                an empty cell and type <code style="inline">=CHITEST([actual range],
+                                    [expected range])</code> where [actual range] is the range of
+                                observed data in our table (without row/column headers or totals)
+                                and [expected range] is the range of expected data in our table
+                                (again without row/column headers or totals). </p>
+                            <p>For example, assuming that the top left cell in the table above is
+                                A1, the formula would be <code style="inline">=CHITEST(B3:C4,
+                                    B8:C9)</code>.</p>
+                        </alternative>
+                      <!--    <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <p>In the previous activity. we created a table of expected counts to go
+                                along with our table of observed counts. In this activity, we will
+                                use both of these tables to conduct a chi-square test on the
+                                data.</p>
+                            <p>To do this in Excel, we first need to re-create both the table of
+                                observed counts and table of expected counts from the last exercise.
+                                Here are the data again for your convenience:<image style="block"
+                                    src="../webcontent/image424_excel.gif"
+                                    alt="Observed Data:
+                    Participated, No Risk: 783; Participated, Moderate to Severe Risk: 309
+                    Did not Participate, No Risk: 441; Did not Participate, Moderate to Severe Risk: 110
+                    
+                    Expected Data:
+                    Participated, No Risk: 823; Participated, Moderate to Severe Risk: 279
+                    Did not Participate, No Risk: 411; Did not Participate, Moderate to Severe Risk: 140"
+                                />
+                            </p>
+                            <p> Now use the <code style="inline">CHITEST</code> function in Excel to
+                                calculate the p-value given the data in our tables. To do this, pick
+                                an empty cell and type <code style="inline">=CHITEST([actual range],
+                                    [expected range])</code> where [actual range] is the range of
+                                observed data in our table (without row/column headers or totals)
+                                and [expected range] is the range of expected data in our table
+                                (again without row/column headers or totals). </p>
+                            <p>For example, assuming that the top left cell in the table above is
+                                A1, the formula would be <code style="inline">=CHITEST(B3:C4,
+                                    B8:C9)</code>.</p>
+                        </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p>In the previous activity, we carried out the chi-square test and
+                                obtained the following output:</p>
+                            <image style="block" src="../webcontent/image515.png"
+                                alt="Output for Observed:
+                MATRIX[A] 2x2     [ 793 309 ] [ 441 110 ]
+                Output for Expected: MATRIX[B] 2x2     [ 822.67 279.33 ] [ 411.33 139.67 ]
+                
+                &chi;&sup2;-Test: &chi;&sup2; = 12.66174866, p = 3.732199e-4, df = 1"
+                            />
+                        </alternative>
+                    </alternatives>
+                </pullout>
+                <wb:inline idref="u5_m2_cc4_digt" purpose="learnbydoing">
+                    <param name="tabPreference"><pref:value preference="statistics.package"
+                        /></param>
+                </wb:inline>
+
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>This is a good opportunity to illustrate an important idea that was discussed
+                    earlier in this unit: The larger the sample the results are based on, the more
+                    evidence they carry. Let's take the previous example and simply multiply each of
+                    the counts by 3:</p>
+                <image style="block" src="../webcontent/image144.gif"
+                    alt="A two-way table for observed counts,
+in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; (categories of Drank Alcohol
+in the last 2 hours?) and &quot;Total.&quot; The rows are labeled &quot;Male,&quot; &quot;Female,&quot;
+and &quot;Total.&quot; Here is the data in the table, given in cell format (&quot;Row, Column: Value&quot;):
+            Male, Yes: 231;
+            Male, No: 1212;
+            Male, Total: 1443;
+            Female, Yes: 48;
+            Female, No: 366;
+            Female, Total: 414;
+            Total, Yes: 279;
+            Total, No: 1578;
+            Total, Total: 1875;"/>
+                <p>and see what would have happened if these were the original data. Obviously, the
+                    conditional counts would remain the same:</p>
+                <image style="block" src="../webcontent/image145.gif"
+                    alt="A two-way table for conditional counts,
+in which the columns are labeled &quot;Yes&quot; and &quot;No&quot; (categories of Drank Alcohol
+in the last 2 hours?). The rows are labeled &quot;Male&quot; and &quot;Female.&quot; Here is the
+data in the table, given in cell format (&quot;Row, Column: Value&quot;):
+            Male, Yes: 231/1443 = 16.0%
+            Male, No: 1212/1443 = 84.0%
+            Female, Yes: 48/414 = 11.6%
+            Female, No: 366/414 = 88.4%"/>
+
+                <p>In other words, the sample provides the "same" results, but this time they are
+                    based on a much larger sample (1857 instead of 619). This is reflected by the
+                    chi-square test. In this case, software gives us a chi-square statistic of 4.910
+                    and a p-value of 0.027.</p>
+                <p>As before, H<sub>o</sub> states that gender and drunk driving are not related;
+                        H<sub>a</sub> states that they are related. Since the observed counts are
+                    triple what they were before, the expected counts are also tripled. When done
+                    with software the original chi-square statistic was 1.637 since software doesn't
+                    round as much. The chi-square statistic when we tripled the data is 3 times
+                    1.637, or 4.91 (which now is in the "large" range). Therefore, the p-value is
+                    smaller and is now .027.</p>
+
+                <!-- RS 07/28/10  Generalized to eliminate alternatives
+       <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2013 and 2016 Instructions Instructions</title>
+<p>In other words, the sample provides the "same" results, but this time they are based on a much larger sample (1857 instead of 619). This is reflected by the chi-square test.  In this case, Excel gives us a chi-square statistic of 4.920 and a p-value of 0.027.</p>
+<p>As before, Ho states that gender and drunk driving are not related; Ha states that they are related. Since the observed counts are triple what they were before, the expected counts are also tripled. The chi-square statistic is triple 1.64, or 4.92 (which now is in the "large" range), and therefore the p-value is smaller and is now .027.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>In other words, the sample provides the "same" results, but this time they are based on a much larger sample (1857 instead of 619). This is reflected by the chi-square test:</p>
+<image style="block" src="../webcontent/image187.gif"/>
+<p>As before, Ho states that gender and drunk driving are not related; Ha states that they are related. Minitab shows that since the observed counts are triple what they were before, the expected counts are also tripled. The chi-square statistic is triple 1.64, or 4.92 (which now is in the "large" range), and therefore the p-value is smaller and is now .027.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>In other words, the sample provides the "same" results, but this time they are based on a much larger sample (1857 instead of 619). This is reflected by the chi-square test.  In this case, R gives us a chi-square statistic of 4.920 and a p-value of 0.027.</p>
+        <p>As before, Ho states that gender and drunk driving are not related; Ha states that they are related. Since the observed counts are triple what they were before, the expected counts are also tripled. The chi-square statistic is triple 1.64, or 4.92 (which now is in the "large" range), and therefore the p-value is smaller and is now .027.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                <p>Now, we do reject H<sub>o</sub>, and we conclude that gender and drunk driving
+                    are related. In this case, the "largest contribution to chi-square" is large
+                    enough to provide evidence of a relationship. This is due to the fact that so
+                    few females drove drunk (48) compared to the number that would be expected
+                    (62.2, which is 414 * 279 / 1857) if the variables gender and drunk driving were
+                    not related. This contribution is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:msup>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>48</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mn>62</m:mn>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>2</m:mn>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                                <m:mrow>
+                                    <m:mn>62</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>2</m:mn>
+                                </m:mrow>
+                            </m:mfrac>
+                            <m:mo>=</m:mo>
+                            <m:mn>3</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>242</m:mn>
+                        </m:mrow>
+                    </m:math>. </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

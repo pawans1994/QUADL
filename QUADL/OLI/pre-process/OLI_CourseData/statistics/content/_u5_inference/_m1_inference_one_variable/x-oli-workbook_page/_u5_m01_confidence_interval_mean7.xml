@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_confidence_interval_mean7">
+<head>
+<title>Confidence Intervals for the Population Mean (7 of 8)</title>
+    <objref idref="explain_confidence_interval"/>
+    <objref idref="find_confidence_intervals"/>
+</head>
+<body>
+   
+    
+<p>We are almost done with this section. We need to discuss just a few more questions:</p>
+    <ul>
+        <li>Is it always okay to use the confidence interval we developed for μ when σ is known?</li>
+        <li>What if σ is unknown?</li>
+        <li>How can we use statistical software to calculate confidence intervals for us?</li>
+    </ul>
+<!--<p>There are a few more things we need to discuss:</p>
+<p><?oxy_comment_start author="mmyers" timestamp="20101123T153229-0500" comment="use bullets, rather than asterisks"?>*<?oxy_comment_end?>
+            Is it always okay to use
+            th<?oxy_insert_start author="mmyers" timestamp="20101123T153431-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T153429-0500" content="is"?>
+            confidence interval
+            <?oxy_insert_start author="mmyers" timestamp="20101123T153434-0500"?>we developed
+            <?oxy_insert_end?>for μ when σ is known?</p>
+<p>* What if σ is unknown?</p>
+<p>* How can we use statistical software to calculate confidence intervals for us?</p>-->
+<section>
+<title>When Is It Safe to Use the Confidence Interval We Developed?</title>
+<body>
+<p>One of the most important things to learn with any inference method is the conditions under which it is safe to use it. It is very tempting to apply a certain method, but if the conditions under which this method was developed are not met, then using this method will lead to unreliable results, which can then lead to wrong and/or misleading conclusions. As you'll see throughout this section, we  always discuss the conditions under which each method can be safely used.</p>
+<p>In particular, the confidence interval for μ (when σ is known), <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:msup>
+                                <m:mi>z</m:mi>
+                                <m:mo>*</m:mo>
+                            </m:msup>
+                            <m:mo>∗</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>, was developed assuming that the sampling distribution of <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is normal; in other words, that the Central Limit Theorem applies. In
+                    particular, this allowed us to determine the values of z*, the confidence
+                    multiplier, for different levels of confidence.</p>
+<p>First, <em>the sample must be random.</em> Assuming that the sample is random, recall from the
+                    Probability unit that the Central Limit Theorem works when the <em>sample size
+                        is large</em> (a common rule of thumb for "large" is n &gt; 30), or, for
+                        <em>smaller sample sizes</em>, if it is known that the quantitative
+                        <em>variable</em> of interest is <em>distributed normally</em> in the
+                    population. The only situation in which we cannot use the confidence interval,
+                    then, is when the sample size is small and the variable of interest is not known
+                    to have a normal distribution. In that case, other methods, called nonparametric
+                    methods, which are beyond the scope of this course, need to be used. This can be
+                    summarized in the following table:</p>
+<image style="block" src="../webcontent/image077.gif" alt="A table with two columns and two rows.
+The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size.&quot; The row
+headings are &quot;Variable varies normally&quot; and &quot;Variable doesn't vary normally.&quot;
+Here is the data in the table by cell in &quot;Row, Column: Value&quot; format:
+            Variable varies normally, Small sample size: OK;
+            Variable varies normally, Large sample size: OK;
+            Variable doesn't vary normally, Small sample size: NOT OK;
+            Variable doesn't vary normally, Large sample size: OK;"/>
+<!--<activity idref="_u5_m1_dig6" purpose="didigetthis"/>-->
+    <wb:inline idref="u4_m1_confintmean7_tutor1" purpose="didigetthis"/>
+   <!-- <p><em>Did You Get It?</em> If so, then go ahead and move on to the
+                    <?oxy_delete author="mmyers" timestamp="20101123T155025-0500" content="next page"?><?oxy_insert_start author="mmyers" timestamp="20101123T155030-0500"?>Learn
+                    By Doing exercise below<?oxy_insert_end?>. If
+                    not<?oxy_delete author="mmyers" timestamp="20101123T154802-0500" content=" yet"?>,
+                    then click the
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T155345-0500"?>"Did I Get
+                    This? <?oxy_insert_end?>link below for some additional practice.</p>
+                     put on page  <activity idref="_u5_m1_dig6_02" purpose="didigetthis"/>-->   
+ <section purpose="didigetthis">
+     <title></title>
+     <body> <p>Below are four different situations in which a confidence interval formula would be useful:</p>
+    
+    <p><em>Situation A:</em> A marketing executive wants to estimate the average
+        time, in days, that a watch battery will last. She tests 50
+        randomly selected batteries and finds that the distribution is
+        skewed to the left, since a couple of the batteries were
+        defective. It is known from past experience that the standard
+        deviation is 25 days.</p>
+    
+    <p><em>Situation B:</em> A college professor desires an estimate of the mean
+        number of hours per week that full-time college students are
+        employed. He randomly selected 250 college students and found
+        that they worked a mean time of 18.6 hours per week. He uses
+        previously known data for his standard deviation.</p>
+    
+    <p><em>Situation C:</em> A medical researcher at a sports medicine clinic
+        uses 35 volunteers from the clinic to study the average number
+        of hours the typical American exercises per week. It is known
+        that hours of exercise are normally distributed and past data
+        give him a standard deviation of 1.2 hours.</p>
+    
+    <p><em>Situation D:</em> A high-end auto manufacturer tests 5 randomly
+        selected cars to find out the damage caused by a 5 mph crash. It
+        is known that this distribution is normal. Assume that the
+        standard deviation is known.</p>
+    <wb:inline idref="u4_m1_confintmean7_digt_tutor1" purpose="didigetthis"/>
+     </body>
+ </section>  
+    
+    
+    <activity idref="_u5_m1_lbd3" purpose="learnbydoing"/>
+<p>
+<em>What if </em>σ<em> is unknown?</em>
+</p>
+<p>As we discussed earlier, when variables have been
+                    well<?oxy_insert_start author="mmyers" timestamp="20101123T163012-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T163012-0500" content=" "?>researched
+                    in different populations it is reasonable to assume that the population standard
+                    deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T163023-0500"?>(<?oxy_insert_end?>σ<?oxy_insert_start author="mmyers" timestamp="20101123T163024-0500"?>)<?oxy_insert_end?>
+                    is known.
+                    However<?oxy_insert_start author="mmyers" timestamp="20101123T163028-0500"?>,<?oxy_insert_end?>
+                    this is rarely the case. What if σ is unknown?</p>
+<p>Well, there is some good news and some bad
+                    news<?oxy_insert_start author="mmyers" timestamp="20101123T163037-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T163037-0500" content="!"?></p>
+<p>The good news is that we can easily replace the population standard deviation, σ, with the
+                        <em>sample</em> standard
+                    deviation<?oxy_insert_start author="mmyers" timestamp="20101123T163055-0500"?>,<?oxy_insert_end?>
+                    s.</p>
+<image style="block" src="../webcontent/image078.gif" alt="A large circle represents the population
+of interest. &mu; is unknown and &sigma; is unknown. From the population we create a SRS of size n, 
+represented by a smaller circle. We can find x-bar for this SRS, and we can also obtain S. We use this
+instead of the unknown &sigma;."/>
+<p>The bad news is that once σ has been replaced by s, we lose the Central Limit Theorem, together
+                    with the normality of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi> X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, and therefore the confidence multipliers z* for the different levels
+                    of confidence (1.645, 2, 2.576) are (generally) not accurate any more. The new
+                    multipliers come from a different distribution called the "t distribution" and
+                    are therefore denoted by t* (instead of z*). We will discuss the t distribution
+                    in more detail when we talk about hypothesis testing.</p>
+<p>The confidence interval for the population mean (μ) when (σ) is unknown is therefore:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:msup>
+<m:mi>t</m:mi>
+<m:mo>*</m:mo>
+</m:msup>
+<m:mo>∗</m:mo>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p>(Note that this interval is very similar to the one when σ is known, with the obvious changes: s
+                    replaces σ, and t* replaces z* as discussed
+                    above.)</p>
+<p>There is an important difference between the confidence multipliers we have used so far (z*) and
+                    those needed for the case when σ is unknown (t*). Unlike the confidence
+                    multipliers we have used so far (z*), which depend only on the level of
+                    confidence, the new multipliers (t*) have the <em>added complexity</em> that
+                    they <em>depend on both the level of confidence and on the sample size</em> (for
+                    example, the t* used in a 95% confidence when n = 10 is different from the t*
+                    used when n = 40). Due to this added complexity in determining the appropriate
+                    t*, we will rely heavily on software in this case.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comments</title>
+<body>
+<p>1. Since it is quite rare that σ is known, this interval (sometimes called a <em style="italic">one-sample t
+                    confidence interval</em>) is more commonly used as the confidence interval for
+                    estimating μ. (Nevertheless, we could not have presented it without our extended
+                    discussion up to this point,
+                    which also provided you with a solid understanding of confidence intervals.)</p>
+<p>2. The quantity <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mi>s</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> is called the <em>standard error</em> of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>. The central limit theorem tells us that <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> is the <em>standard deviation</em> of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> (and this is the quantity used in confidence interval when σ is
+                    known). In general, whenever we replace parameters with their sample
+                    counterparts in the standard deviation of a statistic, the resulting quantity is
+                    called the standard error of the statistic. In this case, we replaced σ with its
+                    sample counterpart (s), and thus <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mi>s</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> is the <em>standard error</em> of (the statistic) <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>.</p>
+<p>3. As before, to safely use this confidence interval, the sample <em>must be random</em>, and the only case when this interval cannot be used is when the sample size is small and the variable is not known to vary normally.</p>
+    <wb:inline idref="u4_m1_confintmean7_tutor2" purpose="learnbydoing"/>
+    <activity idref="_u5_m1_lbd4" purpose="learnbydoing"/>
+
+<p> </p>
+</body>
+</section>
+<section>
+<title>Final comment</title>
+<body>
+<p>It turns out that for large values of n, the t* multipliers are not that different from the z* multipliers,
+                    and therefore using the
+                    interval formula:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:msup>
+<m:mi>z</m:mi>
+<m:mo>∗</m:mo>
+</m:msup>
+<m:mo>∗</m:mo>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101123T171110-0500"?>for
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T171107-0500" content="to estimate"?>
+                    μ when σ is unknown
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T171001-0500"?>provides
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T171000-0500" content="is"?>
+                    a pretty good approximation.</p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd2">
+    <head>
+        <title>Two Independent Samples</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in carrying out the
+            two-sample t-test, and to show you how to use software to aid in the process.</p>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>A study was conducted at a large state university in order to compare the
+                    sleeping habits of undergraduate students to those of graduate students. Random
+                    samples of 75 undergraduate students and 50 graduate students were chosen and
+                    each of the subjects was asked to report the number of hours he or she sleeps in
+                    a typical day. The thought was that since undergraduate students are generally
+                    younger and party more during their years in school, they sleep less, on
+                    average, than graduate students. Do the data support this hypothesis? The
+                    following figure summarizes the problem:</p>
+                <image style="block" src="../../webcontent/image402.gif"
+                    alt="Our categorical variable,
+Type of student (X), has two categories: Undergraduate and Graduate Students. From this, we create two
+populations, population 1 for undergraduate students and population 2 for graduate students. Each population
+has its own hours of sleep (Y) mean: &mu;_1 for population 1 and &mu;_2 for population 2. For each population,
+we create a SRS. From population 1 a SRS of size 75 is created. For population 2, a SRS of size 50 is created."/>
+                <p>Note that we defined:</p>
+                <p> μ<sub>1</sub>&#8212;the mean number of hours undergraduate students sleep in a
+                    typical day</p>
+                <p> μ<sub>2</sub>&#8212;the mean number of hours graduate students sleep in a
+                    typical day</p>
+            </body>
+        </section>
+        <wb:inline idref="u4_m3_twosamples5_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="301">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor2a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor2a</param>
+                </flash>
+            -->
+        <wb:inline idref="u4_m3_twosamples5_lbd_tutor2" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="301">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor2b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor2b</param>
+                </flash>
+            -->
+        <p>
+            <em>Comment:</em> Before we move on to carry out the test, it is important to realize
+            that in the two-sample problem, the data can be provided in three possible ways:</p>
+        <p>(i) Sample data in one column, and another column that indicates which sample the
+            observation belongs to. Recall that this is the way the data were given in our leading
+            example (looks vs. personality score and gender):</p>
+        <image style="block" src="../../webcontent/image405.gif"
+            alt="A table with two columns, labeled
+&quot;Score (Y)&quot; and &quot;Gender (X).&quot; Here is the data in rows (Score, Gender):
+        15, Male;
+        13, Female;
+        10, Female;
+        12, Male;
+        14, Female;
+        14, Male;
+        6, Male;
+        17, Male;
+        ..."/>
+        <p>Note that essentially, one column contains the explanatory variable, and one contains the
+            response. </p>
+        <p>(ii) Sample data in different columns&#8212;data from each of the two samples appear in a
+            column dedicated to that category. As you'll see, this is the way the data are provided
+            in this example:</p>
+        <image style="block" src="../../webcontent/image406.gif"
+            alt="A table with two columns. The column
+headings are &quot;Undergraduate&quot; and &quot;Graduate.&quot; Each column is a list of collected
+data for the respective category. For example, the undergraduate column contains 6, 5, 3, 6, and so on,
+representing the first 4 data points for undergraduates."/>
+        <p>(iii) Summarized data&#8212;we are not given the actual data, but just the data
+            summaries: sample sizes, sample means and sample standard deviations of both samples.
+            Recall that in our second example, the data were given in this format.</p>
+        <image style="block" src="../../webcontent/image407.gif"
+            alt="A table describing the following
+data:
+        20-29 yrs old: n = 712, y-bar = 83.4, S = 18.7
+        75+ yrs old: n = 1001, y-bar = 78.5, S = 19.0"/>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To carry out the test, open R with the data set preloaded by right-clicking
+                            <link href="../../../webcontent/r/sleep2.RData" target="self"
+                            >here</link> and choosing "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        R.</p>
+                    <p>The data have been loaded into the data frame <code>sleep</code>. The two
+                        variables in the data frame are <code>undergraduate</code> and
+                            <code>graduate</code>.</p>
+                    <p>To carry out the t-test, enter the command:</p>
+                    <ul style="none">
+                        <li><code>t.test(sleep$undergraduate,sleep$graduate,alternative =
+                                "less")</code></li>
+                    </ul>
+                    <p><em style="bold">Note:</em> Using R, when we used <code>t.test()</code> for a
+                        one-sample t-test in a previous activity, we specified a one-sample data
+                        set, a hypothetical mean, and an alternative hypothesis. To perform a
+                        two-sample t-test, we use the same command, <code>t.test()</code>, but
+                        specify two sample data sets and an alternative hypothesis. If the data set
+                        were structured so the sample data is in one column (called
+                            <code>sleep</code>) and another column that indicates which sample the
+                        observation belongs to (called <code>student.type</code>), then the command
+                        would be <code>t.test(sleep~student.type, alternative="less")</code>.</p>
+
+                    <!--<p>To carry out the test, open R with the dataset preloaded by right-clicking <link
+                        href="../../../webcontent/r/sleep2.RData" target="self">here</link> and
+                    choosing "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T163801-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T163801-0500" content="&apos;"?>sleep<?oxy_delete author="mmyers" timestamp="20101128T163803-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101128T163805-0500"?>"<?oxy_insert_end?>
+                        Enter the command <code>sleep</code> to see the data.</p>
+                <p>To carry out the t-test, enter the command:</p>
+                <code>t.test(sleep$undergraduate,sleep$graduate,alternative = "less")</code>
+                <p><em>Note: Using
+                            R<?oxy_delete author="mmyers" timestamp="20101128T163817-0500" content=" - "?></em><?oxy_insert_start author="mmyers" timestamp="20101128T163829-0500"?>&#8212;<?oxy_insert_end?>when
+                        we used <code>t.test</code> for a one-sample t-test in a previous activity,
+                        we specified one sample dataset, a hypothetical mean, and an alternative
+                        hypothesis. To perform a two-sample t-test, we use the same command
+                            <code>t.test</code> but specify two sample datasets and an alternative
+                        hypothesis. </p>-->
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/sleep2.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next
+                        click <link href="http://www.statcrunch.com/" target="new">here </link>to
+                        open StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set select the “My computer” link under Load a data set
+                            from box on the left side of the page.</li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p> Choose: Stat → T statistics → Two sample → with data (or with summary if
+                        summarized data)</p>
+                    <p>Choose among the following three options, depending on what format the data
+                        are given in.</p>
+                    <ul>
+                        <li>Samples in one column—enter the column where the samples are, twice and
+                            each time use the Where option to limit which values are being
+                            grouped.</li>
+                        <li>Samples in different columns—enter the columns where the data are</li>
+                        <li>Summarized data--- enter the sample means, sample standard deviations
+                            and sample sizes of both samples</li>
+                        <li>Press Next</li>
+                        <li>Select appropriate form of hypothesis test</li>
+                        <li>Press Calculate</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To carry out the test, launch Minitab with the data in the worksheet and
+                        follow the instructions below.</p>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/sleep2.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 2-Sample t</li>
+                        <li>Choose among the following three options, depending on what format the
+                            data are given in. <ul>
+                                <li>Samples in one column&#8212;enter the column where the samples
+                                    (Y) are and the one where the subscripts are (X).</li>
+                                <li>Samples in different columns&#8212;enter the columns where the
+                                    data are</li>
+                                <li>Summarized data&#8212;enter the sample sizes, sample means and
+                                    sample standard deviations of both samples.</li>
+                            </ul>
+                        </li>
+                        <li>Click on "Options" to select the appropriate alternative.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To carry out the test, launch Excel with the data in the worksheet and follow
+                        the instructions below.</p>
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/sleep2.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>First we must establish the null and alternative hypotheses.</p>
+                    
+                   <p><m:math display = 'inline'>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>o</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>&minus;</m:mo>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:mi>which</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>is</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>the</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>same</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>as</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>o</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo stretchy='false'>)</m:mo>
+                            <m:mtext>&nbsp;</m:mtext>
+                        </m:mrow>
+                    </m:math></p>
+                    <p><m:math display = 'inline'>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>&minus;</m:mo>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>&lt;</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:mi>which</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>is</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>the</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>same</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:mi>as</m:mi>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mtext>&nbsp;</m:mtext>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>&lt;</m:mo>
+                            <m:msub>
+                                <m:mi>&mu;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo stretchy='false'>)</m:mo>
+                            <m:mo stretchy='false'>(</m:mo>
+                            <m:mi>one</m:mi>
+                            <m:mo>&minus;</m:mo>
+                            <m:mi>sided</m:mi>
+                            <m:mo stretchy='false'>)</m:mo>
+                        </m:mrow>
+                    </m:math>
+                    </p>   
+
+                    <p>We are using a one-sided alternative hypothesis because we suspect that
+                        undergraduates get less sleep on average than graduates.</p>
+                    <p>To carry out the two sample t-test we will use the the following formula:</p>
+                    <p><m:math display = 'block'>
+                        <m:mrow>
+                            <m:mi>t</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mo stretchy='false'>(</m:mo>
+                                    <m:mover>
+                                        <m:msub>
+                                            <m:mi>y</m:mi>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>&macr;</m:mo>
+                                    </m:mover>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:mover>
+                                        <m:msub>
+                                            <m:mi>y</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                        <m:mo>&macr;</m:mo>
+                                    </m:mover>
+                                    <m:mo stretchy='false'>)</m:mo>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:msqrt>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mi>s</m:mi>
+                                                <m:mfrac>
+                                                    <m:mn>2</m:mn>
+                                                    <m:mn>1</m:mn>
+                                                </m:mfrac>
+                                            </m:mrow>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:msqrt>
+                                    <m:mo>+</m:mo>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mi>s</m:mi>
+                                            <m:mfrac>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:mfrac>
+                                        </m:mrow>
+                                        <m:msub>
+                                            <m:mi>n</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mfrac>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                    </p>
+
+                    <ul>
+                        <li>After you open the data in Excel, go to an empty cell and type
+                                <em>ybar1</em> (sample mean of the undergraduates). In the two cells
+                            to the right of this, type <em>sd1</em> (sample standard deviation of
+                            the undergraduates) and <em>n1 </em> (sample size of the undergraduates)
+                            respectively. In the cells below starting with the cell below
+                                <em>ybar1,</em> type <em>=AVERAGE(A2:A76)</em>,
+                                <em>=STDEV.S(A2:A76),</em> and <em> =COUNT(A2:A76)</em></li>
+                        <li>Now go to another empty cell and type <em>ybar2</em> (sample mean of the
+                            graduates). In the two cells to the right of this, type <em>sd2</em>
+                            (sample standard deviation of the graduates) and <em>n2</em> (sample
+                            size of the graduates) respectively. In the cells below starting with
+                            the cell below <em>ybar2,</em> type <em>AVERAGE(B2:B51)</em>
+                            <em>=STDEV.S(B2:B51),</em> and <em> =COUNT(B2:B51).</em></li>
+                        <li>Use the given formula to calculate the test statistic t. You can use the
+                            cells that you created earlier for the needed values. To enter formula
+                            type <em>(E2-E4)/SQRT(F2^2/G2+F4^2/G4).</em> In this example the
+                                <em>ybar1 </em>value is assumed to be in cell E2. Note that your
+                            cell locations may be different depending on where you put
+                                <em>ybar1.</em></li>
+                        <li>Finally, use the test statistic t to calculate the p-value. Use the
+                            Excel function <em>T.DIST(t, degrees of freedom (n-1), cumulative).</em>
+                            Here we use the smaller of the two sample sizes for the degrees of
+                            freedom. Since the graduate sample had 50 which is smaller than 75, we
+                            would use 49 as the degrees of freedom. Type TRUE for cumulative.</li>
+                    </ul>
+
+                    <!--   <title>Excel 2007 Instructions</title>
+                    <p>To carry out the test, launch Excel with the data in the worksheet and follow
+                        the instructions below.</p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/sleep2.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel. </p>
+                    <ul>
+                        <li>Choose <code style="inline">Data Analysis</code> from the <code
+                                style="inline">Analysis</code> group in the <code style="inline"
+                                >Data</code> tab. In the pop-up window, choose <code style="inline"
+                                >t-Test: Two-Sample Assuming Unequal Variances</code>.</li>
+                        <li>In the next window, enter the data for column A next to <code
+                                style="inline">Variable 1 Range</code> and the data for column B
+                            next to <code style="inline">Variable 2 Range</code>.</li>
+                        <li>Click "OK."</li>
+                    </ul>-->
+                </alternative>
+                <!--     <alternative value="excel2003">
+                <title>Excel 2003 Instructions</title>
+                <p>To carry out the test, launch Excel with the data in the worksheet and follow the
+                    instructions below.</p>
+                <p>To open Excel with the data in the worksheet, right-click <link
+                        href="../../../webcontent/excel/sleep2.xls" target="self">here</link> and
+                    choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in Excel. </p>
+                <ul>
+                    <li>Choose <code style="inline">Tools → Data Analysis</code> from the menu bar.
+                            In the pop-up window, choose <code style="inline">t-Test: Two-Sample
+                                Assuming Unequal Variances</code>.</li>
+                    <li>In the next window, enter the data for column A next to <code style="inline"
+                            >Variable 1 Range</code> and the data for column B next to <code
+                            style="inline">Variable 2 Range</code>.</li>
+                    <li>Click "OK."</li>
+                </ul>
+            </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the data loaded, right-click <link
+                            href="../../../webcontent/ti/sleep2.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p><em>Two-sample t-test for two independent means</em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/4:2-SampTTest</code>.</li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li><code style="inline">Inpt:</code> Since you are given the sample data,
+                            choose <code style="inline">Data</code>.</li>
+                        <li>List1: L1, press 2ND/1.</li>
+                        <li>List2: L2, press 2ND/2.</li>
+                        <li>Freq1: 1 (the number one).</li>
+                        <li>Freq2: 1 (the number one).</li>
+                        <li>Choose the correct form of the alternative hypothesis (&#8800;, &lt;,
+                            &gt;). </li>
+                        <li>Choose <code style="inline">Pooled:No</code> since we are assuming
+                            unequal variances.</li>
+                        <li>Arrow down and choose <code style="inline">CALCULATE</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                    </ul>
+
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_twosamples5_lbd_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m3_twosamples5_lbd_tutor4" purpose="learnbydoing"/>
+
+    </body>
+</workbook_page>

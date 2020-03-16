@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_mode_add_ques">
+   <title>Tutor</title>
+   
+
+   <question id="q1">
+      <body>
+         <p>The mode of the readability level for the pamphlets is <input_ref input="B"/>
+         </p><p>Note that the frequencies of each level have already been determined. </p>
+      </body>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">8</choice>
+         <choice value="two">16</choice>
+         <choice value="three">1</choice>
+         <choice value="four">17</choice>
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="B" name="8" match="one" score="10">
+            <feedback>Good Job! Indeed the readability level that occurs with the highest frequency
+               (8) corresponds to grade level 8 </feedback>
+         </response>
+         <response input="B" name="greater_than_16" match="two">
+            <feedback>Incorrect. 16 is the largest value of the readability level. You
+               are looking for the readability level that occurs with the highest frequency (i.e.,
+               has the largest count).</feedback>
+         </response>
+         <response input="B" name="1" match="three">
+            <feedback>Incorrect. You are looking for the readability level that occurs
+               with the highest frequency (i.e., has the largest count).</feedback>
+         </response>
+         <response input="B" name="17" match="four">
+            <feedback>Incorrect. You are looking for the readability level that
+               occurs with the highest frequency (i.e., has the largest count).</feedback>
+         </response>
+      </part>
+      <hint>Remember, the mode is the most frequently occurring score. </hint>
+      <hint>Note: The data are grouped, so make sure you consider the counts. Since the mode is the
+         most frequently occurring value, what reading level for the cancer patients, has the
+         highest count?</hint>
+   </question>
+</assessment>

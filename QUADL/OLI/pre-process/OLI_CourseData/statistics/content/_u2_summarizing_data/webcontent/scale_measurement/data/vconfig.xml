@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<branding>
+		<uifont name="FONT_NOTES_TEXT" value="Verdana,9,false,false,false"/>
+	</branding>
+	<colors>
+		<uicolor name="primary" value="0x6F8488"/>
+		<uicolor name="glow" value="0x609773"/>
+		<uicolor name="text" value="0xFFFFFF"/>
+		<uicolor name="light" value="0x4E5D60"/>
+		<uicolor name="shadow" value="0x000000"/>
+		<uicolor name="background" value="0x727971"/>
+	</colors>
+	<layout>
+		<uishow name="presentationtitle" value="true"/><uishow name="presenterphoto" value="true"/><uishow name="presentername" value="true"/><uishow name="presentertitle" value="true"/><uishow name="presenteremail" value="true"/><uishow name="presenterbio" value="true"/><uishow name="companylogo" value="true"/><uishow name="sidebar" value="true"/><uishow name="outline" value="true"/><uishow name="thumbnail" value="true"/>
+		<uishow name="notes" value="true"/><uishow name="search" value="true"/><uishow name="quiz" value="true"/><uishow name="attachments" value="true"/><uishow name="utils" value="true"/><uishow name="volume" value="true"/><uishow name="playbar" value="true"/><uishow name="talkinghead" value="true"/><uishow name="sidebaronright" value="true"/><uishow name="viewchange" value="true"/><uishow name="alwaysScrunch" value="false"/><uishow name="initialdisplaymodeisnormal" value="true"/><uishow name="cctexthighlighting" value="true"/><uireplace name="logo" value=""/><uireplace name="bgimage" value=""/><uireplace name="initialtab" value="outline"/></layout>
+	<preloader><setBool name="disableAssetPreloader" value="true"/></preloader>
+	<language id="en">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="UNNAMEDSLIDETITLE" value="Slide %n"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally. Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Slide %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Stopped"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Playing"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="No Audio"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Video Playing"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Loading"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Buffering"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Answer Question"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Reviewing Quiz"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m Minutes %s Seconds Remaining"/>
+		<uitext name="NOTFOUND" value="Nothing Found"/>
+		<uitext name="ATTACHMENTS" value="Attachments"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Bio: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Bio"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Contact"/>
+		<uitext name="TAB_QUIZ" value="Quiz"/>
+		<uitext name="TAB_OUTLINE" value="Outline"/>
+		<uitext name="TAB_THUMB" value="Thumb"/>
+		<uitext name="TAB_NOTES" value="Notes"/>
+		<uitext name="TAB_SEARCH" value="Search"/>
+		<uitext name="SLIDE_HEADING" value="Slide Title"/>
+		<uitext name="DURATION_HEADING" value="Duration"/>
+		<uitext name="SEARCH_HEADING" value="Search for text:"/>
+		<uitext name="THUMB_HEADING" value="Slide"/>
+		<uitext name="THUMB_INFO" value="Slide Title/Duration"/>
+		<uitext name="ATTACHNAME_HEADING" value="File Name"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Size"/>
+		<uitext name="SLIDE_NOTES" value="Slide Notes"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Quiz Attempt:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n of %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Scored:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Passing Score:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Max Score:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Attempt: %n of %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Type: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Graded"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Survey"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Infinite"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Infinite"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Yes"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="No"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Quiz Navigation Warning"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="There are un-attempted questions in this Quiz.&#xA;&#xA;Clicking Yes will take you out of the Quiz. Click No to continue the Quiz."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="The current version of Flash Player installed on your machine does not support this video. Click on the video area to download the latest Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Show sidebar to participants"/>
+		<uitext name="MUTE" value="Mute"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter File Attachment"/>
+		<uitext name="DOCWRAP_MSG" value="Save to My Computer"/>
+		<uitext name="DOCWRAP_PROMPT" value="Click to Download"/>
+	</language>
+	<language id="ar">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="تحذير عن المرفقات"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="لا يمكن فتح المرفقات في نمط المعاينة. الرجاء استخدام نشر لرؤية النتائج."/>
+		<uitext name="UNNAMEDSLIDETITLE" value="شريحة %n"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="يجري حالياً تشغيل المحتوى محلياً. التعاون لا يعمل في هذا الوضع."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="تشغيل محلي"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="موافق"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="شريحة %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="متوقف"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="قيد التشغيل"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="لا يوجد صوت"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="الفيديو قيد التشغيل"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="يجري الآن التحميل..."/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="يجري الآن التخزين المؤقت"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="الإجابة على السؤال"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="مراجعة المسابقة"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m دقائق%s ثوان متبقية"/>
+		<uitext name="NOTFOUND" value="لم يُعثر على شيء"/>
+		<uitext name="ATTACHMENTS" value="المرفقات"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="السيرة الذاتية: %p"/>
+		<uitext name="BIOBTN_TITLE" value="السيرة الذاتية"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="اتصال"/>
+		<uitext name="TAB_QUIZ" value="مسابقة"/>
+		<uitext name="TAB_OUTLINE" value="مخطط"/>
+		<uitext name="TAB_THUMB" value="مصغّرة"/>
+		<uitext name="TAB_NOTES" value="ملاحظات"/>
+		<uitext name="TAB_SEARCH" value="بحث"/>
+		<uitext name="SLIDE_HEADING" value="عنوان الشريحة "/>
+		<uitext name="DURATION_HEADING" value="مدة"/>
+		<uitext name="SEARCH_HEADING" value=":البحث عن نص"/>
+		<uitext name="THUMB_HEADING" value="شريحة"/>
+		<uitext name="THUMB_INFO" value="عنوان/مدة الشريحة"/>
+		<uitext name="ATTACHNAME_HEADING" value="اسم الملف"/>
+		<uitext name="ATTACHSIZE_HEADING" value="الحجم"/>
+		<uitext name="SLIDE_NOTES" value="ملاحظات الشريحة"/>
+		<uitext name="COURSE_STATUS" value="حالة الوحدة"/>
+		<uitext name="PASSED_STRING" value="نجاح"/>
+		<uitext name="FAILED_STRING" value="فشل"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="رقم المحاولة في المسابقة:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n من %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value=":الدرجة المسجلة"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value=":درجة النجاح"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value=":الدرجة القصوى"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="المحاولة %n من %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="النوع: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="تم تصحيحه"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="استطلاع"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="لا نهائي"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="لا نهائي"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="نعم"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="لا"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="تحذير عن التنقل في المسابقة"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="هناك أسئلة لم تتم الإجابة عليها في المسابقة. النقر على نعم سيخرجك من المسابقة. انقر لا لمتابعة المسابقة."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="نسخة Flash Player  المثبتة حالياً على جهازك لا تدعم هذا الفيديو. انقر على منطقة الفيديو لتنزيل أحدث نسخة من Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="إظهار الشريط الجانبي للمشاركين"/>
+		<uitext name="MUTE" value="صامت"/>
+		<uitext name="DOCWRAP_TITLE" value="الملفات المرفقة في Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="الحفظ في جهاز الكمبيوتر"/>
+		<uitext name="DOCWRAP_PROMPT" value="انقر هنا للتنزيل"/>
+	</language>
+	<language id="de">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Warnung beim Öffnen von Anlagen"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Anhänge können nicht im Vorschau-Modus geöffnet werden. Verwenden Sie „Veröffentlichen“, um die Ergebnisse anzuzeigen."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Inhalt wird lokal gespielt. Zusammenarbeit funktioniert in diesem Modus nicht."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Lokale Wiedergabe"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="OK"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Folie %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Folie %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Beendet"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Wiedergabe"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Kein Audio"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Video wird abgespielt"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Laden"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Puffern"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Frage beantworten"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Nochmals durchsehen"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="Restdauer: %m Minuten %s Sekunden"/>
+		<uitext name="NOTFOUND" value="Nichts gefunden"/>
+		<uitext name="ATTACHMENTS" value="Anlagen"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Sprecher: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Sprecher"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Kontakt"/>
+		<uitext name="TAB_QUIZ" value="Quiz"/>
+		<uitext name="TAB_OUTLINE" value="Struktur"/>
+		<uitext name="TAB_THUMB" value="Miniatur"/>
+		<uitext name="TAB_NOTES" value="Notizen"/>
+		<uitext name="TAB_SEARCH" value="Suchen"/>
+		<uitext name="SLIDE_HEADING" value="Folientitel"/>
+		<uitext name="DURATION_HEADING" value="Dauer"/>
+		<uitext name="SEARCH_HEADING" value="Text suchen:"/>
+		<uitext name="THUMB_HEADING" value="Folie"/>
+		<uitext name="THUMB_INFO" value="Folientitel/Dauer"/>
+		<uitext name="ATTACHNAME_HEADING" value="Dateiname"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Größe"/>
+		<uitext name="SLIDE_NOTES" value="Foliennotizen"/>
+		<uitext name="COURSE_STATUS" value="Modulstatus"/>
+		<uitext name="PASSED_STRING" value="Erfolgreich"/>
+		<uitext name="FAILED_STRING" value="Fehlgeschlagen"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Quizversuch:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n von %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Erreicht:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Mindestpunktzahl:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Maximale Punktzahl:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Versuch: %n von %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Typ: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Bewertet"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Umfrage"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Unendlich"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Unendlich"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Ja"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Nein"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Quiznavigationswarnung"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="In diesem Quiz gibt es unbeantwortete Fragen.&#xA;&#xA;Wenn Sie auf &quot;Ja&quot; klicken, wird das Quiz beendet. Klicken Sie auf &quot;Nein&quot;, um mit dem Quiz fortzufahren."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="Das Video wird von der momentan auf diesem Computer installierten Version von Flash Player nicht unterstützt. Klicken Sie auf den Videobereich, um die aktuelle Version von Flash Player herunterzuladen."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Den Teilnehmern die Seitenleiste anzeigen"/>
+		<uitext name="MUTE" value="Aus"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter-Anhang"/>
+		<uitext name="DOCWRAP_MSG" value="Auf meinem Arbeitsplatz speichern"/>
+		<uitext name="DOCWRAP_PROMPT" value="Zum Herunterladen klicken"/>
+	</language>
+	<language id="fr">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Avertissement concernant la pièce jointe"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Les pièces jointes ne peuvent pas être ouvertes en mode Aperçu. Utilisez la publication pour afficher les résultats."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Le contenu est lu localement. La collaboration n’est pas prise en charge pour ce mode."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Lecture locale"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Diapositive %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Diapositive %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Arrêtée"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Lecture"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Pas de son"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Lecture vidéo en cours"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Chargement en cours"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Mise en mémoire"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Répondre à la question"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Révision du questionnaire"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m minutes %s secondes restantes"/>
+		<uitext name="NOTFOUND" value="Rien trouvé"/>
+		<uitext name="ATTACHMENTS" value="Pièces jointes"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Bio : %p"/>
+		<uitext name="BIOBTN_TITLE" value="Bio :"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Contact"/>
+		<uitext name="TAB_QUIZ" value="Quiz"/>
+		<uitext name="TAB_OUTLINE" value="Plan"/>
+		<uitext name="TAB_THUMB" value="Diapos"/>
+		<uitext name="TAB_NOTES" value="Notes"/>
+		<uitext name="TAB_SEARCH" value="Recherche"/>
+		<uitext name="SLIDE_HEADING" value="Titre de la diapositive"/>
+		<uitext name="DURATION_HEADING" value="Durée"/>
+		<uitext name="SEARCH_HEADING" value="Recherche de texte :"/>
+		<uitext name="THUMB_HEADING" value="Diapositive"/>
+		<uitext name="THUMB_INFO" value="Titre/durée"/>
+		<uitext name="ATTACHNAME_HEADING" value="Nom de fichier"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Taille"/>
+		<uitext name="SLIDE_NOTES" value="Commentaires des diapositives"/>
+		<uitext name="COURSE_STATUS" value="Statut du module"/>
+		<uitext name="PASSED_STRING" value="Réussi"/>
+		<uitext name="FAILED_STRING" value="Echoué"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Tentative de questionnaire :"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n sur %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Note obtenue :"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Note d'admissibilité :"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Note maximale :"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Tentative : %n sur %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Type: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Noté"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Enquête"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Illimité"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Illimité"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Oui"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Non"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Avertissement de navigation du questionnaire"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="Vous n'avez pas répondu à certaines questions de ce questionnaire.&#xA;&#xA;Si vous cliquez sur Oui, vous quitterez le questionnaire. Cliquez sur Non pour continuer le questionnaire."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="La version de Flash Player actuellement installée sur votre machine ne prend pas en charge ce type de vidéo. Cliquez sur la zone vidéo pour télécharger la dernière version de Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Montrer l'encadré aux participants"/>
+		<uitext name="MUTE" value="Muet"/>
+		<uitext name="DOCWRAP_TITLE" value="Pièce jointe Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="Enregistrer sur mon ordinateur"/>
+		<uitext name="DOCWRAP_PROMPT" value="Cliquer pour télécharger"/>
+	</language>
+	<language id="ja">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,11,true,false,false"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,10,false,false,false"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,15,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,15,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="添付ファイル警告"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="添付ファイルはプレビューモードでは開きません。パブリッシュを使用して結果を表示してください。"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="コンテンツはローカルで再生されています。このモードでは共同作業できません。"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="ローカル再生"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="OK"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="スライド : %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="スライド : %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="停止"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="再生中"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="音声なし"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="ビデオ再生中"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="ロード中"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="バッファ中"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="質問に答えて下さい"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="クイズをレビューしています"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="残り : %m 分 %s 秒"/>
+		<uitext name="NOTFOUND" value="何も見つかりません"/>
+		<uitext name="ATTACHMENTS" value="添付"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="経歴 : %p"/>
+		<uitext name="BIOBTN_TITLE" value="経歴"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="お問い合わせ"/>
+		<uitext name="TAB_QUIZ" value="クイズ"/>
+		<uitext name="TAB_OUTLINE" value="アウトライン"/>
+		<uitext name="TAB_THUMB" value="サムネール"/>
+		<uitext name="TAB_NOTES" value="ノート"/>
+		<uitext name="TAB_SEARCH" value="検索"/>
+		<uitext name="SLIDE_HEADING" value="スライドタイトル"/>
+		<uitext name="DURATION_HEADING" value="長さ"/>
+		<uitext name="SEARCH_HEADING" value="検索するテキスト : "/>
+		<uitext name="THUMB_HEADING" value="スライド"/>
+		<uitext name="THUMB_INFO" value="スライドタイトル / 長さ"/>
+		<uitext name="ATTACHNAME_HEADING" value="ファイル名"/>
+		<uitext name="ATTACHSIZE_HEADING" value="サイズ"/>
+		<uitext name="SLIDE_NOTES" value="スライドノート"/>
+		<uitext name="COURSE_STATUS" value="モジュールステータス"/>
+		<uitext name="PASSED_STRING" value="合格"/>
+		<uitext name="FAILED_STRING" value="不合格"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="クイズ試行回数 : "/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n / %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="スコア : "/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="合格点 :"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="最高得点 : "/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="試行回数 : %n / %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="タイプ : %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="評価"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="アンケート"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="無制限"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="無制限"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="はい"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="いいえ"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="クイズのナビゲーションに関する警告"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="このクイズには、まだ解答していない質問があります。&#xA;&#xA; クイズを終了するには、「はい」をクリックします。クイズを続行するには、「いいえ」をクリックします。"/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="お使いのコンピュータに現在インストールされている Flash Player のバージョンは、このビデオをサポートしていません。最新の Flash Player をダウンロードするには、ビデオ領域をクリックしてください。"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="サイドバーを参加者に見せる"/>
+		<uitext name="MUTE" value="ミュート"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter 添付ファイル"/>
+		<uitext name="DOCWRAP_MSG" value="マイコンピュータに保存"/>
+		<uitext name="DOCWRAP_PROMPT" value="クリックしてダウンロード"/>
+	</language>
+	<language id="ko">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,11,true,false,false"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,15,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,15,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="첨부 파일 경고"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="미리보기 모드에서는 첨부 파일이 열리지 않습니다. 결과를 보려면 게시 기능을 사용하십시오."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="콘텐트가 로컬에서 재생 중입니다. 이 모드에서는 공동 작업을 수행할 수 없습니다."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="로컬 재생"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="확인"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="슬라이드 %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="슬라이드 %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="중지됨"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="재생"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="오디오 없음"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="비디오 재생 중"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="로딩"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="버퍼링"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="질문에 답하기"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="질문 다시보기"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m분 %s초 남음"/>
+		<uitext name="NOTFOUND" value="없음"/>
+		<uitext name="ATTACHMENTS" value="첨부 파일"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="경력 소개: %p"/>
+		<uitext name="BIOBTN_TITLE" value="경력 소개"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="연락처"/>
+		<uitext name="TAB_QUIZ" value="퀴즈"/>
+		<uitext name="TAB_OUTLINE" value="개요"/>
+		<uitext name="TAB_THUMB" value="축소판"/>
+		<uitext name="TAB_NOTES" value="노트"/>
+		<uitext name="TAB_SEARCH" value="검색"/>
+		<uitext name="SLIDE_HEADING" value="슬라이드 제목"/>
+		<uitext name="DURATION_HEADING" value="재생시간"/>
+		<uitext name="SEARCH_HEADING" value="텍스트 검색:"/>
+		<uitext name="THUMB_HEADING" value="슬라이드"/>
+		<uitext name="THUMB_INFO" value="제목/재생시간"/>
+		<uitext name="ATTACHNAME_HEADING" value="파일 이름"/>
+		<uitext name="ATTACHSIZE_HEADING" value="크기"/>
+		<uitext name="SLIDE_NOTES" value="슬라이드 노트"/>
+		<uitext name="COURSE_STATUS" value="모듈 상태"/>
+		<uitext name="PASSED_STRING" value="합격"/>
+		<uitext name="FAILED_STRING" value="불합격"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="퀴즈 시도 횟수:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n/%t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="득점:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="통과 점수:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="최고 점수:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="시도 횟수: %n/%t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="유형: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="점수 매기기 완료"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="설문 조사"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="무한"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="무한"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="예"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="아니오"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="퀴즈 내비게이션 경고"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="이 퀴즈에서 시도하지 않은 질문이 있습니다.&#xA;&#xA;퀴즈를 종료하려면 [예]를 클릭하고, 퀴즈를 계속하려면 [아니오]를 클릭하십시오."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="시스템에 설치되어 있는 현재 버전의 Flash Player는 이 비디오를 지원하지 않습니다. 최신 Flash Player를 다운로드하려면 비디오 영역을 클릭하십시오."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="참여자에게 세로 막대 보이기"/>
+		<uitext name="MUTE" value="음소거"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter 파일 첨부"/>
+		<uitext name="DOCWRAP_MSG" value="내 컴퓨터에 저장"/>
+		<uitext name="DOCWRAP_PROMPT" value="클릭하여 다운로드"/>
+	</language>
+	<language id="es">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Aviso de archivo adjunto"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="No es posible abrir los archivos adjuntos en el modo de previsualización. Use Publicar para ver los resultados."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="El contenido se está reproduciendo localmente. La colaboración no funciona en este modo."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Reproducción local"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Diapositiva %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Diapositiva %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Detenida"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Reproduciendo"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Sin sonido"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Vídeo en reprod."/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Cargando"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Almacenando en búfer"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Contestar pregunta"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Revisando prueba"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m minutos %s segundos restantes"/>
+		<uitext name="NOTFOUND" value="No se ha encontrado nada"/>
+		<uitext name="ATTACHMENTS" value="Archivos adjuntos"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Biografía: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Biografía"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Contacto"/>
+		<uitext name="TAB_QUIZ" value="Prueba"/>
+		<uitext name="TAB_OUTLINE" value="Contorno"/>
+		<uitext name="TAB_THUMB" value="Miniat."/>
+		<uitext name="TAB_NOTES" value="Notas"/>
+		<uitext name="TAB_SEARCH" value="Buscar"/>
+		<uitext name="SLIDE_HEADING" value="Título de diapositiva"/>
+		<uitext name="DURATION_HEADING" value="Durac."/>
+		<uitext name="SEARCH_HEADING" value="Buscar texto:"/>
+		<uitext name="THUMB_HEADING" value="Diapositiva"/>
+		<uitext name="THUMB_INFO" value="Dur./Tít. diap."/>
+		<uitext name="ATTACHNAME_HEADING" value="Nombre de archivo"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Tamaño"/>
+		<uitext name="SLIDE_NOTES" value="Notas de diapositiva"/>
+		<uitext name="COURSE_STATUS" value="Estado de modulo"/>
+		<uitext name="PASSED_STRING" value="Aprobado"/>
+		<uitext name="FAILED_STRING" value="Suspenso"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Intento de prueba:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n de %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Puntuación:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Puntuación para aprobar:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Puntuación máxima:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Intentos: %n de %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Tipo: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Con puntuación"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Encuesta"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Infinito"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Infinito"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Sí"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="No"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Aviso de navegación de prueba"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="Hay preguntas sin intentos en esta prueba.&#xA;&#xA;Para salir de la prueba, haga clic en Sí. Para continuar, haga clic en No."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="La versión actual de Flash Player instalada en el ordenador no es compatible con este vídeo. Haga clic en el área de vídeo para descargar la última versión de Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter: %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter: %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Mostrar barra lateral a los participantes"/>
+		<uitext name="MUTE" value="Mudo"/>
+		<uitext name="DOCWRAP_TITLE" value="Archivo adjunto de Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="Guardar en Mi PC"/>
+		<uitext name="DOCWRAP_PROMPT" value="Haga clic en Descargar"/>
+	</language>
+	<language id="pt">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Aviso de anexo"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Os anexos não são abertos no modo de Visualização. Use o comando de publicação para ver os resultados."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="O conteúdo está sendo reproduzido localmente.A colaboração não funciona neste modo."/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Reprodução local"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Slide %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Slide %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Parado"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Reproduzindo"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Sem áudio"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Vídeo em reprodução"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Carregando"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Armazenando em buffer"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Responder pergunta"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Revisando questionário"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m minutos %s segundos restantes"/>
+		<uitext name="NOTFOUND" value="Nada encontrado"/>
+		<uitext name="ATTACHMENTS" value="Anexos"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Bio: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Bio"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Contato"/>
+		<uitext name="TAB_QUIZ" value="Quest."/>
+		<uitext name="TAB_OUTLINE" value="Esquema"/>
+		<uitext name="TAB_THUMB" value="Mini"/>
+		<uitext name="TAB_NOTES" value="Notas"/>
+		<uitext name="TAB_SEARCH" value="Busca"/>
+		<uitext name="SLIDE_HEADING" value="Título do slide"/>
+		<uitext name="DURATION_HEADING" value="Duração"/>
+		<uitext name="SEARCH_HEADING" value="Procurar texto:"/>
+		<uitext name="THUMB_HEADING" value="Slide"/>
+		<uitext name="THUMB_INFO" value="Título/Duração do slide"/>
+		<uitext name="ATTACHNAME_HEADING" value="Nome do arquivo"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Tamanho"/>
+		<uitext name="SLIDE_NOTES" value="Anotações do slide"/>
+		<uitext name="COURSE_STATUS" value="Status do módulo"/>
+		<uitext name="PASSED_STRING" value="Aprovado"/>
+		<uitext name="FAILED_STRING" value="Reprovado"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Tentativa no questionário:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n de %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Pontuação:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Pontuação de aprovação:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Pontuação máxima:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Tentativa: %n de %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Tipo: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Classificatória"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Pesquisa"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Infinito"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Infinito"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Sim"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Não"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Alerta de navegação do questionário"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="Existem perguntas que não foram respondidas neste questionário.&#xA;&#xA;Clique em Sim para sair do questionário ou em Não se quiser continuar."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="A versão atual do Flash Player instalada no computador não oferece suporte a esse vídeo. Clique na área do vídeo para baixar a versão mais recente do Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Mostrar barra lateral ao participantes"/>
+		<uitext name="MUTE" value="Mudo"/>
+		<uitext name="DOCWRAP_TITLE" value="Anexo de arquivo do Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="Salvar em Meu computador"/>
+		<uitext name="DOCWRAP_PROMPT" value="Clique para baixar"/>
+	</language>
+	<language id="it">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Diapositiva %n"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally.\n Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Diapositiva %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Interrotto"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Riproduzione"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Audio inatt."/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Video in riproduzione"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Caricamento"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Buffering"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Rispondi a domanda"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Revisione del quiz"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m Minuti %s Secondi rimanenti"/>
+		<uitext name="NOTFOUND" value="Nessun elemento trovato"/>
+		<uitext name="ATTACHMENTS" value="Allegati"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Bio: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Bio"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Cont."/>
+		<uitext name="TAB_QUIZ" value="Quiz"/>
+		<uitext name="TAB_OUTLINE" value="Struttura"/>
+		<uitext name="TAB_THUMB" value="Miniature"/>
+		<uitext name="TAB_NOTES" value="Note"/>
+		<uitext name="TAB_SEARCH" value="Cerca"/>
+		<uitext name="SLIDE_HEADING" value="Titolo diapositiva"/>
+		<uitext name="DURATION_HEADING" value="Durata"/>
+		<uitext name="SEARCH_HEADING" value="Cerca testo:"/>
+		<uitext name="THUMB_HEADING" value="Diapositiva"/>
+		<uitext name="THUMB_INFO" value="Titolo/Tempo"/>
+		<uitext name="ATTACHNAME_HEADING" value="Nome file"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Dimensione"/>
+		<uitext name="SLIDE_NOTES" value="Note diapositiva"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Tentativo quiz:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n di %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Punteggio:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Punteggio minimo:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Punteggio massimo:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Tentativo: %n di %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Tipo: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Con valutazione"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Indagine"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Infiniti"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Infiniti"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Sì"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="No"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Avvertenza navigazione quiz"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="Occorre ancora rispondere ad alcune domande del quiz.&#xA;&#xA;Se fate clic su Sì, uscirete dal quiz. Fate clic su No per continuare il quiz."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="La versione di Flash Player attualmente installata non supporta questo video. Fate clic sull'area del video per scaricare l'ultima versione di Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Mostra barra laterale ai partecipanti"/>
+		<uitext name="MUTE" value="Disattiva audio"/>
+		<uitext name="DOCWRAP_TITLE" value="Allegato file Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="Salva in Risorse del computer"/>
+		<uitext name="DOCWRAP_PROMPT" value="Clic per scaricare"/>
+	</language>
+	<language id="nl">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Dia %n"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally.\n Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Dia %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Gestopt"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Afspelen"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Geen audio"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Video afspelen"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Laden"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Bufferen"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Vraag met antwoord"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Quiz controleren"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="Er resteren %m minuten %s seconden"/>
+		<uitext name="NOTFOUND" value="Niets gevonden"/>
+		<uitext name="ATTACHMENTS" value="Bijlagen"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Biografie: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Biografie"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Contact"/>
+		<uitext name="TAB_QUIZ" value="Quiz"/>
+		<uitext name="TAB_OUTLINE" value="Overzicht"/>
+		<uitext name="TAB_THUMB" value="Miniatuur"/>
+		<uitext name="TAB_NOTES" value="Notities"/>
+		<uitext name="TAB_SEARCH" value="Zoeken"/>
+		<uitext name="SLIDE_HEADING" value="Titel van dia"/>
+		<uitext name="DURATION_HEADING" value="Duur"/>
+		<uitext name="SEARCH_HEADING" value="Zoeken naar tekst:"/>
+		<uitext name="THUMB_HEADING" value="Dia"/>
+		<uitext name="THUMB_INFO" value="Titel/duur van dia"/>
+		<uitext name="ATTACHNAME_HEADING" value="Bestandsnaam"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Grootte"/>
+		<uitext name="SLIDE_NOTES" value="Dianotities"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Quizpoging:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n van %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Behaalde score:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Voldoende score:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Maximaal haalbare score:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Poging: %n van %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Type: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Telt voor score"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Enquête"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Onbeperkt"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Onbeperkt"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Ja"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Nee"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Waarschuwing met betrekking tot quiznavigatie"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="U hebt niet alle vragen in deze quiz beantwoord.&#xA;&#xA;Klik op Ja om de quiz af te sluiten. Klik op Nee om de quiz voort te zetten."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="Deze video wordt niet ondersteund door de versie van Flash Player die momenteel op uw computer is geïnstalleerd. Klik in de video om de nieuwste Flash Player te downloaden."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Zijpaneel aan deelnemers weergeven"/>
+		<uitext name="MUTE" value="Dempen"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter-bestandsbijlage"/>
+		<uitext name="DOCWRAP_MSG" value="Opslaan in Deze computer"/>
+		<uitext name="DOCWRAP_PROMPT" value="Klik om te downloaden"/>
+	</language>
+	<language id="cn">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="宋体-18030,10,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="宋体-18030,10,true,false,false"/>
+		<uifont name="FONT_TABS" value="宋体-18030,14,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="宋体-18030,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="宋体-18030,14,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="宋体-18030,13,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="宋体-18030,12,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="宋体-18030,12,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="宋体-18030,12,false,false,true"/>
+		<uifont name="FONT_THUMB" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="宋体-18030,12,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="宋体-18030,10,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="宋体-18030,12,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="宋体-18030,12,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="宋体-18030,12,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="宋体-18030,12,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="宋体-18030,12,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="宋体-18030,12,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="宋体-18030,10,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="宋体-18030,10,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="宋体-18030,10,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally.\n Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="幻灯片 %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="幻灯片 %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="已停止"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="正在播放"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="无音频"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="视频播放"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="正在载入"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="正在进行缓冲处理"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="回答问题"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="正在审阅测验"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="剩余 %m 分钟 %s 秒"/>
+		<uitext name="NOTFOUND" value="未找到任何内容"/>
+		<uitext name="ATTACHMENTS" value="附件"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="个人简介: %p"/>
+		<uitext name="BIOBTN_TITLE" value="个人简介"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="联系方式"/>
+		<uitext name="TAB_QUIZ" value="测验"/>
+		<uitext name="TAB_OUTLINE" value="大纲"/>
+		<uitext name="TAB_THUMB" value="缩略图"/>
+		<uitext name="TAB_NOTES" value="备注"/>
+		<uitext name="TAB_SEARCH" value="搜索"/>
+		<uitext name="SLIDE_HEADING" value="幻灯片标题"/>
+		<uitext name="DURATION_HEADING" value="持续时间"/>
+		<uitext name="SEARCH_HEADING" value="搜索文本:"/>
+		<uitext name="THUMB_HEADING" value="幻灯片"/>
+		<uitext name="THUMB_INFO" value="幻灯片标题/持续时间"/>
+		<uitext name="ATTACHNAME_HEADING" value="文件名"/>
+		<uitext name="ATTACHSIZE_HEADING" value="大小"/>
+		<uitext name="SLIDE_NOTES" value="幻灯片备注"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="测验尝试次数:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="第 %n 次，共 %t 次"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="得分:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="及格分数:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="最高分数:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="尝试次数: 第 %n 次，共 %t 次"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="类型: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="评级"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="调查"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="无限"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="无限"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="是"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="否"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="测验导航警告"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="此测验中有未尝试作答的问题。&#xA;&#xA;单击“是”退出此测验。单击“否”继续测验。"/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="当前安装在您的计算机上的 Flash Player 版本不支持该视频。单击视频区域下载最新版本的 Flash Player。"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="向参加者显示提要栏"/>
+		<uitext name="MUTE" value="静音"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter 文件附件"/>
+		<uitext name="DOCWRAP_MSG" value="保存到我的计算机"/>
+		<uitext name="DOCWRAP_PROMPT" value="单击以下载"/>
+	</language>
+	<language id="tr">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally.\n Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Slayt %n"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Slayt %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Durduruldu"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Oynatılıyor"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Ses Yok"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Video Oynatılıyor"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Yükleniyor"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Arabelleğe Alınıyor"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Soruyu Yanıtla"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Sınav İnceleniyor"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="%m Dakika %s Saniye Kaldı"/>
+		<uitext name="NOTFOUND" value="Herhangi Bir Şey Bulunmadı"/>
+		<uitext name="ATTACHMENTS" value="Ekler"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Bio: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Bio"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="İrtibat"/>
+		<uitext name="TAB_QUIZ" value="Sınav"/>
+		<uitext name="TAB_OUTLINE" value="Ana Hat"/>
+		<uitext name="TAB_THUMB" value="Resim"/>
+		<uitext name="TAB_NOTES" value="Notlar"/>
+		<uitext name="TAB_SEARCH" value="Ara"/>
+		<uitext name="SLIDE_HEADING" value="Slayt Başlığı"/>
+		<uitext name="DURATION_HEADING" value="Süre"/>
+		<uitext name="SEARCH_HEADING" value="Metni ara:"/>
+		<uitext name="THUMB_HEADING" value="Slayt"/>
+		<uitext name="THUMB_INFO" value="Slayt Başlığı/Süresi"/>
+		<uitext name="ATTACHNAME_HEADING" value="Dosya Adı"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Boyut"/>
+		<uitext name="SLIDE_NOTES" value="Slayt Notları"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Sınav Denemesi:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n/%t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Puan:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Geçme Puanı:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Maksimum Puan:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Deneme: %n/%t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Tür: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="Basamaklı"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Anket"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Sınırsız"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Sınırsız"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Evet"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Hayır"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Sınav Gezinme Uyarısı"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="Bu Sınavda denenmemiş sorular var.&#xA;&#xA;Evet seçeneğini tıklatırsanız Sınavdan çıkacaksınız. Sınava devam etmek için Hayır seçeneğini tıklatın."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="Bilgisayarınıza yüklü olan geçerli Flash Player sürümü bu videoyu desteklemiyor. En son Flash Player sürümünü indirmek için video alanını tıklatın."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Katılımcılara kenar çubuğunu göster"/>
+		<uitext name="MUTE" value="Sessiz"/>
+		<uitext name="DOCWRAP_TITLE" value="Presenter Dosya Eki"/>
+		<uitext name="DOCWRAP_MSG" value="Bilgisayarıma Kaydet"/>
+		<uitext name="DOCWRAP_PROMPT" value="İndirmek için Tıklatın"/>
+	</language>
+	<language id="ru">
+		<!-- format for uifont value is "font,size,isbold,isitalic,isshadowed" -->
+		<uifont name="FONT_QUIZZING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_SCRUBSTATUS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_SCRUBTIME" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ELAPSEDTIME" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_UTILSMENU" value="Verdana,9,true,false,false"/>
+		<uifont name="FONT_TABS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_PRESENTATIONNAME" value="Verdana,14,false,false,true"/>
+		<uifont name="FONT_PRESENTERNAME" value="Verdana,10,true,false,true"/>
+		<uifont name="FONT_PRESENTERTITLE" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_BIOBTN" value="Verdana,10,false,false,true"/>
+		<uifont name="FONT_NOTES" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_OUTLINE" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_SEARCH" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_THUMB" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_BIOWIN" value="Verdana,11,false,false,false"/>
+		<uifont name="FONT_LISTHEADING" value="Verdana,9,false,false,false"/>
+		<uifont name="FONT_WINTITLE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_ATTACHMENTS" value="Verdana,11,false,false,true"/>
+		<!--quiz pod and message box text fonts-->
+		<uifont name="FONT_MSGBOX_WINTITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_MSGBOX_MSG" value="Verdana,11,false,false,true"/>
+		<uifont name="FONT_MSGBOX_OPTIONS" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_TITLE" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_ATTEMPT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUESTION_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_COUNT_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_QUESTION_ATTEMPTED_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_TAG" value="Verdana,11,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_SCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_MAXSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE" value="Verdana,9,false,false,true"/>
+		<uifont name="FONT_QUIZPOD_QUIZ_PASSSCORE_VALUE" value="Verdana,9,true,false,true"/>
+		<!-- uitext -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG_TITLESTRING" value="Attachment Warning"/>
+		<uitext name="ATTACHMENT_PREVIEW_WARNINGMSG" value="Attachments do not open in Preview mode. Please use publish to see the results"/>
+		<uitext name="UNNAMEDSLIDETITLE" value="Слайд %n"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_MSG" value="Content is being played locally.\n Collaboration does not work in this mode"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACK_TITLE" value="Local Playback"/>
+		<uitext name="COLLAB_LOCAL_PLAYBACKBTN" value="Ok"/>
+		<!-- substitution: %n == slide number -->
+		<!-- substitution: %t == total slide count -->
+		<uitext name="SCRUBBARSTATUS_SLIDEINFO" value="Слайд %n / %t | "/>
+		<uitext name="SCRUBBARSTATUS_STOPPED" value="Остановлено"/>
+		<uitext name="SCRUBBARSTATUS_PLAYING" value="Воспроизведение"/>
+		<uitext name="SCRUBBARSTATUS_NOAUDIO" value="Нет аудио"/>
+		<uitext name="SCRUBBARSTATUS_VIDPLAYING" value="Воспроизведение видео"/>
+		<uitext name="SCRUBBARSTATUS_LOADING" value="Загрузка"/>
+		<uitext name="SCRUBBARSTATUS_BUFFERING" value="Буферизация"/>
+		<uitext name="SCRUBBARSTATUS_QUESTION" value="Ответ на вопрос"/>
+		<uitext name="SCRUBBARSTATUS_REVIEWQUIZ" value="Обзор опроса"/>
+		<!-- substitution: %m == minutes remaining -->
+		<!-- substitution: %s == seconds remaining -->
+		<uitext name="ELAPSED" value="Осталось %m мин. %s с"/>
+		<uitext name="NOTFOUND" value="Ничего не найдено"/>
+		<uitext name="ATTACHMENTS" value="Вложения"/>
+		<!-- substitution: %p == current speaker's title -->
+		<uitext name="BIOWIN_TITLE" value="Биография: %p"/>
+		<uitext name="BIOBTN_TITLE" value="Биография"/>
+		<uitext name="DIVIDERBTN_TITLE" value="|"/>
+		<uitext name="CONTACTBTN_TITLE" value="Контакт"/>
+		<uitext name="TAB_QUIZ" value="Опрос"/>
+		<uitext name="TAB_OUTLINE" value="Схема"/>
+		<uitext name="TAB_THUMB" value="Бегунок"/>
+		<uitext name="TAB_NOTES" value="Заметки"/>
+		<uitext name="TAB_SEARCH" value="Поиск"/>
+		<uitext name="SLIDE_HEADING" value="Заголовок слайда"/>
+		<uitext name="DURATION_HEADING" value="Длит-сть"/>
+		<uitext name="SEARCH_HEADING" value="Поиск текста:"/>
+		<uitext name="THUMB_HEADING" value="Слайд"/>
+		<uitext name="THUMB_INFO" value="Название/длит-ность"/>
+		<uitext name="ATTACHNAME_HEADING" value="Имя файла"/>
+		<uitext name="ATTACHSIZE_HEADING" value="Размер"/>
+		<uitext name="SLIDE_NOTES" value="Заметки к слайду"/>
+		<uitext name="COURSE_STATUS" value="Module Status"/>
+		<uitext name="PASSED_STRING" value="Passed"/>
+		<uitext name="FAILED_STRING" value="Failed"/>
+		<!--quiz pod and message box texts-->
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT" value="Попытка пройти опрос:"/>
+		<uitext name="QUIZPOD_QUIZ_ATTEMPT_VALUE" value="%n из %t"/>
+		<uitext name="QUIZPOD_QUIZ_SCORE" value="Набрано баллов:"/>
+		<uitext name="QUIZPOD_QUIZ_PASSSCORE" value="Проходной результат:"/>
+		<uitext name="QUIZPOD_QUIZ_MAXSCORE" value="Максимальный результат:"/>
+		<uitext name="QUIZPOD_QUESATMPT_STR" value="Попытка: %n из %t"/>
+		<uitext name="QUIZPOD_QUESTYPE_STR" value="Тип: %s"/>
+		<uitext name="QUIZPOD_QUESTYPE_GRD" value="С оценкой"/>
+		<uitext name="QUIZPOD_QUESTYPE_SVY" value="Обзор"/>
+		<uitext name="QUIZPOD_QUIZATMPT_INF" value="Большое число"/>
+		<uitext name="QUIZPOD_QUESATMPT_INF" value="Большое число"/>
+		<uitext name="WARNINGMSG_YESSTRING" value="Да"/>
+		<uitext name="WARNINGMSG_NOSTRING" value="Нет"/>
+		<uitext name="WARNINGMSG_TITLESTRING" value="Предупреждение о навигации в опросе"/>
+		<uitext name="WARNINGMSG_MSGSTRING" value="В опросе остались неотвеченные вопросы.Нажатие кнопки &quot;Да&quot; приведет к закрытию опроса. Нажатие кнопки &quot;Нет&quot; продолжит опрос."/>
+		<uitext name="INFORMATION_H264_FLASHPLAYER" value="Текущая версия проигрывателя Flash Player, установленная на этом компьютере, не поддерживает это видео. Щелкните в области видео, чтобы загрузить последнюю версию проигрывателя Flash Player."/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARK" value="Adobe Presenter - %p"/>
+		<!-- substitution: %p == presentation title -->
+		<!-- substitution: %s == slide title -->
+		<!-- substitution: %n == slide number -->
+		<uitext name="BOOKMARKSLIDE" value="Adobe Presenter - %p %s"/>
+		<uitext name="SHOWSIDEBAR" value="Показывать врезку участникам"/>
+		<uitext name="MUTE" value="Отключить звук"/>
+		<uitext name="DOCWRAP_TITLE" value="Вложение в файл Adobe Presenter"/>
+		<uitext name="DOCWRAP_MSG" value="Сохранить в папку &quot;Мой компьютер&quot;"/>
+		<uitext name="DOCWRAP_PROMPT" value="Щелкнуть для загрузки"/>
+	</language>
+</configuration>

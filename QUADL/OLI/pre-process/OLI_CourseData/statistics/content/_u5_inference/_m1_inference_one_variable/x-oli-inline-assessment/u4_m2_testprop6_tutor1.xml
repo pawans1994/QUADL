@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop6_tutor1">
+<title>tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>Which of the following p-values will give the strongest evidence against
+                        H<sub>0</sub>?</p>
+                <p>p-value = <input_ref input="A"/></p>
+            </body>
+            <fill_in_the_blank id="A" shuffle="false">
+                <choice value="one">0.31</choice>
+                <choice value="two">0.14</choice>
+                <choice value="three">0.02</choice>
+            </fill_in_the_blank>
+            <part id="p1">
+                <response input="A" match="one">
+                    <feedback>Incorrect. A large p-value (like 0.31) indicates that the
+                        sample result is likely to occur in random sampling from a population in
+                        which H<sub>0</sub> is true. So a large p-value provides very weak evidence
+                        against H<sub>0</sub>. Click <link
+                            href="javascript:loadImage('../webcontent/1_img1.gif')"
+                        >here</link> to see graphs illustrating these
+                        p-values.</feedback>
+                </response>
+                <response input="A" match="two">
+                    <feedback>Incorrect. The smaller the p-value, the stronger the
+                        evidence against H<sub>0</sub>.</feedback>
+                </response>
+                <response input="A" match="three" score="1">
+                    <feedback>Correct. A small p-value (like 0.02) indicates that the sample result
+                        is not likely to occur in random sampling from a population in which
+                            H<sub>0</sub> is true. So a small p-value provides strong evidence
+                        against H<sub>0</sub>. Click <link
+                            href="javascript:loadImage('../webcontent/1_img1.gif')">here</link> to
+                        see graphs illustrating these p-values.</feedback>
+                </response>
+                <hint>Think about p-value as an area under the normal distribution of z-scores. If
+                    the area is large, results more extreme than the data are common from a
+                    population for which H<sub>0</sub> is true. </hint>
+                <hint>Click <link href="javascript:loadImage('../webcontent/1_img1.gif')"
+                        >here</link> to see graphs illustrating p-values.</hint>
+                <hint>The smaller the p-value, the stronger the evidence against
+                    H<sub>0</sub>.</hint>
+            </part>
+        </question>
+    </page>
+ 
+</assessment>

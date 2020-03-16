@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist3_tutor4">
+    <title>Tutor</title>
+<page>    
+    <question id="q1">
+        <body>
+            <p>The probability distribution represented in the histogram and table above may be also
+                expressed by the formula:</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="Res1">P(X = x) = x for x = 1, 2, 3, 4</choice>
+            <choice value="Res2">P(X = x) = 1/4 for x = 1, 2, 3, 4</choice>
+            <choice value="Res3">P(X = x) = x/10 for x = 1, 2, 3, 4</choice>
+            <choice value="Res4">P(X = x) = (5 - x) / 10 for x = 0, 1, 2, 3</choice>
+            <choice value="Res5">P(X = x) = (5 - x) / 10 for x = 1, 2, 3, 4</choice>
+        </multiple_choice>
+        <part>
+            <response match="Res1" score="0">
+                <feedback>Incorrect. This is not a legitimate probability distribution
+                        of X. For example, using this formula, we'll get: P(X = 2) = 2, which is not
+                        a number between 0 and 1<?oxy_insert_start author="mmyers" timestamp="20101121T104900-0500"?>,<?oxy_insert_end?>
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T105045-0500"?>as<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105045-0500" content="which"?>
+                        it should be.</feedback>
+            </response>
+            <response match="Res2" score="0">
+                <feedback>Incorrect. Using this formula, we'll get the following
+                    probability distribution: P(X = 1) = 1/4, P(X = 2) = 1/4, P(X = 3) = 1/4, P(X = 4) = 1/4. Even though
+                    this is a legitimate probability distribution, this is not the one that is
+                    represented by the histogram and table above. The values are right, but the
+                    probabilities are not. Please try again.</feedback>
+            </response>
+            <response match="Res3" score="0">
+                <feedback>Incorrect. Using this formula, we'll get the following
+                    probability distribution: P(X = 1) = 0.1, P(X = 2) = 0.2, P(X = 3) = 0.3, P(X = 4) = 0.4. Even though
+                    this is a legitimate probability distribution, this is not the one that is
+                    represented by the histogram and table above. The values are right, but the
+                    probabilities are not. Please try again.</feedback>
+            </response>
+            <response match="Res4" score="0">
+                <feedback>Incorrect. Using this formula, we'll get the following
+                        probability distribution: P(X = 0) = 0.5, P(X = 1) = 0.4, P(X = 2) = 0.3,
+                        P(X = 3) = 0.2. The values that x can take (0, 1, 2, 3) are not the same as
+                        the ones in our distribution above. And even more importantly, note that
+                        this is not a legitimate probability
+                        distribution<?oxy_insert_start author="mmyers" timestamp="20101121T105026-0500"?>,<?oxy_insert_end?>
+                        since the sum of all
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T105032-0500"?>the
+                        <?oxy_insert_end?>probabilities is not 1, as it should be. Please try
+                        again.</feedback>
+            </response>
+            <response match="Res5" score="10">
+                <feedback>Good
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T105058-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T105058-0500" content="J"?>ob!
+                        Using this formula, we'll get P(X = 1) = (5 - 1) / 10 = 0.4, P(X = 2) = (5 -
+                        2) / 10 = 0.3, P(X = 3) = (5 - 3) / 10 = 0.2, P(X = 4) = (5 - 4) / 10 =
+                        0.1<?oxy_insert_start author="mmyers" timestamp="20101121T105235-0500"?>,<?oxy_insert_end?>
+                        which is exactly the one represented by the histogram above.</feedback>
+            </response>
+        </part>
+    </question></page>
+</assessment>

@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p4">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (4 of 13)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+<body>
+   
+        <p>For the reason illustrated in the examples at the end of the previous page, the test
+            statistic cannot simply be the difference <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                    <m:mo>−</m:mo>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>, but must be some form of that formula that accounts for the sample size. In
+            other words, we need to somehow standardize the difference <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                    <m:mo>−</m:mo>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math> so that comparison between different situations will be possible. We are very
+            close to revealing the test statistic, but before we construct it, let's be reminded of
+            the following two facts from probability:</p>
+        <p>1. When we take a random sample of size n from a population with population proportion p,
+            the possible values of the sample proportion <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> (when certain conditions are met) have approximately a normal distribution
+            with:</p>
+        <p><?oxy_comment_start author="mmyers" timestamp="20101126T214807-0500" comment="use bullets, not asterisks"?>*<?oxy_comment_end?>
+            mean: p</p>
+        <p>* standard deviation: <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math></p>
+        <p>2. The z-score of a normal value (a value that comes from a normal distribution) is:</p>
+   <p> <m:math display = 'block'>
+        <m:mrow>
+            <m:mi>z</m:mi>
+            <m:mo>=</m:mo>
+            <m:mfrac>
+                <m:mrow>
+                    <m:mi>value</m:mi>
+                    <m:mo>&minus;</m:mo>
+                    <m:mi>mean</m:mi>
+                </m:mrow>
+                <m:mrow>
+                    <m:mi>standard</m:mi>
+                    <m:mtext>&nbsp;</m:mtext>
+                    <m:mi>deviation</m:mi>
+                </m:mrow>
+            </m:mfrac>
+        </m:mrow>
+   </m:math></p>
+    
+     <!--    <p>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mi mathvariant="italic">value</m:mi>
+                            <m:mo>−</m:mo>
+                            <m:mi mathvariant="italic">mean</m:mi>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mi mathvariant="italic">standard</m:mi>
+                            <m:mtext> </m:mtext>
+                            <m:mi mathvariant="italic">deviation</m:mi>
+                        </m:mrow>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>
+            <?oxy_insert_start author="mmyers" timestamp="20101126T214832-0500"?>,
+            <?oxy_insert_end?></p>--> 
+        <p> and it represents how many standard deviations below or above the mean the value is.</p>
+        <p>We are finally ready to reveal the test statistic:</p>
+        <p>The test statistic for this test measures the difference between the sample proportion
+                <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> and the null value <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math> by the z-score (standardized score) of the sample proportion <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, assuming that the null hypothesis is true (i.e., assuming that <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>). </p>
+        <p>From fact 1, we know that the values of the sample proportion (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) are normal, and we are given the mean and standard deviation.</p>
+        <p>Using fact 2, we conclude that the z-score of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> when <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math> is:</p>
+        <p>
+            <m:math display = 'block'>
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy='true'>&circ;</m:mo>
+                            </m:mover>
+                            <m:mo>&minus;</m:mo>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo stretchy='false'>(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo stretchy='false'>)</m:mo>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>
+            
+            
+            
+            <!--  <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:msub>
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>-</m:mo>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:msub>
+                                                <m:mi>p</m:mi>
+                                                <m:mn>0</m:mn>
+                                            </m:msub>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>-->
+        </p>
+        <p>
+            <em>This is the test statistic.</em> It represents the difference between the sample
+            proportion (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) and the null value (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>), measured in standard deviations.</p>
+        <image style="block" src="../webcontent/image237.gif" alt="A normal curve representing
+samping distribution of p-hat assuming that p=p_0. Marked on the horizontal axis is p_0 and a
+particular value of p-hat. z is the difference between p-hat and p_0 measured in standard
+deviations (with the sign of z indicating whether p-hat is below or above p_0)"/>
+        <p>Here is a representation of the sampling distribution of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, assuming p = p<sub>0</sub>. In other words, this is a model of how <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>'s behave if we are drawing random samples from a population for which
+                H<sub>0</sub> is true. Notice the center of the sampling distribution is at
+                p<sub>0</sub>, which is the hypothesized proportion given in the null hypothesis
+                (H<sub>0</sub>: p = p<sub>0</sub>.) We could also mark the axis in standard
+            deviation units, <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>p</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi>p</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math>. For example, if our null hypothesis claims that the proportion of U.S. adults
+            supporting the death penalty is 0.64, then the sampling distribution is drawn as if the
+            null is true. We draw a normal distribution centered at p = 0.64 with a standard
+            deviation dependent on sample size, <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msqrt>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>0.64</m:mn>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>0.64</m:mn>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                            <m:mi>n</m:mi>
+                        </m:mfrac>
+                    </m:msqrt>
+                </m:mrow>
+            </m:math>. </p>
+        <section>
+            <title>Important Comment</title>
+            <body>
+                <p>Note that under the assumption that H<sub>0</sub> is true (i.e., <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>=</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>), the test statistic, by the nature of the fact that it is a z-score,
+                    has N(0,1) (standard normal) distribution. Another way to say the same thing
+                    which is quite common is: "The null distribution of the test statistic is
+                    N(0,1)." By "null distribution," we mean the distribution under the assumption
+                    that H<sub>0</sub> is true. As we'll see and stress again later, the null
+                    distribution of the test statistic is what the calculation of the p-value is
+                    based on.</p>
+            </body>
+        </section>
+        <p>Let's go back to our three examples and find the test statistic in each case:</p>
+        <example>
+            <title>1</title>
+            <image style="block" src="../webcontent/image238.gif" alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The question we wish to answer is
+&quot;is p still 0.20 or has it been reduced?&quot; We take a sample of 400 products, represented by
+a smaller circle. We find that 64 of these are defective. p-hat = 64/400 = 0.16, and z = -2."/>
+            <p>Since the null hypothesis is H<sub>0</sub>: p = 0.20, the standardized score of
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>16</m:mn>
+                    </m:mrow>
+                </m:math> is: <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>16</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>20</m:mn>
+                            </m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>20</m:mn>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mn>400</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mo>−</m:mo>
+                        <m:mn>2</m:mn>
+                    </m:mrow>
+                </m:math>. </p>
+            <p>This is the value of the test statistic for this example.</p>
+            <p>What does this tell me?</p>
+            <p>This z-score of −2 tells me that (assuming that H<sub>0</sub> is true) the sample
+                proportion <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>16</m:mn>
+                    </m:mrow>
+                </m:math> is 2 standard deviations below the null value (0.20).</p>
+        </example>
+        <example>
+            <title>2</title>
+            <image style="block" src="../webcontent/image241.gif" alt="A large circle represents
+the population Students at the college. We want to know p about this population, or what is the
+population proportion of students using marijuana. The question we wish to answer is &quot;is p
+.157 (like the national figure) or higher?&quot; We take a sample of 100 students, represented by
+a smaller circle. We find that 19 use marijuana. p-hat = 19/100 = 0.19, and z = 0.91"/>
+            <p>Since the null hypothesis is H<sub>0</sub>: p = 0.157, the standardized score of
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>19</m:mn>
+                    </m:mrow>
+                </m:math> is: <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>19</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>157</m:mn>
+                            </m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>157</m:mn>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>157</m:mn>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mn>100</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>≈</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>91</m:mn>
+                    </m:mrow>
+                </m:math>. </p>
+            <p>This is the value of the test statistic for this example.</p>
+            <p>We interpret this to mean that, assuming that H<sub>0</sub> is true, the sample
+                proportion <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>19</m:mn>
+                    </m:mrow>
+                </m:math> is 0.91 standard deviations above the null value (0.157).</p>
+        </example>
+        <example>
+            <title>3</title>
+            <image style="block" src="../webcontent/image244.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The question we wish to answer is &quot;has p changed since 2003
+(when it was 0.64)?&quot; We take a sample of 1000 US adults, represented by a smaller circle. We
+find that 675 are in favor. p-hat = 675/1000 = 0.675, and z = 2.31"/>
+            <p>Since the null hypothesis is H<sub>0</sub>: p = 0.64, the standardized score of
+                    <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>675</m:mn>
+                    </m:mrow>
+                </m:math> is: <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>675</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>64</m:mn>
+                            </m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>64</m:mn>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>64</m:mn>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mn>1000</m:mn>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>≈</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>31</m:mn>
+                    </m:mrow>
+                </m:math>. </p>
+            <p>This is the value of the test statistic for this example.</p>
+            <p>We interpret this to mean that, assuming that H<sub>0</sub> is true, the sample
+                proportion <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>p</m:mi>
+                            <m:mo stretchy="true">ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>675</m:mn>
+                    </m:mrow>
+                </m:math> is 2.31 standard deviations above the null value (0.64).</p>
+            <!--<activity idref="_u5_m1_lbd20" purpose="learnbydoing"/>-->
+            <wb:inline idref="u4_m2_testprop4_tutor1" purpose="learnbydoing"/>
+            <wb:inline idref="u4_m2_testprop4_tutor2" purpose="learnbydoing"/>
+        </example>
+        <section>
+            <title>Comments about the Test Statistic</title>
+            <body>
+                <p>1. We mentioned earlier that to some degree, the test statistic captures the
+                    essence of the test. In this case, the test statistic measures the difference
+                    between <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> in standard deviations. This is exactly what this test is about. Get
+                    data, and look at the discrepancy between what the data estimates p to be
+                    (represented by <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>) and what H<sub>0</sub> claims about p (represented by <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>).</p>
+                <p>2. You can think about this test statistic as a measure of evidence in the data
+                    against H<sub>0</sub>. The larger the test statistic, the "further the data are
+                    from H<sub>0</sub>" and therefore the more evidence the data provide against
+                        H<sub>0</sub>.</p>
+            </body>
+        </section>
+        <activity idref="_u5_m1_lbd21" purpose="learnbydoing"/>
+        <!--<activity idref="_u5_m1_dig12" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>The UCLA Internet Report (February 2003) estimated that a proportion of roughly
+                    0.75 of online homes are still using dial-up access, but claimed that the use of
+                    dial-up is declining. Is that really the case? To examine this, a follow-up
+                    study was conducted a year later in which, out of a random sample of 1,308
+                    households that had Internet access, 804 were connecting using a dial-up
+                    modem.</p>
+                <p>Let p be the proportion of all U.S. Internet-using households who have dial-up
+                    access. In the previous activity, we established that the appropriate hypotheses
+                    here are:</p>
+                <p>H<sub>0</sub>: p = 0.75 and H<sub>a</sub>: p &lt; 0.75</p>
+                
+                <wb:inline idref="u4_m2_testprop4_tutor3" purpose="didigetthis"/>
+                <wb:inline idref="u4_m2_testprop4_tutor4" purpose="didigetthis"/>
+                
+                <p>Ann and Sam are both testing the hypothesis that 40% of plain M&amp;M’s are
+                    <?oxy_comment_start author="mmyers" timestamp="20101126T225503-0500" comment="Note change, to match wording below.
+
+Also, previous M&amp;M test (somewhere in &quot;random variables,&quot; I believe, was about the blue ones ... I&apos;m assuming that&apos;s OK ;)"?>orange,<?oxy_comment_end?>
+                        H<sub>0</sub>: p = 0.40. Ann draws a sample of M&amp;M’s and 45% of her
+                    sample are orange. She calculates a test statistic of z = 1.25. Sam draws a
+                    sample of M&amp;M’s and 50% of his sample are orange. He calculates a test
+                    statistic of z = 1. </p>
+                <p>What can we conclude? Mark each statement as true or false.</p>
+                
+                <wb:inline idref="u4_m2_testprop4_tutor5" purpose="didigetthis"/>
+                
+            </body>
+        </section>
+    </body>
+</workbook_page>

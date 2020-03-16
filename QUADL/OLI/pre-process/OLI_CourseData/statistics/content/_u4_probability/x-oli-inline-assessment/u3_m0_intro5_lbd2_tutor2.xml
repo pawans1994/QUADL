@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u3_m0_intro5_lbd2_tutor2">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body><p> P(H) is <input_ref input="A"/>, therefore the coin is <input_ref input="B"/>. </p></body>
+            
+            <fill_in_the_blank id="A" shuffle="false">
+                <choice value="res1">0.5</choice>
+                <choice value="res2">not close to 0.5</choice>
+            </fill_in_the_blank>
+            
+               <fill_in_the_blank id= "B" shuffle="false">
+                <choice value="res1">fair</choice>
+                <choice value="res2">not fair</choice>
+               </fill_in_the_blank>            
+            
+            <part>
+                <response input="A" match="res1" name="0.5" score="0">
+                    <feedback>Incorrect. Recall that in the previous question we
+                        determined that P(H) was 0.2.</feedback>
+                </response>
+                <response input="A" match="res2" name="is not close to 0.5" score="1">
+                    <feedback>Correct. Since P(H) was about0.2, it is not close to 0.5.</feedback>
+                </response>
+            </part>
+            <part>
+                <response input="B" match="res1"  name="fair" score="0">
+                    <feedback>Incorrect. Since P(H) ≠ 0.5 or even close to 0.5, the
+                        possible outcomes (heads, tails) are not equally likely. In our case, P(H) =
+                        0.2, so P(T) = 0.8. Thus, the coin is not fair.</feedback>
+                </response>
+                <response input="B" match="res2"  name="not fair" score="1">
+                    <feedback>Correct. Since P(H) ≠ 0.5 or even close to 0.5, the possible outcomes
+                        (heads, tails) are not equally likely. In our case P(H) = 0.2, so P(T) =
+                        0.8. Thus, the coin is not fair.</feedback>
+                </response>
+   
+            </part>
+        </question>
+        
+        
+        
+    </page>
+</assessment>

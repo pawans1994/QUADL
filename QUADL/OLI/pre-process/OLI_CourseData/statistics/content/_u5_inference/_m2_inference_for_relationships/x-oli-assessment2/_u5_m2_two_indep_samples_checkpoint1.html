@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+<assessment id="_u5_m2_two_indep_samples_checkpoint1">
+	<title>Two Independent Samples Checkpoint</title>
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+		
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	
+	<content available="instructor_only">
+		<p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+			following link:</em>
+			<link href="../webcontent/checkpoint_topic_11_1.pdf">Solution Set</link>.</p>
+	</content>-->
+		
+		<multiple_choice id="q1">
+			<!--LO:-->
+			<body>A teacher is experimenting with a new computer-based instruction and conducts a
+				study to test its effectiveness. In which situation could the teacher use the
+				two-sample t-test for comparing two population means?</body>
+			<input shuffle="false">
+				<choice value="A">The teacher gives each student in the class a pretest. Then she
+					teaches a lesson using a computer program. Afterwards, she gives each student a
+					post-test. The teacher wants to compare test scores for each student to see
+					whether the data will show an improvement.</choice>
+				<choice value="B">The teacher randomly divides the class into two groups. One of the
+					groups receives computer-based instruction and the other group receives
+					traditional instruction without computers. After instruction, each student takes
+					a test and the teacher wants to compare the test scores of the two
+					groups.</choice>
+				<choice value="C">The teacher uses a combination of traditional methods and
+					computer-based instruction. She asks students which they liked better. She wants
+					to determine if the majority prefer the computer-based instruction.</choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>Incorrect. Since the same group of students was measured twice (once
+						before and then after instruction), this is a case of matched pairs design.
+						The correct answer is B.</feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback>Good Job! Since students were <em style="italic">randomized</em> to two different groups the
+						data obtained from this study should be analyzed using the two (independent)
+						samples t test.</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Incorrect: The teacher collects data on the variable: &quot;liked
+						computer-based instruction better&quot; (yes/no). With this data, the teacher
+						could test a hypothesis about a proportion. The correct answer is
+						B.</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="q2">
+			<!--LO:In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test -->
+			<body><p><em style="bold">College Students and Drinking Habits: </em>A public health
+					official is studying differences in drinking habits among students at two
+					different universities. They collect a random sample of students independently
+					from each of the two universities and ask each student how many alcoholic drinks
+					they consumed in the previous week.</p>
+				<!-- Need to insert the sample statistics table from Checkpoint
+				10.4Question 4 -->
+				
+				
+				<image src="../webcontent/chkpt_two_independent_samples/image1.png"/>
+			
+				<p>The official conducts a two-sample t-test to determine whether these data
+					provide significant evidence that students at University 1 drink more than
+					students at University 2. The test statistic is t = 2.64 with a P-value 0.005.
+					Which of the following is an appropriate conclusion?</p></body>
+			<input shuffle="false">
+				<choice value="A">The samples provide significant evidence that students at
+					University 1 drink more than students at University 2.</choice>
+				<choice value="B">The samples do not provide statistically significant
+					evidence.</choice>
+				<choice value="C">We can not use the t-test in this case because the variables
+					(number of drinks) are likely skewed to the right at each university.</choice>
+			</input>
+			<part>
+				<response match="A" score="10">
+					<feedback>Correct. A P-value this small indicates statistically significant
+						results.</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Incorrect: A P-value this small indicates statistically significant
+						results. The correct answer is A.</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback>Not quite right: Although the two variables are likely skewed to the
+						right, we can proceed with a two-sample t-test because we have large enough
+						samples. The correct answer is A.</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="q3">
+			<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test -->
+			<body><p>In a study of the impact of smoking on birth weight, researchers analyze birth
+					weights (in grams) for babies born to 189 women who gave birth in 1989 at a
+					hospital in Massachusetts. In the group, 74 were categorized as &quot;smokers&quot; and
+					115 as &quot;non-smokers.&quot; The difference in mean birth weights (non-smokers minus
+					smokers) is 281.7 grams with a margin of error of 205.2 grams with 95%
+					confidence.</p>
+				<p>Which gives the best interpretation of what we can conclude about the impact of
+					smoking on birth weight?</p></body>
+			<input shuffle="false">
+				<choice value="A">We are 95% confident that on average, smoking causes lower birth
+					weights of between 76.5 grams to 486.9 grams. </choice>
+				<choice value="B">There is a 95% chance that if a woman smokes during pregnancy her
+					baby will weigh between 76.5 grams to 486.9 grams less than if she did not
+					smoke.</choice>
+				<choice value="C">Smoking is associated with lower birth weights. When smokers are
+					compared to non-smokers, we are 95% confident that the mean weight of babies of
+					non-smokers is between 76.5 grams to 486.9 grams more than the mean weight of
+					babies of smokers.</choice>
+				<choice value="D">With such a large margin of error, this study does not suggest
+					that there is a difference in mean birth weights when we compare smokers to
+					non-smokers. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>Not quite right: this study is an observational study. We cannot make
+						cause-and-effect statements from an observational study. We could say &quot;We
+						are 95% confident that smoking is associated with birth weights that are
+						between 76.5 and 486.9 grams lower than non-smokers.&quot; The correct answer is
+						C.</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Incorrect: The 95% confidence is not a statement about an individual
+						woman, but rather a statement about the difference between the mean weight
+						of babies of <em style="bold">all</em> non-smoking women and the mean weight of babies of <em style="bold">all</em>
+						smoking women. The correct answer is C.</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback>Correct. This study is an observational study, so the use of the
+						phrase &quot;is associated with&quot; is appropriate. The use of the phrase &quot;95%
+						confident&quot; with a specific confidence interval is also appropriate.
+					</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Incorrect: The interval does not contain zero, so the interval does
+						suggest that there is a difference in mean birth weights for the two groups.
+						The correct answer is C.</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="q4">
+			<!--LO:Specify the null and alternative hypotheses for comparing groups.-->
+			<body><p>Do oddsmakers believe that teams who play at home will have home field
+				advantage? Specifically, do oddsmakers give higher point spreads when the
+					favored team plays home games as compared to when the favored team plays away
+					games? Two samples were randomly selected from three complete National Football
+					League seasons (1989, 1990, and 1991). The first sample consisted of 50 games,
+					where the favored team played in a home game, while the second sample consisted
+					of 50 games, where the favored team played in an away game. The oddsmakers
+					point spreads (which are the number of points by which the favored team is
+					predicted to beat the weaker team) were then collected.</p>
+				<p>If &#956;<sub>1 </sub>and &#956;<sub>2 </sub>represent the mean point spread for home games
+					and away games, respectively, which of the following is the appropriate pair of
+					hypotheses in this case?</p></body>
+			<input shuffle="false">
+				<choice value="A"><p>H<sub>o</sub>: &#956;<sub>1</sub> - &#956;<sub>2</sub> = 0</p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> - &#956;<sub>2</sub> &lt; 0</p></choice>
+				<choice value="B"><p>H<sub>0</sub>: &#956;<sub>1</sub> = &#956;<sub>2</sub></p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> &lt; &#956;<sub>2</sub></p></choice>
+				<choice value="C"><p>H<sub>0</sub>: &#956;<sub>1</sub> - &#956;<sub>2</sub> &gt; 0</p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> - &#956;<sub>2</sub> = 0</p></choice>
+				<choice value="D"><p>H<sub>0</sub>: &#956;<sub>1</sub> = &#956;<sub>2</sub></p>
+					<p>H<sub>a</sub>: &#956;<sub>1</sub> &gt; &#956;<sub>2</sub></p></choice>
+				<choice value="E"><p>None of the above</p></choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback><p>Incorrect. Remember that you want to see if the mean
+						point spread for the home games (represented by &#956;<sub>1</sub>) is <em
+								style="bold">higher </em>compared to the away games. Consider the
+							remaining options; the correct answer is D.</p></feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback><p>Incorrect. Remember that you want to see if the mean
+						point spread for the home games (represented by &#956;<sub>1</sub>) is <em
+								style="bold">higher </em>compared to the away games. Consider the
+							remaining options; the correct answer is D.</p></feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback><p>That&apos;s not quite right. Remember, the null hypothesis is <em
+								style="bold">always </em>no differences. Consider the remaining
+							options; the correct answer is D.</p></feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback><p>Correct! Since you want to see if the mean point spread is <em
+								style="bold">higher </em>for the home games as compared to the away
+						games, the alternative hypothesis is: H<sub>a</sub>: &#956;<sub>1</sub> &gt;
+						&#956;<sub>2</sub>.</p></feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback><p>Incorrect. Remember that you want to see if the mean
+						point spread for the home games (represented by &#956;<sub>1</sub>) is <em
+								style="bold">higher </em>compared to the away games. Consider the
+							remaining options; the correct answer is D.</p></feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="q5">
+			<!--LO:LO: In a given context, carry out the inferential method for comparing groups and draw the appropriate conclusions.SO: Interpreting t-test -->
+			<body><p>Analyses were run. The following is the (edited) output for the test:</p>
+				<image src="../webcontent/chkpt_two_independent_samples/image2.png"/>
+				<image src="../webcontent/chkpt_two_independent_samples/image3.png"/>
+				<p>From the output we learn that:</p></body>
+			<input shuffle="false">
+				<choice value="A">the data provide sufficient evidence reject the H<sub>0</sub>;
+						thus, we cannot conclude that the mean point spread of home games is higher
+						than that of away games.</choice>
+				<choice value="B">the data do not provide sufficient evidence reject the
+							H<sub>0</sub>; thus, we can conclude that the mean point spread for home
+						games is higher than that of away games.</choice>
+				<choice value="C">the data do not provide sufficient evidence to reject
+							H<sub>0</sub>; thus, we cannot conclude that the mean point spread of
+						home games is higher than that of away games.</choice>
+				<choice value="D">the data provide sufficient evidence to reject H<sub>0</sub>;
+						thus, we can conclude that the mean point spread for home games is higher
+						than that of away games.</choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback>Incorrect. Notice that the P-value is greater than .05.
+						Consider the remaining options; the correct answer is C.</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Incorrect. While it is correct that the P-value is
+						greater than .05 and, therefore, the null hypothesis is not rejected, your
+						conclusion is wrong. The correct answer is C.</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback>Correct! Since the P-value is greater than .05, we fail to reject the
+						null hypothesis and, therefore, cannot conclude that the mean point spread
+						of home games is higher than that of away games.</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Incorrect. Notice that the P-value is greater than .05.
+						Consider the remaining options; the correct answer is C.</feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	
+</assessment>

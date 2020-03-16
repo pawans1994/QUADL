@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="apply_prob_rules_prob_rule5_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_apply_prob_rules_prob_rule5">
+        <!-- LO: apply_prob_rules_prob_rule5 -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+        <body>
+            <p>For safety reasons, four different alarm systems were installed in the vault
+                containing the safety deposit boxes at a Beverly Hills bank. Each of the four
+                systems detects theft with a probability of 0.99<em style="italic"> independently
+                </em>of the others. </p>
+            <p>What is the probability that when a theft occurs, <em style="italic">all four</em>
+                systems will detect it? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">(0.99)<sup>4</sup></choice>
+            <choice value="B">(0.99) * 4 </choice>
+            <choice value="C">(0.01)<sup>4</sup></choice>
+            <choice value="D">4 * (0.01) * (0.99)<sup>3</sup></choice>
+            <choice value="E">4 * (0.99) * (0.01)<sup>3</sup></choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. P(all detect) = P(1st detects and 2nd
+                    detects and 3rd detects and 4th detects). Since the four
+                    systems work independently, P(all detect) = P(1st detects) *
+                        P(2nd detects) * P(3rd detects) * P(4th
+                    detects) = (0.99)<sup>4</sup>. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that, by definition, a probability must be between 0
+                    and 1, inclusive. We want to find P(all detect) = P(1st detects and 2nd detects
+                    and 3rd detects and 4th detects). Since the alarms work independently, we can
+                    multiply the individual probabilities.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. (0.01)<sup>4</sup> is the probability that none of the alarms
+                    detects the theft. We want to find P(all detect) = P(1st detects and 2nd detects
+                    and 3rd detects and 4th detects). Since the alarms work independently, we can
+                    multiply the individual probabilities.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 4 * (0.01) * (0.99)<sup>3</sup> is the probability that exactly one
+                    alarm fails to detect the theft. We want to find P(all detect) = P(1st detects
+                    and 2nd detects and 3rd detects and 4th detects). Since the alarms work
+                    independently, we can multiply the individual probabilities.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. 4 * (0.01) * (0.99)<sup>3</sup> is the probability that exactly one
+                    alarm detects the theft. We want to find P(all detect) = P(1st detects and 2nd
+                    detects and 3rd detects and 4th detects). Since the alarms work independently,
+                    we can multiply the individual probabilities.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_apply_prob_rules_prob_rule5">
+        <!-- LO: apply_prob_rules_prob_rule5 -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+       
+        <body>
+            <p>In a certain liberal arts college with about 10,000 students, 40% are males. If two
+                students from this college are selected at random, what is the probability that they
+                are both males? </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">0</choice>
+            <choice value="B">0.16</choice>
+            <choice value="C">0.80</choice>
+            <choice value="D">0.64</choice>
+            <choice value="E">0.25</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. If the probability were 0, then it would be impossible to
+                    select two males. But it certainly is possible to select two males from the
+                    college. Let M1 = (the first person is a male). Let M2 = (second person is a
+                    male). We want P(M1 and M2). Because the population is fairly large, the events
+                    are independent, and we can use the Multiplication Rule for Independent Events.
+                </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Let M1 = (the first person is a male). Let M2 = (second person is
+                    a male). We want P(M1 and M2). Because the population is fairly large, the
+                    events are independent, and we can use the Multiplication Rule for Independent
+                    Events. Therefore, P(M1 and M2) = P(M1) * P(M2) = (0.40) * (0.40).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You may have added probabilities instead of using the
+                    Multiplication Rule for Independent Events. The events are independent because
+                    the population is fairly large. Let M1(the first person is a male). Let M2 =
+                    (second person is a male). We want P(M1 and M2).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have interpreted the probability of selecting two males
+                    as the complement of selecting two females, but the complement of two females is
+                    equivalent to (at least one male). Because the population is fairly large, the
+                    events are independent, and we can use the Multiplication Rule for Independent
+                    Events.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. You are correct that there are four possible outcomes:
+                    male-male, male-female, female-male, and female-female. However, they are not
+                    all equally likely, since P(male) ≠ P(female) ≠ 0.50. So P(two males) is not
+                    1/4 = 0.25. Because the population is fairly large, the events are independent,
+                    and we can use the Multiplication Rule for Independent Events. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_apply_prob_rules_prob_rule5">
+        <!-- LO: apply_prob_rules_prob_rule5 -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+        <body>
+            <p>A fair four-sided die, where each face is represented by a different digit between 1
+                and 4, is rolled 5 times.</p>
+            <p>What is the probability of rolling 5 ones in a row?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">(1/4)<sup>5</sup></choice>
+            <choice value="B">(1/4) * 5</choice>
+            <choice value="C">(3/4)<sup>5</sup></choice>
+            <choice value="D">5 * (3/4) * (1/4)<sup>4</sup></choice>
+            <choice value="E">5 * (1/4) * (3/4)<sup>4</sup></choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. P(all 1s) = P(1st roll is 1 and 2nd roll is a 1 and 3rd roll is a
+                    1 and 4th roll is a 1 and 5th roll is a 1). Since the five rolls are independent
+                    of each other, P(all 1s) = P(1) * P(1) * P(1) * P(1) * P(1) =
+                    P(1)<sup>5</sup>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that, by definition, a probability must be between 0
+                    and 1, inclusive. P(all 1s) = P(1st roll is 1 and 2nd roll is a 1 and 3rd roll
+                    is a 1 and 4th roll is a 1 and 5th roll is a 1). Since the five rolls are
+                    independent of each other, P(all 1s) = P(1) * P(1) * P(1) * P(1) * P(1) =
+                        P(1)<sup>5</sup>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. (3/4)<sup>5</sup> is the probability that no ones are rolled.
+                    P(all 1s) = P(1st roll is 1 and 2nd roll is a 1 and 3rd roll is a 1 and 4th roll
+                    is a 1 and 5th roll is a 1). Since the five rolls are independent of each other,
+                    P(all 1s) = P(1) * P(1) * P(1) * P(1) * P(1) = P(1)<sup>5</sup>.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 5 * (3/4) * (1/4)<sup>4</sup> is the probability that exactly one
+                    roll is not a 1 and the other 4 are. We want to find P(all detect) = P(1st
+                    detects and 2nd detects and 3rd detects and 4th detects). Since the alarms work
+                    independently, we can multiply the individual probabilities.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. 5 * (1/4) * (3/4)<sup>4</sup> is the probability that exactly one
+                    roll is a 1 and the other 4 are not. We want to find P(all detect) = P(1st
+                    detects and 2nd detects and 3rd detects and 4th detects). Since the alarms work
+                    independently, we can multiply the individual probabilities.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_apply_prob_rules_prob_rule5">
+        <!-- LO: apply_prob_rules_prob_rule5 -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+        <body>
+            <p>In a recent school election at a large school we know that 45% of the students
+                supported candidate X and the other 55% supported candidate Y. Assume everyone
+                has a strong opinion about one candidate or the other.</p>
+            <p>If we select 2 students at random what is the probability that they both supported
+                the same candidate?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.2025</choice>
+            <choice value="B">0.2475</choice>
+            <choice value="C">0.3025</choice>
+            <choice value="D">0.4950</choice>
+            <choice value="E">0.5050</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. 0.2025 is the probability of selecting two supporters of
+                    candidate X. In this case we're looking for P(2 supporters of X or 2
+                    supporters of Y). Since these are disjoint events, P(both for same candidate) =
+                    P(2 for X or 2 for Y) = [disjoint events] P(2 for X) + P(2 for
+                    Y).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the probability of first person selected being for X
+                    and the second one for Y - or vice versa. We want the probability of either 2
+                    for X or 2 for Y. Since these are disjoint events, P(both for same candidate)
+                    = P(2 for X or 2 for Y) = [disjoint events] P(2 for X) + P(2 for
+                    Y).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. 0.3025 is the probability of selecting two supporters of
+                    candidate Y. In this case we're looking for P(2 supporters of X or 2
+                    supporters of Y). Since these are disjoint events P(both for same candidate) =
+                    P(2 for X or 2 for Y) = [disjoint events] P(2 for X) + P(2 for
+                    Y).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. 0.4950 is the probability of selecting one person for X and
+                    the other for Y. We want the probability of either 2 for X or 2 for Y.
+                    Since these are disjoint events P(both for same candidate) = P(2 for X or 2
+                    for Y) = [disjoint events] P(2 for X) + P(2 for Y).</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. P(both support same candidate) = P(2 for X or 2 for Y) =
+                    [disjoint events] P(2 for X) + P(2 for Y) which equals (0.45 * 0.45) + (0.55
+                    * 0.55) = 0.2025 + 0.3025 = 0.5050.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

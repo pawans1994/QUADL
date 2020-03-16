@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion1_tutor3">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>Compared to small samples, large samples have <input_ref input="A"/> variability. </p>
+            </body>
+            <fill_in_the_blank id="A" shuffle="false">
+                <choice value="one">less</choice>
+                <choice value="two">more</choice>
+                <choice value="three">about the same</choice>
+            </fill_in_the_blank>
+            <part>
+                <response input="A" match="one" score="1">
+                    <feedback>Correct. In the simulation, the sample proportions for n = 100 were
+                        more tightly grouped about the population proportion.</feedback>
+                </response>
+                <response input="A" match="two">
+                    <feedback>Incorrect. Watch the simulation again carefully.</feedback>
+                </response>
+                <response input="A" match="three">
+                    <feedback>Incorrect. Watch the simulation again carefully.</feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q2">
+            <body>
+                <p>We collect random samples of 25 students at a time and calculate the proportion
+                    of females in each sample. The standard deviation of p-hats
+                    is approximately 0.10. Which of the following is a plausible standard deviation
+                    for samples of 100? </p>
+            </body>
+            <multiple_choice id="A" shuffle="false">
+                <choice value="one">0.40</choice>
+                <choice value="two">0.10</choice>
+                <choice value="three">0.05</choice>
+            </multiple_choice>
+            <part>
+                <response input="A" match="one">
+                    <feedback>Incorrect. You chose a larger standard deviation; but in
+                        the simulation, the sample proportions for n = 100 were more tightly grouped
+                        about the population proportion.</feedback>
+                </response>
+                <response input="A" match="two">
+                    <feedback>Incorrect. You chose the same standard deviation; but in
+                        the simulation, the sample proportions for n = 100 were more tightly grouped about the population
+                        proportion.</feedback>
+                </response>
+                <response input="A" match="three" score="1">
+                    <feedback>Correct. If the sample size is increased, the standard deviation will decrease because larger samples have less variability.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

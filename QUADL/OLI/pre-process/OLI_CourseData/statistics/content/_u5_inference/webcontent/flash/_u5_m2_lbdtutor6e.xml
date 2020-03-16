@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item ident="questionid" title="Title">
+  <presentation>
+    <material>
+      <mattext texttype="text/plain">Carry out the ANOVA F-test using Minitab, state the test
+        statistic and p-value. Interpret the p-value and draw your conclusion in context.</mattext>
+    </material>
+    <response_str ident="Short answer 1">
+      <render_fib fibtype="String" prompt="Box">
+        <response_label ident="Res 1"/>
+      </render_fib>
+    </response_str>
+  </presentation>
+  <resprocessing>
+    <outcomes/>
+    <respcondition>
+      <conditionvar>
+        <other/>
+      </conditionvar>
+      <displayfeedback linkrefid="Feedback always"/>
+    </respcondition>
+  </resprocessing>
+  <itemfeedback ident="solution">
+    <solution>
+      <solutionmaterial>
+        <material>
+          <mattext texttype="text/plain">Here is the Minitab output:</mattext>
+          <matimage label="" uri="../../../webcontent/flash/_u5_m2_lbdtutor6e_image1.jpg"/>
+          <mattext texttype="text/plain">The test statistic is 4.8 (which is quite large), and the
+            p-value is .023, indicating that it is unlikely (probability of .023) to get data like
+            that observed assuming that CFF is not related to eye color (as the null hypothesis
+            claims). Since the p-value is small (in particular, smaller than .05), we have enough
+            evidence in the data to reject Ho and conclude that the mean CFF in the three eye-color
+            populations are not all the same. In other words, we can conclude that CFF is related to
+            eye color. </mattext>
+        </material>
+      </solutionmaterial>
+    </solution>
+  </itemfeedback>
+</item>

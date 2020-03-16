@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_cond_prob_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_cond_prob" select="single">
+        <body>
+            <p>Dogs are inbred for such desirable characteristics as blue eye color, but an
+                unfortunate by-product of such inbreeding can be the emergence of characteristics
+                such as deafness. A 1992 study of Dalmatians (by Strain and others, as reported in
+                    <em style="italic">The Dalmatians Dilemma</em>) found the following: </p>
+            <table>
+                <tr>
+                    <td> (i) </td>
+                    <td> 31% of all Dalmatians have blue eyes. </td>
+                </tr>
+                <tr>
+                    <td> (ii) </td>
+                    <td> 38% of all Dalmatians are deaf. </td>
+                </tr>
+                <tr>
+                    <td> (iii) </td>
+                    <td>If a Dalmatian has blue eyes, there is a 42% chance that it is deaf. </td>
+                </tr>
+            </table>
+            <p>What is the probability that a randomly chosen Dalmatian is blue-eyed <em style="italic">and</em> deaf?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.31 * 0.38 = 0.1178 </choice>
+            <choice value="B">0.31 * 0.42 = 0.1302 </choice>
+            <choice value="C">0.38 * 0.42 = 0.1596 </choice>
+            <choice value="D">0.31/0.38 = 0.8158 </choice>
+            <choice value="E">0.31/0.42 = 0.7381 </choice>
+            <choice value="F">0.38/0.42 = 0.9048 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The question implies that “having blue eyes” and “being deaf ”
+                    are dependent events. As a result, you cannot apply the Multiplication Rule for
+                    Independent Events.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. We need to find P(B and D). Using the General Multiplication
+                    Rule, <p>P(B and D) = P(B) * P(D | B) = 0.31 * 0.42 = 0.1302.</p> </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(B and
+                    D) = P(B) * P(D | B) = P(D) * P(B | D). </p></feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(B and
+                    D) = P(B) * P(D | B) = P(D) * P(B | D). </p></feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(B and
+                    D) = P(B) * P(D | B) = P(D) * P (B | D). </p></feedback>
+            </response>
+            <response match="F" score="0">
+                <feedback>Incorrect. Recall that the General Multiplication Rule states the
+                    following: <p>P(B and D) = P(B) * P(D | B) = P(D) * P (B | D).</p></feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_compu_cond_prob" select="single">
+        <body>
+            <p>Suppose that the handedness of the last 15 U.S. presidents is as follows: </p>
+            <table>
+                <tr>
+                    <td> (i) </td>
+                    <td> 40% were left-handed (L)</td>
+                </tr>
+                <tr>
+                    <td> (ii) </td>
+                    <td> 47% were democrats (D)</td>
+                </tr>
+                <tr>
+                    <td> (iii) </td>
+                    <td>If a president is left-handed, there is a 13% chance that the president is a Democrat.</td>
+                </tr>
+            </table>
+            <p>What is the probability that a randomly chosen U.S. president is left-handed and a
+                democrat? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.40 * 0.47 = 0.1880 </choice>
+            <choice value="B">0.40 * 0.13 = 0.0520 </choice>
+            <choice value="C">0.47 * 0.13 = 0.0611 </choice>
+            <choice value="D">0.40/0.47 = 0.8510 </choice>
+            <choice value="E">0.40/0.13 = 3.0769 </choice>
+            <choice value="F">0.47/0.13 = 3.6154 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The question implies that “being left-handed” and “being a
+                    democrat” are dependent events. As a result, you cannot apply the Multiplication
+                    Rule for Independent Events. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. We need to find P(L and D). Using the General Multiplication
+                    Rule, <p>P(L and D) = P(L) * P(D | L) = 0.40 * 0.13 = 0.0520.</p> </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(L and
+                    D) = P(L) * P(D | L) = P(D) * P(L | D). </p></feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(L and
+                    D) = P(L) * P(D | L) = P(D) * P(L | D).</p> </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The General Multiplication Rule states the following: <p>P(L and
+                    D) = P(L) * P(D | L) = P(D) * P (L | D). </p></feedback>
+            </response>
+            <response match="F" score="0">
+                <feedback>Incorrect. Recall that the General Multiplication Rule states the
+                    following: <p>P(L and D) = P(L) * P(D | L) = P(D) * P (L | D). </p></feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

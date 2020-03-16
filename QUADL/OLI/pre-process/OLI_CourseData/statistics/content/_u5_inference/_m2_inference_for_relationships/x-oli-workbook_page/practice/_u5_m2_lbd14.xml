@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd14">
+    <head>
+        <title>Two Independent Samples</title>
+    </head>
+    <body>
+        <p> The purpose of this activity is to help you practice the connection between the two
+            branches of formal inference (significance testing and confidence intervals) in the
+            context of two independent samples. </p>
+        <p>
+            <em>Background: </em></p>
+        <p> Fruit juice is often marketed as being a healthier alternative to soda. And although
+            juice does contain vitamins, juice can also be surprisingly high in sugar. Since excess
+            sugar from any source can play a role in diseases like obesity and diabetes, it is
+            important to be quantitatively informed about the beverages we consume. </p>
+        <p> To compare the <em>sugar content</em> (in grams) between <em>soda</em> and <em>100%
+                fruit juice</em>, an investigation was made of <em>34</em> representative popular
+            U.S. brands of 100% bottled juice (such as Dole, Minute Maid, Motts, Juicy Juice, Ocean
+            Spray, Tree Top Apple, V8 Fusion, and Welch’s Grape), and <em>45</em> representative
+            popular U.S. brands of soda pop (such as 7-Up, A&amp;W Root Beer, Coca-Cola, Crush, Dr.
+            Pepper, Fanta, Hawaiian Punch, Pepsi Cola, RC Cola, Sierra Mist, Schweppes Ginger Ale,
+            and Sprite). </p>
+        <p> (Note, these are real data.) </p>
+        <p>
+            <em>Hypotheses: </em></p>
+        <p> If we let &#956;<sub>1</sub> represent the mean sugar content of the population of all
+            bottled 100% fruit juices on the market, and if we let &#956;<sub>2</sub> represent the
+            mean sugar content of the population all sodas on the market, then the significance test
+            of interest are the hypotheses: </p>
+        <p> Null hypothesis: &#956;<sub>1</sub> - &#956;<sub>2</sub> = 0</p>
+        <p> (in other words, that there is no difference between the overall mean sugar content of
+            on-the-market juices and on-the-market sodas, i.e., that the two beverage categories
+            have the same overall mean sugar content). </p>
+        <p> Alternative hypothesis: &#956;<sub>1</sub> - &#956;<sub>2</sub> &#8800; 0</p>
+        <p> (in other words, that there is a difference between the overall mean sugar content of
+            on-the-market juices and on-the-market sodas, i.e., that the two beverage categories
+            don’t have the same overall mean sugar content). </p>
+        <p>
+            <em>Summary statistics:</em>
+        </p>
+        <p> The summary of sugar content (in grams) for the two samples is as follows (remember,
+            these are real data): </p>
+
+        <image src="../../webcontent/image500.png"
+            alt="Fruit Juice: N = 34, Mean = 30.38, StDev = 7.12, SE Mean = 1.2
+        Soda: N = 45, Mean = 28.69, StDev = 3.53, SE Mean = 0.53"/>
+
+
+        <p> We see that the sample mean sugar content of the 34 juices was actually higher, at 30.38
+            grams, while the sample mean sugar content of the 45 sodas was only 28.69 grams. </p>
+        <p> The inferential question of interest is whether the slight difference is statistically
+            significant. </p>
+        <p>
+            <em>Checking conditions for inference: </em></p>
+        <p> For the purpose of statistical inference, we will consider the drinks in the study to be
+                <em>random samples</em> of all such drinks on the market. </p>
+        <p> There are two independent groups (fruit juice versus soda); and since the sigmas (the
+            standard deviations of the populations) are unknown to us, our required test will be a
+                <em>t-test for two independent means</em>. </p>
+        <p> To check that a t-test for two independent means is reasonably justified, we should
+            consider the shape of the histograms as well as the sample sizes in the study. </p>
+        <p> The histograms of sugar content for the two groups are as follows: </p>
+
+
+        <image src="../../webcontent/image502.gif"
+            alt="Two histograms of sugar per serving (grams). The
+vertical axis is for Frequency, and the horizontal axis is for Sugar Per Serving (grams). There is one
+histogram each for Fruit Juice and for Soda."/>
+
+
+
+        <p> The histogram of sugar content for the <em>soda</em> sample (the graph on the right) is
+            clearly unimodal and symmetric without any outliers; that shape helps to justify the
+            desired inference procedure. The histogram of sugar content for the <em>juice</em>
+            sample (the graph on the left) isn’t quite as nice from the standpoint of justifying
+            inference, since it’s less clearly unimodal (although still clearly symmetric) and it
+            has one possible outlier on its left side (although not too severe an outlier); but
+            since the sample sizes in the study were each relatively large (n<sub>1</sub> =
+                <em>34</em> brands of juice and n<sub>2</sub> = <em>44</em> brands of soda) the
+            t-test is still justified, despite the possible bimodality and possible (and
+            not-too-severe) outlier of the juice sample. </p>
+        <p>
+            <em>Result of Inference: </em></p>
+        <p> Here is the output from the formal t-test for two independent means: </p>
+
+
+        <image src="../../webcontent/image501.png"
+            alt="Difference = mu (Fruit Juice) - mu (Soda)
+    Estimate for difference: 1.69
+    T-Test of difference = 0 (vs not =): T-Value = 1.27, P-Value = 0.210, DF = 45"/>
+
+
+
+        <wb:inline idref="u4_m3_twosamples7_lbd_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m3_twosamples7_lbd_tutor2" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

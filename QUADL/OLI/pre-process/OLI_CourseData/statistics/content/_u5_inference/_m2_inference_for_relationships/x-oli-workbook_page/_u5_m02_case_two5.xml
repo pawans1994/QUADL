@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_case_two5">
+    <head>
+        <title>Case C→C (5 of 5)</title>
+        <objref idref="carry_out_inferential_method_relationships"/>
+        <objref idref="specify_hypotheses_for_relationships"/>
+    </head>
+    <body>
+
+        <p>Let's look at another example.</p>
+        <example>
+            <title>Steroid Use in Sports</title>
+
+            <p>Major-league baseball star Barry Bonds admitted to using a steroid cream during the
+                2003 season. Is steroid use different in baseball than in other sports? According to
+                the 2001 National Collegiate Athletic Association (NCAA) survey
+                (http://<?oxy_comment_start author="mmyers" timestamp="20101129T163739-0500" comment="I got a page not found error when I pasted this into google"?>www.ncaa.org/library/research/substance_use_habits/2001/substance_use_habits.pdf<?oxy_comment_end?>),
+                which is self-reported and asked of a stratified random selection of teams from each
+                of the three NCAA divisions, reported steroid use among the top 5 college sports was
+                as follows:</p>
+            <image style="block" src="../webcontent/image188.gif"
+                alt="A two-way table which has
+columns labeled &quot;Reported Using Steroids,&quot; &quot;Reported Not Using Steroids,&quot; and
+&quot;Total.&quot; The row labels are: &quot;Men's Baseball,&quot; &quot;Men's Basketball,&quot;
+&quot;Men's Football,&quot; &quot;Men's Tennis,&quot; &quot;Men's track/field,&quot; and
+&quot;Total.&quot; Here is the data in cell format (Row, Column: Value):
+        Baseball, Reported Using: 26;
+        Baseball, Reported Not Using: 1088;
+        Baseball, Total: 1114;
+        Basketball, Reported Using: 13;
+        Basketball, Reported Not Using: 881;
+        Basketball, Total: 894;
+        Football, Reported Using: 59;
+        Football, Reported Not Using: 1897;
+        Football, Total: 1956;
+        Tennis, Reported Using: 2;
+        Tennis, Reported Not Using: 335;
+        Tennis, Total: 337;
+        Track/Field, Reported Using: 6;
+        Track/Field, Reported Not Using: 486;
+        Track/Field, Total: 492;
+        Total, Reported Using: 106
+        Total, Reported Not Using, 4687;
+        Total, Total: 4782;"/>
+            <p>Do the data provide evidence of a significant relationship between steroid use and
+                the type of sport? In other words, are there significant differences in steroid use
+                among the different sports?</p>
+            <p>Before we carry out the chi-square test for independence, let's get a sense of the
+                data by calculating the conditional percents:</p>
+            <image style="block" src="../webcontent/image189.gif"
+                alt="A two-way conditional percent
+table which has columns labeled &quot;Reported Using Steroids,&quot; &quot;Reported Not Using Steroids,&quot; and
+&quot;Total.&quot; The row labels are: &quot;Men's Baseball,&quot; &quot;Men's Basketball,&quot;
+&quot;Men's Football,&quot; &quot;Men's Tennis,&quot; &quot;Men's track/field,&quot; and
+&quot;Total.&quot; Here is the data in cell format (Row, Column: Value):
+            Baseball, Reported Using: 2.3%
+            Baseball, Reported Not Using: 97.7%;
+            Baseball, Total: 1114;
+            Basketball, Reported Using: 1.5%;
+            Basketball, Reported Not Using: 98.5%;
+            Basketball, Total: 894;
+            Football, Reported Using: 3%;
+            Football, Reported Not Using: 97%;
+            Football, Total: 1956;
+            Tennis, Reported Using: .6%;
+            Tennis, Reported Not Using: 99.4%;
+            Tennis, Total: 337;
+            Track/Field, Reported Using: 1.2%;
+            Track/Field, Reported Not Using: 98.8%;
+            Track/Field, Total: 492;
+            Total, Reported Using: 106
+            Total, Reported Not Using, 4687;
+            Total, Total: 4782;"/>
+            <p>It seems as if there are differences in steroid use among the different sports. Even
+                though the differences do not seem to be overwhelming, since the sample size is so
+                large, these differences might be significant. Let's carry out the test and see.</p>
+            <p>
+                <em>Step 1: Stating the hypotheses</em>
+            </p>
+            <p>The hypotheses are:</p>
+            <p>
+                <em>H<sub>o</sub>:</em> steroid use is not related to the type of sport (or: type of
+                sport and steroid use are independent)</p>
+            <p>
+                <em>H<sub>a</sub>:</em> Steroid use is related to the type of sport (or: type of
+                sport and steroid use are not independent).</p>
+            <p>
+                <em>Step 2: Checking conditions and finding the test statistic</em>
+            </p>
+            <p>Here is the Minitab output of the chi-square test for this example:</p>
+            <image style="block" src="../webcontent/image190.gif"
+                alt="Chi-Square Test: mem used,
+men not used.
+            Baseball: men used: Observed: 26, Expected: 24.4, Chi-Square contribution: 0.075;
+            Baseball: men not used: Observed: 1088, Expected: 1089.36, Chi-Square contribution: 0.002;
+            Baseball: Total: 1114;
+            Basketball: men used: Observed: 13, Expected: 19.77, Chi-Square contribution: 2.319;
+            Basketball: men not used: Observed: 881, Expected: 874.23, Chi-Square contribution: 0.052;
+            Basketball: Total: 894;
+            Football: men used: Observed: 59, Expected: 43.6, Chi-Square contribution: 5.729;
+            Football: men not used: Observed: 1879, Expected: 1912.74, Chi-Square contribution: 0.130;
+            Football: Total: 1956
+            Tennis: men used: Observed: 2, Expected: 7.45, Chi-Square contribution: 3.990;
+            Tennis: men not used: Observed: 335, Expected: 329.55, Chi-Square contribution: 0.090;
+            Tennis: Total: 337;
+            track/field: men used: Observed: 6, Expected: 10.88, Chi-Square contribution: 2.189;
+            track/field: men not used: Observed: 486, Expected: 481.22, Chi-Square contribution: 0.050;
+            track/field: Total: 492;
+            
+            Total: Men used: 106, Men not Used: 4689, Total: 4793;
+            Chi-Sq = 14.626, DF = 4, P-Value = 0.006
+            "/>
+            <ul style="none">
+                <li><p>Conditions:</p>
+                    <ol style="lower-roman">
+                        <li>
+                            <p> We are told that the sample was random.</p></li>
+                        <li>
+                            <p> All the expected counts are above 5.</p></li>
+                    </ol></li>
+                <li><p>Test statistic:</p>
+                    <p>The test statistic is 14.626. Note that the "largest contributors" to the
+                        test statistic are 5.729 and 3.990. The first cell corresponds to football
+                        players who used steroids, with an observed count larger than we would
+                        expect to see under independence. The second cell corresponds to tennis
+                        players who used steroids, and has an observed count lower than we would
+                        expect under independence.</p></li>
+            </ul>
+            <p>
+                <em>Step 3: Finding the p-value</em>
+            </p>
+            <p>According to the output p-value it would be extremely unlikely (probability of 0.006)
+                to get counts like those observed if the null hypothesis were true. In other words,
+                it would be very surprising to get data like those observed if steroid use were not
+                related to sport type.</p>
+            <p>
+                <em>Step 4: Conclusion</em>
+            </p>
+            <p>The small p-value indicates that the data provide strong evidence against the null
+                hypothesis, so we reject it and conclude that the steroid use is related to the type
+                of sport.</p>
+        </example>
+        <!--<p>LEARN BY DOING 2</p>-->
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <ul>
+                    <li><p>The chi-square test for independence is used to test whether the
+                            relationship between two categorical variables is significant. In other
+                            words, the chi-square procedure assesses whether the data provide enough
+                            evidence that a true relationship between the two variables exists in
+                            the population.</p></li>
+                    <li>
+                        <p>The hypotheses that are being tested in the chi-square test for
+                            independence are:</p>
+                        <ul style="none">
+                            <li><p>H<sub>o</sub>: There is no relationship between ... and
+                                ....</p></li>
+                            <li>
+                                <p>H<sub>a</sub>: There is a relationship between ... and
+                                ....</p><p/></li>
+                            <li>
+                                <p>or equivalently,</p><p/></li>
+                            <li><p>H<sub>o</sub>: The variables ... and ... are
+                                independent.</p></li>
+                            <li>
+                                <p>H<sub>a</sub>: The variables ... and ... are not
+                                independent.</p></li>
+                        </ul></li>
+                    <li>
+                        <p>The idea behind the test is measuring how far the observed data are from
+                            the null hypothesis by comparing the observed counts to the expected
+                            counts&#8212;the counts that we would expect to see (instead of the
+                            observed ones) had the null hypothesis been true. The expected count of
+                            each cell is calculated as follows: <image style="block"
+                                src="../webcontent/image523f.png"/></p></li>
+                    <li><p>The measure of the difference between the observed and expected counts is
+                            the chi-square test statistic, whose null distribution is called the
+                            chi-square distribution. The chi-square test statistic is calculated as
+                            follows: <image style="block" src="../webcontent/image523g.png"
+                        /></p></li>
+                    <li>
+                        <p>Once we verify that the conditions that allow us to safely use the
+                            chi-square test are met, we use software to carry it out and use the
+                            p-value to guide our conclusions.</p></li>
+                </ul>
+                <!-- <activity idref="low_birth_weight" purpose="lab"/>-->
+                <activity idref="ctat2_m6_stattutor" purpose="lab"/>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

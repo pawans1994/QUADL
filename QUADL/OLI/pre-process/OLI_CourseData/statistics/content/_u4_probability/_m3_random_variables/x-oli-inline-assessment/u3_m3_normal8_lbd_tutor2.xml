@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal8_lbd_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Recall that adult male height follows a normal distribution with a mean of 69 inches and
+            a standard deviation of 2.8 inches.</p>
+         <p>(a) How tall must a male be in order to be among the shortest 0.5% of males?</p>
+         <p>(b) How tall must a male be in order to be among the tallest 0.25% of males?</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <alternatives group="statistics.package">
+               <alternative value="r">
+                  <title>R</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005. R
+                     provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image1_r.gif"/>
+                  <!--<p>&gt; qnorm(0.005, mean=69, sd=2.8)</p>
+                  <p>[1] 61.78768</p>-->
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. R provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_r.gif"/>
+                  <!--<p>&gt; qnorm(0.9975, mean=69, sd=2.8)</p>
+                  <p>[1] 76.8597</p>-->
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+               </alternative>
+               <alternative value="StatCrunch">
+                  <title>StatCrunch</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005.
+                     StatCrunch provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image1_statcrunch.jpg"/>
+                  <!--<p>&gt; qnorm(0.005, mean=69, sd=2.8)</p>
+                     <p>[1] 61.78768</p>-->
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. StatCrunch provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_statcrunch.jpg"/>
+                  <!--<p>&gt; qnorm(0.9975, mean=69, sd=2.8)</p>
+                     <p>[1] 76.8597</p>-->
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+               </alternative>
+               <alternative value="minitab">
+                  <title>Minitab</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005.
+                     Minitab provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image1_minitab.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+            <p>P( X &#8804; x )          x</p>
+            <p>0.005               61.7877</p>-->
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. Minitab provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_minitab.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+            <p>P( X &#8804; x )          x</p>
+            <p>0.9975            76.8597</p>-->
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+               </alternative>
+               <alternative value="excel">
+                  <title>Excel 2007</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005.
+                     Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image1_excel.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>P( X &#8804; x )          z-score             x</p>
+                  <p>0.005               -2.5758            61.7877</p>-->
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_excel.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>P( X &#8804; x )          z-score             x</p>
+                  <p>0.9975             2.8070             76.8597</p>-->
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+               </alternative>
+             <!--   <alternative value="excel2003">
+                  <title>Excel 2003</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005.
+                     Excel provides:</p>
+
+                     <p>P( X &#8804; x )          z-score             x</p>
+                     <p>0.005               -2.5758            61.7877</p>
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_excel.gif"/>
+                
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+                     </alternative>--> 
+               <alternative value="ti">
+                  <title>TI Calculator</title>
+                  <p>(a) Here we need to find the value x that satisfies P(X &lt; x) = 0.005. The
+                     TI Calculator provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image1_ti.jpg"/>
+                 
+                  <p>So, in order for a male to be among the shortest 0.5% of males, he needs to be
+                     less than 61.8 inches tall.</p>
+                  <p>(b) Here we need to find the value x that satisfies P(X &gt; x) = 0.0025, or
+                     P(X &lt; x) = 0.9975. The TI Calculator provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10b_image2_ti.jpg"/>
+                  <!--<p>&gt; qnorm(0.9975, mean=69, sd=2.8)</p>
+                     <p>[1] 76.8597</p>-->
+                  <p>So, in order for a male to be among the tallest 0.25% of males, he needs to be
+                     more than 76.9 inches tall.</p>
+               </alternative>
+            </alternatives>
+         </explanation>
+      </part>
+   </question>
+</assessment>

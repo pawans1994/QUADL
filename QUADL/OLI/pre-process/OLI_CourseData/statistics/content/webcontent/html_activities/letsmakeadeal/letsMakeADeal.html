@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Let's make a deal</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<script src="letsMakeADeal.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<style>
+			body{
+			    float:left;
+			    clear:both;
+			}
+			table{
+			    margin-top:20px;
+			    width:100%;
+			}
+			table,
+			tr,
+			td{
+			    text-align:center;
+			
+			    border:1px solid black;
+			    padding:2px;
+			    border-collapse:collapse;
+			}
+			
+			img{
+			    width:80%;
+			    height:150px;
+			}
+			.msg{
+			    margin-top:20px;
+			    text-align:center;
+			    font-size:20px;
+			}</style>
+	</head>
+	<body>
+		<div class="applet container col-xs-offset-1 col-xs-10">
+			<div class="row container">
+				<h2>Let's Make a Deal Demonstration</h2>
+			</div>
+
+			<div class="well">
+
+				<div class="row doors">
+
+					<div class="col-xs-3 col-xs-offset-1">
+						<div class="door" id="0"> </div>
+					</div>
+
+					<div class="col-xs-3">
+						<div class="door" id="1"> </div>
+					</div>
+
+					<div class="col-xs-3">
+						<div class="door" id="2"> </div>
+					</div>
+
+				</div>
+
+				<div class="row msg"> </div>
+
+				<div class="row table">
+					<div class="col-xs-offset-1">
+						<div class="table"> </div>
+					</div>
+				</div>
+
+			</div>
+
+			<h3>How it works: </h3>
+			<p>In a popular game show, contestants are asked to choose one of three doors. Behind
+				one is a fabulous prize! Behind the others are gag gifts. When you choose a door,
+				the game show host shows you a gag gift behind one of the two doors not chosen. You
+				are given the option of switching to the one remaining door or staying with your
+				original choice. Which is the better strategy: switch or stay? You choose doors by
+				clicking on a door. A gag gift (represented by a donkey) is then revealed behind one
+				of the doors you did not select. Click on your original door to stay, or click on
+				the other unopened door to switch. Then all the doors are opened. Did you win? The
+				table keeps track of your wins and losses using each strategy. </p>
+
+		</div>
+	</body>
+</html>

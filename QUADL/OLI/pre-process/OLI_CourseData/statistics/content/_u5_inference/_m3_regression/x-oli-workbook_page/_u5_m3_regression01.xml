@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page  id="_u5_m3_regression01">
+<head>
+	<title>Introduction to Regression Analysis (2 of 2)</title>
+	
+	
+</head>
+<body>
+	<!--<objref idref="objective1"/>-->
+ 	
+ 	<example>
+ 		<p>Let's now take a look at ways our professor can increase the accuracy of his prediction of class scores.</p>
+ 		<p>In order to improve his prediction of students’ performance in “Intro Stats”, the professor decides to use more information about the student (rather than just the students SAT-M score). In other words, instead of using SAT-M as a single explanatory variable, the professor decides to use several explanatory variables which collectively will help predict the student’s performance in “Intro Stats”. More specifically, the professor uses the following set explanatory variables:</p>
+ 	<ul style="none">
+ 		<li><em>SAT-M – </em>Student’s score on the math portion of the SAT <em> (X<sub>1</sub>)</em></li>
+ 		<li><em>SAT-V – </em>Student’s score on the verbal portion of the SAT <em>(X<sub>2</sub>)</em></li>
+ 		<li><em>HS-GPA – </em>Student’s GPA in the senior year in high-school <em>(X<sub>3</sub>)</em></li>
+ 		<li><em>HS-Algebra – </em>Student’s high-school algebra score <em>(X<sub>4</sub>)</em></li>
+ 		<li><em>Gender – </em>Student’s gender (male or female)  <em>(X<sub>5</sub>)</em></li>
+ 		<li><em>HS-Type – </em>Student’s high-school type (private or public). <em>(X<sub>6</sub>)</em></li>
+ 	</ul>
+ 		<p>and the same response variable <em>Y – Introductory Statistics final score.</em></p>
+ 		
+ 		<p>Here are some interesting questions that we’ll consider:</p>
+ 		<ul>
+ 			<li>How can we use all these variables <em style = "italic">collectively</em> to predict the student’s performance in “Intro Stats”, and is that prediction really much more accurate then when we used SAT-M as the <em style="italic">only </em> predictor?</li>
+ 			<li>Do we really need all these variables? There are actually two important aspects to this question:
+ 			<ul>
+ 				<li><p><em>Are all the variables important?</em></p>
+ 					<p>For example, is the student’s gender really an important piece of information in this context? If, say, it was known that males are notoriously worse in statistics than females, than the student’s gender would be an important piece of information to consider when predicting the student’s “Intro Stats” score. However, it is most likely the case, that gender is not an important piece of information, and while using it doesn’t  hurt the prediction, it probably does not contribute  to its accuracy.</p></li>
+ 			</ul></li>
+ 			<li><p><em>Is there some “redundancy” among the variables?</em></p>
+ 				<p>For example, do we really need both SAT-M and HS-Algebra in the set of predictors? Both variables capture the same dimension of the student – his/her quantitative ability, and while this is a very important  dimension to consider in this context, using both variables will create some “redundancy” in  the information provided by the data. As we’ll see, it is very important to avoid such redundancy in the data since as it turns out, it can cause some problems in the analysis.  </p></li>
+ 		</ul>
+ 	</example>
+	
+	<p>The similarities and the differences between these two examples, highlight some of the features and structure of this module.</p>
+	<ol >
+		<li> Note that in both examples the <em>response</em> variable, Y, is a <em>quantitative</em> variable – “Intro Stats” final score. In this module we will only explore relationships between variables where the response variable is quantitative.  [It should be mentioned that the collection of methods exploring relationships between variables where the response variable is categorical is called “Logistic Regression Analysis”, and is beyond the scope of this course. </li>
+		<li>Note that in the first example we explored the relationship between a <em>single explanatory</em> variable <em>(X)</em> and the response (Y), while in example 2, we explored the relationship between <em>several explanatory</em> variables <em>(X<sub>1</sub>, X<sub>2</sub>, …,X<sub>6</sub>)</em> and the (same) response (Y). This difference between the examples captures the structure of this module. The module is divided into two sections:
+		<ol>
+			<li><em>Simple regression:</em> Exploring the relationship between two variables
+		<ul style="none">
+			<li> X – explanatory variable</li>
+			<li>Y – response variable </li>
+		</ul>
+			</li>
+		<li><em>Multiple regression:</em> Exploring the relationship between more than two variables:
+		<ul style="none">
+			<li> X<sub>1</sub>, X<sub>2</sub>, …,X<sub>k</sub>  --  several explanatory variables  </li>
+			<li> Y – response variable.</li>
+		</ul></li>
+		</ol>
+			</li>
+		<li>While, as mentioned in 1 above, we will only consider cases where the response variable is quantitative, note that in example 2 some of the explanatory variables are quantitative (SAT-M, SAT-V, HS-GPA, HS-Algebra), and some of the explanatory variables are categorical (Gender, HS-Type). In this module, we will first consider only cases where the explanatory variable(s) are all quantitative, however at some point in the Multiple Regression section, we will learn how we can also include categorical variables in our analysis.</li>
+	</ol>
+	
+	<activity idref="_u5_m3_DIGT01" purpose="didigetthis"></activity>
+	
+</body>
+</workbook_page>
+	
+	
+	
+	
+	

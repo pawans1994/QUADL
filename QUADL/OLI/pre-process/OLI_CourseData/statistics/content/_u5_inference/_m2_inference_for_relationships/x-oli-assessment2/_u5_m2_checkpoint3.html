@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<link
+      href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+      type="text/css" rel="stylesheet">
+
+<assessment id="_u5_m2_checkpoint3" max_attempts="3" recommended_attempts="1">
+      <title>Inference for Relationships Checkpoint</title>
+      <!--<introduction>
+            <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+                  finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+                  ask "This will submit your answers and finish this assignment. Are you sure?", click
+                  "OK" if you are ready to submit your answers for final grading. </p>
+            
+            <p>If you close this window without having saved or submitted, your changes will be lost.
+                  After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+                  be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+      </introduction>
+      <content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/inference_for_relationships_checkpoint_solutions.pdf">Solution Set</link>.</p></content>-->	
+      
+            <content>
+                  <p>The following questions present you with a scenario, and you need to choose the
+                        most appropriate statistical test in each case.</p>
+            </content>
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool1">
+                        <title>Pool1</title>
+                        <multiple_choice id="inference2-1" select="single">
+                              <body>We suspect the overall mean monthly rent of apartments in
+                                    Shadyside is higher than in Oakland, so we survey a random
+                                    sample of <em style="italic">Oakland</em> apartments, and a
+                                    random sample of <em style="italic">Shadyside</em>
+                                    apartments.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback> Incorrect. Notice that you
+                                                want to test if the means of two random samples are
+                                                equal. Consider the remaining options. (B) is the
+                                                right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="10">
+                                          <feedback> Correct. We are comparing two
+                                                groups&#8212;apartments in Shadyside and apartments
+                                                in Oakland. Since we take <em style="italic">two
+                                                  random samples</em>, these samples are <em
+                                                  style="italic">independent</em> and therefore the
+                                                two-sample t-test is appropriate.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>Incorrect. Notice that you want to
+                                                test if the means of two random samples are equal.
+                                                Consider the remaining options. (B) is the right
+                                                answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>Incorrect. Notice that you want to
+                                                test if the means of two random samples are equal.
+                                                Consider the remaining options. (B) is the right
+                                                answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>Incorrect. Notice that you want to
+                                                test if the means of two random samples are equal.
+                                                Consider the remaining options. (B) is the right
+                                                answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                        <multiple_choice id="inference2-1_alternate" select="single">
+                              <body>At the beginning of the semester, students who registered for a
+                                    statistics course were randomly assigned to two sections, each
+                                    taught by a different instructor. At the end of the semester, we
+                                    would like to test whether there are differences in performance
+                                    on the final exam between the two sections.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback>That&apos;s not quite right. The students are
+                                                randomly assigned to a section, and therefore, we
+                                                have two independent samples. (B) is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="10">
+                                          <feedback>Correct. By randomly assigning students to a
+                                                section, we&apos;ve formed two independent samples. A
+                                                two-sample t-test is therefore the appropriate
+                                                test.  </feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>That&apos;s not quite right. Note that we&apos;re
+                                                comparing only two independent samples. ANOVA is
+                                                used when we&apos;re comparing more than two
+                                                groups.  (B) is the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>That&apos;s not quite right. A chi-squared test for
+                                                independence is used to determine if there is an
+                                                association between two categorical variables. A
+                                                grade on a final exam is quantitative.  (B) is the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>That&apos;s not quite right. A regression is used for
+                                                exploring the relationship between two quantitative
+                                                variables. Here we are interested in the differences
+                                                in final exam scores between two independent
+                                                samples.  (B) is the right answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                  </pool>
+            </selection>
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool2">
+                        <title>Pool2</title>
+                        <multiple_choice id="inference2-2" select="single">
+                              <body>We suspect that automobile insurance premiums (in dollars) may
+                                    be steadily decreasing with the driver&apos;s driving experience (in
+                                    years), so we choose a random sample of drivers who have similar
+                                    automobile insurance coverage and collect data about their ages
+                                    and insurance premiums.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback> Incorrect. Notice that you are
+                                                measuring two quantitative variables from each
+                                                subject in order to see if there is a trend between
+                                                them. Consider the remaining options. (E) is the
+                                                right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                measuring two quantitative variables from each
+                                                subject in order to see if there is a trend between
+                                                them. Consider the remaining options. (E) is the
+                                                right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                measuring two quantitative variables from each
+                                                subject in order to see if there is a trend between
+                                                them. Consider the remaining options. (E) is the
+                                                right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                measuring two quantitative variables from each
+                                                subject in order to see if there is a trend between
+                                                them. Consider the remaining options. (E) is the
+                                                right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="10">
+                                          <feedback> Correct. We are examining the relationship
+                                                between <em style="italic">two quantitative</em>
+                                                variables (case Q→Q)&#8212;premium (in dollars) and
+                                                driving experience (in years), and therefore
+                                                inference on regression is appropriate.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                        <multiple_choice id="inference2-2_alternate" select="single">
+                              <body>Advertising researchers claim that the power of curiosity can be
+                                    harnessed to design an effective Internet advertising strategy
+                                    that results in a better evaluation of the advertised product.
+                                    They develop six advertising texts with varying amounts of
+                                    "curiosity" triggers. College students are randomly assigned to
+                                    one of the six versions of the advertisement text and their
+                                    evaluation score of the advertised product is recorded. </body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback>That is not quite right. Since students are
+                                                randomly assigned to one of the six versions, there
+                                                are six independent samples.  (C) is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>That is not quite right. Note that we&apos;re
+                                                comparing more than two independent
+                                                samples.  (C) is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="10">
+                                          <feedback>Correct. ANOVA is used for comparing more than
+                                                two groups, and therefore can be used to determine
+                                                if the mean evaluation score is the same for all six
+                                                advertising texts.  </feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>That is not quite right. The chi-squared test is
+                                                used for examining the relationship between two
+                                                categorical variables.  (C) is the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>That is not quite right. We are examining
+                                                whether evaluation score is related to version,
+                                                which is a categorical variable. Regression is used
+                                                for examining a relationship between two
+                                                quantitative variables. (C) is the right
+                                                answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                  </pool>
+            </selection>
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool3">
+                        <title>Pool3</title>
+                        <multiple_choice id="inference2-3" select="single">
+                              <body>To test whether Internet use increases depression score, we
+                                    measure the depression scores of a random sample of
+                                    non-Internet-users, have them use the Internet for a specified
+                                    time, then measure their depression scores again.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="10">
+                                          <feedback> Correct. Since we are measuring the depression
+                                                scores of the same group of subjects, before and
+                                                then after using the Internet, the matched pairs
+                                                t-test is appropriate.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback> Incorrect. Notice that one
+                                                variable is being measured on each subject twice,
+                                                once before using the Internet and once after using
+                                                the Internet, to see the effect of Internet use on
+                                                depression. Consider the remaining options. (A) is
+                                                the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>Incorrect. Notice that one
+                                                variable is being measured on each subject twice,
+                                                once before using the Internet and once after using
+                                                the Internet, to see the effect of Internet use on
+                                                depression. Consider the remaining options. (A) is
+                                                the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>Incorrect. Notice that one
+                                                variable is being measured on each subject twice,
+                                                once before using the Internet and once after using
+                                                the Internet, to see the effect of Internet use on
+                                                depression. Consider the remaining options. (A) is
+                                                the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>Incorrect. Notice that one
+                                                variable is being measured on each subject twice,
+                                                once before using the Internet and once after using
+                                                the Internet, to see the effect of Internet use on
+                                                depression. Consider the remaining options. (A) is
+                                                the right answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                        <multiple_choice id="inference2-3_alternate" select="single">
+                              <body>A physical therapy researcher was interested in determining the
+                                    impact of two different exercises. The investigator suspected
+                                    that the two exercises produced a different level of activity in
+                                    the muscle. Each of 16 subjects performed both exercise 1 and
+                                    exercise 2, and the results are shown (for each subject, the
+                                    order of the exercises was randomly assigned and sufficient rest
+                                    time was provided between the two exercises). <image
+                                          src="../webcontent/image502.png"/></body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="10">
+                                          <feedback>Correct. Indeed, we are comparing two groups in
+                                                which each observation in one sample is linked to an
+                                                observation in the second sample (the same subject
+                                                is measured twice).</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>That is not quite right. While it is true that
+                                                we are comparing two groups, the two samples are not
+                                                independent, since each subject was measured twice.
+                                                (A) is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>That is not quite right. Note that the samples
+                                                here are not independent, and that we are comparing
+                                                only two groups.  (A) is the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>That is not quite right. Chi-squared is used for
+                                                two categorical variables. The score on the
+                                                assessment is a quantitative variable.  (A) is the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>That is not quite right. Note that we are
+                                                comparing two groups in which each observation in
+                                                one sample is linked to an observation in the second
+                                                sample. (A) is the right answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                  </pool>
+            </selection>
+
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool4">
+                        <title>Pool4</title>
+
+                        <multiple_choice id="inference2-4" select="single">
+                              <body>We select random samples from several racial categories
+                                    (Caucasian, African-American, Hispanic, Asian-American) to
+                                    determine if there is a difference in overall mean earnings
+                                    among the groups.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                testing if there is a difference in means between
+                                                multiple groups. Consider the remaining options. (C)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                testing if there is a difference in means between
+                                                multiple groups. Consider the remaining options. (C)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="10">
+                                          <feedback>Correct. We are comparing the earnings of 4
+                                                racial groups and therefore the ANOVA F-test is
+                                                appropriate.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                testing if there is a difference in means between
+                                                multiple groups. Consider the remaining options. (C)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>Incorrect. Notice that you are
+                                                testing if there is a difference in means between
+                                                multiple groups. Consider the remaining options. (C)
+                                                is the right answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                        <multiple_choice id="inference2-4_alternate" select="single">
+                              <body>Researchers question whether college students&apos; choice of
+                                    declared academic major is related to gender. </body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback>That is not quite right. Both gender and
+                                                declared academic major are categorical variables.
+                                                For a matched pairs t-test, the response variable
+                                                must be quantitative.  (D) is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>That is not quite right. Both gender and
+                                                declared academic major are categorical variables.
+                                                For a two-sample t-test, the response variable must
+                                                be quantitative.  (D) is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>That is not quite right. Both gender and
+                                                declared academic major are categorical variables.
+                                                For an ANOVA, the response variable must be
+                                                quantitative.  (D) is the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="10">
+                                          <feedback>Correct. A chi-squared test for independence
+                                                will determine if there is an association between
+                                                the two categorical variables, gender and declared
+                                                academic major.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>That is not quite right. Gender and academic
+                                                major are categorical variables. Regression is used
+                                                for two quantitative variables. (D) is the right
+                                                answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                  </pool>
+            </selection>
+
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool5">
+                        <title>Pool5</title>
+
+                        <multiple_choice id="inference2-5" select="single">
+                              <body>We want to test for a relationship between race and marital
+                                    status (married/never married/divorced/widowed).</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback> Incorrect. Notice that each
+                                                subject falls into one race category as well as one
+                                                marital status category and you want to test if
+                                                there is a significant relationship between these
+                                                two variables. Consider the remaining options. (D)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>Incorrect. Notice that each
+                                                subject falls into one race category as well as one
+                                                marital status category and you want to test if
+                                                there is a significant relationship between these
+                                                two variables. Consider the remaining options. (D)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>Incorrect. Notice that each
+                                                subject falls into one race category as well as one
+                                                marital status category and you want to test if
+                                                there is a significant relationship between these
+                                                two variables. Consider the remaining options. (D)
+                                                is the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="10">
+                                          <feedback>Correct. We are examining the relationship
+                                                between two categorical variables&#8212;race and
+                                                marital status (case C→C) and therefore the
+                                                appropriate inferential procedure is the chi-squared
+                                                test for independence.</feedback>
+                                    </response>
+                                    <response match="E" score="0">
+                                          <feedback>Incorrect. Notice that each
+                                                subject falls into one race category as well as one
+                                                marital status category and you want to test if
+                                                there is a significant relationship between these
+                                                two variables. Consider the remaining options. (D)
+                                                is the right answer.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                        <multiple_choice id="inference2-5_alternate" select="single">
+                              <body>We want to explore the relationship between the prices of
+                                    diamond rings and the weights of their diamond stones.</body>
+                              <input labels="false" shuffle="false">
+                                    <choice value="A">&#160;&#160; matched pairs t-test</choice>
+                                    <choice value="B">&#160;&#160; two-sample t-test</choice>
+                                    <choice value="C">&#160;&#160; ANOVA</choice>
+                                    <choice value="D">&#160;&#160; chi-squared test for
+                                          independence</choice>
+                                    <choice value="E">&#160;&#160; inference for
+                                          regression</choice>
+                              </input>
+                              <part>
+                                    <response match="A" score="0">
+                                          <feedback>That is not quite right. Note that we are not
+                                                comparing two groups here, but rather examining the
+                                                relationship between two quantitative
+                                                variables.  (E) is the right answer.</feedback>
+                                    </response>
+                                    <response match="B" score="0">
+                                          <feedback>That is not quite right. Note that we are not
+                                                comparing two groups here, but rather examining the
+                                                relationship between two quantitative
+                                                variables.  (E) is the right answer.</feedback>
+                                    </response>
+                                    <response match="C" score="0">
+                                          <feedback>That is not quite right. Note that we are not
+                                                comparing several groups (which is what ANOVA is
+                                                used for), but rather exploring the relationship
+                                                between two quantitative variables.  (E) is the right answer.</feedback>
+                                    </response>
+                                    <response match="D" score="0">
+                                          <feedback>That is not quite right. Recall that the
+                                                chi-squared test is used to explore the relationship
+                                                between two categorical variables. Note that price
+                                                and weight are two quantitative variables. (E) is
+                                                the right answer.</feedback>
+                                    </response>
+                                    <response match="E" score="10">
+                                          <feedback>Correct. Indeed, regression is used to examine
+                                                the relationship between two quantitative variables
+                                                such as price and weight.</feedback>
+                                    </response>
+                              </part>
+                        </multiple_choice>
+                  </pool>
+            </selection>
+
+      
+   
+
+            <selection count="1" exhaustion="reuse">
+                  <pool id="_u5_m2_pool6_8">
+                        <title>Pool6</title>
+                        <section id="_u5_m2_pool6_section1">
+
+                              <content>
+                                    <p>The next three questions refer to the following
+                                          information:</p>
+                                    <p>Suppose an economist wishes to determine the relationship
+                                          between the age and price of houses. A study yields the
+                                          following data:</p>
+                                    <image style="block" src="../webcontent/assessment9q6image1.gif"/>
+                                    <p>For each question below, choose the most appropriate
+                                          inference method to analyze these data, under the given
+                                          scenarios.</p>
+                              </content>
+
+                              <multiple_choice id="inference2-6" select="single">
+                                    <body>If column 1 is the price (in thousands of dollars) of a
+                                          sample of five houses from ten years ago, and column 2 is
+                                          the price (in thousands of dollars) of a sample of a
+                                          different five houses from today, which of the following
+                                          is the appropriate inference method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="0">
+                                                <feedback> Incorrect. Notice that you
+                                                  are given two independent samples from different
+                                                  times. Consider the remaining options. (B) is the
+                                                  right answer.</feedback>
+                                          </response>
+                                          <response match="B" score="10">
+                                                <feedback> Correct. We are comparing the prices
+                                                  of houses in two time periods using two
+                                                  (different) independent samples.</feedback>
+                                          </response>
+                                          <response match="C" score="0">
+                                                <feedback>Incorrect. Notice that you
+                                                  are given two independent samples from different
+                                                  times. Consider the remaining options. (B) is the
+                                                  right answer.</feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                              <multiple_choice id="inference2-7" select="single">
+                                    <body>If column 1 is the age of the home in years, and column 2
+                                          is the price of the home (in thousands of dollars), which
+                                          of the following is the appropriate inference
+                                          method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="0">
+                                                <feedback> Incorrect. Notice that each
+                                                  subject is measured once for age and a second time
+                                                  for price, and that you want to see if there is a
+                                                  trend between the age of a house and its price.
+                                                  Consider the remaining options. (C) is the right
+                                                  answer.</feedback>
+                                          </response>
+                                          <response match="B" score="0">
+                                                <feedback>Incorrect. Notice that each
+                                                  subject is measured once for age and a second time
+                                                  for price and that you want to see if there is a
+                                                  trend between the age of a house and its price.
+                                                  Consider the remaining options. (C) is the right
+                                                  answer.</feedback>
+                                          </response>
+                                          <response match="C" score="10">
+                                                <feedback> Correct. We are examining the
+                                                  relationship between two quantitative
+                                                  variables&#8212;the age of the house and its
+                                                  price, and therefore inference on regression is
+                                                  appropriate.</feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                              <multiple_choice id="inference2-8" select="single">
+                                    <body>If column 1 is the price (in thousands of dollars) of a
+                                          sample of five houses from ten years ago, and column 2 is
+                                          the price (in thousands of dollars) of the same homes
+                                          today, which of the following is the appropriate inference
+                                          method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="10">
+                                                <feedback> Correct. We are comparing the prices of
+                                                  houses in two time periods using the same group of
+                                                  5 houses measured twice, and therefore matched
+                                                  pairs is appropriate.</feedback>
+                                          </response>
+                                          <response match="B" score="0">
+                                                <feedback> Incorrect. Notice that each
+                                                  subject is measured twice, once in each time
+                                                  period, for its price and that you want to see if
+                                                  the mean prices of the houses have changed over
+                                                  time. Consider the remaining options. (A) is the
+                                                  right answer.</feedback>
+                                          </response>
+                                          <response match="C" score="0">
+                                                <feedback>Incorrect. Notice that each
+                                                  subject is measured twice, once in each time
+                                                  period, for its price and that you want to see if
+                                                  the mean prices of the houses have changed over
+                                                  time. Consider the remaining options. (A) is the
+                                                  right answer. </feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                        </section>
+                        <section id="_u5_m2_pool6_section2">
+
+                              <content>
+                                    <p>The next three questions refer to the following
+                                          information:</p>
+                                    <p>A researcher wants to explore the relationship between the
+                                          following two variables, Weight 1 and Weight 2.</p>
+                                    <image style="block" src="../webcontent/image503.png"/>
+                                    <p>For each question below, choose the most appropriate
+                                          inference method to analyze these data, under the given
+                                          scenarios.</p>
+                              </content>
+
+                              <multiple_choice id="inference2-6_alternate" select="single">
+                                    <body>Suppose that Weight 1 is the weight (in pounds) of a
+                                          sample of five individuals before beginning a weight-loss
+                                          diet, and Weight 2 is the weight in (pounds) of the
+                                                <em>same</em> five individuals after the diet. If we
+                                          would like to test the effectiveness of the diet, which of
+                                          the following is the appropriate inference method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="10">
+                                                <feedback>Correct. A matched pairs study may be
+                                                  carried out, where each observation in one sample
+                                                  is matched/paired/linked with an observation in
+                                                  the other sample. In this case, we have the pairs
+                                                  of before-diet and after-diet weights of each
+                                                  individual.</feedback>
+                                          </response>
+                                          <response match="B" score="0">
+                                                <feedback>That is not quite right. The samples
+                                                  represent weights from the same five individuals.
+                                                  These are not independent samples. These are
+                                                  matched pairs. (A) is the right answer.</feedback>
+                                          </response>
+                                          <response match="C" score="0">
+                                                <feedback>That is not quite right. Note that in this
+                                                  scenario, each observation in one sample is linked
+                                                  to an observation in the second sample, and we&apos;re
+                                                  exploring whether the weights after the diet tend
+                                                  to be lower than the weights before the diet.  (A) is the right answer.
+                                                </feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                              <multiple_choice id="inference2-7_alternate" select="single">
+                                    <body>In preparing for a balsa wood bridge challenge, students
+                                          weighed (in g) a random sample of five balsa wood designs
+                                          and recorded these data as Weight 1. They also recorded
+                                          the maximum weight (in kg) that the bridge could support.
+                                          If the students want to know if there is an association
+                                          between the weight of the bridge (in g) and the maximum
+                                          weight supported (in kg), which of the following is the
+                                          appropriate inference method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="0">
+                                                <feedback>That is not quite right. Regression is the
+                                                  correct choice, since we&apos;re exploring the
+                                                  relationship between two quantitative variables.
+                                                  The students want to know if there is an
+                                                  association between the weight of the balsa wood
+                                                  bridge and the weight that the bridge
+                                                  supported.  (C) is the right answer.</feedback>
+                                          </response>
+                                          <response match="B" score="0">
+                                                <feedback>That is not quite right. Note that we&apos;re
+                                                  not comparing two groups here, but rather
+                                                  exploring the relationship between two
+                                                  quantitative variables, and therefore regression
+                                                  is the correct choice. Students want to know if
+                                                  there is an association between the weight of the
+                                                  balsa wood and the weight that the bridge
+                                                  supported.  (C) is the right answer.</feedback>
+                                          </response>
+                                          <response match="C" score="10">
+                                                <feedback>Correct. The students want to know if
+                                                  there is an association between the weight of the
+                                                  balsa wood and the weight that the bridge
+                                                  supported.</feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                              <multiple_choice id="inference2-8_alternate" select="single">
+                                    <body>If Weight 1 is the weight (in pounds) of a random sample
+                                          of five men who were accepted as models, and Weight 2 is
+                                          the weight (in pounds) of a random sample of five men who
+                                          were rejected as models, which of the following is the
+                                          appropriate inference method?</body>
+                                    <input labels="false" shuffle="false">
+                                          <choice value="A">&#160;&#160; matched pairs</choice>
+                                          <choice value="B">&#160;&#160; two independent
+                                                samples</choice>
+                                          <choice value="C">&#160;&#160; inference for
+                                                regression</choice>
+                                    </input>
+                                    <part>
+                                          <response match="A" score="0">
+                                                <feedback>That is not quite right. The weights are
+                                                      from two independent samples.  (B) is the right answer.</feedback>
+                                          </response>
+                                          <response match="B" score="10">
+                                                <feedback>Correct. The weights are from two
+                                                  independent samples that we are
+                                                  comparing.</feedback>
+                                          </response>
+                                          <response match="C" score="0">
+                                                <feedback>That is not quite right. The weights are
+                                                  from two independent samples. In regression, you
+                                                  are testing for an association between two
+                                                  variables, where each (x,y) pair are somehow
+                                                  related. There is no indication that the weight of
+                                                  accepted model 1 is in any way associated with the
+                                                  weight of rejected model 1.  (B) is the right answer.</feedback>
+                                          </response>
+                                    </part>
+                              </multiple_choice>
+                        </section>
+                  </pool>
+
+            </selection>
+
+      
+ 
+</assessment>

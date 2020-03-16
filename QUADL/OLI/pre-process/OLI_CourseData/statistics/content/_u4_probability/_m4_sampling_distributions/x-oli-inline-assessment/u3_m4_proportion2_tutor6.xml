@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion2_tutor6">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>Imagine that you have a very large barrel that contains tens of thousands of
+                    M&#38;M's. According to the official M&#38;M website, 20% of the M&#38;M's
+                    produced by the Mars Corporation are orange. 5 students each take a random
+                    sample of 50 M&#38;M's and record the percentage of orange in each sample. Which
+                    sequence is the most plausible for the percentage of orange candies obtained in
+                    these 5 samples?</p>
+                <p><input_ref input="B"/></p>
+            </body>
+            <multiple_choice id="B" shuffle="false">
+                <choice value="one">20%, 20%, 20%, 20%, 20%</choice>
+                <choice value="two">15%, 25%, 22%, 20%, 28% </choice>
+                <choice value="three">5%, 80%, 8%, 65%, 70%</choice>
+                <choice value="four">Any of the above</choice>
+            </multiple_choice>
+
+            <part>
+                <response input="B" match="one">
+                    <feedback>This is not quite right. When randomly sampling from a population in
+                        which p = 0.20, we definitely expect many of the sample proportions to be
+                        equal to or close to 0.20. But drawing 5 samples in a row that all have
+                        <?oxy_comment_start author="mmyers" timestamp="20101122T174749-0500" comment="include symbol in parentheses
+
+I think after this page, student will be used to seeing the term, and you can stop reminding them of what it means and use the symbol, diescription or &quot;p-hats&quot; interchangeably"?>p-hats<?oxy_comment_end?>
+                        equal to 0.20 is less likely than getting 5 p-hats close to 0.20.</feedback>
+                </response>
+                <response input="B" match="two" score="1">
+                    <feedback>Correct. We expect p-hats
+                        within 1 standard deviation of p = 0.20 to be most common. The standard
+                        deviation is about 0.06. 4 of the 5 p-hats in this sequence are within 0.06
+                        of p = 0.20.</feedback>
+                </response>
+                <response input="B" match="three">
+                    <feedback>Incorrect. We expect p-hats within 1 standard deviation of p =
+                        0.20 to be most common. The standard deviation of p-hats for this scenario
+                        is about 0.06. 3 of the p-hats in this sequence are over 7 standard
+                        deviations above 0.20. A sequence like this one is very unlikely to occur in
+                        random sampling.</feedback>
+                </response>
+                <response input="B" match="four">
+                    <feedback>Incorrect. Of course, all of these are possible. Which is most
+                            <em>plausible</em>? We expect p-hats within 1 standard deviation of p =
+                        0.20 to be most common.</feedback>
+                </response>
+                <hint>Think about the center and spread in the sampling distribution. Which sample results are the most likely to occur? (Of course, all of these are possible. Which is most plausible?)
+                </hint><hint>The mean of the sampling distribution is 0.20. The standard deviation is sqrt(0.2(1 − 0.2)/50) =
+                    0.06. Which sequence can we rule out because most of the p-hats
+                    are more than 1 standard deviation from p = 0.20? Of the sequences left, which
+                    is the most plausible?</hint>
+            </part>
+        </question>
+
+
+    </page>
+</assessment>

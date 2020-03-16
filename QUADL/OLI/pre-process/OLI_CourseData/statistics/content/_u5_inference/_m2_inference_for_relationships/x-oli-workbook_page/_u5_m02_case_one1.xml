@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd"><workbook_page xmlns:bib="http://bibtexml.sf.net/" xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:theme="http://oli.web.cmu.edu/presentation/" xmlns:wb="http://oli.web.cmu.edu/activity/workbook/" id="_u5_m02_case_one1"><head><title>Case C?Q (1 of 2)</title><objref idref="identify_cases" /></head><body><p id="f25db475a53f415fa1fbffcc179b2892">Recall the role-type classification table framing our discussion on inference about the relationship between two variables.</p><image id="bec1fd1ca33249f1924134743c575a12" src="../webcontent/image004.gif" alt="It is possible for any type of explanatory variable to be paired with any type of response variable. The possible pairings are: Categorical Explanatory ? Categorical Response (C?C), Categorical Explanatory ? Quantitative Response (C?Q) (highlighted to show we will work on this case), Quantitative Explanatory ? Categorical Response (Q?C), and Quantitative Explanatory ? Quantitative Response (Q?Q)." style="block" vertical-align="middle"><caption /><popout enable="false"></popout></image><p id="c241ab474a0f4ddd9ae01dff202cfb00">We start with case C?Q, where the explanatory variable is categorical and the response variable is quantitative. Recall that in the Exploratory Data
+ Analysis unit, examining the relationship between X
+ and Y in this case amounts, in practice, to
+ comparing the distributions of the (quantitative)
+ response Y for each value (category) of the
+ explanatory X. To do that, we used side-by-side
+ boxplots (each representing the distribution of Y in
+ one of the groups defined by X), and supplemented
+ the display with the corresponding descriptive
+ statistics.</p><p id="f75ab091bcae4ce1bee2b57a63138967">What will we do in inference? To understand the logic, we&apos;ll start with an example and then generalize.</p><example id="efd394c932654d0dac27431c6b8fbb1d"><title>GPA and Year in College</title><p id="db2c3c4608bb420ea134229a6099dd12">Say that our variable of interest is the GPA of college students in the United States. From the previous module we know that since GPA is
+ quantitative, we do inference on ?, the
+ (population) mean GPA among all U.S. college
+ students. Since this module is about
+ relationships, let&apos;s assume that what we are
+ really interested in is not simply GPA, but the
+ relationship between:</p><p id="a547b95dabbb4fa48d57c9c5adec42d4"><em style="italic">X :</em> year in college (1 = freshmen, 2 = sophomore, 3 = junior, 4 = senior) and</p><p id="f46a3a8f495746bfb0acfd41719a413c"><em style="italic">Y :</em> GPA</p><p id="bd03be7b83a046e0a0b6951da7f286f4">In other words, we want to explore whether GPA is related to year in college. The way to think about this is that the population of U.S. college
+ students is now broken into <em style="italic">4 sub-populations</em>: freshmen, sophomores, juniors and seniors. Within each of these four
+ groups, we are interested in the GPA.</p><p id="ecc37cc448c24bd8a5bf1f59bc0b314f">The inference must therefore involve the 4 sub-population means:</p><p id="ea424b05806c4a6485ac7f5a5f7a21fa"> ?<sub>1</sub> : mean GPA among freshmen in the United States.</p><p id="e32a30f4c77842d987908a2cd07a424e">?<sub>2</sub> : mean GPA among sophomores in the United States </p><p id="b5c15c7884dc4c258e84424637ad8e12">?<sub>3</sub> : mean GPA among juniors in the United States</p><p id="e5cb46cf0df34b0d89bdcd99a7340b0a"> ?<sub>4</sub> : mean GPA among seniors in the United States</p><p id="bcab4627d1394673adeeef67c78d8bb6">It makes sense that the inference about the relationship between year and GPA has to be based on some kind of comparison of these four means. If we
+ infer that these four means are not all equal
+ (i.e., that there are some differences in GPA
+ across years in college) then that&apos;s equivalent to
+ saying GPA is related to year in college. Let&apos;s
+ summarize this example with a figure:</p><image id="b371df1f41824e748722bb7082648e02" src="../webcontent/image010.gif" alt="The entire population of US College Students is represented by a large circle. For this population we would like to know if GPA (Y) and Year (X) are related. This population is made of 4-sub populations. This is represented by 4 arrows from the population circle to 4 other circles. A circle exists for US Freshmen, with GPA mean ?_1. Another circle exists for US Sophomores, with GPA Mean ?_2. US Juniors has another circle with GPA Mean ?_3. The last circle is for US Seniors, with GPA Mean ?_4. To infer on relationship we&amp;apos;ll need to compare each of these means." style="block" vertical-align="middle"><caption /><popout enable="false"></popout></image></example><p id="bccb9ca780bc474bb77985e40260ee4f">In general, then, making inferences about the relationship between X and Y in Case C?Q boils down to comparing the means of Y in the sub-populations,
+ which are created by the categories defined in X
+ (say k categories). The following figure summarizes
+ this:</p><image id="a6d7a567e3094ef4b85e27052a73be23" src="../webcontent/image011.gif" alt="The entire population is represented by a large circle, for which we wonder if there is a relationship between Y and X. This large population is broken up into sub-populations, each with its own mean ?. To infer on relationship between Y and X, we&amp;apos;ll need to compare these means." style="block" vertical-align="middle"><caption /><popout enable="false"></popout></image><p id="f4ab28eeeb1a4e99bdaed150b423125e">As the introduction to this module mentioned, we will learn three inferential methods in Case C?Q, corresponding to a sub-division of this case.
+ First we will distinguish between cases where the
+ explanatory X has only two categories (k = 2), and
+ cases where X has more than two categories (k &gt;
+ 2). In other words, we will look separately at cases
+ where we are comparing two sub-population means:</p><image id="f8fece41a30842fdb469ae30290bfe0c" src="../webcontent/image012.gif" alt="We have a population for which we want to know if there is a relationship between Y and X. k = 2 in this case, so we have two sub-populations, each with its own Y Mean. Sub-Population 1 has a Y Mean of ?_1, and Sub-Population 2 has a Y Mean of ?_2. To infer on relationship we&amp;apos;ll need to compare these TWO means." style="block" vertical-align="middle"><caption /><popout enable="false"></popout></image><p id="a5ab861d1cf141c7be10e6de10de459b">and cases where we are comparing more than 2 sub-population means:</p><image id="eb1119ba493b4de4911972bcf1129b22" src="../webcontent/image013.gif" alt="The entire population is represented by a large circle, for which we wonder if there is a relationship between Y and X. k &amp;gt; 2. This large population is broken up into k sub-populations, each with its own mean ?. To infer on relationship between Y and X, we&amp;apos;ll need to compare these k means." style="block" vertical-align="middle"><caption /><popout enable="false"></popout></image><p id="a683d1cd94a24435a88c78df3339ef9b">For example, if we are interested in whether GPA (Y) is related to gender (X), this is a case where <em style="italic">k = 2</em> (since gender has only two categories: M, F), and the inference will boil down
+ to comparing the mean GPA in the sub-population of males
+ to that in the sub-population of females. On the other
+ hand, in the example we looked at earlier, the
+ relationship between GPA (Y) and year (X) is a case
+ where <em style="italic">k &gt; 2</em> or more specifically, k = 4 (since year has four categories). In terms of
+ inference, these two examples will be treated
+ differently!</p></body></workbook_page>

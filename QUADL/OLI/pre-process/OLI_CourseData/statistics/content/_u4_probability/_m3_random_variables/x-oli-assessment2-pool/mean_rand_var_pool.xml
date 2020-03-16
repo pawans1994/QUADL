@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="mean_rand_var_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_mean_rand_var">
+        <!-- LO: mean_rand_var -->
+        <body>
+            <p>The random variable X, representing the number of accidents in a certain intersection
+                in a week, has the following probability distribution: </p>
+            <table>
+                <tr>
+                    <td>x</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>P(X = x)</td>
+                    <td>0.20</td>
+                    <td>0.30</td>
+                    <td>0.20</td>
+                    <td>0.15</td>
+                    <td>0.10</td>
+                    <td>0.05</td>
+                </tr>
+            </table>
+            <p>On average, how many accidents are there in the intersection in a week?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">5.3</choice>
+            <choice value="B">2.5</choice>
+            <choice value="C">1.8</choice>
+            <choice value="D">0.30</choice>
+            <choice value="E">0.1667</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the maximum number of accidents allowed in a week
+                    in this distribution is 5. This implies that the average number of accidents in
+                    a week must be at most 5.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have weighted each of the possible numbers of
+                    accidents in a week equally. Remember that the average, or mean, of a
+                    distribution is a weighted sum of the possible outcomes, in which each weight is
+                    equal to the probability of that outcome occurring.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We need to find the mean of X, μ<sub>x</sub>. μ<sub>x</sub> = (0
+                    * 0.20) + (1 * 0.30) + (2 * 0.20) + (3 * 0.15) + (4 * 0.10) + (5 * 0.05) =
+                    1.8.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect.The average of a distribution is generally not the same as the
+                    most likely outcome of that distribution. Remember that the average, or mean, of
+                    a distribution is a weighted sum of the possible outcomes, where each weight is
+                    equal to the probability of that outcome occurring.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The average of a distribution is generally not the same as
+                    1/|S|, where S is the sample space and |S| represents the number of outcomes in
+                    the sample space. Remember that the average, or mean, of a distribution is a
+                    weighted sum of the possible outcomes where each weight is equal to the
+                    probability of that outcome occurring.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_mean_rand_var">
+        <!-- LO: mean_rand_var -->
+        <body>
+            <p>The probability distribution for the number of defects during an eight hour shift on
+                the assembly line at Wanda’s Wooden Widgets is as shown in the chart below.</p>
+            <table>
+                <tr>
+                    <td>x</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>P(X = x)</td>
+                    <td>0.50</td>
+                    <td>0.25</td>
+                    <td>0.15</td>
+                    <td>0.06</td>
+                    <td>0.03</td>
+                    <td>0.01</td>
+                </tr>
+            </table>
+            <p>On average, how many defects are found during an 8-hour shift?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">5.3</choice>
+            <choice value="B">2.5</choice>
+            <choice value="C">0.9</choice>
+            <choice value="D">0.50</choice>
+            <choice value="E">0.1667</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the maximum number of defects allowed in a shift in
+                    this distribution is 5. This implies that the average number of defects in a
+                    shift must be at most 5.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have weighted each of the possible numbers of
+                    accidents in a shift equally. Remember that the average, or mean, of a
+                    distribution is a weighted sum of the possible outcomes, in which each weight is
+                    equal to the probability of that outcome occurring.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We need to find the mean of X, μx. μx = (0 * 0.50) + (1 * 0.25) +
+                    (2 * 0.15) + (3 * 0.06) + (4 * 0.03) + (5 * 0.01) = 0.9.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect.The average of a distribution is generally not the same as the
+                    most likely outcome of that distribution. Remember that the average, or mean, of
+                    a distribution is a weighted sum of the possible outcomes, where each weight is
+                    equal to the probability of that outcome occurring.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The average of a distribution is generally not the same as
+                    1/|S|, where S is the sample space and |S| represents the number of outcomes in
+                    the sample space. Remember that the average, or mean, of a distribution is a
+                    weighted sum of the possible outcomes where each weight is equal to the
+                    probability of that outcome occurring.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<questestinterop>
+  <item ident="_u4_m1_digtutor3b" title="_u4_m1_digtutor3b">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">Which of the following would provide even more convincing evidence that indeed, P(B) is roughly .55?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <mattext texttype="text/plain">Out of 10 randomly chosen college students, 5.5 reported that they had eaten breakfast that day.</mattext></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <mattext texttype="text/plain">Out of 20 randomly chosen college students, 11 reported that they had eaten breakfast that day.</mattext></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <mattext texttype="text/plain">Out of 1000 randomly chosen college students, 850 reported that they had eaten breakfast that day.</mattext></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <mattext texttype="text/plain">Out of 1000 randomly chosen college students, 550 reported that they had eaten breakfast that day.</mattext></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">5.5 students???? what does that mean?</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  While the relative frequency here is also 11/20=.55, remember that the more repetitions that are performed, the closer the relative frequency gets to the probability it estimates. Here we perform only 20 repetitions compared to 460 in the original survey</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect. While it is true that we perform more repetition here (1000 vs. 460), the relative frequency here is 850/1000=.85 and not .55</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Correct.  The relative frequency is here (550/1000=.55) is based on a larger number of repetitions (1000 vs. 460), and therefore provides a better estimate for P(B).</mattext></material></itemfeedback></item></questestinterop>

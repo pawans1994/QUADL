@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_rules2">
+<head>
+<title>Rules for Means and Variances of Random Variables (2 of 3)</title>
+    <objref idref="apply_rules_means_variances"/>
+</head>
+<body>
+   
+<p>The four observations we made on the previous page help illustrate a general rule for how random
+            variables transform if we add, subtract  and/or multiply by a constant.</p>
+<section>
+<title>Rules for a + bX (Linear Transformation of One Random Variable)</title>
+<body>
+<p>If X is a random variable with the mean <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math> and a variance of <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                    </m:math>, then the new random variable <em>a + bX</em> has a mean and variance
+                    (respectively) of:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>a</m:mi>
+<m:mo>+</m:mo>
+<m:mi>b</m:mi>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mi>a</m:mi>
+<m:mo>+</m:mo>
+<m:mi>b</m:mi>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>a</m:mi>
+<m:mo>+</m:mo>
+<m:mi>b</m:mi>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:msup>
+<m:mi>b</m:mi>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+</m:math>
+</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>If we take a random variable's distribution and shift it over "a" units, and stretch or shrink its spread by "b" (stretch if b is greater than 1, 
+    shrink if b is less than 1), then the mean is shifted and the distribution is stretched or shrunk accordingly. 
+    For instance, if we multiply a random variable by 6 and add 3, then the mean is also transformed.  The mean is also multiplied by 6 and 3 is added. 
+    Shifting by "a," however, has no effect on the variance (or standard deviation) of a random variable, because the spread would not be changed. 
+    On the other hand, stretching or shrinking the distribution of a random variable entails stretching or shrinking its spread accordingly. 
+    Doubling a random variable's values produces a new random variable whose variance is four times the original variance, 
+    but the standard deviation is just double the original standard deviation, as we might expect.</p>
+<example><title>Shifting and Stretching</title>
+
+<p>Recall that X is the number of defective parts per hour in Xavier's production line, and in the
+                        previous section we calculated that:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+</m:math> and that <m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>1</m:mn>
+</m:math>.</p>
+<p>We are interested in a new random variable, "50 + 5X," which represents the hourly cost of
+                        operation for Xavier's production line. Note that 50 + 5X is of the form "a
+                        + bX" (where a = 50 and b = 5), so in order to find the mean and standard
+                        deviation of this new random variable, we can use the rules above:</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>5</m:mn>
+<m:mn>9</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:msup>
+<m:mn>5</m:mn>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mn>5</m:mn>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>4</m:mn>
+<m:mn>6</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>3</m:mn>
+<m:mn>6</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+</m:math>
+</p>
+<p>and therefore: <m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mn>5</m:mn>
+<m:mn>0</m:mn>
+<m:mo>+</m:mo>
+<m:mn>5</m:mn>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mn>3</m:mn>
+<m:mn>6</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+</m:mrow>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:mn>6</m:mn>
+<m:mo>.</m:mo>
+<m:mn>0</m:mn>
+<m:mn>4</m:mn>
+</m:math>
+</p>
+<p>So, we can conclude that the hourly costs for Xavier's production line average $59, and
+                        typically the cost is about $6 away from that average.</p>
+</example>
+<!--<activity idref="_u4_m3_dig6" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_rules2_tutor1" purpose="didigetthis"/>
+    <wb:inline idref="u3_m3_rules2_tutor2" purpose="didigetthis"/>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

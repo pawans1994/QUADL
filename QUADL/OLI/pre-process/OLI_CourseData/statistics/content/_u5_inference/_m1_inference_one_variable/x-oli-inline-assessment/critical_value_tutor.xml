@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="critical_value_tutor">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+            <body>What are the null and alternative hypotheses?</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">H <sub>0</sub>: p = 0.435; H<sub>a</sub>: p ≠ 0.435 </choice>
+                <choice value="B">H <sub>0</sub>: p = 0.435; H<sub>a</sub>: p &gt; 0.435 </choice>
+                <choice value="C">H <sub>0</sub>: p = 0.47; H<sub>a</sub>: p ≠ 0.47 </choice>
+                <choice value="D">H <sub>0</sub>: p = 0.47; H<sub>a</sub>: p &lt; 0.47 </choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The null hypothesis assumes that the
+                        population proportion is correct. It looks like you used the sample
+                        proportion, instead of the population proportion. Also, note that the
+                        assessment is being used to determine whether there were proportionately <em
+                            style="bold">fewer</em> females. Please try again. </feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. While you did get the direction of the
+                        alternative hypothesis correct, it looks like you used the sample
+                        proportion, instead of the population proportion. Please try
+                        again.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. While you did get use the population
+                        proportion, the sign for the alternative hypothesis is incorrect. Please
+                        note that the assessment is being used to determine whether there were
+                        proportionately fewer females. Please try again.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. The population proportion of 0.47 is being assessed and the
+                        assessment is being used to determine whether there were proportionately
+                        fewer female matriculated students in rural areas as compared to the
+                        national proportion of female matriculated medical students.</feedback>
+                </response>
+                <hint>Think about what is being assessed.</hint>
+                <hint>Remember to distinguish between the population and the sample.</hint>
+            </part>
+        </question>
+    </page>
+    <page>
+        <question id="q2">
+            <!--LO: Determine appropriate critical value(s) to assess null hypothesis.-->
+            <body>Using a 0.05 significance level, what critical value should be used to determine
+                whether there are proportionately fewer matriculated female medical students in
+                rural areas as compared to the national proportion of matriculated female
+                students.</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">−1.96</choice>
+                <choice value="B">+1.96</choice>
+                <choice value="C">+1.645</choice>
+                <choice value="D">−1.645</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The alternative hypothesis would be “less
+                        than,” so it would be a one-tailed test, with a negative critical value;
+                        however, this value would put only 0.025 (or 2.5%) instead of
+                        0.05 (or 5%) in the tail. Please try again.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. The alternative hypothesis would be “less
+                        than,” so it would be a one-tailed test, with a negative critical value.
+                        Please try again.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. While this value would create a critical
+                        region with 5% of the area, it is in the wrong direction. The alternative
+                        hypothesis would be “less than,” so it would be a one-tailed test, with a
+                        negative critical value. Please try again.</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. The alternative hypothesis would be “less than,” so it would
+                        be a one-tailed test, with a negative critical value; thus, −1.645 would put
+                        0.05 (or 5%) in the left side of the distribution.</feedback>
+                </response>
+                <hint>Remember to think about the direction of the alternative hypothesis and how it
+                    will affect the critical value(s).</hint>
+                <hint>Remember to think about the level of significance and how it will affect the
+                    critical value(s).</hint>
+            </part>
+        </question>
+    </page>
+    <page>
+        <question id="q3">
+            <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+            <body>What is the z-test statistic?</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">−2.218</choice>
+                <choice value="B">+2.218</choice>
+                <choice value="C">−140.51</choice>
+                <choice value="D">−2.232</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="10">
+                    <feedback>Correct. The z-test statistic is calculated by using the formula
+                        (value − mean)/(standard deviation) or (0.435 − 0.47)/(.1578) = −2.218.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It looks like you subtracted the sample
+                        proportion from the population proportion, instead of the other way around.
+                        Please try again.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It looks like you forgot to square-root the
+                        standard deviation. Please try again.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It looks like the proportion for the sample
+                        was used in the standard deviation formula instead of the proportion for the
+                        population. Please try again.</feedback>
+                </response>
+                <hint>To calculate the z-test statistic, you need the proportion for the population,
+                    the proportion for the sample, and the standard deviation.</hint>
+            </part>
+        </question>
+    </page>
+    <page>
+        <question id="q4">
+            <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+            <body>Is the proportion of female students in the sample from the rural areas
+                significantly lower than the population proportion at a 0.05 significance
+                level?</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">Yes, because the z-test statistic is more than the critical value
+                    for a 0.05 significance level.</choice>
+                <choice value="B">Yes, because the z-test statistic is less than the critical value
+                    for a 0.05 significance level.</choice>
+                <choice value="C">No, because the z-test statistic is more than the critical value
+                    for a 0.05 significance level.</choice>
+                <choice value="D">No, because the z-test statistic is less than the critical value
+                    for a 0.05 significance level.</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. While the sample proportion is significantly
+                        lower than the population, it is not because the z-statistic is more than
+                        the critical value. Please try again.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. Since the z-test statistic (−2.218) is less than the critical
+                        value for a one-tailed test at the 0.05 significance level (−1.645), it falls
+                        in the critical region. Thus, we can say that the probability of this z-test
+                        statistic is less than 0.05. Thus, the null hypothesis is rejected, and we
+                        can say that there are proportionately fewer female matriculated female
+                        medical students in the rural areas as compared to the national
+                        proportion.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. The z-test statistic is less than the critical
+                        value. Please try again.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. While the z-test statistic is less than the
+                        critical value, remember that this is a “less than” one-tailed test. Please
+                        try again.</feedback>
+                </response>
+                <hint>Think about the relationship between the critical value for a 0.05 significance
+                    level and the calculated z-test statistic.</hint>
+                <hint>Remember, that this is a “less than” one-tailed test.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

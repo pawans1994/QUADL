@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u3_m1_lbd1">
+    <head>
+        <title>Sampling</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to show you how a simple random sample produces a sample
+            that is not subject to any bias and is thus representative of the population from which
+            it was selected. Also, we'll see how a nonrandom sample can produce some sources of
+            bias.</p>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>Consider the population of all students at a large university taking introductory
+                    statistics courses (1,129 students taking statistics for business, social
+                    sciences, or natural sciences). </p>
+                <p>Suppose we are interested in the values of four specific variables for this
+                    population: handedness (right-handed or left-handed), sex, SAT Verbal score, and
+                    age. If we were unable to determine the values of those variables for the entire
+                    population, we may be able to take a random sample from that population, and use
+                    the sample summaries as estimates for population summaries. Would the random
+                    sample provide unbiased estimates for the population values?</p>
+                <p>Next, what if instead of taking a random sample, we sampled the 192 students who
+                    happen to be enrolled in the business statistics course? First we will intuit,
+                    then check, if they would be a representative sample with respect to each of the
+                    four variables: handedness, sex, SAT Verbal score, and age. It may be helpful
+                    for you to know that, at this university, all students have comparable options
+                    in terms of when they take introductory statistics. You should also know that
+                    women, on the whole, tend to do somewhat better than men on the verbal portion
+                    of the SAT, and that business is a major that tends to interest males more than
+                    females.</p>
+            </body>
+        </section>
+        <p>To summarize the goals for this activity, we will:</p>
+        <p><em style="bold">Part A.</em> Verify that the distributions of the variables handedness,
+            sex, SAT Verbal score, and age are roughly the same for the random sample as they are
+            for the population.</p>
+        <p><em style="bold">Part B.</em> Intuit whether the distributions of each of the four
+            variables in the (nonrandom) sample of business students would be roughly the same as
+            those for the population, or whether there is a reason to expect any of them to be
+            biased.</p>
+        <p><em style="bold">Part C.</em> Check our intuition by comparing the distributions of each
+            of the four variables for the sample of business students with those for the population,
+            and determine whether they are roughly the same or if the sample values for any of the
+            variables appear to be biased.</p>
+        <p>Our dataset contains data on the entire population of 1,129 students, which includes
+            students taking introductory statistics who are majoring in the natural and social
+            sciences, as well as for business majors.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/student_survey.RData" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        R.</p>
+                    <p>The data have been loaded into the data frame "population". Enter the command
+                            <code>population</code> to see the data. The variables in the data frame
+                        are <code>Course</code>, <code>Handed</code>, <code>Sex</code>,
+                            <code>Verbal</code>, <code>Age</code>.</p>
+                    <p>The variables are defined as follows:</p>
+                    <ul style="none">
+                        <li><em>Course:</em> natural science, social science, or business </li>
+                        <li><em>Handed:</em> righthanded or lefthanded</li>
+                        <li><em>Sex:</em> female or male</li>
+                        <li><em>Verbal:</em> SAT Verbal scores up to 800</li>
+                        <li><em>Age:</em> in years</li>
+                    </ul>
+                    <p>First, we will take a simple random sample of the data. For the sake of
+                        consistency, we will make the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later.</p>
+                    <p>To do this in R, copy the following command:</p>
+                    <code>random_sample =
+                        population[sample(length(population$Course),192),];random_sample</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/student_survey.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link>to open StatCrunch in a separate window and login using your
+                        username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set select the “My computer” link under Load a data set
+                            from box on the left side of the page.</li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p>The dataset includes the following variables:</p>
+                    <ul>
+                        <li><em> Course:</em> natural science, social science, or business</li>
+                        <li><em>Handed:</em> right-handed or left-handed</li>
+                        <li><em>Sex:</em> female or male</li>
+                        <li><em>Verbal</em>: SAT Verbal scores up to 800</li>
+                        <li><em>Age:</em> in years</li>
+                    </ul>
+                    <p>First, we will take a simple random sample of the data. For the sake of
+                        consistency, we will make the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later.</p>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Data – Sample Columns</li>
+                        <li>Select: Handed, Sex, Verbal and Age</li>
+                        <li>Sample size: 192</li>
+                        <li>Check: Sample all columns at one time</li>
+                        <li>Store samples: Split across columns</li>
+                        <li>Press: Sample Columns</li>
+                    </ul>
+                    <p>Note that four columns are added called: Sample(Handed), Sample(Sex),
+                        Sample(Verbal) and Sample(Age)</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p> To open Minitab with the population data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/student_survey.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: you will likely see a dialog box appear that says "A copy of
+                        the content of this file will be added to the current project"&#8212;just
+                        click "OK."</p>
+                    <p>The dataset includes the following variables:</p>
+                    <ul>
+                        <li><em> Course:</em> natural science, social science, or business</li>
+                        <li><em>Handed:</em> right-handed or left-handed</li>
+                        <li><em>Sex:</em> female or male</li>
+                        <li><em>Verbal</em>: SAT Verbal scores up to 800</li>
+                        <li><em>Age:</em> in years</li>
+                    </ul>
+                    <p>First, we will take a simple random sample of the data. For the sake of
+                        consistency, we will make the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later.</p>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose: Calc → Random Data → Sample From Columns.</li>
+                        <li>Next to "Number of rows to sample," enter "192" to indicate the
+                            requested size of the random sample.</li>
+                        <li>Under "From columns:" enter "Handed Sex Verbal Age" (or double-click on
+                            each variable in the left panel) to indicate the variables we are
+                            sampling.</li>
+                        <li>Under "Store samples in:" type "HandedRandom SexRandom VerbalRandom
+                            AgeRandom".</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/student_survey.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+
+                    <p>The dataset includes the following variables:</p>
+                    <ul>
+                        <li><em> Course:</em> natural science, social science, or business</li>
+                        <li><em>Handed:</em> right-handed or left-handed</li>
+                        <li><em>Sex:</em> female or male</li>
+                        <li><em>Verbal</em>: SAT Verbal scores up to 800</li>
+                        <li><em>Age:</em> in years</li>
+                    </ul>
+                    <p>First, we will take a simple random sample of the data. For the sake of
+                        consistency, we will make the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later.</p>
+                    <p> To do this in Excel:</p>
+                    <ul>
+                        <li>Pick five empty columns in your Excel worksheet and label them <code
+                                style="inline">RandomNumber</code>, <code style="inline"
+                                >HandedRandom</code>, <code style="inline">SexRandom</code>, <code
+                                style="inline">VerbalRandom</code>, and <code style="inline"
+                                >AgeRandom</code>. You can widen each column if needed by dragging
+                            your mouse while your cursor is directly in the middle of two columns at
+                            the top of the Excel sheet. </li>
+                        <li>In the <code style="inline">RandomNumber</code> column, type this
+                            formula in row 2: <code style="inline">=RAND()</code>. Then copy and
+                            paste it in all cells in the column from row 3 down to row 1,130. This
+                            generates a random number in each cell of the column. You can do this by
+                            right-clicking the cell in the row 2 and selecting copy, highlighting
+                            the relevant rows and then using another right-click to select paste.
+                            This generates a random number in each cell of the column.</li>
+                        <li>Select the entire column of random numbers that you just created,
+                            right-click on the column and choose <code style="inline">Copy</code>,
+                            and then right-click on the column again and choose <code style="inline"
+                                >Paste Special</code>.</li>
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>Type Control-A twice to select all of the data in the worksheet, and
+                            then choose <code style="inline">Sort &amp; Filter → Custom Sort</code>
+                            from the <code style="inline">Editing</code> group in the <code
+                                style="inline">Home</code> tab.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">My data has
+                                headers</code> is checked and then choose <code style="inline"
+                                >RandomNumber</code> from the pull-down menu next to <code
+                                style="inline">Sort by</code>. Click <code style="inline"
+                            >OK</code>.</li>
+                        <li>Now select all of the data in rows 2-193 under the columns that contain
+                            the original variables (Handed, Sex, Verbal, Age), and copy and paste
+                            those data to the new columns you created (HandedRandom, SexRandom,
+                            VerbalRandom, and AgeRandom).</li>
+                    </ul>
+                </alternative>
+
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open the dataset, right-click <link
+                            href="../../../webcontent/excel/student_survey.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Excel.</p>
+                    <p>The dataset includes the following variables:</p>
+                    <ul>
+                        <li><em> Course:</em> natural science, social science, or business</li>
+                        <li><em>Handed:</em> right-handed or left-handed</li>
+                        <li><em>Sex:</em> female or male</li>
+                        <li><em>Verbal</em>: SAT Verbal scores up to 800</li>
+                        <li><em>Age:</em> in years</li>
+                    </ul>
+                    <p>First, we will take a simple random sample of the data. For the sake of
+                        consistency, we will make the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later.</p>
+                    <p> To do this in Excel:</p>
+                    <ul>
+                        <li>Pick five empty columns in your Excel worksheet and label them <code
+                                style="inline">RandomNumber</code>, <code style="inline"
+                                >HandedRandom</code>, <code style="inline">SexRandom</code>, <code
+                                style="inline">VerbalRandom</code>, and <code style="inline"
+                                >AgeRandom</code>.</li>
+                        <li>In the <code style="inline">RandomNumber</code> column, type this
+                            formula in row 2: <code style="inline">=RAND()</code>. Then copy and
+                            paste it in all cells in the column from row 3 down to row 1,130. This
+                            generates a random number in each cell of the column.</li>
+                        <li>Select the entire column of random numbers that you just created, and
+                            choose <code style="inline">Edit → Copy</code> and then <code
+                                style="inline">Edit → Paste Special</code> from the menu bar.</li>
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>Type Control-A to select all of the data in the worksheet, and then
+                            choose <code style="inline">Data → Sort</code> from the menu bar.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">Header
+                                row</code> is selected and then choose <code style="inline"
+                                >RandomNumber</code> under <code style="inline">Sort by</code>.
+                            Click <code style="inline">OK</code>.</li>
+                        <li>Now select all of the data in rows 2-193 under the columns that contain
+                            the original variables (Handed, Sex, Verbal, Age), and copy and paste
+                            those data to the new columns you created (HandedRandom, SexRandom,
+                            VerbalRandom, and AgeRandom).</li>
+                    </ul>
+                </alternative>-->
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Important Note!</em> TI 83/84 calculators do not have the built-in
+                        capability to create a table of counts and percentages or to construct a pie
+                        chart. Thus, for this activity, we suggest trying one of the other
+                        technologies available in OLI Statistics. <link
+                            href="http://cran.r-project.org/">R</link> is an excellent statistical
+                        package that is free to download and that is available for both Windows and
+                        Mac OS X.</p>
+                    <p>If you want to continue with the TI Calculator, you can produce a table of
+                        counts and percentages by hand using your TI to help. You can download an
+                        app that will allow you to construct a pie chart. </p>
+                    <p><em>Table of Counts and Percents</em></p>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/student_survey.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p>In order to see all of the lists in table format on your TI calculator,
+                        you'll need to create 2 extra lists called <code style="inline">VERBL</code>
+                        and <code style="inline">AGE</code>. For a reminder of how to do this, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p>The original dataset includes the following variables: </p>
+                    <ul style="none">
+                        <li>Course: natural science, social science, or business </li>
+                        <li>Handed: right-handed or left-handed </li>
+                        <li>Sex: female or male </li>
+                        <li>Verbal: SAT Verbal scores up to 800 </li>
+                        <li>Age: in years </li>
+                    </ul>
+
+                    <p>Since the maximum list size on the TI 83/84 graphing calculator is 999, it is
+                        difficult to store the entire dataset on the TI (you could do it by
+                        splitting it into a couple of lists but it’s not pretty). So, we’ve given
+                        you a simple random sample of the data and will also give you the
+                        information you need about the population to compare the samples you have in
+                        the lists to the population (which you don’t have in the lists). For the
+                        sake of consistency, we made the random sample the same size (192) as the
+                        nonrandom sample of business statistics students that will be examined
+                        later. </p>
+                    <p>On the TI calculator, the dataset is displayed in lists L1-L6, VERBL, and
+                        AGE: </p>
+                    <ul style="none">
+                        <li>L1: Random sample Handed (1 = right-handed, 2 = left-handed) </li>
+                        <li>L2: Random sample Sex (1 = female, 2 = male) </li>
+                        <li>L3: Random sample Verbal SAT </li>
+                        <li>L4: Random sample Age </li>
+                        <li>L5: Business Handed (1 = right-handed, 2 = left-handed) </li>
+                        <li>L6: Business Sex (1 = female, 2 = male) </li>
+                        <li>VERBL: Business Verbal SAT (-9999 represents missing data) </li>
+                        <li>AGE: Business Age </li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+
+
+        <p><em style="bold">Part A.</em> Now we will determine whether the four variables' behavior
+            for the random sample is comparable to their behavior for the population.</p>
+        <ul style="none">
+            <li><em style="bold">Step 1.</em> To compare the proportion of right-handed students in
+                the sample to those in the population, create 2 pie charts, or if using the R
+                statpackage 2 side-by-side bar graphs one for handedness in the population and one
+                for handedness in the random sample.</li>
+        </ul>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To create bar charts do this in R, copy the commands below:</p>
+                    <ol style="lower-latin">
+                        <li><code>random_sample_percent =
+                                100*prop.table(table(random_sample$Handed));random_sample_percent</code></li>
+                        <li>
+                            <code>pop_percent =
+                                100*prop.table(table(population$Handed));pop_percent</code></li>
+                        <li>
+                            <code>barplot(rbind(pop_percent,random_sample_percent), beside=T,
+                                col=c(0,1),legend.text=T,xlab="Handedness",ylab="Percent in
+                                Group",args.legend=list(x="topleft"))</code></li>
+                    </ol>
+
+                    <p>To create pie charts do this in R, copy the entire command below:</p>
+                    <code>random_sample_percent =
+                        100*summary(random_sample$Handed)/length(random_sample$Handed);random_sample_percent;
+                        pop_percent = 100*summary(population$Handed)/length(population
+                        $Handed);pop_percent; par(mfrow=c(1,2));
+                        pie(pop_percent,labels=paste(c("left=","right="),round(pop_percent,0),"%"),main="Population");
+                        pie(random_sample_percent,labels=paste(c("left=","right="),round(random_sample_percent,0),"%"),main="Random
+                        Sample")</code>
+                    <p><em style="bold">Note:</em> When using R and getting it to display 2 graphs
+                        at once requires the "par" command, which tells R to display the next 2
+                        graphs together. </p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Graphics – Pie Chart – with data</li>
+                        <li>Select the columns Handed and Sample(Handed)</li>
+                        <li>Press Next three times</li>
+                        <li>Columns per page: 2</li>
+                        <li>Press: Create Graph!</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose Graph → Pie Chart</li>
+                        <li>Under "Categorical variables" enter "Handed HandedRandom"</li>
+                        <li>Click on "Labels," choose the "Slice Labels" tab, and check
+                            "Percent"</li>
+                        <li>Click "OK," then click "OK" again.</li>
+                        <li/>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To do this in Excel, we must first construct a table of counts. Let's do this
+                        for the variable "Handed" first:</p>
+                    <ul>
+                        <li> Click on the cell with the variable label <code style="inline"
+                                >Handed</code>.</li>
+                        <li>Click on the <code style="inline">PivotTable</code> button in the<code
+                                style="inline">Tables</code> group in the <code style="inline"
+                                >Insert</code> tab.</li>
+                        <li> Click <code style="inline">OK</code>.</li>
+                        <li> Excel will create a new worksheet with a blank table. We have to tell
+                            Excel how to construct the table:</li>
+                        <li>You should see a window titled <code style="inline">PivotTable Field
+                                List</code> with a list of our variables. </li>
+                        <li>Check the box next to <code style="inline">Handed</code>.</li>
+                        <li>Now drag the <code style="inline">Handed</code> item to the table where
+                            it says <code style="inline">Drop Value Fields Here</code>.</li>
+                    </ul>
+
+                    <p>You should now have a table that shows the number of each type of data entry:
+                        "left," "right," and a grand total. This is the count of each of these
+                        entries. Now we can create a pie chart for the "Handed" variable:</p>
+                    <ul>
+                        <li>Click on one of the cells in your table and then click the <code
+                                style="inline">PivotChart</code> button in the <code style="inline"
+                                >Tools</code> group on the <em>Analyze</em> <code style="inline">(PivotTable
+                                Tools)</code> tab.</li>
+                        <li> In the <code style="inline">Insert Chart</code> window that appears,
+                            choose the first pie chart option and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>To label the sections of the pie, right click the pie and choose <code
+                                style="inline">Add Data Labels</code> from the pop-up menu.</li>
+                        <li>To see percentages as well as absolute values, right-click one of the
+                            data labels and choose <code style="inline">Format Data Labels</code>.
+                            Then make sure that <code style="inline">Label Options</code> is
+                            selected on the left and check the box next to <code style="inline"
+                                >Percentage</code> and click <code style="inline">Close</code>.</li>
+                    </ul>
+
+                    <p>Now repeat this process to create a table of counts and a pie chart for the
+                        variable "HandedRandom."</p>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do this in Excel, we must first construct a table of counts. Let's do this
+                        for the variable "Handed" first:</p>
+                    <ul>
+                        <li> Click on the cell with the variable label <code style="inline"
+                                >Handed</code>.</li>
+                        <li> Choose: <code style="inline">Data → Pivot Table and Pivot Chart
+                                Report</code>.</li>
+                        <li> Click <code style="inline">Finish</code>.</li>
+                        <li> Excel will create a new worksheet with a blank table. We have to tell
+                            Excel how to construct the table:</li>
+                        <li>You should see a window titled <code style="inline">PivotTable Field
+                                List</code> with a list of our variables. </li>
+                        <li>Drag the <code style="inline">Handed</code> item to the table where it
+                            says <code style="inline">Drop Column Fields Here</code>.</li>
+                        <li>Now go back to the <code style="inline">PivotTable Field List</code> and
+                            drag the <code style="inline">Handed</code> item to the table where it
+                            says <code style="inline">Drop Data Items Here</code>.</li>
+                    </ul>
+
+                    <p>You should now have a table that shows the number of each type of data entry:
+                        "left," "right," and a grand total. This is the count of each of these
+                        entries. Now we can create a pie chart for the "Handed" variable:</p>
+                    <ul>
+                        <li>Right-click one of the cells in your table and choose <code
+                                style="inline">PivotChart</code> from the pop-up menu.</li>
+                        <li>Excel will create a new chart with a bar graph. We want to change this
+                            to a pie chart:</li>
+                        <li>Right-click somewhere in the graph <code style="inline">outside of the
+                                bar</code>.</li>
+                        <li>Choose <code style="inline">Chart Type</code> from the pop-up menu.</li>
+                        <li>Now select <code style="inline">Pie</code> from the <code style="inline"
+                                >Chart type</code> list on the left and then click <code
+                                style="inline">OK</code>.</li>
+                        <li>To complete the pie chart, drag the <code style="inline">Handed</code>
+                            item from the <code style="inline">PivotTable Field List</code> to the
+                            legend where it says <code style="inline">Drop Category Fields
+                                Here</code>. Note: if you don't see the legend, the PivotTable Field
+                            list window may be covering it.</li>
+                        <li>To label the sections of the pie, right click one of the sections of the
+                            pie and choose <code style="inline">Format Data Series</code> from the
+                            pop-up menu, select the tab marked <code style="inline">Data
+                                Labels</code>, and then check the boxes next to <code style="inline"
+                                >Value</code> and <code style="inline">Percentage</code> and click
+                                <code style="inline">OK</code>.</li>
+                    </ul>
+                    <p>Now repeat this process to create a table of counts and a pie chart for the
+                        variable "HandedRandom."</p>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>First, sort the list that contains the coded data for the random sample
+                        Handed variable in ascending order:</p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/EDIT/2:SortA(</code>
+                        </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image503.jpg"/></li>
+                        <li>Before pressing <code style="inline">ENTER</code>, choose <code
+                                style="inline">L1 (2ND/1)</code> since that is the list that we want
+                            to sort. </li>
+                        <li>Press the right parenthesis, then <code style="inline">ENTER</code>. </li>
+
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image504.jpg"/></li>
+                        <li>Check out the sorted list by choosing <code style="inline"
+                                >STAT/EDIT/1:Edit...</code>. </li>
+                    </ul>
+                    <p>Count the number of values for each category in column 1 (1 = right, 2 =
+                        left).</p>
+
+                    <p> The page <activity_link idref="one_cat_var1" target="new">Module 1 One
+                            Categorical Variable (1 of 3)</activity_link> describes how to create a
+                        table with counts and percentages. </p>
+
+                    <p><em>Pie Chart</em></p>
+                    <p>While the TI Calculator does not have the built-in capability to create a pie
+                        chart, you can download an app for your calculator that will do this. It is
+                        called CellSheet App and is a free download from the <link
+                            href="http://education.ti.com/educationportal/sites/US/productDetail/us_cellsheet_83_84.html"
+                            target="new">TI website</link>. Note that some TI calculators have the
+                        CellSheet App preloaded&#8212;choose <code style="inline">APPS</code> on
+                        your TI to see if CellSheet App is already loaded on your calculator.</p>
+
+                    <p>The TI website also includes <link target="new"
+                            href="http://education.ti.com/educationportal/sites/US/nonProductSingle/download.html"
+                            >instructions for downloading apps to your TI</link> and an <link
+                            target="new"
+                            href="http://education.ti.com/educationportal/activityexchange/download_file.jsp?cid=US&amp;fileurl=Math%2FProbabilityStatistics%2F2974%2F2-02_goodtofair_MT_TG_FINAL.pdf"
+                            >example exercise</link> that shows how to construct a pie chart.</p>
+                    <p>Once you have CellSheet App installed, use it to create a pie chart on the
+                        TI:</p>
+                    <ul>
+
+                        <li>Press <code style="inline">APPS</code>.</li>
+                        <li>Choose <code>Celsheet</code>.</li>
+
+                        <li>Press any key twice to get to the spreadsheet screen. </li>
+                        <li>Press <code style="inline">GRAPH</code> to access the CellSheet
+                            menu.</li>
+                        <li>Choose <code style="inline">1:File</code></li>
+                        <li>Choose <code style="inline">3:New</code></li>
+                        <li>Name the spreadsheet and press <code style="inline">ENTER</code>.</li>
+                        <li>Press <code style="inline">ENTER</code> again.</li>
+                        <li>Now enter the labels for the pie chart in row 1, starting in column A. <ul>
+                                <li>Use the arrow keys to position the cursor in A1.</li>
+
+                                <li>Choose <code style="inline">A-LOCK (2ND/ALPHA)</code>.</li>
+                                <li>Press " (found over the + key), then continue pressing the
+                                    letters for a name for the first category (right). Press <code
+                                        style="inline">ENTER</code> when finished.</li>
+                                <li>Your cursor should be in A2.</li>
+                                <li>Enter the percentage for the first category (161/192 =
+                                    0.8385).</li>
+                                <li>Repeat for each category of the categorical variable (in this
+                                    case name = left and percentage = 31/192 = 0.1615).</li>
+
+                            </ul></li>
+
+
+                        <li>You should see: <image src="../../webcontent/image505.jpg"/></li>
+                        <li>Choose the <code style="inline">Menu</code> by pressing <code
+                                style="inline">GRAPH</code>.</li>
+                        <li>Choose <code style="inline">4:Charts</code>.</li>
+                        <li>Choose <code style="inline">7:Pie</code>.</li>
+                        <li>You should see: <image src="../../webcontent/image506.jpg"/></li>
+                        <li>For Categories: enter the range for the category labels, for example,
+                            A1:C1 <ul>
+                                <li>Press <code style="inline">ALPHA/MATH</code> for the A, then
+                                    press the number 1.</li>
+                                <li>Press <code style="inline">ALPHA/.</code> for the : (Press ALPHA
+                                    and a decimal point to get a colon).</li>
+                                <li>Press <code style="inline">ALPHA/APPS</code> for the B, then
+                                    press the number 1.</li>
+                                <li>Press <code style="inline">ENTER</code> or the down arrow to
+                                    move to the next line.</li>
+                            </ul></li>
+                        <li>For Series: enter the range of the percentages of each category, or
+                                <code style="inline">A2:C2</code>.</li>
+                        <li>Choose percent by highlighting <code style="inline">Percent</code> and
+                            pressing <code style="inline">ENTER</code>.</li>
+                        <li>Enter a <code style="inline">Title:</code>. Alpha-lock is automatically
+                            on, so press up to 10 letters for a title.</li>
+                        <li>You should see: <image src="../../webcontent/image507.jpg"/></li>
+                        <li>Choose <code style="inline">DRAW</code> and press <code style="inline"
+                                >ENTER</code>.</li>
+                        <li>Choose TRACE and use arrows to investigate the different categories for
+                            the pie chart.</li>
+                        <li>Record your data for the Handed variable in the random sample. </li>
+                        <li> Now, produce a pie chart for the Handed variable in the population
+                            using the fact that there are 979 right-handed students and 150
+                            left-handed students in the population (i.e., calculate the new
+                            percentages for Right and Left handedness). NOTE: RECORD THESE DATA for
+                            the population, since you’ll need them to compare to the sample of
+                            business students below. </li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+
+
+        <p>Consider the distributions to be comparable if the sample proportion comes within about
+            5% of the population proportion. Does it? (Use the text box in the first Learn By Doing
+            exercise below to record your answer.)</p>
+        <ul style="none">
+            <li><em style="bold">Step 2.</em> To compare the proportion of female students in the
+                sample to the proportion in the population, create 2 pie charts, one for sex in the
+                population and one for sex in the random sample. </li>
+        </ul>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Use the commands above, but replace "<code>$Handed</code>" with
+                            "<code>$Sex</code>" and "<code>left</code>" with "<code>female</code>"
+                        and "<code>right</code>" with "<code>male</code>".</p>
+
+                    <p>Below is the code with the changes we suggested above in case you want to
+                        check your command.</p>
+                    <code>random_sample_percent =
+                        100*summary(random_sample$Sex)/length(random_sample$Sex);random_sample_percent;
+                        pop_percent = 100*summary(population$Sex)/length(population
+                        $Sex);pop_percent; par(mfrow=c(1,2));
+                        pie(pop_percent,labels=paste(c("female=","male="),round(pop_percent,0),"%"),main="Population");
+                        pie(random_sample_percent,labels=paste(c("female=","male="),round(random_sample_percent,0),"%"),main="Random
+                        Sample")</code>
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Follow the same StatCrunch instructions as before, changing the variables to
+                        Sex and Sample(Sex).</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Follow the same Minitab instructions as before, changing the variables to Sex
+                        and SexRandom. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Follow the same Excel instructions as before, changing the variables to Sex
+                        and SexRandom.</p>
+                </alternative>
+                <!--     <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Follow the same Excel instructions as before, changing the variables to Sex
+                        and SexRandom.</p>
+                </alternative> -->
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Follow the same TI graphing calculator instructions as before, changing the
+                        variables to Sex (female/male) in the population and Sex (1 = female, 2 =
+                        male) in the random sample. For Sex in the population, use the fact that
+                        there are 701 females and 428 males in the population. For sex in the random
+                        sample, use the data in L2. </p>
+                    <p> NOTE: RECORD THESE DATA for the population, since you’ll need them to
+                        compare to the sample of business students below. </p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+
+
+        <p>Consider the distributions to be comparable if the sample proportion comes within about
+            5% of population proportion. Does it? (Use the text box in the first Learn By Doing
+            exercise below to record your answers.)</p>
+        <ul style="none">
+            <li><em style="bold">Step 3.</em> Create 2 descriptive statistics summary
+                tables&#8212;one for SAT Verbal score in the population and one for SAT Verbal score
+                in the sample</li>
+        </ul>
+
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this in R, copy the following commands:</p>
+                    <code> summary(population$Verbal) </code>
+                    <code> summary(random_sample$Verbal) </code>
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To ask StatCrunch for descriptive statistics for SAT Verbal scores in the
+                        population and the sample:</p>
+                    <ul>
+                        <li>Choose Stat – Summary Stats – Columns </li>
+                        <li>Select Columns: Verbal, Sample(Verbal)</li>
+                        <li>Press: Calculate</li>
+                    </ul>
+                    <p>Note that with StatCrunch we have produced all of the required information in
+                        a single table.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To ask Minitab for descriptive statistics for SAT Verbal scores in the
+                        population and the sample:</p>
+                    <ul>
+                        <li>Choose Stat → Basic Statistics → Display Descriptive Statistics.</li>
+                        <li> Under "Variables," enter "Verbal Verbalrandom".</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                    <p>You will see 2 rows of numbers in the descriptive statistics. The one labeled
+                        "Verbal" contains the values for the population, and the one labeled
+                        "VerbalRandom" contains the values for the random sample. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Let's do this for "Verbal" first:</p>
+                    <ul>
+                        <li><code style="inline">min</code></li>
+                        <li>Pick an empty cell, and type <code style="inline">min</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=min(D2:D1130)</code>.</li>
+                        <li><code style="inline">Q1</code></li>
+                        <li>In the cell under<code style="inline">min</code>, type <code
+                                style="inline">Q1</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=quartile(D2:D1130,1)</code>.</li>
+                        <li><code style="inline">Median</code></li>
+                        <li>In the cell under<code style="inline">Q1</code>, type <code
+                                style="inline">Median</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=median(D2:D1130)</code>.</li>
+                        <li><code style="inline">Mean</code></li>
+                        <li>In the cell under<code style="inline">Median</code>, type <code
+                                style="inline">Mean</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=average(D2:D1130)</code>.</li>
+                        <li><code style="inline">Q3</code></li>
+                        <li>In the cell under<code style="inline">Mean</code>, type <code
+                                style="inline">Q3</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=quartile(D2:D1130,3)</code>.</li>
+                        <li><code style="inline">Max</code></li>
+                        <li>In the cell under<code style="inline">Q3</code>, type <code
+                                style="inline">Max</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=max(D2:D1130)</code>.</li>
+                    </ul>
+
+                    <p>Now use the same instructions, but change the data range as appropriate, to
+                        create a five-number summary table for "VerbalRandom."</p>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Let's do this for "Verbal" first:</p>
+                    <ul>
+                        <li><code style="inline">min</code></li>
+                        <li>Pick an empty cell, and type <code style="inline">min</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=min(D2:D1130)</code>.</li>
+                        <li><code style="inline">Q1</code></li>
+                        <li>In the cell under<code style="inline">min</code>, type <code
+                                style="inline">Q1</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=quartile(D2:D1130,1)</code>.</li>
+                        <li><code style="inline">Median</code></li>
+                        <li>In the cell under<code style="inline">Q1</code>, type <code
+                                style="inline">Median</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=median(D2:D1130)</code>.</li>
+                        <li><code style="inline">Mean</code></li>
+                        <li>In the cell under<code style="inline">Median</code>, type <code
+                                style="inline">Mean</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=average(D2:D1130)</code>.</li>
+                        <li><code style="inline">Q3</code></li>
+                        <li>In the cell under<code style="inline">Mean</code>, type <code
+                                style="inline">Q3</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=quartile(D2:D1130,3)</code>.</li>
+                        <li><code style="inline">Max</code></li>
+                        <li>In the cell under<code style="inline">Q3</code>, type <code
+                                style="inline">Max</code>.</li>
+                        <li>Then, in the next cell to the right, type <code style="inline"
+                                >=max(D2:D1130)</code>.</li>
+                    </ul>
+
+
+                    <p>Now use the same instructions, but change the data range as appropriate, to
+                        create a five-number summary table for "VerbalRandom."</p>
+                </alternative> -->
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>NOTE: Verify that all missing values (signified by -9999) have been removed
+                        from the sample data (L3). </p>
+                    <p> We’ve calculated the population parameters: </p>
+                    <image style="block" src="../../webcontent/image508.png"/>
+                    <p>Remember that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math> represents the population mean (&#956;) when the data in the list
+                        are population data.</p>
+                    <p> </p>
+                    <p> To calculate descriptive statistics for SAT Verbal score in the sample: </p>
+                    <ul>
+
+                        <li>Choose STAT/CALC/1:1-Var Stats. Since the random sample SAT Verbal score
+                            data are in L3, enter <code>2ND/3</code> to choose L3 for
+                                <code>List</code>.</li>
+                        <li>Leave <code>FreqList</code> blank.</li>
+                        <li>Use the down arrow to highlight <code>Calculate</code> and press
+                                <code>ENTER</code>.</li>
+
+                    </ul>
+                    <!--  <image style="block" src="../../webcontent/image509.png"/>
+
+                    <p> Press ENTER. </p>-->
+
+                    <image style="block" src="../../webcontent/image510.png"/>
+
+
+                    <p> </p>
+                    <p> </p>
+                    <p> Note: Once the missing values are deleted, we only have information on SAT
+                        Verbal Score for 998 individuals in the population (out of 1,129 total
+                        individuals). </p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+
+
+        <p>Since SAT scores tend to follow a normal (symmetric) distribution, you can focus on means
+            to make a comparison. Consider the distributions to be comparable if the sample mean SAT
+            Verbal score comes within about 10 points of the population mean. Does it? (Use the text
+            box in the first Learn By Doing exercise below to record your answers.)</p>
+        <ul style="none">
+            <li><em style="bold">Step 4.</em> Create 2 more descriptive statistics summary
+                tables&#8212;one for age in the population and one for age in the sample.</li>
+        </ul>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this in R, just substitute "<code>$Age</code>" for
+                            "<code>$Verbal</code>" in the 2 commands above.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To ask StatCrunch for descriptive statistics for age in the population and
+                        the sample, follow the same StatCrunch instructions as above, changing the
+                        variables to: Age and Sample(Age)</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To ask Minitab for descriptive statistics for age in the population and the
+                        sample, follow the same Minitab instructions as above, changing the
+                        variables to: Age Agerandom.</p>
+                    <p> You will see 2 rows of numbers in the descriptive statistics. The one
+                        labeled "Age" contains the values for the population, and the one labeled
+                        "AgeRandom" contains the values for the random sample. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To do this in Excel, use the instructions above, but with the variables "Age"
+                        and "AgeRandom."</p>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do this in Excel, use the instructions above, but with the variables "Age"
+                        and "AgeRandom."</p>
+                </alternative>-->
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <image style="block" src="../../webcontent/image511.png"/>
+                    <p>To calculate descriptive statistics for age in the sample, follow the same TI
+                        instructions as above, changing the list to L4 (age in the random
+                        sample).</p>
+                    <image style="block" src="../../webcontent/image512.png"/>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+        <p>Since Age tends to follow a right-skewed distribution, you should focus on medians to
+            make a comparison. Consider the distributions to be comparable if the sample median age
+            comes within about .5 years of the population median. Does it?</p>
+        <wb:inline idref="u2_m1_sampling2_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="386">
+<param name="question_file">../../../webcontent/flash/_u3_m1_lbdtutor1a.xml</param>
+<param name="problem_name">_u3_m1_lbdtutor1a</param>
+</flash>-->
+        <p><em style="bold">Part B.</em> Intuit whether the distributions of each of the four
+            variables in the (nonrandom) sample of business students would be roughly the same as
+            those for the population, or whether there is a reason to expect any of them to be
+            biased.</p>
+        <wb:inline idref="u2_m1_sampling2_lbd_tutor2" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="437">
+<param name="question_file">../../../webcontent/flash/_u3_m1_lbdtutor1b.xml</param>
+<param name="problem_name">_u3_m1_lbdtutor1b</param>
+</flash>-->
+        <p><em style="bold">Part C.</em> Check our intuition by comparing the distributions of each
+            of the four variables for the sample of business students with those for the population,
+            and determine whether they are roughly the same or if the sample values for any of the
+            variables appear to be biased.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this with R, execute the following command in R:</p>
+                    <code> business = population[population$Course=="Business",];business </code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do this in StatCrunch</p>
+                    <ul>
+                        <li>Data – Sort columns</li>
+                        <li>Select: Handed, Sex, Verbal, Age</li>
+                        <li> Sort by: Course</li>
+                        <li>Press: Sort Columns</li>
+                    </ul>
+                    <p>Note that after sorting all of the Business students are now listed first.
+                        The corresponding variables are now called Sort(Handed), Sort(Sex),
+                        Sort(Verbal) and Sort(Age).</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do this in Minitab,</p>
+                    <ul>
+                        <li>Choose Data → Unstack Columns.</li>
+                        <li>Next to "Unstack the data in:" enter: "Handed Sex Verbal Age."</li>
+                        <li>Next to "Using subscripts in:" type "Course."</li>
+                        <li>Choose the option: "After last column in use."</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                    <p>The responses for the (nonrandom) sample of students in the business
+                        statistics course will now appear in the columns "Handed_Business,"
+                        "Sex_Business," "Verbal_Business" and "Age_Business" at the end of the
+                        worksheet. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To do this in Excel, we'll first sort the original data using the variable
+                        "Course," and then copy the data for "Business" into four new columns:</p>
+                    <ul>
+                        <li>Type Control-A twice to select all of the data in the worksheet, and
+                            then choose <code style="inline">Sort &amp; Filter → Custom Sort</code>
+                            from the <code style="inline">Editing</code> group in the <code
+                                style="inline">Home</code> tab.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">My data has
+                                headers</code> is checked and then choose <code style="inline"
+                                >Course</code> from the pull-down menu next to <code style="inline"
+                                >Sort by</code>. Click <code style="inline">OK</code>.</li>
+                        <li>Now pick four empty columns and label them <code style="inline"
+                                >Handed_Business</code>, <code style="inline">Sex_Business</code>,
+                                <code style="inline">Verbal_Business</code>, and <code
+                                style="inline">Age_Business</code></li>
+                        <li>Finally, copy the data for our four original variables (<code
+                                style="inline">Handed</code>, <code style="inline">Sex</code>, <code
+                                style="inline">Verbal</code>, and <code style="inline">Age</code>)
+                            from the rows where the course is <code style="inline">Business</code>
+                            and paste them in the new columns.</li>
+                    </ul>
+
+                </alternative>
+                <!--           <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do this in Excel, we'll first sort the original data using the variable
+                        "Course," and then copy the data for "Business" into four new columns:</p>
+                    <ul>
+                        <li>Type Control-A to select all of the data in the worksheet, and then
+                            choose <code style="inline">Data → Sort</code> from the menu bar.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">Header
+                                row</code> is selected and then choose <code style="inline"
+                                >Course</code> under <code style="inline">Sort by</code>. Click
+                                <code style="inline">OK</code>.</li>
+                        <li>Now pick four empty columns and label them <code style="inline"
+                                >Handed_Business</code>, <code style="inline">Sex_Business</code>,
+                                <code style="inline">Verbal_Business</code>, and <code
+                                style="inline">Age_Business</code>.</li>
+                        <li>Finally, copy the data for our four original variables (<code
+                                style="inline">Handed</code>, <code style="inline">Sex</code>, <code
+                                style="inline">Verbal</code>, and <code style="inline">Age</code>)
+                            from the rows where the course is <code style="inline">Business</code>
+                            and paste them in the new columns.</li>
+                    </ul>
+                </alternative>-->
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>The responses for the (nonrandom) sample of students in the business
+                        statistics course are stored in L5 (Handed), L6 (Sex), VERBL (SAT Verbal
+                        score), and AGE (Age) lists.</p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+
+        <p>Next, we explore whether the four variables' behavior for the (nonrandom) sample of
+            business statistics students is comparable to their behavior for the population:</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To do this in R, you will just use the commands from above in parts A and B,
+                        but replace the variable "<code>random_sample</code>" with
+                            "<code>business</code>". In the pie chart commands, replace
+                            "<code>Random Sample</code>" with "<code>Business Students</code>".</p>
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students.</p>
+                    <ul style="none">
+                        <li>Consider the distributions to be comparable if the sample proportion
+                            comes within about 5% of the population proportion. Does it? (Use the
+                            text box in the Learn By Doing exercise below to record your
+                            answers.)</li>
+                    </ul>
+
+
+                    <p><em style="bold">Step 2.</em> To compare the proportion of female students in
+                        the sample to the proportion in the population, create 2 pie charts (using
+                        the instructions above), one for sex in the population and one for sex in
+                        the sample of business statistics students. </p>
+
+                    <ul style="none">
+                        <li>Consider the distributions to be comparable if the sample proportion
+                            comes within about 5% of the population proportion. Does it? (Use the
+                            text box in the Learn By Doing exercise below to record your
+                            answers.)</li>
+                    </ul>
+
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students.</p>
+                    <ul style="none">
+                        <li>Since SAT scores tend to follow a normal (symmetric) distribution, you
+                            can focus on means to make a comparison. Consider the distributions to
+                            be comparable if the sample mean SAT Verbal score comes within about 10
+                            points of the population mean. Does it? (Use the text box in the Learn
+                            By Doing exercise below to record your answers.)</li>
+                    </ul>
+
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for age in the population and one
+                        for age in the sample of business statistics students.</p>
+
+                    <ul style="none">
+                        <li>Since age tends to follow a right-skewed distribution, you should focus
+                            on medians to make a comparison. Consider the distributions to be
+                            comparable if the sample median age comes within about .5 years of the
+                            population median. Does it? (Use the text box in the Learn By Doing
+                            exercise below to record your answers.)</li>
+                    </ul>
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students.</p>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Graphics – Pie Chart – with data</li>
+                        <li>Select the column Handed</li>
+                        <li>Press Create Graph!</li>
+                    </ul>
+                    <p>Record results and then repeat as follows:</p>
+                    <ul>
+                        <li>Choose: Graphics – Pie Chart – with data</li>
+                        <li>Select the column Sort(Handed)</li>
+                        <li>Where: row &#60; 193 </li>
+                        <li>Press Create Graph!</li>
+                    </ul>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+
+
+                    <p><em style="bold">Step 2.</em> To compare the proportion of female students in
+                        the sample to the proportion in the population, create 2 pie charts (using
+                        the instructions above), one for sex in the population and one for sex in
+                        the sample of business statistics students. </p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students.</p>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Stat - Summary Stats - Columns</li>
+                        <li>Select the column Verbal</li>
+                        <li>Press Calculate</li>
+                    </ul>
+                    <p>Record results and then repeat as follows:</p>
+                    <ul>
+                        <li>Choose: Stat - Summary Stats - Columns</li>
+                        <li>Select the column Sort(Verbal)</li>
+                        <li>Where: row &#60; 193 </li>
+                        <li>Press Calculate</li>
+                    </ul>
+                    <p> Since SAT scores tend to follow a normal (symmetric) distribution, you can
+                        focus on means to make a comparison. Consider the distributions to be
+                        comparable if the sample mean SAT Verbal score comes within about 10 points
+                        of the population mean. Does it? (Use the text box in the Learn By Doing
+                        exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for age in the population and one
+                        for age in the sample of business statistics students.</p>
+                    <p>Since age tends to follow a right-skewed distribution, you should focus on
+                        medians to make a comparison. Consider the distributions to be comparable if
+                        the sample median age comes within about .5 years of the population median.
+                        Does it? (Use the text box in the Learn By Doing exercise below to record
+                        your answers.)</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose Graph → Pie Chart.</li>
+                        <li>Under "Categorical variables" enter: Handed 'Handed_Business'.</li>
+                        <li>Click on "Labels", choose the "Slice Labels" tab, and check
+                            "Percent."</li>
+                        <li>>Click OK.</li>
+
+                        <li>Click OK again.</li>
+                    </ul>
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students:</p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+
+
+                    <p><em style="bold">Step 2.</em> To compare the proportion of female students in
+                        the sample to the proportion in the population, create 2 pie charts (using
+                        the instructions above), one for sex in the population and one for sex in
+                        the sample of business statistics students. </p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students.</p>
+                    <p> Since SAT scores tend to follow a normal (symmetric) distribution, you can
+                        focus on means to make a comparison. Consider the distributions to be
+                        comparable if the sample mean SAT Verbal score comes within about 10 points
+                        of the population mean. Does it? (Use the text box in the Learn By Doing
+                        exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for age in the population and one
+                        for age in the sample of business statistics students.</p>
+                    <p>Since age tends to follow a right-skewed distribution, you should focus on
+                        medians to make a comparison. Consider the distributions to be comparable if
+                        the sample median age comes within about .5 years of the population median.
+                        Does it? (Use the text box in the Learn By Doing exercise below to record
+                        your answers.)</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Use the above instructions for pie charts to do this in Excel.</p>
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students:</p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+
+
+                    <p><em style="bold">Step 2.</em> To compare the proportion of female students in
+                        the sample to the proportion in the population, create 2 pie charts (using
+                        the instructions above), one for sex in the population and one for sex in
+                        the sample of business statistics students. </p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students.</p>
+                    <p> Since SAT scores tend to follow a normal (symmetric) distribution, you can
+                        focus on means to make a comparison. Consider the distributions to be
+                        comparable if the sample mean SAT Verbal score comes within about 10 points
+                        of the population mean. Does it? (Use the text box in the Learn By Doing
+                        exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for age in the population and one
+                        for age in the sample of business statistics students.</p>
+                    <p>Since age tends to follow a right-skewed distribution, you should focus on
+                        medians to make a comparison. Consider the distributions to be comparable if
+                        the sample median age comes within about .5 years of the population median.
+                        Does it? (Use the text box in the Learn By Doing exercise below to record
+                        your answers.)</p>
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Use the above instructions for pie charts to do this in Excel.</p>
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students:</p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+
+
+                    <p><em style="bold"><em style="bold">Step 2.</em></em> To compare the proportion
+                        of female students in the sample to the proportion in the population, create
+                        2 pie charts (using the instructions above), one for sex in the population
+                        and one for sex in the sample of business statistics students. </p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students.</p>
+                    <p> Since SAT scores tend to follow a normal (symmetric) distribution, you can
+                        focus on means to make a comparison. Consider the distributions to be
+                        comparable if the sample mean SAT Verbal score comes within about 10 points
+                        of the population mean. Does it? (Use the text box in the Learn By Doing
+                        exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for age in the population and one
+                        for age in the sample of business statistics students.</p>
+                    <p>Since age tends to follow a right-skewed distribution, you should focus on
+                        medians to make a comparison. Consider the distributions to be comparable if
+                        the sample median age comes within about .5 years of the population median.
+                        Does it? (Use the text box in the Learn By Doing exercise below to record
+                        your answers.)</p>
+                </alternative> -->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+
+                    <p><em style="bold">Step 1.</em> To compare the proportion of right-handed
+                        students in the sample to those in the population, create 2 pie charts, one
+                        for handedness in the population and one for handedness in the sample of
+                        business statistics students (L5):</p>
+                    <p>You can produce a table of counts or percentages by hand for the sample of
+                        business students' handedness data (L5) using your TI to help. Follow the
+                        instructions above, adjusting accordingly.</p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+
+
+                    <p><em style="bold"><em style="bold">Step 2.</em></em> To compare the proportion
+                        of female students in the sample to the proportion in the population, create
+                        a pie chart (using the instructions above), for sex in the sample of
+                        business statistics students (L6). </p>
+                    <p>Compare this to the data/pie chart that you recorded above for the age
+                        variable in the population. Remember that there are 701 females and 428
+                        males in the population. </p>
+                    <p> Consider the distributions to be comparable if the sample proportion comes
+                        within about 5% of the population proportion. Does it? (Use the text box in
+                        the Learn By Doing exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 3.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)&#8212;one for SAT Verbal score in the
+                        population and one for SAT Verbal score in the sample of business statistics
+                        students (list VERBL).</p>
+                    <p>NOTE: You must delete all missing values (-9999) in list VERBL before
+                        calculating descriptive statistics. Remember: To get a named list, use LIST
+                        (2ND/STAT). Choose NAMES. Then arrow down to find VERBL. </p>
+                    <image style="block" src="../../webcontent/image513.png"/>
+                    <p>Note: Once the missing values are deleted, we only have information on SAT
+                        Verbal scores for 998 individuals in the population (out of 1,129 total
+                        individuals).</p>
+                    <p> Since SAT scores tend to follow a normal (symmetric) distribution, you can
+                        focus on means to make a comparison. Consider the distributions to be
+                        comparable if the sample mean SAT Verbal Score comes within about 10 points
+                        of the population mean. Does it? (Use the text box in the Learn By Doing
+                        exercise below to record your answers.)</p>
+                    <p><em style="bold">Step 4.</em> Create 2 tables of descriptive statistics
+                        (using the instructions above)one for age in the population and one for age
+                        in the sample of business statistics students (list AGE).</p>
+                    <image style="block" src="../../webcontent/image514.png"/>
+                    <image style="block" src="../../webcontent/image515.png"/>
+                    <p>Since age tends to follow a right-skewed distribution, you should focus on
+                        medians to make a comparison. Consider the distributions to be comparable if
+                        the sample median age comes within about .5 years of the population median.
+                        Does it? (Use the text box in the Learn By Doing exercise below to record
+                        your answers.)</p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+
+
+        <wb:inline idref="u2_m1_sampling2_lbd_tutor3" purpose="learnbydoing"/>
+        <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="386">
+<param name="question_file">../../../webcontent/flash/_u3_m1_lbdtutor1c.xml</param>
+<param name="problem_name">_u3_m1_lbdtutor1c</param>
+</flash>-->
+
+        <!--<pullout type="research" title="My Response" orient="horizontal">
+        <material><image style="block" src="../../../../webcontent/icon_myresponse.gif"><popout enable="false"></popout></image></material>
+        <material>
+			<p>After completing this Learn by Doing, please help us evaluate the effectiveness of this activity.</p>
+			
+			<p>Your response will not be graded, but will be available for your instructor to read. Answering these questions may also shape the discussions in class.</p>
+            
+	        <p><activity_link idref="_u3_m1_lbd1_feedback" purpose="myresponse"><em>My Response</em></activity_link></p>
+        </material>
+    </pullout>-->
+    </body>
+</workbook_page>

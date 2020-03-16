@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_random_variables1">
+<head>
+<title>Random Variables (1 of 2)</title>
+    <objref idref="distinguish_discrete_continuous"/>
+</head>
+<body>
+   
+<p>In the previous two modules we've learned principles and tools that help us find probabilities of
+            events in general. Now that we've become proficient at doing that, we<?oxy_insert_start author="mmyers" timestamp="20101121T085313-0500"?>'ll<?oxy_insert_end?>
+            <?oxy_delete author="mmyers" timestamp="20101121T085317-0500" content="move on to "?>talk
+            about random variables. Just like any other variable, random variables can take on
+            multiple values. What differentiates random variables from other variables is that the
+            values for these variables are determined by a random trial, random sample, or
+            simulation. The probabilities for the values can be determined by theoretical or
+            observational means. Such probabilities play a vital role in the theory behind
+            statistical inference, our ultimate goal in this course.</p>
+<section>
+<title>Introduction</title>
+<body>
+<p>We first discussed variables in the Exploratory Data Analysis portion of the course. A variable
+                    is a characteristic of an individual. We also made an important distinction
+                    between <em>categorical variables</em>, whose values are groups or categories
+                    (and
+                    <?oxy_delete author="mmyers" timestamp="20101121T085426-0500" content="place "?>an
+                    individual
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T085431-0500"?>can be
+                    placed <?oxy_insert_end?>into one of them), and <em>quantitative variables</em>,
+                    which have numerical values for which arithmetic operations make sense. In the
+                    previous two modules, we focused mostly on events which arise when there is a
+                    categorical variable in the background: blood type, pierced ears
+                    (yes<?oxy_insert_start author="mmyers" timestamp="20101121T085512-0500"?>/<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085509-0500" content=" or "?>no),
+                    gender, on time delivery (yes/no), side effect (yes/no), etc. Now we will begin
+                    to consider quantitative variables that arise when a random experiment is
+                    performed. We will need to define this new type of variable.</p>
+</body>
+</section>
+<!--:WARNING: The syntax of the definition element has changed.-->
+<!--Please verify that the translated output below is correct.-->
+<definition>
+<term>random variable</term>
+<meaning>
+<material><p>A <em>random variable</em> assigns a unique numerical value to the outcome of a random experiment.</p>
+</material></meaning>
+</definition>
+    <p>A random variable can be thought of as a function that associates exactly one of the possible numerical outcomes
+     to each trial of a random experiment.  However, that number can be the same for many of the trials.</p>
+<p>Before we go any further, here are some simple examples:</p>
+<example><title>Theoretical</title>
+
+<p>Consider the random experiment of
+                <?oxy_insert_start author="mmyers" timestamp="20101121T085628-0500"?>flipp<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085626-0500" content="toss"?>ing
+                a coin twice. The sample space of possible outcomes is S = { HH, HT, TH, TT }.</p>
+<p>Now, let's <em>define the variable X to be the number of tails</em> that the random experiment will produce.</p>
+    <ul style="none"><li>If the outcome is HH, we have no tails, so the value for X is 0.</li>
+        <li>If the outcome is HT, we got one tail, so the value for X is 1.</li>
+        <li>If the outcome is TH, we again got one tail, so the value for X is 1.</li>
+        <li>Lastly, if the outcome is TT, we got two tails, so the value for X is 2.</li></ul>
+    <p>As the definition suggests, X is a quantitative variable
+                <?oxy_insert_start author="mmyers" timestamp="20101121T085734-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085733-0500" content="which"?>
+                takes the possible values of 0, 1, or 2.</p>
+    <p>It is random
+                <?oxy_insert_start author="mmyers" timestamp="20101121T085749-0500"?>because<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085752-0500" content="since"?>
+                we do not know which of the three values the variable will eventually take. We can
+                ask questions like:</p>
+<ul><li><p>What is the probability that X will be 2? In other words, what is the probability of getting
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T085836-0500"?>2<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085834-0500" content="two"?>
+                        tails?</p></li>
+<li><p>What is the probability that X will be at least 1? In other words, what is the probability of
+                        getting at least
+                        <?oxy_insert_start author="mmyers" timestamp="20101121T085842-0500"?>1<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085840-0500" content="one"?>
+                        tail?</p></li>
+</ul>
+<p>As you can see, random variables are not really a new thing, but just a different
+                <?oxy_insert_start author="mmyers" timestamp="20101121T085857-0500"?>way to look at
+                the same
+                problem<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T085854-0500" content="angle"?>.</p>
+</example>
+    <p>Note that if we had tossed a coin three times, the possible values for the number of tails
+            would be 0, 1, 2, or 3. In general, if we toss a coin "n" times, the possible number of
+            tails would be 0, 1, 2, 3,
+            .<?oxy_delete author="mmyers" timestamp="20101121T085942-0500" content=" "?>.<?oxy_delete author="mmyers" timestamp="20101121T085944-0500" content=" "?>.
+            , <?oxy_insert_start author="mmyers" timestamp="20101121T090002-0500"?>or
+            <?oxy_insert_end?>n.</p>
+
+    <example>
+            <title>Observational</title>
+            <p>Consider getting data from a random sample on the number of ears in which a person
+                wears one or more earrings.</p>
+            <p>We <em>define the variable X to be the number of ears</em>
+                <?oxy_insert_start author="mmyers" timestamp="20101121T090029-0500"?>i<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T090028-0500" content="o"?>n
+                which a randomly selected person wears an earring.</p>
+            <p>If the selected person does not wear any earrings, then X = 0.</p>
+            <p>If the selected person wears earrings in either the left or the right ear, then X =
+                1.</p>
+            <p>If the selected person wears earrings in both ears, then X = 2.</p>
+            <p>As the definition suggests, X is a quantitative variable which takes the possible
+                values of 0, 1, or 2. We can ask questions like: </p>
+            <ul>
+                <li>
+                    <p>What is the probability that a randomly selected person will have earrings in
+                        both ears?</p>
+                </li>
+                <li>
+                    <p>What is the probability that a randomly selected person will not be wearing
+                        any earrings in either ear?</p>
+                </li>
+            </ul>
+        </example>
+    <pullout type="note"><p>We identified the first example as
+                    <em><?oxy_insert_start author="mmyers" timestamp="20101121T090300-0500"?>t<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T090300-0500" content="T"?>heoretical</em>
+                and the second as
+                    <em><?oxy_insert_start author="mmyers" timestamp="20101121T090304-0500"?>o<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T090303-0500" content="O"?>bservational</em>.
+                Let's discuss the distinction.</p>
+    <p>To answer probability questions about a theoretical
+                situation<?oxy_insert_start author="mmyers" timestamp="20101121T090133-0500"?>,<?oxy_insert_end?>
+                we only need the principles of probability. However, if we have an observational
+                situation, the only way to answer probability questions is to use the relative
+                frequency we obtain from a random sample.</p></pullout>
+    <p>Here is a different type of example:</p>
+    <example><title>Lightweight Boxer</title>
+<p>Assume we choose a lightweight male boxer at random and record his exact weight. According to the boxing rules, a lightweight male boxer must weigh between 130 and 135 pounds, so the sample space here is S = { All the numbers in the interval 130-135 }. (Note that we can't list all the possible outcomes here.)</p>
+<p>We'll <em>define X to be the weight of the boxer</em> (again, as the definition suggests, X is a
+                quantitative
+                variable<?oxy_delete author="mmyers" timestamp="20101121T090340-0500" content=","?>
+                whose value is the result of our random experiment). Here X can take any value
+                between 130 and 135. We can ask questions like:</p>
+<ul><li><p>What is the probability that X will be more than 132? In other words, what is the probability that the boxer will weigh more than 132 pounds?</p></li>
+<li><p>What is the probability that X will be between 131 and 133? In other words, what is the probability that the boxer weighs between 131 and 133 pounds?</p></li></ul>
+</example>
+
+
+<p>What is the difference between the random variables in these examples?  Let's see:</p>
+<ul><li><p>They all arise from a random experiment (tossing a coin twice, choosing a person at random, choosing a lightweight boxer at random).</p></li>
+<li><p>They are all quantitative (number of tails, number of ears, weight).</p></li></ul>
+<p>Where they differ is in the type of possible values they can take: In the first two examples, X
+            has three distinct possible values: 0, 1, and 2. You can list them. In contrast, in the
+            third example, X takes any value in the interval
+            <?oxy_delete author="mmyers" timestamp="20101121T090448-0500" content="["?>130-135<?oxy_delete author="mmyers" timestamp="20101121T090451-0500" content="]"?>,
+            and thus the possible values of X cover an infinite range of possibilities, and cannot
+            be listed.</p>
+<p>A random variable like the one in the first two examples, whose possible values are a list of distinct values, is called a <em>discrete random variable</em>.  
+    A random variable like the one in the third example, that can take any value in an interval, is called a <em>continuous random variable</em>.</p>
+<p>Just as the distinction between
+            <?oxy_delete author="mmyers" timestamp="20101121T090523-0500" content="a "?>categorical
+            and quantitative variables was important in
+            E<?oxy_insert_start author="mmyers" timestamp="20101121T090528-0500"?>xploratory
+            <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101121T090531-0500"?>ata
+            <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101121T090534-0500"?>nalysis<?oxy_insert_end?>,
+            the distinction between
+            <?oxy_delete author="mmyers" timestamp="20101121T090543-0500" content="these "?>discrete
+            and continuous random variables is important here, as each one gets a different
+            treatment when it comes to calculating probabilities and other quantities of
+            interest.</p>
+
+
+</body>
+</workbook_page>

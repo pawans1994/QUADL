@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="select_infer_test_identify_infer_regres_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_select_infer_test_identify_infer_regres">
+        <body>
+            <p>We suspect that automobile insurance premiums (in dollars) may be steadily decreasing
+                with the driver's driving experience (in years), so we choose a random sample of
+                drivers who have similar automobile insurance coverage and collect data about their
+                ages and insurance premiums.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if insurance premiums are decreasing with the driver's driving experience?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the <em style="italic">same</em> group of subjects in a before and after situation. Notice that
+                    you are measuring two quantitative variables from each subject in order to see
+                    if there is a trend between them.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A two-sample t-test is used to test mean differences on <em style="italic">one quantitative variable</em> for two random samples. Notice
+                    that you are measuring two quantitative variables from each subject in order to
+                    see if there is a trend between them.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used for comparing the means of <em style="italic">more than two</em> groups. Notice that you are measuring two quantitative
+                    variables from each subject in order to see if there is a trend between
+                    them.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two <em style="italic">categorical</em>
+                    variables. Notice that you are measuring two quantitative variables from each
+                    subject in order to see if there is a trend between them.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. We are examining the relationship between <em style="italic">two
+                        quantitative variables</em> (case Q→Q)—premium (in dollars) and driving
+                    experience (in years)—and therefore inference for regression is
+                    appropriate.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_select_infer_test_identify_infer_regres">
+        <body>
+            <p>We want to explore the relationship between the prices of diamond rings and the
+                weights of their diamond stones.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if there is a relationship between the price and weight of diamond rings?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the same group of
+                    subjects in a before and after situation. Note that we are not comparing two
+                    groups here but rather examining the relationship between two quantitative
+                    variables.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A two-sample t-test is used to test mean differences on one
+                    quantitative variable for two random samples. Note that we are not comparing two
+                    groups here but rather examining the relationship between two quantitative
+                    variables.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used for comparing the means of more than two groups.
+                    Note that we are not comparing several groups here but rather exploring the
+                    relationship between two quantitative variables.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall that the chi-squared test is used to explore the
+                    relationship between two categorical variables. Note that price and weight are
+                    two quantitative variables.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Regression is used to examine the relationship between two
+                    quantitative variables such as price and weight.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_select_infer_test_identify_infer_regres">
+        <body>
+            <p>Suppose an economist wishes to determine the relationship between the age and price
+                of houses. A study yields the following data:</p>
+            <image style="block" src="../webcontent/assessment9q6image1.gif" />
+            <p>If column 1 is the age of the home in years, and column 2 is the price of the home
+                (in hundreds of thousands of dollars), which of the following is the appropriate inference
+                method to analyze these data?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two independent samples</choice>
+            <choice value="C">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Matched pairs is used to test the same sample in a before and
+                    after situation. Notice that each subject is measured once for age and a second
+                    time for price, and that you want to see if there is a trend between the age of
+                    a house and its price.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Two independent samples is used to test mean differences on one
+                    quantitative variable for two random samples. Notice that each subject is
+                    measured once for age and a second time for price and that you want to see if
+                    there is a trend between the age of a house and its price.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We are examining the relationship between two quantitative
+                    variables: the age of the house and its price. Therefore, inference for
+                    regression is appropriate.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_select_infer_test_identify_infer_regres">
+        <body>
+            <p>A researcher wants to explore the relationship between the following two variables,
+                Weight 1 and Weight 2.</p>
+            <image style="block" src="../webcontent/image503.png" />
+            <p>In preparing for a balsa wood bridge challenge, students weighed (in g) a random
+                sample of five balsa wood designs and recorded these data as Weight 1. They also
+                recorded the maximum weight (in kg) that the bridge could support. If the students
+                want to know if there is an association between the weight of the bridge (in g) and
+                the maximum weight supported (in kg), which of the following is the appropriate
+                inference method to analyze these data?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two independent samples</choice>
+            <choice value="C">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Matched pairs is used to test the same sample in a before and
+                    after situation. Note that in this scenario we're exploring the relationship
+                    between two quantitative variables, the weight of the balsa wood bridge and the
+                    weight that the bridge supported.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Two independent samples is used to test mean differences on one
+                    quantitative variable for two random samples. Note that we're not comparing two
+                    groups here, but rather exploring the relationship between two quantitative
+                    variables, weight of the balsa wood and the weight that the bridge
+                    supported.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The students want to know if there is an association between two
+                    quantitative variables, the weight of the balsa wood and the weight that the
+                    bridge supported.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q5_select_infer_test_identify_infer_regres">
+        <body>
+            <p>A chemistry professor suspects that there is a relationship between the number of
+                classes a student misses and that student’s score on the final exam (from 0 to
+                100%). The professor chooses a random sample of students in Introduction to
+                Chemistry and collects data about each student’s final exam score and number of
+                missed days of class.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if there is a relationship between number of missed classes and final exam
+                scores?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the same group of
+                    subjects in a before and after situation. Notice that you are measuring two
+                    quantitative variables from each subject in order to see if there is a trend
+                    between them. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A two-sample t-test is used to test mean differences on one
+                    quantitative variable for two random samples. Notice that you are measuring two
+                    quantitative variables from each subject in order to see if there is a trend
+                    between them.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used for comparing the means of more than two groups.
+                    Notice that you are measuring two quantitative variables from each subject in
+                    order to see if there is a trend between them.</feedback>
+
+            </response>
+
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two categorical variables. Notice that you are
+                    measuring two quantitative variables from each subject in order to see if there
+                    is a trend between them.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. We are examining the relationship between two quantitative
+                    variables (case Q→Q): number of absences and exam score. Therefore, inference
+                    for regression is appropriate.</feedback>
+
+            </response>
+
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q6_select_infer_test_identify_infer_regres">
+        <body>
+            <p>We want to explore the difference between salary (in dollars) and the number of years
+                of job experience that an employee has.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if there is a relationship between salary and years of experience?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the same group of
+                    subjects in a before and after situation. Note that we are not comparing two
+                    groups here, but rather examining the relationship between two quantitative
+                    variables.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A two-sample t-test is used to test mean differences on one
+                    quantitative variable for two random samples. Note that we are not comparing two
+                    groups here, but rather examining the relationship between two quantitative
+                    variables. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback> Incorrect. ANOVA is used for comparing the means of more than two groups.
+                    Note that we are not comparing several groups here, but rather exploring the
+                    relationship between two quantitative variables. </feedback>
+
+            </response>
+
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall that the chi-squared test is used to explore the
+                    relationship between two categorical variables. Note that salary (in dollars)
+                    and years of experience are two quantitative variables.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Regression is used to examine the relationship between two
+                    quantitative variables such as salary and years of experience.</feedback>
+
+            </response>
+        </part>
+    </multiple_choice>
+
+    <!-- This is one of the repeats -->
+    <multiple_choice id="q7_select_infer_test_identify_infer_regres">
+        <body>
+            <p>Suppose a classroom teacher wants to measure whether offering candy as a reward will
+                increase the number of times that a student raises his/her hand to answer a question
+                in class. A study yields the following data.</p>
+            <table>
+
+
+                <tr>
+                    <th>Row</th>
+                    <th>C1</th>
+                    <th>C2</th>
+                </tr>
+
+
+                <tr>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>15</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>7</td>
+                </tr>
+            </table>
+            <p>If column 1 is the number of candy rewards given for answering questions during a
+                lesson, and column 2 is the number of students who raise their hand to answer
+                questions during a lesson, which of the following is the appropriate inference
+                method to analyze these data? </p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two independent samples</choice>
+            <choice value="C">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Matched pairs is used to test the <em style="italic">same</em>
+                    sample in a before and after situation. Notice that each lesson is measured once
+                    for number of rewards given and a second time for number of students who raised
+                    their hand, and that you want to see if there is a trend between the number of
+                    rewards and number of students who raised their hands.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Two independent samples is used to test mean differences on one
+                    quantitative variable for two random samples. Notice that each lesson is
+                    measured once for number of rewards given and a second time for number of
+                    students who raised their hand, and that you want to see if there is a trend
+                    between the number of rewards and number of students who raised their hand.
+                </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We are examining the relationship between two quantitative
+                    variables: the number of candy rewards and the number of students raising their
+                    hands. Therefore, inference for regression is appropriate. </feedback>
+
+            </response>
+
+        </part>
+    </multiple_choice>
+    <!-- This is one of the repeats -->
+    <multiple_choice id="q8_select_infer_test_identify_infer_regres">
+        <body>
+            <p>A researcher wants to explore the relationship between two variables: Time 1 and Time
+                2.</p>
+            <table>
+
+
+                <tr>
+                    <th>Time 1</th>
+                    <th>Time 2</th>
+                </tr>
+
+
+                <tr>
+                    <td>421</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>390</td>
+                    <td>383</td>
+                </tr>
+                <tr>
+                    <td>459</td>
+                    <td>436</td>
+                </tr>
+                <tr>
+                    <td>384</td>
+                    <td>362</td>
+                </tr>
+                <tr>
+                    <td>403</td>
+                    <td>392</td>
+                </tr>
+            </table>
+            <p>A group of student athletes was training for an obstacle course event by practicing a
+                variety of exercises. Their coach wanted to know if the exercises were in fact
+                related to their time to complete the obstacle course. Time 1 was each athlete’s
+                time (in seconds) for 20 repetitions of shuttle runs (running back and forth between
+                2 cones placed 25 meters apart) during training. Time 2 was the same athlete’s time
+                (in seconds) to complete the obstacle course during the competition. If the coach
+                wants to see if there was an association between time to complete 20 shuttle runs
+                during training (in seconds) and the time to complete the obstacle course during
+                competition (in seconds), which of the following is the appropriate inference method
+                to analyze these data?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs</choice>
+            <choice value="B">Two independent samples</choice>
+            <choice value="C">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Matched pairs is used to test the <em style="italic">same</em>
+                    sample in a before and after situation. Note that in this scenario we're
+                    exploring the relationship between two quantitative variables, the time to
+                    complete 20 shuttle runs during training (in seconds) and the time to complete
+                    the obstacle course during competition (in seconds). This would have been a
+                    matched pairs situation if the athletes had been measured on the same activity
+                    (shuttle run) in a before and after situation.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Two independent samples is used to test mean differences on one
+                    quantitative variable for two random samples. Note that we're not comparing two
+                    groups here, but rather exploring the relationship between two quantitative
+                    variables, the time to complete 20 shuttle runs during training (in seconds) and
+                    the time to complete the obstacle course during competition (in seconds).
+                </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The coach wants to know if there is an association between two
+                    quantitative variables, the time to complete 20 shuttle runs during training (in
+                    seconds) and the time to complete the obstacle course during competition (in
+                    seconds). </feedback>
+
+            </response>
+
+        </part>
+    </multiple_choice>
+
+
+
+
+</pool>

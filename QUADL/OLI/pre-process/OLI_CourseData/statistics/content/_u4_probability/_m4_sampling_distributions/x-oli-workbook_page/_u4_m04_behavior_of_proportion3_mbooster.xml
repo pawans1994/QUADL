@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m04_behavior_of_proportion3_mbooster">
+    <head>
+        <title>Behavior of Sample Proportion (3 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_proportion"/>
+    </head>
+    <body>
+       
+
+
+        <p>If a sampling distribution is normally shaped, then we can apply the Standard
+                    Deviation Rule and use z-scores to determine probabilities. Let's look at some
+                    examples.</p>
+                <example>
+                    <p>A random sample of 100 students is taken from the population of all part-time
+                students in the
+                <?oxy_insert_start author="mmyers" timestamp="20101122T180315-0500"?>United
+                States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T180313-0500" content="U.S."?>,
+                for which the overall proportion of females is .6. </p>
+                    <p> (a) There is a 95% chance that the sample proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T180330-0500"?>(<?oxy_insert_end?><m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T180331-0500"?>)
+                <?oxy_insert_end?>falls between what two values? First note that the distribution of
+                    <m:math overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> has
+                <?oxy_insert_start author="mmyers" timestamp="20101122T180337-0500"?>the
+                <?oxy_insert_end?>mean p<?oxy_insert_start author="mmyers" timestamp="20101122T180342-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101122T180342-0500"?>
+                <?oxy_insert_end?>.6, standard deviation <m:math overflow="scroll">
+                    <m:msqrt>
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>-</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>)</m:mo>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:msqrt>
+                    <m:mo>=</m:mo>
+                    <m:msqrt>
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo>(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>-</m:mo>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo>)</m:mo>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mn>0</m:mn>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:msqrt>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mn>5</m:mn>
+                </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T180400-0500"?>,
+                <?oxy_insert_end?>and a shape that is close to
+                normal<?oxy_insert_start author="mmyers" timestamp="20101122T180419-0500"?>,<?oxy_insert_end?>
+                since np = 100(.6) = 60 and n(1 - p) = 100(.4) = 40 are both greater than 10. The
+                Standard Deviation Rule applies: the probability is approximately .95 that <m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> falls within 2 standard deviations of the mean, that is, between 0.6 -
+                2(.05) and 0.6 + 2(.05). There is roughly a 95% chance that <m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> falls in the
+                <?oxy_comment_start author="mmyers" timestamp="20101122T180639-0500" comment="expressing intervals as two numbers with a comma in between has not yet been done in this course. (Or if it was, it was many, many pages ago.) I suggest adding a note of explanation here about this notation."?>interval
+                (.5, .7)<?oxy_comment_end?>. </p>
+                    <p>(b) What is the probability that sample proportion <m:math overflow="scroll">
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                        </m:math> is less than or equal to .56?</p>
+                    <p>To find <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                    <m:mo>≤</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:mn>6</m:mn>
+                    <m:mo>)</m:mo>
+                </m:math>, we standardize .56 to z = (.56<?oxy_insert_start author="mmyers" timestamp="20101122T180743-0500"?>
+                <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101122T180744-0500"?>
+                <?oxy_insert_end?>.60) / .05 = -.80:</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mi>P</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>≤</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                            <m:mn>6</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>≤</m:mo>
+                            <m:mo>-</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>8</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mn>1</m:mn>
+                            <m:mn>1</m:mn>
+                            <m:mn>9</m:mn>
+                        </m:math>
+                    </p>
+                </example>
+                <p>To see the impact of the sample size on these probability calculations, consider
+            the following variation
+            <?oxy_insert_start author="mmyers" timestamp="20101122T180806-0500"?>of<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T180805-0500" content="in"?>
+            our example.</p>
+                <example>
+                    <p>A random sample of
+                    <em>2<?oxy_insert_start author="mmyers" timestamp="20101122T180802-0500"?>,<?oxy_insert_end?>500</em>
+                students is taken from the population of all part-time students in the
+                <?oxy_insert_start author="mmyers" timestamp="20101122T180816-0500"?>United
+                States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T180819-0500" content="U.S."?>,
+                for which the overall proportion of females is .6. </p>
+                    <p>(a) There is a 95% chance that the sample proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T180831-0500"?>(<?oxy_insert_end?><m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T180833-0500"?>)<?oxy_insert_end?>
+                falls between what two values? First note that the distribution of <m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> has
+                <?oxy_insert_start author="mmyers" timestamp="20101122T180840-0500"?>the
+                <?oxy_insert_end?>mean p = .6, standard deviation <m:math overflow="scroll">
+                    <m:msqrt>
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>-</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>)</m:mo>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:msqrt>
+                    <m:mo>=</m:mo>
+                    <m:msqrt>
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo>(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>-</m:mo>
+                                    <m:mn>0</m:mn>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>6</m:mn>
+                                    <m:mo>)</m:mo>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mn>2</m:mn>
+                                    <m:mn>5</m:mn>
+                                    <m:mn>0</m:mn>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:msqrt>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mn>1</m:mn>
+                </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T180846-0500"?>,
+                <?oxy_insert_end?>and a shape that is close to
+                normal<?oxy_insert_start author="mmyers" timestamp="20101122T180851-0500"?>,<?oxy_insert_end?>
+                since np = 2500(.6) = 1500 and n(1 - p) = 2500(.4) = 1000 are both greater than 10.
+                The standard deviation rule applies: the probability is approximately .95 that
+                    <m:math overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> falls within 2 standard deviations of the mean, that is, between 0.6 -
+                2(.01) and 0.6 + 2(.01). There is roughly a 95% chance that <m:math
+                    overflow="scroll">
+                    <m:mover accent="true">
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mo>ˆ</m:mo>
+                    </m:mover>
+                </m:math> falls in the interval (.58, .62). </p>
+                    <p>(b) What is the probability that sample proportion <m:math overflow="scroll">
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                        </m:math> is less than .56?</p>
+                    <p>To find <m:math overflow="scroll">
+                            <m:mi>P</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>≤</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                            <m:mn>6</m:mn>
+                            <m:mo>)</m:mo>
+                        </m:math>, we standardize .56 to z = (.56 - .60) / .01 = -4.00:</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mi>P</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>≤</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>5</m:mn>
+                            <m:mn>6</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mo>(</m:mo>
+                            <m:mi>Z</m:mi>
+                            <m:mo>≤</m:mo>
+                            <m:mo>-</m:mo>
+                            <m:mn>4</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>0</m:mn>
+                            <m:mo>)</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:math>, approximately.</p>
+                </example>
+               
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>As long as the sample is truly random, the distribution of <m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> is centered at p, no matter what size sample has been taken. Larger
+                    samples have less spread. Specifically, when we multiplied the sample size by
+                    25,
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T181003-0500"?>increasing
+                    it <?oxy_insert_end?>from 100 to
+                    2<?oxy_insert_start author="mmyers" timestamp="20101122T181009-0500"?>,<?oxy_insert_end?>500,
+                    the standard deviation was reduced to 1/5 of the original standard deviation.
+                    Sample proportion strays less from population proportion .6 when the sample is
+                    larger: it tends to fall anywhere between .5 and .7 for samples of size 100,
+                    whereas it tends to fall between .58 and .62 for samples of size
+                    2<?oxy_insert_start author="mmyers" timestamp="20101122T181027-0500"?>,<?oxy_insert_end?>500.
+                    It is not so improbable to take a value as low as .56 for samples of 100
+                    (probability is more than 20%) but it is almost impossible to take a value as
+                    low as low as .56 for samples of
+                    2<?oxy_insert_start author="mmyers" timestamp="20101122T181131-0500"?>,<?oxy_insert_end?>500
+                    (probability is virtually zero).</p>
+                <!--<activity idref="_u4_m4_lbd2" purpose="learnbydoing"/>-->
+                <p>The purpose of this next activity is to give guided practice in finding the
+                    sampling distribution of the sample proportion</p>
+                <p>
+                    <?oxy_insert_start author="mmyers" timestamp="20101122T181148-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T181150-0500"?>)<?oxy_insert_end?>,
+                    and use it to draw conclusions about what values of <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> we are most likely to get.</p>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>The proportion of left-handed people in the general population is about
+                            0.1. Suppose a random sample of 225 people is observed.</p>
+                        <wb:inline
+                            idref="u3_m4_proportion3_tutor1" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion3_tutor2" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion3_tutor3" purpose="learnbydoing"/>
+                        <wb:inline
+                            idref="u3_m4_proportion3_tutor4" purpose="learnbydoing"/>
+                    </body>
+                </section>
+            </body>
+        </section>
+    <section>
+        <title>Theoretical
+                <?oxy_insert_start author="mmyers" timestamp="20101122T181913-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T181912-0500" content="c"?>omment
+                (Optional)</title>
+        <body>
+            <p>The above results for the distribution of sample proportion <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> are directly related to the results already obtained for the
+                    distribution of sample count X in a binomial experiment. Remember that X had
+                    mean np, standard deviation <m:math overflow="scroll">
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mi>p</m:mi>
+                                <m:mo>(</m:mo>
+                                <m:mn>1</m:mn>
+                                <m:mo>-</m:mo>
+                                <m:mi>p</m:mi>
+                                <m:mo>)</m:mo>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math>, and a shape that allowed for normal approximations as long as both np
+                    and n(1 - p) were at least 10. Since sample proportion is <m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:mfrac>
+                    </m:math>, we could derive the mean and standard deviation of <m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> by applying the Rules for Means and Variances: <m:math
+                        overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>X</m:mi>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>=</m:mo>
+                        <m:mi>p</m:mi>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                        <m:mo>=</m:mo>
+                        <m:msubsup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>X</m:mi>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msubsup>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi>n</m:mi>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                    </m:mrow>
+                                </m:msup>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:msup>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mn>2</m:mn>
+                            </m:mrow>
+                        </m:msup>
+                        <m:mi>x</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi>n</m:mi>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                    </m:mrow>
+                                </m:msup>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:mo>(</m:mo>
+                        <m:mi>n</m:mi>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>-</m:mo>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mrow>
+                        </m:mfrac>
+                        <m:mi>p</m:mi>
+                        <m:mo>(</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>-</m:mo>
+                        <m:mi>p</m:mi>
+                        <m:mo>)</m:mo>
+                    </m:math> so <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>σ</m:mi>
+                            <m:mrow>
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msqrt>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>-</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo>)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:msqrt>
+                    </m:math>. The requirements that np and n(1 - p) be at least 10 are the same,
+                    whether we are focusing on the distribution of sample count or the distribution
+                    of sample proportion. After all, the shape of <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T181952-0500"?>
+                    <?oxy_insert_end?>is the same as the shape of X: the scale of the horizontal
+                    axis is just uniformly divided by n.</p>
+        </body>
+    </section>
+        <section>
+            <title>Checkpoint</title>
+            <body>
+                <p>This checkpoint will test your understanding of the material you have learned
+                    thus far in this module.</p>
+                <p>
+                    
+                        
+                </p>
+                <activity idref="_u4_m4_checkpoint1" purpose="checkpoint"/>
+                <p>How was this section for you? What was challenging? Tell us about it—we are listening! The more detail that you can give, the better. Your answers will help us to improve the course.</p>
+                <wb:inline idref="mindset_booster_3"/>
+            </body>
+        </section>
+        
+    </body>
+</workbook_page>

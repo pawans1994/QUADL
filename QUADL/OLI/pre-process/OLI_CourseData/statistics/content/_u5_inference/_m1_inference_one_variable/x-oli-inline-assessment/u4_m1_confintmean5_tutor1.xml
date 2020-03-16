@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintmean5_tutor1">
+    <title>Tutor</title>
+    <!--LO = apply_concepts-->
+    <question id="q1">
+        <body><p>A medical researcher wanted to estimate μ, the mean weight of newborns born to
+            women over the age of 40.</p>
+            <p>The researcher chose a random sample of 100 pregnant women who were over 40, followed
+                them through the pregnancy, and found that the mean weight of the 100 newborns was
+                3,035 grams. From past research, it is assumed that the weight of newborns has a
+                standard deviation of &#963; = 500. The researcher calculated the 95% confidence
+                interval for μ to be (2935, 3135). </p>
+            <p>If the researcher wanted to maintain the 95% level of confidence but report a
+                confidence interval with a smaller margin of error, which of the following will
+                achieve that?</p></body>
+        <multiple_choice shuffle="false">
+            <choice value="A">Redo the study, but this time with a sample of size 64.</choice>
+            <choice value="B">Redo the study, but this time with a sample of size 225.</choice>
+            <choice value="C">Redo the study and choose a different sample of size 100.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. A smaller sample size will actually achieve the opposite of
+                    your desired results. The resulting 95% confidence interval will be wider rather
+                    than narrower.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. A larger sample size reduces the margin of error (for a given
+                    level of confidence). In particular, by using a sample size of 225 instead of
+                    100, the margin of error will be reduced from 100 to roughly 67.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. A different sample of size 100 will probably produce a
+                    different sample
+                    mean<?oxy_insert_start author="mmyers" timestamp="20101123T150252-0500"?>,<?oxy_insert_end?>
+                    and therefore will be centered at a different number, but will have exactly the
+                    same margin of error.</feedback>
+            </response>
+        </part>
+    </question>
+    <question id="q2">
+        <body><p>The mean score on the quantitative reasoning part of the GRE (Graduate Record
+                Examination) of non-U.S. citizens has an unknown mean, , and an assumed standard
+                deviation =8. Based on a random sample of non-U.S. citizens who took the GRE in 2014
+                the 95% confidence interval for was calculated to be (153.6, 158.6). </p>
+            <p>Suppose now that a different random sample of non-U.S. citizens who took the GRE in
+                2014 is chosen and that this sample is <em style="bold">larger</em> than the sample that produced the
+                confidence interval above.</p>
+            <p>Which of the following is the <em style="bold">most likely</em> 95% confidence interval for µ based on the
+                larger sample?</p></body>
+        <multiple_choice shuffle="false">
+            <choice value="A">(153.4, 159.2)</choice>
+            <choice value="B">(153.9, 158.9)</choice>
+            <choice value="C">(153.8, 158.4)</choice>
+            <choice value="D">(153.5, 158.1)</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Recall that when you increase the sample size, the confidence
+                    interval gets narrower. This confidence interval is wider (width: 159.2 − 153.4
+                    = 5.8) than the confidence interval that is based on the smaller sample size
+                    (width: 158.6 − 153.6 = 5).</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. Recall that when you increase the sample size, the confidence
+                    interval gets narrower. This confidence interval has the same width (158.9 −
+                    153.9 = 5) as the confidence interval that is based on the smaller sample size
+                    (width: 158.6 − 153.6 = 5).</feedback>
+            </response>
+            <response match="C">
+                <feedback>Not quite right. You are correct that when the sample size increases, the
+                    confidence interval gets narrower and indeed this confidence interval is
+                    narrower (width = 4.6) than the confidence interval that is based on the smaller
+                    sample size (width = 5). However, the center of this confidence interval, (158.4
+                    + 153.8)/2 = 156.1 (which the average score in the larger sample), is identical
+                    to the center of the confidence interval that is based on the smaller sample,
+                    (153.6 + 158.6)/2 = 156.1 (which the average score in the smaller sample). Due
+                    to sampling variability, it is extremely unlikely that two random samples will
+                    produce the same average.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. When the sample size increases, the confidence interval gets
+                    narrower, and this confidence interval is narrower (width = 4.6) than the
+                    confidence interval that is based on the smaller sample size (width =
+                    5).</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

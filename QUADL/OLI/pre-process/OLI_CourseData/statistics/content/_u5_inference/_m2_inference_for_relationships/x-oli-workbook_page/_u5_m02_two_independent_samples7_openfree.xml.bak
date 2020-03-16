@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_two_independent_samples7_openfree">
+    <head>
+        <title>Two Independent Samples (7 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Comment</title>
+            <body>
+                <p> As we've seen in previous tests, as well as in the two-samples case, the 95%
+                    confidence interval for <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> can be used for testing in the two-sided case (<m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mn>o</m:mn>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math> vs. <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>≠</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math> ): </p>
+                <p>If the null value, 0, falls outside the confidence interval, H<sub>o</sub> is rejected</p>
+                <p>If the null value, 0, falls inside the confidence interval, H<sub>o</sub> is not
+                    rejected</p>
+                <example>
+                    <p>Let's go back to our leading example of the looks vs. personality score where
+                        we had a two-sided test.</p>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R</title>
+                            <image style="block" src="../webcontent/image192_r.gif" alt="R output:
+                        > t.test(looks$Score~looks$Gender)
+                        Welch Two Sample t-test
+                        data: looks$Score by looks$Gender
+                        t = -4.6574, df = 182.973, p-value = 6.143e-06
+                        alternative hypothesis: true difference in means is not equal to 0
+                        95 percent confidence interval:
+                        -3.695865  -1.496292
+                        sample estimates:
+                        mean in group Female 10.73333
+                        mean in group Male 13.32941"/>
+                        </alternative>
+                        <alternative value="statcrunch">
+                            <title>StatCrunch</title>
+                            <image style="block" src="../webcontent/statcrunch_output.png" alt="Two
+                        Sample T - Test and CI: Score(Y),Gender (X)
+                        Summary statistics for Score (Y):
+                        For Gender(X) = Female: n = 150, Mean = 10.733334, Std. Dev. = 4.254751, Std. Err. = 0.347399
+                        For Gender(X) = Male: n = 85, Mean = 13.3294115, Std. Dev. = 4.0189676, Std. Err. = 0.43591824
+                        
+                        Hypothesis test results: &mu;_1: mean of score (Y) where X = Female. &mu;_2: mean of score (Y)
+where X = Male. &mu;_1 - &mu;_2: mean difference. H_0: &mu;_1 - &mu;_2 = 0, H_A: &mu;_1 - &mu;_2 &ne; 0
+                        
+                        Difference: &mu;_1 - &mu;_2
+                        Sample Mean: -2.5960784
+                        Std. Err.: 0.55741435
+                        DF: 182.97267
+                        T-Stat: -4.657358
+                        P-Value: &lt; 0.0001
+                        
+                        95% Confidence Interval Results:
+                        Difference: &mu;_1 - &mu;_2
+                        Sample Mean: -2.5960784
+                        Std. Err.: 0.55741435
+                        DF: 182.97267
+                        L. Limit: -3.6958647
+                        U. Limit: -1.4962921"/>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab</title>
+                            <image style="block" src="../webcontent/image197.gif" alt="Two-Sample T-Test and Cl:
+                    Score(Y), Gender(X)
+                    Two-sample T for Score (Y)
+                    Gender (X) = Female: N = 150, Mean = 10.73, StDev = 4.25, SE Mean = 0.35
+                    Gender (X) = Male: N = 85, Mean = 13.33, StDev = 4.02, SE Mean = 0.44
+                    
+                    Difference = mu (Female) - mu (Male)
+                    Estimate for difference: -2.59608
+                    95% CI for difference: (-3.69590, -1.49625)
+                    T-Test of difference = 0 (vs not =): T-Value = -4.66 P-Value = 0.000  DF = 182"/>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007</title>
+                            <p>Excel told us that the 95% confidence interval is (-3.69590,
+                                -1.49625), and that the p-value is 0.000.</p>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003</title>
+                            <p>Excel told us that the 95% confidence interval is (-3.69590,
+                                -1.49625), and that the p-value is 0.000.</p>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Calculator</title>
+                            <image style="block" src="../webcontent/image523.png" alt="2-SampTTest
+                    &mu;_1; &ne; &mu;_2
+                    t = -4.6574
+                    p = 6.1423
+                    df = 182.97
+                    x-bar_1 = 10.733
+                    x-bar_2 = 13.330
+                    Sx_1 = 4.2548
+                    Sx_2 = 4.0190
+                    n_1 = 150
+                    n_2 = 85                    
+                    
+                    2-SampTInt:
+                    (-3.696, -1.496)
+                    df = 182.9726756
+                    x-bar_1 = 10.73333333
+                    x-bar_2 = 13.32941176
+                    Sx_1 = 4.25475126
+                    Sx_2 = 4.01896763
+                    n_1 = 150
+                    n_2 = 85"/>
+                        </alternative>
+                    </alternatives>
+                    <p>We used the fact that the p-value is so small to conclude that Ho can be
+                        rejected. We can also use the confidence interval to reach the same
+                        conclusion since 0 falls outside the confidence interval. In other words,
+                        since 0 is not a plausible value for <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>−</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math> we can reject H<sub>o</sub>, which claims that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>−</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mn>0</m:mn>
+                            </m:mrow>
+                        </m:math> . </p>
+                </example>
+            </body>
+        </section>
+    <activity idref="_u5_m2_lbd14" purpose="learnbydoing"/>
+    <!--<activity idref="_u5_m2_dig3" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>Below you'll find three sample outputs of the two-sided two-sample t-test: </p>
+                <image style="block" src="../webcontent/image157.gif" alt="H_0: &mu;_1 - &mu;_2 = 0 vs.
+                    H_a: &mu;_1 - &mu;_2 &ne; 0"/>
+                <p>However, only one of the outputs could be correct (the other two contain an inconsistency). Your task is to decide which of the following outputs is the
+                    correct one (<em>Hint:</em> No calculations are necessary in order to answer this
+                    question. Instead pay attention to the p-value and confidence interval). </p>
+                <ul style="none">
+                    <li><em>Output A: </em><ul style="none"><li>p-value: 0.289</li><li>95% Confidence Interval: (-5.93090, -1.78572)</li></ul></li>
+                </ul>
+                <ul style="none">
+                    <li><em>Output B: </em><ul style="none"><li>p-value: 0.003</li><li>95% Confidence Interval: (-13.97384, 2.89733)</li></ul></li>
+                </ul>
+                <ul style="none">
+                    <li><em>Output C: </em><ul style="none"><li>p-value: 0.223</li><li>95% Confidence Interval: (-9.31432, 2.20505)</li></ul></li>
+                </ul>
+                <!--RS: Changed question because log data shows students having trouble with this problem
+                    <alternatives group="statistics.package">
+                    <default><pref:value preference="statistics.package"/></default>
+                    <alternative value="r">
+                        <title>R</title>
+                        <ol style="upper-alpha">
+                            <li><p>&nbsp;</p><image style="block" src="../webcontent/image158_r.gif"
+                            /></li>
+                            <li><p>&nbsp;</p><image style="block" src="../webcontent/image159_r.gif"
+                            /></li>
+                            <li><p>&nbsp;</p><image style="block" src="../webcontent/image160_r.gif"
+                            /></li>
+                        </ol>
+                    </alternative>
+                     <alternative value="minitab">
+                        <title>Minitab</title>
+                        <image style="block" src="../webcontent/image158.gif"/>
+                        <image style="block" src="../webcontent/image159.gif"/>
+                        <image style="block" src="../webcontent/image160.gif"/>
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2007</title>
+                        <image style="block" src="../webcontent/image158_excel.gif"/>
+                        <image style="block" src="../webcontent/image159_excel.gif"/>
+                        <image style="block" src="../webcontent/image160_excel.gif"/>
+                    </alternative>
+                    <alternative value="excel2003">
+                        <title>Excel 2003</title>
+                        <image style="block" src="../webcontent/image158_excel.gif"/>
+                        <image style="block" src="../webcontent/image159_excel.gif"/>
+                        <image style="block" src="../webcontent/image160_excel.gif"/>
+                    </alternative>
+                    <alternative value="ti">
+                        <title>TI Calculator</title>
+                        <image style="block" src="../webcontent/image158_ti.gif"/>
+                    </alternative>
+                </alternatives>-->
+                <wb:inline idref="u4_m3_twosamples7_tutor1"
+                    purpose="didigetthis"/>
+              
+            </body>
+        </section>
+        
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+                <p>We have completed our discussion of the two-sample t-test for comparing two populations’ means when the samples are independent. Let’s summarize what we have learned.</p>
+                <ul>
+                    <li>The two sample t-test is used for comparing the means of a quantitative variables (Y) in two populations (which we initially called sub-populations).
+                        <image style="block" src="../webcontent/image523a.jpg" width="400"/></li>
+                    
+                    <li>Our goal is comparing μ<sub>1</sub> and μ<sub>2</sub> (which in practice is done by making inference on the difference μ<sub>1</sub> - μ<sub>2</sub>). The null hypotheses is
+                        <ul style="none">
+                            <li>Ho: μ<sub>1</sub> - μ<sub>2</sub> = 0</li>
+                        </ul>and the alternative hypothesis is one of the following (depending on the context of the problem):
+                        <ul style="none">
+                            <li>Ha: μ<sub>1</sub> - μ<sub>2</sub> &lt; 0</li>
+                            <li>Ha: μ<sub>1</sub> - μ<sub>2</sub> &gt; 0</li>
+                            <li>Ha: μ<sub>1</sub> - μ<sub>2</sub> &#8800; 0</li>
+                        </ul></li>
+                    
+                    <li>The two-sample t-test can be safely used when the samples are independent and at least one of the following two conditions hold:
+                        <ul>
+                            <li>The variable Y is known to have a normal distribution in both populations</li>
+                            <li>The two sample sizes are large.</li>
+                        </ul>
+                        When the sample sizes are not large (and we therefore need to check the normality of Y in both population), what we do in practice is look at the histograms of the two samples and make sure that there are no signs of non-normality such as extreme skewedness and/or outliers.</li>
+                    <li>The test statistic is as follows and has a t distribution when the null hypothesis is true:
+                        <image style="block" src="../webcontent/image523b.png"/></li>
+                    <li>P-values are obtained from the output, and conclusions are drawn as usual, comparing the p-value to the significance level alpha.</li>
+                    <li>If H<sub>o</sub> is rejected, a 95% confidence interval for μ<sub>1</sub> - μ<sub>2</sub> can be very insightful and can also be used for the two-sided test.</li>
+                </ul>
+                <!--<ul>
+                    <li><p>We are now done with the two-sample t-test, which is used for comparing two
+                        population means when the two samples (drawn from the two populations) are
+                        independent.</p></li>
+                    <li><p>In the background we have a two-valued categorical explanatory variable whose
+                        categories define the two populations that we are comparing with respect to
+                        the mean of the response variable.</p></li>
+                    <li><p>We learned under what conditions we can reliably use this test (independent
+                        samples, and either normal populations or large sample sizes).</p></li>
+                    <li><p>We introduced the test statistic and mentioned that its null distribution is
+                        approximately t.</p></li>
+                    <li><p>We obtained the p-value from the output and, as usual, based our conclusion
+                        on its value.</p></li>
+                    <li><p>A 95% confidence interval for <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>−</m:mo>
+                                <m:msub>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math> can be very insightful after a test has rejected the null
+                        hypothesis, and can also be used for testing in the two-sided case. </p></li>
+                </ul>-->
+            </body>
+        </section>
+    <!--  <activity idref="_u5_m2_two_indep_samples_checkpoint1" purpose="checkpoint"/>-->
+        <section>
+            <title>End of Lesson Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m02_two_independent_samples7_feedback"/>
+            </body>
+        </section> 
+    </body>
+</workbook_page>

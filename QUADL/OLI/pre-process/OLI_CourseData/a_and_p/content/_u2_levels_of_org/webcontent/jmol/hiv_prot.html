@@ -1,0 +1,97 @@
+<HTML>
+<HEAD><TITLE>
+HIV Protease
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+ <BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+<Table WIDTH=850 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TH>&nbsp;</TH>
+ <TH align=left>Biochemistry I</TH>
+  <TH colspan=2 align=right>HIV - Protease</TH>
+<TR VALIGN=TOP>
+<TD>&nbsp;</TD>
+<TD VALIGN=TOP WIDTH=500>
+ <script type="text/javascript">
+ jmolApplet([495,495],
+ "load ./jmol/pdbs/hiv/1GNO.pdb; rotate z 144.48; rotate y 111.39; rotate z 0.23;spacefill off;wireframe off;backbone 80;color chain;set specular on","hiv");
+ </script><BR>
+  <script type="text/javascript">
+   jmolSetTarget("hiv") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("hiv")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+<TD>&nbsp;</TD>
+<TD width=350 bgcolor="#eeeeee">
+ <b>Drug Binding Site</b><br>
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("hiv") 
+  jmolCheckbox("select hetero;wireframe 150;color cpk","select hetero;wireframe off","+/- Inhibitor",false);
+ </script>
+ 
+ &nbsp;&nbsp;<script type="text/javascript">
+  jmolSetTarget("hiv") 
+  jmolButton("move 90 0 0 0 0 0 0 0 1","","","Top view");  
+ </script>&nbsp;Top view
+  
+  <br>
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("hiv") 
+   jmolCheckbox("set windowCentered off;center atomno=1532;set windowCentered on;zoomto 1.0 250","set windowCentered off;center atomno=1536;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+  </script>
+   
+ <br><BR>
+  <b>Active Site</b><br><br>
+  
+  &nbsp;&nbsp;<script type="text/javascript">
+   jmolSetTarget("hiv") 
+   jmolButton("select 25;wireframe 120;color cpk;select atomno=196;label 'Asp25'","","","Catalytic residues");  
+  </script>&nbsp;Catalytic Asp<br>
+   
+   &nbsp;&nbsp;Specificity:<script type="text/javascript">
+    jmolSetTarget("hiv") 
+    jmolCheckbox("select 23:B and (sidechain or *.ca);wireframe 100;color cpk","select 23:B and (sidechain or *.ca);wireframe off","Leu23",false);
+    jmolCheckbox("select 81:B and (sidechain or *.ca);wireframe 100;color cpk","select 81:B and (sidechain or *.ca);wireframe off","Pro81",false);
+    jmolCheckbox("select 82:B and (sidechain or *.ca);wireframe 100;color cpk","select 82:B and (sidechain or *.ca);wireframe off","Val82",false);
+   </script>
+   
+   <br><br>
+   &nbsp;&nbsp;Molecular surface:
+    <script type="text/javascript">
+     jmolSetTarget("hiv")
+     jmolCheckbox("set defaultTranslucent 0.5;select ((23:B or 81:B or 82:B)  and  (sidechain or *.ca)) or hetero;wireframe 100;color cpk;select ((23:B or 81:B or 82:B)  and sidechain); define prot selected;select atomno=1529,atomno=1530,atomno=1531,atomno=1532,atomno=1533,atomno=1534;define drug selected;select hetero;define drug1 selected;isoSurface surf1 select(prot) ignore(not prot) molecular;isoSurface surf2 select(drug1) ignore(not drug1) molecular;color $surf1 orange;color $surf2  grey;color $surf2 translucent;color $surf1 translucent","isoSurface surf1 off;isoSurface surf2 off", "+/-", false)
+    </script>
+    
+ <br>
+&nbsp;&nbsp;[Orange: Leu23, Pro81, Val82]<br>
+&nbsp;&nbsp;[Grey: entire drug]
+     
+    <br><br>
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("hiv") 
+ jmolCheckbox("set windowCentered off;center atomno=1532;set windowCentered on;zoomto 1.0 250","set windowCentered off;center atomno=1536;set windowCentered on;zoomto 1.0 100","+/-Zoom",false);
+</script>
+
+<P>
+This Jmol page shows the structure of HIV protease bound to an inhibitor (HIV drug). In this complex, a number of non-polar residues of the protease make extensive contacts the inhibitor, providing a hydrophobic binding pocket that stabilizes the drug-enzyme complex.   The presence of the drug in the active site prevents the protease from binding its normal substrate.
+
+</TD>
+</TR>
+</TABLE>
+<HR>
+<TT>Last modified Dec 20, 2007.<TT>
+</BODY>
+</HTML>
+
+

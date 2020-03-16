@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd14">
+    <head>
+        <title>Hypothesis Testing for the Population Mean</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in going through the whole
+            process of hypothesis testing for the population mean (assuming that σ is known).</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>The length of human pregnancy is known to have a mean of 266 days and a standard
+            deviation of 16 days. Based on records from a large women's hospital, a random sample of
+            25 women who were smoking and/or drinking alcohol during their pregnancy and their
+            pregnancy lengths are recorded in the datafile linked below. Do the data provide enough
+            evidence to support the (well-known) fact that women who smoke and/or drink alcohol
+            during their pregnancy have shorter pregnancies than women in general (in other words,
+            are more likely to have premature labor)?</p>
+        <p>
+            <em>Comment:</em>
+        </p>
+        <p>It is reasonable to assume that the known standard deviation of 16 days applies also to
+            women who smoke and/or drink during their pregnancy.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/pregnancy.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>pregnancy</code>. Enter
+                        the command <code>pregnancy</code> to see the data. The variable name in the
+                        data frame is <code>length</code>.</p>
+
+
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/pregnancy.RData" target="self">here</link> and
+                    choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T230219-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T230219-0500" content="&apos;"?>pregnancy<?oxy_delete author="mmyers" timestamp="20101127T230222-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101127T230224-0500"?>"<?oxy_insert_end?>
+                        Enter the command <code>pregnancy</code> to see the data.</p>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch2 you must first right-click <link
+                            href="../../../webcontent/excel/pregnancy.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next,
+                        click <link href="http://www.statcrunch.com/" target="new">here </link>to
+                        open StatCrunch in a separate window, and log in using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page.</li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on “Load File.”</li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/pregnancy.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: a dialog box will likely appear that says "A copy of the
+                        content of this file will be added to the current project"&#8212;just click
+                        "OK."</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/pregnancy.xls" target="self">here</link>
+                        to download the file to your computer. Then find the downloaded file and
+                        double-click it to open it in Excel. When Excel opens you may have to enable
+                        editing.</p>
+                </alternative>
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/pregnancy.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a list with the pregnancy data loaded, right-click <link
+                            href="../../../webcontent/ti/pregnancy.8xl" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and send it to your calculator. For instructions on how
+                        to connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p><em style="bold">Note:</em> This dataset is fairly small (n = 25). It may be
+                        as fast to enter the data by hand. </p>
+                    <p>The pregnancy length data now should be stored in L1. </p>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testmean5_lbd1_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="346">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14a.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14a</param>
+                </flash>
+            -->
+        <wb:inline idref="u4_m2_testmean5_lbd1_tutor2" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="440">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14b.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14b</param>
+                </flash>
+            -->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>The R base package does not have a z-test command built in so we must either
+                        create our own z-test command function or use an add-on package. We will
+                        create our own function <code>z.test()</code>. The parameters for
+                            <code>z.test()</code> are:</p>
+                    <ul style="none">
+                        <li><code>x</code>: a sample data set</li>
+                        <li><code>sig</code>: the population standard deviation </li>
+                        <li><code>mu0</code>: the mean hypothesized by the null hypothesis</li>
+                        <li><code>alt</code>: either "<code>less</code>" or "<code>greater</code>"
+                            or "<code>two.sided</code>", indicating the form of the alternative
+                            hypothesis μ&lt;μ_0, μ&gt;μ_0, or μ≠μ_0 respectively. The default is
+                                "<code>greater</code>" meaning that if you do not identify
+                                <code>alt</code> it will automatically conduct the "greater than"
+                            hypothesis test.</li>
+                    </ul>
+                    <p>Copy this function to R as a single block of code:</p>
+                    <ul style="none">
+                        <li><code>z.test = function(x, sig, mu0, alt="greater") {</code></li>
+                        <li><code>&#160;&#160;mu = mean(x);</code></li>
+                        <li><code>&#160;&#160;n = length(x);</code></li>
+                        <li><code>&#160;&#160;z = (mu-mu0)/(sig/sqrt(n));</code></li>
+                        <li><code>&#160;&#160;if (alt=="less"){p = pnorm(z)}</code></li>
+                        <li><code>&#160;&#160;&#160;&#160;else {</code></li>
+                        <li><code>&#160;&#160;&#160;&#160;&#160;&#160;if (alt=="two.sided"){p =
+                                2*(1-pnorm(abs(z)))}</code></li>
+                        <li><code>&#160;&#160;&#160;&#160;&#160;&#160;else {p =
+                            1-pnorm(z)}</code></li>
+                        <li><code>&#160;&#160;&#160;&#160;}</code></li>
+                        <li><code>&#160;&#160;paste("mean = ",mu,"n = ",n,", z = ",z,", p-value =
+                                ",round(p,5))</code></li>
+                        <li><code>}</code></li>
+                    </ul>
+
+                    <p>The function <code>z.test()</code> returns the sample mean, the sample size,
+                        the z-score for the sample and the p-value for the hypothesis test. To use
+                        the function <code>z.test()</code> on the data already entered, execute the
+                        command:</p>
+                    <ul style="none">
+                        <li><code>z.test(x=pregnancy$length, sig=16, mu0=266,
+                            alt="less")</code></li>
+                    </ul>
+                    <p>Note: We use this same command for other "Learn By Doing"
+                        <!--modules-->activities, so be aware that if you restart R before the next
+                        module, you must reenter the block of code that defines the
+                            <code>z.test()</code> function into R to use it again. Otherwise, you
+                        will get the following error:</p>
+                    <ul style="none">
+                        <li><code>Error: could not find function "z.test"</code></li>
+                    </ul>
+                    <!-- <p>Carry out the z-test using R:</p>
+                <p>We begin by constructing a function "z.test" similar to the built-in R function
+                        "t.test." The parameters for "z.test" are:</p>
+                <ul>
+                    <li>x: a sample dataset</li>
+                    <li>sigma: the population standard deviation</li>
+                    <li>mu0: the mean hypothesized by the null hypothesis</li>
+                    <li>alt: either "less" or "greater" or "two.sided," indicating the form of the
+                            alternate hypothesis <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>&lt;</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>, <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>&gt;</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>, or <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                    <m:mo>≠</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>. The default is "greater."</li>
+                </ul>
+                <p>Copy this function to R as a single block:</p>
+                <code>z.test = function(x, sigma, mu0, alt="greater")</code>
+                <code>{</code>
+                <code>mu = mean(x);</code>
+                <code>n = length(x);</code>
+                <code>z = (mu-mu0)/(sigma/sqrt(n));</code>
+                <code>if (alt=="less"){p = pnorm(z)}</code>
+                <code>else </code>
+                <code>{</code>
+                <code>if (alt=="two.sided"){p = 2*(1-pnorm(abs(z)))}</code>
+                <code>else {p = 1-pnorm(z)}</code>
+                <code>};</code>
+                <code>paste("mean = ",mu,"n = ",n,", z = ",z,", p-value = ",p)</code>
+                <code>}</code>
+                <p>To use the function "z.test" on the data already entered, execute the
+                    command:</p>
+                <code>z.test(pregnancy$length, 16, 266, "less")</code>
+                <p>The function <code>z.test</code> returns the sample mean, the sample size, the
+                    z-score for the sample and the p-value for the hypothesis test.</p>-->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor14c_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="500">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14c_r.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14c_r</param>
+                    </flash>
+                -->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor14d_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="310">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14d_r.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14d_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Perform the t-test using StatCrunch.</p>
+                    <p>If raw data are given: </p>
+                    <ul>
+                        <li>Choose Stat → T Stats → One Sample → With Data</li>
+                        <li>In Select column(s), choose the relevant column of sample data by
+                            double-clicking on the column name</li>
+                        <li>In Perform, select Hypothesis test for μ</li>
+                        <li>Enter a null value for the population mean</li>
+                        <li>For the alternative hypothesis, choose from the options not equal, less
+                            than, and greater than</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>If summaries are given </p>
+                    <ul>
+                        <li>Choose: Stat → T Stats → One Sample → With Summary</li>
+                        <li>Enter the sample mean, sample standard deviation, and sample size</li>
+                        <li>In Perform, select Hypothesis test for μ</li>
+                        <li>Enter a null value for the population mean</li>
+                        <li>For the alternative hypothesis, choose from the options not equal, less
+                            than, and greater than </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Carry out the z-test using Minitab (instructions reviewed below).</p>
+                    <p>Minitab instructions:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1-Sample Z.</li>
+                        <li>If the raw data are given, enter the column name under "Samples in
+                            columns." If the summaries are given, enter under "Summarized Data" the
+                            sample size and sample mean.</li>
+                        <li>Enter the known value of the standard deviation (&sigma;). </li>
+                        <li>Next to "Test mean," enter the null value.</li>
+                        <li>Click on "Options" to select the relevant alternative.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                    <!--<wb:inline idref="u4_m2_testmean5_lbd1_tutor3"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="620">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14c.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14c</param>
+                    </flash>
+                -->
+                    <!--<wb:inline idref="u4_m2_testmean5_lbd1_tutor4"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="600">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor14d.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor14d</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Remember that to carry out the z-test in Excel, we first calculate the
+                        z-statistic using the formula <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi mathvariant="normal">σ</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <ul>
+                        <li>Once you have calculated the z-statistic, you can calculate the p-value
+                            using the Excel function <code style="inline">NORM.S.DIST</code>. In this
+                            case, the p-value we want is <code style="inline"
+                                >NORM.S.DIST(z-statistic, TRUE)</code>.</li>
+                    </ul>
+                </alternative>
+                <!--     <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Remember that to carry out the z-test in Excel, we first calculate the
+                        z-statistic using the formula <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>x</m:mi>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mi mathvariant="normal">σ</m:mi>
+                                        <m:msqrt>
+                                            <m:mi>n</m:mi>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <ul>
+                        <li>Once you have calculated the z-statistic, you can calculate the p-value
+                            using the Excel function <code style="inline">NORMSDIST</code>. In this
+                            case, the p-value we want is <code style="inline"
+                                >NORMSDIST(z-statistic)</code>. </li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>One sample z-test for the mean (&#956;) </em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/1:Z-Test</code>.</li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li>Choose <code style="inline">Stats</code> by using arrows to highlight
+                                <code style="inline">Data</code> then pressing <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>&#956;<sub>o</sub>: Enter the test value for the population mean from
+                            the null hypothesis. </li>
+                        <li>&#963; : Enter the value of the population standard deviation (this is
+                            given in the problem). </li>
+                        <li>List: L1</li>
+                        <li>Freq: 1 (the number one).</li>
+                        <li>Choose the relevant form of the alternative hypothesis (&#8800;, &lt;,
+                            &gt;). </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image510.jpg"
+                                alt="TI Calculator Output:
+        Z-Test
+            Input: Data     Stats
+            &mu;_0: 266
+            &sigma;: 16
+            List: L_1
+            Freq: 1
+            &mu; &ne; &mu;_0    &lt;&mu;_0     &gt;&mu;_0
+            Calculate       Draw"
+                            /></li>
+                        <li>Arrow down and choose <code style="inline">CALCULATE</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testmean5_lbd1_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m2_testmean5_lbd1_tutor4" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <!--<pullout type="tosumup" title="Would you like more practice?" orient="horizontal">
+            <material>
+                <image style="block" src="../../../webcontent/icon_evaluate.gif">
+                    <popout enable="false"/>
+                </image>
+            </material>
+            <material>
+                <p>If you want more practice on this concept, click "More Practice" below to see
+                    additional exercises. </p>
+
+                <p>If you're done, close this window or click "I'm Done" below to move on in the
+                    course.</p>
+
+                <p><link href="javascript:window.close();" target="self">
+                        <em>I'm Done</em>
+                    </link>&#160;&#160;&#160;&#160;&#160;<activity_link
+                        idref="_u5_m1_lbd14_02" purpose="learnbydoing">
+                        <em>More Practice</em>
+                    </activity_link></p>
+            </material>
+        </pullout>-->
+        <!--<pullout type="research" title="My Response" orient="horizontal">
+            <material>
+                <image style="block" src="../../../../webcontent/icon_myresponse.gif">
+                    <popout enable="false"/>
+                </image>
+            </material>
+            <material>
+                <p>After completing this Learn by Doing, please help us evaluate the effectiveness
+                    of this activity.</p>
+
+                <p>Your response will not be graded, but will be available for your instructor to
+                    read. Answering these questions may also shape the discussions in class.</p>
+
+                <p>
+                    <activity_link idref="_u5_m1_lbd14_feedback" purpose="myresponse">
+                        <em>My Response</em>
+                    </activity_link>
+                </p>
+            </material>
+        </pullout>-->
+    </body>
+</workbook_page>

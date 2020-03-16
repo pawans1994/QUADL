@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_rules3_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>A big department store has two entrance doors, one on 5th Ave. and the other on 6th Ave. The number of shoppers who enter the store through the 5th Ave. door in an hour, X, has mean of &#956;<sub>X</sub> = 25 and standard deviation &#963;<sub>X</sub> = 5, and the number of shoppers who enter the store through the 6th Ave. door in an hour, Y, has a mean of &#956;<sub>Y</sub> = 35, and standard deviation of &#963;<sub>Y</sub> = 8. Let the random variable T be the total number of shoppers who enter the store in an hour.</p>
+   </content>
+   <question id="q1">
+      <body>
+         <p>What is &#956;<sub>T</sub>, the mean of T?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">30</choice>
+         <choice value="Res2">42</choice>
+         <choice value="Res3">10</choice>
+         <choice value="Res4">60</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. T = X + Y, and therefore &#956;<sub>T</sub> = &#956;<sub>X</sub> + &#956;<sub>Y</sub>. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. T = X + Y, and therefore &#956;<sub>T</sub> = &#956;<sub>X</sub> + &#956;<sub>Y</sub>. </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. T = X + Y, and therefore &#956;<sub>T</sub> = &#956;<sub>X</sub> + &#956;<sub>Y</sub>. </feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct.  Indeed, since T = X + Y, &#956;<sub>T</sub> = &#956;<sub>X</sub> + &#956;<sub>Y</sub> = 25 + 35 = 60.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>Assuming that shoppers enter the store through the two doors independently, what is
+            &#963;<sub>T</sub>, the standard deviation of T?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">13</choice>
+         <choice value="Res2">89</choice>
+         <choice value="Res3"
+            ><?oxy_comment_start author="mmyers" timestamp="20101121T183637-0500" comment="this notation wasn&apos;t used yet, so I&apos;m adding explanations. OK?"?>sqrt<?oxy_comment_end?>(13)<?oxy_insert_start author="mmyers" timestamp="20101121T183540-0500"?>,
+            or the square root of 13<?oxy_insert_end?></choice>
+         <choice value="Res4"
+            >sqrt(89)<?oxy_insert_start author="mmyers" timestamp="20101121T183551-0500"?>, or the
+            square root of 89<?oxy_insert_end?></choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. It seems like you are adding &#963;<sub>T</sub> and
+                  &#963;<sub>Y</sub><?oxy_insert_start author="mmyers" timestamp="20101121T183504-0500"?>,<?oxy_insert_end?>
+               which is wrong. Note that the rule says that if X and Y are two independent random
+               variables then: &#963;<sup>2</sup><sub>X+Y</sub> = &#963;<sup>2</sup><sub>X</sub> +
+                  &#963;<sup>2</sup><sub>Y</sub>, and then to find the standard deviation of X + Y,
+               you'll take the square root. </feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. You are using the right rule,
+               &#963;<sup>2</sup><sub>X+Y</sub> = &#963;<sup>2</sup><sub>X</sub> +
+               &#963;<sup>2</sup><sub>Y</sub>, which gives you the variance of T. Note,
+               however that we are asking you to find the standard deviation of T. Try
+               again.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. It seems like you are adding the two standard
+               deviations and then taking a square root of that, which is wrong. Note that the rule
+               says that if X and Y are two independent random variables then:
+               &#963;<sup>2</sup><sub>X+Y</sub> = &#963;<sup>2</sup><sub>X</sub> +
+               &#963;<sup>2</sup><sub>Y</sub>, and then to find the standard deviation of
+               X+Y, you'll take the square root. </feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101121T183739-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T183738-0500" content="J"?>ob!
+               Indeed, since X and Y are independent: &#963;<sup>2</sup><sub>T</sub> =
+                  &#963;<sup>2</sup><sub>X+Y</sub> = &#963;<sup>2</sup><sub>X</sub> +
+                  &#963;<sup>2</sup><sub>Y</sub> = 25 + 64 = 89. Therefore &#963;<sub>T</sub> is the
+               square root of 89.</feedback>
+         </response>
+      </part>
+   </question>
+   
+</assessment>

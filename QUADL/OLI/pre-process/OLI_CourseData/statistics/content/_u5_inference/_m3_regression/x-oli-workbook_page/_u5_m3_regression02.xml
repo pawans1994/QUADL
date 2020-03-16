@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page id="_u5_m3_regression02">
+	<head>
+		<title>Introduction to Multiple Regression</title>
+		<!---->
+
+	</head>
+	<body>
+		<!--<objref idref="objective1"/>-->
+
+		<p>So far, we’ve dealt with the case where we have only one explanatory variable, X, and one
+			response variable, Y, both of which were quantitative. Broadly speaking, our two main
+			goals were:</p>
+		<ol>
+			<li>Explore the nature of the relationship between X and Y and assess whether we can
+				generalize the observed pattern from the sample to the entire population.</li>
+			<li>Assess the importance of the explanatory variable X as a predictor for Y, and
+				quantify the strength of such a prediction. </li>
+		</ol>
+
+		<p>As you remember, what enabled us to pursue our goals and was at the center of our entire
+			analysis was the <em>statistical model</em>. As we discussed, this model is a simple
+			approximation for how variables relate in the population which made sense based on the
+			observed data.</p>
+		<p>When the observed the following pattern in the data:</p>
+		<image style="block" src="../webcontent/_u5_m3_img02.gif"
+			alt="scatterplot showing a straight linear relationship"/>
+		<p>It made sense to assume the simple linear regression model:</p>
+		<image style="block" src="../webcontent/_u5_m3_img03.gif"
+			alt="formula: y equals beta sub 0 plus beta sub 1 x plus epsilon"/>
+		<p>which assumes that the relationship between X and Y in the population follows a linear
+			pattern, and that the data points follow this general pattern but not perfectly; we
+			recognized that there are some deviations from the pattern. We further made some
+			assumptions about the behavior of the deviations, and in particular we quantified their
+			magnitude by their standard deviation &sigma;.</p>
+		<p>When we observed the following pattern in the data,</p>
+		<image style="block" src="../webcontent/_u5_m3_img04.gif"
+			alt="scatterplot showing a curved relationship starting in the upper left corner moving down and curving back up slightly in the lower right."/>
+		<p>It made sense to assume the quadratic regression model:</p>
+		<image style="block" src="../webcontent/_u5_m3_img05.gif"
+			alt="formula: y equals beta sub 0 plus beta sub 1 x plus beta sub 2 x squared plus epsilon"/>
+		<p>which assumes that the relationship between X and Y in the population follows a <em
+				style="italic">quadratic</em> pattern, and, again, that the data points follow this
+			general pattern but not perfectly.</p>
+		<p>In the remainder of this regression module, we are moving <em>multiple regression</em>,
+			where we explore the relationship between the response variable Y and several
+			explanatory variables: X<sub>1</sub>, X<sub>2</sub>, …,X<sub>k</sub>, . We will ask
+			interesting questions such as:</p>
+		<ul>
+			<li>How can we use all the explanatory variables <em style="italic">collectively</em> to
+				predict the response Y?</li>
+			<li>Are all out explanatory variables really relevant (or important) for the purpose of
+				predicting Y?</li>
+			<li>Do all the explanatory variables have to be quantitative, or can we include some
+				categorical explanatory variables as well?</li>
+			<li>If we start with a lot of explanatory variables, is there some systematic method
+				that will give us the “best” subset of explanatory variables among them.</li>
+		</ul>
+		<p>The only down side of multiple regression compared to dealing with only one explanatory
+			variable is that we loose the ability to easily visualize all data in a way that will
+			lead us to coming up with a statistical model that makes sense. To illustrate this
+			point, consider the following hypothetical example.</p>
+
+		<example>
+			<p>In an effort to be able to effectively predict a students’ score in a second
+				statistics course (Stats2), an instructor collected data from 100 students who have
+				just completed the course. </p>
+			<ul style="none">
+				<li>The two explanatory variables are: <ul>
+						<li>X<sub>1</sub> – SAT-M score</li>
+						<li>X<sub>2</sub> – Stats 1 course score,</li>
+					</ul></li>
+				<li>and the response: <ul>
+						<li>Y- Stats2 course score</li>
+					</ul>
+				</li>
+			</ul>
+			<image style="block" src="../webcontent/_u5_m3_img06.gif"
+				alt="data table displaying raw data for all variables"/>
+			<p>In this, simplest case of multiple regression (in the sense that we have only two
+				explanatory variables), we can plot the data in a a “3D scatterplot”:</p>
+			<image style="block" src="../webcontent/_u5_m3_img07.gif"
+				alt="3D scatterplot displaying the relationship of y to both explanatory variables"/>
+			<p>However, as you can see there is really not much information that we can gain from
+				looking at the graph regarding the relationship between X<sub>1</sub>, X<sub>2</sub>
+				and Y, and in particular, the plot does not help us in determining what would be a
+				reasonable model to use.</p>
+			<p>Furthermore, once we add another, third, explanatory variable, then there is really
+				no way that we can visualize the entire data.</p>
+			<p>As we’ll see there are ways to “overcome” this problem and the do the best we
+				can.</p>
+			<p>On the upside, multiple regression will allow us to analyze much more complex
+				datasets and will further expose us to the power of data analysis in extracting
+				useful information from data.</p>
+
+		</example>
+
+	</body>
+</workbook_page>

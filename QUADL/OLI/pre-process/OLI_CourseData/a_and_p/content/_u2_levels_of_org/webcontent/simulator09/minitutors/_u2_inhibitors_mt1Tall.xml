@@ -1,0 +1,62 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+       <item ident="_u2_inhibitors1">
+         <presentation>
+           <material>
+             <mattext texttype="text/plain">Using the radio dials at the right, select
+increasing concentrations of substrate to investigate how the concentration of substrate affects the reaction velocity, v. The reaction velocity is just the rate of product formation/unit time, under steady-state conditions.
+
+You can view the molecular events that occur in the upper animation and the velocity versus substrate is plotted on the lower graph.
+
+Select [S]=2, and mentally note how frequently the four enzyme molecules have substrate.  
+Now make [S]=4. 
+
+&lt;b&gt;What happens to the average number of enzymes with substrate bound when [S] is increased from 2 to 4?&lt;/b&gt; </mattext></material>
+           <response_lid rcardinality="Single" ident="LID_01">
+             <render_choice>
+               <response_label ident="Res1">
+                 <material>
+                   <mattext texttype="text/plain">increases</mattext></material></response_label>
+               <response_label ident="Res2">
+                 <material>
+                   <mattext texttype="text/plain">decreases</mattext></material></response_label>
+               </render_choice>
+           </response_lid>
+         </presentation>
+         <resprocessing>
+           <outcomes>
+             <decvar varname="SCORE" vartype="integer"/></outcomes>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_01">Res1</varequal>
+             </conditionvar>
+             <setvar varname="SCORE">10</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/>
+           </respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_01">Res2</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+        </resprocessing>
+         <itemfeedback ident="hint">
+           <hint>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">The number of enzyme-substrate complexes increases as the number of collisions between the enzyme and substrate occur.</mattext></material>
+             </hintmaterial>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">Increasing the concentration of substrate increases the number of collisions.</mattext></material>
+             </hintmaterial>
+              
+            </hint>
+         </itemfeedback>
+         <itemfeedback ident="FeedBack1">
+           <material>
+             <mattext texttype="text/plain">Correct.  As [S] increases, you get more collisions between the enzyme and substrate, increasing the concentration of the complex.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack2">
+           <material>
+             <mattext texttype="text/plain">Incorrect.  As [S] increases, you get more collisions between the enzyme and substrate, increasing the concentration of the complex.</mattext></material></itemfeedback>
+        </item>
+     </questestinterop>

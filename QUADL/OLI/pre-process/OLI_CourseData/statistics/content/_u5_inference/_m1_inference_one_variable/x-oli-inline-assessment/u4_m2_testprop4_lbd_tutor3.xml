@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop4_lbd_tutor3" max_attempts="100">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>How is the test statistic affected if  p-hat = 0.74 as before? Choose the correct statement.</body>
+            <multiple_choice shuffle="false">
+                <choice value="A">The test statistic is still about 1 since the distance between p-hat and p<sub>o</sub> is the same as before. </choice>
+                <choice value="B">The test statistic increases to about 2 since p-hat = 0.74 is
+                    about 2 standard deviations above p<sub>o</sub> = 0.64.</choice>
+                <choice value="C">The test statistic decreases to about 0.5 since the standard deviation decreased to half of its previous size.</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect.  The test statistic is the number of standard deviations that p-hat is from p<sub>o</sub>.  Please try again.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct.  Since the standard deviation is now 0.05, the distance of 0.10 is now 2 standard deviations.</feedback>
+                </response>
+                <response match="C">
+                    <feedback>Incorrect.  The test statistic is the number of standard deviations that p-hat is from p<sub>o</sub>.  Please try again.</feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q2">
+            <body>For which sample size does p-hat = 0.74 provide stronger evidence against a null
+                hypothesis of p = 0.60?</body>
+            <multiple_choice shuffle="false">
+                <choice value="A">n = 25</choice>
+                <choice value="B">n = 100</choice>
+                <choice value="C">n = 500</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect.  Which sample size will give the largest test statistic? Please try again.</feedback>
+                </response>
+                <response match="B">
+                    <feedback>Incorrect.  Which sample size will give the largest test statistic? Please try again.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct.  Sampling distributions for large samples have less variability. So p-hat = 0.74 will be more standard deviations from p = 0.60, giving a larger test statistic and stronger evidence against H<sub>o</sub>.</feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q3">
+            <body>In general, the further the test statistic is from 0, the <input_ref input="A"/>
+                the evidence against the null hypothesis. </body>
+            <fill_in_the_blank id="A" shuffle="false">
+                <choice value="A">stronger</choice>
+                <choice value="B">weaker</choice>
+            </fill_in_the_blank>
+            <part>
+                <response input="A" match="A" name="stronger" score="10">
+                    <feedback>Correct. The further the test statistic is from zero, the more standard deviations p-hat is from p<sub>0</sub>. The larger the discrepancy between the data and the claim about p in H<sub>0</sub> the stronger the evidence against H<sub>0</sub>.</feedback>
+                </response>
+                <response input="A" match="B" name="weaker">
+                    <feedback>Incorrect. The further the test statistic is from zero, the more standard deviations p-hat is from p<sub>0</sub>. The larger the discrepancy between the data and the claim about p in H<sub>0</sub> the stronger the evidence against H<sub>0</sub>.</feedback>
+                </response>
+            </part>
+        </question>    
+    </page>
+</assessment>

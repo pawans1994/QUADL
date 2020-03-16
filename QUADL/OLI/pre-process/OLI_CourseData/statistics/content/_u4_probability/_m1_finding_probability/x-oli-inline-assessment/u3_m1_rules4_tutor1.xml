@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules4_tutor1">
+   <title>Tutor</title>
+   <page>
+   <question id="q1">
+      <body>
+         <p>Find P(D1) and
+               P(D2).<?oxy_insert_start author="mmyers" timestamp="20101108T131835-0500"?> Write
+               your answers in the text box below.<?oxy_insert_end?></p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>To be a potential donor for patient 1, who has blood type A, a person must
+                  have<?oxy_delete author="mmyers" timestamp="20101108T131934-0500" content=" either"?>
+                  blood type A or O. Therefore:</p>
+            <p>P(D1) = P(A or O) = P(A) + P(O) = .42 + .44 = .86. </p>
+            <p>Note that in this case we can safely use the addition rule for disjoint events since
+                  the events A and O are disjoint because
+                  <?oxy_insert_start author="mmyers" timestamp="20101108T132333-0500"?>we are
+                  presuming that <?oxy_insert_end?>a person cannot have more than one blood
+                  type.</p>
+            <p>Similarly, to be a potential donor for patient 2, who has blood type B, a person must
+                  have<?oxy_delete author="mmyers" timestamp="20101108T132354-0500" content=" either"?>
+                  blood type B or O. Therefore:</p>
+            <p>P(D2) = P(B) + P(O) = .10 + .44 = .54.</p>
+         </explanation>
+      </part>
+   </question></page>
+</assessment>

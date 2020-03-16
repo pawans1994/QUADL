@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">Based on the R output, state the test statistic, interpret its value, and show how it was found.</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">Here is the R output:
+
+&gt; z.test(pregnancy$length, 16, 266, "less")
+[1] "mean =  259.68 n =  25 , z =  -1.97500000000000 , p-value =  0.0241340740047249"
+
+Based on the output the sample mean pregnancy length of the 25 women is 259.68. In addition we know that n = 25, &#x03BC; = 266 and &#x03C3; = 16.  The test statistic is therefore:</mattext>
+<matimage label="" uri="../../../webcontent/flash/_u5_m1_lbdtutor14c_image2.jpg"/>
+<mattext texttype="text/plain">as given in the output. This means that the sample mean is almost two standard deviations below the null value.</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

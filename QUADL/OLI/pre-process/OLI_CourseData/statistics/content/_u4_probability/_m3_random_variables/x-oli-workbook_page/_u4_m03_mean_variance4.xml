@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_mean_variance4">
+<head>
+<title>Mean and Variance of a Random Variable (4 of 5)</title>
+    <objref idref="find_mean_variance_discrete_random"/>
+</head>
+<body>
+   
+<section>
+<title>Variance and Standard Deviation of a Discrete Random Variable</title>
+<body>
+<p>In Exploratory Data Analysis, we used the mean of a sample of quantitative values (their
+                    arithmetic average<?oxy_insert_start author="mmyers" timestamp="20101121T151335-0500"?>,<?oxy_insert_end?>
+                    <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>) to tell the center of their distribution, and the standard deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T151331-0500"?>(<?oxy_insert_end?>s<?oxy_insert_start author="mmyers" timestamp="20101121T151332-0500"?>)<?oxy_insert_end?>
+                    to tell the typical distance of sample values from their mean. We
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T151625-0500"?>described<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T151623-0500" content="tell"?>
+                    the center of a probability distribution for a random variable by reporting its
+                    mean <m:math overflow="scroll">
+                        <m:msub>
+                            <m:mi>μ</m:mi>
+                            <m:mrow>
+                                <m:mi>X</m:mi>
+                            </m:mrow>
+                        </m:msub>
+                    </m:math>, and now we would like to establish an accompanying measure of spread.
+                    Our measure of spread will still report the typical distance of values from
+                    their
+                    mean<?oxy_insert_start author="mmyers" timestamp="20101121T151645-0500"?>s<?oxy_insert_end?>,
+                    but in order to distinguish the spread of a population of all of a random
+                    variable's values from the spread
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T151655-0500"?>(<?oxy_insert_end?>s<?oxy_insert_start author="mmyers" timestamp="20101121T151657-0500"?>)<?oxy_insert_end?>
+                    of sample values, we will denote the standard deviation of the random variable X
+                    with the Greek lower case "sigma," and use a subscript to remind us what is the
+                    variable of interest (there may be more than one in later problems):</p>
+</body>
+</section>
+<section>
+<title>Notation:
+			<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>
+</title>
+<body>
+<p>We will also focus more frequently than before on the squared standard deviation, called the <em>variance</em>, because some important rules we need to invoke are in terms of variance <m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+</m:math> rather than standard deviation <m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>.</p>
+<example><title>Xavier's Production Line</title>
+
+<p>Recall that the number of defective parts produced each hour by Xavier's production line is a random variable X with the following probability distribution:</p>
+<image style="block" src="../webcontent/image012.gif" alt="A probability distribution table with two rows, labeled &quot;X&quot;
+and &quot;P(X=x).&quot; The data in column format (X: P(X=x)):
+        0: .15;
+        1: .30;
+        2: .25;
+        3: .20;
+        4: .10;"/>
+<p>We found the mean number of defective parts produced per hour to be <m:math overflow="scroll">
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mrow>
+                                    <m:mi>X</m:mi>
+                                </m:mrow>
+                            </m:msub>
+                        </m:math><?oxy_insert_start author="mmyers" timestamp="20101121T151814-0500"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T151815-0500"?>
+                        <?oxy_insert_end?>1.8. Obviously, there is variation about this mean: some
+                        hours as few as 0 defective parts are produced, whereas in other hours as
+                        many as 4 are produced. Typically, how far does the number of defective
+                        parts fall from the mean of 1.8? As we did for the spread of sample values,
+                        we measure the spread of a random variable by calculating the square root of
+                        the average squared deviation from the mean. Now "average" is a weighted
+                        average, where more probable values of the random variable are accordingly
+                        given more weight. Let's begin with the variance, or average squared
+                        deviation from the mean, and then take its square root to find the standard
+                        <?oxy_comment_start author="mmyers" timestamp="20101121T152313-0500" comment="consider adding asterisks to indicate multiplication, and making sure there is a space between &quot;+&quot; or &quot;-&quot; and the numerals or parentheses, in the variance equation below -- simply relying on &quot;proximity&quot; to indicate mulitplication can be confusing when superscripts and multiple parentheses are involved."?>deviation:<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image033.gif" alt="A table describing for several characteristics
+of of possible values of X. For X=0, Dev. from mean = (0-1.8), Sq. deviation = (0-1.8)&sup2;, and P(X=0)
+= .15 . For X=1, Dev. from mean = (1-1.8), Sq. deviation = (1-1.8)&sup2;, and P(X=1) = .30. For X=2, Dev.
+from mean = (2-1.8), Sq. deviations = (2-1.8)&sup2;, and P(X=2) = .25 . For X=3, Dev. from mean = (3-1.8),
+Sq. deviations = (3-1.8)&sup2;, and P(X=3) = .20 . For X=4, Dev. from mean = (4-1.8), Sq. deviations =
+(4-1.8)&sup2;, and P(X=4) = .10 ."/>
+<p>
+<m:math overflow="scroll">
+<m:mi>Variance</m:mi>
+<m:mo>=</m:mo>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>3</m:mn>
+<m:mn>0</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>2</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>3</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:mn>4</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>4</m:mn>
+<m:mn>6</m:mn>
+</m:math>
+</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>standard deviation</m:mi>
+<m:mi/>
+<m:mo>=</m:mo>
+<m:mi/>
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>4</m:mn>
+<m:mn>6</m:mn>
+</m:mrow>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>1</m:mn>
+</m:math>
+</p>
+</example>
+<p>How do we interpret the standard deviation of X?</p>
+<p>Xavier's production line produces an average of 1.80 defective parts per hour. The number of defective parts varies from hour to hour; typically (or, on average), it is about 1.21 away from 1.80.</p>
+<p>Here is the formal definition:</p>
+<!--:WARNING: The syntax of the definition element has changed.-->
+<!--Please verify that the translated output below is correct.-->
+<definition>
+<term>standard deviation of a discrete random variable</term>
+<meaning>
+<material><p>For any discrete random variable X with
+                                <?oxy_insert_start author="mmyers" timestamp="20101121T152400-0500"?>a
+                                <?oxy_insert_end?>probability
+                                distribution<?oxy_insert_start author="mmyers" timestamp="20101121T152403-0500"?>
+                                of<?oxy_insert_end?></p>
+<p>
+<image style="block" src="../webcontent/image011.gif" alt="white space"/>
+<image style="block" src="../webcontent/image020.gif" alt="A probability distribution table
+with two rows, labeled &quot;X&quot; and &quot;P(X=x)&quot;. Here is the data in the table,
+given in column format (X: P(X=x)):
+        x_1: p_1;
+        x_2: p_2;
+        x_3: p_3;
+        ...
+        x_n: p_n;"/>
+</p>
+<p>the <em>variance</em> of X is defined to
+                                <?oxy_comment_start author="mmyers" timestamp="20101121T152900-0500" comment="consider adding asterisks for multiplication, and an explanation of the sum sign, for the equation below. (Has everyone who is taking statistics taken calculus? If so, have they necessarily taken it recently enought to remember it?) "?>be<?oxy_comment_end?></p>
+<p>
+<m:math overflow="scroll">
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+<m:mo>=</m:mo>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mrow>
+<m:mn>1</m:mn>
+</m:mrow>
+</m:msub>
+<m:mo>-</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mn>1</m:mn>
+</m:mrow>
+</m:msub>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msub>
+<m:mo>-</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msub>
+<m:mo>+</m:mo>
+<m:mo>.</m:mo>
+<m:mo>.</m:mo>
+<m:mo>.</m:mo>
+<m:mo>+</m:mo>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>-</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>
+<m:math overflow="scroll">
+<m:mo>=</m:mo>
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:munderover>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>-</m:mo>
+<m:msub>
+<m:mi>μ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:msup>
+<m:mo>)</m:mo>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+<m:msub>
+<m:mi>p</m:mi>
+<m:mrow>
+<m:mi>i</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>
+</p>
+<p>and the <em>standard deviation</em> is</p>
+<p>
+<m:math overflow="scroll">
+<m:msub>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:msubsup>
+<m:mi>σ</m:mi>
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+</m:mrow>
+</m:msubsup>
+</m:mrow>
+</m:msqrt>
+</m:math>
+</p></material>
+</meaning>
+</definition>
+<image style="block" src="../webcontent/image011.gif" alt="white space"/>
+<p> </p>
+</body>
+</section>
+    <!--<activity idref="_u4_m3_dig5" purpose="didigetthis"/>-->
+    <wb:inline idref="u3_m3_meanvariance4_tutor1" purpose="didigetthis"/>
+    <!--<activity idref="_u4_m3_lbd4" purpose="learnbydoing"/>-->
+    <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101121T154149-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T154147-0500" content="is"?>
+            next activity is to give you better intuition about the mean and standard deviation of a
+            random variable.</p>
+    <wb:inline idref="u3_m3_meanvariance4_tutor2" purpose="learnbydoing"/>
+</body>
+</workbook_page>

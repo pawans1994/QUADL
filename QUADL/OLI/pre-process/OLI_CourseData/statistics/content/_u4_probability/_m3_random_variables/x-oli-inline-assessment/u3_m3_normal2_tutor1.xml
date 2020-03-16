@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal2_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p><em>(d)</em> How likely or unlikely is a male's foot length to be smaller than 9.5
+                inches? Not too unlikely, since the probability of being smaller than 9.5 is
+                    <input_ref input="A"/>, which is not a particularly low probability.</p>
+            <p><em>(e)</em> How likely or unlikely is a foot length longer than 15.5 inches? Extremely
+                unlikely, since the probability of being longer than 15.5 is only <input_ref
+                    input="B"/>.</p>
+            <p><em>(f)</em> There is probability of 0.5 that a male's foot is shorter than
+                    <input_ref input="C"/>.</p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">0.025</choice>
+            <choice value="two">0.05</choice>
+            <choice value="three">0.16</choice>
+            <choice value="four">0.32</choice>
+            <choice value="five">0.68</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">0.0015</choice>
+            <choice value="two">0.003</choice>
+            <choice value="three">0.015</choice>
+            <choice value="four">0.025</choice>
+            <choice value="five">0.05</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="C" shuffle="false">
+            <choice value="one">9.5</choice>
+            <choice value="two">11</choice>
+            <choice value="three">12.5</choice>
+        </fill_in_the_blank>
+        <part>
+            <response input="A" name="0.025" match="one">
+                <feedback>Incorrect. The probability that foot length is between 9.5 and 12.5 is
+                    0.68. This means that the remaining two tails (below 9.5 and above 12.5) together
+                    have a probability of 0.32. What is the probability, then, of just one of the
+                    tails' foot length being below 9.5? </feedback>
+            </response>
+            <response input="A" name="0.05" match="two">
+                <feedback>Incorrect. The probability that foot length is between 9.5 and 12.5 is
+                    0.68. This means that the remaining two tails (below 9.5 and above 12.5) together
+                    have a probability of 0.32. What is the probability, then, of just one of the
+                    tails' foot length being below 9.5? </feedback>
+            </response>
+            <response input="A" name="0.16" match="three" score="1">
+                <feedback>Correct. The probability that foot length is between 9.5 and 12.5
+                    is 0.68, and therefore the remaining two tails together have probability 1 − 0.68
+                    = 0.32. We conclude, then, that: P(X &lt; 9.5) = 0.32/2 = 0.16.</feedback>
+            </response>
+            <response input="A" name="0.32" match="four">
+                <feedback>Incorrect. The probability that foot length is between 9.5 and 12.5 is
+                    0.68. This means that the remaining two tails (below 9.5 and above 12.5) together
+                    have a probability of 0.32. What is the probability, then, of just one of the
+                    tails' foot length being below 9.5? </feedback>
+            </response>
+            <response input="A" name="0.68" match="five">
+                <feedback>Incorrect. The probability that foot length is between 9.5 and 12.5 is
+                    0.68. This means that the remaining two tails (below 9.5 and above 12.5) together
+                    have a probability of 0.32. What is the probability, then, of just one of the
+                    tails' foot length being below 9.5? </feedback>
+            </response>
+            <hint>The probability that foot length is between 9.5 and 12.5 is 0.68. This means that
+                the remaining two tails (below 9.5 and above 12.5) together have a probability of
+                0.32. What is the probability, then, of just one of the tails' foot length being
+                below 9.5?</hint>
+        </part>
+        <part>
+            <response input="B" name="0.0015" match="one" score="1">
+                <feedback>Correct. The probability that foot length is between 6.5 and 15.5
+                    is 0.997, and therefore the remaining two tails together have probability 1 −
+                    0.997 = 0.003. We conclude, then, that P(X &gt; 15.5) = 0.003/2 =
+                    0.0015.</feedback>
+            </response>
+            <response input="B" name="0.003" match="two">
+                <feedback>Incorrect. The probability that foot length is between 6.5 and 15.5 is
+                    0.997. This means that the remaining two tails (below 6.5 and above 15.5)
+                        <em style="italic">together</em> have a probability of 0.003. What is the probability, then,
+                    of just one of the tails' foot length being above 15.5? </feedback>
+            </response>
+            <response input="B" name="0.015" match="three">
+                <feedback>Incorrect. The probability that foot length is between 6.5 and 15.5 is
+                    0.997. This means that the remaining two tails (below 6.5 and above 15.5)
+                        <em style="italic">together</em> have a probability of 0.003. What is the probability, then,
+                    of just one of the tails' foot length being above 15.5? </feedback>
+            </response>
+            <response input="B" name="0.025" match="four">
+                <feedback>Incorrect. The probability that foot length is between 6.5 and 15.5 is
+                    0.997. This means that the remaining two tails (below 6.5 and above 15.5)
+                        <em>together</em> have a probability of 0.003. What is the probability, then,
+                    of just one of the tails' foot length being above 15.5? </feedback>
+            </response>
+            <response input="B" name="0.05" match="five">
+                <feedback>Incorrect. The probability that foot length is between 6.5 and 15.5 is
+                    0.997. This means that the remaining two tails (below 6.5 and above 15.5)
+                        <em>together</em> have a probability of 0.003. What is the probability, then,
+                    of just one of the tails' foot length being above 15.5? </feedback>
+            </response>
+            <hint>The probability that foot length is between 6.5 and 15.5 is 0.997. This means that
+                the remaining two tails (below 6.5 and above 15.5) together have a probability of
+                0.003. What is the probability, then, of just one of the tails' foot length
+                being above 15.5? </hint>
+        </part>
+        <part>
+            <response input="C" name="9.5" match="one">
+                <feedback>Incorrect. This value does not divide the area under the
+                    curve into two halves.</feedback>
+            </response>
+            <response input="C" name="11" match="two" score="1">
+                <feedback>Correct. The value that divides the area under the curve
+                    into two halves is 11, so P(X &lt; 11) = P(X &gt; 11) = 0.5.</feedback>
+            </response>
+            <response input="C" name="12.5" match="three">
+                <feedback>Incorrect. This value does not divide the area under the
+                    curve into two halves.</feedback>
+            </response>
+            <hint>Which value divides the area under the normal curve into two halves?</hint>
+        </part>
+    </question>
+</assessment>

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_mu9">
+    <head>
+        <title>Hypothesis Testing for the Population Mean (9 of <!--9-->9)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+    <body>
+        
+        <p>For comparison purposes, we use a modified version of the two problems we used in
+            the previous case. We first introduce the modified versions and explain the
+            changes.</p>
+        <example>
+            <title>1</title>
+            <p>The SAT is constructed so that scores have a national average of 500. The
+                distribution is close to normal. The dean of students of Ross College suspects that
+                in recent years the college attracts students who are more quantitatively inclined.
+                A random sample of 4 students
+                <?oxy_delete author="mmyers" timestamp="20101128T090718-0500" content="from a recent "?>entering
+                <?oxy_delete author="mmyers" timestamp="20101128T090730-0500" content="class at "?>Ross
+                college had an average math SAT (SAT-M) score of 550, and a sample standard
+                deviation of 100. Does this provide enough evidence for the dean to conclude that
+                the mean SAT-M of all Ross College students is higher than the national mean of
+                500?</p>
+            <p>Here is a figure that represents this example where the changes are marked in
+                blue:</p>
+            <image style="block" src="../webcontent/image372.gif" alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. The question we need to answer is &quot;is the mean SAT-M
+500 (national mean) or is it higher?&quot; We take a sample from the population of size n = 4,
+represented by a smaller circle. For this sample, x-bar = 550, and S = 100."/>
+            <p>Note that the problem was changed so that the population standard deviation (which
+                was assumed to be 100 before) is now unknown, and instead we assume that the sample
+                of 4 students produced a sample mean of 550 (no change) and a sample standard
+                deviation of s=100. (Sample standard deviations are never such nice rounded numbers,
+                but for <?oxy_insert_start author="mmyers" timestamp="20101128T090922-0500"?>the
+                sake of <?oxy_insert_end?>comparison
+                <?oxy_delete author="mmyers" timestamp="20101128T090928-0500" content="sake "?>we
+                left it as 100.) Note that due to the changes, the z-test for the population mean is
+                no longer appropriate, and we need to use the t-test.</p>
+        </example>
+        <example>
+            <title>2</title>
+            <p>A certain prescription medicine is supposed to contain an average of 250 parts per
+                million (ppm) of a certain chemical. If the concentration is higher than this, the
+                drug may cause harmful side effects; if it is lower, the drug may be ineffective.
+                The manufacturer runs a check to see if the mean concentration in a large shipment
+                conforms to the target level of 250 ppm or not. A simple random sample of 100
+                portions is tested, and the sample mean concentration is found to be 247 ppm with a
+                sample standard deviation of 12 ppm. Again, here is a figure that represents this
+                example where the changes are marked in blue:</p>
+            <image style="block" src="../webcontent/image373.gif" alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. We need to
+answer &quot;is the mean concentration the required 250ppm or not?&quot; Selected from the population is a 
+sample of size n=100, represented by a smaller circle. x-bar for this sample is 247 and S=12."/>
+            <p>The changes are similar to example 1: we no longer assume that the population
+                standard deviation is known, and instead
+                <?oxy_insert_start author="mmyers" timestamp="20101128T091027-0500"?>use
+                <?oxy_insert_end?>the sample standard deviation
+                <?oxy_insert_start author="mmyers" timestamp="20101128T091032-0500"?>of<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091032-0500" content="is"?>
+                12. Again, the problem was thus changed from a z-test problem to a t-test
+                problem.</p>
+            <p>However, as we mentioned earlier, due to the large sample size (n<?oxy_insert_start author="mmyers" timestamp="20101128T091044-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101128T091044-0500"?>
+                <?oxy_insert_end?>100) there should not be much difference whether we use the z-test
+                or the t-test. The sample standard deviation,
+                <?oxy_insert_start author="mmyers" timestamp="20101128T091052-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091052-0500" content="S"?>,
+                is expected to be close enough to the population standard deviation <m:math
+                    overflow="scroll">
+                    <m:mi>σ</m:mi>
+                </m:math> . We'll see this as we solve the problem.</p>
+        </example>
+        <p>Let's carry out the t-test for both
+            <?oxy_insert_start author="mmyers" timestamp="20101128T091107-0500"?>of
+            <?oxy_insert_end?>these problems:</p>
+        <p>
+            <em>Example 1:</em>
+        </p>
+        <p>1. <?oxy_insert_start author="mmyers" timestamp="20101128T091126-0500"?>There are
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091129-0500" content="N"?><?oxy_insert_start author="mmyers" timestamp="20101128T091130-0500"?>n<?oxy_insert_end?>o
+            change<?oxy_insert_start author="mmyers" timestamp="20101128T091132-0500"?>s<?oxy_insert_end?>
+            in the hypotheses being tested:</p>
+        <image style="block" src="../webcontent/image374.gif" alt="H_0: &mu; = 500,    H_a: &mu;
+&gt; 500"/>
+        <p>2. The conditions that allow us to use the t-test are met since:</p>
+        <p> (i)
+            <?oxy_insert_start author="mmyers" timestamp="20101128T091141-0500"?>T<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091141-0500" content="t"?>he
+            sample is
+            random<?oxy_insert_start author="mmyers" timestamp="20101128T091144-0500"?>.<?oxy_insert_end?></p>
+        <p> (ii) SAT-M is known to vary normally in the population (which is crucial
+            here<?oxy_insert_start author="mmyers" timestamp="20101128T091154-0500"?>,<?oxy_insert_end?>
+            since the sample size is only 4).</p>
+        <p> In other words, we are in the following situation:</p>
+        <image style="block" src="../webcontent/image328.gif" alt="A table which has two columns and two rows,
+and is titled &quot;Conditions: z-test for a population mean.&quot; The column headings are: &quot;Small
+Sample Size&quot; and &quot;Large Sample Size. &quot; The row headings are &quot;Variable varies normally
+in the population&quot; and &quot;Variable doesn't vary normally in the population.&quot; Here is the data
+in the table by cell in &quot;Row, Column: Value&quot; format:
+            Variable varies normally in the population, Small sample size: OK (this is the case this example falls in);
+            Variable varies normally in the population, Large sample size: OK;
+            Variable doesn't vary normally in the population, Small sample size: NOT OK;
+            Variable doesn't vary normally in the population, Large sample size: OK;"/>
+        <p> The test statistic is <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>550</m:mn>
+                            <m:mo>−</m:mo>
+                            <m:mn>500</m:mn>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mn>100</m:mn>
+                            <m:msqrt>
+                                <m:mn>4</m:mn>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                </m:mrow>
+            </m:math>
+        </p>
+        <p> The data (represented by the sample mean) are 1 standard error above the null value.</p>
+        <p>3. Finding the
+            p-value<?oxy_insert_start author="mmyers" timestamp="20101128T091228-0500"?>.<?oxy_insert_end?></p>
+        <p> Recall that in general the p-value is calculated under the null distribution of the test
+            statistic,
+            <?oxy_comment_start author="mmyers" timestamp="20101128T091542-0500" comment="remove paragraph break"?>which<?oxy_insert_start author="mmyers" timestamp="20101128T091259-0500"?>,<?oxy_comment_end?><?oxy_insert_end?></p>
+        <p> in the t-test
+            case<?oxy_insert_start author="mmyers" timestamp="20101128T091546-0500"?>,<?oxy_insert_end?>
+            is t(n-1). In our case<?oxy_insert_start author="mmyers" timestamp="20101128T091553-0500"?>,<?oxy_insert_end?>
+            <?oxy_insert_start author="mmyers" timestamp="20101128T091555-0500"?>in
+            which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091557-0500" content="where"?> n<?oxy_insert_start author="mmyers" timestamp="20101128T091559-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101128T091600-0500"?>
+            <?oxy_insert_end?>4, the p-value is calculated under the t(3) distribution:</p>
+        <image style="block" src="../webcontent/image376.gif" alt="A t(3) distribution with t-scores
+0 and 1 marked. The p-value is the area under the curve to the right of t-score 1."/>
+        <p>Using statistical software, we find that the p-value is 0.196. For comparison purposes,
+            the p-value that we got when we carried out the z-test for this problem (when we assumed
+            that 100 is the known <m:math overflow="scroll">
+                <m:mi>σ</m:mi>
+            </m:math> rather the calculated sample standard deviation<?oxy_insert_start author="mmyers" timestamp="20101128T091702-0500"?>,<?oxy_insert_end?>
+            <?oxy_insert_start author="mmyers" timestamp="20101128T091640-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091640-0500" content="S"?>)
+            was 0.159.</p>
+        <!--  RS 7/28/10 Generalized to eliminate alternatives
+    <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Using Excel, we find that the p-value is 0.196.  For comparison purposes, the p-value that we got when we carried out the z-test for this problem (when we assumed that 100 is the known
+		<m:math overflow="scroll">
+<m:mi>σ</m:mi>
+</m:math>
+		rather the calculated sample standard deviation S) was 0.159.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>To find the p-value we use Minitab:</p>
+<image style="block" src="../webcontent/image415.gif"/>
+<p>For comparison purposes, here is the output we got when we carried out the z-test for this problem (when we assumed that 100 is the known
+		<m:math overflow="scroll">
+<m:mi>σ</m:mi>
+</m:math>
+		rather the calculated sample standard deviation S):</p>
+<image style="block" src="../webcontent/image416.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Using R, we find that the p-value is 0.196.  For comparison purposes, the p-value that we got when we carried out the z-test for this problem (when we assumed that 100 is the known
+            <m:math overflow="scroll">
+                <m:mi>σ</m:mi>
+            </m:math>
+            rather the calculated sample standard deviation S) was 0.159.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>
+-->
+        <p>It is not surprising that the p-value of the t-test is
+            larger<?oxy_insert_start author="mmyers" timestamp="20101128T091739-0500"?>,<?oxy_insert_end?>
+            since the t distribution has fatter tails. Even though in this particular case the
+            difference between the two values does not have practical implications (since both are
+            large and will lead to the same conclusion), the difference is
+            no<?oxy_insert_start author="mmyers" timestamp="20101128T091759-0500"?>t
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091800-0500" content="n-"?>trivial.</p>
+        <p>4. <?oxy_insert_start author="mmyers" timestamp="20101128T091813-0500"?>Making
+            c<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091818-0500" content="C"?>onclusion<?oxy_insert_start author="mmyers" timestamp="20101128T091821-0500"?>s.<?oxy_insert_end?></p>
+        <p> The p-value (0.196) is large, indicating that the results are not significant. The data
+            do not provide enough evidence to conclude that the mean SAT-M among Ross College
+            students is higher than the national mean (500).</p>
+        <p>Here is a
+            <?oxy_comment_start author="mmyers" timestamp="20101128T091916-0500" comment="please use subscripts in graphic below for Ha and Ho"?>summary:<?oxy_comment_end?></p>
+        <image style="block" src="../webcontent/image377.gif" alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. Our hypotheses are H_0: &mu; = 500 and H_a: &mu; &gt; 500.
+We take a sample of size n = 4 from the population, represented by a smaller circle. For this sample,
+we calculate that x-bar = 550 and S = 100. Our conditions are met, so we can find t = 1, and p-value
+= .196 . This p-value is too high, so the conclusion is that H_0 cannot be rejected."/>
+        <p>Example 2:</p>
+        <p>1. <?oxy_insert_start author="mmyers" timestamp="20101128T091933-0500"?>There are
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091936-0500" content="N"?><?oxy_insert_start author="mmyers" timestamp="20101128T091936-0500"?>n<?oxy_insert_end?>o
+            change<?oxy_insert_start author="mmyers" timestamp="20101128T091939-0500"?>s<?oxy_insert_end?>
+            in <?oxy_insert_start author="mmyers" timestamp="20101128T091944-0500"?>the
+            <?oxy_insert_end?>hypothes<?oxy_insert_start author="mmyers" timestamp="20101128T091947-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T091947-0500" content="i"?>s
+            being
+            tested<?oxy_insert_start author="mmyers" timestamp="20101128T091952-0500"?>:<?oxy_insert_end?></p>
+        <image style="block" src="../webcontent/image320.gif" alt="H_0: &mu; = 250, H_a: &mu; &ne; 250"/>
+        <p>2. The conditions that allow us to use the t-test are met:</p>
+        <p> (i) The sample is random</p>
+        <p> (ii) The sample size is large enough for the Central Limit Theorem to apply and ensure<?oxy_delete author="mmyers" timestamp="20101128T092003-0500" content="s"?>
+            <?oxy_insert_start author="mmyers" timestamp="20101128T092005-0500"?>the
+            <?oxy_insert_end?>normality of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>. In other
+            words<?oxy_insert_start author="mmyers" timestamp="20101128T092010-0500"?>,<?oxy_insert_end?>
+            we are in the following situation:</p>
+        <image style="block" src="../webcontent/image333.gif" alt="The same table as before. The case this
+example is in is the &quot;Variable doesn't vary normally in the population, Large sample size&quot;
+case. The table has two columns and two rows, and is titled &quot;Conditions: z-test for a population mean.&quot;
+The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size. &quot; The row headings are
+&quot;Variable varies normally in the population&quot; and &quot;Variable doesn't vary normally in the
+population.&quot; Here is the data in the table by cell in &quot;Row, Column: Value&quot; format:
+              Variable varies normally in the population, Small sample size: OK;
+              Variable varies normally in the population, Large sample size: OK;
+              Variable doesn't vary normally in the population, Small sample size: NOT OK;
+              Variable doesn't vary normally in the population, Large sample size: OK (this is the case this example falls in);"/>
+        <p> The test statistic is: <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>t</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mi>s</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>247</m:mn>
+                            <m:mo>−</m:mo>
+                            <m:mn>25</m:mn>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                        <m:mfrac>
+                            <m:mn>12</m:mn>
+                            <m:msqrt>
+                                <m:mn>100</m:mn>
+                            </m:msqrt>
+                        </m:mfrac>
+                    </m:mfrac>
+                    <m:mo>=</m:mo>
+                    <m:mo>−</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>5</m:mn>
+                </m:mrow>
+            </m:math>
+        </p>
+        <p> The data (represented by the sample mean) are 2.5 standard errors below the null
+            value.</p>
+        <p>3. Finding the
+            p-value<?oxy_insert_start author="mmyers" timestamp="20101128T092031-0500"?>.<?oxy_insert_end?></p>
+        <!--<p> TUTOR WITHIN TEXT 2</p>-->
+        <image style="block" src="../webcontent/image379.gif" alt="A t(99) curve, for which the
+horizontal axis has been labeled with t-scores of -2.5 and 2.5 . The area under the curve and to
+the left of -2.5 and to the right of 2.5 is the p-value."/>
+        <p>To find the p-value we use statistical software, and we calculate a p-value of 0.014 with
+            a 95% confidence interval of (244.619, 249.381). For comparison purposes, the output we
+            got when we carried out the z-test for the same problem was a p-value of 0.012 with a
+            95% confidence interval of (244.648, 249.352).</p>
+        <!--  RS 07/28/10 - Generalized to eliminate alternatives
+     <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>To find the p-value we use Excel, and we calculate a p-value of 0.014 with a 95% confidence interval of (244.619, 249.381).  For comparison purposes, the output we got when we carried out the z-test for the same problem was a p-value of 0.012 with a 95% confidence interval of (244.648, 249.352).</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>To find the p-value we use Minitab</p>
+<image style="block" src="../webcontent/image413.gif"/>
+<p>For comparison purposes, here is the output we got when we carried out the z-test for the same problem:</p>
+<image style="block" src="../webcontent/image414.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>To find the p-value we use R, and we calculate a p-value of 0.014 with a 95% confidence interval of (244.619, 249.381).  For comparison purposes, the output we got when we carried out the z-test for the same problem was a p-value of 0.012 with a 95% confidence interval of (244.648, 249.352).</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+        <p>Note that here the difference between the p-values is quite negligible (.002). This is
+            not
+            surprising<?oxy_insert_start author="mmyers" timestamp="20101128T092112-0500"?>,<?oxy_insert_end?>
+            since the sample size is quite large (n<?oxy_insert_start author="mmyers" timestamp="20101128T092116-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101128T092116-0500"?>
+            <?oxy_insert_end?>100) in which case, as we mentioned, the z-test (in which we are
+            treating
+            <?oxy_insert_start author="mmyers" timestamp="20101128T092124-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092124-0500" content="S"?>
+            as the known <m:math overflow="scroll">
+                <m:mi>σ</m:mi>
+            </m:math> ) is a very good approximation to the t-test. Note also how the two 95%
+            confidence
+            interval<?oxy_insert_start author="mmyers" timestamp="20101128T092231-0500"?>s<?oxy_insert_end?>
+            are similar (for the same reason). </p>
+        <p>4. Conclusions:</p>
+        <p> The p-value is small (.014) indicating that at the 5% significance level, the results
+            are significant. The data therefore provide evidence to conclude that the mean
+            concentration in entire shipment is not the required 250.</p>
+        <p>Here is a
+            <?oxy_comment_start author="mmyers" timestamp="20101128T092327-0500" comment="use subscripts for Ho and Ha in graphic below"?>summary:<?oxy_comment_end?></p>
+        <image style="block" src="../webcontent/image380.gif" alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. Our hypotheses
+are H_0:mean = 250, and H_a: mean is not 250. Selected from the population is a  sample of size n=100,
+represented by a smaller circle. x-bar for this sample is 247, and because our conditions are met, we
+can calculate that t = -2.5, and that the p-value = .014. This p-value is low enough to let us conclude
+that we can reject H_0."/>
+        <section>
+            <title>Comments</title>
+            <body>
+                <p>1. The 95% confidence interval for <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> can be used here in the same way it is used when <m:math
+                        overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> is known: either as a way to conduct the two-sided test (checking
+                    whether the null value falls inside or outside the confidence interval) or
+                    following a t-test where
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T092518-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092516-0500" content="Ho"?>
+                    was rejected (in order to get insight into the value of <m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> ).</p>
+                <p>2. While it is true that when <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> is unknown and for large sample sizes the z-test is a good
+                    approximation for the t-test, since we are using software to carry out the
+                    t-test anyway, there is not much gain in using the z-test as an approximation
+                    instead. We might as well use the more exact t-test regardless of the sample
+                    size.</p>
+                <p> However, it is always worthwhile knowing what happens behind the scenes.</p>
+                <!--<activity idref="_u5_m1_dig20" purpose="didigetthis"/>-->
+                <section purpose="didigetthis">
+                    <title>Did I Get This?</title>
+                    <body>
+                        <p>A group of
+                            <?oxy_insert_start author="mmyers" timestamp="20101128T092549-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092548-0500" content="i"?>nternet
+                            users 50-65 years of age were randomly chosen and asked to report the
+                            weekly number of hours they spend online. The purpose of the study was
+                            to determine whether the mean weekly number of hours that
+                            <?oxy_insert_start author="mmyers" timestamp="20101128T092601-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092600-0500" content="i"?>nternet
+                            users in that age group spend online differs from the mean for
+                            <?oxy_insert_start author="mmyers" timestamp="20101128T092609-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092608-0500" content="i"?>nternet
+                            users in general, which is 12.5 (as reported by "The Digital Future
+                            Report: Surveying the Digital
+                            Future<?oxy_insert_start author="mmyers" timestamp="20101128T092938-0500"?>,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T092938-0500" content="."?>
+                            Year Four"). The following information is available:</p>
+                        <image src="../webcontent/image396.gif" alt="One-Sample T: hr. online.
+            Test of mu = 12.5 vs mu not = 12.5
+            Variable: hr. online
+            N: 125
+            Mean: 12.008
+            StDev: 3.214
+            SE Mean: 0.287
+            95% CI: (11,439,      )
+            T: -1.71
+            P: 0.090"/>
+                        <wb:inline
+                            idref="u4_m2_testmean9_tutor1" purpose="didigetthis"/>
+                    </body>
+                </section>
+                <activity idref="_u5_m1_lbd15" purpose="learnbydoing"/>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>To Summarize</title>
+            <body>
+                <p>1. In hypothesis testing for the population mean
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T102747-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math>
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T102749-0500"?>)<?oxy_insert_end?>,
+                    we distinguish between two cases:</p>
+                <p> I. The less common case when
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T102806-0500"?>the
+                    <?oxy_insert_end?>population standard deviation
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T102809-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101128T102811-0500"?>)<?oxy_insert_end?>
+                    is known.</p>
+                <p> II. The more practical case when the population standard deviation is unknown
+                    and the sample standard deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T102836-0500"?>(s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T102839-0500" content="S"?><?oxy_insert_start author="mmyers" timestamp="20101128T102838-0500"?>)<?oxy_insert_end?>
+                    is used instead.</p>
+                <p>2. In the case when <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> is
+                    known<?oxy_insert_start author="mmyers" timestamp="20101128T102849-0500"?>,<?oxy_insert_end?>
+                    the test for <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> is called the z-test, and in case when <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> is unknown and s is used instead, the test is called the t-test.</p>
+                <p>3. In both
+                    cases<?oxy_insert_start author="mmyers" timestamp="20101128T102908-0500"?>,<?oxy_insert_end?>
+                    the null hypothesis is: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> and the alternative, depending on the context, is one of the following:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>&lt;</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101128T102937-0500"?>, or<?oxy_insert_end?>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>&gt;</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101128T102943-0500"?>, or<?oxy_insert_end?>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>≠</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>4. Both tests can be safely used as long as the following two conditions are
+                    met:</p>
+                <p> (i) The sample is random (or can at least be considered random in context).</p>
+                <p> (ii) Either the sample size is large (n<?oxy_insert_start author="mmyers" timestamp="20101128T102957-0500"?>
+                    <?oxy_insert_end?>&gt;<?oxy_insert_start author="mmyers" timestamp="20101128T102958-0500"?>
+                    <?oxy_insert_end?>30) or, if not, the variable of interest can be assumed to
+                    vary normally in the population.</p>
+                <p>5. In the z-test, the test statistic is:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>z</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>X</m:mi>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                    <m:mo>−</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:mfrac>
+                                    <m:mi mathvariant="normal">σ</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> whose null distribution is the standard normal
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103023-0500"?>distribution
+                    <?oxy_insert_end?>(under which the p-values are calculated).</p>
+                <p>6. In the t-test, the test statistic is:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>t</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>X</m:mi>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                    <m:mo>−</m:mo>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:mfrac>
+                                    <m:mi>s</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> whose null distribution is
+                    <?oxy_delete author="mmyers" timestamp="20101128T103038-0500" content="the"?> t(n<?oxy_insert_start author="mmyers" timestamp="20101128T103041-0500"?>
+                    <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101128T103041-0500"?>
+                    <?oxy_insert_end?>1) (under which the p-values are calculated).</p>
+                <p>7. For large sample sizes, the z-test is a good approximation for the t-test.</p>
+                <p>8. Confidence intervals can be used to carry out the two-sided test <image
+                        style="block" src="../webcontent/image386.gif" alt="H_0: &mu; = &mu;_0 vs."/>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mo>≠</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>, and in cases where
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T103116-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103113-0500" content="Ho"?>
+                    is rejected, the confidence interval can give insight into the value of the
+                    population mean
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T103122-0500"?>(<?oxy_insert_end?><m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101128T103123-0500"?>)<?oxy_insert_end?>.</p>
+                <p>9. Here is a summary of
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103132-0500"?>which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103134-0500" content="what"?>
+                    test to use
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103141-0500"?>under which
+                    conditions<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103148-0500" content="when"?><?oxy_insert_start author="mmyers" timestamp="20101128T103149-0500"?>:<?oxy_insert_end?></p>
+                <image style="block" src="../webcontent/image387.png" alt="A table. Here is the data
+in the table:
+With large sample size (regardless of whether the population is normal or not), we use the
+z-test if sigma is known, otherwise we use the t-test, keeping in mind that the z-test is a good
+approximation. With a small sample size, and normal population(* footnote), the z-test is used when
+we know sigma, and when we don't, we use the t-test. With a small sample size which has a population shape
+which is not normal or is unknown, we can't use the z-test or t-test. (*)Footnote: by &quot;Population
+normal&quot; we mean that either the population is known to be normal, or else that the population can
+be reasonably assumed to be normal as judged by the shape of the data histogram."/>
+            </body>
+        </section>
+                        <p>The following activity will reinforce the topics illustrated in the
+                            graphic above.</p>
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p><em>Scenario: </em>The Intel Corporation is conducting quality control on
+                    its circuit boards. Thickness of
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103258-0500"?>the
+                    <?oxy_insert_end?>manufactured circuit boards varies unavoidably from board to
+                    board. Suppose the thickness of the boards produced by a certain factory process
+                    varies
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103311-0500"?>n<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103310-0500" content="N"?>ormally.
+                    The distribution of thickness of the circuit boards is supposed to have
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103319-0500"?>the
+                    <?oxy_insert_end?>mean &#956; = 12 mm if the manufacturing process is working
+                    correctly. A random sample of five circuit boards is selected and measured, and
+                    the average thickness is found to be 9.13 mm, and the standard deviation for the
+                    sample is computed to be 1.11 mm. </p>
+                        <wb:inline idref="u4_m2_testmean9_tutor2" purpose="learnbydoing"/>
+                        <wb:inline idref="u4_m2_testmean9_tutor3" purpose="learnbydoing"/>
+                        <p>Now, suppose that Intel is testing a brand new manufacturing process, for which
+                            prior information wasn’t available. In particular, for this new process, <em>the
+                                population distribution’s shape isn’t known</em>. Use the following histograms to help you answer the question below.</p>
+                        <image src="../webcontent/image502.gif" alt="4 Histograms, all titled
+&quot;Histogram of thickness (mm),&quot; with a vertical axis for frequency and horizontal axis
+for thickness (mm). Histogram A roughly follows a normal shape and has the following data,
+organized in &quot;thickness: frequency&quot; order:
+                8: 1.0
+                9: 2.0
+                10: 3.0
+                11: 2.0
+                12: 1.0
+                Histogram B is right-skewed:
+                8: 7
+                9: 8
+                10: 5
+                11: 3
+                12: 2
+                13: 2
+                14: 2
+                15: 1
+                16: 1
+                17: 1
+                18: 1
+                19: 1
+                20: 1
+                Histogram C is also right skewed:
+                (same data as Histogram B)
+                Histogram D is right skewed:
+                8: 3.0
+                9: 2.0
+                10: 1.0
+                11: 1.0
+                12: 1.0
+                13: 1.0"/>
+                        <wb:inline idref="u4_m2_testmean9_tutor4" purpose="learnbydoing"/>
+                    </body>
+                </section>
+        <section>
+            <title>End<?oxy_insert_start author="mmyers" timestamp="20101128T104722-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104722-0500" content=" "?>of<?oxy_insert_start author="mmyers" timestamp="20101128T104724-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T104725-0500" content=" "?>Lesson
+                Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m01_test_for_mu9_feedback"/>
+            </body>
+        </section>
+        <activity idref="chkpt_hypo_test_pop_mean_pool" purpose="checkpoint"></activity>
+  </body>
+</workbook_page>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_overview4_tutor8">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>When would you conclude that the average number of miles driven per year is less
+                than 12,000?</body>
+            <multiple_choice shuffle="false">
+                <choice value="A">Never</choice>
+                <choice value="B">When the p-value is large (more than 0.05)</choice>
+                <choice value="C">When the p-value is small (less than 0.05)</choice>
+                <choice value="D">When the average number of miles is less than 12,000</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect. While we can never accept the null hypothesis, we can
+                        accept the alternative hypothesis if there is sufficient evidence. Please
+                        try again.</feedback>
+                </response>
+                <response match="B">
+                    <feedback>Incorrect. If the p-value is &gt; 0.05 we would
+                            <em style="italic">not</em> reject the null hypothesis. This question is asking when we
+                            <em style="italic">would</em> reject the null hypothesis. Please try again.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. We can accept H<sub>a</sub> if there is sufficient evidence,
+                        namely that the p-value &lt; 0.05.</feedback>
+                </response>
+                <response match="D">
+                    <feedback>Incorrect. The key issue is whether the average number of miles is a
+                        significant amount less than 12,000. Sometimes, even though the average is
+                        less than 12,000, we would not reject the null hypothesis in favor of the
+                        alternative hypothesis. Please try again.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

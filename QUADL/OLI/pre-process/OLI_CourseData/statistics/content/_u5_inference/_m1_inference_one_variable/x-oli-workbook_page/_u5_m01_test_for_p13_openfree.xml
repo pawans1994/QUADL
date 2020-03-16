@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p13_openfree">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (13 of 13)</title>
+        <objref idref="apply_concepts"/>
+    </head>
+    <body>
+       
+        <p><?oxy_insert_start author="mmyers" timestamp="20101127T172118-0500"?>Here is
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T172121-0500" content="And on to "?>our
+            final point<?oxy_insert_start author="mmyers" timestamp="20101127T172135-0500"?> on this
+            subject:<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T172131-0500" content="!"?></p>
+        <p>When the data provide enough evidence to reject
+                <?oxy_insert_start author="mmyers" timestamp="20101127T172159-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T172157-0500" content="Ho"?>,
+            we can conclude (depending on the
+            alternative<?oxy_insert_start author="mmyers" timestamp="20101127T172332-0500"?>
+            hypothesis<?oxy_insert_end?>) that the population proportion is either less than,
+            greater than or not equal to the null value <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>. However, we do not get a more informative statement about its actual value.
+            It might be of interest, then, to follow the test with a 95% confidence interval that
+            will give us more insight into the actual value of p.</p>
+        <example>
+
+            <p>In our example 3,</p>
+            <image style="block" src="../webcontent/image277.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The two hypothesis are H_0: p = .64 and H_a: p &ne; .64 . We take
+a sample of 1000 US Adults, represented by a smaller circle. We find that 675 are in favor. p-hat =
+675/1000 = .675, z = 2.31, and the p-value is .021 , which is small enough to let us reject H_0."/>
+            <p>we concluded that the proportion of U.S. adults who support the death penalty for
+                convicted murderers has changed since
+                2003<?oxy_insert_start author="mmyers" timestamp="20101127T172427-0500"?>,<?oxy_insert_end?>
+                when it was .64. It is probably of interest not only to know that the proportion has
+                changed, but also to estimate what it has changed to. We've calculated the 95%
+                confidence interval for p on the previous page and found that it is (.645,
+                .705).</p>
+            <p>We can combine our conclusions from the test and the confidence interval and say:</p>
+            <p>Data provide evidence that the proportion of U.S. adults who support the death
+                penalty for convicted murderers has changed since 2003, and we are 95% confident
+                that it is now between .645 and .705. (i.e. between 64.5% and 70.5%).</p>
+        </example>
+        <example>
+
+            <p>Let's look at our example 1 to see how a confidence interval following a test might
+                be insightful in a different way.</p>
+            <p>Here is a summary of example 1:</p>
+            <image style="block" src="../webcontent/image275.gif" alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The two hypotheses are H_0: p =
+.20 and H_a: p &lt; .20. We take a sample of 400 products, represented by a smaller circle. We find
+that 64 of these are defective. p-hat = 64/400 = .16, and z = -2 and p-value = .023 . Since the p-value is small we
+conclude that H_0 can be rejected."/>
+            <p>We conclude that as a result of the repair, the proportion of defective products has
+                been reduced to below .20 (which was the proportion prior to the repair). It is
+                probably of great interest to the company not only to know that the proportion of
+                defective has been reduced, but also estimate what it has been reduced to, to get a
+                better sense of how effective the repair was. A 95% confidence interval for p in
+                this case is:</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mo>.</m:mo>
+                        <m:mn>16</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>⋅</m:mo>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mn>6</m:mn>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>6</m:mn>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mn>400</m:mn>
+                            </m:mfrac>
+                        </m:msqrt>
+                        <m:mo>≈</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mn>6</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>037</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>129</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mo>.</m:mo>
+                                <m:mn>197</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>We can therefore say that the data provide evidence that the proportion of defective
+                products has been reduced, and we are 95% sure that it has been reduced to somewhere
+                between 12.9% and 19.7%. This is very useful
+                information<?oxy_insert_start author="mmyers" timestamp="20101127T172546-0500"?>,<?oxy_insert_end?>
+                since it tells us that even though the results were significant (i.e., the repair
+                reduced the number of defective products), the repair might not have been
+                <?oxy_delete author="mmyers" timestamp="20101127T172623-0500" content="very "?>effective<?oxy_insert_start author="mmyers" timestamp="20101127T172627-0500"?>
+                enough<?oxy_insert_end?>, if it managed to reduce the number of defective products
+                only to the range provided by the confidence interval. This, of course, ties back in
+                to the idea of statistical significance vs. practical importance that we discussed
+                earlier. Even though the results are significant
+                    (<?oxy_insert_start author="mmyers" timestamp="20101127T172656-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T172652-0500" content="Ho"?>
+                was rejected), practically speaking, the repair might be considered
+                ineffective<?oxy_insert_start author="mmyers" timestamp="20101127T172659-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T172659-0500" content="!"?></p>
+
+        </example>
+        <activity idref="_u5_m1_lbd11" purpose="learnbydoing"/>
+        <section>
+            <title>Let's summarize</title>
+            <body>
+                <p>Even though this unit
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T173444-0500"?>i<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173443-0500" content="wa"?>s
+                    about the z-test for population proportion, it is loaded with very important
+                    ideas that apply to hypothesis testing in general. We've already summarized the
+                    details
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T173457-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173455-0500" content="which"?>
+                    are specific to the z-test for proportions, so the purpose of this summary
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T173503-0500"?>is
+                    <?oxy_insert_end?>to highlight the general ideas.</p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174429-0500" content="* "?>The
+                    process of hypothesis testing has four steps:</p>
+                <p>
+                    <em>I. Stating the null and alternative hypotheses
+                            (<?oxy_insert_start author="mmyers" timestamp="20101127T173552-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173537-0500" content="Ho"?>
+                        and
+                            <?oxy_insert_start author="mmyers" timestamp="20101127T173555-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173554-0500" content="Ha"?>).</em>
+                </p>
+                <p>
+                    <em>II.</em>
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T173830-0500" comment="make bold, to follow format of other items"?>Obtaining
+                    a random sample (or at least one that can be considered random) and
+                    collect<?oxy_insert_start author="mmyers" timestamp="20101127T173605-0500"?>ing<?oxy_insert_end?>
+                    data.<?oxy_comment_end?> Using the data:</p>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T173706-0500" comment="use bullets, set in further"?>*<?oxy_comment_end?><em>
+                        Check that the conditions</em> under which the test can be reliably used are
+                    met.</p>
+                <p> * <em>Summarize the data
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173721-0500"?>using<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173720-0500" content="by"?>
+                        a test statistic.</em>
+                </p>
+                <p> The test statistic is a measure of the evidence in the data against
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173740-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173738-0500" content="Ho"?>.
+                    The larger the test statistic is in magnitude, the more evidence the data
+                    present against
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173749-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173747-0500" content="Ho"?>.</p>
+                <p>
+                    <em>III.
+                        Find<?oxy_insert_start author="mmyers" timestamp="20101127T173758-0500"?>ing<?oxy_insert_end?>
+                        the p-value of the test.</em>
+                </p>
+                <p> The p-value is the probability of getting data like
+                    th<?oxy_insert_start author="mmyers" timestamp="20101127T173854-0500"?>ose<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173853-0500" content="at"?>
+                    observed (or even more extreme) assuming that the null hypothesis is true, and
+                    is calculated using the null distribution of the test statistic. The p-value is
+                    a measure of the evidence against
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173907-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173905-0500" content="Ho"?>.
+                    The smaller the p-value, the more evidence the data present against
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173914-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173912-0500" content="Ho"?>.</p>
+                <p>
+                    <em>IV.
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T173840-0500"?>Making
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T173844-0500" content="C"?><?oxy_insert_start author="mmyers" timestamp="20101127T173844-0500"?>c<?oxy_insert_end?>onclusions.</em>
+                </p>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101127T173937-0500" comment="use bullets"?>-<?oxy_comment_end?>
+                    Conclusions about the <em>significance of the results:</em>
+                </p>
+                <p> If the p-value is
+                    small<?oxy_insert_start author="mmyers" timestamp="20101127T173957-0500"?>,<?oxy_insert_end?>
+                    the data present enough evidence to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174008-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174005-0500" content="Ho"?>
+                    (and accept
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174013-0500"?>H<sub>a</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174011-0500" content="Ha"?>).</p>
+                <p> If the p-value is not small, the data do not provide enough evidence to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174023-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174021-0500" content="Ho"?>.</p>
+                <p> To help guide our decision, we use the significance level as a cutoff
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T174040-0500"?>for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174041-0500" content="to"?>
+                    what is considered a small
+                    p-<?oxy_delete author="mmyers" timestamp="20101127T174033-0500" content=" "?>value.
+                    The significance
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T174048-0500"?>cutoff
+                    <?oxy_insert_end?>is usually set at .05, but should not be considered
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T174056-0500"?>inviolable<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174054-0500" content="sacred"?>.</p>
+                <p> - Conclusions <em>in the context</em> of the problem. </p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174128-0500" content="* "?>Results
+                    that are based on a larger sample carry more weight, and therefore <em>as the
+                        sample size
+                        increases<?oxy_insert_start author="mmyers" timestamp="20101127T174140-0500"?>,<?oxy_insert_end?>
+                        results become more significant.</em>
+                </p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174305-0500" content="* "?>Even
+                    a very small and practically unimportant effect becomes statistically
+                    significant with a large enough sample size. The <em>distinction between
+                        statistical significance and practical importance</em> should therefore
+                    always be considered.</p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174308-0500" content="* "?>For
+                    given data, the <em>p-value of the two-sided test is always twice as large as
+                        the p-value of the one-sided test</em>. It is therefore harder to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174227-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174224-0500" content="Ho"?>
+                    in the
+                    two-side<?oxy_insert_start author="mmyers" timestamp="20101127T174234-0500"?>d<?oxy_insert_end?>
+                    case than it is in the one-sided case in the sense that stronger evidence is
+                    required. Intuitively, the hunch or information that leads us to use the
+                    one-sided test can be regarded as a head-start toward the goal of rejecting
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174251-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174249-0500" content="Ho"?>.</p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174316-0500" content="* "?><em>Confidence
+                        intervals can be used in order to carry out two-sided tests</em> (at the .05
+                    significance level). If the null value is not included in the confidence
+                    interval (i.e., is not one of the plausible values for the parameter), we have
+                    enough evidence to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174507-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174505-0500" content="Ho"?>.
+                    Otherwise, we cannot reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T174511-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174510-0500" content="Ho"?>.</p>
+                <p><?oxy_delete author="mmyers" timestamp="20101127T174328-0500" content="* "?>If
+                    the results are significant, it might be of interest to <em>follow<?oxy_insert_start author="mmyers" timestamp="20101127T174525-0500"?>
+                        <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174524-0500" content="-"?>up
+                        the tests with a confidence interval</em> in order to get insight into the
+                    actual value of the parameter of interest.</p>
+            </body>
+        </section>
+      <section>
+            <title>End<?oxy_insert_start author="mmyers" timestamp="20101127T174533-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174535-0500" content=" "?>of<?oxy_insert_start author="mmyers" timestamp="20101127T174536-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T174537-0500" content=" "?>Lesson
+                Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m01_test_for_p13_feedback"/>
+            </body>
+        </section>
+
+        <!-- <activity idref="chkpt_hypo_test_pop_prop" purpose="checkpoint"/> -->  
+    </body>
+</workbook_page>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd16">
+    <head>
+        <title>Connection between Confidence Intervals and Sampling Distributions</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to help give you a better understanding of the underlying
+            reasoning behind the interpretation of confidence intervals. In particular, you will gain a deeper
+            understanding of why we say that we are "95% confident that the population mean
+            is <em>covered</em> by the interval."</p>
+        
+        <!-- replacement below <p>Click <link target="new" href="http://oli.cmu.edu/applets/confidenceinterval.html"
+                >here</link> to launch the applet in a separate window.</p>
+        <p>Click <link target="new" href="http://bcs.whfreeman.com/tps4e/#628644__925296__"
+            >here</link> to launch the applet in a separate window.</p>-->
+        <iframe src="../../../../webcontent/html_activities/conf_interval_95/new_interval_no_interval.html"
+            height="800" width="800" id="_i_2"/>
+        
+        <p>When the applet loads, you see a normal-shaped distribution, which represents the
+            <em>sampling distribution of the mean</em> (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) for random samples of a particular fixed sample size, from a population with
+            a fixed standard deviation of σ.</p>
+        
+        <p>The green line marks the value of the population mean, μ.</p>
+        
+        
+        <p>To begin the simulation, click the <em style="bold">Sample</em> button at the top<!--very top <em>"sample"</em> button at the top most right-->
+            of the applet. You will see a line segment appear underneath the distribution; you
+            should see that the line segment has a <!--tiny red -->dot in the middle.</p>
+        
+        <p>You have used the simulation to select a single sample from the population; the applet
+            has automatically computed the mean (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) of your sample; your <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> value is represented by the <!--little red -->dot in the middle of the line segment.
+            The line segment represents a confidence interval. Notice that, by default, the applet
+            uses a <em>95%</em> confidence interval for μ.</p>
+        
+        
+        
+        <wb:inline idref="u4_m1_confintmean2_lbd_tutor1" purpose="learnbydoing"/>
+        <p>If your confidence interval <em style="italic">did</em> cover the population mean &#956;,
+            then the applet will have recorded 1 "hit," noted at the top of the applet.</p>
+        <p>Now, click to select another single sample.</p>
+        <wb:inline idref="u4_m1_confintmean2_lbd_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m1_confintmean2_lbd_tutor3" purpose="learnbydoing"/>
+        <p>Notice<!--, under "total" on the right side of the applet,the number of total selected
+            samples is tallied [changed to agree w/updated applet ~carol]--> that the total number of samples is tallied near the top of the applet.</p>
+        <p>Now, click <em style="bold">Sample 50</em> repeatedly until the applet tallies a
+            "total" of around 1,000 samples. You will see that the applet computes the <!--"percent hit"-->percentage of hits
+            for all the intervals.</p>
+        <wb:inline idref="u4_m1_confintmean2_lbd_tutor4" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m1_confintmean2_lbd_tutor5" purpose="learnbydoing"/>
+        
+    </body>
+</workbook_page>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <item ident="stats_item" title="Put title here">
+        <hint>
+          <material>
+            <mattext texttype="text/plain"></mattext></material>
+        </hint><presentation>
+          <material>
+            <mattext texttype="text/plain">Almost all (99.7%) of horse pregnancies fall in what range of lengths:</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">above 336 days</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">below 336 days</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">between 333 and 339 days</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">between 330 and 342 days</mattext></material></response_label>
+              <response_label ident="Res5">
+                <material>
+                  <mattext texttype="text/plain">between 327 and 345 days</mattext></material>
+</response_label></render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res5</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"></displayfeedback></respcondition></resprocessing>
+    <itemfeedback ident="hint">
+      <hint>
+        <hintmaterial>
+          <material>
+            <mattext texttype="text/plain">&lt;a href="javascript:loadImage('../../../webcontent/flash/images/didigetthis_deviation3_02q1.gif')"&gt;&lt;font color="#CC6666"&gt;&lt;u&gt;Click here&lt;/u&gt;&lt;/font&gt;&lt;/a&gt; to view a picture of the SD rule applied to this distribution.</mattext></material></hintmaterial></hint></itemfeedback>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 336 is the mean, so approximately 50% of horse preganacies last more than 336 days.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 336 is the mean, so approximately 50% of horse preganacies last less than 336 days.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Since the SD of this distribution is 3, 333 and 339 are exactly one standard deviation below and above the mean, 336. The standard deviation rule tells us that only 68% of hourse pregnancies last in that range of lengths.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Since the SD of this distribution is 3, 330 and 342 are exactly two standard deviations below and above the mean, 336. The standard deviation rule tells us that only 95% of hourse pregnancies last in that range of lengths.  </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack4">
+          <material>
+            <mattext texttype="text/plain">Correct. The Standard Deviation Rule tells us that virtually all the data falls within 3 standard deviations of the mean, which in this case is exactly between 336 − 3(3) = 327, and 336 + 3(3) = 345.</mattext></material></itemfeedback></item>

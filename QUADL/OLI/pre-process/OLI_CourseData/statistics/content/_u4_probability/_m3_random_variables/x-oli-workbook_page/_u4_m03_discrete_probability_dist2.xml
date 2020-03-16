@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_discrete_probability_dist2">
+<head>
+<title>Probability Distribution (2 of 5)</title>
+    <objref idref="find_probability_distribution_discrete_random"/>
+</head>
+<body>
+    
+<p>The probability distribution for two flips of a coin was simple enough to construct at once. For more complicated random experiments, it is common to first construct a table of all the outcomes in S and their probabilities, then use the addition principle to condense that information into the actual probability distribution table.</p>
+<example><title>Flipping a Coin Three Times</title>
+
+<p>A coin is tossed three times. Let the random variable X be the number of tails. Find the probability distribution of X. We'll follow the same reasoning we used in the previous example:</p>
+<p>First, we specify the 8 possible outcomes in S, along with the number and the probability of that
+                outcome.
+                <?oxy_insert_start author="mmyers" timestamp="20101121T094300-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T094258-0500" content="["?>Because
+                they are all equally likely, each has probability 1/8. Alternatively, by the
+                multiplication principle, each particular sequence of three coin faces has
+                probability 1/2 * 1/2 * 1/2 =
+                1/8.<?oxy_insert_start author="mmyers" timestamp="20101121T094305-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T094304-0500" content="]"?></p>
+<image style="block" src="../webcontent/image006.gif" alt="A table with two columns, labeled
+&quot;Outcome,&quot; and &quot;Probability.&quot; Here is the data, arranged by row:
+            HHH: &frac12; &times; &frac12; &times; &frac12; = 1/8;
+            HHT: 1/8;
+            HTH: 1/8;
+            THH: 1/8;
+            HTT: 1/8;
+            THT: 1/8;
+            TTH: 1/8;
+            TTT: 1/8;"/>
+<p>Next, we figure out what the value of X is (number of tails) for each possible outcome.</p>
+    <image style="block" src="../webcontent/image007.gif" alt="A table with three columns, labeled
+&quot;Outcome,&quot; and &quot;Probability,&quot; and &quot;X.&quot; The data is the same as in
+the previous table execpt the &quot;X&quot; column has been added. Here is the data, arranged by
+row (Outcome: Probability, X):
+        HHH: 1/8, 0;
+        HHT: 1/8, 1;
+        HTH: 1/8, 1;
+        THH: 1/8, 1;
+        HTT: 1/8, 2;
+        THT: 1/8, 2;
+        TTH: 1/8, 2;
+        TTT: 1/8, 3"/>
+<p>Next, we use the addition principle to assert that</p>
+<p>P(X = 1) = P(HHT or HTH or THH) = P(HHT) + P(HTH) + P(THH) = 1/8 + 1/8 + 1/8 = 3/8.</p>
+<p>Similarly, P(X = 2) = P(HTT or THT or TTH) = 3/8.</p>
+<image style="block" src="../webcontent/image008a.gif" alt="The previous table, annotated
+with the calculations to calculate P(X=x). For P(X=0), there is only one outcome in the table,
+so P(X=0) = 1/8. For P(X=1), there are thee outcomes, so P(X=1) = 3 &times; 1/8 = 3/8. The
+same thing happens for P(X=2) = 3 &times; 1/8 = 3/8. For P(X=3), there is only one case so
+P(X=3) = 1/8."/>
+<p> The resulting probability distribution is:</p>
+<image style="block" src="../webcontent/image009.gif" alt="A two-row probability
+distribution table. The rows are labeled &quot;X&quot; and &quot;P(X=x)&quot;. Here is
+the data in the table, arranged by column (in &quot;X: P(X=x)&quot; format):
+        0: 1/8;
+        1: 3/8;
+        2: 3/8;
+        3: 1/8;"/>
+</example>
+<!--<activity idref="_u4_m3_lbd1" purpose="learnbydoing"/>-->
+    <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101121T094405-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T094403-0500" content="is"?>
+            next activity is to give you guided practice in finding the probability distribution of
+            a discrete random variable. </p>
+  <section purpose="learnbydoing">
+      <title>Learn By Doing</title>
+      <body>
+          <p>A young couple decides to try to have children until they have a boy. For financial
+                    reasons, the couple decides that they are going to stop trying when they have
+                    three
+                    children<?oxy_insert_start author="mmyers" timestamp="20101121T094426-0500"?>,<?oxy_insert_end?>
+                    whether they have a boy or not. (We are assuming that having a boy or a girl is
+                    equally
+                    likely<?oxy_insert_start author="mmyers" timestamp="20101121T094434-0500"?>,<?oxy_insert_end?>
+                    and that the child's gender in each birth is independent of
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T094449-0500"?>the
+                    g<?oxy_insert_end?><?oxy_insert_start author="mmyers" timestamp="20101121T094449-0500"?>ender
+                    in
+                    the<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T094448-0500" content="each"?>
+                    other<?oxy_insert_start author="mmyers" timestamp="20101121T094458-0500"?>
+                    births<?oxy_insert_end?>.)</p>
+          <p>Let the random variable X be the number of children the couple has.</p>
+          <p>Our goal is to find the probability distribution of X. In other words, we would like to create a table that lists all the possible values of X and the corresponding probabilities.  We'll follow the same steps we followed in the two examples we solved.</p>
+    <wb:inline idref="u3_m3_discreteprobdist2_tutor1" purpose="learnbydoing"/>
+          <wb:inline idref="u3_m3_discreteprobdist2_tutor2" purpose="learnbydoing"/>
+          <wb:inline idref="u3_m3_discreteprobdist2_tutor3" purpose="learnbydoing"/>
+          <wb:inline idref="u3_m3_discreteprobdist2_tutor4" purpose="learnbydoing"/>
+      </body>
+  </section>
+</body>
+</workbook_page>

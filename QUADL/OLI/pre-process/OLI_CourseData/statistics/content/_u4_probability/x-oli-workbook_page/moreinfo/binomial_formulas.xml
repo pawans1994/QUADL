@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.0//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="binomial_formulas">
+<head>
+<title>Binomial Formulas</title>
+</head>
+<body>
+<p>For those who are interested, these formulas may be derived with the aid of the rule for variance
+            of a sum of random variables. We think of our binomial X with n and p as the sum of n
+            identical "Bernoulli" random variables X1 through Xn, each representing one of the n
+            trials. Each of the Xi has just two possibilities: success (X<?oxy_insert_start author="mmyers" timestamp="20101121T215946-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T215946-0500"?>
+            <?oxy_insert_end?>1, with probability p), or failure (X<?oxy_insert_start author="mmyers" timestamp="20101121T215949-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T215950-0500"?>
+            <?oxy_insert_end?>0, with probability 1<?oxy_insert_start author="mmyers" timestamp="20101121T215955-0500"?>
+            <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101121T215955-0500"?>
+            <?oxy_insert_end?>p), as shown in the probability distribution table below.</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../../_m3_random_variables/webcontent/image097.gif"
+    alt="A table with two columns, labeled &quot;X_i&quot; and &quot;Probability.&quot; Here are the
+    two rows of the table:
+            0: 1-p;
+            1: p;"/>
+<p>The mean of each Xi is 0(1<?oxy_insert_start author="mmyers" timestamp="20101121T220006-0500"?>
+            <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101121T220006-0500"?>
+            <?oxy_insert_end?>p)<?oxy_insert_start author="mmyers" timestamp="20101121T220007-0500"?>
+            <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101121T220008-0500"?>
+            <?oxy_insert_end?>1(p)<?oxy_insert_start author="mmyers" timestamp="20101121T220011-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T220011-0500"?>
+            <?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101121T220027-0500"?>,<?oxy_insert_end?>
+            and the variance is</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../../_m3_random_variables/webcontent/image098.gif"
+        alt="&sigma;_i&sup;2 = (0-p)&sup2;&times;(1-p) + (1-p)&sup2;&times;p = p(1-p)[p+(1-p)] = p(1-p)"/>
+<p>Because variance is additive, if we sum up n such random variables to form the binomial random
+            variable X<?oxy_insert_start author="mmyers" timestamp="20101121T220042-0500"?>
+            <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T220042-0500"?>
+            <?oxy_insert_end?>X1<?oxy_insert_start author="mmyers" timestamp="20101121T220043-0500"?>
+            <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101121T220044-0500"?>
+            <?oxy_insert_end?>...<?oxy_insert_start author="mmyers" timestamp="20101121T220045-0500"?>
+            <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101121T220045-0500"?>
+            <?oxy_insert_end?>Xn, its variance will be the sum of n variances p(1<?oxy_insert_start author="mmyers" timestamp="20101121T220051-0500"?>
+            <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101121T220051-0500"?>
+            <?oxy_insert_end?>p), or np(1<?oxy_insert_start author="mmyers" timestamp="20101121T220053-0500"?>
+            <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101121T220053-0500"?>
+            <?oxy_insert_end?>p).</p>
+</body>
+</workbook_page>

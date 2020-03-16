@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p6">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (6 of 13)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+    <body>
+       
+        <section>
+            <title>3. Finding the P-value of the Test</title>
+            <body>
+                <p>So far we've talked about the p-value at the intuitive level: understanding what
+                    it is (or what it measures) and how we use it to draw conclusions about the
+                    significance of our results. We will now go more deeply into how the p-value is
+                    calculated.</p>
+                <p>It should be mentioned that eventually we will rely on technology to calculate
+                    the p-value for us (as well as the test statistic), but in order to make
+                    intelligent use of the output, it is important to first
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T100117-0500" comment="remove bold -- no emphasis needed"?><em>understand</em><?oxy_comment_end?>
+                    the details, and only then let the computer do the calculations for us. Let's
+                    start.</p>
+                <p>Recall that so far we have said that the p-value is the probability of obtaining
+                    data like those observed assuming that H<sub>o</sub> is true. Like the test
+                    statistic, the p-value is, therefore, a measure of the evidence against
+                        H<sub>o</sub>. In the case of the <em>test statistic,</em> the
+                        <em>larger</em> it is in magnitude (positive or negative) , the further
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is from <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> , the <em>more evidence we have against H<sub>o</sub>. </em>In the
+                    case of the <em>p-value</em>, it is the opposite; the <em>smaller</em> it is,
+                    the more unlikely it is to get data like those observed when H<sub>o</sub> is
+                    true, the <em>more evidence it is against H<sub>o</sub></em>. One can actually
+                    draw conclusions in hypothesis testing just using the test statistic, and as
+                    we'll see the p-value is, in a sense, just another way of looking at the test
+                    statistic. The reason that we actually take the extra step in this course and
+                    derive the p-value from the test statistic is that even though in this case (the
+                    test about the population proportion) and some other tests, the value of the
+                    test statistic has a very clear and intuitive interpretation, there are some
+                    tests where its value is not as easy to interpret. On the other hand, the
+                    p-value keeps its intuitive appeal across all statistical tests.</p>
+                <p>
+                    <em>How is the p-value calculated?</em>
+                </p>
+                <p>Intuitively, the p-value is the <em>probability</em> of observing <em>data like
+                        those observed</em> assuming that H<sub>o</sub>is true. Let's be a bit more
+                    formal:</p>
+                <ul>
+                    <li><p> Since this is a probability question about the <em>data</em>, it makes
+                            sense that the calculation will involve the data summary, the <em>test
+                                statistic.</em>
+                        </p></li>
+                    <li><p> What do we mean by <em>"like"</em> those observed? By "like" we mean
+                                <em>"as extreme or even more extreme."</em>
+                        </p></li>
+                </ul>
+                <p> Putting it all together, we get that in <em>general:</em>
+                </p>
+                <p>
+                    <em> The p-value is the probability of observing a test statistic as extreme as
+                        that observed (or even more extreme) assuming that the null hypothesis is
+                        true.</em>
+                </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>By <em>"extreme"</em> we mean extreme <em>in the direction of the
+                        alternative</em> hypothesis.</p>
+            </body>
+        </section>
+        <p>
+            <em>Specifically</em>, for the z-test for the population proportion:</p>
+        <ol>
+            <li><p> If the alternative hypothesis is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>&lt;</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (<em>less</em> than), then "extreme" means <em>small</em>, and the
+                    p-value is:</p>
+                <p> The probability of observing a test statistic <em>as small as that observed or
+                        smaller</em> if the null hypothesis is true.</p></li>
+            <li><p> If the alternative hypothesis is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>&gt;</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (<em>greater</em> than), then "extreme" means <em>large</em>, and the
+                    p-value is:</p>
+                <p> The probability of observing a test statistic <em>as large as that observed or
+                        larger</em> if the null hypothesis is true.</p></li>
+            <li><p> if the alternative is <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi>p</m:mi>
+                                    <m:mo>≠</m:mo>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (<em>different</em> from), then "extreme" means extreme in either
+                    direction <em>either small or large (i.e., large in magnitude)</em>, and the
+                    p-value therefore is:</p>
+                <p> The probability of observing a test statistic <em>as large in magnitude as that
+                        observed or larger</em> if the null hypothesis is true.</p></li>
+        </ol>
+        <p> (Examples: If z = -2.5: p-value = probability of observing a test statistic as small as
+            -2.5 or smaller or as large as 2.5 or larger.</p>
+        <p> If z = 1.5: p-value = probability of observing a test statistic as large as 1.5 or
+            larger, or as small as -1.5 or smaller.) </p>
+        <p>
+            <em><?oxy_comment_start author="mmyers" timestamp="20101127T101757-0500" comment="Remove bold. No emphasis needed"?>OK,
+                that makes sense. But how do we actually calculate it?<?oxy_comment_end?></em>
+        </p>
+        <p>Recall the important comment from our discussion about our test statistic,</p>
+        <p><m:math display="block">
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">&circ;</m:mo>
+                            </m:mover>
+                            <m:mo>&minus;</m:mo>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo stretchy="false">(</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>
+        </p>
+        <!--     <p>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mi>z</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mfrac>
+                        <m:msub>
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>-</m:mo>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mn>0</m:mn>
+                        </m:msub>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:msub>
+                                                <m:mi>p</m:mi>
+                                                <m:mn>0</m:mn>
+                                            </m:msub>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mi>n</m:mi>
+                            </m:mfrac>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>, </p>-->
+        <p>which said that when the null hypothesis is true (i.e., when <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mrow>
+                            <m:mi>p</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>p</m:mi>
+                        </m:mrow>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>), the possible values of our test statistic (because it is a z-score) follow a
+            standard normal (N(0,1), denoted by Z) distribution. Therefore, the p-value calculations
+            (which assume that H<sub>o</sub> is true) are simply standard normal distribution
+            calculations for the 3 possible alternative hypotheses. </p>
+        <section>
+            <title>Less Than</title>
+            <body>
+                <p>The probability of observing a test statistic as <em>small as that observed or
+                        smaller</em>, assuming that the values of the test statistic follow a
+                    standard normal distribution. We will now represent this probability in symbols
+                    and also using the normal distribution.</p>
+                <image style="block" src="../webcontent/image258.gif" alt="Ha: p &lt; p_0 &rArr;
+p-value = P(Z &le; z)"/>
+                <image style="block" src="../webcontent/image259.gif" alt="A normal distribution
+curve (N(0,1)). Marked on the horizontal axis are z-scores of 0 and z. z is to the left of 0
+because it is for a test statistic which is smaller than p_0. The p-value is the area to the
+left of z under the curve."/>
+                <p>Looking at the shaded region, you can see why this is often referred to as a
+                        <em>left-tailed</em> test. We shaded to the left of the test statistic,
+                    since less than is to the left.</p>
+            </body>
+        </section>
+
+        <section>
+            <title>Greater Than</title>
+            <body>
+                <p>The probability of observing a test statistic as <em>large as that observed or
+                        larger</em>, assuming that the values of the test statistic follow a
+                    standard normal distribution. Again, we will represent this probability in
+                    symbols and using the normal distribution.</p>
+                <image style="block" src="../webcontent/image260.gif" alt="Ha: p &gt; p_0 &rArr;
+p-value = P(Z &ge; z)"/>
+                <image style="block" src="../webcontent/image261.gif" alt="A normal distribution
+curve (N(0,1)). Marked on the horizontal axis are z-scores of 0 and z. z is to the right of 0
+because it is for a test statistic which is larger than p_0. The p-value is the area to the
+right of z under the curve."/>
+                <p>Looking at the shaded region, you can see why this is often referred to as a
+                        <em>right-tailed</em> test. We shaded to the right of the test statistic,
+                    since greater than is to the right.</p>
+            </body>
+        </section>
+
+        <section>
+            <title>Not Equal To</title>
+            <body>
+                <p>The probability of observing a test statistic which is as large as in
+                        <em>magnitude</em> as that observed or larger, assuming that the values of
+                    the test statistic follow a standard normal distribution.</p>
+                <image style="block" src="../webcontent/image262.gif" alt="Ha: p &ne; p_0 &rArr;
+p-value = P(Z &lt; |z|) + P(Z &ge; |z|) = 2P(Z &ge; |z|)"/>
+                <image style="block" src="../webcontent/image263.gif" alt="A normal distribution
+curve (N(0,1)). Marked on the horizontal axis are z-scores of 0, -|z|, and |z|, where |z| and -|z|
+is the z-score of the observed test statistic. The p-value is the sum of the area to the right of
+|z| under the curve and the area to the left of -|z| under the
+curve."/>
+                <p>This is often referred to as a <em>two-tailed</em> test, since we shaded in both
+                    directions.</p>
+            </body>
+        </section>
+
+        <section>
+            <title/>
+            <body>
+                <p>As noted earlier, before the widespread use of statistical software, it was
+                    common to use 'critical values' instead of p-values to assess the evidence
+                    provided by the data. Even though the critical values approach is not used in
+                    this course, students might find it insightful. Thus, the interested students
+                    are encouraged to review the critical value method in the following “Many
+                    Students Wonder....” link. If your instructor clearly states that you are
+                    required to have knowledge of the critical value method, you should definitely
+                    review the information.</p>
+                <activity idref="critical_value" purpose="manystudentswonder"/>
+            </body>
+        </section>
+        <p><?oxy_insert_start author="mmyers" timestamp="20101127T102412-0500"?><!-- For
+            now<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T102410-0500" content="At this point"?>,
+            this is just a noteworthy fact. We will come back to this point later and look at it
+            from a more practical
+            <?oxy_insert_start author="mmyers" timestamp="20101127T102431-0500"?>perspective<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T102434-0500" content="point of view"?>.
+    -->
+            On the next page, we will apply the p-value to our three examples. But first, work
+            through the following
+            activities<?oxy_insert_start author="mmyers" timestamp="20101127T102446-0500"?>,<?oxy_insert_end?>
+            which should help your understanding.</p>
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <wb:inline idref="u4_m2_testprop6_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop6_tutor2" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop6_tutor3" purpose="learnbydoing"/>
+                <wb:inline idref="u4_m2_testprop6_tutor4" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <!--<activity idref="_u5_m1_dig14" purpose="didigetthis"/>-->
+                <p>In each of the following questions, choose the pair(s) of hypotheses for the
+                    population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101127T104828-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T104829-0500"?>)<?oxy_insert_end?>
+                    and <?oxy_insert_start author="mmyers" timestamp="20101127T104840-0500"?>the
+                    <?oxy_insert_end?>z statistic that match the
+                    figure<?oxy_insert_start author="mmyers" timestamp="20101127T104846-0500"?>.<?oxy_insert_end?></p>
+                <wb:inline idref="u4_m2_testprop6_tutor5" purpose="didigetthis"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

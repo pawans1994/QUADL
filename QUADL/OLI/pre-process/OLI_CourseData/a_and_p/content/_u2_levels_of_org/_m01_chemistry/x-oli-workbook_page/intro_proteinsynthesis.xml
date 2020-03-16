@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC " -//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<!--
+<workbook_page created="02/20/2006" id="intro_proteinsynthesis" modified="$Date: 2007/02/20 22:06:29
+	$" version="$Revision: 1.53 $" xmlns:ask="http://oli.web.cmu.edu/activity/workbook/assessment/"
+	xmlns:wb="http://oli.web.cmu.edu/activity/workbook/">
+-->
+<workbook_page id="intro_proteinsynthesis" xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/"
+    xmlns:bib="http://bibtexml.sf.net/" xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    xmlns:wb="http://oli.web.cmu.edu/activity/workbook/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML">
+	<head>
+		<title>Protein Synthesis</title>
+<!--
+		<author>
+			<name first="William" last="Brown"/>
+			<email>wb02@andrew.cmu.edu</email>
+			<institution>Carnegie Mellon University</institution>
+			<department>Biological Sciences</department>
+		</author>
+-->
+		<objectives>
+			<objective id="obj560" title="Translation">
+Describe what post-transcriptional modification must take place before
+					translation.
+			</objective>
+			<objective id="obj561" title="Translation">
+Define the role of each RNA molecule used in translation.
+			</objective>
+			<objective id="obj562" title="Translation">
+Distinguish between prokaryotic and eukaryotic
+				translation.
+			</objective>
+			<objective id="obj563" title="Translation">
+Define the genetic code.
+			</objective>
+			<objective id="obj564" title="Translation">
+Describe the process of translation as a step-wise
+				process.
+			</objective>
+		</objectives>
+	</head>
+	<body>
+		<p>
+			<em>The Code</em>
+		</p>
+		<p>Translation involves the conversion of a sequence of RNA to a corresponding sequence of
+			amino acids. To perform the conversion a code is needed to translate from the four
+			nucleotides (AUGC) of mRNA to the 20 naturally occurring amino acids. The question then
+			is what combination of nucleotides can code for at least twenty different amino acids?
+			Four nucleotides taken two at a time would generate 16 possible unique sequences. Not
+			enough to code for 20 different amino acids. However, four nucleotides taken 3 at a time
+			would generate 64 different unique sequences. Clearly this is enough to code for the 20
+			naturally-occurring amino acids. In fact, the abundance of codes means that there is
+			redundancy or degeneracy in the code with more than one triplet code representing a
+			single amino acid.</p>
+		<p>Through experimentation it was found that the universal start code or codon is AUG and
+			three stop codons (UAG, UGA and UAA) were identified. The remaining 60 codons
+			represented the 20 amino acids. Having elucidated the entire code it was found that for
+			many of the amino acids, the first two nucleotides in the sequence defined the amino
+			acid with the third nucleotide being any of the four nucleotides. For example the codon
+			for the amino acid leucine is CUX where the X represents any one of the four
+			nucleotides, and the codon for the amino acid valine is GUX. This third base then became
+			known as the wobble base signifying the flexibility the system has in identifying the
+			third base. This also demonstrates the fact that a single amino acid can be coded by
+			several triplet codes but a triplet code only represents a single amino acid. This
+			triplet code for converting the sequence of mRNA to a sequence of amino acids is
+			referred to as the <em>Genetic Code</em>.</p>
+		<p>
+			<em>The Starting Materials</em>
+		</p>
+		<p>Having identified a code to perform the translation, it is now necessary to describe the
+			process by which the genetic code is used. Four major ingredients are necessary to carry
+			out translation: m-RNA, t-RNA, the ribosome and the initiation factors.</p>
+		<p><em>Messenger RNA (mRNA)</em> 
+			This RNA is the message that is transcribed from the 
+			DNA which contains the code for the amino acids.
+			
+			
+			 </p>
+		<p><em>Transfer-RNA (tRNA)</em>The transfer RNA contains a region to recognize 3 
+			nucleic acids in the triplet on the mRNA and also carries the specific 
+			amino acid. There is a tRNA for every amino acid.
+			
+		</p>
+		<figure orient="horizontal" title="tRNA Structures" >
+			<title>tRNA Structures</title>
+	<material>
+		
+					<image height="160" src="../../../webcontent/DNATranscription/primary_image.jpg"
+						width="160">
+						<caption>Primary Sequence</caption>
+					</image>
+		</material>
+				<material>
+					<image height="160"
+						src="../../../webcontent/DNATranscription/secondary_image.jpg" width="160">
+						<caption>Secondary Sequence</caption>
+					</image>
+				</material>
+			<material>
+					<image height="160"
+						src="../../../webcontent/DNATranscription/tertiary_image.jpg" width="160">
+						<caption>Tertiary Sequence</caption>
+					</image>				
+	</material>
+	<material>
+		<applet archive="JmolApplet0.jar" code="JmolApplet"
+			codebase="../../../webcontent/jmol/jmol" height="155" width="155">
+			<caption>t-RNA Double Helix</caption>
+
+			<param name="progressbar">true</param>
+				<param name="progresscolor">blue</param>
+				<param name="boxmessage">Downloading JmolApplet ...</param>
+				<param name="boxbgcolor">white</param>
+				<param name="boxfgcolor">white</param>
+				<param name="ReadyCallback">_jmolReadyCallback</param>
+				<param name="load">
+					<wb:path href="../../../webcontent/jmol/jmol/pdbs/4TRA.pdb"/>
+				</param>
+				<param name="script">set specular 60; set specpower 100; set ambient 20;
+					set diffuse 80; rotate x 90; rotate z 150; rotate y 60; zoom 120;
+					spacefill ON</param>
+
+		</applet>
+	</material>
+</figure>
+
+		<p>The Following Learn by Doing contains an animation describing the tRNA structures.</p>
+		<activity idref="protein_synthesis_structures_lbd"
+			purpose="learnbydoing"/>
+		<flash id="charging" src="../../../webcontent/animation/stage.swf" height="417" width="600">
+			
+				<param name="LoggingLibraryPath">../../../webcontent/CommLoggingLibrary.swf</param>
+				<param name="mypath">../../../webcontent/animation/</param>
+				<!-- use path from top to the animation folder-->
+				<param name="TutorialPath">ProteinSynthesis/</param>
+				<!-- use path from top to the animation folder-->
+				<param name="TutorialData">charging.xml</param>
+				<!-- use the unit folder as path to this tutorial-->
+				<param name="UseAudio">yes</param>
+				<!-- tell stage to display audio-->
+			
+		</flash>
+		<ul>
+			<li>
+				<em>Ribosomes</em> Ribosomes are complexes of ribosomal RNA (rRNA) and proteins.
+				This two subunit complex that holds the mRNA in place and allows the t-RNA 
+				to recognize the code and translate the code into an amino acid complex.
+				
+			</li>
+		</ul>
+		<table>
+			<tr>
+				<td>
+					<image src="../../../webcontent/DNATranscription/50S_30S.jpg" width="160"
+						height="160">
+						<caption>50S and 30S subunits</caption>
+					</image>
+				</td>
+				<td>
+					<image src="../../../webcontent/DNATranscription/70S.jpg" width="160"
+						height="160">
+						<caption>70 S Initiation Complex</caption>
+					</image>
+				</td>
+			</tr>
+		</table>
+		<ul>
+			<li>
+				<em>Initiation Factors</em> are a set of proteins used to facilitate the specific 
+				binding of mRNA to the small subunit of the ribosome.
+				
+			</li>
+		</ul>
+		
+		<p><em>Protein Synthesis</em></p>
+		<ul>
+			
+			
+				<li>1. mRNA is transcribed from the DNA</li>
+				<li>2. mRNA is held within a ribosome and tRNAs enter the complex</li>
+			<li>3. the correct tRNAs match up with the code on the mRNA and the attached 
+				amino acids are combined to make a protein</li>
+		</ul>
+			<p>
+			The following detailed animation describes the production of a 
+			protein from the formation of the initiation 
+			complex, 
+			the elongation of the peptide during synthesis and the termination of the 
+			synthesis at the termination or stop codon.
+			
+			
+		
+		
+			
+			
+		</p>
+		<flash height="417" id="protein_synthesis" src="../../../webcontent/animation/stage.swf"
+			width="600">
+			
+				<param name="LoggingLibraryPath">../../../webcontent/CommLoggingLibrary.swf</param>
+				<param name="mypath">../../../webcontent/animation/</param>
+				<!-- use path from top to the animation folder-->
+				<param name="TutorialPath">ProteinSynthesis/</param>
+				<!-- use path from top to the animation folder-->
+				<param name="TutorialData">synthesis.xml</param>
+				<!-- use the unit folder as path to this tutorial-->
+				<param name="UseAudio">yes</param>
+				<!-- tell stage to display audio-->
+			
+		</flash>
+		<p>
+			<em>The Consequence or Error</em>
+		</p>
+		<p> During both replication and transcription errors can be made in the incorporation of the
+			correct bases during the complementary copying of the DNA. In a previous section a
+			discussion of the methods used by the system to minimize these errors has been
+			presented. However, even with editing functions, some errors are generated and result in
+			changing of the reading code used during translation to a protein sequence. These
+			changes are referred to as mutations and can be categorized into four different
+			categories described by the end result of the mutation or change.</p>
+		<ul><!--I think we should illustrate these four consequences - Diana-->
+			<li><em>Silent mutation</em> – Because of the degeneracy of the genetic code, multiple
+				triplet codes represent the same amino acid. Thus, a change in the sequence for a
+				code may not result in a change in amino acid. This particularly applies to the
+				wobble or third base in a triplet code sequence. Thermophylic bacteria that operate
+				optimally at high temperatures have optimized the use of the degeneracy to include
+				codons with high G and C content to increase the thermal stability (higher melting
+				temperature) of the resulting duplex DNA. </li>
+			<li>
+				<em>Missense mutation</em> – Some mutations result in the changing of a codon to
+				represent a different amino acid. Missense mutations that change the amino acid can
+				have no effect on the structure of a protein or may have a dramatic effect on the
+				folding of a protein causing loss of function.</li>
+			<li>
+				<em>Nonsense mutation</em> – Another class of mutations may result in the changing
+				of a codon to one of the three termination or stop codons. This will result in
+				premature stop in the translation of a protein. Such a mutation at the beginning of
+				the translation sequence will generally result in total loss of function which some
+				nonsense mutations near the normal termination of the coding sequence may have
+				little or no effect on the function of the resulting protein.</li>
+			<li>
+				<em>Frame-shift mutations</em> – Occasionally a mutation will occur that results in
+				either the insertion or deletion of an extra base in the coding sequence. This type
+				of mutation results in a shifting of the “reading” frame for the triplet codes after
+				the insertion or deletion and production of a meaningless sequence of protein after
+				that point. Again depending on where the insertion or deletion occurs, the effect
+				can vary on the final product. It should also be noted that this reading frame shift
+				will also change the position of the termination codon giving either a premature
+				termination of the translation or an extended coding sequence.</li>
+		</ul>
+<!--
+		<activity idref="a2_digit-Protein-Synthesis" purpose="didigetthis" type="x-ims-assessment"/>
+-->
+		<activity idref="a2_digit-Protein-Synthesis" purpose="didigetthis"/>
+		<section>
+			<title>End of Lesson Questions</title>
+			<body>
+				<activity purpose="myresponse" idref="proteinsynthesis_feedback"/>
+			</body>
+		</section>
+<!--		 <section>
+			<title/>
+			<body>
+				<image src="../../../webcontent/HS_Stop.gif"/>
+			</body>
+		</section>-->
+		
+	</body>
+</workbook_page>

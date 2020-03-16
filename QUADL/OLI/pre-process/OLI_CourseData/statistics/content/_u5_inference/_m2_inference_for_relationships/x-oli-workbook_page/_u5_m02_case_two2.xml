@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_case_two2">
+    <head>
+        <title>Case C→C (2 of 5)</title>
+        <objref idref="carry_out_inferential_method_relationships"/>
+        <objref idref="specify_hypotheses_for_relationships"/>
+    </head>
+    <body>
+
+        <section>
+            <title>The Chi-Square Test for Independence</title>
+            <body>
+                <p>The chi-square test for independence examines our observed data and tells us
+                    whether we have enough evidence to conclude beyond a reasonable doubt that two
+                    categorical variables are related. Much like the previous part on the ANOVA
+                    F-test, we are going to introduce the hypotheses (step 1), and then discuss the
+                    idea behind the test, which will naturally lead to the test statistic (step 2).
+                    Let's start.</p>
+            </body>
+        </section>
+        <section>
+            <title>Step 1: Stating the hypotheses</title>
+            <body>
+
+
+                <p>Unlike all the previous tests that we presented, the null and alternative
+                    hypotheses in the chi-square test are stated in words rather than in terms of
+                    population parameters. They are:</p>
+                <p>
+                    <em>H<sub>o</sub></em>: There is no relationship between the two categorical
+                    variables. (They are independent.)</p>
+                <p>
+                    <em>H<sub>a</sub></em>: There is a relationship between the two categorical
+                    variables. (They are not independent.)</p>
+                <example>
+
+                    <p>In our example, the null and alternative hypotheses would then state:</p>
+                    <p>
+                        <em>H<sub>o</sub></em>: There is no relationship between gender and drunk
+                        driving.</p>
+                    <p>
+                        <em>H<sub>a</sub></em>: There is a relationship between gender and drunk
+                        driving.</p>
+                    <p>Or equivalently,</p>
+                    <p>
+                        <em>H<sub>o</sub></em>: Drunk driving and gender are independent</p>
+                    <p>
+                        <em>H<sub>a</sub></em>: Drunk driving and gender are not independent</p>
+                    <p><?oxy_comment_start author="mmyers" timestamp="20101129T134002-0500" comment="I recommend removing this line. I don&apos;t see what this has to do with the name."?>and
+                        hence the name "chi-square test for independence."<?oxy_comment_end?></p>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Algebraically, independence between gender and driving drunk is equivalent to
+                    having equal proportions who drank (or did not drink) for males vs. females. In
+                    fact, the null and alternative hypotheses could have been re-formulated as</p>
+                <p>
+                    <em>H<sub>o</sub>:</em> proportion of male drunk drivers = proportion of female
+                    drunk drivers</p>
+                <p>
+                    <em> H<sub>a</sub>: </em>proportion of male drunk drivers ≠ proportion of female
+                    drunk drivers </p>
+                <p>However, expressing the hypotheses in terms of proportions works well and is
+                    quite intuitive for two-by-two tables, but the formulation becomes very
+                    cumbersome when at least one of the variables has several possible values, not
+                    just two. We are therefore going to always stick with the "wordy" form of the
+                    hypotheses presented in step 1 above.</p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>The Idea of the Chi-Square Test</title>
+            <body>
+                <p>The idea behind the chi-square test, much like previous tests that we've
+                    introduced, is to measure how far the data are from what is claimed in the null
+                    hypothesis. The further the data are from the null hypothesis, the more evidence
+                    the data presents against it. We'll use our data to develop this idea. Our data
+                    are represented by the observed counts:</p>
+                <image style="block" src="../webcontent/image131.gif"
+                    alt="The two-way table with counts. The cells
+which are not in a Total row or column are the observed counts. Full description: A two-way table,
+in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; and &quot;Total.&quot; The rows
+are labeled &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; Here is the data in the table,
+given in cell format (&quot;Row, Column: Value&quot;):
+         Male, Yes: 77;
+         Male, No: 404;
+         Male, Total: 481;
+         Female, Yes: 16;
+         Female, No: 122;
+         Female, Total: 138;
+         Total, Yes: 93;
+         Total, No: 526;
+         Total, Total: 619;
+
+The observed counts are Male, Yes;
+          Male, No;
+          Female, Yes;
+          Female, No;
+"/>
+                <p>How will we represent the null hypothesis?</p>
+                <p>In the previous tests we introduced, the null hypothesis was represented by the
+                    null value. Here there is not really a null value, but rather a claim that the
+                    two categorical variables (drunk driving and gender, in this case) are
+                    independent.</p>
+                <p>To represent the null hypothesis, we will calculate another set of counts &#8212;
+                    the counts that we would expect to see (instead of the observed ones) if drunk
+                    driving and gender were really independent (i.e., if H<sub>o</sub> were true).
+                    For example, we actually observed 77 males who drove drunk; if drunk driving and
+                    gender were indeed independent (if H<sub>o</sub> were true), how many male drunk
+                    drivers would we expect to see instead of 77? Similarly, we can ask the same
+                    kind of question about (and calculate) the other three cells in our table.</p>
+                <p>In other words, we will have two sets of counts:</p>
+                <ul>
+                    <li><p>the observed counts (the data)</p></li>
+
+                    <li><p>the expected counts (if H<sub>o</sub> were true)</p></li>
+                </ul>
+                <p>We will measure how far the observed counts are from the expected ones.
+                    Ultimately, we will base our decision on the size of the discrepancy between
+                    what we observed and what we would expect to observe if H<sub>o</sub> were
+                    true.</p>
+                <p>How are the expected counts calculated? Once again, we are in need of probability
+                    results. Recall from the probability section that if events A and B are
+                    independent, then P(A and B) = P(A) * P(B). We use this rule for calculating
+                    expected counts, one cell at a time. </p>
+                <p>Here again are the observed counts:</p>
+                <image style="block" src="../webcontent/image132.gif"
+                    alt="A two-way table,
+in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; and &quot;Total.&quot; The rows
+are labeled &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; Here is the data in the table,
+given in cell format (&quot;Row, Column: Value&quot;):
+         Male, Yes: 77;
+         Male, No: 404;
+         Male, Total: 481;
+         Female, Yes: 16;
+         Female, No: 122;
+         Female, Total: 138;
+         Total, Yes: 93;
+         Total, No: 526;
+         Total, Total: 619;"/>
+                <p>Applying the rule to the first (top left) cell, if driving drunk and gender were
+                    independent then: </p>
+                <p> P(drunk and male) = P(drunk) * P(male)</p>
+                <p>By dividing the counts in our table, we see that:</p>
+                <p>P(Drunk) = 93 / 619 and</p>
+                <p>P(Male) = 481 / 619,</p>
+                <p>and so,</p>
+                <p>P(Drunk and Male) = (93 / 619) (481 / 619)</p>
+                <p>Therefore, since there are total of 619 drivers, <em>if drunk driving and gender
+                        were independent</em>, the <em>count </em>of drunk male drivers that I would
+                        <em>expect</em> to see is:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mn>619</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mi>P</m:mi>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mi mathvariant="italic">Drunk</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">and</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">Male</m:mi>
+                                </m:mrow>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mn>619 </m:mn>
+
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn> 93</m:mn>
+                                    <m:mn>619</m:mn>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>481</m:mn>
+                                    <m:mn>619</m:mn>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>93 </m:mn>
+                                    <m:mo> * </m:mo>
+                                    <m:mn> 481</m:mn>
+                                </m:mrow>
+                                <m:mn>619</m:mn>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>Notice that this expression is the product of the column and row totals for that
+                    particular cell, divided by the overall table total.</p>
+                <image style="block" src="../webcontent/image133.gif"
+                    alt="P(Drunk and Male) is calculated using
+3 cells from the two-way table. These are the row total (Male, Total) cell, the column total
+(Total, Yes) cell, and table total (Total, Total) cell. P(Drunk and Male) = (column total *
+row total)/(table total)"/>
+                <p>Similarly, if the variables are independent,</p>
+                <p>P(Drunk and Female) = P(Drunk) * P(Female) = (93 / 619) (138 / 619)</p>
+                <p>and the expected count of females driving drunk would be</p>
+
+
+                <!--jb: replaced erroneous .gif formula with mathml (below)
+<image style="block" src="../webcontent/image184.gif"/>
+-->
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>93</m:mn>
+                                    <m:mn>619</m:mn>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mfenced open="(" close=")">
+                                <m:mfrac>
+                                    <m:mn>138</m:mn>
+                                    <m:mn>619</m:mn>
+                                </m:mfrac>
+                            </m:mfenced>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>93 </m:mn>
+                                    <m:mo> * </m:mo>
+                                    <m:mn> 138</m:mn>
+                                </m:mrow>
+                                <m:mn>619</m:mn>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+
+                <p>Again, the expected count equals the product of the corresponding column and row
+                    totals, divided by the overall table total:</p>
+                <image style="block" src="../webcontent/image134.gif"
+                    alt="P(Drunk and Female) is calculated using
+3 cells from the two-way table. These are the row total (Female, Total) cell, the column total
+(Total, Yes) cell, and table total (Total, Total) cell. P(Drunk and Female) = (column total *
+row total)/(table total)"/>
+                <p>This will always be the case, and will help streamline our calculations:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi mathvariant="italic">Expected</m:mi>
+                            <m:mtext> </m:mtext>
+                            <m:mi mathvariant="italic">Count</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mi mathvariant="italic">Column</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">Total </m:mi>
+                                    <m:mo> * </m:mo>
+                                    <m:mi mathvariant="italic"> Row</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">Total</m:mi>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mi mathvariant="italic">Table</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">Total</m:mi>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <!-- <p>and therefore</p> -->
+                <wb:inline idref="u4_m4_cc2_tutor1" purpose="learnbydoing"/>
+                <!--
+    <flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="274" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u5_m2_inlinetutor3.xml</param>
+<param name="problem_name">_u5_m2_inlinetutor3</param>
+</flash>-->
+                <wb:inline idref="u4_m4_cc2_tutor2" purpose="learnbydoing"/>
+                <!--
+    <flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="274" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u5_m2_inlinetutor4.xml</param>
+<param name="problem_name">_u5_m2_inlinetutor4</param>
+</flash>-->
+                <p>Here is the complete table of expected counts, followed by the table of observed
+                    counts:</p>
+                <image style="block" src="../webcontent/image136.gif"
+                    alt="A two-way table for expected counts,
+in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; and &quot;Total.&quot; The rows
+are labeled &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; Here is the data in the table,
+given in cell format (&quot;Row, Column: Value&quot;):
+        Male, Yes: (93 * 481)/619 = 72.3;
+        Male, No: (526 * 481)/619 = 408.7;
+        Male, Total: 481;
+        Female, Yes: (93 * 138)/619 = 20.7;
+        Female, No: (526 * 138)/619 = 117.3;
+        Female, Total: 138;
+        Total, Yes: 93;
+        Total, No: 526;
+        Total, Total: 619;"/>
+                <image style="block" src="../webcontent/image137.gif"
+                    alt="A two-way table for observed counts,
+in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; and &quot;Total.&quot; The rows
+are labeled &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; Here is the data in the table,
+given in cell format (&quot;Row, Column: Value&quot;):
+        Male, Yes: 77;
+        Male, No: 404;
+        Male, Total: 481;
+        Female, Yes: 16;
+        Female, No: 122;
+        Female, Total: 138;
+        Total, Yes: 93;
+        Total, No: 526;
+        Total, Total: 619;"/>
+                <!--<p>DID I GET THIS 1</p>-->
+            </body>
+        </section>
+        <!--<activity idref="_u5_m2_dig7" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>A study was done on the relationship between gender and piercing among
+                    high-school students. A sample of 1,000 students was chosen, then classified
+                    according to gender and according to whether or not they had any of their ears
+                    pierced. The results of the study are summarized in the following 2-by-2
+                    table:</p>
+                <image style="block" src="../webcontent/image425.gif"
+                    alt="A two way table with &quot;Yes
+Piercing,&quot; &quot;No Pierceing,&quot; and &quot;Total&quot; columns. The rows are &quot;Male,&quot;
+&quot;Female,&quot; and &quot;Total.&quot;  Here is the data in the table, given in cell format
+(&quot;Row, Column: Value&quot;):
+        Female, Yes: 576;
+        Female, No: 64;
+        Female, Total: 640;
+        Male, Yes: 72;
+        Male, No: 288;
+        Male, Total: 360;
+        Total, Yes: 648;
+        Total, No: 352;
+        Total, Total: 1000"/>
+                <wb:inline idref="u4_m4_cc2_tutor3" purpose="didigetthis"/>
+                <wb:inline idref="u4_m4_cc2_tutor4" purpose="didigetthis"/>
+            </body>
+        </section>
+        <p>We see that there are differences between the observed and expected counts in the
+            respective cells. We now have to come up with a measure that will quantify these
+            differences. This is the chi-square test statistic.</p>
+
+    </body>
+</workbook_page>

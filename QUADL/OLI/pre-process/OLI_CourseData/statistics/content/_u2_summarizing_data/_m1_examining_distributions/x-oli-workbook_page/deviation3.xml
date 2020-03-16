@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="deviation3">
+<head>
+<title>Standard Deviation (3 of 3)</title>
+    <objref idref="apply_standard_deviation_rule"/>
+</head>
+<body>
+
+ <p>The following example illustrates how we can apply the Standard Deviation Rule to variables
+            whose distribution is known to be approximately normal.</p>
+<example>
+<title>Length of Human Pregnancy</title>
+<p>The length of the human pregnancy is not fixed. It is known that it varies according to a
+                distribution which is roughly normal, with a mean of 266 days, and a standard
+                deviation of 16 days. (Source: Figures are from Moore and McCabe, <em style="italic"
+                    >Introduction to the Practice of Statistics</em>). </p>
+<p>First, lets' apply the Standard Deviation Rule to this case by drawing a picture:
+			<image style="block" src="../webcontent/sdgraph4.gif" alt="A histogram. The X-axis is
+labeled &quot;Length (days)&quot;, and it ranges from about 214 to 314 days. The mode and mean of the
+histogram is at x=266. The 1st Standard Deviation, or the middle 68%, spans the range [250,282]. The
+2nd Standard Deviation (middle 95%) spans the range [234,298]. The 3rd Standard Deviation (middle
+99.7%) spans the range[218,314]."/>
+</p>
+
+</example>
+    <p>We can now use the information provided by the Standard Deviation Rule about the distribution
+            of the length of human pregnancy, to answer some questions. For example:</p>
+    
+    <inquiry>
+        <question>How long do the middle 95% of human pregnancies last?</question>
+        <answer>The middle 95% of pregnancies last within 2 standard deviations of the mean, or in
+                this case 234-298 days.</answer>
+        <question>What percent of pregnancies last more than 298 days?</question>
+        <answer> To answer this consider the following picture: <image style="block"
+                    src="../webcontent/sdgraph5.gif" alt="The area outside of the middle 95% is
+shaded red. There are two red areas on either side of the middle 95%. Together, they make up
+the remaining 5%, and individually, they are 2.5% each because the normal distribution is symmetric."/>
+                Since 95% of the pregnancies last between 234 and 298 days, the remaining 5% of
+                pregnancies last either less than 234 days or more than 298 days. Since the normal
+                distribution is symmetric, these 5% of pregnancies are divided evenly between the two
+                tails, and therefore 2.5% of pregnancies last more than 298 days. </answer>
+        <question>How short are the shortest 2.5% of pregnancies?</question>
+        <answer>Using the same reasoning as in the previous question, the shortest 2.5% of human pregnancies last less than 234 days.</answer>
+        <question>What percentage of human pregnancies last more than 266 days?</question>
+        <answer>Since 266 days is the mean, approximately 50% of pregnancies last more than 266
+                days.</answer>
+        </inquiry>
+    
+    <!--<activity idref="deviation3selfassess" purpose="didigetthis"/>-->
+ <p>In general, the larger the animal, the longer the length of pregnancy (also called <em style="italic">gestation
+            period</em>). For the horse, for example, the gestation period varies roughly according to a
+            normal distribution with a mean of 336 days and a standard deviation of 3 days (Source:
+            These figures are from Moore and McCabe, <em style="italic">Introduction to the Practice
+                of Statistics</em>).</p>
+     <p>Use the Standard Deviation Rule to answer the following
+         questions. This picture of the SD rule applied to this distribution will help:<!-- (a picture of the SD rule applied to this distribution will help). --></p>
+    <image style="block"
+        src="../webcontent/eda_examining_distributions_didigetthis_deviation3_02q1.gif" alt="The graph shows a normal distribution of 327 to 345 days gestation for the horse. The mean is 336 days, and the standard deviation is 3 days. The area of standard deviation, from 333 to 339, is shaded red, accounting for 68% of pregnancies. Two unshaded areas, to the left and right of the center 68%, account for 16% each for a total of 32% outside the standard deviation."/>
+    <wb:inline idref="u1_m1_deviation3_tutor1" purpose="didigetthis"/>
+   <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If not, then click
+            the link below for some additional practice.</p>
+    <activity idref="deviation3selfassess_02" purpose="didigetthis"/>
+    
+<section>
+<title>Let's Summarize</title>
+<body>
+<ul>
+<li>The standard deviation measures the spread by reporting a typical (average) distance between the data points and their average.</li>
+<li>It is appropriate to use the SD as a measure of spread with the mean as the measure of center.</li>
+<li>Since the mean and standard deviations are highly influenced by extreme observations, they should be used as numerical descriptions of the center and spread only for distributions that are roughly symmetric, and have no outliers.</li>
+<li>For symmetric mound-shaped distributions, the Standard Deviation Rule tells us what percentage of the observations falls within 1, 2, and 3 standard deviations of the mean, and thus provides another way to interpret the standard deviation's value for distributions of this type.</li>
+</ul>
+</body>
+</section>
+</body>
+</workbook_page>

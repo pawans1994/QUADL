@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop6_tutor3">
+    <title>Tutor</title>
+  
+    <page>
+        <question id="q1">
+            <body>
+                <p>Let's return to the scenario where we are studying the population of part-time
+                    college students. We know that in 2008, 60% of this population was female. We
+                    are curious if the proportion has decreased this year. We test the hypotheses:
+                        H<sub>0</sub>: p = 0.60 and H<sub>a</sub>: p &lt; 0.60, where p is the
+                    proportion of part-time college students that are female this year.</p>
+                <p>Which of the following p-hat values will give the smallest p-value?</p>
+                <p>p-hat =  <input_ref input="C"/></p>
+            </body>
+            <fill_in_the_blank id="C" shuffle="false">
+                <choice value="one">14/25 = 0.56</choice>
+                <choice value="two">12/25 = 0.48</choice>
+                <choice value="three">10/25 = 0.40</choice>
+            </fill_in_the_blank>
+            <part id="p3">
+                <response input="C" match="one">
+                    <feedback>Incorrect. For the choices given, this is the p-hat with
+                        the largest p-value.</feedback>
+                </response>
+                <response input="C" match="two">
+                    <feedback>Incorrect. For H<sub>a</sub>: p &lt; 0.60, the
+                        further the p-hat is from p = 0.60, the larger the test statistic in
+                        magnitude and the smaller the p-value.</feedback>
+                </response>
+                <response input="C" match="three" score="1">
+                    <feedback>Correct. For the alternative hypothesis H<sub>a</sub>: p &lt;
+                        0.60, we are asking, "what is the probability of observing a test statistic
+                        smaller than that given by the data?" Of the options given, the probability
+                        is the smallest for p-hat = 0.40, since it is the furthest from p =
+                        0.60.</feedback>
+                </response>
+                <hint>For the alternative hypothesis H<sub>a</sub>: p &lt; 0.60, the p-value is
+                    the area to the left of the test statistic.</hint>
+                <hint>Click <link
+                        href="javascript:loadImage('../webcontent/1_img3.gif')"
+                    >here</link> to see graphs that illustrate the connections
+                    between p-hat calculated from the data, the z-score, and the p-value. Graphs in
+                    the top row are the sampling distributions for p-hat drawn as if H<sub>0</sub>
+                    is true. Graphs in the bottom row are the distributions of z-scores with
+                    p-values corresponding to the alternative hypothesis H<sub>a</sub>: p &lt;
+                        p<sub>0</sub>.</hint>
+                <hint>For the alternative hypothesis H<sub>a</sub>: p &lt; 0.60, p-hat = 0.40 is
+                    the furthest from p = 0.60, so the test statistic from this data has the largest
+                    magnitude and the smallest p-value for the stated H<sub>a</sub>.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

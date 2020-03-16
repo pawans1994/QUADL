@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_bridge3">
+    <head>
+        <title>Random Variables (3 of 3)</title>
+        <objref idref="use_probability_distributions"/>
+        <objref idref="describe_models_shape_center_spread"/>
+    </head>
+    <body>
+       
+
+
+        <example>
+            <p>Let’s return to the example of estimating the percentage of U.S. adults who favor the
+                death penalty. If we collect a random sample of U.S. adults, we are uncertain how
+                well the sample really estimates the true percentage of the population supporting
+                the death penalty. We are uncertain because we don’t know how much variation there
+                will be in random samples. </p>
+            <p>Reputable polling organizations will state a probability with their results.
+                Frequently, they report a probability of 0.95 that an estimate from their sample
+                will come within 3 percentage points of the true population value. We will learn
+                more about this later. For now, let’s focus on creating a probability model using
+                random samples to determine the probability of different sample outcomes. </p>
+            <p>Let’s look at the possible results from a sample of 10 people and define X as the
+                number in the sample who support the death penalty. (Of course, reputable polling
+                organizations will collect a much larger sample. For purposes of illustration, we
+                will work with a small sample size of 10.) </p>
+            <p>To create a probability model, we need to repeat this random sampling many, many
+                times. We will use a computer to simulate this process by taking 5,000 samples of 10
+                people at a time from a hypothetical population. Note that in order to run this
+                simulation, we have to make an assumption about the average number of supporters we
+                will see over the long run. For this example, we assumed that the average was 6.2. </p>
+            <p>Here are the results of our 5,000 samples. We will use the relative frequency to
+                assign a probability to each outcome. </p>
+            <image style="block" src="../webcontent/image011.png" alt="There are two rows in this table,
+labeled &quot;X = # supporting in sample of 10&quot; and &quot;P(X) = Relative Frequency = (Sample
+Count)/5000.&quot; We will present the data in this table by column, in &quot;X: P(X)&quot; format:
+            0: 0;
+            1: 0.001;
+            2: 0.007;
+            3: 0.031;
+            4: 0.092;
+            5: 0.181;
+            6: 0.255;
+            7: 0.227;
+            8: 0.142;
+            9: 0.053;
+            10: 0.009;"/>
+            <p>According to this probability model, is it likely that we will collect a random
+                sample in which 3 or fewer support the death penalty? </p>
+            <p>P(3 or fewer) = P(X=0) + P(X=1) + P(X=2) + P(X=3) = 0 + 0.001 + 0.007 + 0.031 =
+                0.039, so it is unlikely that we would get a random sample of 10 people in which 3
+                or fewer support the death penalty. </p>
+            <p>Here you see the probability distribution as a histogram. Using technology, we find
+                that the mean is 6.21 and the standard deviation is 1.53. The shape is approximately
+                <?oxy_comment_start author="mmyers" timestamp="20101120T161511-0500" comment="consider removing underscores from graphic below"?>normal.<?oxy_comment_end?>
+            </p>
+            <image style="block" src="../webcontent/image012.png" alt="A histogram of the data
+in the above table. The vertical axis is labeled &quot;Relative Frequency of sample_count,&quot;
+and the horizontal axis is labeled &quot;sample_count.&quot; Here is the description of the histogram,
+going from left to right across the horizontal axis: The histogram is in a normal shape, so it grows
+from 0 to a peak at x = 6 (with Frequency of 0.255). From there, it decays back to zero."/>
+            <p>What is the probability that a sample will give results that fall within one standard
+                deviation of the mean of 6.21? </p>
+            <p>Samples with 5, 6, or 7 people (out of 10) supporting the death penalty fall within
+                one standard deviation of the mean. </p>
+            <p>P(sample has 5, 6, or 7 supporters) = P(X=5) + P(X=6) + P(X=7) = 0.181 + 0.255 +
+                0.227 = 0.663. </p>
+            <p>So there is a 66.3% probability that a sample gives results within one standard
+                deviation of the overall mean of 6.21. Notice that this is very close to the
+                probability of 0.68 predicted by the Standard Deviation Rule for normal
+                distributions that we discussed in the unit on Exploratory Data Analysis. </p>
+        </example>
+       
+            <wb:inline idref="u3_m3_bridge3_tutor1" purpose="didigetthis"/>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>In each of the examples we have discussed in this module we were able to list the
+                    outcomes. When we can list the outcomes, it is easy to use a table to list the
+                    probability for each outcome. In the next module we will look at examples in
+                    which outcomes can be any number in an interval, so it will be impossible to
+                    list the outcomes and corresponding probabilities. </p>
+                <p>As we’ll see, when any number in an interval can be an outcome, we assign
+                    probabilities using areas under the curve defined by the probability model. We
+                    will extend the previous example to just give you a “taste” of how this might
+                    work before we move into a more in-depth treatment in the next module. </p>
+                <p>In this histogram, the width of each bar is 1, so the area of each bar has the
+                    same numerical value as the height (area = height * width = height * 1). So in
+                    the histogram, the area of the shaded bars can also be used to find
+                    probabilities. For example, the shaded area is also 0.663. </p>
+                <p>We have also graphed a normal curve on top of the histogram. You can see the area
+                    under the curve closely approximates the area in the bars. When we use area to
+                    represent probability, we will not worry about the vertical scale. But we will
+                    make sure that the total area under the curve is 1, so that the area is a
+                    mathematically correct probability
+                    <?oxy_comment_start author="mmyers" timestamp="20101120T161537-0500" comment="consider removing underscores from graphic below"?>model.<?oxy_comment_end?>
+                </p>
+                <image style="block" src="../webcontent/image013.png" alt="The same histogram as the
+previous one. The bars for sample_count = 5, 6, and 7 have been shaded red. In addition, a normal curve
+has been drawn on top, and for almost every bar on the histogram the curve goes through the flat top of
+the bar, showing that it closely approximates the area in the bar."/>
+                <p>In the next module, we will develop in more depth the idea of using the area
+                    under a curve as a probability model. This idea is used when outcomes can be any
+                    number in an interval, or when the area gives a good approximation of the
+                    discrete probabilities for listed outcomes. </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

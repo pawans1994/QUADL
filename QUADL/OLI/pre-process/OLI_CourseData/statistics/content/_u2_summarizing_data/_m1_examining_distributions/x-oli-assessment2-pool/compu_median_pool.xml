@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_median_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_median" select="single">
+        <body>
+            <p>The histogram below displays the distribution of 50 ages at death due to trauma
+                (accidents and homicides) that occurred in a certain hospital during a week. </p>
+            <image style="block" src="../webcontent/assessment1q2.gif" />
+            <p>Which of the following is a possible value of the median in this example?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">23</choice>
+            <choice value="B">45</choice>
+            <choice value="C">50</choice>
+            <choice value="D">33</choice>
+            <!--    <choice value="E">It is impossible to answer without seeing all of the
+                data. </choice>-->
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that the median is the middle value. Only 21 people
+                    out of 50 could be younger than age 23, as represented by the total height of
+                    the two left bars on the display. So 23 is too low to be the median.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the median is the middle value. Only 10 people
+                    out of 50 could be older than age 45, as represented by the total height of the
+                    four bars on the right side of the display. So 45 is too large to be the
+                    median.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that the median is the value of the middle person, not
+                    the middle of the range. Only 10 people out of 50 could be older than age 50, as
+                    represented by the total height of the four bars on the right side of the
+                    display. So 50 is too large to be the median.</feedback>
+            </response>
+            <!--    <response match="D" score="10">
+                <feedback>Correct. The median is the middle value. There are 50 people in the data,
+                    so the median must be the age between the 25th youngest person and the 26th
+                    youngest person. These people will both be represented in the third bar from the
+                    left on the display. Since that bar represents ages from 25 to 35, the median
+                    could be any value between those ages.</feedback>
+            </response>-->
+        </part>
+    </multiple_choice>
+
+
+
+
+    <multiple_choice id="q2_compu_median" select="single">
+        <body>
+            <p>This histogram shows the times, in minutes, required for 25 rats in an animal
+                behavior experiment to successfully navigate a maze.</p>
+            <image style="block" src="../webcontent/image500.png" />
+            <p>Which of the following is a possible value of the median in this example?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">3.3 </choice>
+            <choice value="B">3.9 </choice>
+            <choice value="C">4.6 </choice>
+            <choice value="D">5.5 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that the <em style="bold">median</em> is the middle
+                    value. There are 25 observations (odd number) and therefore the median is the
+                    13th ranked observation. Only 11 observations fall below 3.5, so 3.3 is too low
+                    to be the median.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. There are 25 observations (odd number), and therefore the median
+                    is the 13th ranked observation. If we look at the histogram, we can figure out
+                    that the 13th observation falls in the third interval (3.5–4.5 minutes). The
+                    only option with such a number is 3.9 minutes.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that the <em style="bold">median</em> is the middle
+                    value. There are 25 observations (odd number) and therefore the median is the
+                    13th ranked observation. Only 8 observations fall above 4.5, so 4.6 is too high
+                    to be the median.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that the <em style="bold">median</em> is the middle
+                    value. There are 25 observations (odd number) and therefore the median is the
+                    13th ranked observation. Only 5 observations fall above 5.5, so this is too high
+                    to be the median.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+
+    <multiple_choice id="q3_compu_median" select="single">
+        <body>
+            <p>Here are the number of hours that 9 students spend on the computer on a typical day:
+                </p><p> 1 6 7 6 8 11 6 12 15</p>
+            <p>Which of the following represents the median number of hours spent on the computer?
+            </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">6.0 </choice>
+            <choice value="B">7.0 </choice>
+            <choice value="C">7.5 </choice>
+            <choice value="D">8.0 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This value represents the <em style="italic">mode</em>, or the
+                    most frequently occurring number. The median is the middle value in an ordered
+                    data set.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. To locate the median you first need to list the values in order
+                    and then locate the middle value. In this set of values, 7 is the middle most
+                    number (1, 6, 6, 6, <em style="bold">7</em>, 8, 11, 12, 15).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. There is an odd number of values so it is not be necessary to
+                    take the average of the two middle numbers.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the middle most number in the data set. However, it
+                    appears you forgot to first list the values in order before identifying the
+                    middle most value.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+</pool>

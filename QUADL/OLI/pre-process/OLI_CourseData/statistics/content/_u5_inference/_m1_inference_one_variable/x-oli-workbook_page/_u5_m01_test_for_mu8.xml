@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_mu8">
+<head>
+<title>Hypothesis Testing for the Population Mean (8 of <!--9-->9)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+</head>
+<body>
+   
+<section>
+<title>3. Finding the p-value</title>
+<body>
+<p> The p-value of the t-test is found exactly the same way as it is found for the z-test, except
+                    that the t distribution is used instead of the <?oxy_insert_start author="mmyers" timestamp="20101128T004554-0500"?>Z<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004554-0500" content="z"?><?oxy_insert_start author="mmyers" timestamp="20101128T004539-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004538-0500" content="-"?>distribution,
+                    as the figures below illustrate.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Comment: </title>
+<body>
+<p>Even though tables exist for the different t distributions, we will only use software to do the
+                    calculation
+                    for<?oxy_comment_start author="mmyers" timestamp="20101128T004631-0500" comment="use subscripts for Ha in the equations below"?>
+                    us.<?oxy_comment_end?></p>
+<image style="block" src="../webcontent/image366.gif" alt="H_a: &mu; &lt; &mu;_0 &rArr;
+p-value = P(t(n-1) &le; t)"/>
+<image style="block" src="../webcontent/image367.gif" alt="A t(n-1) distribution with
+t-scores on its horizontal axis. T-scores of 0 and t have been marked, with t to the
+left of 0. t has been generated from a observed test statistic. The area to the left
+of t under the curve is the p-value."/>
+<image style="block" src="../webcontent/image368.gif" alt="H_a: &mu; &gt; &mu;_0 &rArr;
+p-value = P(t(n-1) &ge; t)"/>
+<image style="block" src="../webcontent/image369.gif" alt="A t(n-1) distribution with
+t-scores on its horizontal axis. T-scores of 0 and t have been marked, with t to the
+right of 0. t has been generated from a observed test statistic. The area to the right
+of t under the curve is the p-value."/>
+<image style="block" src="../webcontent/image370.gif" alt="Ha: &mu; &ne; &mu;_0 &rArr;
+p-value = P(t(n-1) &le; -|t|) + P(t(n-1) &ge; |t|) = 2P(t(n-1) &ge; |t|)"/>
+<image style="block" src="../webcontent/image371.gif" alt="A t(n-1) distribution with
+t-scores on its horizontal axis. T-scores of -|t|, 0, and |t| have been marked. -|t| is
+to the left of 0, and |t| is to the right. t has been generated from a observed test
+statistic. The sum of the area under the curve to the left of -|t| and to the right of
+|t| is the p-value."/>
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>Note that due to the symmetry of the t distribution, for a given value of the test statistic t,
+                    the p-value for the two-sided test is twice as large as the p-value of either of
+                    the one-sided tests.
+                    <?oxy_delete author="mmyers" timestamp="20101128T004749-0500" content="We have discussed this before, but we just wanted you to note that t"?><?oxy_insert_start author="mmyers" timestamp="20101128T004755-0500"?>T<?oxy_insert_end?>he
+                    same <?oxy_insert_start author="mmyers" timestamp="20101128T004804-0500"?>thing
+                    <?oxy_insert_end?>happens when p-values are calculated under the t
+                    distribution<?oxy_insert_start author="mmyers" timestamp="20101128T004809-0500"?>
+                    as when they are calculated under the Z distribution<?oxy_insert_end?>.</p>
+</body>
+</section>
+<section>
+<title>4. Drawing
+                <?oxy_insert_start author="mmyers" timestamp="20101128T004833-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004833-0500" content="c"?>onclusions</title>
+<body>
+<p>As usual, based on the p-value (and some significance level of choice) we assess the significance of results, and draw our conclusions in context.</p>
+<p>To summarize:</p>
+<p>The main difference between the z-test and the t-test for the population mean is that we use the
+                    sample standard deviation
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T004849-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T004849-0500" content="S"?>
+                    instead of the unknown population standard deviation σ. As a result, the
+                    p-values are calculated under the t distribution instead of under the Z
+                    distribution. Since we are using software, this doesn't really impact us
+                    practically. However, it is important to understand what is going on behind the
+                    scenes, and not just use the software mechanically. This is why we went through
+                    the trouble of explaining the t distribution.</p>
+<p>We are now ready to look at two examples.</p>
+</body>
+</section>
+</body>
+</workbook_page>

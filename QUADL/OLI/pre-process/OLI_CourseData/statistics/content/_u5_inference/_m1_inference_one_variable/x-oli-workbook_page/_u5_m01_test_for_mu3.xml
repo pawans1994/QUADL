@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_test_for_mu3">
+<head>
+    <title>Hypothesis Testing for the Population Mean (3 of <!--9-->9)</title>
+    <objref idref="carry_out_hypothesis_testing"/>
+</head>
+<body>
+   
+<section>
+<title>3. Finding the p-value of the test</title>
+<body>
+<p> The p-value &#8212; the probability of getting data (summarized with the test statistic) as
+                    extreme as those observed or even more extreme (in the direction of the
+                    alternative hypothesis) when H<sub>o</sub> is true &#8212; for the z-test for
+                    the population mean is found exactly like the p-value in the z-test for the
+                    population proportion. We've already learned that the p-value is found under the
+                    null distribution of the test statistic, and since for both means (with σ known)
+                    and proportions the null distribution of the test statistic is N(0,1), the
+                    p-value is calculated as follows:</p>
+    <section>
+        <title>Less Than</title>
+        <body>
+            <image style="block" src="../webcontent/image336.gif" alt="H_a: &mu; &lt; &mu;_0 &rArr;
+p-value = P(Z &le; z)"/>
+            <image style="block" src="../webcontent/image259.gif" alt="A N(0,1) curve for which the
+horizontal axis has been marked with two z-scores, z and 0, where z is the observed test statistic.
+z is to the left of 0, and the area to the left of z under the curve is the p-value."/>
+        </body>
+    </section>
+    <section>
+        <title>Greater Than</title>
+        <body>
+            <image style="block" src="../webcontent/image337.gif" alt="H_a: &mu; &gt; &mu;_0 &rArr;
+p-value = P(Z &ge; z)"/>
+            <image style="block" src="../webcontent/image261.gif" alt="A N(0,1) curve for which the
+horizontal axis has been marked with two z-scores, z and 0, where z is the observed test statstic.
+z is to the right of 0, and the area to the right of z under the curve is the p-value."/>
+        </body>
+    </section>
+    <section>
+        <title>Not Equal To</title>
+        <body>
+            <image style="block" src="../webcontent/image338.gif" alt="H_a: &mu; &ne; &mu;_0 &rArr;
+p-value = P(Z &le; -|z|) + P(Z &ge; |z|) = 2P(Z &ge; |z|)"/>
+            <image style="block" src="../webcontent/image263.gif" alt="A N(0,1) curve for which the
+horizontal axis has been marked with three z-scores, -|z|, 0, and |z|, where z is the test statistic.
+-|z| is to the left of 0, and |z| is to the right of 0. The p-value is the sum of the area to the
+right of |z| under the curve and the area to the left of -|z| under the curve."/>
+        </body>
+    </section>
+    
+    
+
+
+<example>
+<title>1</title>
+<p>In the example about the SAT-M scores of students at Ross College, the test statistic was found
+                        to be z = 1. The p-value is therefore P(Z &gt; 1):</p>
+<image style="block" src="../webcontent/image339.gif" alt="A N(0,1) curve, with a horizontal axis
+marked with z-scores of 0 and 1. The area to the right of z-score 1 is the area we care about, because
+it is the p-value."/>
+    <p>To find the p-value, we can either:</p>
+    
+    <ul>
+        <li>use the (68% part of the) Standard Deviation Rule for the normal distribution, which
+                            tells us that the p-value is approximately 0.16 (since P(-1 &lt; Z &lt;
+                            1) = 0.68), or</li>
+        <li>use the normal table, or</li>
+        <li>carry out the test using statistical software.  In this case, we get a p-value of 0.159.</li>
+    </ul>
+    
+<!-- RS 7/28/10 - Generalized to eliminate alternatives
+    <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>To find the p-value, we can either</p>
+
+<ul>
+<li>use the (68% part of the) standard deviation rule for the normal distribution which tells us that the p-value is approximately 0.16 (since P(-1&lt;Z&lt;1)=0.68), or</li>
+<li>use the normal table</li>
+<li>carry out the test using statistical software.  In this case, Excel gives us a p-value of 0.159.</li>
+</ul>
+
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>To find the p-value, we can either</p>
+
+<ul>
+<li>use the (68% part of the) standard deviation rule for the normal distribution which tells us that the p-value is approximately 0.16 (since P(-1&lt;Z&lt;1)=0.68), or</li>
+<li>use the normal table</li>
+<li>carry out the test using statistical software:</li>
+</ul>
+
+<image style="block" src="../webcontent/image408.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>To find the p-value, we can either</p>
+        
+        <ul>
+            <li>use the (68% part of the) standard deviation rule for the normal distribution which tells us that the p-value is approximately 0.16 (since P(-1&lt;Z&lt;1)=0.68), or</li>
+            <li>use the normal table</li>
+            <li>carry out the test using statistical software.  In this case, R gives us a p-value of 0.159.</li>
+        </ul>
+        
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<image style="block" src="../webcontent/image340.gif" alt="A large circle represents
+all of the Students at Ross College. We are interested in finding &mu;, or the mean of the SAT-M
+scores, which has a normal distribution. Our hypotheses are H_0: &mu; = 500 and H_a: &mu; &gt; 500,
+assuming SD = 100. We take a sample of size n = 4 from the population, represented by a smaller
+circle. For this sample, x-bar = 550, and since our conditions are met, we can calculate that z = 1.
+We also calculate that the p-value = .159"/>
+</example>
+<example>
+<title><?oxy_comment_start author="mmyers" timestamp="20101127T221523-0500" comment="use subscripts in graphic above for Ha and Ho"?>2<?oxy_comment_end?></title>
+<p>In the concentration level example, the test statistic was found to be -2.5. Since this is the two-sided test, the p-value is the combination of the two shaded areas in the following figure.</p>
+<image style="block" src="../webcontent/image341.gif" alt="A N(0,1) curve, with a horizontal axis
+marked with z-scores of -2.5, 0, and 2.5. The P-value is the area to the under the curve to the left
+of -2.5, and the area under the curve to the right of 2.5 ."/>
+
+    <p>The p-value is therefore twice P(Z &gt; 2.5). We can either use the table, or carry out the
+                        test using statistical software. In this case, we get a p-value of
+                        <?oxy_comment_start author="mmyers" timestamp="20101127T221703-0500" comment="use subscripts for Ho and Ha below"?>0.012.<?oxy_comment_end?></p>
+
+    <!-- RS 7/28/10 - Generalized to eliminate alternatives
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>The p-value is therefore 2P(Z&gt;2.5). We can either use the table, or carry out the test using statistical software.  In this case, Excel gives us a p-value of 0.012.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>The p-value is therefore 2P(Z&gt;2.5). We can either use the table, or simply ask Minitab to carry out the test for us.</p>
+<image style="block" src="../webcontent/image409.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>The p-value is therefore 2P(Z&gt;2.5). We can either use the table, or carry out the test using statistical software.  In this case, R gives us a p-value of 0.012.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+<image style="block" src="../webcontent/image342.gif" alt="A large circle represents
+the population, which is the shipment. &mu; represents the concentration of the chemical. Our hypotheses
+are H_0:mean = 250, and H_a: mean is not 250. We assume that SD = 12). Selected from the population is a 
+sample of size n=100, represented by a smaller circle. x-bar for this sample is 247, and because our conditions
+are met, we can calculate that z = -2.5, and that the p-value = .012"/>
+</example>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

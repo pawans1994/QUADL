@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules4_tutor4">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>The probabilities in this table were calculated from data describing North America’s
+            favorite car colors in 2003. (Source: DuPont Automotive as cited in money.cnn.com)</p>
+         <!--  <p>At the end of 2003, money.cnn.com published a list of North America's favorite car
+            colors of 2003, citing DuPont Automotive as their source. Here is the list of
+            <?oxy_insert_start author="mmyers" timestamp="20101108T134841-0500"?>the
+            <?oxy_insert_end?>colors
+            <?oxy_insert_start author="mmyers" timestamp="20101108T134845-0500"?>designated as
+            <?oxy_insert_end?>and their frequencies
+            <?oxy_insert_start author="mmyers" timestamp="20101108T134819-0500"?>among all the
+            favorites <?oxy_insert_end?>(in
+            percent<?oxy_insert_start author="mmyers" timestamp="20101108T134638-0500"?>age<?oxy_insert_end?>s):</p>-->
+         <image src="../webcontent/dig011.gif" alt="table showing car colors and their popularity"/>
+         <p>What is the probability that a randomly chosen car will have one of the three most
+            popular colors?</p>
+         <!--  <p>What is the probability that a randomly chosen
+            car<?oxy_insert_start author="mmyers" timestamp="20101108T134933-0500"?> that is one of
+            the "favorite" colors<?oxy_insert_end?> will
+            <?oxy_insert_start author="mmyers" timestamp="20101108T134952-0500"?>be<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T134951-0500" content="have"?>
+            one of the three most popular colors?</p>-->
+      </body>
+      <short_answer id="A"/>
+
+      <part>
+         <response input="A" match="*" score="1"/>
+         <hint>What you are asked to find is P(Silver or White or Black).</hint>
+         <explanation>
+            <p>Our answer: P(among the top three
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135209-0500"?>favorite
+               <?oxy_insert_end?>colors) = P(Silver or White or Black).</p>
+            <p>Since the three events, Silver, White and Black, are disjoint (since
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135313-0500"?>for the purposes
+               of our example <?oxy_insert_end?>a car can have just one color), we can apply the
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135337-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T135337-0500" content="a"?>ddition
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135340-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T135340-0500" content="r"?>ule
+               for
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135343-0500"?>D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T135342-0500" content="d"?>isjoint
+               <?oxy_insert_start author="mmyers" timestamp="20101108T135346-0500"?>E<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T135346-0500" content="e"?>vents
+               (extended to three disjoint events) and get:</p>
+            <p>P(among the top three colors) = P(Silver) + P(White) + P(Black) = 0.202 + 0.184 +
+               0.116 = 0.502.</p>
+            <p><?oxy_delete author="mmyers" timestamp="20101108T140109-0500" content="In other words, 50.2% of cars manufactured in North America in 2003 were either silver, white, or black."?><?oxy_insert_start author="mmyers" timestamp="20101108T140126-0500"?><?oxy_comment_start author="mmyers" timestamp="20101108T143121-0500" comment="Please consider replacing this example. The fact that all colors (and thus all cars) are not included, presents multiple problems. You can&apos;t say &quot;the probability of any random car,&quot; because only cars that are one of the 10 favorite colors are considered. In this problem, you are talking about the top three favorites among the tep ten favorites, which is confusing. I have rewritten the above to be accurate, but note that in this last statement, you cannot actually specify what 50.2 is a percentage of. Because of the way Dupont characterized the study, it&apos;s not a percentage of cars, either manufactured or owned. It&apos;s not a percentage of colors. We have no way of knowing how they determined popularity, so we can&apos;t even say it&apos;s the percentage of &quot;responses&quot; to the question &quot;Out of these 10 car colors, which one is the most popular?&quot;. 50.2 is kind of the percentage of popularity of the top three of the top ten favorite car colors in the United States in 2003 according to Dupont."?>In
+               other words, of the top 10 favorite car colors in the country, the
+               <?oxy_insert_end?>three<?oxy_insert_start author="mmyers" timestamp="20101108T140126-0500"?>
+               most popular colors comprised 50.2%.<?oxy_comment_end?><?oxy_insert_end?></p>
+         </explanation>
+
+      </part>
+   </question>
+</assessment>

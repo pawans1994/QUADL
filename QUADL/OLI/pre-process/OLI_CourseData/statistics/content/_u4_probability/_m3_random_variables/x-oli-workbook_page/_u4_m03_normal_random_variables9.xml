@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_normal_random_variables9">
+    <head>
+        <title>Normal Approximation to the Binomial (1 of 3)</title>
+        <objref idref="use_normal_as_approximation_to_binomial"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Application of Normal Random Variables: Approximation to Binomial</title>
+            <body>
+        <p>One of the important applications of the normal distribution is that under certain
+            conditions it can provide a very good approximation to the binomial distribution. We've
+            seen before that sometimes calculating binomial probabilities can be quite tedious, and
+            the solution we suggested before is to use statistical software to do the work for you.</p>
+        <p>In the absence of statistical software, another solution would be to use the normal
+            approximation (when appropriate). Normal calculations never get too complicated; all we
+            have to do is use a table correctly.</p>
+        <p>Let's start with a motivating example.</p>
+        <example><title>True/False Questions</title>
+
+            <p>Suppose a student answers 20 true/false questions completely at random. What is the
+                probability of getting no more than 8 correct? Let X be the number of questions the
+                student gets right (successes) out of the 20 questions (trials), when the
+                probability of success is .5. X is therefore a binomial random variable with n = 20 and
+                p = .5, and we are looking for</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>≤</m:mo>
+                    <m:mn>8</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>=</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>)</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mi>P</m:mi>
+                    <m:mo>(</m:mo>
+                    <m:mi>X</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mn>8</m:mn>
+                    <m:mo>)</m:mo>
+                </m:math>.</p>
+            <p>Doing this by hand using the binomial distribution formula is very tedious, and
+                        requires us to do 9 complex calculations,</p>
+            <p>as shown below:</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                            <m:mo>!</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:msup>
+                        <m:mn>5</m:mn>
+                        <m:mrow>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                            <m:mo>!</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>9</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:msup>
+                        <m:mn>5</m:mn>
+                        <m:mrow>
+                            <m:mn>1</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>1</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>+</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>.</m:mo>
+                    <m:mo>+</m:mo>
+                    <m:mfrac>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                        <m:mrow>
+                            <m:mn>8</m:mn>
+                            <m:mo>!</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mn>2</m:mn>
+                            <m:mo>!</m:mo>
+                        </m:mrow>
+                    </m:mfrac>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:msup>
+                        <m:mn>5</m:mn>
+                        <m:mrow>
+                            <m:mn>8</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                    <m:mo>(</m:mo>
+                    <m:mn>1</m:mn>
+                    <m:mo>-</m:mo>
+                    <m:mn>0</m:mn>
+                    <m:mo>.</m:mo>
+                    <m:mn>5</m:mn>
+                    <m:msup>
+                        <m:mo>)</m:mo>
+                        <m:mrow>
+                            <m:mn>2</m:mn>
+                            <m:mn>0</m:mn>
+                            <m:mo>-</m:mo>
+                            <m:mn>8</m:mn>
+                        </m:mrow>
+                    </m:msup>
+                </m:math>
+            </p>
+            <p>One option that we have is to use statistical software, which will provide the
+                answer:</p>
+            <table>
+                <title>Binomial with n = 20 and p = 0.500000</title>
+                <tr><th>x</th><th>P( X &lt; = x )</th></tr>
+                <tr><td>8.00</td><td><em>0.2517</em></td></tr>
+            </table>
+        </example>
+        <p>Are there any alternatives, if software is not handy?</p>
+        <p>Yes! The properties of normal distributions can come to our  rescue.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

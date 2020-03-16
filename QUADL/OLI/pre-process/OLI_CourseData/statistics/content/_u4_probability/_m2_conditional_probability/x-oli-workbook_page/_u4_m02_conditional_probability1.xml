@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_conditional_probability1">
+<head>
+<title>Conditional Probability (1 of 2)</title>
+    <objref idref="explain_conditional_probability"/>
+    <objref idref="find_conditional_probabilities"/>
+</head>
+<body>
+    
+    <p>In the first part of this module, we'll introduce the concept of conditional probability. The
+            idea here is that the probabilities of certain events may be affected by whether or not
+            other events have occurred. Let's illustrate this idea with a simple example:</p>
+<example>
+
+<p>All the students in a certain high school were surveyed, then classified according to gender and whether they had either of their ears pierced:</p>
+<image style="block" src="../webcontent/image001.gif" alt="A table of the data. The column headings are
+&quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The Rows are &quot;Male,&quot;
+&quot;Female,&quot; and &quot;Total.&quot; The data in the cells is given in &quot;Row, Column:
+Value&quot; format:
+        Male, Pierced: 36;
+        Male, Not Pierced: 144;
+        Male, Total: 180;
+        Female, Pierced: 288;
+        Female, Not Pierced: 32;
+        Female, Total: 320;
+        Total, Pierced: 324;
+        Total, Not Pierced: 176;
+        Total, Total: 500;"/>
+<p>(Note that this is a two-way table of counts that was first introduced when we talked about the
+                                                  relationship between two categorical variables. It
+                                                  is not surprising that we are using it again in
+                                                  this example, since we indeed have two categorical
+                                                  variables here: <em>Gender:</em> M or F (in our
+                                                  notation, "not M"), and <em>Pierced:</em> Yes or
+                                                  No)</p>
+<p>Suppose a student is selected at random from the school. Let <em>M</em> and <em>not M</em> denote the events of being male and female, respectively, and <em>E</em> and <em>not E</em> denote the events of having ears pierced or not, respectively.  We'll start by asking what will seem like simple questions, and we'll build our way to conditional probability:</p>
+    <ol style="lower-alpha">
+  <li>  <p>What is the probability that the student has one or both ears pierced?</p>
+
+<p>Since a student is chosen at random from the group of 500 students, out of which 324 are
+                                                  pierced,</p>
+<p> P(E) = 324/500 = .648</p></li>
+<li><p>What is the probability that the student is male?</p>
+<p>Since a student is chosen at random from the group of 500 students, out of which 180 are
+                                                  male,</p>
+<p> P(M) = 180/500 = .36</p></li>
+<li><p>What is the probability that the student is male and has ear(s) pierced? </p>
+<p>Since a student is chosen at random from the group of 500 students out of which 36 are male and
+                                                  have their ear(s) pierced, P(M and E) = 36/500 =
+                                                  .072</p>
+<p>Now something new:</p></li>
+<li><p>
+                                                  <em>Given</em> that the student that was chosen is
+                                                  male, what is the probability that he has one or
+                                                  both ears pierced?</p>
+<p>At this point, new notation is required, to express the probability of a certain event given
+                        that another event holds. We will write "the probability of having one or
+                        both ears pierced (E) , given that a student is male (M)" as <em>P(E |
+                            M).</em>
+                    </p></li></ol>
+<p>A word about this new notation: The event whose probability we seek (in this case E) is written
+                                                  first, the vertical line stands for the word
+                                                  "given" or "conditioned on," and the event that is
+                                                  given (in this case M) is written after the "|"
+                                                  sign.</p>
+<p>We call this probability the <em>conditional probability</em> of having one or both ears pierced, given that a student is male: it assesses the probability of having pierced ears under the condition of being male. Now to solve for the probability, we observe that choosing from only the males in the school essentially alters the sample space S from all students in the school to all male students in the school. The total number of possible outcomes is no longer 500, but has changed to 180.  Out of those 180 males, 36 have ear(s) pierced, and thus:</p>
+<p> P(E | M) = 36/180 = .20.</p>
+</example>
+</body>
+</workbook_page>

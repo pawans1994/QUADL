@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u3_m2_lbd1">
+    <head>
+        <title>Causation and Experiments</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to explore the effectiveness of randomization in creating
+            similar treatment groups, in the sense that it balances the groups with respect to other
+            variables that we didn't control for.</p>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>A local internet service provider (ISP) created two new versions of its software,
+                    with alternative ways of implementing a new feature. To find the product that
+                    would lead to the highest satisfaction among customers, the ISP conducted an
+                    experiment comparing users' preferences for the two new versions versus the
+                    existing software.</p>
+                <p>The ISP ideally wants to find out which of the three software products causes the
+                    highest user satisfaction. It has identified three major potential lurking
+                    variables that might affect user satisfaction&#8212;gender, age, and hours per
+                    week of computer use.</p>
+            </body>
+        </section>
+        <p>In this activity, we will use adults in a hypothetical city as the population of interest
+            to the ISP. We will:</p>
+        <ul>
+            <li>create a simple random sample as the basis for the experimental study of the
+                population,</li>
+            <li>use randomization to assign individuals to treatment groups, and</li>
+            <li>verify that randomization prevented the three treatment groups from being different
+                with respect to the most obvious lurking variables.</li>
+        </ul>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/computers.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p> The data have been loaded into the data frame <code>computers</code>. The
+                        data frame has three variables: <code>age</code>, <code>gender</code>,
+                            <code>comp</code>. This dataset has more than 20,000 entries, so we will
+                        not display it. To verify that the data have been loaded into the variable
+                        computers, copy the following command to R:</p>
+                    <code>summary(computers)</code>
+                    <p>You can see information about the <code>age</code> of the population and the
+                        number of hours <code>(comp)</code> per week that the subjects use
+                        computers. You also see that there are more than 10,000 men and more than
+                        10,000 women in the population <code>(gender)</code>. </p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/computers.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next
+                        click <link href="http://www.statcrunch.com/" target="new">here</link>to
+                        open StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file
+                                -> on my computer.</em></li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the population data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/computers.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: a dialog box will likely appear that says "A copy of the
+                        content of this file will be added to the current project"&#8212;just click
+                        "OK."</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/computers.xls" target="self">here</link>
+                        to download the file to your computer. Then find the downloaded file and
+                        double-click it to open it in Excel. When Excel opens you may have to enable
+                        editing.</p>
+
+                </alternative>
+                <!--       <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the population data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/computers.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the gender, age, and computer use data loaded,
+                        right-click <link href="../../../webcontent/ti/computers.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+                    <p>In order to see all of the lists in table format on your TI calculator,
+                        you'll need to create three extra lists, called <code style="inline"
+                            >AGE3</code>, <code style="inline">GEND3</code>, and <code
+                            style="inline">COMP3</code>. For a reminder of how to do this, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>Our dataset contains the values of the three possible lurking variables:</p>
+        <ul style="none">
+            <li><em>age:</em> in years</li>
+            <li><em>gender:</em> female or male</li>
+            <li><em>comp:</em> hours per week of computer use</li>
+        </ul>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        will first choose a simple random sample (SRS) of 450 people for the
+                        subjects in the study.</p>
+                    <p>To choose the sample, copy the following command to R:</p>
+                    <code>random_sample = computers[sample(length(computers$age), 450),]</code>
+                    <p>Again, we do not wish to view all 450 entries in the random sample. Instead,
+                        let's look at a summary of the sample by copying the following command: </p>
+                    <code>summary(random_sample)</code>
+                    <p>By looking at the numbers of males and females in the sample, we see that the
+                        sample indeed has 450 entries. </p>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To use R to randomly assign the 450 subjects to one of three treatments, copy
+                        the following command: </p>
+                    <code>group = sample(1:3,450,replace=T)</code>
+                    <code>random_sample = cbind(random_sample,group)</code>
+                    <p><em>Note: Using R</em>&#8212;The variable <code>group</code> is a list of 450
+                        randomly chosen values from 1, 2, and 3. You can see them by entering the
+                        variable name <code>group</code> into R. These commands add a fourth column
+                        to the variable <code>random_sample</code>. The four columns are
+                            <code>age</code>, <code>gender</code>, <code>comp</code> and
+                            <code>group</code>.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        will first choose a simple random sample (SRS) of 450 people for the
+                        subjects in the study.</p>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Data → Sample Columns</li>
+                        <li>Select columns: Age, Gender, Comp </li>
+                        <li>Sample size: 450 </li>
+                        <li>Check: Sample all columns at one time </li>
+                        <li>Store samples: Split across columns </li>
+                        <li>Press: Press Compute!</li>
+                    </ul>
+                    <p> Note that three columns are added called: Sample(Age), Sample(Gender),
+                        Sample(Comp)</p>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Data → Simulate Data → Discrete Uniform</li>
+                        <li>Enter Rows: 450, Columns: 1, Min:1 and Max: 3 </li>
+                        <li>Store values: Split across columns </li>
+                        <li>Press: Compute! </li>
+                    </ul>
+                    <p>You’ll see a new column of data (called Discrete Uniform 1) with the
+                        randomized treatment groups. To rename this column: first select the heading
+                        (i.e. “Discrete Uniform 1”) and press the Delete key and then type:
+                        “Treatment” for the new column name.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        will first choose a simple random sample (SRS) of 450 people for the
+                        subjects in the study.</p>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose: Calc → Random Data → Sample From Columns...</li>
+                        <li>Enter "450" to indicate the requested size of the random sample.</li>
+                        <li> In the next text box enter "Age Gender Comp" to indicate the variables
+                            we are sampling.</li>
+                        <li>Next to "Store samples in:" type "AgeSRS GenderSRS CompSRS".</li>
+                        <li>Click "OK".</li>
+                        <li>You'll see three new columns of data.</li>
+                    </ul>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose: Calc → Random Data → Integer...</li>
+                        <li>Enter "450" to indicate the number of subjects we need to assign to
+                            treatments.</li>
+                        <li>Next to "Store in column(s):" type "Treatment".</li>
+                        <li>Next to "Minimum value:" enter "1". Next to "Maximum value:" enter
+                            "3".</li>
+                        <li>Click "OK".</li>
+                        <li>You'll see a new column of data with the randomized treatment
+                            groups.</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        will first choose a simple random sample (SRS) of 450 people for the
+                        subjects in the study.</p>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Pick 4 empty columns in your Excel worksheet and label them <code
+                                style="inline">RandomNumber</code>, <code style="inline"
+                                >Age_SRS</code>, <code style="inline">Gender_SRS</code>, and <code
+                                style="inline">Comp_SRS</code>.</li>
+                        <li>In the <code style="inline">RandomNumber</code> column, type this
+                            formula in row 2: <code style="inline">=RAND()</code>. Then copy and
+                            paste the formula into each cell in the column from row 3 down to row
+                            20784. This generates a random number in each cell of the column.</li>
+                        <li><em>IMPORTANT:</em> For a large cell range you can make this easier by
+                            doing the following: first copy the contents from row 3, next select the
+                            range of cells by first selecting the cell directly below the random
+                            number and then pressing F5. At the bottom of the menu that appears,
+                            type the column letter and 20784 in the reference line. For example, if
+                            your random numbers appear in column G you would type G20784. Hold shift
+                            and click OK to select all the cells. Finally, paste the contents that
+                            you copied.</li>
+                        <!-- <li>Select the entire column of random numbers that you just created,
+                            right-click on the column and choose <code style="inline">Copy</code>,
+                            and then right-click on the column again and choose <code style="inline"
+                                >Paste Special</code>.</li>
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li> -->
+                        <li>Type Control-A twice to select all of the data in the worksheet, and
+                            then choose <code style="inline">Sort &amp; Filter → Custom Sort</code>
+                            from the <code style="inline">Editing</code> group in the <code
+                                style="inline">Home</code> tab.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">My data has
+                                headers</code> is checked and then choose <code style="inline"
+                                >RandomNumber</code> from the pull-down menu next to <code
+                                style="inline">Sort by</code>. Click <code style="inline"
+                            >OK</code>.</li>
+                        <li>Now select all of the data in rows 2-451 under the columns that contain
+                            the original variables (Age, Gender, Comp), and copy and paste those
+                            data into the new columns you created (Age_SRS, Gender_SRS, and
+                            Comp_SRS).</li>
+                    </ul>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Pick an empty column in your Excel worksheet and label it <code
+                                style="inline">Treatment</code>.</li>
+                        <li>In the <code style="inline">Treatment</code> column, type this formula
+                            in row 2: <code style="inline">=RANDBETWEEN(1,3)</code>. Then copy and
+                            paste it into each cell in the column from row 3 down to row 451. This
+                            generates a random integer from 1 to 3 in each cell of the column.</li>
+
+                        <li>Select the entire column of random numbers that you just created,
+                            right-click on the column and choose <code style="inline">Copy</code>,
+                            and then right-click on the column again and choose <code style="inline"
+                                >Paste Special</code> .</li>
+
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li>
+
+                        <li>Type Control-A twice to select all of the data in the worksheet, and
+                            then choose <code style="inline">Sort &amp; Filter → Custom Sort</code>
+                            from the <code style="inline">Editing</code> group in the <code
+                                style="inline">Home</code> tab.</li>
+
+                        <li>In the pop-up window, make sure that <code style="inline">My data has
+                                headers</code> is checked and then choose <code style="inline"
+                                >Treatment</code> from the pull-down menu next to <code
+                                style="inline">Sort by</code>. Click <code style="inline"
+                            >OK</code>.</li>
+                    </ul>
+                </alternative>
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        will first choose a simple random sample (SRS) of 450 people for the
+                        subjects in the study.</p>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Pick four empty columns in your Excel worksheet and label them <code
+                                style="inline">RandomNumber</code>, <code style="inline"
+                                >Age_SRS</code>, <code style="inline">Gender_SRS</code>, and <code
+                                style="inline">Comp_SRS</code>.</li>
+                        <li>In the <code style="inline">RandomNumber</code> column, type this
+                            formula in row 2: <code style="inline">=RAND()</code>. Then copy and
+                            paste the formula into each cell in the column from row 3 down to row
+                            20784. This generates a random number in each cell of the column.</li>
+                        <li>Select the entire column of random numbers that you just created, and
+                            choose <code style="inline">Edit → Copy</code> and then <code
+                                style="inline">Edit → Paste Special</code> from the menu bar.</li>
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>Type Control-A to select all of the data in the worksheet, and then
+                            choose <code style="inline">Data → Sort</code> from the menu bar.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">Header
+                                row</code> is selected and then choose <code style="inline"
+                                >RandomNumber</code> under <code style="inline">Sort by</code>.
+                            Click <code style="inline">OK</code>.</li>
+                        <li>Now select all of the data in rows 2-451 under the columns that contain
+                            the original variables (Age, Gender, Comp), and copy and paste those
+                            data to the new columns you created (Age_SRS, Gender_SRS, and
+                            Comp_SRS).</li>
+                    </ul>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To do this in Excel:</p>
+                    <ul>
+                        <li>Pick an empty column in your Excel worksheet and label it <code
+                                style="inline">Treatment</code>.</li>
+                        <li>In the <code style="inline">Treatment</code> column, type this formula
+                            in row 2: <code style="inline">=RANDBETWEEN(1,3)</code>. Then copy and
+                            paste it into each cell in the column from row 3 down to row 451. This
+                            generates a random integer from 1 to 3 in each cell of the column.</li>
+                        <li>Select the entire column of random numbers that you just created, and
+                            choose <code style="inline">Edit → Copy</code> and then <code
+                                style="inline">Edit → Paste Special</code> from the menu bar.</li>
+                        <li>In the pop-up window, choose <code style="inline">Values</code> under
+                                <code style="inline">Paste</code>, and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>Type Control-A to select all of the data in the worksheet, and then
+                            choose <code style="inline">Data → Sort</code> from the menu bar.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">Header
+                                row</code> is selected and then choose <code style="inline"
+                                >Treatment</code> under <code style="inline">Sort by</code>. Click
+                                <code style="inline">OK</code>.</li>
+                    </ul>
+                </alternative> -->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>The company must rely upon sampling to study its customers' preferences,
+                        since the entire population cannot be assigned to treatments. Therefore, we
+                        first chose a simple random sample (SRS) of 450 people for the subjects in
+                        the study.</p>
+                    <p>Now we will randomly assign our SRS of 450 subjects to treatment groups, one
+                        for each of the three versions of the ISP's software. Let's denote the
+                        versions "1," "2," and "3," and create a categorical variable to identify
+                        the treatment for each subject.</p>
+                    <p>To do this on your TI graphing calculator: </p>
+                    <ul>
+
+                        <li>Choose <code>MATH/PRB/5:randInt(</code></li>
+                        <li>Next to <code>lower:</code> type in 1.</li>
+                        <li>Next to <code>upper:</code> type in 3</li>
+                        <li>Next to <code>n:</code> type in 450</li>
+                        <li>Highlight <code>Paste</code> and hit <code>ENTER</code>.</li>
+
+                        <li>Since we want to assign each of the 450 individuals in SRS to one of
+                            three treatment groups, we want to generate 450 random numbers between 1
+                            and 3. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image500.jpg"/></li>
+                        <li>This indicates that the first individual should be assigned to treatment
+                            2, the second also to treatment 2, the third to treatment 3, the fourth
+                            to treatment 1, and so on for all 450 individuals. </li>
+                        <li>To make this easier on the TI, we can store the random numbers in a list
+                            by giving the command to store (<code style="inline">STO></code>) either
+                            before or after we generate the random numbers: </li>
+                        <li>Before: <code style="inline"
+                                >MATH/PRB/5:randInt(1,3,450)/STO>/L1/ENTER</code>
+                        </li>
+                        <li>Before: <image style="inline" src="../../webcontent/image501.jpg"/>
+                        </li>
+                        <li>After: <image style="inline" src="../../webcontent/image502.jpg"/>
+                        </li>
+                        <li>After: <code style="inline">MATH/PRB/5:randInt(1,3,450)/ENTER</code>
+                        </li>
+                        <li>
+                            <code style="inline">STO>/L1/ENTER</code> Note: When you hit the <code
+                                style="inline">STO></code> as first thing on line, it assumes you
+                            want to store the last answer (Ans). </li>
+                        <li>Since the process of actually moving each data value for each of the 450
+                            individuals into nine lists (age1, age2, age3, gender1, gender2,
+                            gender3, comp1, comp2, comp3) is tedious, we took a random sample, did
+                            the sorting, and have the 9 lists ready to download. <ul style="none">
+                                <li>L1: age for individuals in treatment 1 </li>
+                                <li>L2: gender for individuals in treatment 1 (1 = Female, 2 = Male) </li>
+                                <li>L3: comp (hours per week of computer time) for individuals in
+                                    treatment 1 </li>
+                                <li>L4: age for individuals in treatment 2 </li>
+                                <li>L5: gender for individuals in treatment 2 (1 = Female, 2 = Male) </li>
+                                <li>L6: comp (hours per week of computer time) for individuals in
+                                    treatment 2 </li>
+                                <li>AGE3: age for individuals in treatment 3 </li>
+                                <li>GEND3: gender for individuals in treatment 3 (1 = Female, 2 =
+                                    Male) </li>
+                                <li>COMP3: comp (hours per week of computer time) for individuals in
+                                    treatment 3 </li>
+                            </ul></li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>We are finally reaching the goal of this activity. We will now examine whether the
+            randomization was successful in making our three treatment groups similar with respect
+            to the variables age, gender, and comp. In other words, we will now examine whether the
+            distributions of these variables in the three groups are similar or not. </p>
+        <p>To compare the distribution of age among the three treatment groups, we'll create
+            side-by-side boxplots of age by treatment. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Copy the following command to R:</p>
+                    <code>boxplot(random_sample$age~random_sample$group, xlab="Group", ylab="Age
+                        (years)")</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do this in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Graphics → Boxplot</li>
+                        <li>Select the column Sample(Age)</li>
+                        <li>Group by Treatment</li>
+                        <li>Select “Plot groups for each column”</li>
+                        <li>Press Press Compute!</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To do this in Minitab:</p>
+                    <ul>
+                        <li>Choose: Graph → Boxplot → One Y With Groups, and click "OK".</li>
+                        <li>Tell Minitab that you want to graph the variable AgeSRS, and that the
+                            categorical variable for grouping is Treatment.</li>
+                        <li>Click "OK".</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To do this in Excel, we first have to create a table of descriptive
+                        statistics:</p>
+                    <p><em>Descriptive Statistics:</em></p>
+                    <ul>
+                        <li>To create this table, first make the row and column labels: in an empty
+                            section of your worksheet, pick a cell and type <code style="inline"
+                                >Statistic</code>. Then move one cell to the right and type <code
+                                style="inline">Treatment 1</code>. Move one cell to the right and
+                            type <code style="inline">Treatment 2</code>, and then another cell to
+                            the right and type <code style="inline">Treatment 3</code>. Now, in the
+                            cell underneath <code style="inline">Statistic</code>, type <code
+                                style="inline">min</code>. Move down one cell and type <code
+                                style="inline">Q1</code>, then underneath that <code style="inline"
+                                >Median</code>, then <code style="inline">Q3</code>, and finally
+                                <code style="inline">Max</code>.</li>
+                    </ul>
+                    <p>Now for each statistic, we'll enter the formula to calculate that statistic
+                        and the range of data that corresponds to each variable:</p>
+                    <ul>
+                        <li><code style="inline">min</code></li>
+                        <li>In the cell to the right of <code style="inline">min</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=min([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1.</li>
+                        <li>Now move one cell to the right (so that you're underneath <code
+                                style="inline">Treatment 2</code> ), and type <code style="inline"
+                                >=min([range])</code> where [range] represents the data in the <code
+                                style="inline">Age_SRS</code> column that has a Treatment value of
+                            2.</li>
+                        <li>Repeat this calculation for Treatment 3, again adjusting the data range
+                            appropriately.</li>
+                        <li><em>IMPORTANT:</em> Instead of typing the <em>[range]</em> inside of the
+                            parentheses, it is better to highlight the relevant cells with your
+                            mouse after typing <em>=min(</em> (by holding a left click as you
+                            highlight the cells).</li>
+                        <li><code style="inline">Q1</code></li>
+                        <li>In the cell to the right of <code style="inline">Q1</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=quartile([range],1)</code>, where [range] represents
+                            the data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+
+                        <li><code style="inline">Median</code></li>
+                        <li>In the cell to the right of <code style="inline">Median</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=median([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+
+                        <li><code style="inline">Q3</code></li>
+                        <li>In the cell to the right of <code style="inline">Q3</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=quartile([range],3)</code>, where [range] represents
+                            the data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                        <li><code style="inline">Max</code></li>
+                        <li>In the cell to the right of <code style="inline">Max</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=max([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                    </ul>
+                    <p><em>Side by Side Boxplots:</em></p>
+                    <p>Unfortunately, Excel can't create boxplots directly, so we have to create a
+                        column graph and alter it so that we get boxplots. We start by using our
+                        Descriptive Statistics to create a new table that will be the basis for our
+                        column graph:</p>
+                    <ul>
+                        <li>Right below the cell labeled <code style="inline">Max</code> in your
+                            Descriptive Statistics table, type <code style="inline">25th
+                                Percentile</code> . Move down one cell and type <code style="inline"
+                                >50th Percentile</code> , then underneath that <code style="inline"
+                                >75th Percentile</code>, then <code style="inline">Lower
+                                limit</code> , and finally <code style="inline">Upper
+                            limit</code>.</li>
+                        <li>The <code style="inline">25th Percentile</code> values are the same as
+                            those for Q1, so select the values for Q1, right-click and select <code
+                                style="inline">Copy</code>, and then select the empty cells in the
+                                <code style="inline">25th Percentile</code> row and right-click and
+                            select <code style="inline">Paste Special</code>. In the pop-up window,
+                            choose <code style="inline">Values</code> and click <code style="inline"
+                                >OK</code>.</li>
+                        <li>The <code style="inline">50th Percentile</code> values are equal to
+                                <code style="inline">Median - Q1</code> , so enter the necessary
+                            formulas to calculate those values from the values in your Descriptive
+                            Statistics table. For example, if the value for Treatment 1 Median is in
+                            cell M4, and the value for Treatment 1 Q1 is in cell M3, the correct
+                            formula for calculating the 50th percentile for Treatment 1 would be
+                                <code style="inline">=M4-M3</code>.</li>
+                        <li>The <code style="inline">75th Percentile</code> values are equal to
+                                <code style="inline">Q3 - Median</code>.</li>
+                        <li>The <code style="inline">Lower limit</code> values are equal to <code
+                                style="inline">Q1 - min</code>.</li>
+                        <li>The <code style="inline">Upper limit</code> values are equal to <code
+                                style="inline">Max - Q3</code>.</li>
+                    </ul>
+                    <p>Now we can finally create our boxplots:</p>
+                    <ul>
+                        <li>Highlight the values in the <code style="inline">25th Percentile</code>,
+                                <code style="inline">50th Percentile</code>, and <code
+                                style="inline">75th Percentile</code> rows, and then choose <code
+                                style="inline">Column</code> in the <code style="inline"
+                                >Charts</code> group on the <code style="inline">Insert</code>
+                            tab.</li>
+                        <li>In the pull-down menu, choose the second option under <code
+                                style="inline">2-D Column</code> (labeled <code style="inline"
+                                >Stacked Column</code> if you hover your mouse over it).</li>
+                        <li>Excel will create a stacked column graph for you. The idea here is that
+                            the top two boxes in each column will make up our boxplots. We'll add
+                            error bars for the min and Max values, and simply remove the bottom
+                            box.</li>
+                        <li>Click on the top box in one of the columns to select it, and then choose
+                                <code style="inline">Error Bars → More Error Bars Options</code> in
+                            the <code style="inline">Analysis</code> group on the <code
+                                style="inline">Layout (Chart Tools)</code> tab.</li>
+                        <li>In the pop-up window, choose <code style="inline">Vertical Error
+                                Bars</code> on the left and then choose <code style="inline"
+                                >Plus</code> on the right.</li>
+                        <li>Choose <code style="inline">Custom</code> under <code style="inline"
+                                >Error Amount</code> and then click the <code style="inline">Specify
+                                Value</code> button.</li>
+                        <li>In the pop-up window, in the <code style="inline">Positive Error
+                                Value</code> box, enter the range of values in the <code
+                                style="inline">Upper limit</code> row in the table we created (or
+                            click and drag to select those values). Click <code style="inline"
+                                >OK</code> and then <code style="inline">Close</code>.</li>
+                        <li>Now repeat this error bar exercise for the bottom box in the columns,
+                            except choose <code style="inline">Minus</code> error bars, and enter
+                            the range of values in the <code style="inline">Lower limit</code> row
+                            of our table into the <code style="inline">Negative Error Value</code>
+                            box.</li>
+                        <li>Right-click on the top box in one of the columns and choose <code
+                                style="inline">Format Data Series</code>. In the pop-up window,
+                            choose <code style="inline">Fill</code> on the left, and specify <code
+                                style="inline">No fill</code>. Then choose <code style="inline"
+                                >Border Color</code> on the left and specify <code style="inline"
+                                >Solid Line</code>.</li>
+                        <li>Repeat for the middle box in the columns.</li>
+                        <li>Repeat for the bottom box in the columns, except this time specify <code
+                                style="inline">No fill</code> and <code style="inline">No
+                                line</code>. This will cause the bottom box to simply
+                            disappear.</li>
+                        <li>Click on the legend and hit the Delete key to remove it.</li>
+                        <li>Finally, click on the horizontal lines in the background of the graph
+                            and hit the Delete key to remove them.</li>
+                    </ul>
+                    <p>Since we will continue working with the data in the worksheet, it is a good
+                        idea to save a copy of your boxplot graph so that when you re-sort the data
+                        in the worksheet it does not disappear:</p>
+                    <ul>
+                        <li>Right-click on the graph and choose <code style="inline">Copy</code>.
+                            Then right-click on an empty cell in the worksheet and choose <code
+                                style="inline">Paste Special</code> and click <code style="inline"
+                                >OK</code> in the pop-up window. This saves your graph as an image
+                            so that it will not be disturbed by re-sorting the data. You can now
+                            delete your original graph.</li>
+                    </ul>
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To do this in Excel, we first have to create a table of descriptive
+                        statistics:</p>
+                    <p><em>Descriptive Statistics:</em></p>
+                    <ul>
+                        <li>To create this table, first make the row and column labels: in an empty
+                            section of your worksheet, pick a cell and type <code style="inline"
+                                >Statistic</code>. Then move one cell to the right and type <code
+                                style="inline">Treatment 1</code>. Move one cell to the right and
+                            type <code style="inline">Treatment 2</code>, and then another cell to
+                            the right and type <code style="inline">Treatment 3</code>. Now, in the
+                            cell underneath <code style="inline">Statistic</code>, type <code
+                                style="inline">Q1</code>. Move down one cell and type <code
+                                style="inline">min</code>, then underneath that <code style="inline"
+                                >Median</code>, then <code style="inline">Max</code>, and finally
+                                <code style="inline">Q3</code>. </li>
+                        <li>Note that the order here is slightly different than the ordering we've
+                            been using&#8212;the reason is that the statistical measures have to be
+                            in this order (Q1, min, Median, Max, Q3) for Excel to graph the boxplot
+                            correctly.</li>
+                    </ul>
+                    <p>Now for each statistic, we'll enter the formula to calculate that statistic
+                        and the range of data that corresponds to each variable:</p>
+                    <ul>
+                        <li><code style="inline">Q1</code></li>
+                        <li>In the cell to the right of <code style="inline">Q1</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=quartile([range],1)</code>, where [range] represents
+                            the data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1.</li>
+                        <li>Now move one cell to the right (so that you're underneath <code
+                                style="inline">Treatment 2</code>), and type <code style="inline"
+                                >=quartile([range],1)</code> where [range] represents the data in
+                            the <code style="inline">Age_SRS</code> column that has a Treatment
+                            value of 2.</li>
+                        <li>Repeat this calculation for Treatment 3, again adjusting the data range
+                            appropriately.</li>
+                        <li><code style="inline">min</code></li>
+                        <li>In the cell to the right of <code style="inline">min</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=min([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                        <li><code style="inline">Median</code></li>
+                        <li>In the cell to the right of <code style="inline">Median</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=median([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                        <li><code style="inline">Max</code></li>
+                        <li>In the cell to the right of <code style="inline">Max</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=max([range])</code>, where [range] represents the
+                            data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                        <li><code style="inline">Q3</code></li>
+                        <li>In the cell to the right of <code style="inline">Q3</code> and
+                            underneath <code style="inline">Treatment 1</code>, type <code
+                                style="inline">=quartile([range],3)</code>, where [range] represents
+                            the data in the <code style="inline">Age_SRS</code> column that has a
+                            Treatment value of 1. Repeat for Treatments 2 and 3, adjusting the data
+                            range appropriately each time.</li>
+                    </ul>
+                    <p><em>Side by Side Boxplots:</em></p>
+                    <ul>
+                        <li>Highlight the whole table, including the row and column labels, and then
+                            select <code style="inline">Insert → Chart</code> from the top menu bar. </li>
+                        <li>When the Chart Wizard window opens, select <code style="inline">Line
+                                Chart</code>, and then click <code style="inline">Next</code>. In
+                            Step 2, make sure <code style="inline">Rows</code> is selected, and then
+                            click <code style="inline">Finish</code>.</li>
+                        <li>What we have now is a line chart, because Excel can't generate boxplots
+                            directly, but we're going to make boxplots from this line chart. </li>
+                        <li>Right click on any line on the graph and choose <code style="inline"
+                                >Format Data Series</code> from the pop-up menu. Then select the
+                                <code style="inline">Options</code> tab and check the boxes next to
+                                <code style="inline">High-low lines</code> and <code style="inline"
+                                >Up/down bars</code> and click <code style="inline">OK</code>.</li>
+                        <li>Now to get rid of the lines, right click on each line in the graph in
+                            turn, choose <code style="inline">Format Data Series</code> from the
+                            pop-up menu, select the <code style="inline">Patterns</code> tab and
+                            select <code style="inline">None</code> under <code style="inline"
+                                >Line</code> and then click <code style="inline">OK</code>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Boxplot</em></p>
+                    <ul>
+                        <li>Either clear any equations you may have in your calculator by choosing
+                                <code style="inline">Y=/CLEAR</code>, or else toggle them off by
+                            choosing <code style="inline">Y=</code> and then pressing the left arrow
+                            until <code style="inline">=</code> is selected and pressing <code
+                                style="inline">ENTER</code>.</li>
+                        <li>Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li>Choose <code style="inline">4:PlotsOff</code>. Hit <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                        <li>Choose one of the available plots. For example, choose <code
+                                style="inline">1:Plot1…Off</code>. </li>
+                        <li>Turn the plot <code style="inline">ON</code> by using arrows to
+                            highlight the word <code style="inline">ON</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                        <li>Choose the <code>Type</code>: the fourth graph is a modified boxplot.
+                            Using the down arrow will move down to Xlist.</li>
+                        <li>You can display up to 3 boxplots on one screen by turning on three Stat
+                            Plots (do this for L4 and AGE3). Once you&rsquo;ve got all the boxplots
+                            turned on, you can <code>ZOOM/9:ZoomStat</code> to see all boxplots on
+                            the same screen.</li>
+
+
+                        <li>Choose the correct <code style="inline">Xlist</code>: <ul>
+                                <li>To access one of the built-in lists, such as L1, press
+                                        <code>2ND/ 1</code> (e.g., for the age for individuals in
+                                    treatment 1).</li>
+
+                                <li>To access a list you named, use the <code style="inline"
+                                        >LIST</code> menu. Press <code style="inline"
+                                        >2nd/LIST/NAMES/</code> choose appropriate list. </li>
+                            </ul></li>
+                        <li>Choose <code style="inline">Freq: 1</code> (the number one). </li>
+                        <li>Choose the <code style="inline">Mark</code> you prefer. </li>
+                        <li>You should see: <image src="../../webcontent/image503.png"/>
+                        </li>
+                        <li>To view the boxplot, choose <code style="inline">ZOOM/9:
+                            ZoomStat</code>. </li>
+                        <li>If you want to change the viewing window, choose <code style="inline"
+                                >WINDOW</code> and set <code style="inline">Xmin</code>, <code
+                                style="inline">Xmax</code>, <code style="inline">Xscl</code> (the
+                            distance between tick marks on the X axis), <code style="inline"
+                                >Ymin</code>, <code style="inline">Ymax</code>, <code style="inline"
+                                >Yscl</code> (the distance between tick marks on the Y axis), <code
+                                style="inline">Xres</code> (leave <code style="inline">Xres</code>
+                            at 1). </li>
+                        <li>You can choose <code style="inline">TRACE</code> and then use the
+                            left/right arrows to display <code style="inline">minX</code>, <code
+                                style="inline">Q1</code>, <code style="inline">Med</code>, <code
+                                style="inline">Q3</code>, and <code style="inline">maxX</code>.
+                        </li>
+                    </ul>
+
+                    <p><em>Side-by-side Boxplots</em></p>
+                    <ul>
+                        <li>You can display up to 3 boxplots on one screen by turning on three Stat
+                            Plots. Once you’ve got all the boxplots turned on, you can <code
+                                style="inline">ZOOM/9:ZoomStat</code> to see all boxplots on the
+                            same screen. </li>
+                        <li>If you have more than 3 boxplots, plot 2 or 3 at a time, then <code
+                                style="inline">TRACE</code> and draw a quick sketch of each, paying
+                            particular attention to the scale and the 5-number summary. You can
+                                <code style="inline">ZOOM:9:ZoomStat</code> to see the plots, but to
+                            be able to compare them, you have to be sure your sketches are on the
+                            same scale. </li>
+                        <li>If you have side-by-side boxplots displayed, you can choose <code
+                                style="inline">TRACE</code>, then use the up/down arrows to choose
+                            one of the boxplots and the left/right arrows to display <code
+                                style="inline">minX</code>, <code style="inline">Q1</code>, <code
+                                style="inline">Med</code>, <code style="inline">Q3</code>, and <code
+                                style="inline">maxX</code>. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>To compare the distribution of gender among the three treatment groups, we'll look at a
+            two-way table of conditional percents:</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Copy the following commands to R:</p>
+                    <code>two_way_table = table(random_sample$group,random_sample$gender)</code>
+                    <code>prop.table(two_way_table,1)*100</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To do that in StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Stat → Tables → Contingency → with data</li>
+                        <li>Let Treatment (the explanatory) be the row variable, and Sample(Gender)
+                            be the column variable</li>
+                        <li>Display: Row percent</li>
+                        <li>Press Press Compute!</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>In Minitab:</p>
+                    <ul>
+                        <li>Choose: Stat → Tables → Cross Tabulation and Chi-Square.</li>
+                        <li>Let Treatment (the explanatory) be the row variable, and GenderSRS (the
+                            response) be the column variable.</li>
+                        <li>Under Display, check Row percents.</li>
+                        <li>Click "OK".</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To create a two-way table in Excel:</p>
+                    <p>First we need to sort our data to make it easier to tabulate:</p>
+                    <ul>
+                        <li>Type Control-A twice to select all of the data in the worksheet.</li>
+                        <li>Choose <code style="inline">Sort &amp; Filter → Custom Sort</code> from
+                            the <code style="inline">Editing</code> group on the <code
+                                style="inline">Home</code> tab.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">My data has
+                                headers</code> is selected and then choose <code style="inline"
+                                >Treatment</code> from the pull-down menu next to <code
+                                style="inline">Sort by</code>.</li>
+                        <li>Click the <code style="inline">Add Level</code> button and then choose
+                                <code style="inline">Gender_SRS</code> from the pull-down menu next
+                            to <code style="inline">Sort by</code> in the new row that was just
+                            added. Click <code style="inline">OK</code>.</li>
+                    </ul>
+                    <p>Now we'll create our two-way table. First we'll make the row and column
+                        headings and then use Excel formulas to get the counts:</p>
+                    <ul>
+                        <li>In an empty section of your worksheet, pick a cell and type <code
+                                style="inline">Statistic</code>. Then move to the right one cell and
+                            type <code style="inline">Female</code>, move right and type <code
+                                style="inline">Male</code>, and move right and type <code
+                                style="inline">Total</code> for our column headings.</li>
+                        <li>For the row headings, start in the cell under <code style="inline"
+                                >Statistic</code> and type <code style="inline">Treatment 1</code>,
+                            then move down one cell and type <code style="inline">Treatment
+                            2</code>, move down and type <code style="inline">Treatment 3</code>,
+                            and move down and type <code style="inline">Total</code>.</li>
+                        <li>Now select the cell under <code style="inline">Female</code> and to the
+                            right of <code style="inline">Treatment 1</code>, and type <code
+                                style="inline">=counta([range])</code>, where [range] represents the
+                            females in the <code style="inline">Gender_SRS</code> column that have a
+                            Treatment value of 1.</li>
+                        <li>Move one cell to the right (under <code style="inline">Male</code> and
+                            to the right of <code style="inline">Treatment 1</code>) and type <code
+                                style="inline">=counta([range])</code>, where [range] represents the
+                            males in the <code style="inline">Gender_SRS</code> column that have a
+                            Treatment value of 1. Repeat this for each cell in the table, adjusting
+                            the data range appropriately.</li>
+                        <li>To fill in the Total column you can use the <em>sum</em> function. For example, to
+                            fill in the cell under total and to the right of Male you could type
+                            <em>=sum(F3,G3)</em> where F3 and G3 refer to the counts you calculated for Male
+                            and Female from before (your cells may be different based on where you
+                            put your table).</li>
+                        <li>Finally, compute the <code style="inline">Total</code> for each
+                            treatment by adding the numbers in the <code style="inline">Male</code>
+                            and <code style="inline">Female</code> columns. The specific cell
+                            references depend on where exactly you created your two-way table, but
+                            if D2 represents the number of females in the first treatment group, and
+                            E2 represents the total number of males in the first treatment group,
+                            the formula would be <code style="inline">=D2+E2</code> .</li>
+                    </ul>
+                    <p>To create a table of conditional percentages, we'll make a new table
+                        underneath the two way-table, and use the same row and column labels as the
+                        two-way table:</p>
+                    <ul>
+                        <li>Pick a cell underneath the two-way table, and type the same row and
+                            column labels in that we used for the two-way table.</li>
+                        <li>Now select the cell under <code style="inline">Female</code> and to the
+                            right of <code style="inline">Treatment 1</code>. In this cell, we want
+                            the percentage of people who are in the first treatment group and are
+                            female. Thus, we want to divide the number of females in the first
+                            treatment group by the total number of people in the first treatment
+                            group, and then multiply by 100 to convert to a percentage. The specific
+                            cell references depend on where exactly you created your two-way table,
+                            but if D2 represents the number of females in the first treatment group,
+                            and F2 represents the total number of people in the first treatment
+                            group, the formula would be <code style="inline"
+                            >=(D2/F2)*100</code>.</li>
+                        <li>Calculate the percentages for the other cells in the same manner.</li>
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To create a two-way table in Excel:</p>
+                    <p>First we need to sort our data to make it easier to tabulate:</p>
+                    <ul>
+                        <li>Type Control-A to select all of the data in the worksheet.</li>
+                        <li>Choose <code style="inline">Data → Sort</code> from the menu bar.</li>
+                        <li>In the pop-up window, make sure that <code style="inline">Header
+                                row</code> is selected and then choose <code style="inline"
+                                >Treatment</code> under <code style="inline">Sort by</code>, and
+                                <code style="inline">Gender_SRS</code> under <code style="inline"
+                                >Then by</code>. Click <code style="inline">OK</code>.</li>
+                    </ul>
+                    <p>Now we'll create our two-way table. First we'll make the row and column
+                        headings and then use Excel formulas to get the counts:</p>
+                    <ul>
+                        <li>In an empty section of your worksheet, pick a cell and type <code
+                                style="inline">Statistic</code>. Then move to the right one cell and
+                            type <code style="inline">Female</code>, move right and type <code
+                                style="inline">Male</code>, and move right and type <code
+                                style="inline">Total</code> for our column headings.</li>
+                        <li>For the row headings, start in the cell under <code style="inline"
+                                >Statistic</code> and type <code style="inline">Treatment 1</code>,
+                            then move down one cell and type <code style="inline">Treatment
+                            2</code>, move down and type <code style="inline">Treatment 3</code>,
+                            and move down and type <code style="inline">Total</code>.</li>
+                        <li>Now select the cell under <code style="inline">Female</code> and to the
+                            right of <code style="inline">Treatment 1</code>, and type <code
+                                style="inline">=counta([range])</code>, where [range] represents the
+                            females in the <code style="inline">Gender_SRS</code> column that have a
+                            Treatment value of 1.</li>
+                        <li>Move one cell to the right (under <code style="inline">Male</code> and
+                            to the right of <code style="inline">Treatment 1</code>) and type <code
+                                style="inline">=counta([range])</code>, where [range] represents the
+                            males in the <code style="inline">Gender_SRS</code> column that have a
+                            Treatment value of 1. Repeat this for each cell in the table, adjusting
+                            the data range appropriately.</li>
+                        <li>Finally, compute the <code style="inline">Total</code> for each
+                            treatment by adding the numbers in the <code style="inline">Male</code>
+                            and <code style="inline">Female</code> columns. The specific cell
+                            references depend on where exactly you created your two-way table, but
+                            if D2 represents the number of females in the first treatment group, and
+                            E2 represents the total number of males in the first treatment group,
+                            the formula would be <code style="inline">=D2+E2</code>.</li>
+                    </ul>
+                    <p>To create a table of conditional percentages, we'll make a new table
+                        underneath the two way-table, and use the same row and column labels as the
+                        two-way table:</p>
+                    <ul>
+                        <li>Pick a cell underneath the two-way table, and type the same row and
+                            column labels in that we used for the two-way table.</li>
+                        <li>Now select the cell under <code style="inline">Female</code> and to the
+                            right of <code style="inline">Treatment 1</code>. In this cell, we want
+                            the percentage of people who are in the first treatment group and are
+                            female. Thus, we want to divide the number of females in the first
+                            treatment group by the total number of people in the first treatment
+                            group, and then multiply by 100 to convert to a percentage. The specific
+                            cell references depend on where exactly you created your two-way table,
+                            but if D2 represents the number of females in the first treatment group,
+                            and F2 represents the total number of people in the first treatment
+                            group, the formula would be <code style="inline"
+                            >=(D2/F2)*100</code>.</li>
+                        <li>Calculate the percentages for the other cells in the same manner.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Two-Way Table</em>
+                    </p>
+                    <p>TI 83/84 calculators do not have the built-in capability to create a two-way
+                        table from lists. </p>
+                    <p>This could be a good opportunity to try one of the other technologies
+                        available in OLI. We suggest trying <link href="http://cran.r-project.org/"
+                            >R</link>&#8212;an excellent statistical package that is free to
+                        download and that is available for both Windows and Mac OS X.</p>
+
+                    <p>If you want to produce a two-way table by hand, you can do so using the lists
+                        for Gender1(L2), Gender2 (L5), and Gender3 (list GEND3). </p>
+                    <p><em>Counts </em>
+                    </p>
+                    <ul>
+                        <li>Sort each list. </li>
+                        <li>Choose STAT/EDIT/2:SortA(L2)/ENTER. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image504.jpg"/>
+                        </li>
+                        <li>Check out the sorted list by choosing STAT/EDIT. </li>
+                        <li>Using same process, sort Gender2 (L5) and Gender 3 (list GEND3). </li>
+                        <li>Counting: </li>
+                        <li>Count the number of females (1 = Female) and males (2 = Male) in each
+                            group. Record it in the table. </li>
+                        <li>Module 2, Case C→C (2 of 2) describes how to create a two-way table with
+                            counts and with percentages. </li>
+                    </ul>
+
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>To compare the distribution of comp (the hours per week of computer use) among the three
+            treatment groups, we'll create side by side boxplots of comp by treatment. Follow the
+            instructions above, making the obvious necessary changes.</p>
+        <wb:inline idref="u2_m2_causationexp1_lbd_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u2_m2_causationexp1_lbd_tutor2" purpose="learnbydoing"/>
+        <p>Suppose that instead of randomly assigning treatments, the software users could choose
+            one of the three themselves (thus making this an observational study instead of an
+            experiment).</p>
+        <wb:inline idref="u2_m2_causationexp1_lbd_tutor3" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

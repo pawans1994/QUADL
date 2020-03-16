@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_proportion3">
+    <head>
+        <title>Confidence Intervals for Population Proportion p (3 of 4)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+    <body>
+
+
+        <section>
+            <title>Determining Sample Size for a Given Margin of Error in Estimating
+                Proportions</title>
+            <body>
+                <p>Just as we did for means, when we have some level of flexibility in determining
+                    the sample size, we can set a desired margin of error for estimating the
+                    population proportion and find the sample size that will achieve that.</p>
+                <p>For example, a final poll on the day before an election would want the margin of
+                    error to be quite small (with a high level of confidence) in order to be able to
+                    predict the election results with the most precision. This is particularly
+                    relevant when it is a close race between the candidates. The polling company
+                    needs to figure out how many eligible voters it needs to include in their sample
+                    in order to achieve that.</p>
+                <p>Let's see how we do that.</p>
+                <p>(<em>Comment:</em> For our discussion here we will focus on a 95% confidence
+                    level (z* = 2), since this is the most commonly used level of confidence.)</p>
+                <p>The 95% confidence interval for p is</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:msup>
+                                <m:mi>z</m:mi>
+                                <m:mo>*</m:mo>
+                            </m:msup>
+                            <m:mo>⋅</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>The margin of error, then, is</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>Now we isolate n (i.e., express it as a function of m).</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mn>4</m:mn>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mover>
+                                                <m:mi>p</m:mi>
+                                                <m:mo stretchy="true">ˆ</m:mo>
+                                            </m:mover>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:msup>
+                                    <m:mi>m</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>There is a practical problem with this expression that we need to overcome.</p>
+                <p>Practically, you first determine the sample size, then you choose a random sample
+                    of that size, and then use the collected data to find <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>.</p>
+                <image style="block" src="../webcontent/image095.gif"
+                    alt="A large circle represents the
+Population, for which we wish to find p. Step I is to determine the sample size n needed.
+Step II is to choose an SRS of size n. This is represented by an arrow, which leads to
+a smaller circle representing the SRS of size n. For the SRS we calculate p-hat. Step III
+is to use the obtained data to find p."/>
+                <p>So the fact that the expression above for determining the sample size depends on
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is problematic.</p>
+                <p>The way to overcome this problem is to take the conservative approach by setting
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>2</m:mn>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math> .</p>
+                <p>Why do we call this approach conservative?</p>
+                <p>It is conservative because the expression that appears in the numerator, <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mn>4</m:mn>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mfenced open="(" close=")">
+                                <m:mrow>
+                                    <m:mn>1</m:mn>
+                                    <m:mo>−</m:mo>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="true">ˆ</m:mo>
+                                    </m:mover>
+                                </m:mrow>
+                            </m:mfenced>
+                        </m:mrow>
+                    </m:math> is maximized when <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>2</m:mn>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>.</p>
+                <p>That way, the n we get will work in giving us the desired margin of error
+                    regardless of what the value of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is. This is a "worst case scenario" approach. So when we do that we
+                    get:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mn>4</m:mn>
+                                    </m:mfenced>
+                                    <m:mfrac>
+                                        <m:mn>1</m:mn>
+                                        <m:mn>2</m:mn>
+                                    </m:mfrac>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mfrac>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:mfrac>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:msup>
+                                    <m:mi>m</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mfrac>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:msup>
+                                    <m:mi>m</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <example>
+
+                    <p>It seems like media polls usually use a sample size of 1,000 to 1,200. This
+                        could be puzzling.</p>
+                    <p>How could the results obtained from, say, 1,100 U.S. adults give us
+                        information about the entire population of U.S. adults? 1,100 is such a tiny
+                        fraction of the actual population. Here is the answer:</p>
+                    <p>What sample size n is needed if a margin of error m = .03 is desired? <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:msup>
+                                        <m:mrow>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>03</m:mn>
+                                        </m:mrow>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mn>1111</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>11</m:mn>
+                                <m:mo>→</m:mo>
+                                <m:mi>n</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>1112</m:mn>
+                            </m:mrow>
+                        </m:math> (remember, always round up). In fact, .03 is a very commonly used
+                        margin of error, especially for media polls. For this reason, most media
+                        polls work with a sample of around 1,100 people. </p>
+                </example>
+                <example>
+
+                    <p>A few days before an election, a media outlet would like to estimate p, the
+                        proportion of eligible voters who support the Democratic candidate. The
+                        media outlet would like the estimate to be within 1% (that is, .01) of the
+                        true proportion. What is the sample size needed to achieve this in a poll?
+                        Set</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:msup>
+                                        <m:mi>m</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:msup>
+                                        <m:mrow>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>01</m:mn>
+                                        </m:mrow>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mn>10000</m:mn>
+                            </m:mrow>
+                        </m:math>.</p>
+                </example>
+                <p>Note that if I take the same conservative approach for the margin of error:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>and use <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:mn>2</m:mn>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>, I'll get</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mn>4</m:mn>
+                                        </m:mfenced>
+                                        <m:mfrac>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>2</m:mn>
+                                        </m:mfrac>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mfrac>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mn>2</m:mn>
+                                                </m:mfrac>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>,</p>
+                <p>a conservative estimate for the margin of error, which is useful when we want to
+                    get a rough idea of its size without taking the trouble to make detailed
+                    calculations.</p>
+                <p>Also, typically, there are several questions in polls, each yielding a different
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>. Rather than reporting the separate margin of error for each question
+                    using <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mo stretchy="true">ˆ</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math>, polls report just one, the conservative margin of error <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mn>1</m:mn>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>as the margin of error of the poll, which is guaranteed to work for all the
+                    questions regardless what the value of</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> ends up being.</p>
+                <example>
+
+                    <p>A random sample of 2,500 U.S. adults was chosen to participate in a public
+                        opinion survey about different issues related to crime. What is the margin
+                        of error of this survey?</p>
+                    <p>We'll simply use <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>m</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>1</m:mn>
+                                    <m:msqrt>
+                                        <m:mn>2500</m:mn>
+                                    </m:msqrt>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>02</m:mn>
+                            </m:mrow>
+                        </m:math> . The survey has a margin of error of 2%. This means that for each
+                        of the questions asked, the obtained sample proportion will be within 2% of
+                        the proportion among all U.S. adults.</p>
+                </example>
+                <!--<activity idref="_u5_m1_dig7" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m1_confintprop3_tutor1" purpose="didigetthis"/>
+                <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If
+                    not, then click the link below for some additional practice.</p>
+                <activity idref="_u5_m1_dig7_02" purpose="didigetthis"/>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_normal_random_variables1_mbooster">
+    <head>
+        <title>Introduction <?oxy_insert_start author="mmyers" timestamp="20101122T092927-0500"?>to
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T092929-0500" content="("?>Normal
+            Random
+            Variables<?oxy_delete author="mmyers" timestamp="20101122T092932-0500" content=")"?> (1
+            of 3)</title>
+        <objref idref="find_probabilities_of_normal_distribution"/>
+    </head>
+    <body>
+        <p>Previous students have said that the next section is challenging. Remember that:</p>
+        <ul>
+            <li><em style="bold">The brain is like a muscle:</em> you learn the most when you
+                challenge it.</li>
+            <li>Even if you don’t get the right answer, the process of trying is what is valuable.
+                Learning is about the process of reasoning through confusion to understand something
+                new.</li>
+            <li>Explain the ideas back to yourself as if you had to teach them to someone else.
+                Doing this will clarify your thinking. </li>
+        </ul>
+        <p>In the Exploratory Data Analysis unit of this course, we encountered data sets,
+                <em><?oxy_comment_start author="mmyers" timestamp="20101122T092355-0500" comment="remove bold -- no emphasis needed"?>such
+                as lengths of human pregnancies</em><?oxy_comment_end?>, whose distributions
+            naturally followed a symmetric unimodal <?oxy_delete author="mmyers" timestamp="20101122T092145-0500" content="("?>bell<?oxy_insert_start author="mmyers" timestamp="20101122T092155-0500"?>
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T092155-0500" content="-"?>shape<?oxy_delete author="mmyers" timestamp="20101122T092148-0500" content=")"?>,
+            bulging in the middle and tapering off at the ends. </p>
+        <image style="block" src="../webcontent/image110a.gif"
+            alt="The symmetric unimodal bell shape."/>
+        <p>Many variables, <?oxy_insert_start author="mmyers" timestamp="20101122T092221-0500"?>such
+            as<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T092220-0500" content="like"?>
+            pregnancy lengths<?oxy_insert_start author="mmyers" timestamp="20101122T092227-0500"?>,<?oxy_insert_end?>
+            <?oxy_delete author="mmyers" timestamp="20101122T092229-0500" content="or "?>shoe sizes<?oxy_insert_start author="mmyers" timestamp="20101122T092235-0500"?>,<?oxy_insert_end?>
+            <?oxy_delete author="mmyers" timestamp="20101122T092237-0500" content="or "?>foot
+            lengths<?oxy_insert_start author="mmyers" timestamp="20101122T092243-0500"?>,
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T092245-0500" content=" ("?>and
+            other human physical
+            characteristics<?oxy_delete author="mmyers" timestamp="20101122T092250-0500" content=")"?>
+            exhibit these properties: symmetry indicates that the variable is just as likely to take
+            a value a certain distance below its mean as it is to take a value that same distance
+            above its mean; the bell-shape indicates that values closer to the mean are more likely,
+            and it becomes increasingly unlikely to take values far from the mean in either
+            direction. The particular shape exhibited by these variables has been studied since the
+            early part of the nineteenth century, when they were first called
+            <?oxy_comment_start author="mmyers" timestamp="20101122T092453-0500" comment="make bold to indicate terminology"?>"normal"<?oxy_comment_end?>
+            as a way of suggesting their depiction of a common, natural pattern.</p>
+        <section>
+            <title>Observations of Normal Distributions</title>
+            <body>
+
+                <p>There are many normal distributions. Even though all of them have the bell-shape,
+                    they vary in their center and spread.</p>
+                <image style="block" src="../webcontent/image_normal1a.gif" width="505" height="331"
+                    alt="Three normal
+normal distribution curves which vary in height and mean."/>
+                <p>More specifically, the center of the distribution is determined by its
+                        <em>mean</em> (<m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math>) and the spread is determined by its standard deviation ( <m:math
+                        overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math>).</p>
+                <p>Some observations we can make as we look at this graph are:</p>
+                <ul>
+                    <li><p>The black and the red normal curves have means or centers at <m:math
+                                overflow="scroll">
+                                <m:mi>μ</m:mi>
+                            </m:math> = 10. However, the red curve is more spread out and thus has a
+                            larger standard deviation. </p>
+                        <p>As you look at these two normal curves, notice that
+                            <?oxy_insert_start author="mmyers" timestamp="20101122T092548-0500"?>as
+                            <?oxy_insert_end?>the red graph is squished down, the spread gets
+                            larger, thus allowing the area under the curve to remain the
+                        same.</p></li>
+                    <li><p>The black and the green normal curves have the same standard deviation or
+                            spread (the range of the black
+                            <?oxy_insert_start author="mmyers" timestamp="20101122T092627-0500"?>curve
+                            <?oxy_insert_end?>is
+                            6.5<?oxy_delete author="mmyers" timestamp="20101122T092607-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101122T092606-0500" content=" "?>13.5,
+                            <?oxy_insert_start author="mmyers" timestamp="20101122T092619-0500"?>and
+                            <?oxy_insert_end?>the green
+                            <?oxy_insert_start author="mmyers" timestamp="20101122T092709-0500"?>curve's
+                            range is
+                            <?oxy_insert_end?>10.5<?oxy_delete author="mmyers" timestamp="20101122T092612-0500" content=" "?>-<?oxy_delete author="mmyers" timestamp="20101122T092611-0500" content=" "?>17.5).</p></li>
+                </ul>
+            </body>
+        </section>
+
+        <p>Even more important than the fact that many variables themselves follow the normal curve
+            is the role played by the normal curve in sampling
+            theory<?oxy_insert_start author="mmyers" timestamp="20101122T092727-0500"?>,<?oxy_insert_end?>
+            as we'll see in the next module of probability. Understanding the normal distribution is
+            an important step in the direction of our overall goal, which is to relate sample means
+            or proportions to population means or proportions. The goal of this section is to better
+            understand normal random variables and their distributions.</p>
+    </body>
+</workbook_page>

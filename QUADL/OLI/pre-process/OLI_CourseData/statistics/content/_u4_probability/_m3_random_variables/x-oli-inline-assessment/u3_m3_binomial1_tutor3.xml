@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial1_tutor3">
+   <title>Tutor</title>
+   <page>
+      <content>
+         <p>According to a recent national poll, 41% of females and 32% of males identify as
+            democrats. Suppose a random sample of 120 females and 140 males is obtained. </p>
+      </content>
+      <question id="q1">
+         <body>
+            <p>What is the value of the parameters for the binomial random variable X, the number of
+               democrats in the sample of 120 females?</p>
+            <p> n = <input_ref input="N"></input_ref> (report your answer in whole numbers)</p>
+            <p> p = <input_ref input="P"/> (report your answer to two decimal places) </p></body>
+         <numeric id="N"/>
+         <numeric id="P"/>
+
+         <part>
+            <response input="N" match="120" score="1">
+               <feedback>Correct. X is a binomial random variable from an experiment with 120
+                  independent trials, in this case 120 females.</feedback>
+            </response>
+            <response input="N" match="140" score="0">
+               <feedback>Incorrect. It looks like you identified the number of independent trials
+                  for <em style="bold">males</em>. </feedback>
+            </response>
+            <response input="N" match="*" score="0">
+               <feedback>Incorrect. Recall that n is the number of independent trials, in this case
+                  the number of females.</feedback>
+            </response>
+         </part>
+         <part>
+            <response input="P" match="0.41" score="1">
+               <feedback>Correct. X is a binomial random variable from an experiment with a
+                  probability of “success” (being “democrat”) for females of 0.41.</feedback>
+            </response>
+            <response input="P" match="0.32" score="0">
+               <feedback>Incorrect. It looks like you identified the probability of “success” (being
+                  “democrat”) for <em style="bold">males</em>. </feedback>
+            </response>
+            <response input="P" match="0.59" score="0">
+               <feedback>Incorrect. It looks like you identified the probability of “failure” (<em
+                     style="bold">not</em> being “democrat”) for females. </feedback>
+            </response>
+            <response input="P" match="*" score="0">
+               <feedback>Incorrect. Recall that p is the probability of “success” (being “democrat”)
+                  for females.</feedback>
+            </response>
+         </part>
+      </question>
+      <question id="q2">
+         <body>
+            <p>What is the value of the parameters for the binomial random variable Y, the number of
+               democrats in the sample of 140 males?</p>
+            <p> n = <input_ref input="N"/> (report your answer in whole numbers) </p>
+            <p> p = <input_ref input="P"/> (report your answer to two decimal places) </p></body>
+         <numeric id="N"/>
+         <numeric id="P"/>
+
+         <part>
+            <response input="N" match="140" score="1">
+               <feedback>Correct. Y is a binomial random variable from an experiment with 140
+                  independent trials, in this case 140 males .</feedback>
+            </response>
+            <response input="N" match="120" score="0">
+               <feedback>Incorrect. It looks like you identified the number of independent trials
+                  for <em style="bold">females</em>. </feedback>
+            </response>
+            <response input="N" match="*" score="0">
+               <feedback>Incorrect. Recall that n is the number of independent trials, in this case
+                  the number of males.</feedback>
+            </response>
+         </part>
+         <part>
+            <response input="P" match="0.32" score="1">
+               <feedback>Correct. Y is a binomial random variable from an experiment with a
+                  probability of “success” (being “democrat”) for males of 0.32..</feedback>
+            </response>
+            <response input="P" match="0.41" score="0">
+               <feedback>Incorrect. It looks like you identified the probability of “success” (being
+                  “democrat”) for <em style="bold">females</em>. </feedback>
+            </response>
+            <response input="P" match="0.68" score="0">
+               <feedback>Incorrect. It looks like you identified the probability of “failure” (<em
+                     style="bold">not</em> being “democrat”) for males. </feedback>
+            </response>
+            <response input="P" match="*" score="0">
+               <feedback>Incorrect. Recall that p is the probability of “success” (being “democrat”)
+                  for males.</feedback>
+            </response>
+         </part>
+      </question>
+   </page>
+</assessment>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="select_infer_test_identify_2_samp_ttest_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_select_infer_test_identify_2_samp_ttest">
+        <body>
+            <p>We suspect the overall mean monthly rent of apartments in Shadyside is higher than in
+                Oakland, so we survey a random sample of <em style="italic">Oakland</em> apartments,
+                and a random sample of <em style="italic">Shadyside</em> apartments.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if the overall mean monthly rent of apartments in Shadyside is higher than in
+                Oakland?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the mean scores of the
+                    same group of subjects in a before and after situation. Notice that you want to
+                    test if the means of two random samples are equal.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. We are comparing two groups: apartments in Shadyside and
+                    apartments in Oakland. Since we take <em style="italic">two random samples</em>,
+                    these samples are <em style="italic">independent</em>, and therefore the
+                    two-sample t-test is appropriate.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used for comparing the means of more than two groups.
+                    Notice that you want to test if the means of two random samples are
+                    equal.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two categorical variables. Notice that you want
+                    to test if the means of two random samples are equal.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Regression is used for exploring the relationship between two
+                    quantitative variables. Notice that you want to test if the means of two random
+                    samples are equal.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_select_infer_test_identify_2_samp_ttest">
+        <body>
+            <p>At the beginning of the semester, students who registered for a statistics course
+                were randomly assigned to two sections, each taught by a different instructor. At
+                the end of the semester, we would like to test whether there are differences in
+                performance on the final exam between the two sections.</p>
+            <p>Which of the following is the most appropriate statistical test to use to test
+                whether there are differences in performance on the final exam between the two
+                sections?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the same group of
+                    subjects in a before and after situation. The students are randomly assigned to
+                    a section, and therefore, we have two independent samples.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. By randomly assigning students to a section, we've formed two
+                    independent samples. A two-sample t-test is therefore the appropriate test.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Note that we're comparing only two independent samples. ANOVA
+                    is used when we're comparing more than two groups.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two categorical variables. A grade on a final
+                    exam is quantitative.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. A regression is used for exploring the relationship between two
+                    quantitative variables. Here we are interested in the differences in final exam
+                    scores between two independent samples.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q3_select_infer_test_identify_2_samp_ttest">
+        <body>
+            <p>An athletic trainer wants to find out if there is a significant difference in the
+                mean height of football players and basketball players in a large school district.
+                She randomly selects 100 high school varsity football players and 100 high school
+                varsity basketball players to compare the mean heights for each group.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if there is a significant difference in mean height between basketball and football
+                players?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the mean scores of the
+                    same group of subjects in a before and after situation. Notice that you want to
+                    test if the means of two random samples are equal. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. We are comparing two groups - football players and basketball
+                    players. Since we take <em style="italic">random samples,</em> these samples are
+                        <em style="italic">independent</em> and therefore the two-sample t-test is
+                    appropriate. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used for comparing the means of <em style="italic">more than</em> two groups. Notice that you want to test if the means of <em style="italic">two random samples</em> are equal.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two categorical variables. In this case, the
+                    players’ height is a quantitative variable. </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Regression is used for exploring the relationship between <em style="italic">two quantitative</em> variables. In this case, type of
+                    athlete (football or basketball) is a categorical variable. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q4_select_infer_test_identify_2_samp_ttest">
+        <body>
+            <p>A psychologist wants to study whether there is a difference in the effectiveness of
+                two different talk therapy techniques (exposure therapy or cognitive behavioral
+                therapy) on phobia symptom severity. The psychologist randomly assigns a large group
+                of clients suffering from a phobia into one of the two treatment conditions:
+                exposure therapy or cognitive behavioral therapy. After 8 weeks of therapy, the
+                psychologist assesses the phobia symptoms of both groups of clients using a
+                questionnaire that gives a number between 0 to 40 to indicate the severity of the
+                client’s phobia symptoms.</p>
+            <p>Which of the following is the most appropriate statistical test to use to determine
+                if there is a significant difference between exposure therapy and cognitive behavior
+                therapy on phobia symptoms?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Matched pairs t-test</choice>
+            <choice value="B">Two-sample t-test</choice>
+            <choice value="C">ANOVA</choice>
+            <choice value="D">Chi-squared test for independence</choice>
+            <choice value="E">Inference for regression</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A matched pairs t-test is used to test the same group of
+                    subjects in a before and after situation. The clients are randomly assigned to
+                    one of two therapy conditions, and therefore, we have <em style="italic">than</em> independent
+                    samples.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. By randomly assigning clients to a therapy condition, we've
+                    formed two independent samples. A two-sample t-test is therefore the appropriate
+                    test. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. ANOVA is used when we're comparing <em style="italic">more than</em> two groups. Note
+                    that we're comparing only two independent samples. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A chi-squared test for independence is used to determine if
+                    there is an association between two categorical variables. In this case, the
+                    response variable (phobia symptom severity) is quantitative.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. A regression is used for exploring the relationship between two
+                    quantitative variables. Here we are interested in the differences in phobia
+                    symptom severity between two independent samples.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+</pool>

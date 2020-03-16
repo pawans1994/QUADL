@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u2_m2_checkpoint2" max_attempts="3" recommended_attempts="1">
+    <title>Examining Relationships Checkpoint 2</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u2_m2_checkpoint2.pdf">Solution Set</link>.</p>
+    </content>-->
+    <multiple_choice id="two_way_table" select="single">
+        <body>
+            <p>High blood pressure is unhealthy. Here are the results of one of the studies that
+                link high blood pressure to death from cardiovascular disease. The researchers
+                classified a group of white males aged 35 to 64 as having low blood pressure or high
+                blood pressure, then followed the subjects for 5 years. The following two-way table
+                gives the results of the study:</p>
+            <image style="block" src="../webcontent/assessment2q9.gif"/>
+            <p>In this example, which of the following would be appropriate to calculate?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Conditional row percentages </choice>
+            <choice value="B">Conditional column percentages </choice>
+            <choice value="C">The correlation coefficient r </choice>
+            <choice value="D">The five-number summary of both variables </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. To explore a categorical relationship, the most appropriate
+                    summary is the outcome percentages within each <em>explanatory</em> group. For
+                    the table shown, think about whether the row variable (cardiovascular death) or
+                    the column variable (blood pressure) would be the <em>explanatory</em>
+                    variable.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. To explore a categorical relationship, the most appropriate
+                    summary is the outcome percentages within each <em>explanatory</em> group. In
+                    this case, the column variable (blood pressure) would be the explanatory
+                    variable, so the appropriate percentages are the death percentages from each
+                    blood pressure group. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The correlation coefficient is a summary value for a
+                    scatterplot, not for a two-way table. To explore a categorical relationship, the
+                    most appropriate summary is the outcome percentages within each explanatory
+                    group.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Five-number summaries are only appropriate for lists of
+                    quantitative measurements. But a two-way table summarizes categorical variables,
+                    not quantitative variables. To explore a categorical relationship, the most
+                    appropriate summary is the outcome percentages within each explanatory
+                    group.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="scatterplot_correlation_outlier" select="single">
+        <body> A local ice cream shop kept track of the number of cans of cold soda it sold each
+            day, and the temperature that day, for two months during the summer. The data are
+            displayed in the scatterplot below: <image style="block"
+                src="../webcontent/assessment2q3.gif"/> The one outlier corresponds to a day on
+            which the refrigerator for the soda was broken. Which of the following is true? </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"> A reasonable value of the correlation coefficient r for these data is
+                1.2. </choice>
+            <choice value="B"> If the temperature were measured in degrees Celsius (C = 5/9*(F-32)),
+                the value of r would change accordingly. </choice>
+            <choice value="C"> If the outlier were removed, r would increase. </choice>
+            <choice value="D"> If the outlier were removed, r would decrease. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The correlation coefficient r must be between –1 and 1. It
+                    cannot be larger than 1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The correlation coefficient r is a unitless number, so it’s not
+                    affected by a change of units.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The outlier makes the data less "tightly clustered" around the
+                    linear trend. Removing the outlier will increase the overall tightness of the
+                    points around their straight-line trend, so the correlation coefficient would be
+                    closer to 1. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. For a scatterplot where the trend is generally rising, the
+                        <em>more</em> linear the scatterplot is, the <em>closer to 1</em> the
+                    correlation coefficient r will be. Notice that removing the outlier will
+                        <em>increase</em> the overall tightness of the points around their
+                    straight-line trend.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="scatterplot_correlation_1" select="single">
+        <body>Suppose that the correlation r between two quantitative variables was found to be r =
+            0. Which of the following is the best interpretation of this correlation value?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">There is a strong linear relationship between the two variables. </choice>
+            <choice value="B">There is no linear relationship between the two variables. </choice>
+            <choice value="C">There is a strong relationship between the two variables. </choice>
+            <choice value="D">There is no relationship between the two variables. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A correlation coefficient <em style="italic">far</em> from zero
+                    would indicate a strong linear relationship. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The correlation coefficient indicates the strength of the
+                    linearity of a scatterplot relationship, and a correlation coefficient that is
+                    zero indicates no linear relationship. However, that there might still be some
+                    other (non-straight-line) kind of relationship.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A correlation coefficient <em style="italic">far</em> from zero
+                    would indicate a strong linear relationship.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The correlation coefficient only measures <em style="italic"
+                        >linear</em> relationship.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="scatterplot_correlation_2" select="multiple">
+        <body> A correlation of r = 0.85 is found between weekly sales of firewood and cough drops
+            over a 1-year period. Check all that apply.</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">There is a pretty strong positive linear relationship between sales of
+                firewood and cough drops. </choice>
+            <choice value="B">Fire must be the cause of coughing. </choice>
+            <choice value="C">Temperature is a possible lurking variable that is behind this
+                relationship. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The correlation coefficient by itself isn’t enough to determine
+                    whether the relationship was linear. You would need to look at the scatterplot
+                    to determine if the relationship was a straight-line trend. Also, there is at
+                    least one true statement.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You can’t determine causation merely from the nature of a
+                    display. Just because there might be an association, that doesn’t (by itself)
+                    indicate anything about causation. Causation can only be determined by knowing
+                    the nature of the study design. Also, there is at least one true
+                    statement.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Temperature is a possible lurking variable since the sales of
+                    both items will tend to be low in the warm parts of the year, and tend to be
+                    high in the cold parts of the year. So the sales would tend to be positively
+                    associated (both low at the same time, both high at the same time), which would
+                    explain the strong positive correlation coefficient.</feedback>
+            </response>
+            <response match="A,B" score="0">
+                <feedback>Incorrect. The correlation coefficient by itself isn’t enough to determine
+                    whether the relationship was linear. You would need to look at the scatterplot
+                    to determine if the relationship was a straight-line trend. Also, you can’t
+                    determine causation merely from the nature of a display. Just because there
+                    might be an association, that doesn’t (by itself) indicate anything about
+                    causation. Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="A,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, the
+                    correlation coefficient by itself isn’t enough to determine whether the
+                    relationship was linear. You would need to look at the scatterplot to determine
+                    if the relationship was a straight-line trend.</feedback>
+            </response>
+            <response match="B,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, you
+                    can’t determine causation merely from the nature of a display. Just because
+                    there might be an association, that doesn’t (by itself) indicate anything about
+                    causation. Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="A,B,C" score="0">
+                <feedback>Incorrect. You are correct that temperature is a possible lurking variable
+                    since the sales of both items will tend to be low in the warm parts of the year,
+                    and tend to be high in the cold parts of the year. So the sales would tend to be
+                    positively associated (both low at the same time, both high at the same time),
+                    which would explain the strong positive correlation coefficient. However, the
+                    correlation coefficient by itself isn’t enough to determine whether the
+                    relationship was linear. You would need to look at the scatterplot to determine
+                    if the relationship was a straight-line trend. Also, you can’t determine
+                    causation merely from the nature of a display. Just because there might be an
+                    association, that doesn’t (by itself) indicate anything about causation.
+                    Causation can only be determined by knowing the nature of the study
+                    design.</feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one true statement.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="scatterplot_correlation_3" select="single">
+        <body> The data in the scatterplot below are an individual's weight and the time it takes
+            (in seconds) on a treadmill to raise his or her pulse rate to 140 beats per minute. The
+            o's correspond to females and the +'s to males. Which of the following conclusions is
+            most accurate?<image style="block" src="../webcontent/assessment2q8.gif"/>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">There is a positive correlation between gender and weight. </choice>
+            <choice value="B">There is a negative correlation between time and weight for males and
+                for females. </choice>
+            <choice value="C">There is a positive correlation between time and weight for males and
+                for females. </choice>
+            <choice value="D">There is a negative correlation between gender and weight.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. There can only be a <em style="italic">correlation</em> between
+                    two quantitative variables. But notice that "gender" is categorical. Also, the
+                    correlation coefficient would be positive only when the points tend to rise from
+                    left to right.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. For each separate gender, we see that the points on the
+                    scatterplot tend to <em style="italic">fall</em> from left to right. This
+                    indicates a <em style="italic">negative</em> relationship. So the correlation
+                    coefficient would be negative for males, and would also be negative for females.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The correlation coefficient would be positive only when the
+                    points tend to rise from left to right. But on the scatterplot, we see that, for
+                    both males and females, the points tend to fall from left to right. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The scatterplot does show a negative correlation pattern, but
+                    there can only be a <em style="italic">correlation</em> between two quantitative
+                    variables. But notice that "gender" is categorical. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="scatterplot_correlation_4" select="single">
+        <body> What can we say about the relationship between the correlation r and the slope b of
+            the least-squares line for the same set of data? </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Both r and b always have values between -1 and 1. </choice>
+            <choice value="B">r is always larger than b. </choice>
+            <choice value="C">r and b have the same sign (+ or -). </choice>
+            <choice value="D">the slope b is always equal to the square of the correlation r. </choice>
+            <choice value="E">b is always larger than r. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It’s true that the correlation r always has a value between –1
+                    and 1, but there is no such restriction on slope. The slope of a line can exceed
+                    1 or –1.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that the correlation r always has value between -1 and
+                    1, but a regression line could have a slope larger than 1. So it’s possible for
+                    b to be larger than r.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Although the correlation r isn’t the same as the slope b, the
+                    thing they always have in common is their <em style="italic">sign</em>.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. There is no such relationship between slope and correlation.
+                    Remember that the correlation r always has a value between 0 and 1, so the
+                    square of the correlation will also be between –1 and 1. But there is no such
+                    restriction on slope.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Remember that for points that tend to rise from left to right,
+                    the correlation is close to 1 when the points are tightly clustered around the
+                    regression line. But if the regression line is shallow, the slope could be close
+                    to zero. So it’s possible for b to be <em style="italic">less</em> than
+                    r.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="simpsons_paradox_lurking_variable" select="multiple">
+        <body>
+            <p>A study was done on the timeliness of flights categorized as either "on-time" or
+                "delayed" of two major airlines: StatsAir and AirMedian. Data were collected over a
+                period of time from five major cities and it was found that StatsAir does better
+                overall (i.e., has a smaller percentage of flights categorized as delayed. However,
+                in each of the five cities separately, AirMedian does better (i.e. has a smaller
+                percentage of flights categorized as delayed in each city).</p>
+            <p>Which of the following is correct? Check all that apply.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">This is an example of Simpson's paradox.</choice>
+            <choice value="B">"City" is a lurking variable in this example.</choice>
+            <choice value="C">This is an example of a negative association between
+                variables.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but "reverses" when the groups are combined. However,
+                    there is at least one other correct answer.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You are correct that "city" is a lurking variable, because
+                    there is an association that is seen a particular way for each of several groups
+                    separately but "reverses" when the groups are combined. However, there is at
+                    least one other correct answer.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It is only appropriate to call an association "positive" or
+                    "negative" when the variables are quantitative. But in this case, both variables
+                    ("timeliness" and "city") are categorical. </feedback>
+            </response>
+            <response match="A,B" score="10">
+                <feedback>Correct. This is an example of Simpson’s paradox, because there is an
+                    association that is seen a particular way for each of several groups separately
+                    but "reverses" when the groups are combined. Such reversal typically indicates a
+                    lurking variable, which in this case is "city."</feedback>
+            </response>
+            <response match="A,C" score="0">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but "reverses" when the groups are combined. However,
+                    it is only appropriate to call an association "positive" or "negative" when the
+                    variables are quantitative. But in this case, both variables ("timeliness" and
+                    "city") are categorical.</feedback>
+            </response>
+            <response match="B,C" score="0">
+                <feedback>Incorrect. You are correct that "city" is a lurking variable, because
+                    there is an association that is seen a particular way for each of several groups
+                    separately but "reverses" when the groups are combined. However, it is only
+                    appropriate to call an association "positive" or "negative" when the variables
+                    are quantitative. But in this case, both variables ("timeliness" and "city") are
+                    categorical.</feedback>
+            </response>
+            <response match="A,B,C" score="0">
+                <feedback>Incorrect. You are correct that this is an example of Simpson’s Paradox,
+                    because there is an association that is seen a particular way for each of
+                    several groups separately but "reverses" when the groups are combined. Such
+                    reversal typically indicates a lurking variable, which in this case is "city."
+                    However, it is only appropriate to call an association "positive" or "negative"
+                    when the variables are quantitative. But in this case, both variables
+                    ("timeliness" and "city") are categorical.</feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There is at least one correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <section id="myresponse">
+        <short_answer id="short_answer_appropriate_display_numerical_measures" grading="automatic">
+            <body>
+                <p> Please answer the question below. Your response will not be graded, but it will
+                    be available for your instructor to read.</p>
+                <p>When faced with a data analysis problem that involves two variables, explain how
+                    you would decide which graphical display and numerical measures to use.</p>
+            </body>
+            <part>
+                <response match="*" score="0">
+                    <feedback>Thank you for your response. It has been recorded and will be
+                        available for your instructor to read.</feedback>
+                </response>
+                <no_response>
+                    <feedback>You did not enter a response for this question.</feedback>
+                </no_response>
+            </part>
+        </short_answer>
+    </section>
+</assessment>

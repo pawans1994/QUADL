@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="eda_introlbd">
+    <head>
+        <title>Exploring a Dataset</title>
+    </head>
+    <body>
+        <p>In this activity we will:</p>
+        <ul>
+            <li>Learn how to open and examine a dataset.</li>
+            <li>Practice classifying variables by their type: quantitative or categorical.</li>
+            <li>Learn how to handle categorical variables whose values are numerically coded.</li>
+        </ul>
+        <section>
+            <title>Background to dataset</title>
+            <body>
+                <p>Clinical depression is the most common mental illness in the United States,
+                    affecting 19 million adults each year (Source:
+                    <?oxy_comment_start author="mmyers" timestamp="20101019T205506-0400" comment="include full source information"?>NIMH,
+                    1999)<?oxy_comment_end?>. Nearly 50% of individuals who experience a major
+                    episode will have a recurrence within 2-3 years. Researchers are interested in
+                    comparing therapeutic solutions that could delay or reduce the incidence of
+                    recurrence. </p>
+                <p> In a study conducted by the National Institutes of Health, 109 clinically
+                    depressed patients were separated into three groups, and each group was given
+                    one of two active drugs (imipramine or lithium) or no drug at all. For each
+                    patient, the dataset contains the treatment used, the outcome of the treatment,
+                    and several other interesting characteristics. </p>
+                <p> Here is a summary of the variables in our dataset: </p>
+                <ul>
+                    <li><em>Hospt: </em>The patient's hospital, represented by a code for each of
+                        the 5 hospitals
+                        (<?oxy_comment_start author="mmyers" timestamp="20101015T114820-0400" comment="Why not 1, 2, 3, 4 or 5? Suggest adding an explanation about why there is no hospital 4 in the data."?>1,
+                        2, 3, 5, or 6<?oxy_comment_end?>)</li>
+                    <li><em>Treat: </em>The treatment received by the patient (Lithium, Imipramine,
+                        or Placebo)</li>
+                    <li><em>Outcome: </em>Whether or not a recurrence occurred during the patient's
+                        treatment (Recurrence or No Recurrence)</li>
+                    <li><em>Time: </em>Either the time in days till the first recurrence, or if a
+                        recurrence did not occur, the length in days of the patient's participation
+                        in the study.</li>
+                    <li><em>AcuteT: </em>The time in days that the patient was depressed prior to
+                        the study.</li>
+                    <li><em>Age: </em>The age of the patient in years, when the patient entered the
+                        study.</li>
+                    <li><em>Gender: </em>The patient's gender (1 = Female, 2 = Male)</li>
+                </ul>
+                <pullout>
+                    <!-- Doci this is now on the the eda_intro page -->
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>To open R (a free software environment for statistical computing and
+                                graphics) with the data preloaded, right-click <link
+                                    href="../../webcontent/r/depression.RData" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in R.</p>
+                            <p>The data have been loaded into the variable "depression." Enter the
+                                command <code>depression</code> to see the data.</p>
+                            <p><em>Note: Using R&#8212;</em>Throughout the Learn By Doing activities
+                                in this course, you will be given commands to execute in R. You can
+                                use the following steps to avoid having to type all of these
+                                commands in by hand:</p>
+                            <ol>
+                                <li>Highlight the command with your mouse.</li>
+                                <li>On the browser menu, click "Edit," then "Copy."</li>
+                                <li>Click on the R command window, then at the top of the R window,
+                                    click "Edit," then "Paste."</li>
+                                <li>You may have to press &lt;Enter&gt; to execute the command.</li>
+                            </ol>
+                            <p>When you enter the command <code>depression</code> into R, you will
+                                see a large data table. Each row of this table contains the values
+                                of the variables associated with a single individual, and the
+                                different variables are separated into columns. The columns are
+                                labeled with the variable names.</p>
+                            <p>If we simply wanted to observe only Age information we can extract
+                                that specific variable from the data frame by connecting the data
+                                frame name to the column name using the $ symbol, such as in the
+                                following command:<code>depression$Age</code></p>
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To open this file in StatCrunch you must first right-click <link
+                                    href="../../webcontent/excel/depression.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Next click <link href="http://www.statcrunch.com/"
+                                    target="new">here</link> to open StatCrunch in a separate window
+                                and login using your username and password.</p>
+                            <ul>
+                                <li>Click on the link “Open StatCrunch” at the top of the My
+                                    StatCrunch page. </li>
+                                <li>To open the data set select the “My computer” link under Load a
+                                    data set from box on the left side of the page.</li>
+                                <li>Select the "Browse" or “Choose File” (depending on which browser
+                                    you're using and select the data set you downloaded</li>
+                                <li>Scroll to the bottom of the page and click on “Load File”</li>
+                            </ul>
+                            <p>The data is displayed in tabular form. Each row contains the values
+                                of the variables associated with a single individual, and the
+                                different variables are separated in columns. Rows are referred to
+                                by number 1, 2, 3, etc. Columns are labeled by default as var1,
+                                var2, etc. It is helpful if the columns are labeled with the
+                                variable names, as in our case. </p>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To open Minitab with the data in the worksheet, click <link
+                                    href="../../webcontent/minitab/depression.mtw" target="self"
+                                    >here</link> (in some browsers, right-click and choose "Save
+                                Target As" to download the file to your computer. Then find the
+                                downloaded file and double-click it to open it in Minitab.) Note: a
+                                dialog box will likely appear that says "A copy of the content of
+                                this file will be added to the current project"&#8212;just click
+                                "OK."</p>
+                            <p>In Minitab, the dataset is displayed in tabular form in the bottom
+                                part of the screen called "worksheet." Each row contains the values
+                                of the variables associated with a single individual, and the
+                                different variables are separated in columns. Rows are referred to
+                                by R1, R2, etc. Columns can be referred to by column names or by C1,
+                                C2, etc. It is helpful if the columns are labeled with the variable
+                                names, as in our case. </p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007 Instructions</title>
+                            <p>To open Excel with the data in the worksheet, right-click <link
+                                    href="../../webcontent/excel/depression.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Excel.</p>
+                            <p>In Excel, the dataset is displayed in tabular form. Each row contains
+                                the values of the variables associated with a single individual, and
+                                the different variables are separated into columns. It is helpful if
+                                the columns are labeled with the variable names, as in our case.
+                            </p>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <p>To open Excel with the data in the worksheet, right-click <link
+                                    href="../../webcontent/excel/depression.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Excel.</p>
+                            <p>In Excel, the dataset is displayed in tabular form. Each row contains
+                                the values of the variables associated with a single individual, and
+                                the different variables are separated into columns. It is helpful if
+                                the columns are labeled with the variable names, as in our case.
+                            </p>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+
+                            <p>To open a group of lists with the depression data loaded, right-click
+                                    <link href="../../webcontent/ti/depression.8xg" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and send it to your
+                                calculator. For instructions on how to connect your calculator to
+                                your computer and transfer a file, click <activity_link
+                                    idref="ti_instructions" target="new">here</activity_link>.</p>
+                            <p>On the TI calculator, the dataset is displayed in lists L1-L6, and an
+                                extra list named GEND. </p>
+                            <ul style="none">
+                                <li>L1: Hospt </li>
+                                <li>L2: Treat (0=Lithium, 1=Imipramine, or 2=Placebo) </li>
+                                <li>L3: Outcome (1=Recurrence/Failure or 0=No Recurrence/Success) </li>
+                                <li>L4: Time </li>
+                                <li>L5: AcuteT </li>
+                                <li>L6: Age </li>
+                                <li>GEND: Gender (1 = Female, 2 = Male) </li>
+                            </ul>
+                            <p>Use these directions to look over the data in the various lists:</p>
+                            <ul>
+                                <li>To access one of the built-in lists (L1-L6), press <code
+                                        style="inline">2ND</code> and then the number of the list,
+                                    followed by <code style="inline">ENTER</code>. For example, to
+                                    access L1, you would press <code style="inline"
+                                        >2ND/1/ENTER</code>.</li>
+                                <li>To access a non-built-in list, use the <code style="inline"
+                                        >LIST</code> menu (<code style="inline">2nd/STAT</code>).
+                                    Press <code style="inline">LIST/NAMES</code> and then scroll
+                                    down to the desired list and press <code style="inline"
+                                        >ENTER</code> and then <code style="inline">ENTER</code>
+                                    again.</li>
+                                <li>Use the right and left arrows to scroll through the list.</li>
+                            </ul>
+                            <p>You can also choose <code style="inline">Stat/Edit/1:Edit</code> to
+                                see L1-L6 in table form. You can scroll through the table using the
+                                arrow keys.</p>
+                            <p>Note that in order to see the GEND list in the table, you have to add
+                                it. To do so:</p>
+                            <ul>
+                                <li>Choose <code style="inline">STAT/EDIT/1:Edit</code></li>
+                                <li>Use the up arrow and the right arrow keys to position the cursor
+                                    on the name of the last list in the table (for most cases, this
+                                    will be L6). </li>
+                                <li>Now press the right arrow key once. This will create a new
+                                    list.</li>
+                                <li>Name the new list <code style="inline">GEND</code> and you will
+                                    see the data for that list show up in the table.</li>
+                            </ul>
+                            <p>Each row in the table contains the values of the variables associated
+                                with a single individual, and the different variables are
+                                represented by the lists. Rows are referred to by (1), (2), etc. </p>
+
+                        </alternative>
+                    </alternatives>
+
+                </pullout>
+            </body>
+        </section>
+        <wb:inline idref="u1_introeda_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<flash src="../../webcontent/flash/practice_eda_intro.swf" width="505" height="400">
+   <param name="problem_name">practice_eda_intro</param>
+  </flash>-->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. Now we will recode the
+                        variable gender with the labels "Male" and "Female." To do this in
+                        StatCrunch:</p>
+                    <ul>
+                        <li>Choose <code style="inline">Data → Transform data →</code> This will
+                            bring up the Transform data window.</li>
+                        <li>In the Expression input field enter: <code style="inline">ifelse(Gender
+                                = 1,Female,Male)</code> then press <code style="inline">
+                                Compute</code></li>
+                        <li>Notice that a new column is created at the right with the desired
+                            recoding.</li>
+                    </ul>
+                    <p>Finally, we will want to delete the original Gender column and give this name
+                        to the new column.To delete the original Gender column:</p>
+                    <ul>
+                        <li>Choose <code style="inline">Edit → Columns → Delete</code>
+                        </li>
+                        <li>In the Columns Delete Window, Select <code style="inline">Gender and
+                                press Delete</code></li>
+                        <li>To rename the new column click on the current name and press the Delete
+                            key. Then type in the new names</li>
+                    </ul>
+                </alternative>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. Now we will recode the
+                        variable gender with the labels "Male" and "Female." Copy the following
+                        commands into R:</p>
+                  
+                    <code>depression$Gender = replace(depression$Gender,depression$Gender==1,'Female');</code>
+                    <code>depression$Gender = replace(depression$Gender,depression$Gender==2,'Male');</code>
+                    <code>depression$Gender</code>
+                   
+                    <p>Remember, you may have to press &lt;Enter&gt; to execute the command.</p>
+                    <p>Notice that the column Gender now contains the meaningful labels "Female" and
+                        "Male" where before it contained "1" and "2" codes.</p>
+                    <p><em>Note: Using R - </em>To learn more about any command you see in these
+                        notes, enter <code>help</code> (command) into R or check out the resources
+                        listed under the Help menu.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. Now we will recode the
+                        variable gender with the labels "Male" and "Female." To do that in
+                        Minitab:</p>
+                    <ul>
+                        <li>Choose Data → Code → Numeric to text... This will bring up the
+                            Code&#8212;Numeric to Text dialog box.</li>
+                        <li>To fill in "Code data from columns": <ul>
+                                <li>Double click on the variable you wish to recode in the left
+                                    panel. We will choose Gender.</li>
+                            </ul>
+                        </li>
+                        <li>To fill in "Store coded data in columns": <ul>
+                                <li>Double click on the column in which you wish to place the
+                                    recoded variable. We will choose Gender again, to replace the
+                                    existing variable.</li>
+                            </ul>
+                        </li>
+                        <li>To fill in "Original values" and "New": <ul>
+                                <li>Enter 1 and "Female" in the first row of boxes</li>
+                                <li>Enter 2 and "Male" in the second row of boxes</li>
+                            </ul>
+                        </li>
+                        <li>Click OK. </li>
+                    </ul>
+                    <p>Notice that the column Gender now contains the meaningful labels "Female" and
+                        "Male" where before it contained "1" and "2" codes.</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. Now we will recode the
+                        variable gender with the labels "Male" and "Female." To do that in
+                        Excel:</p>
+                    <ul>
+                        <li>Click on the column header above the <code style="inline">Gender</code>
+                            column. In this case, Gender is in column G, so click on the column
+                            header labeled <code style="inline">G</code>. This will select the
+                            entire column of gender values.</li>
+                        <li>Choose <code style="inline">Find &amp; Select → Replace</code> from the
+                                <code style="inline">Editing</code> group in the <code
+                                style="inline">Home</code> tab to bring up the Find and Replace
+                            window.</li>
+                        <li>In the first textbox labeled <code style="inline">Find what:</code>,
+                            enter "1".</li>
+                        <li>In the second textbox labeled <code style="inline">Replace with</code>,
+                            enter "Female".</li>
+                        <li>Now click the button labeled <code style="inline">Replace All</code>.
+                            This will replace all of the "1" values in our selected column with the
+                            word "Female".</li>
+                        <li>Now do the same thing for males:</li>
+                        <li>In the first textbox labeled <code style="inline">Find what:</code>,
+                            enter "2".</li>
+                        <li>In the second textbox labeled <code style="inline">Replace with</code>,
+                            enter "Male"</li>
+                        <li>Click the <code style="inline">Replace All</code> button, and then click
+                            the <code style="inline">Close</code> button.</li>
+                    </ul>
+                    <p>Notice that the column Gender now contains the meaningful labels "Female" and
+                        "Male" where before it contained "1" and "2" codes.</p>
+                </alternative>
+                <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. Now we will recode the
+                        variable gender with the labels "Male" and "Female." To do that in
+                        Excel:</p>
+                    <ul>
+                        <li>Click on the column header above the <code style="inline">Gender</code>
+                            column. In this case, Gender is in column G, so click on the column
+                            header labeled <code style="inline">G</code>. This will select the
+                            entire column of gender values.</li>
+                        <li>Choose <code style="inline">Edit → Replace</code> from the menu bar to
+                            bring up the Find and Replace window.</li>
+                        <li>In the first textbox labeled <code style="inline">Find what:</code>,
+                            enter "1".</li>
+                        <li>In the second textbox labeled <code style="inline">Replace with</code>,
+                            enter "Female".</li>
+                        <li>Now click the button labeled <code style="inline">Replace All</code>.
+                            This will replace all of the "1" values in our selected column with the
+                            word "Female".</li>
+                        <li>Now do the same thing for males:</li>
+                        <li>In the first textbox labeled <code style="inline">Find what:</code>,
+                            enter "2".</li>
+                        <li>In the second textbox labeled <code style="inline">Replace with</code>,
+                            enter "Male"</li>
+                        <li>Click the <code style="inline">Replace All</code> button, and then click
+                            the <code style="inline">Close</code> button.</li>
+                    </ul>
+                    <p>Notice that the column Gender now contains the meaningful labels "Female" and
+                        "Male" where before it contained "1" and "2" codes.</p>
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Often it is easier to use labels for categorical variables that are as close
+                        as possible to the meanings of the categories. However, the TI can only
+                        handle categorical data with each category represented by a number. Look at
+                        the data in row 1 for L1-L6 and GEND. </p>
+                    <p> Interpret what this data represents for the first individual (row 1 in each
+                        list). Then check your answers in this table: </p>
+                    <image src="../../webcontent/eda_introlbd1.png"/>
+                    <p>Note: Under L4, in the first row you probably see 36.143. In order to see all
+                        the decimal places, highlight the 36.143, then look at the bottom of the
+                        screen. You should see L4(1)=36.14300156.</p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+    </body>
+</workbook_page>

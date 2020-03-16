@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="normal_approx_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_normal_approx">
+        <body>
+            <p>Colorblindness is any abnormality of the color vision system that causes a person to
+                see colors differently than most people, or to have difficulty distinguishing among
+                certain colors (www.visionrx.com). </p>
+            <p>Colorblindness is gender-based, <!--while-->with the majority of sufferers being males. </p>
+            <p>Roughly 8% of white males have some form of colorblindness, while the incidence among
+                white females is only 1%. A random sample of 20 white males and 40 white females was
+                chosen.</p>
+            <p>Let <em style="bold">X</em> be the number of males (out of the 20) who are colorblind.</p>
+            <p>Let <em style="bold">Y</em> be the number of females (out of the 40) who are colorblind.</p>
+            <p>Let <em style="bold">Z</em> be the total number of colorblind individuals in the
+                sample (males and females together).</p>
+            <p>Which of the following is true regarding the random variables X and Y?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Both X and Y can be well approximated by normal random
+                variables.</choice>
+            <choice value="B">Only X can be well approximated by a normal random variable.</choice>
+            <choice value="C">Only Y can be well approximated by a normal random variable.</choice>
+            <choice value="D">Neither X nor Y can be well approximated by a normal random
+                variable.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. For X, n = 20, p = 0.08, and 20 * 0.08 &lt; 10 → cannot be
+                    well approximated by a normal random variable. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. For Y, n = 40, and p = 0.01, and 40 * 0.01 &lt; 10 → cannot be
+                    well approximated by a normal random variable. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. A binomial random variable will be well approximated by a normal
+                    random variable if the following two conditions hold: n * p ≥ 10 and n * (1 − p)
+                    ≥ 10. In our case, for X, n = 20, p = 0.08, and 20 * 0.08 &lt; 10 → cannot be
+                    well approximated by a normal random variable. For Y, n = 40, and p = 0.01, and
+                    40 * 0.01 &lt; 10 → cannot be well approximated by a normal random
+                    variable.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_normal_approx">
+        <body>
+            <p>Left-handedness occurs in about 12% of all Americans. Males are slightly more likely
+                than females to be left-handed, with 13% of males and 11% of females being
+                left-handed. Suppose a random sample of 80 females and 100 males is chosen. </p>
+            <p>Let <em style="bold">X</em> be the number of males (out of the 100) who are
+                left-handed. </p>
+            <p>Let <em style="bold">Y</em> be the number of females (out of the 80) who are
+                left-handed.</p>
+            <p>Let <em style="bold">Z</em> be the total number of left-handed individuals in the
+                sample (males and females together).</p>
+            <p>Which of the following is true regarding the random variables X and Y?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Both X and Y can be well approximated by normal random
+                variables.</choice>
+            <choice value="B">Only X can be well approximated by a normal random variable.</choice>
+            <choice value="C">Only Y can be well approximated by a normal random variable.</choice>
+            <choice value="D">Neither X nor Y can be well approximated by a normal random
+                variable.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. At least one of the variables does not meet this criteria.
+                </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. A binomial random variable with parameters n and p can be
+                    well approximated by a normal random variable if both n * p ≥ 10 and n * (1 − p)
+                    ≥ 10. For X, n = 100, p = 0.13, and 100 * 0.13 and 100*0.87 &gt; 10 → so X can
+                    be well approximated by a normal random variable. However, for Y, n = 80, and p
+                    = 0.11, and 80 * 0.11 = 8.8 &lt; 10 → cannot be well approximated by a normal
+                    random variable. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. For Y, n = 80, and p = 0.11, and 80 * 0.11 = 8.8 &lt; 10 →
+                    cannot be well approximated by a normal random variable. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that a binomial random variable with parameters n and
+                    p can be well approximated by a normal random variable if both n * p ≥ 10 and n
+                    * (1 − p) ≥ 10. At least one of the variables meets this criteria.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

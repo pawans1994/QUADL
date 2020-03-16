@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="linear8lbd">
+    <head>
+        <title>Linear Relationships</title>
+    </head>
+    <body>
+        <p>In this activity we will: </p>
+        <ul>
+            <li>Find a regression line and plot it on the scatterplot. </li>
+            <li>Examine the effect of outliers on the regression line. </li>
+            <li>Use the regression line to make predictions and evaluate how reliable these
+                predictions are. </li>
+        </ul>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>The modern Olympic Games have changed dramatically since their inception in 1896.
+                    For example, many commentators have remarked on the change in the quality of
+                    athletic performances from year to year. Regression will allow us to investigate
+                    the change in winning times for one event&#8212;the 1,500 meter race. </p>
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>To open R with the dataset preloaded, right-click <link
+                                    href="../../../webcontent/r/olympics.RData" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in R.</p>
+                            <p>The data have been loaded into the data frame <code>olym</code>.
+                                Enter the command <code>olym</code> to see the data. The data frame
+                                    <code>olym</code> has the following variables:
+                                <code>Year</code>, <code>Time</code>.</p>
+                            <p>Here is a description of the variables:</p>
+                            <ul style="none">
+                                <li><code>Year</code>: the year of the Olympic Games, from 1896 to
+                                    2000. </li>
+                                <li><code>Time</code>: the winning time for the 1,500 meter race, in
+                                    seconds.</li>
+                            </ul>
+
+                            <p>First, let’s explore the relationship between the two quantitative
+                                variables: <code>year</code> and <code>time</code>. Produce a
+                                scatterplot and use it to verify that year and time are nearly
+                                linear in their relationship.</p>
+                            <p>To do this in R, copy the entire command below:</p>
+                            <code style="inline">plot(olym$Year, olym$Time, xlab="Year of Olympic
+                                Games",ylab="Winning Time of 1500m Race (secs)")</code>
+                            <!--<p>Observe that the form of the relationship between the 1,500 meter
+                                race’s winning time and the year is linear. The least squares
+                                regression line is therefore an appropriate way to summarize the
+                                relationship and examine the change in winning times over the course
+                                of the last century. We will now find the least squares regression
+                                line and plot it on a scatterplot.</p>
+                            <p>In order to fit the regression line we will use the command
+                                    <code>lm()</code>. The <code>lm()</code> command produces a
+                                large amount of information which we will want to extract as we need
+                                it, so we will save the information to another variable name
+                                    <code>model</code>.</p>
+                            <code style="inline">model = lm(olym$Time~olym$Year)</code>
+                            <p>To add the regression line to the scatterplot simply we can extract
+                                the linear equation from model and add the line to the
+                                scatterplot.</p>
+                            <code style="inline">plot(olym$Year, olym$Time, xlab="Year of Olympic
+                                Games",ylab="Winning Time of 1500m Race (secs)")</code>
+                            <code style="inline">abline(model)</code>
+                            <p>We can also extract the y-intercept and slope from
+                                <code>model</code>:</p>
+                            <p>The next commands print the regression equation on the graph:</p>
+                            <code style="inline">coef(model)</code>-->
+                            <!--                            <codeblock syntax="text">  (Intercept)   olym$Year 
+   994.193411   -0.393045-->
+                            <!--<p>Notice that there is an outlier. Remove the outlier by copying these
+                                commands (for this exercise we will not modify x and y-axis
+                                labels):</p>
+                            <code style="inline">plot(olym$Year[olym$Year!=1896],
+                                olym$Time[olym$Year!=1896])</code>
+                            <code style="inline">L =
+                                lm(olym$Time[olym$Year!=1896]~olym$Year[olym$Year!=1896]);</code>
+                            <code style="inline">abline(L);</code>
+                            <code style="inline">coef(L)</code>-->
+                            <!--                            <codeblock syntax="text">                   (Intercept) olym$Year[olym$Year != 1896] 
+                   872.4103412                   -0.3312011-->
+                            <!--<p>You will now see that the least squares regression line and the
+                                values in the equation have changed.</p>-->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To open the file (olympics.xls) in StatCrunch, you must first
+                                right-click <link href="../../../webcontent/excel/olympics.xls"
+                                    target="self">here</link> and choose "Save Target As" to
+                                download the file to your computer. Next click <link
+                                    href="http://www.statcrunch.com/" target="new">here</link> to
+                                open StatCrunch in a separate window and login using your username
+                                and password.</p>
+                            <ul>
+                                <li>Click on the link "Open StatCrunch" at the top of the My
+                                    StatCrunch page. </li>
+                                <li> To open the data set, click on the Data button in the top row
+                                    and select Load → From file → on my computer. </li>
+                                <li> Under File, press the Browse button and select the data set you
+                                    downloaded. </li>
+                                <li> Scroll to the bottom of the page and click on "Load File."
+                                </li>
+                            </ul>
+                            <p>Our dataset contains the following variables: </p>
+                            <p>
+                                <em>Year: </em>the year of the Olympic Games, from 1896 to 2000. </p>
+                            <p>
+                                <em>Time: </em>the winning time for the 1,500 meter race, in
+                                seconds. </p>
+                            <p>First, let's explore the relationship between the two quantitative
+                                variables&#8212;year and time. Produce a scatterplot and use it to
+                                verify that year and time are nearly linear in their
+                                relationship.</p>
+                            <p>Here's a reminder of how to do this in StatCrunch: </p>
+                            <ul>
+                                <li>Choose Graph → Scatter Plot </li>
+                                <li>For the X column select <em>Year</em> and for the Y column
+                                    select <em>Time</em></li>
+                                <li>Click Compute! </li>
+                            </ul>
+                            <!--<p>To open this file in StatCrunch, you must first right-click <link
+                                    href="../../../webcontent/excel/olympics.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Next, click <link href="http://www.statcrunch.com/"
+                                    target="new">here</link> to open StatCrunch in a separate window,
+                                and login using your username and password.</p>
+                            <ul>
+                                <li>Click on the link “Open StatCrunch” at the top of the My
+                                    StatCrunch page</li>
+                                <li>To open the data set, click on the Data button in the top row and select Load →  From file → on my computer</li>
+                                <li>Under File, press the Browse button and select the data set you downloaded</li>
+                                <li>Scroll to the bottom of the page and click on “Load File”</li>
+                            </ul>
+                            <p>Our dataset contains the following variables: </p>
+                            <p>
+                                <em style="italic">Year:</em> the year of the Olympic Games, from 1896 to 2000</p>
+                            <p>
+                                <em style="italic">Time:</em> the winning time for the 1,500 meter race, in
+                                seconds</p>
+                            <p>First, let's explore the relationship between the two quantitative
+                                variables <em style="italic">year</em> and <em style="italic">time</em>. Produce a scatterplot and use it to
+                                verify that <em style="italic">year</em> and <em style="italic">time</em> are nearly linear in their
+                                relationship.</p>
+                            <p>Here's a reminder of how to do this in StatCrunch:</p>
+                            <ul>
+                                <li>Choose Graph → Scatter Plot</li>
+                                <li>For the X column, select <em style="italic">Year</em>, and for the Y column, select <em style="italic">Time</em></li>
+                                <li>Press Compute!</li>
+                            </ul>-->
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To open Minitab with the data in the worksheet, right-click <link
+                                    href="../../../webcontent/minitab/olympics.mtw" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Minitab. Note: a dialog box will likely appear that says
+                                "A copy of the content of this file will be added to the current
+                                project"&#8212;just click "OK."</p>
+                            <p>Our dataset contains the following variables: </p>
+                            <p>
+                                <em>Year: </em>the year of the Olympic Games, from 1896 to 2000. </p>
+                            <p>
+                                <em>Time: </em>the winning time for the 1,500 meter race, in
+                                seconds. </p>
+                            <p>First, let's explore the relationship between the two quantitative
+                                variables&#8212;year and time. Produce a scatterplot and use it to
+                                verify that year and time are nearly linear in their
+                                relationship.</p>
+                            <p>Here's a reminder of how to do this in Minitab: </p>
+                            <ul>
+                                <li>Choose Graph → Scatterplot → Simple. </li>
+                                <li>Enter the response variable (Time, in this case), and the
+                                    explanatory variable (Year, in this case). </li>
+                                <li>Click "OK." </li>
+                            </ul>
+                        </alternative>
+
+                        <alternative value="excel">                        
+                            <title>Excel 2013 and 2016 Instructions</title>
+                            <p>To open the dataset, click <link
+                                href="../../../webcontent/excel/olympics_2012.xls" target="self"
+                                >here</link> to download the file to your computer. Then
+                                find the downloaded file and double-click it to open it in Excel. When Excel
+                                opens you may have to enable editing.</p>
+                            <p>Our dataset contains the following variables: </p>
+                            <p>
+                                <em>Year: </em>the year of the Olympic Games, from 1896 to 2012.</p>
+                            <p>
+                                <em>Time: </em>the winning time for the 1,500 meter race, in
+                                seconds. </p>
+                            <p>First, let's explore the relationship between the two quantitative
+                                variables&#8212;year and time. Produce a scatterplot and use it to
+                                verify that year and time are nearly linear in their
+                                relationship.</p>
+                            <p>Here's a reminder of how to do this in Excel: </p>
+                            <ul>
+                                <li>Select all of the data in columns A and B, and then choose <code
+                                        style="inline">Scatter</code> in the <code style="inline"
+                                        >Charts</code> group on the <code style="inline"
+                                        >Insert</code> tab.</li>
+                                <li>Choose the first scatterplot option (Scatter with only
+                                    Markers).</li>
+                                <li>Now we have a scatterplot, but the data is all towards the top
+                                    of the plot. To fix this:</li>
+                                <li>Right-click on the Y axis, and choose <code style="inline"
+                                        >Format Axis</code> from the pop-up menu.</li>
+                                <li>Make sure that <code style="inline">Axis Options</code> is
+                                    selected on the left, and then next to <code style="inline"
+                                        >Minimum</code> choose <code style="inline">Fixed</code> and
+                                    enter <code style="inline">200</code> in the textbox. Click
+                                        <code style="inline">Close</code>.</li>
+                            </ul>
+                        </alternative>
+                        <!--      <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <p>To open Excel with the data in the worksheet, right-click <link
+                                    href="../../../webcontent/excel/olympics.xls" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Excel.</p>
+                            <p>Our dataset contains the following variables: </p>
+                            <p>
+                                <em>Year: </em>the year of the Olympic Games, from 1896 to 2000. </p>
+                            <p>
+                                <em>Time: </em>the winning time for the 1,500 meter race, in
+                                seconds. </p>
+                            <p>First, let's explore the relationship between the two quantitative
+                                variables&#8212;year and time. Produce a scatterplot and use it to
+                                verify that year and time are nearly linear in their
+                                relationship.</p>
+                            <p>Here's a reminder of how to do this in Excel: </p>
+                            <ul>
+                                <li>Select all of the data in columns A and B, and then choose <code
+                                        style="inline">Insert → Chart</code> from the top menu
+                                    bar.</li>
+                                <li>Choose <code style="inline">XY (Scatter)</code> and then Click
+                                        <code style="inline">Finish</code>.</li>
+                                <li>Now we have a scatterplot, but the data is all towards the top
+                                    of the plot. To fix this:</li>
+                                <li>Right-click on the Y axis, and choose <code style="inline"
+                                        >Format Axis</code> from the pop-up menu.</li>
+                                <li>Click the tab labeled <code style="inline">Scale</code>, type
+                                        <code style="inline">200</code> in the box next to <code
+                                        style="inline">Minimum</code>, and click <code
+                                        style="inline">OK</code>.</li>
+                            </ul>
+
+                        </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p>To open a group of lists with the Olympic data loaded, right-click
+                                    <link href="../../../webcontent/ti/olympics.8xg" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and send it to your
+                                calculator. For instructions on how to connect your calculator to
+                                your computer and transfer a file, click <activity_link
+                                    idref="ti_instructions" target="new">here</activity_link>.</p>
+                            <p>NOTE: This data set is fairly small (n=24 for two lists). It may be
+                                just as fast to enter the data yourself. </p>
+                            <p>This file needs to be Ungrouped. To do that:</p>
+                            <ul>
+                                <li>Press <code>2nd/MEM/8:Group</code></li>
+                                <li>Use the right arrow until <code>UNGROUP / 1:OLY</code> is
+                                    selected and press <code>ENTER</code></li>
+                                <li>You should see: Ungrouping OLY, L1 List, L2 List, Done</li>
+                                <li>Click <code>STAT/EDIT/1</code> and press
+                                        <code>ENTEOriginaR</code></li>
+                                <li>Press <code>2nd/1</code> to name the first column L1, move the
+                                    right arrow to the top of the second column and press
+                                        <code>2nd/2</code> to name the second column L2. You should
+                                    see 27 entries in each column.</li>
+                            </ul>
+
+
+                            <p>On the TI calculator, the dataset is displayed in lists L1-L2: </p>
+                            <ul style="none">
+                                <li>L1: year&#8212;the year of the Olympic Games, from 1896 to
+                                    2000.</li>
+                                <li>L2: time&#8212;the winning time for the 1,500 meter race, in
+                                    seconds. </li>
+                            </ul>
+                            <p>First let's explore the relationship between the two quantitative
+                                variables&#8212;year and time. Produce a scatterplot and use it to
+                                verify that year and time are nearly linear in their
+                                relationship.</p>
+                            <p><em>Scatterplot</em></p>
+                            <ul>
+                                <li>Either clear any equations you may have in your calculator by
+                                    choosing <code style="inline">Y=/CLEAR</code>, or else toggle
+                                    them off by choosing <code style="inline">Y=</code> and then
+                                    pressing the left arrow until <code style="inline">=</code> is
+                                    selected and pressing <code style="inline">ENTER</code>.</li>
+                                <li> Choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                                <li> Choose <code style="inline">4:PlotsOff</code>. Hit <code
+                                        style="inline">ENTER</code>. </li>
+                                <li> You should see: <image style="inline"
+                                        src="../../webcontent/linear8lbd1.jpg"/></li>
+                                <li> Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>. </li>
+                                <li> Choose <code style="inline">1:Plot1…Off</code>. </li>
+                                <li> Turn the plot <code style="inline">ON</code> by using arrows to
+                                    highlight the word <code style="inline">ON</code>, then press
+                                        <code style="inline">ENTER</code>. </li>
+                                <li> Choose the <code style="inline">Type:</code> the first graph
+                                    is a scatterplot. </li>
+                                <li> Choose <code style="inline">L1 (2ND/1)</code> for <code
+                                        style="inline">Xlist</code>. </li>
+                                <li> Choose <code style="inline">L2 (2ND/2)</code> for <code
+                                        style="inline">Ylist</code>. </li>
+                                <li> Choose the <code style="inline">Mark</code> you prefer. </li>
+                                <li> You should see <image style="inline"
+                                        src="../../webcontent/linear8lbd2.jpg"/></li>
+                                <li> To view the scatterplot, choose <code style="inline">ZOOM/9:
+                                        ZoomStat</code>. </li>
+                            </ul>
+                            <p>Note: If you prefer to set the viewing window yourself, choose <code
+                                    style="inline">WINDOW</code> and set the values yourself for
+                                    <code style="inline">Xmin</code>, <code style="inline"
+                                    >Xmax</code>, <code style="inline">Xscl</code>, <code
+                                    style="inline">Ymin</code>, <code style="inline">Ymax</code>,
+                                    <code style="inline">Yscl</code>. If the x-axis/y-axis show as a
+                                dark line, you can make <code style="inline">Xscl</code>/<code
+                                    style="inline">Yscl </code>larger.</p>
+
+                        </alternative>
+                    </alternatives>
+
+                </pullout>
+                <p>Observe that the form of the relationship between the 1,500 meter race's winning
+                    time and the year is linear. The least squares regression line is therefore an
+                    appropriate way to summarize the relationship and examine the change in winning
+                    times over the course of the last century. We will now find the least squares
+                    regression line and plot it on a scatterplot. </p>
+                <pullout>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>In order to fit the regression line, we use the command
+                                    <code>lm()</code>. The <code>lm()</code> command produces a
+                                large amount of information, which we will want to extract as we
+                                need it, so we save the information to another variable name model.
+                                To do this in R, copy the command:</p>
+                            <code>model = lm(olym$Time~olym$Year)</code>
+                            <p>To add the regression line to the scatterplot, we can extract the
+                                linear equation from model and add the line to the scatterplot. To
+                                do this in R, copy the entire command below:</p>
+                            <ul style="none">
+                                <li><code>plot(olym$Year, olym$Time, xlab="Year of Olympic Games",
+                                        ylab="Winning Time of 1500m Race
+                                        (secs)");abline(model)</code></li>
+
+                            </ul>
+
+
+
+                            <p>We can also extract the y-intercept and slope from the model to
+                                determine the regression equation, to do this in R, copy the
+                                command:</p>
+                            <code>coef(model)</code>
+
+
+                            <!--<p>Do not close the graphics window in R. You are going to add features
+                                to the existing graphics window. To add the regression line, copy
+                                these commands: </p>
+                            <code> L = lm(olym$Time~olym$Year); </code>
+                            <code>abline(L);</code>
+                            <p> The next commands print the regression equation on the graph: </p>
+                            <code>cf=coefficients(L);</code>
+                            <code> legend(1940,260,legend=paste("time =
+                                ",round(cf[1],0),round(cf[2],2),"year")) </code>
+                            <p><em>Note: Using R</em>&#8212;The command "lm" calculates a large
+                                number of parameters related to linear regression but does not
+                                display them. The commands "abline" and "cf" extract information
+                                from the results of "lm" to draw the regression line and print the
+                                coefficients of the regression equation. </p>-->
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To do that in StatCrunch:</p>
+                            <ul>
+                                <li>Choose Stat → Regression → Simple Linear</li>
+                                <li>For the X variable, select <em>Year</em>, and for the Y
+                                    variable, select <em>Time</em></li>
+                                <li>For Graphs, select Fitted Line Plot</li>
+                                <li>Press Compute! </li>
+                            </ul>
+                            <p>Note that the calculations appear on the first page. Press the >
+                                button to view the scatterplot with the regression line on the
+                                second page.</p>
+                            <!-- <p>To do that in StatCrunch:</p>
+                            <ul>
+                                <li>Choose Stat → Regression → Simple Linear</li>
+                                <li>For the X variable, select <em style="italic">Year</em>, and for
+                                    the Y variable, select <em style="italic">Time</em></li>
+                                <li>For Graphs, select Fitted Line Plot</li>
+                                <li>Press Compute!</li>
+                            </ul>
+                            <p>Note that the calculations appear on the first page. Press the >
+                                button to view the scatterplot with the regression line on the
+                                second page.</p>-->
+                        </alternative>
+
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To do that in Minitab: </p>
+                            <ul>
+                                <li>Choose Stat → Regression → Fitted Line Plot.... This will bring
+                                    up the Fitted Line Plot dialog box. </li>
+                                <li>Enter the response and explanatory variables.</li>
+                                <li>Make sure "Linear" is chosen.</li>
+                                <li>Click "OK." </li>
+                            </ul>
+                            <p> (You should see a graph window with the scatterplot and the
+                                regression line plotted on it. The regression line equation appears
+                                both at the top of this graph window, and behind it, in the session
+                                window.) </p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2013 and 2016 Instructions</title>
+                            <p>To do that in Excel: </p>
+                            <ul>
+                                <li>Right-click on one of the points in the graph and choose <code
+                                        style="inline">Add Trendline</code> from the pop-up
+                                    menu.</li>
+                                <li>Make sure that <code style="inline">Trendline Options</code> is
+                                    selected on the left, and then check the boxes next to <code
+                                        style="inline">Display Equation on chart</code> and <code
+                                        style="inline">Display R-squared value on chart</code>.</li>
+                                <li>Click <code style="inline">Close</code>.</li>
+                            </ul>
+
+                            <p> (You should see a graph window with the scatterplot and the
+                                regression line plotted on it. The regression line equation appears
+                                on the graph next to the line itself.) </p>
+                        </alternative>
+                        <!--  <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <p>To do that in Excel: </p>
+                            <ul>
+                                <li>Right-click on one of the points in the graph and choose <code
+                                        style="inline">Add Trendline</code> from the pop-up
+                                    menu.</li>
+                                <li>Click the tab labeled <code style="inline">Options</code> and
+                                    check the boxes next to <code style="inline">Display equation on
+                                        chart</code> and <code style="inline">Display R-squared
+                                        value on chart</code>.</li>
+                                <li>Click <code style="inline">OK</code>.</li>
+                            </ul>
+
+                            <p> (You should see a graph window with the scatterplot and the
+                                regression line plotted on it. The regression line equation appears
+                                on the graph next to the line itself.) </p>
+                        </alternative>-->
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p><em>Linear Regression Line (Line of Best
+                                Fit)&#8212;calculate</em></p>
+                            <ul>
+                                <li>Choose <code style="inline">STAT/CALC/8:LinReg(a+bx).
+                                    </code></li>
+                                <li>You’ll see:<code style="inline"> LinReg(a+bx)</code></li>
+                                <li>Choose the <code>Xlist</code> and <code>Ylist</code>. Since the
+                                    Year data is in L1 and the Time data is in L2, enter
+                                        <code>2nd/1</code> after <code>Xlist</code>. Enter
+                                        <code>2nd/2</code> after <code>Ylist</code>. Leave
+                                        <code>FreqList</code> and <code>Store RegEQ</code>
+                                    blank.</li>
+                                <li>Highlight <code>Calculate</code> and press
+                                    <code>ENTER</code></li>
+
+                            </ul>
+                            <p>You should now see:</p>
+                            <ul>
+                                <li>LinReg</li>
+                                <li>y=a+bx</li>
+                                <li>a=</li>
+                                <li>b=</li>
+                                <li>r<sup>2</sup>=</li>
+                                <li>r=</li>
+                            </ul>
+                            <p>The regression line is given as:</p>
+                            <ul>
+                                <li>y=a+bx</li>
+                                <li>a=</li>
+                                <li>b=</li>
+                            </ul>
+                            <p>where a is the Y intercept of the regression line and b is the slope
+                                of the regression line.</p>
+                            <p>Now let's plot this line on the scatterplot.</p>
+                            <p><em>Linear Regression Line (Line of Best Fit)&#8212;plot on
+                                    scatterplot</em></p>
+                            <p>The TI calculator stores the last regression line that you calculated
+                                until you calculate another one. </p>
+                            <ul>
+                                <li>Choose <code style="inline">Y=</code></li>
+                                <li>Now you need to cut and paste the values for <code
+                                        style="inline">a</code> and <code style="inline">b</code>: <ul>
+                                        <li>To get the Y intercept (a): <ul>
+                                                <li>Choose <code style="inline"
+                                                  >VARS/5:Statistics.</code></li>
+                                                <li>Choose <code style="inline">EQ</code> (right
+                                                  arrow twice).</li>
+                                                <li>Choose <code style="inline">2:a</code></li>
+                                            </ul></li>
+                                        <li>Press the <code style="inline">+</code> button.</li>
+                                        <li>To get the slope (b): <ul>
+                                                <li>Choose <code style="inline"
+                                                  >VARS/5:Statistics</code>.</li>
+                                                <li>Choose <code style="inline">EQ</code> (right
+                                                  arrow twice).</li>
+                                                <li>Choose <code style="inline">3:b</code></li>
+                                            </ul></li>
+                                    </ul></li>
+                                <li>Press the <code style="inline">X, T, &#920;, n</code>
+                                    button.</li>
+                            </ul>
+                            <p>You should see: <image style="inline"
+                                    src="../../webcontent/linear8lbd3.jpg"/></p>
+                            <p>Note: As long as you don’t change <code style="inline">Y1</code>,
+                                each time you find another regression line, a and b will
+                                automatically be saved with the new values and the new line will be
+                                graphed.</p>
+                            <p>You can toggle <code style="inline">Y1</code> on and off. When the
+                                "=" is highlighted, the graph is ON. To turn it OFF, use the left
+                                arrow to highlight the "=," then press <code style="inline"
+                                    >ENTER</code>. Repeat to turn the graph back on.</p>
+                            <p>If you’ve set up the scatterplot and set up <code style="inline"
+                                    >Y1=</code>, you can <code style="inline">ZOOM/9:ZoomStat</code>
+                                to see the regression line plotted on the scatterplot.</p>
+                            <p>You should see a graph window with the scatterplot and the regression
+                                plotted on it. Choose <code style="inline">TRACE</code> and then use
+                                the up and down arrows to toggle between the line of best fit and
+                                the scatterplot. Use the left and right arrows to see each
+                                individual data pair on the scatterplot.</p>
+                        </alternative>
+                    </alternatives>
+
+                </pullout>
+            </body>
+        </section>
+        <wb:inline idref="u1_m2_linear8_lbd_tutor1" purpose="learnbydoing"/>
+
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier by copying these commands
+                        (for this exercise we will not modify x and y-axis labels). To do this copy
+                        each line separately and in order, hit enter to see the change:</p>
+                    <ul style="none">
+                        <li><code>plot(olym$Year[olym$Year!=1896],
+                                olym$Time[olym$Year!=1896])</code></li>
+                        <li><code>L =
+                                lm(olym$Time[olym$Year!=1896]~olym$Year[olym$Year!=1896]);</code></li>
+                        <li><code>abline(L);</code></li>
+                        <li><code>cf=coefficients(L);</code></li>
+                        <li><code>legend(1950,240,legend=paste("time =
+                                ",round(cf[1],0),round(cf[2],2),"year"))</code></li>
+                    </ul>
+                    <p>You will now see that the least squares regression line and the values in the
+                        equation have changed.</p>
+
+                    <!--<p>Notice that there is an outlier. Remove the outlier by copying these
+                        commands: </p>
+                    <code> plot(olym$Year[olym$Year!=1896], olym$Time[olym$Year!=1896]) </code>
+                    <code> L = lm(olym$Time[olym$Year!=1896]~olym$Year[olym$Year!=1896]); </code>
+                    <code> abline(L); </code>
+                    <code> cf=coefficients(L); </code>
+                    <code> legend(1950,240,legend=paste("time =
+                        ",round(cf[1],0),round(cf[2],2),"year")) </code>
+                    <p>You will now see that the least squares regression line and the values in the
+                        equation have changed.</p>-->
+                    <!--<wb:inline idref="practice_linear8q2r" purpose="learnbydoing"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="406">
+    <param name="question_file">../../../webcontent/flash/practice_linear8q2r.xml</param>
+    <param name="problem_name">practice_linear8q2r</param>
+    </flash>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier in StatCrunch as
+                        follows:</p>
+                    <ul>
+                        <li>Observe that row 1 contains the winning time for the 1896 Olympics. </li>
+                        <li>Click on the row header “1” to select the entire row of data. </li>
+                        <li>Choose Edit → Rows → Delete.</li>
+                        <li>In response to “Delete 1 selected rows?” press Compute! </li>
+                    </ul>
+                    <p>Now find the least squares regression line for the remaining data. </p>
+                    <!--<p>Notice that there is an outlier. Remove the outlier in StatCrunch as
+                        follows:</p>
+                    <ul>
+                        <li>Observe that row 1 contains the winning time for the 1896 Olympics</li>
+                        <li>Click on the row header “1” to select the entire row of data</li>
+                        <li>Choose Edit → Rows → Delete</li>
+                        <li>In response to “Delete 1 selected rows?” press Compute!</li>
+                    </ul>
+                    <p>Now find the least squares regression line for the remaining data. </p>-->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier in Minitab as follows: </p>
+                    <ul>
+                        <li>Observe that row 1 contains the winning time for the 1896 Olympics. </li>
+                        <li>Click on the row header "1" to select the entire row of data. </li>
+                        <li>Choose Edit → Delete Cells. </li>
+                    </ul>
+                    <p>Now find the least squares regression line for the remaining data. </p>
+                    <!--<wb:inline idref="u1_m2_linear8_lbd_tutor2" purpose="learnbydoing"/>-->
+                    <!--<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="406">
+    <param name="question_file">../../../webcontent/flash/practice_linear8q2.xml</param>
+    <param name="problem_name">practice_linear8q2</param>
+    </flash>-->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier in Excel as follows: </p>
+                    <ul>
+                        <li>Observe that row 2 contains the winning time for the 1896 Olympics.</li>
+                        <li>Click on the row header <code style="inline">2</code> to select the
+                            entire row of data.</li>
+                        <li>Right-click and choose <code style="inline">Delete</code> from the
+                            pop-up menu.</li>
+                    </ul>
+
+                    <p>You will now see that the least squares regression line and the values in the
+                        equation have changed.</p>
+
+                </alternative>
+                <!--      <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier in Excel as follows: </p>
+                    <ul>
+                        <li>Observe that row 2 contains the winning time for the 1896 Olympics.</li>
+                        <li>Click on the row header <code style="inline">2</code> to select the
+                            entire row of data.</li>
+                        <li>Right-click and choose <code style="inline">Delete</code> from the
+                            pop-up menu.</li>
+                    </ul>
+
+                    <p>You will now see that the least squares regression line and the values in the
+                        equation have changed.</p>
+
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Notice that there is an outlier. Remove the outlier from the TI list as
+                        follows: </p>
+                    <ul>
+                        <li>The outlier is at year 1896 in L1 and time 273.2 in L2. These values are
+                            in L1(1) and L2(1). To remove them: <ul>
+                                <li>Choose <code style="inline">STAT/EDIT/1:Edit...</code>.</li>
+                                <li>Highlight the first entry in <code style="inline">L1</code>,
+                                    which is <code style="inline">1896</code>.</li>
+                                <li>Press <code style="inline">DEL</code>.</li>
+                                <li>Use the right arrow to highlight 273.2 in <code style="inline"
+                                        >L2</code>.</li>
+                                <li>Press <code style="inline">DEL</code>.</li>
+                            </ul></li>
+                    </ul>
+
+                    <p>Now recalculate the correlation:</p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/CALC/8:LinReg(a+bx). </code></li>
+                        <li>Choose the <code>Xlist</code> and <code>Ylist</code>. Since the Year
+                            data is in L1 and the Time data is in L2, enter <code>2nd/1</code> after
+                                <code>Xlist</code>. Enter <code>2nd/2</code> after
+                                <code>Ylist</code>. >. Leave <code>FreqList</code> and <code>Store
+                                RegEQ</code> blank.</li>
+                        <li>Highlight <code>Calculate</code> and press <code>ENTER</code></li>
+
+                    </ul>
+
+
+                    <p>You should see: <image style="inline" src="../../webcontent/linear8lbd4.jpg"
+                        /></p>
+                    <p>Choose <code style="inline">ZOOM/9:ZoomStat.</code></p>
+                    <p>You will now see that the least squares regression line and the values in the
+                        equation have changed.</p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+        <wb:inline idref="u1_m2_linear8_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u1_m2_linear8_lbd_tutor3" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

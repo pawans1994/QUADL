@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u2_m1_checkpoint1" max_attempts="3" recommended_attempts="1">
+    <title>Examining Distributions Checkpoint 1</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/_u2_m1_checkpoint1.pdf">Solution Set</link>.</p>
+    </content>-->
+    <selection count="1" exhaustion="reuse">
+        <pool id="_u2_m1_pool1">
+            <title>Pool1</title>
+            <section id="_u2_m1_pool1_section1">
+                <multiple_choice id="histogram_percentage" select="single">
+                    <body>
+                        <p>The histogram below displays the distribution of 50 ages at death due to
+                            trauma (accidents and homicides) that were observed in a certain
+                            hospital during a week.</p>
+                        <image style="block" src="../webcontent/assessment1q2.gif"/>
+                        <p>What percentage of deaths were individuals younger than 35?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; 34% </choice>
+                        <choice value="B"> &#160;&#160; 60% </choice>
+                        <choice value="C"> &#160;&#160; 68% </choice>
+                        <choice value="D"> &#160;&#160; 70% </choice>
+                        <choice value="E"> &#160;&#160; 80% </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. It is true that 3 + 18 + 13 = 34 out of the 50 fall
+                                below age 35 (those within the first three bars). However, note that
+                                the problem asks for <em style="italic">percentage</em> rather than
+                                count.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that
+                                more than 50% of the observations fall below 35 (i.e., within the
+                                first three bars), the percentage is actually higher than 60%. Count
+                                the number of observations below 35 and then use that number to
+                                calculate the percentage.</feedback>
+                        </response>
+                        <response match="C" score="10">
+                            <feedback>Correct. From the histogram we can ﬁnd that 3 + 18 + 13 = 34
+                                out of the 50 observations fall below age 35 (those within the first
+                                three bars), and since the question asks about the <em
+                                    style="italic">percentage</em> of observations, the answer is
+                                (34/50) * 100 = 68%. </feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that
+                                more than 50% of the observations fall below 35 (those within the
+                                first three bars), the percentage is actually lower than 70%. Count
+                                the number of observations below 35 and then use that number to
+                                calculate the percentage.</feedback>
+                        </response>
+                        <response match="E" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that
+                                more than 50% of the observations fall below 35 (those within the
+                                first three bars), this is not quite as high as 80%. Count the
+                                number of observations below 35 and then use that number to
+                                calculate the percentage.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_shape" select="single">
+                    <body>
+                        <p>The histogram below displays the distribution of 50 ages at death due to
+                            trauma (accidents and homicides) that were observed in a certain
+                            hospital during a week.</p>
+                        <image style="block" src="../webcontent/assessment1q2.gif"/>
+                        <p>Which of the following best describes the shape of the histogram?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; Symmetric </choice>
+                        <choice value="B"> &#160;&#160; Left-skewed with no outliers </choice>
+                        <choice value="C"> &#160;&#160; Right-skewed with no outliers </choice>
+                        <choice value="D"> &#160;&#160; Left-skewed with a possible outlier </choice>
+                        <choice value="E"> &#160;&#160; Right-skewed with a possible outlier
+                        </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. The shape of the distribution is clearly skewed.
+                                Where is the “tail,” and are there any possible outliers?
+                            </feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. While it is true that the distribution is skewed,
+                                recall that the direction of the skewness is determined by where the
+                                “tail” is. Also, look at the distribution carefully. Are there any
+                                possible outliers?</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. You are correct that the distribution is skewed
+                                right, however note that one of the other answers more accurately
+                                describes the distribution.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. While it is true that the distribution is skewed,
+                                recall that the direction of the skewness is determined by where the
+                                “tail” is.</feedback>
+                        </response>
+                        <response match="E" score="10">
+                            <feedback>Correct. The distribution of ages is skewed right (which is
+                                where the “tail” of the distribution is). Also the largest
+                                observation&#8212;approximately equal to 90&#8212;is a possible high
+                                outlier. </feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_mean_median" select="single">
+                    <body>
+                        <p>The histogram below displays the distribution of 50 ages at death due to
+                            trauma (accidents and homicides) that were observed in a certain
+                            hospital during a week. </p>
+                        <image style="block" src="../webcontent/assessment1q2.gif"/>
+                        <p>For the data described by the above histogram, which of the following is
+                            a correct statement about the median?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; The median will be bigger than the mean. </choice>
+                        <choice value="B"> &#160;&#160; The median will be smaller than the mean. </choice>
+                        <choice value="C"> &#160;&#160; The median and the mean will be about the
+                            same. </choice>
+                        <choice value="D"> &#160;&#160; The median and the range will be about the
+                            same. </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. Notice this distribution is skewed to the right
+                                (the tail is towardthe right), and we also see a suspected outlier
+                                on the right side. Remember that both of these shape features will
+                                tend to “pull” the <em style="italic">mean</em> more than they would pull the
+                                median.</feedback>
+                        </response>
+                        <response match="B" score="10">
+                            <feedback>Correct. The mean is more sensitive than the median to the
+                                “tail” of a distribution, and also to outliers. We see that this
+                                distribution is skewed to the right (the tail is towards the right)
+                                and we also see a suspected outlier on the right side. Both of these
+                                shape features will tend to “pull” the mean toward the tail more
+                                than they would pull the median, meaning that the median will be
+                                smaller than the mean.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. Remember that we would expect the mean and the median
+                                to be nearly the same only if the distribution was nearly symmetric.
+                                But notice this distribution is skewed to the right (the tail is
+                                towards the right) and we also see a suspected outlier on the right
+                                side. Remember that both of these shape features will tend to “pull”
+                                the mean more than they would pull the median.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. Remember that the <em style="italic">range</em> is the length from
+                                lowest value to highest value. So, for this distribution, the range
+                                is approximately 80. But remember that the <em>median</em> is the
+                                middle value. Half the people must be older than the median, so the
+                                median will be much less than 80, because all but one of the people
+                                were younger than 80.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_median" select="single">
+                    <body>
+                        <p>The histogram below displays the distribution of 50 ages at death due to
+                            trauma (accidents and homicides) that occurred in a certain hospital
+                            during a week. </p>
+                        <image style="block" src="../webcontent/assessment1q2.gif"/>
+                        <p>Which of the following is a possible value of the median in this
+                            example?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; 23 </choice>
+                        <choice value="B"> &#160;&#160; 45 </choice>
+                        <choice value="C"> &#160;&#160; 50 </choice>
+                        <choice value="D"> &#160;&#160; 33 </choice>
+                        <choice value="E"> &#160;&#160; It is impossible to answer without seeing
+                            all of the data. </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. Remember that the median is the middle value. Only
+                                21 people out of 50 could be younger than age 23, as represented by
+                                the total height of the two left bars on the display. So 23 is too
+                                low to be the median.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. Remember that the median is the middle value. Only
+                                10 people out of 50 could be older than age 45, as represented by
+                                the total height of the four bars on the right side of the display.
+                                So 45 is too large to be the median.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. Remember that the median is the value of the middle
+                                person, not the middle of the range. Only 10 people out of 50 could
+                                be older than age 50, as represented by the total height of the four
+                                bars on the right side of the display. So 50 is too large to be the
+                                median.</feedback>
+                        </response>
+                        <response match="D" score="10">
+                            <feedback>Correct. The median is the middle value. There are 50
+                                people in the data, so the median must be the age between the 25th
+                                youngest person and the 26th youngest person. These people will both
+                                be represented in the third bar from the left on the display. Since
+                                that bar represents ages from 25 to 35, the median could be any
+                                value between those ages.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_outlier_mean_median" select="single">
+                    <body>
+                        <p>The histogram below displays the distribution of 50 ages at death due to
+                            trauma (accidents and homicides) that were observed in a certain
+                            hospital during a week. </p>
+                        <image style="block" src="../webcontent/assessment1q2.gif"/>
+                        <p>Assume that the largest observation in this dataset is 90. If this
+                            observation were wrongly recorded as 900, then what would happen to the
+                            mean and median?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; <!--Both the mean and the median will not-->Neither the mean nor the median would change.</choice>
+                        <choice value="B"> &#160;&#160; Both the mean and the median would change. </choice>
+                        <choice value="C"> &#160;&#160; The mean would stay the same, but the median
+                            would change. </choice>
+                        <choice value="D"> &#160;&#160; The mean would decrease, but the median would not
+                            change. </choice>
+                        <choice value="E"> &#160;&#160; The mean would increase, but the median would not
+                            change. </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. It is true that the median would not change, because
+                                pulling 90 to 900 would not change the 25th or the 26th value in the
+                                data. But remember that the <em style="italic">mean</em> tends to be “pulled” by an
+                                outlier. So moving the largest value, 90, farther to the right, to
+                                900, would tend to pull the mean to the right, making it
+                                larger.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. It is true that the mean would change, because mean
+                                tends to be “pulled” by outliers. But remember that the
+                                    <em style="italic">median</em> is the middle value. Moving 90 to 900 would not
+                                change the 25th or the 26th value in the data, so the median would
+                                be the same.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. Remember that the <em style="italic">mean</em> tends to be
+                                “pulled” by an outlier. So moving the largest value, 90, farther to
+                                the right, to 900, would tend to pull the mean to the right. So
+                                the mean would change. But the <em style="italic">median</em> is the middle
+                                value. Pulling 90 to 900 would not change the 25th or the 26th value
+                                in the data, so the median would be the same.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. It is true that the median would not change, because
+                                moving 90 to 900 would not change the 25th or the 26th value in the
+                                data. But remember that the <em style="italic">mean</em> tends to be “pulled” by an
+                                outlier. Moving the largest value, 90, farther to the right, to 900,
+                                would tend to pull the mean to the right, making it increase, not
+                                decrease.</feedback>
+                        </response>
+                        <response match="E" score="10">
+                            <feedback>Correct. The mean will increase, because the mean tends to be
+                                “pulled” by an outlier. So moving the largest value, 90, farther to
+                                the right, to 900, would tend to pull the mean to the right. The
+                                    <em style="italic">median</em> would not be affected, because moving 90 to 900
+                                would not change the 25th or the 26th value in the data. </feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="identify_mode" select="single">
+                    <!--LO:Define and identify mode(s) for a given set of data-->
+                    <body><p>The following data, on the number of children <!--ever -->born per 1,000
+                            women, is from the <em style="italic">Current Population Reports—Fertility of American Women: 2008</em></p>
+                        <table>
+                            <tr>
+                                <td><em style="bold">Number of Children</em></td>
+                                <td align="center">0</td>
+                                <td align="center">1</td>
+                                <td align="center">2</td>
+                                <td align="center">3</td>
+                                <td align="center">4</td>
+                                <td align="center">5 or more</td>
+                            </tr>
+                            <tr>
+                                <td><em style="bold">Frequency</em></td>
+                                <td align="center">45.7%</td>
+                                <td align="center">17.0%</td>
+                                <td align="center">21.1%</td>
+                                <td align="center">10.6%</td>
+                                <td align="center">3.9%</td>
+                                <td align="center">1.8%</td>
+                            </tr>
+                        </table>
+                        <p>What is the modal number of children born to American women in
+                        2008?</p></body>
+                    <input shuffle="false">
+                        <choice value="A">0</choice>
+                        <choice value="B">1</choice>
+                        <choice value="C">2</choice>
+                        <choice value="D">3</choice>
+                    </input>
+                    <part>
+                        <response match="A" score="10">
+                            <feedback>Correct. The most commonly occurring value is 0; therefore,
+                                0 is the modal number of children born to American women, in
+                                2008.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The third-most frequently occurring value is 1.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The second-most frequently occurring value is 2.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The fourth-most frequently occurring value is 3.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+            </section>
+            <section id="_u2_m1_pool1_section2">
+                <multiple_choice id="histogram_percentage_alternate" select="single">
+                    <body>
+                        <p> This histogram shows the times, in minutes, required for 25 rats in an
+                            animal behavior experiment to successfully navigate a maze.</p>
+                        <image style="block" src="../webcontent/image500.png"/>
+                        <p>What percentage of the rats navigated the maze in less than 5.5
+                            minutes?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; 21% </choice>
+                        <choice value="B"> &#160;&#160; 60% </choice>
+                        <choice value="C"> &#160;&#160; 68% </choice>
+                        <choice value="D"> &#160;&#160; 70% </choice>
+                        <choice value="E"> &#160;&#160; 84% </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. It is true that 3 + 8 + 6 + 4 = 21 out of the 25
+                                rats fall below 5.5 minutes (first four bars). However, the question
+                                asks about the percentage of observations rather than the
+                                count.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that more than 50% of the observations fall below 5.5 minutes (i.e., within the first four bars), the percentage is actually higher than 60%. Count the number of observations below 5.5 and then use that number to calculate the percentage.<!-- From the histogram we can find that 3
+                                + 8 + 6 + 4 = 21 out of the 25 rats fall below 5.5 minutes (first
+                                four bars). Since the question asks about the percentage of
+                                observations, the answer is 21/25 * 100 = 84%.(E) is the correct
+                                answer.--></feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that
+                                more than 50% of the observations fall below 5.5 minutes (i.e.,
+                                within the first four bars), the percentage is actually higher than
+                                60%. Count the number of observations below 5.5 and then use that
+                                number to calculate the percentage.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. While it is clear from looking at the histogram that more than 50% of the observations fall below 5.5 minutes (i.e., within the first four bars), the percentage is actually higher than 70%. Count the number of observations below 5.5 and then use that number to calculate the percentage.<!--While it is clear from looking at the histogram that
+                                more than 50% of the observations fall below 5.5 minutes (i.e.,
+                                within the first four bars), the percentage is actually higher than
+                                68%. Count the number of observations below 5.5 and then use that
+                                number to calculate the percentage.--></feedback>
+                        </response>
+                        <response match="E" score="10">
+                            <feedback>Correct. From the histogram we can find that 3 + 8 + 6 + 4 =
+                                21 out of the 25 rats fall below 5.5 minutes (first four bars).
+                                Since the question asks about the percentage of observations, the
+                                answer is 21/25 * 100 = 84%.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_shape_alternate" select="single">
+                    <body>
+                        <p>This histogram shows the times, in minutes, required for 25 rats in an
+                            animal behavior experiment to successfully navigate a maze.</p>
+                        <image style="block" src="../webcontent/image500.png"/>
+                        <p>Which of the following best describes the shape of the histogram?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; Symmetric </choice>
+                        <choice value="B"> &#160;&#160; Left-skewed with no outliers </choice>
+                        <choice value="C"> &#160;&#160; Right-skewed with no outliers </choice>
+                        <choice value="D"> &#160;&#160; Left-skewed with a possible outlier </choice>
+                        <choice value="E"> &#160;&#160; Right-skewed with a possible outlier
+                        </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. The shape of the distribution is clearly skewed.
+                                Where is the tail, and are there any possible outliers?</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. While it is true that the distribution is skewed,
+                                recall that the direction of the skewness is determined by where the
+                                tail is. Also, look at the distribution carefully. Are there any
+                                possible outliers?</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. You are correct that the distribution is skewed
+                                right. However, note that one of the other answers more accurately
+                                describes the distribution.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. While it is true that the distribution is skewed,
+                                recall that the direction of the skewness is determined by where the
+                                tail is.</feedback>
+                        </response>
+                        <response match="E" score="10">
+                            <feedback>Correct. The distribution of times is skewed right (which is
+                                where the tail of the distribution is). Also, the largest
+                                observation—approximately equal to 9 minutes—is a possible high
+                                outlier.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_mean_median_alternate" select="single">
+                    <body>
+                        <p>This histogram shows the times, in minutes, required for 25 rats in an
+                            animal behavior experiment to successfully navigate a maze.</p>
+                        <image style="block" src="../webcontent/image500.png"/>
+                        <p>For the data described by the above histogram, which of the following is
+                            a correct statement about the median?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; The median will be smaller than the mean. </choice>
+                        <choice value="B"> &#160;&#160; The median will be larger than the mean. </choice>
+                        <choice value="C"> &#160;&#160; The median and the mean will be about the
+                            same. </choice>
+                        <choice value="D"> &#160;&#160; The median and the range will be about the
+                            same. </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="10">
+                            <feedback>Correct. When the distribution is skewed right, the mean is
+                                “pulled up” by the large observations in the “tail” of the
+                                distribution. The median, on the other hand, is only determined by
+                                the order of the observations, and is not affected by their
+                                magnitude. Therefore, in this case, the median is smaller than the mean.<!--: the median is smaller than the mean.--></feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. When the distribution is skewed right, the mean is
+                                “pulled up” by the large observations in the “tail” of the
+                                distribution. The median, on the other hand, is only determined by
+                                the order of the observations, and is not affected by their
+                                magnitude.<!-- Therefore, in this case: mean &gt; median.--></feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. When the distribution is skewed right, the mean is
+                                “pulled up” by the large observations in the “tail” of the
+                                distribution. The median, on the other hand, is only determined by
+                                the order of the observations, and is not affected by their
+                                magnitude.<!-- Therefore, in this case: mean &gt; median-->.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. Remember that the <em style="italic">range</em> is the length from
+                                lowest value to highest value. So, for this distribution, the range
+                                is approximately 7. But remember that the <em style="italic">median</em> is the
+                                middle value. Half of the times must be greater than the median, so
+                                the median will be much less than 7, because all but two of the
+                                times were less than 7.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_median_alternate" select="single">
+                    <body>
+                        <p>This histogram shows the times, in minutes, required for 25 rats in an
+                            animal behavior experiment to successfully navigate a maze.</p>
+                        <image style="block" src="../webcontent/image500.png"/>
+                        <p>Which of the following is a possible value of the median in this
+                            example?</p>
+                    </body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; 3.3 </choice>
+                        <choice value="B"> &#160;&#160; 3.9 </choice>
+                        <choice value="C"> &#160;&#160; 4.6 </choice>
+                        <choice value="D"> &#160;&#160; 5.5 </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. Remember that the median is the middle value. There
+                                are 25 observations (odd number) and therefore the median is the
+                                13th ranked observation. Only 11 observations fall below 3.5, so 3.3
+                                is too low to be the median.</feedback>
+                        </response>
+                        <response match="B" score="10">
+                            <feedback>Correct. There are 25 observations (odd number), and therefore
+                                the median is the 13th ranked observation. If we look at the
+                                histogram, we can figure out that the 13th observation falls in the
+                                third interval (3.5–4.5 minutes). The only option with such a number
+                                is 3.9 minutes.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. Remember that the median is the middle value. There
+                                are 25 observations (odd number) and therefore the median is the
+                                13th ranked observation. Only 8 observations fall above 4.5, so 4.6
+                                is too high to be the median.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. Remember that the median is the middle value. There
+                                are 25 observations (odd number) and therefore the median is the
+                                13th ranked observation. Only 5 observations fall above 5.5, so this
+                                is too high to be the median.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="histogram_outlier_mean_median_alternate" select="single">
+                    <body>
+                        <p>This histogram shows the times, in minutes, required for 25 rats in an
+                            animal behavior experiment to successfully navigate a maze.</p>
+                        <image style="block" src="../webcontent/image500.png"/>
+                        <p>Assume that the largest observation in this dataset is 8.6 minutes. If
+                            this observation were wrongly recorded as 86, then what would happen to
+                            the mean and median?</p></body>
+                    <input labels="false" shuffle="false">
+                        <choice value="A"> &#160;&#160; <!--Both the mean and the median will not
+                            change. -->Neither the mean nor the median would change.</choice>
+                        <choice value="B"> &#160;&#160; Both the mean and the median would change. </choice>
+                        <choice value="C"> &#160;&#160; The mean would stay the same, but the median
+                            would change. </choice>
+                        <choice value="D"> &#160;&#160; The mean would decrease, but the median would not
+                            change. </choice>
+                        <choice value="E"> &#160;&#160; The mean would increase, but the median would not
+                            change. </choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. The mean is affected by the actual values of the
+                                observations, whereas the median is determined by their order. While
+                                the median would stay the same, changing the largest observation from
+                                8.6 to 86 would have an impact on the mean.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. The mean is affected by the actual values of the
+                                observations, whereas the median is determined by their order.
+                                Therefore, changing the largest observation from 8.6 to 86 would have
+                                an impact on the mean. However, the median would stay the
+                                same.</feedback>
+                        </response>
+                        <response match="C" score="0">
+                            <feedback>Incorrect. It appears you confused the impact of an outlier on
+                                the mean and median. The mean is affected by the actual values of
+                                the observations, whereas the median is determined by their order.
+                                Therefore, changing the largest observation from 8.6 to 86 would have
+                                an impact on the mean, while the median would stay the
+                                same.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. The mean is affected by the actual values of the
+                                observations, whereas the median is determined by their order.
+                                While the median would stay the same, changing the largest
+                                observation from 8.6 to 86 would have an impact on the mean. But
+                                remember that the mean tends to be “pulled” by an outlier. Moving
+                                the largest value, 8.6, farther to the right, to 86, would tend to
+                                pull the mean to the right, making it increase, not
+                                decrease.</feedback>
+                        </response>
+                        <response match="E" score="10">
+                            <feedback>
+                                <p>Correct. The mean is affected by the actual values of the
+                                    observations, whereas the median is determined by their order.
+                                    Therefore, changing the largest observation from 8.6 to 86 would
+                                    have an impact on the mean, while the median would stay the same.
+                                    So moving the largest value, 8.6, farther to the right, to 86,
+                                    would tend to pull the mean to the right. The median would not
+                                    be affected, because moving 8.6 t o 86 would not change the 13th
+                                    value in the data.</p>
+                                <p>Actually, we can figure out the <em style="italic">exact</em>
+                                    impact that the change will have on the mean: By changing 8.6 to
+                                    86, the sum of all the observations is increased by 86 - 8.6 =
+                                    77.4, and therefore the mean of the 25 observations is increased
+                                    by 77.4 / 25 = 3.1 minutes.</p>
+                            </feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+                <multiple_choice id="identify_mode_alternate" select="single">
+                    <!--LO:-->
+                    <body><p>A survey was conducted to determine the number of servings of
+                            vegetables eaten, per day, by adolescents in the United States. The
+                            following table shows the results:</p>
+                        <image style="block" src="../webcontent/mode_1_.png"/>
+                        <p> What is the modal number of vegetable servings eaten, per day, by
+                            adolescents in the United States?</p></body>
+                    <input shuffle="false">
+                        <choice value="A">0</choice>
+                        <choice value="B">1</choice>
+                        <choice value="C">2</choice>
+                        <choice value="D">3</choice>
+                        <choice value="E">More than 3</choice>
+                    </input>
+                    <part>
+                        <response match="A" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The least frequently occurring
+                                value is 0.</feedback>
+                        </response>
+                        <response match="B" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The second-most frequently occurring
+                                value is 1.</feedback>
+                        </response>
+                        <response match="C" score="10">
+                            <feedback>Correct. The most commonly occurring value is two; therefore,
+                                2 is the modal number of vegetable servings consumed, per day, by
+                                U.S. teenagers.</feedback>
+                        </response>
+                        <response match="D" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. The fourth-most frequently occurring
+                                value is 3.</feedback>
+                        </response>
+                        <response match="E" score="0">
+                            <feedback>Incorrect. Remember that the mode is the most frequently
+                                occurring value. “More than 3” is the third-most frequently
+                                occurring value.</feedback>
+                        </response>
+                    </part>
+                </multiple_choice>
+            </section>
+        </pool>
+    </selection>
+    <!--  <section id="myresponse">
+		<content>
+			<p> Please answer the question below. Your response will not be graded, but will be
+				available for your instructor to read.</p>
+		</content>
+		<short_answer id="short_answer_numerical_measures" grading="automatic">
+			<body>What determines which numerical measures of center and spread are appropriate for
+				describing a given distribution of a quantitative variable? Which measures will you
+				use in each case?</body>
+			<part>
+				<response match="*" score="0">
+					<feedback>Thank you for your response. It has been recorded and will be
+						available for your instructor to read.</feedback>
+				</response>
+				<no_response>
+					<feedback>You did not enter a response for this question.</feedback>
+				</no_response>
+			</part>
+		</short_answer>
+	</section>-->
+</assessment>

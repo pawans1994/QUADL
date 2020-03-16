@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion2_tutor5">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>According to the official M&#38;M website, 24% of the plain milk chocolate
+                    M&#38;M’s produced by Mars Corporation are blue. Annie buys a large family-size
+                    bag of M&#38;M's. Sarah buys a small fun-size bag. Which bag is more likely to
+                    have more than 40% blue M&#38;M's?</p>
+                <p><input_ref input="A"/></p>
+            </body>
+            <multiple_choice id="A" shuffle="false">
+                <choice value="one">Annie, because there are more M&#38;M's in her bag, so she will
+                    have more blue ones.</choice>
+                <choice value="two">Annie, because there is more variability in the proportion of
+                    blues among larger samples.</choice>
+                <choice value="three">Sarah, because there is more variability in the proportion of
+                    blues among smaller samples.</choice>
+                <choice value="four">Both have the same chance because they are both random
+                    samples.</choice>
+            </multiple_choice>
+
+            <part>
+                <response input="A" match="one">
+                    <feedback>Incorrect. While it is true that a larger bag will have
+                        more blue candies, there are also more candies in the bag. We are interested
+                        in the proportion that are blue.</feedback>
+                </response>
+                <response input="A" match="two">
+                    <feedback>Incorrect. There will be less variability in large
+                        samples.</feedback>
+                </response>
+                <response input="A" match="three" score="1">
+                    <feedback>Correct. There is more variability in small samples, so it is more
+                        likely to get sample results further from p = 0.24 with a small
+                        bag.</feedback>
+                </response>
+                <response input="A" match="four">
+                    <feedback>Incorrect. In random sampling, the size of the sample
+                        impacts the variability in the sample results.</feedback>
+                </response>
+                <hint>Think about the spread of the sampling distribution around p = 0.24. For which
+                    size of bag will sample proportions greater than 0.40 be more common? </hint>
+                <hint>If p-hats greater than 0.40 occur frequently, the sampling distribution has a large spread
+                    around p = 0.24. In the sampling distribution, will we see more variability when
+                    using a large sample size or a small sample size? </hint>
+            </part>
+        </question>
+    </page>
+  
+</assessment>

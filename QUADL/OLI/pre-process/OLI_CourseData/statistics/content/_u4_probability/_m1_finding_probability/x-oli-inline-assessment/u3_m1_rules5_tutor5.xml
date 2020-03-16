@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules5_tutor5">
+    <title>Tutor</title>
+
+    <question id="q1">
+        <!-- LO: Apply probability rules in order to find the likelihood of an event.
+Sub-objective: probdef        Definition of probability -->
+        <body>
+            <p>Now, suppose the medical researcher selects two American males at random.</p>
+            <p><em style="bold">Let A represent the event "the first male is color blind."</em></p>
+            <p><em style="bold">Let B represent the event "the second male is not colorblind."</em></p>
+            <p>Determine whether A and B are disjoint or independent.</p>
+            <p>A and B are <input_ref input="C"/></p>
+        </body>
+        <fill_in_the_blank id="C" shuffle="false">
+            <choice value="one">disjoint</choice>
+            <choice value="two">not disjoint</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="C" name="disjoint" match="one">
+                <feedback>Incorrect. These events can occur simultaneously. If C = colorblind
+                    and N = not colorblind, then the sample space for event A is {CN, CC} and the
+                    sample space for event B is {CN, NN}. The sample spaces both contain the outcome
+                    CN.</feedback>
+            </response>
+            <response input="C" name="not disjoint" match="two" score="10">
+                <feedback>Correct. These events can occur simultaneously. If C = colorblind and
+                    N = not colorblind, then the sample space for event A is {CN, CC} and the sample
+                    space for event B is {CN, NN}. The sample spaces both contain the outcome
+                    CN.</feedback>
+            </response>
+        </part>
+    </question>
+
+    <question id="q2">
+        <!-- LO: -->
+        <body>
+            <p>A and B are <input_ref input="D"/></p>
+        </body>
+        <fill_in_the_blank id="D" shuffle="false">
+            <choice value="one">independent</choice>
+            <choice value="two">not indepedent</choice>
+        </fill_in_the_blank>
+
+        <part>
+            <response input="D" name="disjoint" match="one" score="10">
+                <feedback>Correct. Since the men are randomly selected from a large population, we
+                    can assume that the events are independent. The first man’s colorblindness does
+                    not affect the probability that the second man is (or is not) colorblind.</feedback>
+            </response>
+            <response input="D" name="not disjoint" match="two">
+                <feedback>Incorrect. Since the men are randomly selected from a large
+                    population, we can assume that the events are independent. The first man’s colorblindness does not affect the probability that the second man is (or is not) colorblind.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

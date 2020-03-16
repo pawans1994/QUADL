@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<link
+	href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+	type="text/css" rel="stylesheet">
+
+<assessment id="_u4_m3_checkpoint3" max_attempts="3" recommended_attempts="1">
+	<title>Random Variables Checkpoint 3</title>
+
+	<!--<introduction>
+		<p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+			finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+			ask "This will submit your answers and finish this assignment. Are you sure?", click
+			"OK" if you are ready to submit your answers for final grading. </p>
+		
+		<p>If you close this window without having saved or submitted, your changes will be lost.
+			After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+			be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+	</introduction>
+	<content available="instructor_only"><p><em>Instructors: you can download the solution set for this checkpoint by clicking on the following link:</em> <link href="../webcontent/random_variables_checkpoint_3_solutions.pdf">Solution Set</link>.</p></content>-->	
+	
+	<section id="assess_06_colorblind">
+		<content>
+			<p> These  two questions refer to the following information: </p>
+			<p> Color-blindness is any abnormality of the color vision system that causes a person to see
+				colors differently than most people, or to have difficulty distinguishing among
+				certain colors (www.visionrx.com). </p>
+			<p> Color-blindness is gender-based, with the majority of sufferers being males. </p>
+			<p> Roughly 8% of white males have some form of colorblindness, while the incidence
+				among white females is only 1%. </p>
+			<p> A random sample of 20 white males and 40 white females was chosen. </p>
+			<p> Let <em style="bold">X</em> be the number of males (out of the 20) who are color-blind. </p>
+			<p> Let <em style="bold">Y</em> be the number of females (out of the 40) who are color-blind. </p>
+			<p> Let <em style="bold">Z</em> be the total number of color-blind individuals in the sample
+				(males and females together). </p>
+		</content>
+		<multiple_choice id="prob3.6" select="single">
+			<body>
+				<p> Which of the following is true about the random variables X, Y, and Z? </p>
+			</body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; X is binomial with n = 20 and p = .08. </choice>
+				<choice value="B"> &#160;&#160; Y is binomial with n = 40 and p = .01. </choice>
+				<choice value="C"> &#160;&#160; Z is not binomial. </choice>
+				<choice value="D"> &#160;&#160; All of the above are true. </choice>
+				<choice value="E"> &#160;&#160; Only (A) and (B) are true. </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. Although this statement is true, there is a
+						better option available. Consider the remaining options. (D) is the right
+						answer. </feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback> Incorrect. Although this statement is true, there is a
+						better option available. Consider the remaining options. (D) is the right
+						answer. </feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. Although this statement is true, there is a
+						better option available. Consider the remaining options. (D) is the right
+						answer. </feedback>
+				</response>
+				<response match="D" score="10">
+					<feedback> Correct. <em style="bold">X</em> represents the number of color-blind males out of
+						a random sample of 20 &rarr; <em style="bold">X</em> is binomial with n = 20 and
+						p = 0.08. <em style="bold">Y</em> represents the number of color-blind
+						females out of a random sample of 40 &rarr; <em style="bold">Y</em> is also
+						binomial with n = 40 and p = 0.01. <em style="bold">Z</em> represents the
+						total number of color-blind people out of the total sample of 60. <em
+							style="bold">Z</em> is not binomial, since the probability of &#34;success&#34;
+						(being color-blind) is not the same for all 60 people (0.08 for the 20 males
+						and 0.01 for the 40 females). </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. Although (A) and (B) are true, they are not the only true
+						statements of all the options. <em style="bold">Z</em> cannot be binomial,
+						because the probability of "success" (being color-blind) is not the same for
+						each trial. There are 20 males with a probability of success of 0.08 and
+						there are 40 females with a probability of success of 0.01. Consider the
+						remaining options. (D) is the right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+		<multiple_choice id="prob3-7" select="single">
+			<body> What is the probability that exactly 2 of the 20 males are color-blind? (Note: Some
+				answers are rounded.) </body>
+			<input labels="false" shuffle="false">
+				<choice value="A"> &#160;&#160; .08 </choice>
+				<choice value="B"> &#160;&#160; .2711 </choice>
+				<choice value="C"> &#160;&#160; .0143 </choice>
+				<choice value="D"> &#160;&#160; .5422 </choice>
+				<choice value="E"> &#160;&#160; .0159 </choice>
+			</input>
+			<part>
+				<response match="A" score="0">
+					<feedback> Incorrect. From the previous question, you know that if <em
+							style="bold">X</em> is a random variable representing the number of
+						color-blind white males out of the randomly chosen 20 white males, then <em
+							style="bold">X</em> follows a binomial distribution with n = 20 and p =
+						0.08. Essentially, this question is asking for P(<em style="bold">X</em> =
+						2). Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="B" score="10">
+					<feedback> Correct. We need to find P(<em style="bold">X</em> = 2) where X is binomial with n
+						= 20 and p = 0.08. <image style="block" src="../webcontent/6_formula3.gif"/>
+					</feedback>
+				</response>
+				<response match="C" score="0">
+					<feedback> Incorrect. From the previous question, you know that if <em
+							style="bold">X</em> is a random variable representing the number of
+						color-blind white males out of the randomly chosen 20 white males, then <em
+							style="bold">X</em> follows a binomial distribution with n = 20 and p =
+						0.08. Essentially, this question is asking for P(<em style="bold">X</em> =
+						2). Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Incorrect. From the previous question, you know that if <em
+							style="bold">X</em> is a random variable representing the number of
+						color-blind white males out of the randomly chosen 20 white males, then <em
+							style="bold">X</em> follows a binomial distribution with n = 20 and p =
+						0.08. Essentially, this question is asking for P(<em style="bold">X</em> =
+						2). Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+				<response match="E" score="0">
+					<feedback> Incorrect. From the previous question, you know that if <em
+							style="bold">X</em> is a random variable representing the number of
+						color-blind white males out of the randomly chosen 20 white males, then <em
+							style="bold">X</em> follows a binomial distribution with n = 20 and p =
+						0.08. Essentially, this question is asking for P(<em style="bold">X</em> =
+						2). Consider the remaining options. (B) is the right answer. </feedback>
+				</response>
+			</part>
+		</multiple_choice>
+	</section>
+</assessment>

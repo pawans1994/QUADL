@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist5_tutor2">
+   <title>Tutor</title>
+  <page> 
+   <question id="q1">
+    
+      <body>
+         <p>Ten minutes after the salesperson has started working, he made a sale. What is the probability that this is the only sale that the salesperson will make within the first hour?</p>
+         <p>This is a bit tricky.<?oxy_insert_start author="mmyers" timestamp="20101121T114950-0500"?>
+               <?oxy_insert_end?>...<?oxy_insert_start author="mmyers" timestamp="20101121T114951-0500"?>
+               <?oxy_insert_end?>Let's rephrase the question in a way that will make it easier to
+               translate to the language of probability. We are given that one sale has been made 10
+               minutes into the hour. This means that the number of sales that will be made within
+               the hour, X, is at least one. In other words, we are given that X is greater than or
+               equal to 1. Given that information, we are asked to
+               find<?oxy_delete author="mmyers" timestamp="20101121T115048-0500" content=" what is"?>
+               the probability that this will be the only sale, i.e., that X<?oxy_insert_start author="mmyers" timestamp="20101121T115056-0500"?>
+               <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101121T115057-0500"?>
+               <?oxy_insert_end?>1. Putting this
+               together<?oxy_insert_start author="mmyers" timestamp="20101121T115101-0500"?>,
+               <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115104-0500" content="...."?>the
+            question asks you to find: P(X=1 | X &#8805; 1). </p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We use the conditional probabilities definition P(B | A) = P(A and B) / P(A) to solve: </p>
+            <image src="../../webcontent/flash/_u4_m3_lbdtutor2b_image1.jpg"/>
+            <p>(Note that we are treating "X = 1" as event B and "X &#8805; 1" as event A.) Our
+                  answer indicates that there is a 30% chance that the sale that the salesperson has
+                  made is the only one
+                  he<?oxy_insert_start author="mmyers" timestamp="20101121T115223-0500"?> or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T115225-0500" content="/"?><?oxy_insert_start author="mmyers" timestamp="20101121T115225-0500"?>
+                  <?oxy_insert_end?>she will make during the hour.</p>
+         </explanation>
+      </part>
+   </question></page>
+</assessment>

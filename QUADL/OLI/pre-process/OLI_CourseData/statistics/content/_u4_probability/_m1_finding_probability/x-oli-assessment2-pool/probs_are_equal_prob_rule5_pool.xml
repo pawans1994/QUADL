@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="probs_are_equal_prob_rule5_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_probs_are_equal_prob_rule5">
+        <!-- LO: probs_are_equal_prob_rule5 -->
+        <!-- LO: Find the probability of events in the case in which all outcomes are equally likely. 
+            (find_probability_for_equally_likely_outcomes) -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+        <body>
+            <p>A fair die is rolled 12 times. Consider the following four possible outcomes:</p>
+            <table rowstyle="plain">
+                <tr>
+                    <td>(i)</td>
+                    <td>5 2 6 3 2 1 4 1 6 5 3 4</td>
+                </tr>
+                <tr>
+                    <td>(ii)</td>
+                    <td>1 1 2 2 3 3 4 4 5 5 6 6</td>
+                </tr>
+                <tr>
+                    <td>(iii)</td>
+                    <td>6 6 6 6 6 6 6 6 6 6 6 6</td>
+                </tr>
+                <tr>
+                    <td>(iv)</td>
+                    <td>1 5 4 3 5 1 2 4 4 6 4 5</td>
+                </tr>
+            </table>
+            <p>Which of the following is the most likely outcome: (i), (ii), (iii), (iv)?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">(i) because number of die outcomes (1, 2, 3, 4, 5, 6) is equal but in a
+                random order.</choice>
+            <choice value="B">(ii) because the number of die outcomes (1, 2, 3, 4, 5, 6) is
+                equal.</choice>
+            <choice value="C">(iii) because the number 6 is just as likely as any other number on a
+                die.</choice>
+            <choice value="D">(iv) because you won’t necessarily get the same number of of die
+                outcomes (1, 2, 3, 4, 5, 6) with a fair die.</choice>
+            <choice value="E">They are all equally likely.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The die is fair, which means that there is an equal chance of
+                    getting any outcome (1, 2, 3, 4, 5, 6) on a particular roll but does not mean
+                    that exactly the same number of possible outcomes will appear regardless of the
+                    order. Since each roll is independent of the other rolls, the probability of the
+                    each of the three sequences shown is the same, (1/6)<sup>12</sup>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The die is fair, which means that there is an equal chance of
+                    getting any outcome (1, 2, 3, 4, 5, 6) on a particular roll but does not mean
+                    that exactly the same number of possible outcomes will appear. Since each roll
+                    is independent of the other rolls, the probability of the each of the three
+                    sequences shown is the same, (1/6)1<sup>12</sup>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A fair die means that there is an equal chance of getting any
+                    outcome (1, 2, 3, 4, 5, 6) on a particular roll but does not mean that exactly
+                    the same outcome (6) will appear every time.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A fair die means that there is an equal chance of getting any
+                    outcome (1, 2, 3, 4, 5, 6) on a particular roll but does not mean that a random
+                    pattern of outcomes is more likely than the other patterns.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Each of the sequences is equally likely, with a probability of
+                        (1/6)<sup>12</sup> (since the 12 rolls are independent).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_probs_are_equal_prob_rule5">
+        <!-- LO: probs_are_equal_prob_rule5 -->
+        <!-- LO: Find the probability of events in the case in which all outcomes are equally likely. 
+            (find_probability_for_equally_likely_outcomes) -->
+        <!-- LO: Apply probability rules in order to find the likelihood of an event. 
+            (apply_probability_rules) -->
+        <body>
+            <p>A fair coin is tossed 12 times. Which of the following outcomes (i, ii, iii, or iv)
+                is most likely?</p>
+            <table rowstyle="plain">
+                <tr>
+                    <td>(i)</td>
+                    <td>H T H T H T H T H T H T</td>
+                </tr>
+                <tr>
+                    <td>(ii)</td>
+                    <td>H T T H H T T H T H H T</td>
+                </tr>
+                <tr>
+                    <td>(iii)</td>
+                    <td>H H H H H H H H H H H H</td>
+                </tr>
+                <tr>
+                    <td>(iv)</td>
+                    <td>T T T H T H H H H T H H</td>
+                </tr>
+            </table>
+        </body>
+        <input shuffle="false">
+            <choice value="A">(i) because there are an equal number of heads and tails.</choice>
+            <choice value="B">(ii) because there are an equal number of heads and tails but in a
+                random order</choice>
+            <choice value="C">(iii) because heads are just as likely as tails</choice>
+            <choice value="D">(iv) because you won’t necessarily get the same number of heads and
+                tails with a fair coin</choice>
+            <choice value="E">They are all equally likely.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A fair coin means that there is an equal chance of getting a
+                    head or a tail on a particular toss, but does not mean that exactly the same
+                    number of heads and tails will appear. Since each toss is independent the
+                    probability of each of the sequences is (1/2)<sup>12</sup>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. A fair coin means that there is an equal chance of getting a
+                    head or a tail on a particular toss, but does not mean that exactly the same
+                    number of heads and tails will appear regardless of the order. Since each toss
+                    is independent the probability of each of the sequences is
+                    (1/2)<sup>12</sup>.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A fair coin means that there is an equal chance of getting a
+                    head or a tail on a particular toss. Since each toss is independent the
+                    probability of each of the sequences is (1/2)<sup>12</sup>.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A fair coin means that there is an equal chance of getting a
+                    head or a tail on a particular toss. Since each toss is independent the
+                    probability of each of the sequences is (1/2)<sup>12</sup>.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. Each of the sequences is equally likely with a probability of
+                        (1/2)<sup>12</sup> (since the 12 tosses are independent).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

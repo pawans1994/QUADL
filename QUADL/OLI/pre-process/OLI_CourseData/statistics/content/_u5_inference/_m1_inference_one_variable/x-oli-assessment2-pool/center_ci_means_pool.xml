@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="center_ci_means_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_center_ci_means">
+        <!-- LO: center_ci_means -->
+        <body>
+            <p>We say that a point estimator is <em style="bold">unbiased</em> if which of the
+                following is true?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Its sampling distribution is centered exactly at the parameter it
+                estimates. </choice>
+            <choice value="B">The standard deviation of its sampling distribution decreases as the
+                sample size increases. </choice>
+            <choice value="C">Its sampling distribution is normal. </choice>
+            <choice value="D">Its value is always equal to the parameter it estimates. </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. This is the definition of an unbiased estimator.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The standard deviation of the sampling distribution will
+                    decrease as the sample size increases regardless of the bias of the point
+                    estimator.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. By the Central Limit Theorem, we know that sampling
+                    distributions are mostly normal regardless of the bias of the point
+                    estimator.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The only requirement for a point estimator to be unbiased is
+                    that the expected value of the point estimator is the same as the associated
+                    population parameter value, not that it is always equal to the parameter
+                    value.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_center_ci_means">
+        <!-- LO: center_ci_means -->
+        <body>
+            <p>When the sampling distribution of a statistic centers exactly around the parameter it
+                estimates we can say that the statistic is which of the following?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Unbiased</choice>
+            <choice value="B">Normally distributed</choice>
+            <choice value="C">Equal to the parameter</choice>
+            <choice value="D">Statistically significant</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. We say that a statistic is unbiased if its distribution centers
+                    exactly around the parameter it estimates.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Although some sampling distributions are normally distributed,
+                    where a distribution centers does not determine its shape.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The statistic will vary from sample to sample and thus will
+                    rarely “exactly” equal the parameter.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Statistically significant means that the difference between the
+                    statistic and the assumed population value is so large it cannot be due to
+                    chance.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova4">
+    <head>
+        <title>ANOVA (4 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Step 2: Checking Conditions and Finding the Test Statistic</title>
+            <body>
+                <p>The test statistic of the ANOVA F-test, called the <em style="italic">F statistic</em>, has the form</p>
+                <image style="block" src="../webcontent/image164.gif"
+                    alt="F = Variation Among
+Sample Means / Variation Within Groups"/>
+                <p>It has a different structure from all the test statistics we've looked at so far,
+                    but it is similar in that it is still a measure of the evidence against
+                        H<sub>0</sub>. The larger F is (which happens when the denominator, the
+                    variation within groups, is small relative to the numerator, the variation among
+                    the sample means), the more evidence we have against H<sub>0</sub>.</p>
+            </body>
+        </section>
+        <!--      <activity idref="_u5_m2_dig5" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>Consider the following generic situation: </p>
+                <image style="block" src="../webcontent/anova/image16.png"
+                    alt="We have a situation in
+which k = 3. So, we have 3 populations, each with its own &mu;. For Population 1, we obtain a sample
+of size 100, and find that its Y-bar_1 = 35. For Population 2, we also get a sample of size 100. Y-bar_2
+= 30. For the third sample of size 100 generated from the Population 3, we find that Y-bar_3 = 25. These
+are three independent samples."/>
+                <p>In this case, we are testing</p>
+                <ul style="none">
+                    <li>H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub> = μ<sub>3</sub></li>
+                    <li>H<sub>a</sub>: Not all the μ's are equal</li>
+                </ul>
+                <!--<image style="block" src="../webcontent/image153.gif"
+                    alt="H_0: &mu;_1 = &mu;_2 = &mu;_3,
+  H_a: not all the &mu;'s are equal"/>-->
+                <p>The following are two possible scenarios of the data (note in both scenarios the
+                    sample means are 25, 30, and 35). </p>
+                <image style="block" src="../webcontent/image154.gif"
+                    alt="Scenario 1, illustrated by
+a dot plot. The dot plot is split with three horizontal axes, one for each sample. We see that for
+each population, the distribution is approximately normal and there is very little, if any, overlap
+between each distribution."/>
+                <image style="block" src="../webcontent/image155.gif"
+                    alt="Scenario 2, with a dot plot
+as in the previous image. However, each sample's distribution has a much wider spread. Samples 2 and 3
+approximate a normal distribution, but sample 1 does not. In addition, the distributions have data points
+in common. They overlap quite a lot."/>
+                <wb:inline idref="u4_m3_anova4_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u4_m3_anova4_tutor2" purpose="didigetthis"/>
+            </body>
+        </section>
+
+        <section purpose="learnbydoing">
+            <title>Learn by Doing</title>
+            <body>
+                <p>Suppose that we would like to compare four populations (for example, four
+                    races/ethnicities or four age groups) with respect to a certain psychological
+                    test score. More specifically we would like to test</p>
+                <ul style="none">
+                    <li>H<sub>0</sub>: μ<sub>1</sub> = μ<sub>2</sub> = μ<sub>3</sub> =
+                        μ<sub>3</sub></li>
+                    <li>H<sub>a</sub>: Not all the μ's are equal</li>
+                </ul>
+                <!--<p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>0</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>3</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>4</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>H</m:mi>
+                                <m:mi>a</m:mi>
+                            </m:msub>
+                            <m:mo>:</m:mo>
+                        </m:mrow>
+                    </m:math>
+                    <em style="italic">Not all the</em> μ<em style="italic">'s are equal</em>
+                </p>-->
+                <p>where μ<sub>1</sub> is the mean test score in population 1, μ<sub>2</sub> is the
+                    mean test score in population 2, μ<sub>3</sub> is the mean test score in
+                    population 3, and μ<sub>4</sub> is the mean test score in population 4.</p>
+                <!--<p>Where: <m:math>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mi>1</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the mean test score in population 1 <m:math>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mi>2</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the mean test score in population 2 <m:math>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mi>3</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the mean test score in population 3 <m:math>
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>μ</m:mi>
+                                <m:mi>4</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the mean test score in population 4 </p>-->
+                <p> We take a random sample from each population and use these four independent
+                    samples in order to carry out the test.</p>
+                <p>The following are two possible scenarios for the data:</p>
+                <table>
+                    <tr>
+                        <td>
+                            <image style="block" src="../webcontent/anova/image1.png" width="330"/>
+                        </td>
+                        <td>
+                            <image style="block" src="../webcontent/anova/image2.png" width="300"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <image style="block" src="../webcontent/anova/image3.png" width="330"/>
+                        </td>
+                        <td>
+                            <image style="block" src="../webcontent/anova/image4.png" width="300"/>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>Note that in both scenarios, the score averages of the four samples are very
+                    similar. </p>
+                <wb:inline idref="u4_m3_anova4_tutor6" purpose="learnbydoing"/>
+            </body>
+        </section>
+        <section>
+            <title>Comments</title>
+            <body>
+                <ol>
+                    <li><p>The focus here is for you to understand the idea behind this test
+                            statistic, so we do not go into detail about how the two variations are
+                            measured. <!--We are not going to go into any of the details about how the
+                            two variations are measured. This will be included in an extension
+                            module to this course in the future.<?oxy_comment_start ="is this still in the future, 
+                            or is this extension now available? "?> <?oxy_comment_end?> -->We instead rely 
+                            on software output to obtain the F-statistic.</p></li>
+                    <li><p>This test is called the ANOVA F-test. So far, we have explained the ANOVA
+                            part of the name. Based on the previous tests we introduced, it should
+                            not be surprising that the "F-test" part comes from the fact that the
+                            null distribution of the test statistic, under which the p-values are
+                            calculated, is called an F-distribution. We will say very little about
+                            the F-distribution in this course, which will essentially be limited to
+                            this comment and the next one.</p></li>
+                    <li><p>It is fairly straightforward to decide if a z-statistic is large. Even
+                            without tables, we should realize by now that a z-statistic of 0.8 is
+                            not especially large, whereas a z-statistic of 2.5 is large. In the case
+                            of the t-statistic, it is less straightforward, because there is a
+                            different t-distribution for every sample size n (and degrees of freedom
+                            n − 1). However, the fact that a t-distribution with a large number of
+                            degrees of freedom is very close to the z (standard normal) distribution
+                            can help to assess the magnitude of the t-test statistic.</p>
+                        <p>When the size of the F-statistic must be assessed, the task is even more
+                            complicated, because there is a different F-distribution for every
+                            combination of the number of groups we are comparing and the total
+                            sample size. We will nevertheless say that for most situations, an
+                            F-statistic greater than 4 would be considered rather large, but tables
+                            or software are needed to get a truly accurate assessment.</p></li>
+                </ol>
+                <example>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R</title>
+                            <image style="block" src="../webcontent/image165_r.gif"
+                                alt="R output:
+        > summary (aov(Frustration.Score~Major,frustration))
+        
+        Major: Df = 3, Sum Sq = 939.85, Mean Sq = 313.28, F-Value = 46.601, Pr(&gt;F) &lt;2.2e-16 ***
+        Residuals: Df = 136, Sum Sq = 914.29, Mean Sq = 6.72
+        
+        Signif. codes: 0 '***' 0.0001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"/>
+                            <p>Here is the R output for the ANOVA F-test. In particular, note that
+                                the F-statistic is 46.60, which is very large, indicating that the
+                                data provide a lot of evidence against H<sub>0</sub>. (We can also
+                                see that the p-value is so small that it is essentially 0, which
+                                supports that conclusion as well).</p>
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch</title>
+                            <image style="block" src="../webcontent/image165_statcrunch.gif"
+                                alt="
+StatCrunch output:
+        Analysis of Variance results:
+        Data stored in separate columns
+        Column means
+        Column: Business: n = 35, mean = 7.314858, Std. Error = 0.48984894
+        Column: English: n = 35, mean = 11.771428, Std. Error = 0.35286513
+        Column: Mathematics: n = 35, mean = 13.2, Std. Error = 0.3639189
+        Column: Psychology: n = 35, mean = 14.028571, Std. Error = 0.52096504
+        
+        ANOVA Table:
+        Treatments: df = 3, SS = 939.85, MS = 313.28333, F-Stat = 46.600895, P-Value &lt; 0.0001
+        Error: df = 136, SS = 914.2857, MS = 6.722689
+        Total: df = 139, SS = 1854.1357"/>
+                            <p>The parts of the output that we focus on here have been
+                                highlighted. In particular, note that the F-statistic is 46.60, which
+                                is very large, indicating that the data provide a lot of evidence
+                                against H<sub>0</sub>. StatCrunch reports that the p-value is less
+                                than 0.0001, which supports the conclusion as well.</p>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab</title>
+                            <image style="block" src="../webcontent/image165.gif"
+                                alt="One-way ANOVA:
+Frustration Score versus Major
+        Major: DF = 3, SS = 939.85, MS = 313.28, F = 46.60, P = 0.000
+        Error: DF = 136, SS = 914.29, MS = 6.72
+        Total: Df = 139, SS = 1854.14
+        
+        S = 2.593, R-Sq = 50.69%, R-Sq(adj) = 49.60%
+        
+        Level: Business: N = 35, Mean = 7.314, StDev = 2.898
+        Level: English: N = 35, Mean = 11.771, StDev = 2.088
+        Level: Mathematics: N = 35, Mean = 13.200, StDev = 2.153
+        Level: Psychology: N = 35, Mean = 14.029, StDev = 3.082
+        
+        Pooled StDev = 2.593.
+        
+        Note: not shown are the 95% Confidence Intervals."/>
+                            <p>The parts of the output that we focus on here have been
+                                highlighted. In particular, note that the F-statistic is 46.60,
+                                which is very large, indicating that the data provide a lot of
+                                evidence against H<sub>0</sub> (we can also see that the p-value is
+                                so small that Minitab reports that it is 0, which supports that
+                                conclusion as well).</p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007</title>
+                            <image style="block" src="../webcontent/image165_excel.gif"
+                                alt="
+Anova: Single Factor
+                
+                Summary:
+                Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319
+                English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983
+                Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294
+                Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916
+                
+                ANOVA
+                Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                
+                Total: SS = 1854.135714, df = 139."/>
+                            <p>The parts of the output that we focus on here have been
+                                highlighted. In particular, note that the F-statistic is 46.60,
+                                which is very large, indicating that the data provide a lot of
+                                evidence against H<sub>0</sub> (we can also see that the p-value is
+                                so small that it is essentially 0, which supports that conclusion as
+                                well).</p>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003</title>
+                            <image style="block" src="../webcontent/image165_excel.gif"
+                                alt="
+Anova: Single Factor
+
+                Summary:
+                Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319
+                English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983
+                Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294
+                Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916
+                
+                ANOVA
+                Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                
+                Total: SS = 1854.135714, df = 139."/>
+                            <p>The parts of the output that we focus on here have been
+                                highlighted. In particular, note that the F-statistic is 46.60,
+                                which is very large, indicating that the data provide a lot of
+                                evidence against H<sub>0</sub> (we can also see that the p-value is
+                                so small that it is essentially 0, which supports that conclusion as
+                                well).</p>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <image style="block" src="../webcontent/image165_ti.gif"
+                                alt="One-way
+ANOVA:
+        F = 46.60089583
+        p = 8.841574e-21
+        Factor: df = 3, SS = 939.85, MS = 313.283333,
+        Error: df = 136, SS = 914.285714, MS = 6.72268908
+        Sxp = 2.59281489"/>
+                            <p>Here is the TI graphing calculator output for the ANOVA F-test. In
+                                particular, note that the F-statistic is 46.60, which is very large,
+                                indicating that the data provide a lot of evidence against
+                                    H<sub>0</sub>. (We can also see that the p-value is so small that
+                                it is essentially 0, which supports that conclusion as well.)</p>
+                        </alternative>
+                    </alternatives>
+                </example>
+                <p>Let's move on to talk about the conditions under which we can safely use the
+                    ANOVA F-test, where the first two conditions are very similar to ones we've seen
+                    before, but there is a new third condition. It is safe to use the ANOVA
+                    procedure when the following conditions hold:</p>
+                <ol style="lower-roman">
+                    <li>
+                        <p>The samples drawn from each of the populations we're comparing are
+                            independent.</p></li>
+                    <li><p>The response variable varies normally within each of the populations
+                            we're comparing. As you already know, in practice this is done by
+                            looking at the histograms of the samples and making sure that there is
+                            no evidence of extreme departure from normality in the form of extreme
+                            skewness and outliers. Another possibility is to look at side-by-side
+                            boxplots of the data, and add histograms if a more detailed view is
+                            necessary. For large sample sizes, we don't really need to worry about
+                            normality, although it is always a good idea to look at the
+                        data.</p></li>
+                    <li><p>The populations all have the same standard deviation. The best we can do
+                            to check this condition is to find the <em>sample</em> standard
+                            deviations of our samples and check whether they are "close." A common
+                            rule of thumb is to check whether the ratio between the largest sample
+                            standard deviation and the smallest is less than 2. If that's the case,
+                            this condition is considered to be satisfied.</p></li>
+                </ol>
+                <example>
+                    <p>In our example all the conditions are satisfied:</p>
+                    <ol style="lower-roman">
+                        <li><p>All the samples were chosen randomly, and are therefore
+                                independent.</p></li>
+                        <li><p>The sample sizes are large enough (n = 35) that we really don't have
+                                to worry about the normality; however, let's look at the data using
+                                side-by-side boxplots, just to get a sense of it:</p>
+                            <image style="block" src="../webcontent/image114.gif"
+                                alt="Four box plots titled
+&quot;Boxplots of Frustration by Major.&quot; The mean for business is about 7, for English about 12,
+for mathematics about 13, and for psychology about 14. The interval between the first and third quartile
+for each major is about 7 or less. We also see that the box plot for business does not contain any other
+major's mean in its first and third quartile interval. We also see that no other majors' first and third
+quartile interval includes business's mean. In fact, they don't even include its third quartile."/>
+                            <p>You'll recognize this plot as Scenario 2 from earlier. The data
+                                suggest that the frustration level of the business students is
+                                generally lower than students from the other three majors. The ANOVA
+                                F-test will tell us whether these differences are
+                            significant.</p></li>
+                        <li>
+                            <p>In order to use the rule of thumb, we need to get the sample standard
+                                deviations of our samples.</p></li>
+                    </ol>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R</title>
+                            <p>Let's use R to calculate the standard deviation for each of the four
+                                samples: </p>
+                            <image style="block" src="../webcontent/image167_r.gif"
+                                alt=">sd(na.omit(frustration$Business)):
+[1] 2.897985
+        sd(na.omit(frustration$English)): [1] 2.087578
+        sd(na.omit(frustration$Mathematics)): [1] 2.152973
+        sd(na.omit(frustration$Psychology)): [1] 3.082071"
+                            />
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch</title>
+                            <image style="block" src="../webcontent/image167_statcrunch.gif"
+                                alt="
+            Summary statistics:
+            Column: Business: n = 35, mean = 7.314858, Std. Error = 0.48984894, Std. Dev. = 2.8979855,
+Min = 2, Q1 = 5, Median = 8, Q3 = 9, Max = 13
+            Column: English: n = 35, mean = 11.771428, Std. Error = 0.35286513, Std. Dev. = 2.0875783,
+Min = 8, Q1 = 10, Median = 12, Q3 = 13, Max = 17
+            Column: Mathematics: n = 35, mean = 13.2, Std. Error = 0.3639189, Std. Dev. = 2.1529734,
+Min = 9, Q1 = 12, Median = 14, Q3 = 15, Max = 17
+            Column: Psychology: n = 35, mean = 14.028571, Std. Error = 0.52096504, Std. Dev. = 3.0820706,
+Min = 8, Q1 = 11, Median = 14, Q3 = 16, Max = 20"
+                            />
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab</title>
+                            <p>We can either ask for the descriptive statistics for each of the four
+                                samples:</p>
+                            <image style="block" src="../webcontent/image166.gif"
+                                alt="Descriptive Statistics:
+Business, English, Mathematics, Psychology
+
+       Business: N = 35, N* = 0, Mean = 7.314 SE Mean = 0.490, StDev = 2.898, Minimum = 2.000, Q1 = 5.000,
+            Median = 8.000, Q3 = 9.000
+       English: N = 35,  N* = 0, mean = 11.771 SE Mean = 0.353, StDev = 2.088, Minimum = 8.000, Q1 = 10.000,
+            Median = 12.000, Q3 = 13.000
+       Mathematics: N = 35,  N* = 0, mean = 13.200 SE Mean = 0.364, StDev = 2.153, Minimum = 9.000, Q1 = 12.000,
+            Median = 14.000, Q3 = 15.000
+       Psychology: N = 35,  N* = 0, mean = 14.029 SE Mean = 0.521, StDev = 3.082, Minimum = 8.000, Q1 = 11.000,
+            Median = 14.000, Q3 = 16.000"/>
+                            <p>or note that data summaries also appear in the ANOVA F-test
+                                output:</p>
+                            <image style="block" src="../webcontent/image167.gif"
+                                alt="One-way ANOVA:
+Frustration Score versus Major
+                 Major: DF = 3, SS = 939.85, MS = 313.28, F = 46.60, P = 0.000
+                 Error: DF = 136, SS = 914.29, MS = 6.72
+                 Total: Df = 139, SS = 1854.14
+                 
+                 S = 2.593, R-Sq = 50.69%, R-Sq(adj) = 49.60%
+                 
+                 Level: Business: N = 35, Mean = 7.314, StDev = 2.898
+                 Level: English: N = 35, Mean = 11.771, StDev = 2.088
+                 Level: Mathematics: N = 35, Mean = 13.200, StDev = 2.153
+                 Level: Psychology: N = 35, Mean = 14.029, StDev = 3.082
+                 
+                 Pooled StDev = 2.593.
+                 
+                 Note: not shown are the 95% Confidence Intervals."
+                            />
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007</title>
+                            <p>We can either calculate the standard deviation for each of the four
+                                samples by hand, or note that the variance for each sample appears
+                                in the Excel output and use that to calculate the standard deviation
+                                (remember that the square root of variance is standard deviation).
+                                Here, the standard deviation has been calculated and added to the
+                                output: </p>
+                            <image style="block" src="../webcontent/image167_excel.gif"
+                                alt="
+Anova: Single Factor
+                
+                Summary:
+                Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319, StDev = 2.89798539
+                English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983, StDev = 2.08757831
+                Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294, StDev = 2.15297332
+                Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916, StDev = 3.08207068
+                
+                ANOVA
+                Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                
+                Total: SS = 1854.135714, df = 139."
+                            />
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003</title>
+                            <p>We can either calculate the standard deviation for each of the four
+                                samples by hand or note that the variance for each sample appears
+                                in the Excel output and use that to calculate the standard deviation
+                                (remember that the square root of variance is standard deviation).
+                                Here, the standard deviation has been calculated and added to the
+                                output: </p>
+                            <image style="block" src="../webcontent/image167_excel.gif"
+                                alt="
+Anova: Single Factor
+                
+                Summary:
+                Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319, StDev = 2.89798539
+                English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983, StDev = 2.08757831
+                Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294, StDev = 2.15297332
+                Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916, StDev = 3.08207068
+                
+                ANOVA
+                Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                
+                Total: SS = 1854.135714, df = 139."
+                            />
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Calculator</title>
+                            <p>Let's use your TI graphing calculator to calculate the standard
+                                deviation (<code style="inline">STAT/CALC/1:1-Var Stats</code>) for
+                                each of the four samples: </p>
+                            <image style="block" src="../webcontent/image167_ti.gif"
+                                alt="For Business:
+1-Var Stats:    x-bar = 7.314285714
+                &sum;x = 256
+                &sum;x&sup2; = 2158
+                Sx = 2.897985391
+                &sigma;x = 2.856285586
+                n = 35
+                For English, 1-Var Stats:    x-bar = 11.77142857
+                &sum;x = 412
+                &sum;x&sup2; = 4998
+                Sx = 2.087578308
+                &sigma;x = 2.057539644
+                n = 35
+                For Mathematics, 1-Var Stats:    x-bar = 13.2
+                &sum;x = 462
+                &sum;x&sup2; = 6256
+                Sx = 2.15297332
+                &sigma;x = 2.121993672
+                n = 35
+                For Psychology, 1-Var Stats:    x-bar = 14.02857143
+                &sum;x = 491
+                &sum;x&sup2; = 7211
+                Sx = 3.082070678
+                &sigma;x = 3.037722025
+                n = 35"
+                            />
+                        </alternative>
+                    </alternatives>
+                    <p>The rule of thumb is satisfied, since 3.082/2.088 &lt; 2.</p>
+                </example>
+            </body>
+        </section>
+        <!--                <activity idref="_u5_m2_dig6" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>In each of the following three questions, you'll find two designs for comparing
+                    number of credits taken by freshmen versus sophomores versus juniors versus seniors. In
+                    each case, one of the designs should not be handled with ANOVA. Your task is to
+                    identify which of the two it is.</p>
+                <wb:inline idref="u4_m3_anova4_tutor3" purpose="didigetthis"/>
+                <wb:inline idref="u4_m3_anova4_tutor4" purpose="didigetthis"/>
+                <wb:inline idref="u4_m3_anova4_tutor5" purpose="didigetthis"/>
+            </body>
+        </section>
+
+    </body>
+</workbook_page>

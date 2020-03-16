@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_meanvariance4_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>Here again is the probability distribution of
+         Y<?oxy_insert_start author="mmyers" timestamp="20101121T153320-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T153318-0500" content=", "?>the
+         number of defective parts in an hour in Yves' production line:</p>
+      <image src="../webcontent/dig003.gif"/>
+   </content>
+   <question id="q1">
+      <body>
+         <p>Which of the following expressions represents the standard deviation of Y?</p>
+         <image src="../../webcontent/flash/_u4_m3_digtutor5a_image1.gif"/>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">A</choice>
+         <choice value="Res2">B</choice>
+         <choice value="Res3">C</choice>
+         <choice value="Res4">D</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect.  You are confusing values and probabilities. To calculate standard deviation, we look at the squared deviation between the values of X and its mean, 
+               and weigh each of those deviations by the corresponding probability.  Also, you have used a mean of 2, instead of 2.7.  Please try again.</feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101121T153854-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T153854-0500" content="J"?>ob!</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. Your mistake is that you are averaging the squared
+               deviations twice. First you multiply each one by the corresponding weight
+               (probability), which is the right thing to do, but then dividing again by 5<?oxy_insert_start author="mmyers" timestamp="20101121T153908-0500"?>
+               <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101121T153909-0500"?>
+               <?oxy_insert_end?>1 is wrong. You might be confusing the standard deviation of a
+               random variable with
+               the<?oxy_delete author="mmyers" timestamp="20101121T154124-0500" content=" the"?>
+               formula for
+               s<?oxy_insert_start author="mmyers" timestamp="20101121T153919-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T153917-0500" content=" - "?>the
+               sample standard
+               deviation<?oxy_insert_start author="mmyers" timestamp="20101121T153937-0500"?>,<?oxy_insert_end?>
+               which we introduced in the
+               E<?oxy_insert_start author="mmyers" timestamp="20101121T153940-0500"?>xploratory
+               <?oxy_insert_end?>D<?oxy_insert_start author="mmyers" timestamp="20101121T153944-0500"?>ata
+               <?oxy_insert_end?>A<?oxy_insert_start author="mmyers" timestamp="20101121T153948-0500"?>nalysis<?oxy_insert_end?>
+               unit. Please try again.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. You are almost right, though. Your choice just
+               considers the
+               deviations<?oxy_insert_start author="mmyers" timestamp="20101121T154057-0500"?>,<?oxy_insert_end?>
+               instead of the squared deviations, as it should. Please try again.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

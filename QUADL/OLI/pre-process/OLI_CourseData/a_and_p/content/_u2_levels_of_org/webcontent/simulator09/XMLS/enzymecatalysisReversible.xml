@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="EnzymeCatalysis-4 Enzymes" version="1" simulatorVersion="06" date="02/12/06">
+    <name>&lt;b&gt;Enzyme Catalysis Pathway&lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="off"/> 
+    <steps>
+         <step id="create">
+            <actions>
+                <action event="record light"/>
+                <action event="create" name="theexplainer" url="tools/text_explainer.swf"  x="2" y="30" xscale="1"  yscale="1"/> 
+                <action event="create" name="thegrapher" url="tools/grapherP.swf" x="580" y="370" xscale="1" yscale="1" />
+                <action event="create" name="cell" url="swfs/cell.swf"  x="380" y="0" xscale=".58"  yscale=".65"/> 
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="333" y="31" xscale=".9"  yscale=".9"/>
+               <!-- <action event="create" name="equation1" url="tools/equation1.swf"  x="360" y="400" xscale="1" yscale="1" />
+                <action event="create" name="equation2" url="tools/equation2.swf"  x="510" y="400" xscale="1" yscale="1" />
+                   <action event="create" name="userdata" url="tools/userdataKD.swf"  x="350" y="290" xscale="1" yscale="1" />-->
+                <action event="create" name="inputs1" url="tools/DisplayValue.swf"  x="280" y="440" xscale=".8" yscale=".8" />
+                <action event="create" name="inputs2" url="tools/DisplayValue.swf"  x="345" y="440" xscale=".8" yscale=".8" />
+                <action event="create" name="inputs3" url="tools/DisplayValue.swf"  x="410" y="440" xscale=".8" yscale=".8" />
+                
+                <action event="create" name="Keq1" url="tools/DisplayValue.swf"  x="280" y="480" xscale=".8" yscale=".8" />
+                <action event="create" name="Keq2" url="tools/DisplayValue.swf"  x="345" y="480" xscale=".8" yscale=".8" />
+                <action event="create" name="Keq3" url="tools/DisplayValue.swf"  x="410" y="480" xscale=".8" yscale=".8" />
+                
+                <action event="create" name="slider1" url="tools/verticalSlider2.swf"  x="440" y="420" xscale="1" yscale="1" />
+                <action event="create" name="slider2" url="tools/verticalSlider2.swf"  x="505" y="420" xscale="1" yscale="1" />
+                <action event="create" name="castKey1" url="swfs/catalysisKeyArrows.swf"  x="406" y="370" xscale=".7" yscale=".65" />
+                <action event="create" name="label1" url="tools/label.swf"  x="340" y="425" xscale=".8" yscale=".8" />
+                <action event="create" name="arrow" url="swfs/arrowRight.swf"  x="365" y="430" xscale=".8" yscale=".6" />
+                <action event="create" name="label2" url="tools/label.swf"  x="340" y="485" xscale=".8" yscale=".8" />
+              <!--  <action event="create" name="slider1" url="tools/sliderNEWParamController.swf"  x="470" y="450" xscale="1"  yscale=".9"/>-->
+                <!--<action event="create" name="castKey2" url="tools/castKey2.swf"  x="540" y="375" xscale=".65" yscale=".65" />-->
+             <!--   <action event="create" name="opener" url="swfs/ligand05.swf"  x="2" y="0" xscale="2"  yscale="2"/> -->
+                <action event="settimer" timer='12' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+                
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible">
+                     <title> </title>
+                     <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Simulation of Enzyme Catalysis within a cell
+                     </text>                  
+                 </object>
+            </objects>
+            <nextbutton text="next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="run">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Enzyme Catalysis </title>
+                    <text>This screen demonstrates the equilbrium of the 50 substrates catalyzed by the two enzynmes in the cell.
+The first blue balls have the ability to bind and become yellow (once their Kcat is increased from 0).  The yellow is defined as having the ability to either return to blue by binding with red again. Or it can move on and become green (if it's Kcat is modified).
+
+Slowly increase the Kcat of the first substrate until you think you have reached equilibrium.
+                    </text>                 
+                </object>
+                <object name="box1" state="visible"/>
+                <object name="cell" state="visible"/>
+                <object name="inputs1" state="visible" />
+                <object name="label1" state="visible" />
+                <object name="label2" state="visible" />
+                <object name="arrow" state="visible" />
+                <object name="castKey1" state="visible" />
+                <object name="inputs2" state="visible" />
+                <object name="inputs3" state="visible" />
+                <object name="inputs4" state="visible" />
+                <object name="inputs5" state="visible"/>
+                <object name="Keq1" state="visible" />
+                <object name="Keq2" state="visible" />
+                <object name="Keq3" state="visible" />
+                <object name="slider1" state="visible"/>
+                <object name="slider2" state="visible" />
+                <object name="slider3" state="visible" />
+                <object name="slider4" state="visible" />
+                <object name="slider5" state="visible"/>
+            </objects>
+            <actions>
+                <action event="initialize" name="inputs1" params="thevariable=M5,thelabel=# Ligands,thevalue=0" /> 
+                <action event="initialize" name="label1"  params=" " data="Kcat" /> 
+                <action event="initialize" name="label2"  params=" " data="Keq" /> 
+                <action event="initialize" name="inputs2" params="thevariable=M6,thelabel=,thevalue=0" /> 
+                <action event="initialize" name="inputs3" params="thevariable=M7,thelabel=,thevalue=0" /> 
+                <action event="initialize" name="Keq1" params="thevariable=M6,thelabel=,thevalue=0" /> 
+                <action event="initialize" name="Keq2" params="thevariable=M6,thelabel=,thevalue=0" /> 
+                <action event="initialize" name="Keq3" params="thevariable=M6,thelabel=,thevalue=0" /> 
+             
+                <action event="initialize" name="slider1" params="low=0,high=100,ligandID=5,simulator=box1,changeParam=Kcat,moleculeID=1" data="20"/> <!--This is what we need to wire a slider to a simulator-->
+                <action event="initialize" name="slider2" params="low=0,high=100,ligandID=6,simulator=box1,changeParam=Kcat,moleculeID=2" data="0"/> 
+               
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=450,topBorder=25,bottomBorder=375,leftBorder2=75,rightBorder2=350,topBorder2=25,bottomBorder2=325">
+                    <molecules>  
+                        <molecule numMolecules= "6"  numbound= "0" velocity= "40"  cast= "moleculeC1"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="150" Xoffset="75" Yoffset="75"  mytype="molecule" brownian=".05"                 myID="1"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" />            
+                        <molecule numMolecules= "6"  numbound= "0" velocity= "40"  cast= "moleculeC2"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="150" Xoffset="75" Yoffset="75"  mytype="molecule" brownian=".05"                 myID="2"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" /> 
+                        <molecule numMolecules= "100"  numbound= "0" velocity= "75"  cast= "ligand1"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="200" y="150" Xoffset="75" Yoffset="75" mytype="ligand" brownian=".05"                     myID="5"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule1.pocket1.bound,Kd?20,k?200,Kcat?20,productidl?6" />   
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "75"  cast= "product"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="200" y="150" Xoffset="75" Yoffset="75" mytype="ligand" brownian=".05"                    myID="6"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule2.pocket1.bound1,Kd?0,k?500,Kcat?0,productidl?7&molecule1.pocket1.bound1,Kd?20,k?500,Kcat?50,productidl?5"  /> 
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "75"  cast= "product2"  eq1="500" eq2="200"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="150" Xoffset="75" Yoffset="75" mytype="ligand" brownian=".05"                      myID="7"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule2.pocket1.bound2,Kd?50,k?500,Kcat?0,productidl?6"  />  
+                         <!--   don't add new bindswith parameters until we completely implement the parser for this-->
+                    </molecules>
+                    </action>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="done">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title> </title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Reload the browser page to start again
+                    </text>              
+                </object>
+                <object name="box1" state="visible"/>
+                <object name="beaker" state="visible"/>
+                <object name="inputs1" state="visible" />
+                <object name="castKey1" state="visible" />
+                <!--<object name="castKey2" state="visible" />-->
+                <object name="equation1" state="visible" action="1" />
+                <object name="inputs2" state="visible" />
+                <object name="castKey2" state="visible" />
+                <object name="equation2" state="visible" action="1" />
+                <object name="LFree" state="visible"/>
+                <object name="LIn" state="visible"/>
+                <object name="Toff" state="visible"/>
+                <object name="Kd" state="visible"/>
+                <!--   <object name="thegrapher" state="visible" />-->
+                <object name="slider1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="pause"  />
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+
+        
+    </steps>
+</simulation>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules5_tutor2">
+	<title>Tutor</title>
+	<page>
+	<question id="q1">
+		<body>
+				<p><?oxy_comment_start author="mmyers" timestamp="20101108T163201-0500" comment="again, you are changing the available population by removing the first person. I have rewritten this to reflect a simultaneous choice of two people, but another option is to specify that the first person is &quot;returned to the population,&quot; so that he or she may be chosen again. 
+
+Specifying that the population is &quot;very large&quot; makes the mathematical effect of the removal of one member of the population minimal, but it does not eliminate it. 
+
+I think that not including one or the other of these qualifiers will confuse students, because if you do not, this example contradicts the one about coins in your pocket. the only difference is that there the population is 4, and here it is millions."?>Two
+					people are selected
+					<?oxy_insert_start author="mmyers" timestamp="20101108T161638-0500"?>simultaneously
+					and <?oxy_insert_end?>at random from a very large population, and their blood
+					type is checked.</p>
+				<p>A<?oxy_insert_start author="mmyers" timestamp="20101108T161728-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T161725-0500" content=" - t"?><?oxy_delete author="mmyers" timestamp="20101108T161734-0500" content="he first"?><?oxy_insert_start author="mmyers" timestamp="20101108T161741-0500"?>
+					<?oxy_insert_end?>person
+					<?oxy_insert_start author="mmyers" timestamp="20101108T173233-0500"?>1
+					<?oxy_insert_end?>has blood type O</p>
+				<p>B<?oxy_insert_start author="mmyers" timestamp="20101108T161755-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T161753-0500" content=" - t"?><?oxy_delete author="mmyers" timestamp="20101108T173239-0500" content="he second "?>person
+					<?oxy_insert_start author="mmyers" timestamp="20101108T161807-0500"?>2
+					<?oxy_insert_end?>has blood type O<?oxy_comment_end?></p>
+				<p>(a) The two events are: <input_ref input="A"/></p>
+				<p>(b) The two events are: <input_ref input="B"/></p>
+			</body>
+		<fill_in_the_blank id="A" shuffle="false">
+			<choice value="one">disjoint</choice>
+			<choice value="two">not disjoint</choice>
+		</fill_in_the_blank>
+		<fill_in_the_blank id="B" shuffle="false">
+			<choice value="one">independent</choice>
+			<choice value="two">dependent</choice>
+		</fill_in_the_blank>
+		<part>
+			<response input="A" name="disjoint" match="one">
+				<feedback>Incorrect. It is possible for both events to occur at the same
+						time<?oxy_insert_start author="mmyers" timestamp="20101108T161856-0500"?>,<?oxy_insert_end?>
+						since it is possible that we happen to choose two people with blood type O,
+						and therefore the events are not disjoint.</feedback>
+			</response>
+			<response input="A" name="not disjoint" match="two" score="1">
+				<feedback>Correct. Since it is possible to choose two people with blood type O, the events are
+						not disjoint.</feedback>
+			</response>
+		</part>
+		<part>
+			<response input="B" name="independent" match="one" score="1">
+				<feedback>Good
+						<?oxy_insert_start author="mmyers" timestamp="20101108T161927-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T161925-0500" content="J"?>ob!
+						Indeed, since the two people were selected
+						<?oxy_insert_start author="mmyers" timestamp="20101108T161934-0500"?>simultaneously
+						and <?oxy_insert_end?>at random from a large population, whether or not
+						event A occurs
+						(<?oxy_delete author="mmyers" timestamp="20101108T161953-0500" content="ie, "?>whether
+						or not
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162000-0500"?>one of
+						the people
+						chosen<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162004-0500" content="the first person"?>
+						has blood type O) has absolutely no effect on the probability that the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162018-0500"?>other<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162016-0500" content="second"?>
+						person
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162253-0500"?>chosen
+						will
+						have<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162259-0500" content="has"?>
+						blood type O
+						(<?oxy_delete author="mmyers" timestamp="20101108T162047-0500" content="ie, "?>the
+						probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162349-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T162352-0500" content="s"?>).
+						Therefore, the events are independent.</feedback>
+			</response>
+			<response input="B" name="dependent" match="two">
+				<feedback>Incorrect. Since the two people were selected
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162141-0500"?>simultaneously
+						and <?oxy_insert_end?>at random from a large population, whether or not
+						event A occurs
+						(<?oxy_delete author="mmyers" timestamp="20101108T162155-0500" content="ie, "?>whether
+						or not the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162201-0500"?>one of
+						the people
+						chosen<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162205-0500" content="first person"?>
+						has blood type O) has absolutely no effect on the probability that the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162220-0500"?>other<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162218-0500" content="second"?>
+						person
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162446-0500"?>chosen
+						will
+						<?oxy_insert_end?>ha<?oxy_insert_start author="mmyers" timestamp="20101108T162451-0500"?>ve<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162451-0500" content="s"?>
+						blood type O
+						(<?oxy_delete author="mmyers" timestamp="20101108T162457-0500" content="ie, "?>the
+						probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162501-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T162505-0500" content="s"?>).
+						Therefore, the events are independent.</feedback>
+			</response>
+		</part>
+	</question></page>
+	<page>
+		<question id="q2">
+			<body>
+				<p>A seminar class
+					<?oxy_delete author="mmyers" timestamp="20101108T162558-0500" content="of "?>consists
+					of five male students and 5 female students. Two of the 10 students are chosen
+					at random for a
+					role<?oxy_insert_start author="mmyers" timestamp="20101108T162640-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162640-0500" content=" "?>playing
+					exercise.</p>
+				<p>A<?oxy_insert_start author="mmyers" timestamp="20101108T162709-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162706-0500" content=" - "?>the
+					first chosen is
+					<?oxy_delete author="mmyers" timestamp="20101108T164046-0500" content="a "?>male</p>
+				<p>B<?oxy_insert_start author="mmyers" timestamp="20101108T162720-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162716-0500" content=" - "?>the
+					second chosen is
+					<?oxy_delete author="mmyers" timestamp="20101108T164050-0500" content="a "?>female</p>
+				<p>(a) The<?oxy_delete author="mmyers" timestamp="20101108T162839-0500" content=" two"?> events
+					are: <input_ref input="A"/></p>
+				<p>(b) The<?oxy_delete author="mmyers" timestamp="20101108T162844-0500" content=" two"?> events
+					are: <input_ref input="B"/></p>
+			</body>
+			<fill_in_the_blank id="A" shuffle="false">
+				<choice value="one">disjoint</choice>
+				<choice value="two">not disjoint</choice>
+			</fill_in_the_blank>
+			<fill_in_the_blank id="B" shuffle="false">
+				<choice value="one">independent</choice>
+				<choice value="two">dependent</choice>
+			</fill_in_the_blank>
+			<part>
+				<response input="A" name ="disjoint" match="one">
+					<feedback>Incorrect. It is possible for both events to occur at the same time (first choose a male and then choose a female), and therefore the events are not disjoint.</feedback>
+				</response>
+				<response input="A" name ="not disjoint" match="two" score="1">
+					<feedback>Good
+						<?oxy_insert_start author="mmyers" timestamp="20101108T162744-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162743-0500" content="J"?>ob!
+						Since it is possible to first choose a male and
+						th<?oxy_insert_start author="mmyers" timestamp="20101108T162741-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T162741-0500" content="a"?>n
+						a female, the two events are not disjoint.</feedback>
+				</response>
+			</part>
+			<part>
+				<response input="B" name ="independent" match="one">
+					<feedback>Incorrect. In this
+						case<?oxy_insert_start author="mmyers" timestamp="20101108T163814-0500"?>,<?oxy_insert_end?>
+						whether or not event A occurs (the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T164121-0500"?>first
+						<?oxy_insert_end?>student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T163957-0500" content="a "?>male)
+						does have an affect on the probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T163852-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T163855-0500" content="s"?>
+						(the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T164141-0500"?>second
+						<?oxy_insert_end?>student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T164002-0500" content="a "?>female).
+						If A occurs, then P(second student chosen
+						is<?oxy_delete author="mmyers" timestamp="20101108T164009-0500" content=" a"?> female)<?oxy_insert_start author="mmyers" timestamp="20101108T163903-0500"?>
+						<?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T163904-0500"?>
+						<?oxy_insert_end?>5/9. If A does not occur
+						(i<?oxy_insert_start author="mmyers" timestamp="20101108T163942-0500"?>.<?oxy_insert_end?>e<?oxy_insert_start author="mmyers" timestamp="20101108T163943-0500"?>.<?oxy_insert_end?>,
+						<?oxy_insert_start author="mmyers" timestamp="20101108T163945-0500"?>if
+						<?oxy_insert_end?>the first student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T163951-0500" content="a "?>female),
+						then P(second student chosen
+						is<?oxy_delete author="mmyers" timestamp="20101108T164014-0500" content=" a"?> female)<?oxy_insert_start author="mmyers" timestamp="20101108T164028-0500"?>
+						<?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T164030-0500"?>
+						<?oxy_insert_end?>4/9.
+						Therefore<?oxy_insert_start author="mmyers" timestamp="20101108T164035-0500"?>,<?oxy_insert_end?>
+						the two events are not independent, but rather dependent.</feedback>
+				</response>
+				<response input="B" name ="dependent" match="two" score="1">
+					<feedback>Correct. Indeed, in this case whether or not event A occurs (the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T164250-0500"?>first
+						<?oxy_insert_end?>student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T164254-0500" content="a "?>male)
+						does have an affect on the probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T164301-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T164303-0500" content="s"?>
+						(the
+						<?oxy_insert_start author="mmyers" timestamp="20101108T164307-0500"?>second
+						<?oxy_insert_end?>student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T164312-0500" content="a "?>female).
+						If A occurs, then P(second student chosen is <?oxy_delete author="mmyers" timestamp="20101108T164319-0500" content="a "?>female)<?oxy_insert_start author="mmyers" timestamp="20101108T164325-0500"?>
+						<?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T164323-0500"?>
+						<?oxy_insert_end?>5/9. If A does not occur
+						(i<?oxy_insert_start author="mmyers" timestamp="20101108T164333-0500"?>.<?oxy_insert_end?>e<?oxy_insert_start author="mmyers" timestamp="20101108T164333-0500"?>.<?oxy_insert_end?>,<?oxy_insert_start author="mmyers" timestamp="20101108T164342-0500"?>
+						if<?oxy_insert_end?> the first student chosen is
+						<?oxy_delete author="mmyers" timestamp="20101108T164349-0500" content="a "?>female),
+						then P(second student chosen is <?oxy_delete author="mmyers" timestamp="20101108T164356-0500" content="a "?>female)<?oxy_insert_start author="mmyers" timestamp="20101108T164359-0500"?>
+						<?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T164400-0500"?>
+						<?oxy_insert_end?>4/9.
+						Therefore<?oxy_insert_start author="mmyers" timestamp="20101108T164403-0500"?>,<?oxy_insert_end?>
+						the two events are not independent, but rather dependent.</feedback>
+				</response>
+			</part>
+		</question></page>
+	<page>
+		<question id="q3">
+			<body>
+				<p>A telemarketer is calling a randomly chosen phone number.</p>
+				<p>A<?oxy_insert_start author="mmyers" timestamp="20101108T165247-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T165243-0500" content=" - "?>the
+					person answering the phone is
+					<?oxy_delete author="mmyers" timestamp="20101108T165206-0500" content="a "?>male</p>
+				<p>B<?oxy_insert_start author="mmyers" timestamp="20101108T165251-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T165249-0500" content=" - "?>the
+					person answering the phone is
+					<?oxy_delete author="mmyers" timestamp="20101108T165208-0500" content="a "?>female</p>
+				<p>(a) The two events are: <input_ref input="A"/></p>
+				<p>(b) The two events are: <input_ref input="B"/></p>
+			</body>
+			<fill_in_the_blank id="A" shuffle="false">
+				<choice value="one">disjoint</choice>
+				<choice value="two">not disjoint</choice>
+			</fill_in_the_blank>
+			<fill_in_the_blank id="B" shuffle="false">
+				<choice value="one">independent</choice>
+				<choice value="two">dependent</choice>
+			</fill_in_the_blank>
+			<part>
+				<response input="A" name ="disjoint" match="one" score="1">
+					<feedback>Good
+						<?oxy_insert_start author="mmyers" timestamp="20101108T170152-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T170152-0500" content="J"?>ob!
+						It is impossible for both events to occur at the same time, since the person
+						can be either
+						<?oxy_delete author="mmyers" timestamp="20101108T170207-0500" content="a "?>male
+						or
+						<?oxy_delete author="mmyers" timestamp="20101108T170212-0500" content="a "?>female<?oxy_insert_start author="mmyers" timestamp="20101108T170215-0500"?>,<?oxy_insert_end?>
+						but not both.</feedback>
+				</response>
+				<response input="A" name ="not disjoint" match="two">
+					<feedback>This is not quite
+						right<?oxy_insert_start author="mmyers" timestamp="20101108T170223-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T170223-0500" content="!"?>
+						It is impossible for both events to occur at the same time, since the person
+						can be either
+						<?oxy_delete author="mmyers" timestamp="20101108T170232-0500" content="a "?>male
+						or
+						<?oxy_delete author="mmyers" timestamp="20101108T170236-0500" content="a "?>female<?oxy_insert_start author="mmyers" timestamp="20101108T170238-0500"?>,<?oxy_insert_end?>
+						but not both, and therefore the events are disjoint.</feedback>
+				</response>
+			</part>
+			<part>
+				<response input="B" name ="independent" match="one">
+					<feedback>Incorrect. In this case, if event A occurs (if the person answering is
+						<?oxy_delete author="mmyers" timestamp="20101108T170307-0500" content="a "?>male),
+						it has a very dramatic effect on the probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T170318-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T170321-0500" content="s"?>
+						(the probability that the person answering is
+						<?oxy_delete author="mmyers" timestamp="20101108T170754-0500" content="a "?>female)<?oxy_insert_start author="mmyers" timestamp="20101108T170347-0500"?>.
+						If event A occurs, the probability that event B will occur becomes
+						0<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T170421-0500" content=" -- that probability becomes 0"?>.
+						Therefore, the two events are
+						<?oxy_comment_start author="mmyers" timestamp="20101108T170454-0500" comment="use italics instead of all caps for emphasis"?>NOT<?oxy_comment_end?>
+						independent<?oxy_insert_start author="mmyers" timestamp="20101108T170515-0500"?>,<?oxy_insert_end?>
+						but rather dependent. </feedback>
+				</response>
+				<response input="B" name ="dependent" match="two" score="1">
+					<feedback>Correct. indeed, In this case, if event A occurs (if the person answering is
+						<?oxy_delete author="mmyers" timestamp="20101108T170537-0500" content="a "?>male),
+						it has a very dramatic effect on the probability that event B
+						<?oxy_insert_start author="mmyers" timestamp="20101108T170551-0500"?>will
+						<?oxy_insert_end?>occur<?oxy_delete author="mmyers" timestamp="20101108T170554-0500" content="s"?>
+						(the probability that the person answering is
+						<?oxy_delete author="mmyers" timestamp="20101108T170836-0500" content="a "?>female)<?oxy_insert_start author="mmyers" timestamp="20101108T170851-0500"?>.
+						If event A occurs, the probability that event B will occur becomes
+						0<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T170857-0500" content=" -- that probability becomes 0"?>.
+						Therefore, the two events are
+						<?oxy_comment_start author="mmyers" timestamp="20101108T170917-0500" comment="use italics instead of all caps for emphasis"?>NOT<?oxy_comment_end?>
+						independent but rather dependent. </feedback>
+				</response>
+			</part>
+		</question></page>
+</assessment>

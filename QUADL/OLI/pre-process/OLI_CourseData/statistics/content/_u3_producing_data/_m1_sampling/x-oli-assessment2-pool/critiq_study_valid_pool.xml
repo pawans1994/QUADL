@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="critiq_study_valid_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_critiq_study_valid">
+        <!-- LO: critiq_study_valid -->
+        <body>
+            <p>The faculty senate at a large university wanted to know what proportion of the
+                students thought foreign language classes should be required for everyone. The
+                statistics department offered to cooperate in conducting a survey, and a simple
+                random sample of 500 students was selected from all the students enrolled in
+                statistics classes. A survey form was sent by email to these 500 students. </p>
+            <p>True or false? Since the sample is random, it is representative of the population of
+                interest. </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">True</choice>
+            <choice value="B">False</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Although the 500 survey recipients were selected randomly from
+                    a larger sampling frame, there are two reasons this study is <em style="italic">not</em> representative
+                    of the population of interest: (1) The sampling frame was only students in
+                    statistics (so the sampling frame didn’t match the population of interest), and
+                    (2) Returning the survey was voluntary (so the study results were potentially
+                    biased and thus not representative, even of just statistics students).
+                </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Although the 500 survey recipients were selected randomly from
+                    some larger sampling frame, the study is <em style="italic">not</em> representative of the intended
+                    population of all students at the university because (1) the sampling frame was
+                    only students in statistics (so the sampling frame didn’t match the population
+                    of interest), and (2) returning the survey was voluntary (so the study results
+                    were potentially biased and thus not representative, even of just statistics
+                    students).</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_critiq_study_valid">
+        <!-- LO: critiq_study_valid -->
+        <body>
+            <p>The city council hired three college interns to measure public support for a large
+                parks and recreation initiative in their city. The interns mailed surveys to 500
+                randomly selected participants in the current public recreation program. They
+                received 150 responses.</p>
+            <p>True or false? Even though the sample is random, it is <em style="bold">not</em>
+                representative of the population of interest.</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">True</choice>
+            <choice value="B">False</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Ccorrect. While the selection of subjects was random, subjects were not
+                    representative of the population of the city because only participants in the
+                    recreation program were included in the sample. Also, there was a large
+                    non-response rate.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While the selection of subjects was random, subjects were not
+                    representative of the population of the city because only participants in the
+                    recreation program were included in the sample. Also there was a large
+                    non-response rate.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_mean2">
+    <head>
+        <title>Confidence Intervals for the Population Mean (2 of 8)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+<body>
+   
+    
+        <section>
+            <title>The General Case</title>
+            <body>
+                <p/>
+            </body>
+        </section>
+        <p>Let's generalize the IQ example. Suppose that we are interested in estimating the unknown
+            population mean (μ) based on a random sample of size n. Further, we assume that the
+            population standard deviation (σ) is known.</p>
+
+        <image style="block" src="../webcontent/image036.gif" alt="A large circle represents the population
+of interest. &mu; is unknown, but &sigma; is known about the population. From the population we create a SRS
+of size n, represented by a smaller circle. We can find x-bar for this SRS."/>
+        <p>The values of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> follow a normal distribution with (unknown) mean μ and standard deviation
+                <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> (known, since both σ and n are known). By the (second part of the) Standard
+            Deviation Rule, this means that:</p>
+        <p> There is a 95% chance that our sample mean (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) will fall within <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mo>*</m:mo>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> of μ,</p>
+        <p>which means that:</p>
+        <p> We are 95% confident that μ falls within <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mn>2</m:mn>
+                    <m:mo>*</m:mo>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math> of our sample mean (<m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>). </p>
+        <p>Or, in other words, a 95% confidence interval for the population mean μ is:</p>
+        <p>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mfenced open="(" close=")">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                            <m:mo>,</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>+</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:mfenced>
+                </m:mrow>
+            </m:math>
+        </p>
+        <p>Here, then, is the <em>general result:</em>
+        </p>
+        <p>Suppose a random sample of size n is taken from a normal population of values for a
+            quantitative variable whose mean (μ) is unknown, when the standard deviation (σ) is
+            given. A 95% confidence interval (CI) for μ is:</p>
+        <p>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                    <m:mo>±</m:mo>
+                    <m:mn>2</m:mn>
+                    <m:mo>*</m:mo>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>
+        </p>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Note that for now we require the population standard deviation (σ) to be known.
+                    Practically, σ is rarely known, but for some cases, especially when a lot of
+                    research has been done on the quantitative variable whose mean we are estimating
+                    (such as IQ, height, weight, scores on standardized tests), it is reasonable to
+                    assume that σ is known. Eventually, we will see how to proceed when σ is
+                    unknown, and must be estimated with sample standard deviation (s).</p>
+                <p>Let's look at another example.</p>
+                <example>
+
+                    <p>An educational researcher was interested in estimating μ, the mean score on
+                        the math part of the SAT (SAT-M) of all community college students in his
+                        state. To this end, the researcher has chosen a random sample of 650
+                        community college students from his state, and found that their average
+                        SAT-M score is 475. Based on a large body of research that was done on the
+                        SAT, it is known that the scores roughly follow a normal distribution with
+                        the standard deviation <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>100</m:mn>
+                            </m:mrow>
+                        </m:math> .</p>
+                    <p>Here is a visual representation of this story, which summarizes the
+                        information provided:</p>
+
+                    <image style="block" src="../webcontent/image045.gif" alt="A large circle
+represents the population of Community college students in the researcher's state. &mu; is
+unknown, but &sigma; is known about the population. From the population we create a SRS of size
+n=650, represented by a smaller circle. We can find that x-bar=475 for this SRS."/>
+                    <p>Based on this information, let's estimate μ with a 95% confidence
+                        interval.</p>
+                    <p>Using the formula we developed before, <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi> x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mo>∗</m:mo>
+                                <m:mfrac>
+                                    <m:mi mathvariant="normal">σ</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>, a 95% confidence interval for μ is:</p>
+                    <p>
+                        <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mn>475</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>*</m:mo>
+                                        <m:mfrac>
+                                            <m:mn>100</m:mn>
+                                            <m:msqrt>
+                                                <m:mn>650</m:mn>
+                                            </m:msqrt>
+                                        </m:mfrac>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mn>475</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>*</m:mo>
+                                        <m:mfrac>
+                                            <m:mn>100</m:mn>
+                                            <m:msqrt>
+                                                <m:mn>650</m:mn>
+                                            </m:msqrt>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:mfenced>
+                            </m:mrow>
+                        </m:math>, which is (475 - 7.8 , 475 + 7.8) = (467.2, 482.8). In this case,
+                        it makes sense to round, since SAT scores can be only whole numbers, and say
+                        that the 95% confidence interval is (467, 483).</p>
+                    <p>We are not done yet. An equally important part is to <em>interpret what this
+                            means in the context of the problem.</em>
+                    </p>
+                    <p>We are 95% confident that the mean SAT-M score of all community college
+                        students in the researcher's state is covered by the interval (467, 483).
+                        Note that the confidence interval was obtained by taking <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mn>475</m:mn>
+                                <m:mo>±</m:mo>
+                                <m:mn>8</m:mn>
+                            </m:mrow>
+                        </m:math> (rounded). This means that we are 95% confident that by using the
+                        sample mean (<m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mn>475</m:mn>
+                            </m:mrow>
+                        </m:math>) to estimate μ, our error is no more than 8.</p>
+
+                    </example>
+                    <!--<activity idref="_u5_m1_lbd1" purpose="learnbydoing"/>-->
+                    <section purpose="learnbydoing">
+                        <title>Learn By Doing</title>
+                        <body>    <p>A study was done on pregnant women who smoked
+                            during their pregnancies. In particular, the
+                            researchers wanted to study the effect that smoking has on pregnancy
+                            length. A sample of 114 pregnant women who were smokers participated in
+                            the study and were followed until the birth of their child. At the end
+                            of the study, the collected data were analyzed and it was found that the
+                            average pregnancy length of the 114 women was 260 days. From a large
+                            body of research, it is known that length of human pregnancy has a
+                            standard deviation of 16 days.</p>
+                <wb:inline idref="u4_m1_confintmean2_tutor1" purpose="learnbydoing"/>
+                            <wb:inline idref="u4_m1_confintmean2_tutor2" purpose="learnbydoing"/>
+                        </body>
+                    </section>
+
+                    <p>You just gained practice computing and interpreting a confidence interval for
+                        a population mean. Note that the way a confidence interval is used is that
+                        we hope the interval contains the population mean μ. This is why we call it
+                        an "interval <em>for the population mean</em>." </p>
+                    <p>The following activity is designed to help you better understand<!--give you a better understanding of-->
+                    the underlying
+                        <?oxy_comment_start author="mmyers" timestamp="20101123T113240-0500" comment="remove bold -- no emphasis needed"?><em>reasoning</em><?oxy_comment_end?>
+                    behind the interpretation of confidence intervals. In particular, you will gain
+                    a deeper understanding of why we say that we are "<em style="italic">95% confident</em> that
+                    the population mean is <em style="italic">covered</em> by the interval." </p>
+                    <activity idref="_u5_m1_lbd16" purpose="learnbydoing"/>
+
+                    <p>We just saw that one interpretation of a 95% confidence interval is that we
+                    are 95% confident that the population mean (μ) is contained in the interval.
+                    Another useful interpretation in practice is that, given the data, the
+                    confidence interval represents the set of plausible values for the population
+                    mean μ. </p>
+                <example>
+                    <p>As an illustration, let’s return to the example of mean SAT-Math score of
+                        community college students. Recall that we had constructed the confidence
+                        interval (467, 483) for the unknown mean SAT-M score for all community
+                        college students. </p>
+                    <p>Here is a way that we can use the confidence interval:</p>
+                    <p>Do the results of this study provide evidence that μ, the mean SAT-M score of
+                        community college students, is lower than the mean SAT-M score in the
+                        general population of college students in that state (which is 480)?</p>
+                    <p>The 95% confidence interval for μ was found to be (467, 483). Note that 480,
+                        the mean SAT-M score in the general population of college students in that
+                        state, falls inside the interval, which means that it is one of the
+                        plausible values for μ.</p>
+
+                    <image style="block" src="../webcontent/image050.gif" alt="A number line, on which
+the 95% confidence interval for &mu; has been marked, from 467 to 483. At 480 is the mean SAT-M score in
+the general population of college students in the state."/>
+                    <p>This means that μ could be 480 (or even higher, up to 483), and therefore we
+                        cannot conclude that the mean SAT-M score among community college students
+                        in the state is lower than the mean in the general population of college
+                        students in that state. (Note that the fact that most of the plausible
+                        values for μ fall below 480 is not a consideration
+                        here.)</p>
+                </example>
+
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Recall that in the formula for the 95% confidence interval for μ, <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>2</m:mn>
+                            <m:mo>∗</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>, the 2 comes from the Standard Deviation Rule, which says that any
+                    normal random variable (in our case <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>), has a 95% chance (or probability of 0.95) of taking a value that is
+                    within 2 standard deviations of its mean.</p>
+                <p>As you recall from the discussion about the normal random variable, this is only
+                    an approximation, and to be more accurate, there is a 95% chance that a normal
+                    random variable will take a value within 1.96 standard deviations of its mean.
+                    Therefore, a more accurate formula for the 95% confidence interval for μ is
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>±</m:mo>
+                            <m:mn>1</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>96</m:mn>
+                            <m:mo>*</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>, which you'll find in most introductory statistics books. In this
+                    course, we'll use 2 (and not 1.96), which is close enough for our purposes.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

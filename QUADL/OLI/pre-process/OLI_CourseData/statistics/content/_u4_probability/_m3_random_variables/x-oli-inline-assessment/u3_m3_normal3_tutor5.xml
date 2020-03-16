@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal3_tutor5">
+   <title>Tutor</title>
+<page>
+   <question id="q1">
+      <body>
+         <p>Julie was assigned to take her statistics class with
+               Prof<?oxy_insert_start author="mmyers" timestamp="20101122T105021-0500"?>essor<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T105023-0500" content="."?>
+               Fisher, whose final scores follow a normal distribution with mean 75 and standard
+               deviation of 6. Her score on the final was 84. Which of the two scores, Ron's or Julie's<?oxy_insert_start author="mmyers" timestamp="20101122T105037-0500"?>,<?oxy_insert_end?>
+               <?oxy_comment_start author="mmyers" timestamp="20101122T105808-0500" comment="Consider rewriting or replacing this question. These days, comparing a student&apos;s performance to that of the other students is considered bad -- the only thing that matters is whether the students &quot;meet the standard.&quot; I realize that this scenario isn&apos;t meant to advocate comparing students&apos; performance to that of other students or grading on a curve, and I don&apos;t think any students will care about this question, but some education professionals and politicians might take exception to it, just as a gut reaction ... and I understand that this course is receiving a lot of attention along those lines ..."?>is
+               more impressive?<?oxy_comment_end?>
+            </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">Ron's score is more
+               impressive<?oxy_insert_start author="mmyers" timestamp="20101122T105044-0500"?>.<?oxy_insert_end?></choice>
+         <choice value="Res2">Julie's score is more
+               impressive<?oxy_insert_start author="mmyers" timestamp="20101122T105045-0500"?>.<?oxy_insert_end?></choice>
+         <choice value="Res3">Both scores are equally
+               impressive<?oxy_insert_start author="mmyers" timestamp="20101122T105048-0500"?>.<?oxy_insert_end?></choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. While it is true that Ron's raw score (88) is higher
+                  than Julie's (84), it makes more sense to compare their z-scores. In other words,
+                  <?oxy_comment_start author="mmyers" timestamp="20101122T105832-0500" comment="see note above"?>it
+                  would make more sense to compare how they scored relative to other students in
+                  their respective classes<?oxy_comment_end?>. </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+                  <?oxy_insert_start author="mmyers" timestamp="20101122T105836-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T105836-0500" content="J"?>ob!
+                  Indeed, Ron's z-score is 1.2, and Julie's z-score is (84 - 75) / 6 = 1.5. Julie's
+                  score is more
+                  impressive<?oxy_insert_start author="mmyers" timestamp="20101122T105844-0500"?>,<?oxy_insert_end?>
+                  since she scored 1.5 standard deviations above
+                  <?oxy_insert_start author="mmyers" timestamp="20101122T105849-0500"?>the
+                  <?oxy_insert_end?>mean, while Ron scored only 1.2 standard deviations above the
+                  mean.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. In order to decide which score is more impressive,
+                  compare the z-scores of both Ron's and Julie's final scores. Bear in
+                  mind<?oxy_delete author="mmyers" timestamp="20101122T105900-0500" content=","?>
+                  that each of the raw scores comes from a different normal distribution.</feedback>
+         </response>
+      </part>
+   </question>
+</page></assessment>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+ xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+ id="recode_cat_var_dataset">
+ <head>
+  <title>How to Recode a Categorical Variable in a Data Set</title>
+ </head>
+ <body>
+  <section>
+   <title>How to Recode a Categorical Variable in a Data Set</title>
+   <body>
+    <pullout>
+     <alternatives group="statistics.package">
+      <default><pref:value preference="statistics.package"/></default>
+      <alternative value="StatCrunch">
+       <title>StatCrunch Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. Now we will recode the variable gender with the labels
+        "Male" and "Female." To do this in StatCrunch:</p>
+       <ul>
+        <li>Choose <code style="inline">Data → Transform data →</code> This will bring up the
+         Transform data window.</li>
+        <li>In the Expression input field enter: <code style="inline">ifelse(Gender =
+          1,Female,Male)</code> then press <code style="inline"> Compute</code></li>
+        <li>Notice that a new column is created at the right with the desired recoding.</li>
+       </ul>
+       <p>Finally, we will want to delete the original Gender column and give this name to the new
+        column.To delete the original Gender column:</p>
+       <ul>
+        <li>Choose <code style="inline">Edit → Columns → Delete</code>
+        </li>
+        <li>In the Columns Delete Window, Select <code style="inline">Gender and press
+         Delete</code></li>
+        <li>To rename the new column click on the current name and press the Delete key. Then type
+         in the new names</li>
+       </ul>
+      </alternative>
+      <alternative value="r">
+       <title>R Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. </p>
+       <p>If you don't still have the depression file open, here it is again, right-click
+        <link href="../webcontent/r/depression.RData"
+         target="self">here</link> and choose "Save Target As" to
+        download the file to your computer. Then find the downloaded
+        file and double-click it to open it in R.</p>
+       
+       <p>Now we will recode the variable gender with the labels
+        "Male" and "Female." Copy the following commands into R, one at a time or all at once.</p>
+
+       <code>depression$Gender = replace(depression$Gender,depression$Gender==1,'Female');</code>
+       <code>depression$Gender = replace(depression$Gender,depression$Gender==2,'Male');</code>
+       <code>depression$Gender</code>
+
+       <p>Remember, you may have to press &lt;Enter&gt; to execute the command.</p>
+       <p><em>Note:</em> Using R - To learn more about any command names you see in these notes,
+        enter <code>help(commandname)</code> or <code>?commandname</code> into R or check out the
+        resources listed under the Help menu. Here is an example:</p>
+       <p><code>?replace</code></p>
+      </alternative>
+      <alternative value="minitab">
+       <title>Minitab Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. Now we will recode the variable gender with the labels
+        "Male" and "Female." To do that in Minitab:</p>
+       <ul>
+        <li>Choose Data → Code → Numeric to text... This will bring up the Code&#8212;Numeric to
+         Text dialog box.</li>
+        <li>To fill in "Code data from columns": <ul>
+          <li>Double click on the variable you wish to recode in the left panel. We will choose
+           Gender.</li>
+         </ul>
+        </li>
+        <li>To fill in "Store coded data in columns": <ul>
+          <li>Double click on the column in which you wish to place the recoded variable. We will
+           choose Gender again, to replace the existing variable.</li>
+         </ul>
+        </li>
+        <li>To fill in "Original values" and "New": <ul>
+          <li>Enter 1 and "Female" in the first row of boxes</li>
+          <li>Enter 2 and "Male" in the second row of boxes</li>
+         </ul>
+        </li>
+        <li>Click OK. </li>
+       </ul>
+       <p>Notice that the column Gender now contains the meaningful labels "Female" and "Male" where
+        before it contained "1" and "2" codes.</p>
+      </alternative>
+      <alternative value="excel">
+       <title>Excel 2007 Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. Now we will recode the variable gender with the labels
+        "Male" and "Female." To do that in Excel:</p>
+       <ul>
+        <li>Click on the column header above the <code style="inline">Gender</code> column. In this
+         case, Gender is in column G, so click on the column header labeled <code style="inline"
+          >G</code>. This will select the entire column of gender values.</li>
+        <li>Choose <code style="inline">Find &amp; Select → Replace</code> from the <code
+          style="inline">Editing</code> group in the <code style="inline">Home</code> tab to bring
+         up the Find and Replace window.</li>
+        <li>In the first textbox labeled <code style="inline">Find what:</code>, enter "1".</li>
+        <li>In the second textbox labeled <code style="inline">Replace with</code>, enter
+         "Female".</li>
+        <li>Now click the button labeled <code style="inline">Replace All</code>. This will replace
+         all of the "1" values in our selected column with the word "Female".</li>
+        <li>Now do the same thing for males:</li>
+        <li>In the first textbox labeled <code style="inline">Find what:</code>, enter "2".</li>
+        <li>In the second textbox labeled <code style="inline">Replace with</code>, enter
+         "Male"</li>
+        <li>Click the <code style="inline">Replace All</code> button, and then click the <code
+          style="inline">Close</code> button.</li>
+       </ul>
+       <p>Notice that the column Gender now contains the meaningful labels "Female" and "Male" where
+        before it contained "1" and "2" codes.</p>
+      </alternative>
+      <alternative value="excel2003">
+       <title>Excel 2003 Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. Now we will recode the variable gender with the labels
+        "Male" and "Female." To do that in Excel:</p>
+       <ul>
+        <li>Click on the column header above the <code style="inline">Gender</code> column. In this
+         case, Gender is in column G, so click on the column header labeled <code style="inline"
+          >G</code>. This will select the entire column of gender values.</li>
+        <li>Choose <code style="inline">Edit → Replace</code> from the menu bar to bring up the Find
+         and Replace window.</li>
+        <li>In the first textbox labeled <code style="inline">Find what:</code>, enter "1".</li>
+        <li>In the second textbox labeled <code style="inline">Replace with</code>, enter
+         "Female".</li>
+        <li>Now click the button labeled <code style="inline">Replace All</code>. This will replace
+         all of the "1" values in our selected column with the word "Female".</li>
+        <li>Now do the same thing for males:</li>
+        <li>In the first textbox labeled <code style="inline">Find what:</code>, enter "2".</li>
+        <li>In the second textbox labeled <code style="inline">Replace with</code>, enter
+         "Male"</li>
+        <li>Click the <code style="inline">Replace All</code> button, and then click the <code
+          style="inline">Close</code> button.</li>
+       </ul>
+       <p>Notice that the column Gender now contains the meaningful labels "Female" and "Male" where
+        before it contained "1" and "2" codes.</p>
+      </alternative>
+      <alternative value="ti">
+       <title>TI Instructions</title>
+       <p>Often it is easier to use labels for categorical variables that are as close as possible
+        to the meanings of the categories. However, the TI can only handle categorical data with
+        each category represented by a number. Look at the data in row 1 for L1-L6 and GEND. </p>
+       <p> Interpret what this data represents for the first individual (row 1 in each list). Then
+        check your answers in this table: </p>
+       <image src="../../webcontent/eda_introlbd1.png"/>
+       <p>Note: Under L4, in the first row you probably see 36.143. In order to see all the decimal
+        places, highlight the 36.143, then look at the bottom of the screen. You should see
+        L4(1)=36.14300156.</p>
+      </alternative>
+     </alternatives>
+
+    </pullout>
+   </body>
+  </section>
+ </body>
+</workbook_page>

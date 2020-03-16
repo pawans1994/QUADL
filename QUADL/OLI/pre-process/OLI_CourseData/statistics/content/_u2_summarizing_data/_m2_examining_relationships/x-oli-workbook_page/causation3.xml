@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="causation3">
+    <head>
+        <title>Causation and Lurking Variables (3 of 5)</title>
+        <objref idref="recognize_association_causation"/>
+    </head>
+<body>
+   
+        <p>The next example will illustrate another way in which a lurking variable might interfere
+            and prevent us from reaching any causal conclusions.</p>
+        <example>
+            <title>SAT Test</title>
+            <p>For U.S. colleges and universities, a standard entrance examination is the SAT test.
+                The side-by-side boxplots below provide evidence of a relationship between the
+                student's country of origin (the United States or another country) and the student's
+                SAT Math score.</p>
+            <image style="block" src="../webcontent/causation4.gif" alt="A side-by-side boxplot.
+The vertical axis is labeled &quot;SAT Math Score&quot;, and it ranges from 450 to 800. The
+horizontal axis is labeled &quot;Country&quot; and has two categories, &quot;Other&quot; and
+&quot;US&quot;."/>
+            <p>The distribution of international students' scores is higher than that of U.S.
+                students. The international students' median score (about 700) exceeds the third
+                quartile of U.S. students' scores. Can we conclude that the country of origin is the
+                    <em>cause</em> of the difference in SAT Math scores, and that students in the
+                United States are weaker at math than students in other countries?</p>
+            <p>No, not necessarily. While it <em style="italic">might</em> be true that U.S.
+                students differ in math ability from other students&#8212;i.e. due to differences in
+                educational systems&#8212;we can't conclude that a student's country of origin is
+                the cause of the disparity. One important <em>lurking variable</em> that might
+                explain the observed relationship is the educational level of the two populations
+                taking the SAT Math test. In the United States, the SAT is a standard test, and
+                therefore a broad cross-section of all U.S. students (in terms of educational level)
+                take this test. Among all international students, on the other hand, only those who
+                plan on coming to the U.S. to study, which is usually a more selected subgroup, take
+                the test. </p>
+            <p>The following figure will help you visualize this explanation:</p>
+            <image style="block" src="../webcontent/causation5.gif" alt="A flowchart. We have two
+causes, one of which is &quot;Education level of SAT Takers&quot;. This is a &quot;Lurking variable
+&quot; The other cause is &quot;Nationality (X)&quot;. Both of these might be causes of &quot;
+SAT-Math score (Y)&quot;. We have observed an association between &quot;Nationality (X)&quot; and
+&quot;SAT-Math Score (Y)&quot;. Notice that between these two variables is also a suspected
+cause relationship."/>
+            <p>Here, the explanatory variable (X) <em>may</em> have a causal relationship with the
+                response variable (Y), but the lurking variable might be a contributing factor as
+                well, which makes it very hard to isolate the effect of the explanatory variable and
+                prove that it has a causal link with the response variable. In this case, we say
+                that the lurking variable is <em>confounded</em> with the explanatory variable,
+                since their effects on the response variable cannot be distinguished from each
+                other.</p>
+        </example>
+        <p>Note that in each of the above two examples, the lurking variable interacts differently
+            with the variables studied. In example 1, the lurking variable has an effect on both the
+            explanatory and the response variables, creating the illusion that there is a causal
+            link between them. In example two, the lurking variable is confounded with the
+            explanatory variable, making it hard to assess the isolated effect of the explanatory
+            variable on the response variable.</p>
+        <p>The distinction between these two types of interactions is not as important as the fact
+            that in either case, the observed association can be at least partially explained by the
+            lurking variable. The most important message from these two examples is therefore:
+                <em>An observed association between two variables is not enough evidence that there
+                is a </em>
+        </p>
+        <p>
+            <em>causal relationship between them.</em>
+        </p>
+        <p>In other words ... </p>
+        <theorem type="principle">
+            <statement>
+                <p>Association <em>does not</em> imply causation!</p>
+            </statement>
+        </theorem>
+    <wb:inline idref="lurking_variable_tutor" purpose="learnbydoing"/>
+    <wb:inline idref="lurking_variable_tutor_2" purpose="learnbydoing"/>
+   
+    
+        <activity idref="causation3lbd" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

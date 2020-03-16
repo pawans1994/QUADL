@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+  xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+  id="spread4">
+  <head>
+    <title>Measures of Spread (4 of 5)</title>
+    <objref idref="summarize_quantitiative_distribution"/>
+    <objref idref="relate_center_and_spread"/>
+  </head>
+  <body>
+
+    <section>
+      <title>Using the IQR to Detect Outliers</title>
+      <body>
+        <p>So far we have quantified the idea of center, and we are in the middle of the discussion
+          about measuring spread, but we haven't really talked about a method or rule that will help
+          us classify extreme observations as outliers. The IQR is used as the basis for a rule of
+          thumb for identifying outliers. </p>
+      </body>
+    </section>
+    <section>
+      <title>The 1.5(IQR) Criterion for Outliers</title>
+      <body>
+        <p> An observation is considered a suspected outlier if it is: </p>
+        <ul>
+          <li>below Q1 - 1.5(IQR) or</li>
+          <li>above Q3 + 1.5(IQR)</li>
+        </ul>
+        <p> The following picture illustrates this rule: </p>
+        <image style="block" src="../webcontent/spread10.gif"
+          alt="A line representing all of the data. The data is ordered so that the minimum point is the leftmost on
+the line and the maximum point is the rightmost. At the center of the line is M, the median, and to the left of M is Q1. Even farther to the left of Q1 is
+Q1-1.5(IQR). Points farther left than this are suspected outliers. To the right of M is Q3, and farther to the right is Q3+1.5(IQR). Points even farther than
+this are also suspected outliers."/>
+        <example>
+          <title>Best Actress Oscar Winners</title>
+          <p>We will continue with the Best Actress Oscar winners example (To see the data,
+              <activity_link idref="bestactressdataset_2013" target="new">click
+            here</activity_link>).</p>
+          <p>
+            <!--:WARNING: The element stats:data is no longer supported.-->
+            <!--This instance of the element has been converted to a pullout.-->
+            <formula style="block">34 34 27 37 42 41 36 32 41 33 31 74 33 49 38 61 21 41 26 80 42 29
+              33 36 45 49 39 34 26 25 33 35 35 28 30 29 61 32 33 45 29 62 22 44</formula>
+          </p>
+          <p>Recall that when we first looked at the histogram of ages of Best Actress Oscar
+            winners, there were 5 observations that looked like possible outliers:</p>
+          <image style="block" src="../webcontent/eda_examining_distributions_best_actress_histogram_outliers.jpg" width="800"
+            alt="A histogram of the Oscar winners in which for x=62 the frequency is 3 and for x=74 and x=80, 
+            the frequency is 1. Those points are thought to be possible outliers."/>
+          <p>We can now use the 1.5(IQR) criterion to check whether the 5 observations should
+            indeed be classified as outliers:</p>
+          <ul>
+            <li>For this example we found that <m:math overflow="scroll">
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mn>1</m:mn>
+                  <m:mo>=</m:mo>
+                  <m:mn>30.5</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mtext> </m:mtext>
+                  <m:mi>and</m:mi>
+                  <m:mtext> </m:mtext>
+                  <m:mtext> </m:mtext>
+                  <m:mi>Q</m:mi>
+                  <m:mn>3</m:mn>
+                  <m:mo>=</m:mo>
+                  <m:mn>42</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>5</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mo>⇒</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mi>IQR</m:mi>
+                  <m:mo>=</m:mo>
+                  <m:mn>11</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>5</m:mn>
+                </m:mrow>
+              </m:math>
+            </li>
+            <li>
+              <m:math overflow="scroll">
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mn>1</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mo>−</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>1</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>5</m:mn>
+                  <m:mfenced open="(" close=")">
+                    <m:mi>IQR</m:mi>
+                  </m:mfenced>
+                  <m:mtext> </m:mtext>
+                  <m:mo>=</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>30.5</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mo>−</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mfenced open="(" close=")">
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>.</m:mo>
+                      <m:mn>5</m:mn>
+                    </m:mrow>
+                  </m:mfenced>
+                  <m:mfenced open="(" close=")">
+                    <m:mrow>
+                      <m:mn>11</m:mn>
+                      <m:mo>.</m:mo>
+                      <m:mn>5</m:mn>
+                    </m:mrow>
+                  </m:mfenced>
+                  <m:mtext> </m:mtext>
+                  <m:mo>=</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>13</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>25</m:mn>
+                </m:mrow>
+              </m:math>
+            </li>
+            <li>
+              <m:math overflow="scroll">
+                <m:mrow>
+                  <m:mi>Q</m:mi>
+                  <m:mn>3</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mo>+</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>1</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>5</m:mn>
+                  <m:mfenced open="(" close=")">
+                    <m:mi>IQR</m:mi>
+                  </m:mfenced>
+                  <m:mtext> </m:mtext>
+                  <m:mo>=</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>42</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>5</m:mn>
+                  <m:mtext> </m:mtext>
+                  <m:mo>+</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mfenced open="(" close=")">
+                    <m:mrow>
+                      <m:mn>1</m:mn>
+                      <m:mo>.</m:mo>
+                      <m:mn>5</m:mn>
+                    </m:mrow>
+                  </m:mfenced>
+                  <m:mfenced open="(" close=")">
+                    <m:mrow>
+                      <m:mn>11</m:mn>
+                      <m:mo>.</m:mo>
+                      <m:mn>5</m:mn>
+                    </m:mrow>
+                  </m:mfenced>
+                  <m:mtext> </m:mtext>
+                  <m:mo>=</m:mo>
+                  <m:mtext> </m:mtext>
+                  <m:mn>59</m:mn>
+                  <m:mo>.</m:mo>
+                  <m:mn>25</m:mn>
+                </m:mrow>
+              </m:math>
+            </li>
+          </ul>
+          <p>The 1.5(IQR) criterion tells us that any observation that is below 13.25 or above 59.25
+            is considered a suspected outlier.</p>
+          <p>We therefore conclude that the observations 61, 61, 62, 74 and 80 should be flagged as
+            suspected outliers in the distribution of ages. Note that since the smallest observation
+            is 21, there are no suspected low outliers in this distribution.</p>
+        </example>
+      </body>
+    </section>
+    <!--<activity idref="spread4selfassess" purpose="didigetthis"/>-->
+    <wb:inline idref="u1_m1_spread4_tutor1" purpose="didigetthis"/>
+    <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If not, then
+      click the link below for some additional practice.</p>
+    <activity idref="spread4selfassess_02" purpose="didigetthis"/>
+
+  </body>
+</workbook_page>

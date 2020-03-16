@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_discreteprobdist5_tutor1">
+   <title>Tutor</title>
+  <page> 
+   <question id="q1">
+      <body>
+         <p>What is the probability that the salesperson makes at least one sale in an hour?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">12/50</choice>
+         <choice value="Res2">22/50</choice>
+         <choice value="Res3">28/50</choice>
+         <choice value="Res4">40/50</choice>
+         <choice value="Res5">10/50</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. 12/50 is P(X = 1), the probability of exactly one sale. We are
+                  looking for the probability of at least one sale, which is P(X ≥ 1). Please try
+                  again.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. 22/50 is P(X ≤ 1), the probability of no more than
+                  one sale. We are looking for the probability of at least one sale, which is P(X ≥
+                  1). Please try again.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. 28/50 is P(X &gt; 1), the probability of more than one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. The probability of at least one sale is P(X ≥ 1) = P(X = 1) + P(X =
+                  2) + P(X = 3) + P(X = 4) = (12 + 12 + 10 + 6) / 50 = 40/50, (using the addition
+                  principle). Alternatively (and more efficiently), you can use complements and the
+                  fact that the complementary event of X ≥ 1 is X = 0. Therefore, P(X ≥ 1) = 1 - P(X
+                  = 0) = 1 - 10/50 = 40/50.</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. 10/50 is P(X &lt; 1), which in this case is P(X = 0), the probability of less than one sale. We are looking for the probability of at least one sale, which is P(X ≥ 1). Please try again.</feedback>
+         </response>
+      </part>
+   </question>
+  </page>  
+</assessment>

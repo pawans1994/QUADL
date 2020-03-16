@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="_u4_m3_checkpoint4_stat_reasoning" max_attempts="3" recommended_attempts="1">
+    <title>Random Variables Checkpoint</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em>click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/random_variables_checkpoint_solutions.pdf">Solution
+            Set</link>.</p>
+    </content>-->
+    <section id="assess_06_examscores">
+        <content>
+            <p>These questions refer to the following information: </p>
+            <p>Suppose the scores on an exam are normally distributed with mean &#x3BC; = 75
+                points, and standard deviation &#x3C3; = 8 points. </p>
+        </content>
+        <multiple_choice id="prob3-10" select="single">
+            <body>The instructor wanted to "pass" anyone who scored above 69. What proportion of
+                exams will have passing scores? </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">0.25 </choice>
+                <choice value="B">0.75 </choice>
+                <choice value="C">0.2266 </choice>
+                <choice value="D">0.7734 </choice>
+                <choice value="E">−0.75 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. You want to find the proportion of exams
+                        that have above 69 points. This is equivalent to finding the probability
+                        that a given exam has at least 69 points.<!-- Consider the remaining options.
+                        (D) is the right answer. --></feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. You want to find the proportion of exams that have above
+                        69 points. This is equivalent to finding the probability that a given exam
+                        has at least 69 points. </feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion
+                        of exams that will not have scores above 69 points. You want to find the
+                        proportion of exams that will have scores above 69 points. <!--Consider the
+                        remaining options. (D) is the right answer. --></feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. Let the random variable <em style="bold">X</em>represent
+                        the score on the exam. We are given that <em style="bold">X</em>is normal,
+                        with a mean of 75 and standard deviation of 8, and need to find P(X &#60;
+                        69). <image style="block" src="../webcontent/6_formula4.gif"/>
+                    </feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. The z-score for 69 points is −0.75. However, this is not the proportion of exams that passed. Remember that a proportion can’t be negative. You should find P(Z > −0.75).<!-- Consider the remaining options. (D) is the right answer. --></feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob3-11" select="single">
+            <body>What is the exam score for an exam whose z-score is 1.25? </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">65 </choice>
+                <choice value="B">75 </choice>
+                <choice value="C">85 </choice>
+                <choice value="D">0.8944 </choice>
+                <choice value="E">0.1056 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Since the z-score is positive, the exam
+                        score associated with this z-score should be greater than the mean exam
+                        score.<!-- Consider the remaining options. (C) is the right answer. --></feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. Since the z-score is positive, the exam
+                        score associated with this z-score should be greater than the mean exam
+                        score.<!-- Consider the remaining options. (C) is the right answer. --></feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. A z-score of 1.25 means that the actual exam score is 1.25
+                        standard deviations above the mean, and therefore the exam score we are
+                        looking for is: mean + 1.25 * SD = 75 + 1.25 * 8 = 85. </feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion
+                        of exams that have an associated z-score of at most 1.25. However, you
+                        should find the exam score associated with a z-score of 1.25. <!--Consider the
+                        remaining options. (C) is the right answer.--> </feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion
+                        of exams that have an associated z-score of at least 1.25. However, you
+                        should find the exam score associated with a z-score of 1.25. <!--Consider the
+                        remaining options. (C) is the right answer. --></feedback>
+                </response>
+            </part>
+        </multiple_choice>
+        <multiple_choice id="prob3-12" select="single">
+            <body>Suppose that the top 4% of the exams will be given an <em style="bold"
+                        >A<sup>+</sup></em>. In order to be given an <em style="bold"
+                    >A<sup>+</sup></em>, an exam must earn at least what score? </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">61 </choice>
+                <choice value="B">73 </choice>
+                <choice value="C">0.516 </choice>
+                <choice value="D">77 </choice>
+                <choice value="E">89 </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The top 4% of exam scores should have a
+                        minimum exam score of at least the mean of all exam scores. <!--Consider the
+                        remaining options. (E) is the right answer. --></feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. The top 4% of exam scores should have a
+                        minimum exam score of at least the mean of all exam scores. <!--Consider the
+                        remaining options. (E) is the right answer. --></feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems that you have found the proportion
+                        of exams that have a score of at most 79 points. However, you should find
+                        the minimum exam score that would allow an exam to earn an A<sup>+</sup>. <!--Consider the remaining options. (E) is the
+                        right answer. --></feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. It seems that you have found the minimum
+                        exam score in order for an exam to be in the top 40% of all exam scores.
+                        However, you should find the minimum exam score that would allow an exam to
+                        earn an A<sup>+</sup>. <!--Consider the remaining options.
+                        (E) is the right answer. --></feedback>
+                </response>
+                <response match="E" score="10">
+                    <feedback>Correct. We need to find the exam score such that the probability of
+                        getting a score above it is 0.04. Equivalently (and more practically, given
+                        the way our table works) we need to find the exam score such that the
+                        probability of getting a score below it is 1 − 0.04 = 0.96. Looking in the
+                        body of the table for the table entry that is closest to 0.96 (which is
+                        0.9599) we learn that the exam score that we are looking for has a z-score
+                        of 1.75. This means that the exam score that we are looking for is 1.75 * SD
+                        above the mean, and therefore is: 75 + 1.75 * SD = 75 + 14 = 89. </feedback>
+                </response>
+            </part>
+        </multiple_choice>
+    </section>
+
+</assessment>

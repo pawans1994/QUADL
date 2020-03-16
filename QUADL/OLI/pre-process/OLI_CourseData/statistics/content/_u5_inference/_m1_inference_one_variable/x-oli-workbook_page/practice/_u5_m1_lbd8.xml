@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd8">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you a better sense of the p-value and, in
+            particular, help strengthen your intuition about how it measures the evidence against
+            the null hypothesis.</p>
+        <p>
+            <em>Background:</em>
+        </p>
+        <p>In this activity, we use example 2. Recall that we just completed this example and
+            summarized it using the following figure:</p>
+        <image style="block" src="../../webcontent/image276.gif"
+            alt="The entire population is represented as a large circle, representing Students at the college. We are interested in p for this population,
+which is the proportion which use marijuana. H_0: p = 0.157, H_a: p &gt; 0.157. From the population, we
+generate a sample of 100 students and find that 19 use marijuana. Our conditions are met, and we
+find that p-hat = 19/100 = 0.19, z = 0.91, and p-value = 0.182. We conclude that H_0 cannot be rejected."/>
+        <p>We've seen that the evidence the data provided&#8212;19 marijuana users out of a sample
+            of 100&#8212;is not enough for us to conclude that the proportion of marijuana users in
+            the college is higher than the national figure (0.157). An interesting question,
+            therefore, is: How many marijuana users out of 100 should we have found for it to be
+            enough evidence to reject H<sub>o</sub>? 19 was not enough, but what would have been
+            enough? 21? 25?</p>
+        <wb:inline idref="u4_m2_testprop8_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+
+which is the proportion which use marijuana. H_0: p = 0.157, H_a: p &gt; 0.157. From the population, we
+generate a sample of 100 students and find that 19 use marijuana. Our conditions are met, and we
+find that p-hat = 19/100 = 0.19, z = 0.91, and p-value = 0.182. We conclude that H_0 cannot be rejected."/>
+        <p>We've seen that the evidence the data provided&#8212;19 marijuana users out of a sample
+            of 100&#8212;is not enough for us to conclude that the proportion of marijuana users in
+            the college is higher than the national figure (0.157). An interesting question,
+            therefore, is: How many marijuana users out of 100 should we have found for it to be
+            enough evidence to reject H<sub>o</sub>? 19 was not enough, but what would have been
+            enough? 21? 25?</p>
+        <wb:inline idref="u4_m2_testprop8_lbd_tutor1" purpose="learnbydoing"/>
+
+
+<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="661">
+<param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor8a.xml</param>
+<param name="problem_name">_u5_m1_lbdtutor8a</param>
+</flash>-->
+
+
+        <p>The table below will help you check your intuition. In the boldfaced row, we see our
+            finding that when 19 out of 100 students are found to be users of marijuana, the test
+            statistic is z = 0.91 (the table provides the non-rounded value), and the p-value is
+            roughly 0.182 (indicating that 19 out of 100 users of marijuana does not provide enough
+            evidence to conclude that p > 0.157).</p>
+        <table>
+            <tr>
+                <th>Data: x Use Marijuana</th>
+                <th>Test Statistic</th>
+                <th>p-Value Associated with x</th>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>−0.19241</td>
+                <td>0.576291</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>0.08246</td>
+                <td>0.467139</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>0.35734</td>
+                <td>0.360419</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>0.63221</td>
+                <td>0.263623</td>
+            </tr>
+            <tr>
+                <td><em style="bold">19</em></td>
+                <td><em style="bold">0.90709</em></td>
+                <td><em style="bold">0.182180</em></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>1.18197</td>
+                <td>0.118610</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>1.45684</td>
+                <td>0.072580</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>1.73172</td>
+                <td>0.041662</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>2.00659</td>
+                <td>0.022397</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>2.28147</td>
+                <td>0.011260</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>2.55634</td>
+                <td>0.005289</td>
+            </tr>
+        </table>
+
+        <p>The row below the boldfaced row shows the test statistic and p-value results had we found
+            that 20 out of 100 students were marijuana users: the test statistic increases to
+            roughly 1.18 (since 20/100 = 0.2 is further away from 0.157 than 19/100 = 0.19) and the
+            p-value decreases to roughly 0.12 (since 20 out of 100 marijuana users provides stronger
+            evidence than 19 out of 100).</p>
+        <p>The table shows the individual results for 15 through 25 out of 100 users of marijuana.
+            Use the information provided in the table to answer the questions below.</p>
+
+        <wb:inline idref="u4_m2_testprop8_lbd_tutor2" purpose="learnbydoing"/>
+        <!--
+
+
+        <p>The table below will help you check your intuition. In the boldfaced row, we see our
+            finding that when 19 out of 100 students are found to be users of marijuana, the test
+            statistic is z = 0.91 (the table provides the non-rounded value), and the p-value is
+            roughly 0.182 (indicating that 19 out of 100 users of marijuana does not provide enough
+            evidence to conclude that p > 0.157).</p>
+        <table>
+            <tr>
+                <th>Data: x Use Marijuana</th>
+                <th>Test Statistic</th>
+                <th>p-Value Associated with x</th>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>−0.19241</td>
+                <td>0.576291</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>0.08246</td>
+                <td>0.467139</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>0.35734</td>
+                <td>0.360419</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>0.63221</td>
+                <td>0.263623</td>
+            </tr>
+            <tr>
+                <td><em style="bold">19</em></td>
+                <td><em style="bold">0.90709</em></td>
+                <td><em style="bold">0.182180</em></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>1.18197</td>
+                <td>0.118610</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>1.45684</td>
+                <td>0.072580</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>1.73172</td>
+                <td>0.041662</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>2.00659</td>
+                <td>0.022397</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>2.28147</td>
+                <td>0.011260</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>2.55634</td>
+                <td>0.005289</td>
+            </tr>
+        </table>
+
+        <p>The row below the boldfaced row shows the test statistic and p-value results had we found
+            that 20 out of 100 students were marijuana users: the test statistic increases to
+            roughly 1.18 (since 20/100 = 0.2 is further away from 0.157 than 19/100 = 0.19) and the
+            p-value decreases to roughly 0.12 (since 20 out of 100 marijuana users provides stronger
+            evidence than 19 out of 100).</p>
+        <p>The table shows the individual results for 15 through 25 out of 100 users of marijuana.
+            Use the information provided in the table to answer the questions below.</p>
+
+        <wb:inline idref="u4_m2_testprop8_lbd_tutor2" purpose="learnbydoing"/>
+
+<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="376">
+<param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor8b.xml</param>
+<param name="problem_name">_u5_m1_lbdtutor8b</param>
+</flash>-->
+        <wb:inline idref="u4_m2_testprop8_lbd_tutor3" purpose="learnbydoing"/>
+        <!--
+<flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="331">
+<param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor8c.xml</param>
+<param name="problem_name">_u5_m1_lbdtutor8c</param>
+</flash>-->
+    </body>
+</workbook_page>

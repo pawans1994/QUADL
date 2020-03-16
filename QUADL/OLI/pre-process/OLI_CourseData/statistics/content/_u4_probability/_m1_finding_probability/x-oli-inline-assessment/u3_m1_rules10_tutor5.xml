@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author version 1.1-->
+<assessment id="u3_m1_rules10_tutor5">
+	<title>Tutor</title>
+	<page>
+		<question id="q1">
+			<!--LO:LO: When appropriate, use tools such as Venn diagrams or probability tables as aids for finding probabilities.Sub-objective: probtools        Probability tools  -->
+			<body>What is the probability that only the dining room alarm rings? Pick the correct
+				symbolic representation.</body>
+			<multiple_choice shuffle="false">
+				<choice value="A">P(D) </choice>
+				<choice value="B">P(not B)</choice>
+				<choice value="C">P(D and "not B")</choice>
+				<choice value="D">None of these</choice>
+			</multiple_choice>
+			<part>
+				<response match="A" score="0">
+					<feedback>Incorrect. P(only D) is different from P(D) because P(D)
+						includes the situation in which both alarms ring (dining room alarm rings
+						and bedroom alarm rings). We want the probability that only the dining room
+						alarm rings without the bedroom alarm.</feedback>
+				</response>
+				<response match="B" score="0">
+					<feedback>Incorrect. P(not B) includes situations in which the dining room
+						alarm rings and situations in which the dining room alarm does not ring.
+					</feedback>
+				</response>
+				<response match="C" score="10">
+					<feedback>Correct. If only the dining room alarm rings, then D and "not B" both
+						occur.</feedback>
+				</response>
+				<response match="D" score="0">
+					<feedback>Incorrect. We want the probability that only the dining room
+						alarm rings. So the dining room alarm rings but the bedroom alarm does
+						not.</feedback>
+				</response>
+				<hint>There is a difference between "the dining room alarm rings" and "only the
+					dining room alarm rings."</hint>
+				<hint>If only the dining room alarm rings, then the dining room alarm rings and the
+					bedroom alarm does not ring. </hint>
+			</part>
+		</question>
+	</page>
+</assessment>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd12">
+    <head>
+        <title>Case Q→Q</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in testing whether the data
+            provide evidence of a significant linear relationship, and in verifying that the basic
+            conditions under which the results of such a test are reliable are met.</p>
+        <p>Recall the example from the previous activity:</p>
+        <p>A method for predicting IQ as soon as possible after birth could be important for early
+            intervention in cases such as brain abnormalities or learning disabilities. It has been
+            thought that greater infant vocalization (for instance, more crying) is associated with
+            higher IQ. In 1964, a study was undertaken to see if IQ at 3 years of age is associated
+            with amount of crying at newborn age. In the study, 38 newborns were made to cry after
+            being tapped on the foot and the number of distinct cry vocalizations within 20 seconds
+            was counted. The subjects were followed up at 3 years of age and their IQs were
+            measured.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                        href="../../../webcontent/r/baby-crying-IQ.RData" target="self"
+                        >here</link> and choose "Save Target As" to download the file to your computer. Then find the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>baby</code>. Enter the command <code>baby</code> to see the data. The two variables in the data frame are <code>cry.count</code> and <code>IQ</code>.</p>
+                    
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/baby-crying-IQ.RData" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        R.</p>
+                    <p>The data have been loaded into the data frame <code>baby</code>. Enter the command
+                            <code>baby</code> to see the data. The two variables in the data frame
+                        are <code>cry.count</code> and <code>IQ</code>. </p>
+                    <p>To carry out the test, enter the following command into R:</p>
+                    <code>model=lm(baby$IQ~baby$cry.count)</code>
+                    <code>summary(model)</code>
+                    <p>The results include the following:</p>
+                    <ul>
+                        <li>estimates and standard errors of the intercept and slope</li>
+                        <li>t-test statistic and p-value to test the two sided alternative β_1≠0 as
+                            well as a test for the intercept not equal to zero which we generally
+                            ignore</li>
+                        <li> the R<sup>2</sup> value <code>(Multiple R-squared)</code> which is equivalent to the
+                            correlation squared and measure the proportion of variability in the
+                            response explained by the model</li>
+                        <li>the results of an equivalent test for the significance of the slope using an ANOVA approach</li>
+                      
+                    </ul>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file -> on my computer.</em></li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/baby-crying-IQ.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: a dialog box will likely appear that says "A copy of the
+                        content of this file will be added to the current project"&#8212;just click
+                        "OK."</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    
+                    <p>To open the dataset, click <link
+                        href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                        >here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                </alternative>
+            <!--      <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/baby-crying-IQ.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Excel.</p>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the baby crying and IQ data loaded, right-click
+                            <link href="../../../webcontent/ti/baby-crying-IQ.8xg" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For
+                        instructions on how to connect your calculator to your computer and transfer
+                        a file, click <activity_link idref="ti_instructions" target="new"
+                            >here</activity_link>.</p>
+
+                    <p>L1 Cry Count </p>
+                    <p>L2 IQ </p>
+                    <p>As you can see, our data consist of two variables: cry count and IQ. </p>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <p>We would now like to test whether the observed (weak-to-moderate) linear relationship
+            between cry count and IQ is significant (in other words, we would like to carry out the
+            "t-test for the slope" for this example) </p>
+        <wb:inline idref="u4_m4_qq2_lbd2_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m4_qq2_lbd2_tutor2" purpose="learnbydoing"/>
+        <p>Now carry out the test.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To carry out the test, enter the following command into R:</p>
+                    <ul style="none">
+                        <li><code>model=lm(baby$IQ~baby$cry.count)</code></li>
+                        <li><code>summary(model)</code></li>
+                    </ul>
+                    <p>The results include the following:</p>
+                    <ul>
+                        <li>Estimates and standard errors of the intercept and slope</li>
+                        <li>t-Test statistic and p-value to test the two sided alternative β_1≠0 as well as a test for the intercept not equal to zero, which we generally ignore</li>
+                        <li>The R^2 value (multiple R-squared), which is equivalent to the correlation squared, and measure of the proportion of variability in the response explained by the model</li>
+                        <li>The results of an equivalent test for the significance of the slope using an ANOVA approach</li>
+                    </ul>
+                    <!--<p>To carry out the test, enter the following command into R: </p>
+                    <ul>
+                        <li><code>summary(lm(IQ~cry.count,baby))</code></li>
+                    </ul>-->
+                    
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>In StatCrunch:</p>
+                    <ul>
+                        <li>Choose: Stat → Regression → Simple Linear </li>
+                        <li>Select explanatory and response variables</li>
+                        <li>Press Compute!
+                        </li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>In Minitab:</p>
+                    <ul>
+                        <li>Choose: Stat → Regression → Regression.</li>
+                        <li>Enter the response variable and explanatory variable (predictor).</li>
+                        <li>Click "OK." </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <ul>
+                        <li>Choose: <code style="inline">Data Analysis</code> from the <code
+                                style="inline">Analysis</code> group in the <code style="inline"
+                                >Data</code> tab.</li>
+                        <li>In the pop-up window, choose <code style="inline">Regression</code> and
+                            click <code style="inline">OK</code>.</li>
+                        <li>Enter the ranges for the response and explanatory (predictor) variables
+                            next to <code style="inline">Input Y Range</code> and <code
+                                style="inline">Input X Range</code>.</li>
+                        <li>Click <code style="inline">OK</code>.</li>
+                    </ul>
+                </alternative>
+               <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <ul>
+                        <li>Choose: <code style="inline">Tools → Data Analysis →
+                            Regression</code>.</li>
+                        <li>Enter the ranges for the response and explanatory (predictor) variables
+                            next to <code style="inline">Input Y Range</code> and <code
+                                style="inline">Input X Range</code>.</li>
+                        <li>Click <code style="inline">OK</code>.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Linear Regression T-Test</em></p>
+                    <ul>
+                        <li>For TI 83: Choose <code style="inline">STAT/TESTS/E:LinRegTTest</code>. </li>
+                        <li>For TI 84: Choose <code style="inline"
+                            >STAT/TESTS/F:LinRegTTest</code>.</li>
+                        <li>Choose the appropriate <code style="inline">Xlist</code> (L1) and <code
+                                style="inline">Ylist</code> (L2). <ul>
+                                <li>To access one of the built-in lists, such as L3, press <code
+                                        style="inline">2ND/ 3</code>. </li>
+                                <li>To access a list you named, use the <code style="inline"
+                                        >LIST</code> menu. Press <code style="inline"
+                                        >2nd/LIST/NAMES/</code> choose appropriate list. </li>
+                            </ul></li>
+                        <li>Set <code style="inline">Freq:1</code> (the number one).</li>
+                        <li>Choose the relevant form of the alternative hypothesis (&#8800;, &lt;,
+                            &gt;) </li>
+                        <li>You can leave <code style="inline">RegEQ:</code> blank.</li>
+                        <li>Arrow down and choose <code style="inline">CALCULATE</code>. </li>
+                        <li>You should see: <image src="../../webcontent/image516.jpg"
+                                alt="LinRegTest
+    Xlist: L_1
+    Ylist: L_2
+    Freq: 1
+    &beta; &amp; &rho;: &ne; 0    &lt; 0     &gt; 0
+    RegEQ: Calculate"
+                            />
+                        </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m4_qq2_lbd2_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

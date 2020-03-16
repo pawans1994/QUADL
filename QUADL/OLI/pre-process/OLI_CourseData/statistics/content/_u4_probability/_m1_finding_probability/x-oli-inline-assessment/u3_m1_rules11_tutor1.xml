@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules11_tutor1">
+   <title>Tutor</title>
+   <content>
+      <p>Candace is applying to two colleges, Ross College and the more prestigious Cirus College.
+         The probability table below represents her belief about whether she will be accepted. We
+         use the following notation:</p>
+      <p>R&#8212;the event of being accepted to Ross College</p>
+      <p>C&#8212;the event of being accepted to Cirus College</p>
+      <image src="../webcontent/dig010.gif" alt="table of probabilities of acceptance to two different colleges"/>
+   </content>
+   <question id="q1">
+      <body>
+         <p>What does Candace believe is the probability that she'll be accepted to both
+            colleges?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.23</choice>
+         <choice value="Res2">0.77</choice>
+         <choice value="Res3">1.15</choice>
+         <choice value="Res4">0.38</choice>
+         <choice value="Res5">0.40</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P("not R" and "not C") = 0.23 is the probability that she is
+               not accepted at either college.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. You may have applied the complement rule and calculated 1 −
+               P("not R" and "not C") = 1 − 0.23 = 0.77. But this is incorrect because the complement
+               of the event ("not R" and "not C") is "accepted by at least one of the two colleges,"
+               not "accepted at both colleges."</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. The probability of an event can never be greater than
+               1.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. P(R and C) = 0.38 is the probability that she is accepted by Ross
+               and by Cirus. </feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. 0.40 is P(C), the probability that she gets accepted by
+               Cirus. The probability that she gets accepted by both is included in this event, so
+               the probability is less than 0.40.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>What does Candace believe is the probability that she will only get into Ross College?
+         </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.02</choice>
+         <choice value="Res2">0.37</choice>
+         <choice value="Res3">0.38</choice>
+         <choice value="Res4">0.60</choice>
+         <choice value="Res5">0.75</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. You have identified P("not R" and C), which is the probability
+               that she will only get into Cirus.</feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. The probability that she will only get into Ross is P(R and "not
+               C").</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. You have identified P(R and C), which is the probability that
+               she will only get into both Ross and Cirus.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. You may have identified P(not C), which is the probability
+               that she will not get into Cirus. This is incorrect because it includes the situation
+               in which she gets into Ross and the situation in which she does not get into Ross.
+            </feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. You have identified P(R), which is the probability that she
+               will get into Ross. This is incorrect because it includes the situation in which she
+               also gets into Cirus.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q3">
+      <body>
+         <p>What does Candace believe is the probability that she will only get into Cirus College?
+         </p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.02</choice>
+         <choice value="Res2">0.25</choice>
+         <choice value="Res3">0.37</choice>
+         <choice value="Res4">0.38</choice>
+         <choice value="Res5">0.40</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback>Correct. The probability that she will only get into Cirus is P("not R" and
+               C).</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. You have identified P(not R), which is the probability that
+               she will not get into Ross. This is incorrect because it includes the situation in
+               which she gets into Cirus and the situation in which she does not get into Cirus.
+            </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>You have identified P(R and "not C"), which is the probability that she will
+               only get into Ross.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. You have identified P(R and C), which is the probability that
+               she will only get into both Ross and Cirus. </feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. You have identified P(C), which is the probability that she
+               will get into Cirus. This is incorrect because it includes the event "R and C."
+            </feedback>
+         </response>
+      </part>
+   </question>
+
+   <question id="q4">
+      <body>
+         <p>What does Candace believe is the probability that she'll be accepted to exactly one of
+            the colleges?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.38</choice>
+         <choice value="Res2">0.77</choice>
+         <choice value="Res3">0.39</choice>
+         <choice value="Res4">0.62</choice>
+         <choice value="Res5">0.37</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. 0.38 is P(R and C), the probability that she gets into both
+               colleges. This is incorrect because the outcome (R and C) is not in the sample space
+               for the event "accepted to exactly one college." What outcomes describe "accepted to
+               <em style="italic">exactly one</em> college"?</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback> Incorrect. You may have applied the complement rule and calculated 1 −
+               P("not R" and "not C) = 1 − 0.23 = 0.77. But this is incorrect because the complement
+               of the event ("not R" and "not C") is "accepted by <em style="italic">at least</em> one of the two colleges,"
+               not "accepted by exactly one of the two colleges."</feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. If Candace is accepted to exactly one college, then she is accepted
+               to only Ross or only Cirus. These are disjoint events, so P(accepted to exactly one
+               college) = P(R and "not C") + P("not R" and C) = 0.37 + 0.02 = 0.39.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. You may have applied the complement rule and calculated 1 −
+               P(R and C) = 1 − 0.38 = 0.62. This is incorrect because the complement of the event
+               (R and C) is "accepted by <em style="italic">at most</em> one college," not "accepted by exactly one of the
+               two colleges."</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. 0.37 is P(R and "not C"), the probability that she gets into
+               Ross only. There is another outcome you need to consider. </feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q5">
+      <body>
+         <p>What does Candace believe is the probability that she'll be accepted to at least one of
+            the colleges (i.e., to Ross College or Cirus College or both)?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.77</choice>
+         <choice value="Res2">1.0</choice>
+         <choice value="Res3">0.38</choice>
+         <choice value="Res4">1.53</choice>
+         <choice value="Res5">0.62</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="10">
+            <feedback> Correct. Since we are using a probability table, the most obvious approach
+               is to think of the sample space of the event "accepted by at least one of the
+               colleges" as {R and C, R and "not C", "not R" and C}, which are disjoint events. So
+               add 0.38 + 0.37 + 0.02 = 0.77. Another strategy views "accepted by at least one of
+               the colleges" as the complement of the event ("not R" and "not C"). Using the
+               complement rule, 1 − P("not R" and "not C") = 1 − 0.23 = 0.77. You can also use the
+               General Addition Rule: P(R) + P(C) − P(R and C) = 0.75 + 0.40 − 0.38 =
+               0.77.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. The probability cannot be 1 because there is one outcome in
+               the table that is not in the sample space for the event "accepted by at least one
+               college."</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. 0.38 is P(R and C), the probability that she gets into both
+               colleges. This is incorrect because the outcome (R and C) is only part of the sample
+               space for the event "accepted to at least one college." What other outcomes will be
+               part of the sample space?</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. The probability of an event can never be greater than 1. You
+               may have tried to calculate the probability of "Ross College or Cirus College or
+               both" by adding P(R) + P(C) + P(R and C). This is incorrect since P(R and C) is
+               included in the other two probabilities. Recall that "or" statements with events that
+               are not disjoint require use of the General Addition Rule. </feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. You may have applied the complement rule and calculated 1 –
+               P(R and C) = 1 − 0.38 = 0.62. This is incorrect because the complement of the event
+               (R and C) is "accepted by <em style="italic">at most</em> one college," not "accepted by at least one of
+               colleges." The complement rule will work here if you correctly identify the
+               complement events.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q6">
+      <body>
+         <p>What does Candace believe is the probability that she'll be accepted by neither of the
+            colleges?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">0.85</choice>
+         <choice value="Res2">0.23</choice>
+         <choice value="Res3">0.62</choice>
+         <choice value="Res4">0.39</choice>
+         <choice value="Res5">0.38</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback> Incorrect. You may have interpreted "accepted by neither college" as
+               the event ("not C" or "not R") and calculated P(not C) + P(not R) = 0.60 + 0.25, but
+               this is incorrect because "accepted by neither college" is the event ("not C" <em style="italic">and</em>
+               "not R").</feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. "Accepted by neither college" is the event ("not C" and "not R"),
+               which is 0.23.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. You may have interpreted "accepted by neither college" as the
+               event ("not C" or "not R") and calculated P(not C) + P(not R) − P("not C" and "not R)
+               = 0.60 + 0.25 − 0.23, but this is incorrect because "accepted by neither college" is
+               the event ("not C" AND "not R"). </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. Did you add 0.37 and 0.02? If so, you calculated the probability
+               that Candace is accepted at only one college (only R or only C). You need to
+               calculate the probability that she is not accepted at either college. </feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. 0.38 is P(C and R), which is the probability that she is accepted by both colleges. </feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

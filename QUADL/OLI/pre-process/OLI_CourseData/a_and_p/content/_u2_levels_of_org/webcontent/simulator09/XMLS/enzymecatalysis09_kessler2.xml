@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="EnzymeCatalysis" version="1" simulatorVersion="09" date="12/15/08">
+    <name>&lt;b&gt;Enzyme Catalysis&lt;/b&gt;</name>
+    <intro filename=""/>
+    <debugger state="on"/> 
+    <steps>
+        <step id="create">
+            <actions>
+                <action event="create" name="theexplainer"  url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+                <action event="create" name="thegrapher" url="tools/graphVariableAvgOverTimeMsg09.swf" x="350" y="375" xscale="1" yscale="1" /> 
+                <action event="create" name="beaker" url="swfs/beakerplain.swf"  x="350" y="5" xscale="2"  yscale="1.5"/> 
+                <action event="create" name="box1" url="tools/ligandBox09.swf"  x="358" y="31" xscale=".8"  yscale=".8"/>
+                <action event="create" name="StoPCast" url="swfs/ActivationcastKey.swf"  x="350" y="335" xscale="1" yscale="1" />
+                <action event="create" name="StoPequation" url="swfs/Activationequation.swf"  x="340" y="365" xscale="1" yscale="1" />
+                <action event="settimer" timer='12' advance='yes' resettimer='0' /><!--pause briefly to let the objects load, then continue-->
+                
+            </actions>
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title> </title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Simulation of Enzyme Catalysis with a Beaker"
+                    </text>                  
+                </object>
+            </objects>
+            <nextbutton text="next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="Uncatalyzed Reaction">
+            <actions>
+                <action event="record light"/>
+                <action event="initialize" name="opener" />
+                <action event="create" name="Energydiagram1" url="swfs/ActivationEnergy.swf"  x="520" y="300" xscale=".9" yscale=".9" />
+            </actions>
+            <objects tutor="">
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible">
+                    <title>Uncatalyzed Reaction </title>
+                    <text>In order to understand why enzyme catalyzed reactions are important we need to understand the difference in the energy diagrams that exists between a uncatalyzed and catalyzed reaction.
+                        
+In the simulation to the right you see the uncatalyzed reaction in which S is the substrate and P is the product.
+                        
+Press "Continue" to see the simulation run.
+                    </text>                  
+                </object>
+                <object name="StoPequation" state="hilight" action="1" />
+                <object name="StoPCast" state="visible" />
+            </objects>
+            <nextbutton text="Continue" action="continue" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="Uncatalyzed Simulation">
+            <actions>
+                <action event="record light"/>
+                <action event="initialize" name="box1" params="leftBorder=10,rightBorder=390,topBorder=10,bottomBorder=200,leftBorder2=10,rightBorder2=390,topBorder2=10,bottomBorder2=200">
+                    <molecules>                         <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule seems to need to be here-->
+                        <molecule numMolecules= "0"  numbound= "0" velocity= "40"  cast= "ligandblue"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="100" y="100" Xoffset="5" Yoffset="5"  mytype="molecule"  myID="1"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" seperateinto="productidl?3,productidm?2,productidp?4,Kd?50,k?1000,Kcat?.03"/>           
+                        <molecule numMolecules= "1"  numbound= "0" velocity= "40"  cast= "enzymeinv" angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30" x="200" y="200" Xoffset="5" Yoffset="5"  mytype="molecule"  myID="2"  polarity = "0,0,0,0,0,0,0,0" mybounce="true" />                                   
+                        <molecule numMolecules= "50"  numbound= "0" velocity= "60"  cast= "ligandblue"   angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="50" y="50" Xoffset="5" Yoffset="5" mytype="ligand"  myID="3"   polarity = "0,0,0,0,0,0,0,0" mybounce="true" bindswith="molecule2.pocket1.bound,Kd?25,k?500,productidm?1"/>
+                        <molecule numMolecules=  "0"  numbound= "0" velocity= "60"  cast= "product"  angle1= "45" angle2= "315" rotationVelocity="5"  rotation="30"   x="100" y="100" Xoffset="5" Yoffset="5" mytype="ligand"  myID="4"    polarity = "0,0,0,0,0,0,0,0" mybounce="true" isproduct="1" />     <!--isproduct="1"-->
+                    </molecules>
+                </action>
+                <action event="initialize" name="opener" />
+            </actions>
+            <objects tutor="">
+                <object name="beaker" state="visible"/>
+                <object name="theexplainer" state="visible">
+                    <title>Uncatalyzed Simulation</title>
+                    <text>As you can see in the simulation very little product is created. This is primarily due to the large activation energy. 
+                        
+From the energy diagram you should realize that the probability of a S spontaneously having enough energy to move toward products is very very small evan though P is energetically favored .
+                        
+Click "Next" to see how this changes with an enzyme present.
+                    </text>                  
+                </object>
+                <object name="Energydiagram1" state="visible" />
+                <object name="box1" state="visible" />
+                <object name="StoPCast" state="visible" />
+                <object name="StoPequation" state="hilight" action="1" />
+            </objects>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+    </steps>
+</simulation>

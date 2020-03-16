@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean9_tutor1">
+    <title>Tutor</title>
+    
+    <question id="q1">
+        <body>The population standard deviation is apparently</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">unknown</choice>
+            <choice value="B">3.214</choice>
+            <choice value="C">0.287</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The problem description does not assume that the
+                    population standard deviation is known, and, therefore, the t-test is
+                    used.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. 3.214 is the sample standard deviation (s). Read
+                    the problem description again. Is the population standard deviation assumed to
+                    be known?</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. 0.287 is the standard error of the sample mean, (s/√(n) =
+                    3.214/√(125) = 0.287). Read the problem description again. Is the population
+                    standard deviation assumed to be known?</feedback>
+            </response>
+        </part>
+    </question>
+    
+    <question id="q2">
+        <body>Note that the upper limit of the 95% confidence interval has been edited out. Which of
+            the following is the number that has been edited out?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">12.375</choice>
+            <choice value="B">12.577</choice>
+            <choice value="C">13.439</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Note that since the p-value is 0.09, at the 0.05
+                    significance level, H<sub>0</sub> cannot be rejected. Recall that this means that the null
+                    value, 12.5, is a plausible value for the population, and, therefore, must be
+                    included in the 95% confidence interval. 12.375 leaves 12.5 out of the
+                    confidence interval.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since, based on the p-value, we cannot reject
+                        H<sub>0</sub> at the 0.05 significance level, the 95% confidence interval
+                    must include 12.5 as a plausible value. Also the sample mean 12.008 is exactly
+                    the midpoint between 11.439 (the lower limit of the confidence interval) and
+                    12.577, as it should be.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. Based on the p-value, we cannot reject H<sub>0</sub> at the 0.05
+                    significance level, and, therefore, the confidence interval must include 12.5 as
+                    a plausible value. While it is true that 13.439 does create an interval that
+                    includes 12.5, it still cannot be the upper limit of the confidence interval,
+                    since the sample mean, 12.008, is not the midpoint of the confidence interval
+                    (as it should be) in this choice.</feedback>
+            </response>
+        </part>
+    </question>
+    
+    <question id="q3">
+        <body>If we suspected that the mean were less than 12.5 and carried out a one-sided test at
+            the 0.05 significance level, we would conclude that the mean weekly number of hours that
+            Internet users 50 to 65 years of age spend online: </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">equals 12.5.</choice>
+            <choice value="B">may equal 12.5.</choice>
+            <choice value="C">is apparently different from 12.5. </choice>
+            <choice value="D">is apparently less than 12.5.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Note that the p-value of the one-sided test is 0.09/2 = 0.045
+                    (half the p-value of the two-sided test), and therefore, at the 0.05 significance
+                    level, H<sub>0</sub> can be rejected. However, even when H<sub>0</sub> cannot be
+                    rejected, we can never conclude that H<sub>0</sub> is true.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. Note that the p-value of the one-sided test is 0.09/2 = 0.045
+                    (half the p-value of the two-sided test), and, therefore, at the 0.05
+                    significance level, H<sub>0</sub> can be rejected.</feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. Note that this question refers to testing: (H<sub>0</sub> : μ =
+                    12.5) vs. (H<sub>a</sub> : μ &lt; 12.5). </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

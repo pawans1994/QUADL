@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="Title">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">Read the two versions carefully. In particular, pay attention to the highlighted parts. The main difference between the two versions is that:
+</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">in example 2** we are told that the dean of students initiated the study, and in example 2* we don't know who did.</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">in example 2* the alternative is the one sided H0: p &gt; 0.157, and the new wording of example 2** suggests that the "other" one-sided alternative H0: p &lt; 0.157 is appropriate.</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">in example 2* the alternative is two-sided, and the new wording in example 2** suggests that a one-sided alternative is appropriate</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">in example 2* the alternative is one-sided (H0: p &gt; 0.157), and the new wording in example 2** suggests that the two-sided alternative is appropriate</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          </resprocessing>
+    <itemfeedback ident="hint">
+      <hint>
+        <hintmaterial>
+          <material>
+            <mattext texttype="text/plain">How did the change in wording in example 2** affect what alternative hypothesis is being tested against H0?(key words are highlighted).
+</mattext></material></hintmaterial>
+	</hint></itemfeedback>
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. Yes, this is a difference, but definitely not the main difference. Ask for a hint and try again.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. You are right that the change in wording in example 2**, affected which alternative hypothesis is appropriate; however, it is not true that in example 2** the one sided alternative H0: p &lt; 0.157 is appropriate. 
+</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Incorrect. You are right that the change in wording in example 2** affected which alternative hypothesis is appropriate; however, in the answer you chose both the alternatives for example 2* and the alternative for example 2** are wrong. You almost got it right. Read the examples again carefully and try again.
+</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Correct. Read on for the explanation.</mattext></material></itemfeedback>
+        </item></questestinterop>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules7_tutor1">
+    <title>Tutor</title>
+    <question id="q1">
+        <body> The events B1, B2, and B3 are <input_ref input="A"/> since the three people
+                <input_ref input="B"/> and therefore using the extended <input_ref input="C"/> P(B1
+            and B2 and B3) = <input_ref input="D"/>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">independent</choice>
+            <choice value="two">not independent</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="B" shuffle="false">
+            <choice value="one">all have blood type
+                B<?oxy_insert_start author="mmyers" timestamp="20101108T202042-0500"?>,<?oxy_insert_end?></choice>
+            <choice value="two">are all
+                males<?oxy_insert_start author="mmyers" timestamp="20101108T202043-0500"?>,<?oxy_insert_end?></choice>
+            <choice value="three">were chosen at random from a large population,</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="C" shuffle="false">
+            <choice value="one"
+                ><?oxy_insert_start author="mmyers" timestamp="20101108T202416-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202415-0500" content="a"?>ddition
+                <?oxy_insert_start author="mmyers" timestamp="20101108T202418-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202418-0500" content="r"?>ule</choice>
+            <choice value="two"
+                ><?oxy_insert_start author="mmyers" timestamp="20101108T202421-0500"?>M<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202421-0500" content="m"?>ultiplication
+                <?oxy_insert_start author="mmyers" timestamp="20101108T202425-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202424-0500" content="r"?>ule</choice>
+        </fill_in_the_blank>
+        <fill_in_the_blank id="D" shuffle="false">
+            <choice value="one">P(B1)<?oxy_insert_start author="mmyers" timestamp="20101108T202121-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T202125-0500"?>
+                <?oxy_insert_end?>P(B2)<?oxy_insert_start author="mmyers" timestamp="20101108T202126-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T202127-0500"?>
+                <?oxy_insert_end?>P(B3)<?oxy_insert_start author="mmyers" timestamp="20101108T202129-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T202131-0500"?>
+                <?oxy_insert_end?>.1<?oxy_insert_start author="mmyers" timestamp="20101108T202132-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T202132-0500"?>
+                <?oxy_insert_end?>.1<?oxy_insert_start author="mmyers" timestamp="20101108T202134-0500"?>
+                <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101108T202134-0500"?>
+                <?oxy_insert_end?>.1<?oxy_insert_start author="mmyers" timestamp="20101108T202135-0500"?>
+                <?oxy_insert_end?>= .001</choice>
+            <choice value="two">P(B1)<?oxy_insert_start author="mmyers" timestamp="20101108T202148-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T202148-0500"?>
+                <?oxy_insert_end?>P(B2)<?oxy_insert_start author="mmyers" timestamp="20101108T202150-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T202153-0500"?>
+                <?oxy_insert_end?>P(B3)<?oxy_insert_start author="mmyers" timestamp="20101108T202156-0500"?>
+                <?oxy_insert_end?>=.1<?oxy_insert_start author="mmyers" timestamp="20101108T202206-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T202206-0500"?>
+                <?oxy_insert_end?>.1<?oxy_insert_start author="mmyers" timestamp="20101108T202209-0500"?>
+                <?oxy_insert_end?>+<?oxy_insert_start author="mmyers" timestamp="20101108T202209-0500"?>
+                <?oxy_insert_end?>.1<?oxy_insert_start author="mmyers" timestamp="20101108T202210-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T202211-0500"?>
+                <?oxy_insert_end?>.3</choice>
+        </fill_in_the_blank>
+        <part id="p1">
+            <response input="A" name="independent" match="one" score="1">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202249-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202248-0500" content="J"?>ob!</feedback>
+            </response>
+            <response input="A" name="not independent" match="two">
+                <feedback>Incorrect.</feedback>
+            </response>
+        </part>
+        <part id="p2">
+            <response input="B" name="all have blood type B" match="one">
+                <feedback>Incorrect. We don't know that they all have blood type B; we
+                    are trying to figure out the probability of this event.</feedback>
+            </response>
+            <response input="B" name="are all males" match="two">
+                <feedback>Incorrect. We don't know that the three are males. Gender is
+                    not a factor in this problem.</feedback>
+            </response>
+            <response input="B" name="were chosen at random" match="three" score="1">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202321-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202321-0500" content="J"?>ob!</feedback>
+            </response>
+        </part>
+        <part id="p3">
+            <response input="C" name="addition rule" match="one">
+                <feedback>Incorrect. The
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202403-0500"?>A<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202402-0500" content="a"?>ddition
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202405-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202405-0500" content="r"?>ule
+                    is used when we try to find probability of the type P(A
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202333-0500"?>or<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202333-0500" content="OR"?>
+                    B).</feedback>
+            </response>
+            <response input="C" name="multiplication rule" match="two" score="1">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202340-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202339-0500" content="J"?>ob!</feedback>
+            </response>
+        </part>
+        <part id="p4">
+            <response input="D" name="P_B1_*P_B2_*P_B3_=.1*.1*.1= .001" match="one" score="1">
+                <feedback>Good
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202343-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202342-0500" content="J"?>ob!</feedback>
+            </response>
+            <response input="D" name="P_B1_+P_B2_+P_B3_=.1+.1+.1=.3" match="two">
+                <feedback>Incorrect. Remember, we are using the M<?oxy_insert_start author="mmyers" timestamp="20101108T202352-0500"?>ultiplication<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202349-0500" content="ULTIPLICATION"?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101108T202359-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T202359-0500" content="r"?>ule.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

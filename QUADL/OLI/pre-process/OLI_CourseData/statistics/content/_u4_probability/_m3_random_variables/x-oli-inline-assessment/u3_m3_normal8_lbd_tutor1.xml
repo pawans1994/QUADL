@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal8_lbd_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Adult male height (X) follows (approximately) a normal distribution with a mean of 69
+            inches and a standard deviation of 2.8 inches.</p>
+         <p>(a) What proportion of males are less than 65 inches tall? In other words, what is P(X
+            &lt; 65)?</p>
+         <p>(b) What proportion of males are more than 75 inches tall? In other words, what is P(X
+            &gt; 75)?</p>
+         <p>(c) What proportion of males are between 66 and 72 inches tall? In other words, what is P(66 &lt; X &lt; 72)?</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <alternatives group="statistics.package">
+               <alternative value="r">
+                  <title>R</title>
+                  <p>(a) R provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_r.gif"/>
+                  <!--<p>&gt; pnorm(65, mean=69, sd=2.8)</p>
+                  <p>[1] 0.07656373</p>-->
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) R provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_r.gif"/>
+                  <!--<p>&gt; 1 - pnorm(75, mean=69, sd=2.8)</p>
+                  <p>[1] 0.01606229</p>-->
+                  <p>So roughly 1.6% of males are more than 75 inches tall.</p>
+                  <p>(c) R provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image3_r.gif"/>
+                  <!--<p>&gt; pnorm(72, mean=69, sd=2.8) - pnorm(66, mean=69, sd=2.8)</p>
+                  <p>[1] 0.7160232</p>-->
+                  <p>So roughly 71.6% of males are between 66 and 72 inches tall.</p>
+               </alternative>
+               <alternative value="StatCrunch">
+                  <title>StatCrunch</title>
+                  <p>(a) StatCrunch provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_statcrunch.jpg"/>
+                  <!--<p>&gt; pnorm(65, mean=69, sd=2.8)</p>
+                     <p>[1] 0.07656373</p>-->
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) StatCrunch provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_statcrunch.jpg"/>
+                  <!--<p>&gt; 1 - pnorm(75, mean=69, sd=2.8)</p>
+                     <p>[1] 0.01606229</p>-->
+                  <p>So roughly 1.6% of males are more than 75 inches tall.</p>
+                  <p>(c) StatCrunch provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image3_statcrunch.jpg"/>
+                  <p>and therefore P(66 &lt; X &lt; 72) = 0.8580116 − 0.14198838 = 0.71602322.</p>
+                  <!--<p>&gt; pnorm(72, mean=69, sd=2.8) - pnorm(66, mean=69, sd=2.8)</p>
+                     <p>[1] 0.7160232</p>-->
+                  <p>So roughly 71.6% of males are between 66 and 72 inches tall.</p>
+               </alternative>
+               <alternative value="minitab">
+                  <title>Minitab</title>
+                  <p>(a) Minitab provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_minitab.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           P(X &#8804; x)</p>
+                  <p>65        0.0765637</p>-->
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) Minitab provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_minitab.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           P(X &#8804; x)</p>
+                  <p>75        0.983938</p>-->
+                  <p>P(X &gt; 75) = 1 − 0.983938 = 0.016062, so roughly 1.6% of males are more
+                     than 75 inches tall.</p>
+                  <p>(c) Minitab provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image3_minitab.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           P(X &#8804; x)</p>
+                  <p>66        0.141988</p>
+                  <p>x           P(X &#8804; x)</p>
+                  <p>72        0.858012</p>-->
+                  <p>and therefore P(66 &lt; X &lt; 72) = 0.858012 − 0.141988 = 0.716024.</p>
+                  <p>Roughly 71.6% of males are between 66 and 72 inches tall.</p>
+               </alternative>
+               <alternative value="excel">
+                  <title>Excel 2007</title>
+                  <p>(a) Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_excel.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           z-score         P(X &#8804; x)</p>
+                  <p>65        -1.42857      0.076564</p>-->
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_excel.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           z-score         P(X &#8804; x)</p>
+                  <p>75        2.142857     0.983938</p>-->
+                  <p>P(X &gt; 75) = 1 − 0.983938 = 0.016062, so roughly 1.6% of males are more
+                     than 75 inches tall.</p>
+                  <p>(c) Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image3_excel.gif"/>
+                  <!--<p>Normal with mean = 69 and standard deviation = 2.8</p>
+                  <p>x           z-score         P(X &#8804; x)</p>
+                  <p>66        -1.07143      0.141988</p>
+                  <p>x           z-score         P(X &#8804; x)</p>
+                  <p>72        1.071429     0.858012</p>-->
+                  <p>and therefore P(66 &lt; X &lt; 72) = 0.858012 − 0.141988 = 0.716024.</p>
+                  <p>Roughly 71.6% of males are between 66 and 72 inches tall.</p>
+               </alternative>
+         <!--       <alternative value="excel2003">
+                  <title>Excel 2003</title>
+                  <p>(a) Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_excel.gif"/>
+                
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) Excel provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_excel.gif"/>
+              
+                  <p>P(X &gt; 75) = 1 − 0.983938 = 0.016062, so roughly 1.6% of males are more
+                     than 75 inches tall.</p>
+                  <p>(c) Excel provides:</p>
+                  
+                  <p>and therefore P(66 &lt; X &lt; 72) = 0.858012 − 0.141988 = 0.716024.</p>
+                  <p>Roughly 71.6% of males are between 66 and 72 inches tall.</p>
+                  </alternative>--> 
+               <alternative value="ti">
+                  <title>TI Calculator</title>
+                  <p>(a) The TI Calculator provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image1_ti.jpg"/>
+                  <!--<p>&gt; pnorm(65, mean=69, sd=2.8)</p>
+                     <p>[1] 0.07656373</p>-->
+                  <p>So roughly 7.66% of males are less than 65 inches tall.</p>
+                  <p>(b) The TI Calculator provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image2_ti.jpg"/>
+                  <!--<p>&gt; 1 - pnorm(75, mean=69, sd=2.8)</p>
+                     <p>[1] 0.01606229</p>-->
+                  <p>So roughly 1.6% of males are more than 75 inches tall.</p>
+                  <p>(c) The TI Calculator provides:</p>
+                  <image src="../../webcontent/flash/_u4_m3_lbdtutor10a_image3_ti.jpg"/>
+                  <!--<p>&gt; pnorm(72, mean=69, sd=2.8) - pnorm(66, mean=69, sd=2.8)</p>
+                     <p>[1] 0.7160232</p>-->
+                  <p>So roughly 71.6% of males are between 66 and 72 inches tall.</p>
+               </alternative>
+            </alternatives>
+         </explanation>
+      </part>
+   </question>
+</assessment>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?> 
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m4_cc2_tutor4">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>Complete this sentence:</p>
+            <p>"The expected count that I found in question 1 is the number of non-pierced females
+                that I would expect to see if:"</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">(a) gender and piercing were significantly related.</choice>
+            <choice value="B">(b) gender and piercing were independent.</choice>
+            <choice value="C">(c) the null hypothesis were true.</choice>
+            <choice value="D">(d) the null hypothesis were rejected.</choice>
+            <choice value="E">(e) both (b) and (c) are correct.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Recall that expected counts are calculated under
+                    the assumption that the two categorical variables are not
+                    related.<?oxy_insert_start author="mmyers" timestamp="20101129T140208-0500"?>
+                    Consider the other options.<?oxy_insert_end?></feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. While this answer is correct (since indeed,
+                    expected counts are calculated under the assumption that the two categorical
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T140109-0500"?>variables
+                    <?oxy_insert_end?>are not related, or
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T140115-0500"?>are
+                    <?oxy_insert_end?>independent), this is not the only correct
+                    answer.<?oxy_insert_start author="mmyers" timestamp="20101129T140153-0500"?> Try
+                    again.<?oxy_insert_end?></feedback>
+            </response>
+            <response match="C">
+                <feedback>Incorrect. While this answer is correct (since indeed,
+                    expected counts are calculated assuming that the null hypothesis is true), this
+                    is not the only correct answer. What does the null hypothesis claim? Try
+                again.</feedback>
+            </response>
+            <response match="D">
+                <feedback>Incorrect. On the
+                    contrary<?oxy_insert_start author="mmyers" timestamp="20101129T140221-0500"?>,<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T140221-0500" content="."?>
+                    expected counts are calculated assuming that the null hypothesis is true. Also,
+                    this answer implies that expected counts are calculated only after the
+                    chi-square test has been carried out. This is not the
+                    case<?oxy_insert_start author="mmyers" timestamp="20101129T140230-0500"?>,<?oxy_insert_end?>
+                    since expected counts are needed in order to carry out the
+                    test.<?oxy_insert_start author="mmyers" timestamp="20101129T140235-0500"?>
+                    Consider the other options.<?oxy_insert_end?></feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Good
+                    job<?oxy_insert_start author="mmyers" timestamp="20101129T135811-0500"?>!<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T135809-0500" content="."?>
+                    Indeed, expected counts are calculated assuming that the two categorical
+                    variables (in this case gender and piercing) are independent (or not related),
+                    which is exactly what is claimed by the null hypothesis.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+      <item ident="questionid" title="Title">
+        <presentation>
+          <material>
+<mattext texttype="text/plain">State the test statistic, interpret its value and show how it was found.</mattext></material>
+          <response_str ident="Short answer 1">
+            <render_fib fibtype="String" prompt="Box">
+              <response_label ident="Res 1"/></render_fib></response_str></presentation>
+        <resprocessing>
+          <outcomes/>
+          <respcondition>
+            <conditionvar>
+              <other/></conditionvar>
+            <displayfeedback linkrefid="Feedback always"/></respcondition></resprocessing>
+        <itemfeedback ident="solution">
+          <solution>
+          <solutionmaterial>
+          <material>
+            <mattext texttype="text/plain">Here is the R output:
+            
+&gt; t.test(drinks$drinks.per.week,mu = 4.73, alternative = "two.sided")
+
+        One Sample t-test
+        
+data:  drinks$drinks.per.week
+t = -1.8275, df = 74, p-value = 0.07165
+alternative hypothesis: true mean is not equal to 4.73
+95 percent confidence interval:
+ 3.064735 4.801932
+sample estimates:
+mean of x
+ 3.933333
+ 
+The test statistic, t = -1.83, is calculated as follows:</mattext>
+            <matimage label="" uri="../../../webcontent/flash/_u5_m1_lbdtutor15c_image2.jpg"/>
+<mattext texttype="text/plain">The sample mean is 1.83 standard errors below the null value.</mattext></material>
+          </solutionmaterial>
+          </solution>
+</itemfeedback></item>

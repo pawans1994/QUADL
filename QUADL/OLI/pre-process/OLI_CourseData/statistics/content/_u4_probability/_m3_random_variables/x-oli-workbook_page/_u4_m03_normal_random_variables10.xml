@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_normal_random_variables10">
+<head>
+<title>Normal Approximation to the Binomial (2 of 3)</title>
+    <objref idref="use_normal_as_approximation_to_binomial"/>
+</head>
+<body>
+  
+<p>Consider the appearance of the probability histogram for the distribution of X:</p>
+<image style="block" src="../webcontent/image176.gif" alt="A probability histogram. The
+vertical axis is labeled &quot;Probability&quot; and the horizontal axis is labeled
+&quot;binomial X; n=20, p=.5&quot; . It is in roughly a normal shape, with the mode
+at X = 10."/>
+<p>Clearly, the shape of the distribution of X for n = 20, p = .5 has a normal appearance: symmetric, bulging at the middle, and tapering at the ends. 
+    The following figure should help you visualize this:</p>
+<image style="block" src="../webcontent/image177.gif" alt="The same probability
+histogram with a normal bell curve drawn on top, showing how the histogram closely
+resembles a normal bell curve."/>
+<p>This suggests a method of approximating binomial probabilities:</p>
+<p>Estimate the binomial probability of <m:math overflow="scroll">
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:msub>
+</m:math> taking a value over a certain interval with the probability that a normal random variable <m:math overflow="scroll">
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+</m:msub>
+</m:math> takes a value over the same interval, where <m:math overflow="scroll">
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+</m:msub>
+</m:math> has the same mean and standard deviation as <m:math overflow="scroll">
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:msub>
+</m:math>, namely <m:math overflow="scroll">
+<m:mi>μ</m:mi>
+<m:mo>=</m:mo>
+<m:mi>n</m:mi>
+<m:mi>p</m:mi>
+<m:mo>,</m:mo>
+<m:mi>σ</m:mi>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mi>p</m:mi>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mi>p</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msqrt>
+</m:math>
+</p>
+<example>
+
+<p>Suppose a student answers 20 true/false questions completely at random. Use a normal
+                approximation to estimate the probability of getting no more than 8 correct. The
+                number
+                <?oxy_insert_start author="mmyers" timestamp="20101122T134206-0500"?>(<?oxy_insert_end?>X<?oxy_insert_start author="mmyers" timestamp="20101122T134208-0500"?>)<?oxy_insert_end?>
+                correct is a binomial random variable
+                <?oxy_insert_start author="mmyers" timestamp="20101122T134222-0500"?>that represents
+                the<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T134221-0500" content="for"?>
+                number of successes in 20 trials when the probability of success for each trial is
+                .5. X has <?oxy_insert_start author="mmyers" timestamp="20101122T134238-0500"?>a
+                <?oxy_insert_end?>mean and standard
+                deviation<?oxy_insert_start author="mmyers" timestamp="20101122T134241-0500"?>
+                of:<?oxy_insert_end?></p>
+<p>
+<m:math overflow="scroll">
+<m:mi>μ</m:mi>
+<m:mo>=</m:mo>
+<m:mi>n</m:mi>
+<m:mi>p</m:mi>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+<m:mi>σ</m:mi>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mi>p</m:mi>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mi>p</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:msqrt>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mn>0</m:mn>
+<m:mo>(</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>5</m:mn>
+<m:mo>)</m:mo>
+</m:mrow>
+</m:msqrt>
+<m:mo>=</m:mo>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>4</m:mn>
+</m:math>
+</p>
+<p>and so we approximate the binomial X with a normal random variable having the same mean and standard deviation:</p>
+<image style="block" src="../webcontent/image182.gif" alt="A probability histogram with a probability
+distribution curve drawn on top. The vertical axis is labeled &quot;Probability&quot; and the horizontal
+axis is labeled &quot;X.&quot; The histogram is for binomial X, with mean=10 and standard deviation
+of 2.24 . The normal curve is for normal X, with mean 10 and standard deviation of 2.24 , the same as
+for the histogram."/>
+<p> Then we solve in the usual way using normal tables:</p>
+<p>
+<m:math overflow="scroll">
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>B</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≤</m:mo>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>≈</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mrow>
+<m:mi>N</m:mi>
+</m:mrow>
+</m:msub>
+<m:mo>≤</m:mo>
+<m:mn>8</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mfrac>
+<m:mrow>
+<m:mn>8</m:mn>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>.</m:mo>
+<m:mn>2</m:mn>
+<m:mn>4</m:mn>
+</m:mrow>
+</m:mfrac>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mi>P</m:mi>
+<m:mo>(</m:mo>
+<m:mi>Z</m:mi>
+<m:mo>≤</m:mo>
+<m:mo>-</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>8</m:mn>
+<m:mn>9</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>.</m:mo>
+<m:mn>1</m:mn>
+<m:mn>8</m:mn>
+<m:mn>6</m:mn>
+<m:mn>7</m:mn>
+</m:math>
+</p>
+</example>
+<p>Unfortunately, the approximated probability, .1867, is quite a bit
+            <?oxy_insert_start author="mmyers" timestamp="20101122T134326-0500"?>different<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T134324-0500" content="off"?>
+            from the actual probability, .2517. However, this example constitutes something of a <?oxy_insert_start author="mmyers" timestamp="20101122T134341-0500"?>"<?oxy_insert_end?>worst-case<?oxy_insert_start author="mmyers" timestamp="20101122T134346-0500"?>
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T134346-0500" content="-"?>scenario<?oxy_insert_start author="mmyers" timestamp="20101122T134344-0500"?>"<?oxy_insert_end?>
+            according to the usual criteria for use of a normal approximation.</p>
+<section>
+    <title>Rule of Thumb</title>
+    <body>
+
+    
+    <p>Probabilities for a binomial random variable X with n and p may be approximated by those for a normal random variable having the same mean and standard deviation as long as the sample size n is large enough relative to the proportions of successes and failures, p and 1 - p. 
+    Our Rule of Thumb will be to require that</p>
+
+    <p>
+<m:math overflow="scroll">
+<m:mi>n</m:mi>
+<m:mi>p</m:mi>
+<m:mo>≥</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:math> and <m:math overflow="scroll">
+<m:mi>n</m:mi>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mi>p</m:mi>
+<m:mo>)</m:mo>
+<m:mo>≥</m:mo>
+<m:mn>1</m:mn>
+<m:mn>0</m:mn>
+</m:math>
+</p></body></section>
+<example>
+
+<p>May we use a normal approximation for a binomial X with n = 20 and p = .5? In this case, np = 20(.5) = 10 and n(1 - p) = 20(1 - .5) = 10. 
+    The criteria are just barely satisfied, and so we should not expect the approximation to be especially good.</p>
+</example>
+<!--<activity idref="_u4_m3_lbd11" purpose="learnbydoing"/>-->
+    <p>The purpose of
+            th<?oxy_insert_start author="mmyers" timestamp="20101122T134447-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101122T134445-0500" content="is"?>
+            next activity is to give you practice at deciding whether the normal approximation is
+            appropriate for a given binomial random variable. You'll get to practice checking the
+            rule of thumb <m:math overflow="scroll">
+                <m:mo>(</m:mo>
+                <m:mi>n</m:mi>
+                <m:mi>p</m:mi>
+                <m:mo>≥</m:mo>
+                <m:mn>1</m:mn>
+                <m:mn>0</m:mn>
+            </m:math> and <m:math overflow="scroll">
+                <m:mi>n</m:mi>
+                <m:mo>(</m:mo>
+                <m:mn>1</m:mn>
+                <m:mo>-</m:mo>
+                <m:mi>p</m:mi>
+                <m:mo>)</m:mo>
+                <m:mo>≥</m:mo>
+                <m:mn>1</m:mn>
+                <m:mn>0</m:mn>
+                <m:mo>)</m:mo>
+            </m:math><?oxy_insert_start author="mmyers" timestamp="20101122T134459-0500"?>,
+            <?oxy_insert_end?>but also get a visual sense of when the normal approximation is
+            appropriate.</p>
+    <wb:inline idref="u3_m3_normal10_tutor1" purpose="learnbydoing"/>
+    <wb:inline idref="u3_m3_normal10_tutor2" purpose="learnbydoing"/>
+</body>
+</workbook_page>

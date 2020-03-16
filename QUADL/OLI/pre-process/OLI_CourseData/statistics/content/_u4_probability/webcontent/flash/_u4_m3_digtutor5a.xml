@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questestinterop>
+  <item ident="_u4_m3_digtutor5a" title="_u4_m3_digtutor5a">
+    <presentation>
+      <material>
+        <mattext texttype="text/plain">Which of the following expression represents the standard deviation of Y?</mattext></material>
+      <response_lid rcardinality="Single" ident="LID_01">
+        <render_choice>
+          <response_label ident="Res1">
+            <material>
+              <matimage label="" uri="../../../webcontent/flash/_u4_m3_digtutor5a_image1.jpg"></matimage></material></response_label>
+          <response_label ident="Res2">
+            <material>
+              <matimage label="" uri="../../../webcontent/flash/_u4_m3_digtutor5a_image2.jpg"></matimage></material></response_label>
+          <response_label ident="Res3">
+            <material>
+              <matimage label="" uri="../../../webcontent/flash/_u4_m3_digtutor5a_image3.jpg"></matimage></material></response_label>
+          <response_label ident="Res4">
+            <material>
+              <matimage label="" uri="../../../webcontent/flash/_u4_m3_digtutor5a_image4.jpg"></matimage></material></response_label></render_choice></response_lid></presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar varname="SCORE" vartype="integer"/></outcomes>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res1</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res2</varequal></conditionvar>
+        <setvar varname="SCORE">10</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res3</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+      <respcondition>
+        <conditionvar>
+          <varequal respident="LID_01">Res4</varequal></conditionvar>
+        <setvar varname="SCORE">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition></resprocessing>
+    <itemfeedback ident="FeedBack0">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  You are confusing values and probabilities. To calculate standard deviation, we look at the square deviation between the values of X and its mean, and weigh each of those deviations by the corresponding probability.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack1">
+      <material>
+        <mattext texttype="text/plain">Good Job.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack2">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  Your mistake is that you are averaging the squared deviations twice. First you multiply each one by the corresponding weight (probability), which is the right thing to do, but then dividing again by 5-1 is wrong.  You might be confusing the standard deviation of a random variable with the the formula for S - the sample standard deviation which we introduced in the EDA section.</mattext></material></itemfeedback>
+    <itemfeedback ident="FeedBack3">
+      <material>
+        <mattext texttype="text/plain">Incorrect.  You are almost right, though. Your choice just considers the deviations instead of the squared deviation as it should.</mattext></material></itemfeedback></item></questestinterop>

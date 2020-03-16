@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_proportion2_tutor1">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                 <p>Explain how these simulations illustrate the theory discussed above.</p>
+            </body>
+            <short_answer id="A"/>
+            <part id="p1">
+                <response input="A" match="*" score="1"/>
+                <hint>Do the simulations verify what the theory tells us about the shape, center and
+                    spread of the sampling distributions?</hint>
+                <hint><em style="bold">Shape:</em> if np &#8805; 10 and n(1 - p)
+                        &#8805; 10, is the shape normal? Is the shape normal
+                        when these conditions are not met? <em style="bold">Center:</em> Do all distributions have a mean equal to
+                        p? <em style="bold">Spread:</em> Is the standard deviation of each distribution
+                        close to sqrt( p(1 - p) / n )?
+                </hint>
+                <explanation>
+                    <p><em style="bold">Shape:</em><?oxy_insert_start author="mmyers" timestamp="20101122T175840-0500"?>
+                        <?oxy_insert_end?>Theory tells us that if np &#8805; 10 and n(1 - p) &#8805;
+                        10, then the sampling distribution is approximately normal. When p = 0.10,
+                        these conditions are not met for n = 20 or n = 50. We can see that the
+                        distributions are skewed to the right for these sample sizes. As the sample
+                        size increases, we see the distributions becoming more normal. For n = 100
+                        and for larger samples, the conditions are met, and we see that a normal
+                        distribution is a pretty good model for the sampling distribution.</p>
+                    <p><em style="italic">Note: We only collected
+                            1<?oxy_insert_start author="mmyers" timestamp="20101122T175914-0500"?>,<?oxy_insert_end?>005
+                            samples. The theory presumes we have collected all possible samples. So
+                            we don't expect the simulations to give perfectly normal
+                            distributions.</em></p>
+                    <p><em style="bold">Center:</em> All of the sampling distributions are centered
+                        at approximately p = 0.10.</p>
+                    <p><em style="bold">Spread:</em> The standard deviation of each sampling
+                    distribution is very close to the value predicted by</p>
+                    <image src="../webcontent/lbdtutor1_formula1.gif" alt="equation for estimate for standard deviation"/>
+                    <p>For example, using this formula for n = 20, the standard deviation is
+                        predicted to be 0.0671. We see in the simulation
+                        <?oxy_insert_start author="mmyers" timestamp="20101122T175954-0500"?>that
+                        <?oxy_insert_end?>the standard deviation is 0.0675, which is very close to
+                        the predicted value.</p>
+                </explanation>
+                
+            </part>
+        </question>
+    </page>
+</assessment>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="LigandBindingExperiment" version="1" date="3/1/06">
+    <name>&lt;b&gt; &lt;/b&gt;</name>
+<!--    <intro filename=""/>-->
+    <debugger state="off"/> 
+    <steps>
+              <step id="create">
+
+            <actions>
+                <action event="record light"/> 
+                 <action event="create" name="theexplainer" url="tools/text_explainer.swf"  x="2" y="30" xscale="1"  yscale="1"/>  
+<!--               <action event="create" name="button" url="tools/button.swf"  x="25" y="400" xscale="1"  yscale="1"/>
+    <action event="create" name="button2" url="tools/button.swf"  x="25" y="500" xscale="1"  yscale="1"/>-->
+                <action event="create" name="bilayer" url="swfs/bilayer.jpg"  x="333" y="80" xscale="1.2"  yscale=".1"/>
+                <action event="create" name="ruler" url="tools/ruler.swf" x="330" y="5" xscale="1.2"  yscale="1.2"/> 
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf"  x="333" y="0" xscale="1.0"  yscale="1.0"/>   
+                <action event="create" name="con3" url="tools/DisplayValue.swf"  x="320" y="410" xscale="1"  yscale="1"/>
+                <action event="create" name="con1" url="tools/DisplayValue.swf"  x="320" y="430" xscale="1"  yscale="1"/> 
+                <action event="create" name="con2" url="tools/DisplayValue.swf"  x="450" y="410" xscale="1"  yscale="1"/> 
+                <action event="create" name="con0" url="tools/DisplayValue.swf"  x="450" y="430" xscale="1"  yscale="1"/> 
+                <action event="create" name="sign" url="tools/label.swf" x="520" y="420" xscale="1"  yscale="1"/> 
+                <action event="create" name="label1" url="tools/label.swf" x="450" y="390" xscale="1"  yscale="1"/> 
+                <action event="create" name="label2" url="tools/label.swf" x="590" y="390" xscale="1"  yscale="1"/>
+
+                <!--<action event="settimer" timer='12' advance='yes' />-->
+            </actions>
+             <objects>
+                 <object name="theexplainer" state="visible">
+                     <title>Isotonic Equilibrium</title>
+                     <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium movement of ions with [+] and [-] equal on both sides."
+                     </text>
+                 </object>
+                <object name="userinput" state="hilight"/>
+            </objects>
+                  <nextbutton text="Begin Simulation" />
+            <prevbutton text="Back" state="0"/>
+              </step>
+      
+        <step id="startmolecules">
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Isotonic Equilibrium</title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium movement of ions with [+] and [-] equal on both sides."
+                    </text>
+                </object>
+                <object name="bilayer" state="visible"/>
+                <object name="ruler" state="visible"/>
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions> 
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=410,topBorder=0,bottomBorder=330,leftBorder2=0,rightBorder2=410,topBorder2=160,bottomBorder2=330">
+                    <molecules>
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "50"  cast= "moleculeNAplus"  eq1="500" eq2="200"  angle1= "0" angle2= "355" x="250" y="50" Xoffset="60" Yoffset="60" rotationVelocity="30"  rotation="0"  polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="1"  mybounce="true" />  
+                        <molecule numMolecules= "0" myID="0"/>     <!--This is a fudge if only one molecule-->            
+                        <molecule numMolecules= "0"  injectionforce= "0" velocity= "90"  cast= "moleculewater"  eq1="500" eq2="200"  angle1= "30" angle2= "315" x="250" y="50" Xoffset="60" Yoffset="60" rotationVelocity="30"  rotation="0"  brownian=".01" polarity = "0,0,0,0,.4,.4,.4,.4" mytype="molecule"  myID="2"  mybounce="true"/>
+                   </molecules>
+                </action>
+                <action event="record all"/>
+                <action event="initialize" name="con1" params="thevariable=con1_2,thelabel=[H2O],thevalue=0" /> 
+                <action event="initialize" name="con0" params="thevariable=con0_2,thelabel=[H2O],thevalue=0" /> 
+                <action event="initialize" name="con2" params="thevariable=con0_1,thelabel=[Na+],thevalue=0" /> 
+                <action event="initialize" name="con3" params="thevariable=con1_1,thelabel=[Na+],thevalue=0" />
+                <action event="initialize" name="label1" params="Top" /> 
+                <action event="initialize" name="label2" params="Bottom" /> 
+                <action event="initialize" name="sign" params="~=" /> 
+           <!--     <action event="initialize" name="button" data="Add Na+"/>  -->
+                <action event="settimer" timer='3' advance='yes' />
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="begin action">           
+            <actions>
+                <action event="record light"/> 
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=1,x=350,y=50,Xoffset=50,Yoffset=50" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=50,param3=2,x=350,y=50,Xoffset=50,Yoffset=50" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=1,x=350,y=250,Xoffset=50,Yoffset=50" />
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=50,param3=2,x=350,y=250,Xoffset=50,Yoffset=50" />
+
+            </actions>
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Isotonic Equilibrium</title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;Equilibrium movement of ions with [+] and [-] equal on both sides."
+                    </text>
+                </object>
+                <object name="ruler" state="visible"/>
+                <object name="bilayer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="con0" state="visible"/>
+                <object name="con1" state="visible"/>
+                <object name="con2" state="visible"/>
+                <object name="con3" state="visible"/>
+                <object name="sign" state="visible"/>
+                <object name="label1" state="visible"/>
+                <object name="label2" state="visible"/>
+  
+            </objects>
+            <nextbutton text="Add Na+" state="visible"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="add Na ions">
+            
+            <actions>
+                <action event="record light"/> 
+                <action event="sendmessage" name="box1" params="msg=changeParam,param1=M+,param2=10,param3=1,x=250,y=50,Xoffset=50,Yoffset=50" />
+                <action event="initialize" name="sign" params=">" /> 
+            </actions>
+            <objects>
+                <object name="theexplainer" state="visible">
+                    <title>Isotonic Equilibrium</title>
+                    <text>&lt;br&gt;&lt;br&gt;&lt;br&gt;If we add more Na+ to the top and they are not able to cross the membrane, the system will move to equilibrium since the water molecules are free to cross the membrane such that the top +/- = bottom +/-.."
+                    </text>
+                </object>
+                <object name="bilayer" state="visible"/>
+                <object name="ruler" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="con0" state="visible"/>
+                <object name="con1" state="visible"/>
+                <object name="con2" state="visible"/>
+                <object name="con3" state="visible"/>
+                <object name="button" state="visible"/>
+                <object name="sign" state="visible"/>
+                <object name="label1" state="visible"/>
+                <object name="label2" state="visible"/>
+            </objects>
+            <nextbutton text="wait" />
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+    </steps>
+</simulation>

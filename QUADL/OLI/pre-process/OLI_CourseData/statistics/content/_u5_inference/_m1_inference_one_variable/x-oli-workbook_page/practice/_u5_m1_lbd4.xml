@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd4">
+    <head>
+        <title>Confidence Intervals for the Population Mean</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to learn how to use statistical software for calculating
+            confidence intervals for μ when σ is unknown. In this case, using software is useful in
+            the case when all you have is the raw data, <em>and</em> in the case when only summary
+            statistics are provided (more specifically, the sample mean and the sample standard
+            deviation s). The reason for using software in the latter case is, as mentioned before,
+            the complexity of determining the appropriate t*.</p>
+        <p>
+            <em>Background:</em> As part of a large survey conducted at a large state university, a
+            random sample of 142 students were asked: "How many hours do you sleep in a typical
+            day?" The datafile linked below contains the data. Use these data to estimate μ, the
+            mean number of hours college students at this university sleep in a typical day, with a
+            95% confidence interval. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/sleep.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R. </p>
+                    <p>The data have been loaded into the data frame <code>sleep</code>. Enter the
+                        command <code>sleep</code> to see the data. The variable in the data frame
+                        is also called <code>sleep</code>. </p>
+                    <p>Note that in this case we need to find a confidence interval for the
+                        population mean when the population variance is unknown, and we will
+                        therefore use the interval that we have just introduced (t-interval). R will
+                        do this for us. Enter the command: </p>
+                    <ul style="none">
+                        <li><code>t.test(sleep$sleep, conf.level=0.95)</code></li>
+                        <!-- I removed the $conf.int from Judith's code because without it then the output matches the compare part of the submit and compare below.   <li><code>t.test(sleep$sleep, conf.level=0.95)$conf.int</code></li>-->
+                    </ul>
+                    <p>To change the confidence level, simply change the 0.95 in the code to the
+                        appropriate level (in decimal form) and rerun the code. </p>
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/sleep.RData" target="self">here</link> and
+                    choose "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101123T163909-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T163908-0500" content="&apos;"?>sleep<?oxy_delete author="mmyers" timestamp="20101123T163911-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101123T163913-0500"?>"<?oxy_insert_end?>
+                        Enter the command <code>sleep</code> to see the data.</p>
+                <p>Note that in this case we need to find a confidence interval for μ when σ is
+                    unknown, and we will therefore use the interval that we have just introduced
+                    ("t-interval"). R will do this for us. Enter the command:</p>
+                <code>t.test(sleep, conf.level=0.95)</code>
+                <p>R returns the confidence interval and a lot more. We will return to the command
+                    t.test in the next module, where we will study using some of the other
+                    statistics returned by this command.</p>-->
+                    <!--<wb:inline idref="_u5_m1_lbdtutor4a_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="490">
+                    <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor4a_r.xml</param>
+                    <param name="problem_name">_u5_m1_lbdtutor4a_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/sleep.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Next click
+                            <link href="http://www.statcrunch.com/" target="new">here </link>to open
+                        StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set choose <em style="bold">Data -> Load -> From file
+                                -> on my computer.</em></li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p> Note that in this case we need to find a confidence interval for μ when σ is
+                        unknown, and we will therefore use the interval that we have just introduced
+                        (“t – interval”). </p>
+                    <p> To do this is StatCrunch: </p>
+                    <ul>
+                        <li>Choose: Stat → T statistics → One Sample → with data </li>
+                        <li>Select Column(s): select the variable column </li>
+                        <li>Perform: select Confidence Interval for μ and enter level of confidence </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/sleep.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: A
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <p>Note that in this case we need to find a confidence interval for μ when σ is
+                        unknown, and we will therefore use the interval that we have just introduced
+                        ("t-interval"). To do this in Minitab:</p>
+                    <p><?oxy_comment_start author="mmyers" timestamp="20101123T164146-0500" comment="use bullets, rather than asterisks"?>*<?oxy_comment_end?>
+                        Choose: Stat → Basic Statistics → 1-Sample t </p>
+                    <p>* If the raw data are given, select "samples in columns" and enter the
+                        variable's name under it. If only the summary statistics are given, select
+                        "Summarized data" and enter it. </p>
+                    <p>* To choose the level of confidence, click on <em>Options</em> and select
+                        it.</p>
+                    <p>* Click "OK" twice.</p>
+                    <!--<wb:inline idref="u4_m1_confintmean7_lbd2_tutor1"/>-->
+                    <!--
+                        <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="388">
+                            <param name="question_file">../../../webcontent/flash/_u5_m1_lbdtutor4a.xml</param>
+                            <param name="problem_name">_u5_m1_lbdtutor4a</param>
+                        </flash>
+                    -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/sleep.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>Note that in this case we need to find a confidence interval for μ when σ is
+                        unknown, and we will therefore use the interval that we have just introduced
+                        ("t-interval"). To do this in Excel, we're going to use the equation <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>∗</m:mo>
+                                <m:mfrac>
+                                    <m:mi>s</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math> for the confidence interval. Before we can do this, we first have
+                        to calculate the values for each of the variables in the equation:</p>
+                    <ul>
+                        <li>To calculate the critical value t*, we use the Excel function
+                                <em>T.INV.2T(probability, degrees of freedom)</em>. In this case, we
+                            would type <code style="inline">=T.INV.2T(0.05, 141)</code>.</li>
+                        <li>To calculate the sample mean, use the <em>AVERAGE</em> function. In this
+                            case, we would type <code style="inline">=AVERAGE(A2:A143)</code>.</li>
+                        <li>To calculate the sample standard deviation, use the <em>STDEV
+                                function</em>. In this case, we would type <code style="inline"
+                                >=STDEV.S(A2:A143)</code>.</li>
+                        <li>To calculate the standard error, we'll divide the sample standard
+                            deviation that we just calculated by the square root of n.</li>
+                        <li>Finally, we calculate the margin of error by multiplying the critical t*
+                            value by the standard error.</li>
+                        <li><em>IMPORTANT:</em> There is a shortcut alternative that is similar to
+                            calculating the margin of error when the population standard deviation
+                            (sigma) is known.</li>
+                        <li>To calculate the margin of error using the shortcut, we use the Excel
+                            function <em>CONFIDENCE.T(a,s,n)</em>, where a is the alpha value, s is the
+                            population standard deviation, and n is the sample size. Note that the
+                            alpha value a = 1 - C, where C is the confidence level (in our case,
+                            0.95). In this case, we enter the formula as follows:
+                            <code style="inline">=CONFIDENCE.T(0.05, 1.5985, 142)</code></li>
+                    </ul>
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/sleep.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                    <p>Note that in this case we need to find a confidence interval for μ when σ is
+                        unknown, and we will therefore use the interval that we have just introduced
+                        ("t-interval"). To do this in Excel, we're going to use the equation <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>*</m:mo>
+                                </m:msup>
+                                <m:mo>∗</m:mo>
+                                <m:mfrac>
+                                    <m:mi>s</m:mi>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math> for the confidence interval. Before we can do this, we first have
+                        to calculate the values for each of the variables in the equation:</p>
+                    <ul>
+                        <li>To calculate the critical value t*, we use the Excel function
+                            TINV(probability, degrees of freedom). In this case, we would type <code
+                                style="inline">=TINV(0.05, 141)</code>.</li>
+                        <li>To calculate the sample mean, use the AVERAGE function. In this case, we
+                            would type <code style="inline">=AVERAGE(A2:A143)</code>.</li>
+                        <li>To calculate the sample standard deviation, use the STDEV function. In
+                            this case, we would type <code style="inline"
+                            >=STDEV(A2:A143)</code>.</li>
+                        <li>To calculate the standard error, we'll divide the sample standard
+                            deviation that we just calculated by the square root of n.</li>
+                        <li>Finally, we calculate the margin of error by multiplying the critical t*
+                            value by the standard error.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a list with the sleep data loaded, right-click <link
+                            href="../../../webcontent/ti/sleep.8xl" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+
+                    <p> The hours slept data should be stored in L1. </p>
+                    <p>Note that in this case we need to find a confidence interval for μ when σ is
+                        unknown, and we will therefore use the interval that we have just introduced
+                        ("t-interval"). To do this on your TI graphing calculator: </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/8:TInterval</code>.</li>
+                        <li>Choose <code style="inline">DATA</code> by using arrows to highlight
+                                <code style="inline">DATA</code>, then pressing <code style="inline"
+                                >ENTER</code>. </li>
+
+                        <li>List: Choose <code style="inline">L1 (2ND/1)</code>. </li>
+                        <li>Freq:1 </li>
+                        <li>C-Level:0.95 (the confidence level is given in the problem) </li>
+                        <li>Choose <code style="inline">CALCULATE</code>, then press <code
+                                style="inline">ENTER</code>. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m1_confintmean7_lbd2_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

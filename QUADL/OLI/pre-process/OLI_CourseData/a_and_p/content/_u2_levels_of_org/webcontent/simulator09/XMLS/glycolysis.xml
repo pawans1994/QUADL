@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="glycolysis" version="1">
+    <name>&lt;b&gt;Glycolysis&lt;/b&gt;</name>
+    <debugger state="off"/> 
+    <steps>
+        <step id="createIT">
+            <objects tutor="">
+               
+                <object name="" />
+            </objects>
+            <actions>
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1" /> 
+                <action event="create" name="image" url="minitutors/tca_question.swf" x="54" y="158" xscale=".95" yscale=".95" />                 
+                <action event="create" name="box1" url="tools/glycolysis.swf"  x="316" y="0" xscale=".55"  yscale=".8"/>
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf"  x="0" y="35" xscale="1"  yscale="1"/>
+               <action event="record light" />
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="loading">
+            <objects tutor="">
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+         <step id="intro">
+             <objects tutor="">
+                     <object name="title" state="visible">
+                         <text>&lt;b&gt;Glycolysis&lt;/b&gt;</text>
+                     </object>
+                 <object name="theexplainer" state="visible">
+                 <text>1. The left panel shows the energy changes that occur for each of the 10 steps in glycolysis. The energy changes that are shown in the left panel are without any coupling, either direct or indirect.
+
+2. The right panel shows the energy changes that occur  for the same 10 steps, but the effects of both direct and indirect coupling have been included.  These energies closely approximate the Gibbs free energy in the cell.
+
+3. Clicking on any of the steps in the left panel will display the detailed structures of the substrate and products of the selected step at the top of the page, along with the energetic changes and the name of the enzyme that catalyzes the selected reaction.
+
+&lt;b&gt;Hit the "Next" button to begin the exercise.&lt;\b&gt;
+
+
+                 </text>
+                 </object>
+                 <object name="box1" state="visible"/>
+                 <object name="box1" state="hilight"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+       </step>
+      
+        <step id="step0">
+            <objects tutor="glycolysis_0.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energetically Unfavorable Steps in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step1">
+            <objects tutor="glycolysis_1.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energetically Unfavorable Steps in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step2">
+            <objects tutor="glycolysis_2.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energetically Unfavorable Steps in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step3">
+            <objects tutor="glycolysis_3.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Indirect Coupling in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step4">
+            <objects tutor="glycolysis_4.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energy Storage in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <action event="record light"/> 
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step5">
+            <objects tutor="glycolysis_5.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energy Storage in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" data="correct" params="" />
+                <!--
+                    <action event="sendmessage" name="box1" params="tutorAnser=yes,tutorCorrect=3" />
+                <action event="sendmessage" name="box1" data="correct" params="advance">
+                -->
+                <action event="record light"/> 
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="step6">
+            <objects tutor="glycolysis_6.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Energy Storage in Glycolysis.&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" params="tutorAnswer=6|7|10" />
+                <!-- <action event="sendmessage" name="box1" data="correct" params="advance" />-->
+                <action event="record light"/> 
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="1"/>
+        </step>
+        
+        <step id="all done">
+            <objects tutor="">
+                <object name="theexplainer" state="visible">
+                    <title>Completed Exercise</title>
+                    <text>&lt;b&gt;Summary&lt;/b&gt;
+You should understand the following about energetic changes in glycolysis.
+   
+&lt;b&gt;Coupling&lt;/b&gt;
+ 1. There are several steps in the pathway, 1, 3, 4, and 8, where the uncoupled reaction is energetically unfavorable in the forward direction due to a large positive Gibbs energy.  
+                        
+2. Steps 1 and 3 are made favorable by directly coupling the phosphorylation to ATP hydrolysis.  The direct addition of inorganic phosphate to sugars is unfavorable, but the transfer of phosphate from ATP to the sugar is favorable.
+                        
+3. Steps 4 and 8 are made favorable by indirect coupling.  Step 10, the conversion of PEP to pyruvate is so favorable that it lowers the concentration of all intermediates prior to this step, causing the Gibbs free energy of steps 4 and 8 to become close to zero because their product concentrations are below the equilibrium value.
+  
+  &lt;b&gt;Energy Generation&lt;/b&gt; 
+Steps 6, 7, and 10 release sufficient energy to drive the formation of NADH (step 6) or the formation of ATP (steps 7 and 10).
+</text>
+                </object>
+                <object name="box1" state="hilight"/>
+               
+            </objects>
+            <actions>
+                <action event="sendmessage" name="box1" params="advance" />
+                <action event="record light"/>
+ 
+
+            </actions>
+            <nextbutton text="Done" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+
+        <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="exit">
+           
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+    </steps>
+</simulation>

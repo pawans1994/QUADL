@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_inference_for_relationships1">
+    <head>
+        <title>Introduction</title>
+    </head>
+    <body>
+        <p>In the previous two modules we performed inference for one variable. More specifically,
+            we learned about inference for the population proportion p (when the variable of
+            interest is categorical) and inference for the population mean μ (when the variable of
+            interest is quantitative). In the previous two modules we were also exposed to the
+            following three forms of inference which will continue to be central as we move forward
+            in the course:</p>
+        <ul>
+            <li><em style="bold">Point estimation</em>—estimating an unknown parameter with a single
+                value that is computed from the sample.</li>
+            <li><em style="bold">Interval estimation</em>—estimating an unknown parameter by an
+                interval of plausible values. To each such interval we attach a level of confidence
+                that indeed the interval captures the value of the unknown parameter and hence the
+                name confidence intervals. </li>
+            <li><em style="bold">Hypothesis testing</em>—a four-step process in which we are
+                assessing evidence provided by the data in favor or against some claim about the
+                population parameter.</li>
+        </ul>
+
+        <!-- <p>In the previous two modules, we learned to perform inference for a single categorical or
+            quantitative variable in the form of point estimation, confidence intervals or
+            hypothesis testing. The inference was actually about the population proportion (when the
+            variable of interest was categorical) and about the population mean (when the variable
+            of interest was quantitative).</p>
+             -->
+        <p>Our next (and final) goal for this course is to perform inference about relationships
+            between two variables in a population, based on an observed relationship between
+            variables in a sample. Here is what the process looks like:</p>
+        <image style="block" src="../webcontent/image001.gif" alt="A large circle represents the
+Population of Interest. We are interested in whether X and Y are related in the population. To
+figure this out, we take a SRS of size n, represented by a smaller circle. This is the data that we
+use to perform inference. Based on the observed data, do we have significant evidence that X and Y
+are related?"/>
+        <p>We are interested in studying whether a relationship exists between the variables X and Y
+            in a population of interest. We choose a random sample and collect data on both
+            variables from the subjects. Our goal is to determine whether these data provide strong
+            enough evidence for us to generalize the observed relationship in the sample and
+            conclude (with some acceptable and agreed-upon level of uncertainty) that a relationship
+            between X and Y exists in the entire population.</p>
+        <p>The primary inference form that we will use in this module, then, is hypothesis testing.
+            Conceptually, across all the inferential methods that we will learn, we'll test some
+            form of:</p>
+        <image style="block" src="../webcontent/image002.gif" alt="H_0: There is no relationship
+between X and Y.  H_a: There is a significant relationship between X and Y."/>
+        <p>(We will also discuss point and interval estimation, but our discussion about these forms
+            of inference will be framed around the test.)</p>
+        <p>Recall that in the module about examining the relationship between two variables in the
+            Exploratory Data Analysis unit, our discussion was framed around the role-type
+            classification table. This part of the course will be structured exactly in the same
+            way.</p>
+        <p>In other words, we will go through 3 sections corresponding to cases C→Q, C→C, and Q→Q in
+            the table below.</p>
+        <image style="block" src="../webcontent/image003.gif" alt="It is possible
+for any type of explanatory variable to be paired with any type of response variable.
+The possible pairings are:
+Categorical Explanatory → Categorical Response (C→C),
+Categorical Explanatory → Quantitative Response (C→Q),
+Quantitative Explanatory → Categorical Response (Q→C), and
+Quantitative Explanatory → Quantitative Response (Q→Q)."/>
+        <p>(Recall that case Q→C is not discussed in this course.)</p>
+        <p>In total, we will introduce 5 inferential methods: three in case C→Q (corresponding to a
+            division of this case into 3 sub-cases) and one in each of the cases C→C and Q→Q.</p>
+        <p>Unlike the previous part of the course on Inference for One Variable, where we discussed
+            in some detail the theory behind the machinery of the test (such as the null
+            distribution of the test statistic, under which the p-values are calculated), in the 5
+            inferential procedures that we will introduce in Inference for Relationships, we will
+            discuss much less of that kind of detail. The principles are the same, but the details
+            behind the null distribution of the test statistic (under which the p-value is
+            calculated) become more complicated and require knowledge of theoretical results that
+            are definitely beyond the scope of this course.</p>
+        <p>Instead, within each of the five inferential methods we will focus on:</p>
+        <ul>
+            <li>When the inferential method is appropriate for use.</li>
+            <li>Under what conditions the procedure can safely be used.</li>
+            <li>The conceptual idea behind the test (as it is usually captured by the test
+                statistic).</li>
+            <li>How to use software to carry out the procedure in order to get the p-value of the
+                test.</li>
+            <li>Interpreting the results in the context of the problem.</li>
+        </ul>
+        <p>Also, we will continue to introduce each test according to the four-step process of
+            hypothesis testing. We are now ready to start with Case C→Q.</p>
+    </body>
+</workbook_page>

@@ -1,0 +1,55 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+       <item ident="inhibitors1">
+         <presentation>
+           <material>
+             <mattext texttype="text/plain">Once you believe the system has reached equilibrium answer this question and click "Next" to continue.
+			 
+&lt;b&gt;When is the system at equilibrium?&lt;/b&gt; </mattext></material>
+           <response_lid rcardinality="Single" ident="LID_01">
+             <render_choice>
+               <response_label ident="Res1">
+                 <material>
+                   <mattext texttype="text/plain">When all of the myoglobins have oxygen bound.</mattext></material></response_label>
+               <response_label ident="Res2">
+                 <material>
+                   <mattext texttype="text/plain">When the average amount of [MO] is constant.</mattext></material></response_label>
+                </render_choice>
+           </response_lid>
+         </presentation>
+         <resprocessing>
+           <outcomes>
+             <decvar varname="SCORE" vartype="integer"/></outcomes>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_01">Res1</varequal>
+             </conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/>
+           </respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="LID_01">Res2</varequal></conditionvar>
+             <setvar varname="SCORE">10</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+         </resprocessing>
+         <itemfeedback ident="hint">
+           <hint>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">What does equilibrium mean?</mattext></material>
+             </hintmaterial>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">Your answer should be general, and not depend on how much ligand you added.</mattext></material>
+             </hintmaterial>
+              </hint>
+         </itemfeedback>
+         <itemfeedback ident="FeedBack1">
+           <material>
+             <mattext texttype="text/plain">Incorrect.  This is not always the case, as it depends on the amount of ligand.  If you only added 3 oxygen molecules, there would always be at least one myoglobin without a bound oxygen.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack2">
+           <material>
+             <mattext texttype="text/plain">Correct.  This is true, regardless of how much oxygen (ligand) is added.</mattext></material></itemfeedback>
+      </item>
+     </questestinterop>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_mean_tutor">
+   <title>Tutor</title>
+   <!-- LO: Calculate the mean from a set of data. -->
+   <question id="q1">
+      <body>
+         <p>Here are the number of hours that 9 students spend on the computer on a typical day:
+            </p><p>1 6 7 5 5 8 11 12 15</p><p> </p>
+         <p>The mean number of hours spent on the computer is: <input_ref input="A"/>
+         </p>
+      </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">7.00</choice>
+         <choice value="two">7.78</choice>
+         <choice value="three">8.23</choice>
+         <choice value="four">9.14</choice>
+
+      </fill_in_the_blank>
+
+      <part>
+         <response input="A" name="7.00" match="one">
+            <feedback>Incorrect. Remember, the mean involves adding all the scores
+               together and dividing the resulting sum by the total number of observations.</feedback>
+         </response>
+         <response input="A" name="7.78" match="two" score="10">
+            <feedback>Correct. The mean involves the sum of all the observations (1 + 6 + 7 + 5 + 5
+               + 8 + 11 + 12 + 15 = 70) divided by the total number of observations (9), which
+               equals 7.78.</feedback>
+         </response>
+         <response input="A" name="8.23" match="three">
+            <feedback>Incorrect. Remember, the mean involves adding all the scores
+               together and dividing the resulting sum by the total number of observations.</feedback>
+         </response>
+         <response input="A" name="9.14" match="four">
+            <feedback>Incorrect. Remember, the mean involves adding all the scores
+               together and dividing the resulting sum by the total number of observations.</feedback>
+         </response>
+      </part>
+   </question>
+
+
+</assessment>

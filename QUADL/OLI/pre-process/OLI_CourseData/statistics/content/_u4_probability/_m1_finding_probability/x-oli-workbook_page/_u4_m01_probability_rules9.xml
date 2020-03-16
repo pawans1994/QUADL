@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules9">
+    <head>
+        <title>Probability Rules (9 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+        <objref idref="use_tools_to_find_probabilities"/>
+    </head>
+    <body>
+      
+        <p>We are now getting to the last rule in this module in which we’ll go back to P(A or
+            B).</p>
+        <p>So far, we’ve introduced the Addition Rule for finding P(A or B) in the special case when
+            A and B are <em style="bold">disjoint </em>events - that is when the events cannot
+            happen together → P(A and B)= <m:math display = 'inline'>
+                <m:mrow>
+                    <m:mn>0</m:mn>
+                </m:mrow>
+            </m:math>.</p>
+        <image src="../webcontent/prob_9_of_11/image1.png" alt="A Venn Diagram titled &quot;A and B
+are Disjoint. The entire sample space S is represented as a gray rectangle. Inside are two, separate,
+non-overlapping blue circles. One circle is for the occurrences in A and the other for occurrences in
+B."/>
+        <p>In this special case P(A or B) refers to the probability of either event A occurring or
+            event B occurring and we said that P(A or B)=P(A) + P(B). Visually, in the Venn diagram
+            above we can clearly see that P(A or B), represented by the total blue area, can be
+            found by adding the areas of the two circles, one representing P(A) and the other
+            P(B).</p>
+        <p>As we mentioned above the case when A and B are disjoint is a special case and in many
+            situations the events are <em style="bold">not disjoint -</em>they can occur at the same
+            time.</p>
+        <image src="../webcontent/prob_9_of_11/image2.png" alt="A venn diagram titled &quot;A and B
+are NOT Disjoint.&quot; A gray box represents the sample space, and inside are two blue circles which
+have an overlapping area. One circle is labeled A and the other is labeled B. The area where the two
+circles overlap represents that Events A and B can occur at the same time, so P(A and B) &ne; 0."/>
+        <p>We are now ready to learn how to find P(A or B) in this more general case - when A and B
+            are not necessarily disjoint. We'll call this rule the "General Addition Rule".</p>
+        <p>Before we introduce this rule through an example, it is important to understand what P(A
+            or B) represents in the case when A and B are not disjoint. Let’s look at the Venn
+            diagram above.</p>
+        <p>Again, P(A or B) is represented by the total blue area which in this case looks
+            different. In this case this area includes an overlap between the two circles which
+            corresponds to the probability that both events A and B occur. This difference has an
+            important implication to the meaning of P(A or B) when A and B are not disjoint.</p>
+        <p>When A and B are not disjoint P(A or B) means P(A occurs or B occurs or both events
+            occur).</p>
+        <example>
+            <p>It is vital that a certain document reach its destination within one day. To maximize
+                the chances of on-time delivery, two copies of the document are sent using two
+                services, service A and service B. It is known that the probabilities of on-time
+                delivery are:</p>
+            <p>0.90 for service A (<em style="bold">P(A) = 0.90</em>)</p>
+            <p>0.80 for service B (<em style="bold">P(B) = 0.80</em>)</p>
+            <p>0.75 for both services being on time (<em style="bold">P(A and B) = 0.75</em>)</p>
+            <p>(Note that A and B are n<em style="bold">ot disjoint</em>. They can happen together
+                with probability 0.75.)</p>
+            <p>The Venn diagrams below illustrate the probabilities P(A), P(B), and P(A and B)</p>
+            <p>[not drawn to scale]:</p>
+            <image src="../webcontent/prob_9_of_11/image3.png" alt="Three Venn Diagrams. In all of them
+there is a large rectangle representing all of the sample space S. Inside this rectangle are two circles
+which overlap partially. One circle is labeled A and the other is labeled B. In the first Venn Diagram
+the circle for A is colored blue, and we see that P(A) = 0.90 . In some sense P(A) is the area of the A
+circle. In the second Venn Diagram the circle for B is colored blue, and it is marked that P(B) = 0.80 .
+Just like in the first Venn diagram it can be thought that the circle for B has an area of 0.80 . In the
+third Venn Diagram the area which is the overlap of circles A and B is colored blue. P(A and B) = 0.75 .
+The area of the overlap can be thought of as having an area of 0.75 ."/>
+
+            <p>In the context of this problem, the obvious question of interest is:</p>
+            <p>
+                <em style="italic">What is the probability of on-time delivery of the document using
+                    this strategy (of sending it via both services)?</em>
+            </p>
+            <p>The document will reach its destination on time as long as it is delivered on time by
+                service A or by service B or by both services. In other words, when event A occurs
+                or event B occurs or both occur. so....</p>
+            <p>P(on time delivery using this strategy)= <em style="bold">P(A or B)</em>, which is
+                represented the by the shaded region in the diagram below:</p>
+            <image src="../webcontent/prob_9_of_11/image6.png" alt="The same Venn Diagram except the
+area of the two circles has been colored blue (shaded). This means the area in the overlap is also
+colored blue. Note that the overlap area has only been colored once, so even though it is in both circles
+we will count it once."/>
+
+            <p> We can now use the three Venn diagrams representing P(A), P(B) and P(A and B) to see
+                that we can find P(A or B) by:</p>
+            <p>adding P(A) (represented by the left circle) and P(B) (represented by the right
+                circle), then subtracting P(A and B) (represented by the overlap), since we included
+                it twice, once as part of P(A) and once as part of P(B).</p>
+            <p>This is shown in the following image:</p>
+
+            <image src="../webcontent/prob_9_of_11/image7.png" alt="The area of both circles in the Venn
+diagram (counting the overlap area once) is calculated as: the area of A's circle (which includes the overlap)
++ the area of B's circle (which also includes the overlap) - the area of the overlap. We therefore get:
+P(A or B) = P(A) + P(B) - P(A and B)."/>
+          <!-- <p>We therefore get:</p>
+            <p>P(A or B) = P(A) + P(B) - P(A and B)</p> --> 
+            <p>If we apply this to our example, we find that:</p>
+            <p>P(A or B)= P(on-time delivery using this strategy)= 0.90 + 0.80 - 0.75 = 0.95.</p>
+            <p>So our strategy of using two delivery services increases our probability of on-time
+                delivery to 0.95.</p>
+        </example>
+        <p>After this example, the following General Addition Rule for the probability of finding
+            P(A or B), should not be surprising:</p>
+
+
+
+        <theorem type="rule">
+            <title>Rule 6: The General Addition Rule</title>
+            <statement>
+                <p>
+                    <em>For any 2 events A and B, P(A or B) = P(A) + P(B) - P(A and B).</em>
+                </p>
+            </statement>
+        </theorem>
+
+        <p>
+            <em style="bold">Comment:</em></p>
+
+        <p>As we mentioned above P(A or B)= P(A occurs or B occurs or both occur).</p>
+        <p>Another way to interpret P(A or B) is therefore P(At least one of the two events
+            occur).</p>
+        <p>(Later in this page we’ll make the connection to the “at least one of...” type problems
+            we discussed on the previous page).</p>
+
+
+
+
+        <wb:inline idref="u3_m1_rules9_tutor3" purpose="learnbydoing"/>
+
+        <section purpose="didigetthis">
+            <title/>
+            <body>
+                <p>Suppose that Jim is applying to two colleges: College A, an “Ivy League” school,
+                    and College B, a state university. Based on his credentials and the requirements
+                    of the two colleges, Jim estimates his chances with the following probabilities: </p>
+                <ul>
+                    <li>Probability that he will be admitted to college A is 0.10.</li>
+                    <li>Probability that he will be admitted to college B is 0.75.</li>
+                    <li>Probability that he will be admitted to both colleges is 0.05.</li>
+                </ul>
+                <wb:inline idref="u3_m1_rules9_tutor3_1" purpose="learnbydoing"/>
+            </body>
+        </section>
+
+        <section>
+            <title>Comments:</title>
+            <body>
+                <p>1. Note that although the motivation for this rule was to find P(A or B) when A
+                    and B are not disjoint, this rule is general in the sense that if A and B happen
+                    to be disjoint (no overlap), then P(A and B) is zero, and we're back to the
+                    original version of Rule 4, the Addition Rule for Disjoint Events.</p>
+                <p>2. Note that in order to find P(A or B) using the General Addition Rule, you need
+                    to know P(A and B), the probability that both events occur. In all three
+                    examples above (document delivery, traffic lights and college admittance) P(A
+                    and B) was simply given to us. Sometimes instead of giving us P(A and B)
+                    directly, we are given a different piece of information which would allow us to
+                    find P(A and B). An example of that draws on our previous work with Rule 5. If A
+                    and B are independent, then we can multiply the individual probabilities to
+                    compute P(A and B).</p>
+                <p>The next activity will give you guided practice in using the General Addition
+                    Rule when events are not disjoint but are independent.</p>
+            </body>
+        </section>
+
+        <section purpose="learnbydoing">
+            <title>Learn By Doing</title>
+            <body>
+                <p>A homeowner has two smoke detector alarms installed, one in the dining room
+                    (adjacent to the kitchen) and one in an upstairs bedroom (above the kitchen). If
+                    cooking produces smoke in the kitchen, the probability of setting off the dining
+                    room alarm (D) is .95. The probability of setting off the bedroom alarm (B) is
+                    .40. The two alarms detect smoke independently of each other. If there is smoke
+                    in the kitchen, what is the probability that the smoke will be detected and will
+                    set off an alarm?</p>
+                <p>Let's first understand what probability we need to find: The smoke from the fire
+                    is detected if it sets off the dining room alarm (D) or the bedroom alarm (B) or
+                    both, and therefore P(smoke is detected) = P(D or B), which is the probability
+                    we need to find. To that end, we are given a few pieces of information. Let's
+                    summarize them:</p>
+                <p>To that end, we are given a few pieces of information. Let's summarize them:</p>
+                <p>* P(D) = .95</p>
+                <p>* P(B) = .4</p>
+                <p>* Unlike the previous examples, in which P(A and B) was simply given, here we
+                    have a different piece of information: "The two alarms detect smoke <em
+                        style="bold">independently </em>of each other." In other words, instead of
+                    being given P(D and B), we are given the fact that D and B are independent.</p>
+
+                <wb:inline idref="u3_m1_rules9_tutor1" purpose="learnbydoing"/>
+                <wb:inline idref="u3_m1_rules9_tutor2" purpose="learnbydoing"/>
+
+
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title/>
+            <body>
+                <wb:inline idref="u3_m1_rules9_tutor4" purpose="didigetthis"/>
+            </body>
+        </section>
+        <section>
+            <title>Comment:</title>
+            <body>
+                <p> The words “at least one of” might remind you of the Complement Rule strategy we
+                    used on the previous page for finding the probability that “at least one of many
+                    independent events occurred.” Note that P(A or B) can also be interpreted as the
+                    probability that “at least one of the two events A, B occur.” When the events
+                    are independent, the Complement Rule strategy and the General Addition Rule give
+                    the same results, as shown below for the birth month problem. </p>
+
+                <p>* General Addition Rule when events are independent: </p>
+                <p>P(at least one of the two shares your birth month)= </p>
+                <p>P(A or B)=P(A)+P(B)–P(A and B)= </p>
+                <p>1/12 +1/12 -(1/12)(1/12)=0.16. </p>
+                <p>* We could also have used the Complement Rule strategy: </p>
+                <p>P(at least one of the two share your birth month)= </p>
+                <p>1–P(neither shares your birth month)= </p>
+                <p>1- (11/12)(11/12)=0.16. </p>
+            </body>
+        </section>
+
+    </body>
+</workbook_page>

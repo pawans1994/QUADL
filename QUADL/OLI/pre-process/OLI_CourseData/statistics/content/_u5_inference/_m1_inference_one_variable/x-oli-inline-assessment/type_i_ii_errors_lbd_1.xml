@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="type_i_ii_errors_lbd_1">
+    <title>Tutor</title>
+
+    <question id="q1">
+        <!-- LO identify type II error in context-->
+        <body>
+            <p>What type of error could the researchers have made? <input_ref input="A"/>
+            </p>
+        </body>
+        <fill_in_the_blank id="A" shuffle="false">
+            <choice value="one">Type I</choice>
+            <choice value="two">Type II</choice>
+            <choice value="three">Impossible to tell</choice>
+
+        </fill_in_the_blank>
+
+        <part>
+            <response input="A" name="stronger" match="one" score="0">
+                <feedback>That’s incorrect. If the researchers had made a type I error, they would
+                    have rejected the null hypothesis and claimed that there was a significant
+                    difference between the group of women who received the hormone therapy and those
+                    who did not. Please try again.</feedback>
+            </response>
+            <response input="A" name="weaker" match="two" score="10">
+                <feedback>Correct. With a type II error, researchers fail to reject a null
+                    hypothesis that is false. In this study, the researchers have not rejected the
+                    null hypothesis. Thus, the researchers have concluded that there is no
+                    significant difference in heart disease and breast cancer rates between the two
+                    groups. In reality, it is possible that there may have been a significant
+                    difference.</feedback>
+            </response>
+            <response input="A" name="about the same" match="three" score="0">
+                <feedback>Incorrect. Each type of error relates to a specific conclusion from the
+                    hypothesis test. We have to reject the null hypothesis to make a type I error.
+                    We have to fail to reject the null hypothesis to make a type II error. What
+                    conclusion did the researchers make? Based on this conclusion, please try
+                    again.</feedback>
+            </response>
+
+            <hint>Remember, you are trying to determine what type of error—type I or type II—the
+                researchers could have made based on the data.</hint>
+
+            <hint>A type I error is possible only if we reject the <em style="bold"
+                    >H</em><sub>0</sub>. A type II error is possible only if we fail to reject the
+                    <em style="bold">H</em><sub>0</sub>.</hint>
+        </part>
+
+    </question>
+
+</assessment>

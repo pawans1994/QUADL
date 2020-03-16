@@ -1,0 +1,146 @@
+<HTML>
+<HEAD><TITLE>
+Trypsin
+</TITLE>
+ <script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY  BGCOLOR="#D3DFFD" TEXT="#000000">
+ <script type="text/javascript">
+  jmolInitialize("./jmol");
+  jmolSetAppletColor("white");
+ </script>
+<TABLE WIDTH="850" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TH colspan=2 align=left>Biochemistry I</TH>
+ <TH colspan=2 align=right>Trypsin</TH>
+  <TR valign=top>
+ <TD>&nbsp;</TD>
+ <TD VALIGN=TOP WIDTH=500 BGCOLOR="#eeeeee">
+ <script type="text/javascript">
+  jmolApplet([495,495],
+  "load ./jmol/pdbs/serp/trp.pdb;color [153,204,255]; rotate z -101.47; rotate y 126.8; rotate z 75.41;center atomno=355;wireframe off;spacefill off;select *:A;backbone 0.3;select *.CA and *:A;spacefill 0.4;select cys and not (backbone and not *.ca);wireframe 0.3;ssbonds 0.3;select cys.sg;spacefill 0.4;color cpk;select *;set specular on","left");
+ </script><BR>
+  
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["background white;color labels black","white",true],
+   ["background gray;color labels black","gray",false],
+   ["background [100,100,255];color labels black","Lt blue",false],
+   ["background black;color label yellow","black",false]]," ","Background color")
+  </script>
+  <script type="text/javascript">
+   jmolSetTarget("left")
+   jmolCheckbox("spin on","spin off", "Spin", false)
+  </script>
+  &nbsp; <B>Rotate</B>:
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["move 0 90 0 0 0 0 0 0 3 60","Y 90&deg;",false],
+   ["move 90 0 0 0 0 0 0 0 3 60","X 90&deg;",false]]," ","Rotate")
+  </script>
+</TD>
+<TD ></TD>
+
+  <TD width=350 BGCOLOR="#eeeeee"><font color black>
+
+ 
+<!--
+ <br>
+&nbsp; <B>Distances</B> (&Aring;):
+  <script type="text/javascript">
+   jmolSetTarget("left") 
+   jmolRadioGroup([
+   ["set measurements ANGSTROMS;set measurements 0.2;monitor 517 1880;color monitors black","Width",true],
+   ["set measurements ANGSTROMS;set measurements 0.2;monitor 616 1506;color monitors black","Height",false]]," ","Distance")
+  </script>
+  <BR><BR>
+ -->
+ <b>Catalysis</b><BR>
+&nbsp;&nbsp;<script type="text/javascript">
+ jmolSetTarget("left") 
+ jmolButton("zap;load ./jmol/pdbs/serp/trp.pdb;color [153,204,255]; rotate z -101.47; rotate y 126.8; rotate z 75.41;center atomno=355;restrict elemno > 2;ssbonds off;spacefill off;wireframe off;select *:A;backbone 0.3;select alpha and *:A;spacefill 0.4;select (57,102,195) and (sidechain or alpha) and (elemno>1);define triad selected;wireframe 0.4;spacefill 0.5;select triad and alpha;label %n%r;color labels black;select triad and 102;color red;select triad and 57;color blue;select triad and 195;color purple;select all","","","Trypsin");  
+</script>+ Active Site Residues<br>
+ &nbsp;&nbsp;
+ <script type="text/javascript">
+  jmolSetTarget("left")
+  jmolCheckbox("set windowCentered off;center atomno=1592;set windowCentered on;zoomto 1.0 250","zoomto 0.5 100", "+/- zoom", false)
+ </script>
+
+ <script type="text/javascript">
+  jmolSetTarget("left")
+  jmolCheckbox("select *:B and (not water) or 189:A;backbone off;wireframe 0.4;spacefill 0.5;color cpk;select *:B and elemno=6;color [70,70,70];select atomno=1542;label 'Asp 189';color label black;select *:A and *.CA;backbone 0.25;spacefill 0.35;delay 0.1;backbone 0.2;spacefill 0.30;delay 0.1;backbone 0.15;spacefill 0.25;delay 0.1;backbone 0.1;spacefill 0.2;set monitor 0.2;monitor 1593 2037;color monitor yellow;set windowCentered off;center atomno=2040;set windowCentered on;zoomto 1.0 250;select all", "select *:B;wireframe off;spacefill off;select 189:A;wireframe off;spacefill off;label off;select (*:A and mainchain) and not (57,102,195);color [153,204,255];backbone 0.3","+/- substrate", false)
+ </script>
+
+  <br>
+   <b>Enzyme - Substrate Interactions</b><br>
+
+Specificity
+    <script type="text/javascript">
+     jmolSetTarget("left")
+     jmolButton("select *:B and (not water) or 189:A;backbone off;wireframe 0.4;spacefill 0.5;color cpk;select *:B and elemno=6;color [70,70,70];select atomno=1542;label 'Asp 189';color label black;select (57,102,195) and (sidechain or alpha) and (elemno>1);define triad selected;wireframe 0.4;spacefill 0.5;select triad and alpha;label %n%r;color labels black;select triad and 102;color red;select triad and 57;color blue;select triad and 195;color purple;set windowCentered off;center atomno=2042;set windowCentered on;zoomto 1.0 250;select *:A and *.CA;backbone 0.25;spacefill 0.35;delay 0.1;backbone 0.2;spacefill 0.30;delay 0.1;backbone 0.15;spacefill 0.25;delay 0.1;backbone 0.1;spacefill 0.2;select atomno=1543,atomno=1544,atomno=1545,atomno=2043,atomno=2044,atomno=2045;define spec selected;isoSurface surf0 select(spec) ignore(not spec) molecular;color $surf0 yellow;color $surf0 translucent;","","","Trypsin");
+    </script>
+    &nbsp;&nbsp;
+     <script type="text/javascript">
+     jmolSetTarget("left")
+     jmolCheckbox("isoSurface surf0 on","isoSurface surf0 off", "+/- surface", true)
+     jmolCheckbox("set defaultTranslucent 0.7;color $surf0 translucent","set defaultTranslucent 0.2;color $surf0 translucent", "+/- translucent", false)
+    </script>
+
+<br>
+Substrate Surface
+<script type="text/javascript">
+jmolSetTarget("left")
+jmolButton("select *:B;wireframe 0.2;spacefill 0.4;color cpk;select *:B and elemno=6;color [70,70,70];define subs selected;isoSurface surf1 select(subs) ignore(not subs) molecular;color $surf1 grey","","","Trypsin");
+</script>
+ &nbsp;
+ <script type="text/javascript">
+jmolCheckbox("isoSurface surf1 on","isoSurface surf1 off", "+/- surface", true)
+jmolCheckbox("set defaultTranslucent 0.7;color $surf1 translucent","set defaultTranslucent 0.2;color $surf1 translucent", "+/- translucent", false)
+</script>
+<br>
+Enz. Surface<img src="clock.gif"></img>
+ <script type="text/javascript">
+     jmolSetTarget("left")
+     jmolButton("select *:A and mainchain;backbone 0.1;select *:A and *.CA;spacefill 0.2;select (57,102,195) and (sidechain or alpha) and (elemno>1);define triad selected;wireframe 0.4;spacefill 0.5;select triad and alpha;label %n%r;color labels black;select triad and 102;color red;select triad and 57;color blue;select triad and 195;color purple;select *:A;define enz selected;isoSurface surf2 select(enz) ignore(not enz) molecular;color $surf2 [153,204,255]","","","Trypsin"); 
+ </script>
+    &nbsp;&nbsp;
+  <script type="text/javascript">
+     jmolCheckbox("isoSurface surf2 on","isoSurface surf2 off", "+/- surface", true)
+     jmolCheckbox("set defaultTranslucent 0.7;color $surf2 translucent","set defaultTranslucent 0.2;color $surf2 translucent", "+/- translucent", false)
+  </script><br>
+  <script type="text/javascript">
+   jmolSetTarget("left")
+   jmolCheckbox("set windowCentered off;center atomno=2042;set windowCentered on;zoomto 1.0 250","zoomto 0.5 100", "+/- zoom", false)
+  </script>
+ <br>
+<hr>      
+ <FONT color="##ff0000"> VIEWING SUGGESTIONS </FONT>
+ <ul>
+ <!--
+  <li>Use the distance buttons  to measure the size of Trypsin.
+ -->
+  <li><b>Catalysis:</b> Note the catalytic triad (Asp, His, Ser). Add the substrate to see how close the Ser is to the peptide bond.
+   <li><b>Enzyme - Substrate Interactions:</b> Select the solid button 'Specificity' to generate a surface that highlights the specificity pocket. +/- surface toggles the display of the surface. +/- translucent changes the opacity of the surface. Note the interaction of + charge on substrate with negative charge (Asp 189) on the enzyme.
+ <li>Select 'Substrate surface' to generate a surface over the substrate.
+ <li>Select 'Enz. surface' to generate a surface over the entire enzyme.
+  <li>Remove the substrate surface to see the deep specificity pocket.
+</OL>      
+    
+     
+     
+</TABLE>
+ 
+<table width=850><tr><td>This structure was modified from the pdb file 1jrs.pdb, by the addition of an alanine residue on the end of the inhibitor.
+<HR>
+ 
+ </TD>
+ </TR>
+</TABLE>
+  
+</BODY>
+</HTML>
+
+
+
+

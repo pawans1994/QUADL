@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m1_rules5_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>In the previous
+            <?oxy_insert_start author="mmyers" timestamp="20101108T151502-0500"?>section<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151500-0500" content="part"?>
+            we learned about disjoint events, which are events that can never happen together. This
+            means that if A and B are
+            disjoint<?oxy_insert_start author="mmyers" timestamp="20101108T151516-0500"?>,<?oxy_insert_end?>
+            then P(A and B) must be:</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">1</choice>
+         <choice value="Res2">0</choice>
+         <choice value="Res3">P(A) + P(B)</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. P(A and B)<?oxy_insert_start author="mmyers" timestamp="20101108T151534-0500"?>
+               <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T151535-0500"?>
+               <?oxy_insert_end?>1 means that events A and B will always happen together.
+               However<?oxy_insert_start author="mmyers" timestamp="20101108T151540-0500"?>,<?oxy_insert_end?>
+               if events A and B are disjoint, they can never happen
+               together<?oxy_insert_start author="mmyers" timestamp="20101108T151544-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151544-0500" content="!"?></feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Good
+               <?oxy_insert_start author="mmyers" timestamp="20101108T151704-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101108T151703-0500" content="J"?>ob!
+               If events A and B are disjoint, they can never happen together. In other words the
+               event "A and B" can never occur, and thus P(A and B)<?oxy_insert_start author="mmyers" timestamp="20101108T151716-0500"?>
+               <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101108T151716-0500"?>
+               <?oxy_insert_end?>0.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. When events A and B are disjoint, P(A) + P(B) is P(A or B), and we're asking about P(A and B).</feedback>
+         </response>
+         <hint>If events A and B are disjoint, they can never happen together. In other
+            words<?oxy_insert_start author="mmyers" timestamp="20101108T151740-0500"?>,<?oxy_insert_end?>
+            the event "A and B" can never occur.</hint>
+      </part>
+   </question>
+</assessment>

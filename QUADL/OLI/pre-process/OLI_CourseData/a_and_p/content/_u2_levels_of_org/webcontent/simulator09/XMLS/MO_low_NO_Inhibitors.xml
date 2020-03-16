@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="MO_low_NO_Inhibitors" version="1">
+    <name>&lt;b&gt;Protein Ligand Binding&lt;/b&gt;</name>
+    <debugger state="off"/>
+    <steps>
+        <step id="createIT">
+            <objects tutor="">
+                <object name=""/>
+                <object name=""/>
+            </objects>
+            <actions>
+                <action event="create" name="title" url="tools/title.swf" x="0" y="0" xscale="1" yscale="1"/>
+                <action event="create" name="Hline2" url="tools/horizontalLine.swf" x="317" y="270" xscale="1.5" yscale="1"/>
+                <action event="create" name="Hline" url="tools/bk.swf" x="316" y="0" xscale="1" yscale="1"/>
+                <action event="create" name="theexplainer" url="tools/text_explainer2.swf" x="0" y="35" xscale="1" yscale="1"/>
+                <action event="record light"/>
+                <action event="settimer" timer="20" advance="yes" resettimer="0"/>
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+            <step id="createIT2">
+                <objects tutor="">
+                    <object name=""/>
+                    <object name=""/>
+                </objects>
+                <actions>
+                    <action event="create" name="thegrapher" url="tools/graphPoints2.swf" x="333" y="270" xscale="1" yscale="1"/>
+                    <action event="create" name="image" url="swfs/allostericInhibitor.swf" x="333" y="50" xscale="1" yscale="1"/>
+                    <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf" x="316" y="0" xscale="1" yscale="1"/>              
+                    <action event="create" name="inputs1" url="tools/inputs1NEW.swf" x="433" y="315" xscale="1" yscale="1"/>
+                    <action event="create" name="castKey1" url="tools/castKeyInhibit0.swf" x="600"  y="290" xscale=".55" yscale=".55"/>
+                    <action event="create" name="equation1" url="tools/equation1.swf" x="585" y="270"  xscale="1" yscale="1"/>
+                    <action event="settimer" timer="20" advance="yes" resettimer="0"/>
+                </actions>
+                <nextbutton text="Next" state="0"/>
+                <prevbutton text="Back" state="0"/>
+            </step>
+
+        <step id="Definition">
+            <objects tutor="">
+                <object name="image" state="invisible"/>
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="theexplainer" state="visible">
+                    <text> In this tutorial you will investigate the steady-state kinetics of enzymes. The tutorial will demonstrate how the rate of an enzyme catalyzed reaction depends on the concentration of substrate. As you work through this material, recall that the measured rate, or velocity, is proportional to [ES], the amount of enzyme substrate complex. &lt;b&gt;Click the "Next" button to continue.&lt;/b&gt; </text>
+                </object>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="No Inhibitors">
+            <objects tutor="_u2_inhibitors_mt1Tall.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+
+                <object name="equation1" state="visible"/>
+                <object name="label1" state="visible"/>
+                <object name="label2" state="visible"/>
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="initialize" name="thegrapher" data="1"
+                    params="moleculeID=,ligandID=5,productID="/>
+                <action event="initialize" name="box1"
+                    params="leftBorder=0,rightBorder=440,topBorder=0,bottomBorder=250,leftBorder2=10,rightBorder2=430,topBorder2=10,bottomBorder2=240">
+                    <molecules>
+                        <molecule numMolecules="0" myID="0"/>
+                        <!--This is a fudge if only one molecule seems to need to be here-->
+                        <molecule numMolecules="0" injectionforce="0" velocity="0"
+                            cast="moleculeC22sp" eq1="500" eq2="200" angle1="30" angle2="355"
+                            x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="50"
+                            rotation="10" watchEnvironment="0" brownian="0"
+                            polarity="0,0,0,0,0,0,0,0" mytype="molecule" myID="1" mybounce="true"/>
+                        <!--enzyme-->
+                        <!--  <molecule numMolecules= "0"  injectionforce= "0" velocity= "0"  cast= "moleculeC22I"  eq1="500" eq2="200"  angle1= "30" angle2= "355" x="160" y="125" Xoffset="120" Yoffset="80" rotationVelocity="50"  rotation="10"  watchEnvironment= "0" brownian="0" polarity = "0,0,0,0,0,0,0,0" mytype="molecule"  myID="2"  mybounce="true" /> -->
+                        <molecule numMolecules="0" injectionforce="0" velocity="60" cast="ligand1"
+                            eq1="500" eq2="200" angle1="30" angle2="315" x="250" y="80" Xoffset="50"
+                            Yoffset="10" rotationVelocity="50" rotation="50" watchEnvironment="0"
+                            brownian="0" polarity="0,0,0,0,0,0,0,0" mytype="ligand" myID="4"
+                            mybounce="false"/>
+                        <!--inhibitor-->
+                        <molecule numMolecules="0" injectionforce="0" velocity="60" cast="ligand2"
+                            eq1="500" eq2="200" angle1="30" angle2="315" x="250" y="180"
+                            Xoffset="50" Yoffset="10" rotationVelocity="50" rotation="50"
+                            watchEnvironment="0" brownian="0" polarity="1,1,1,1,1,1,1,1"
+                            mytype="ligand" myID="5"
+                            bindswith="molecule1.pocket1.bound.go2product,Kd?10,k?250,Kcat?.6,productidl?6"
+                            mybounce="false"/>
+                        <!--substrate-->
+                        <molecule numMolecules="0" injectionforce="0" velocity="60" cast="product4"
+                            eq1="500" eq2="200" angle1="30" angle2="315" x="250" y="80" Xoffset="50"
+                            Yoffset="10" rotationVelocity="50" rotation="50" watchEnvironment="0"
+                            brownian="0" polarity="1,1,1,1,1,1,1,1" mytype="ligand" myID="6"
+                            isproduct="1" returnsto="5" mybounce="false"/>
+                        <!--product-->
+                    </molecules>
+                </action>
+                <action event="sendmessage" name="box1"
+                    params="msg=changeParam,param1=M+,param2=1,param3=1,x=150,y=60,Xoffset=0,Yoffset=0"/>
+                <action event="sendmessage" name="box1"
+                    params="msg=changeParam,param1=M+,param2=1,param3=1,x=300,y=60,Xoffset=0,Yoffset=0"/>
+                <action event="sendmessage" name="box1"
+                    params="msg=changeParam,param1=M+,param2=1,param3=1,x=100,y=160,Xoffset=0,Yoffset=0"/>
+                <action event="sendmessage" name="box1"
+                    params="msg=changeParam,param1=M+,param2=1,param3=1,x=260,y=160,Xoffset=0,Yoffset=0"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="No Inhibitors Cont">
+            <objects tutor="_u2_inhibitors_mt2.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="equation1" state="visible"/>
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="No Inhibitors Cont2">
+            <objects tutor="_u2_inhibitors_mt3.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="equation1" state="visible"/>
+
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="velocity vs concentration">
+            <objects tutor="_u2_inhibitors_mt5.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="equation1" state="visible"/>
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+
+        <step id="velocity vs concentration2">
+            <objects tutor="_u2_inhibitors_mt6.xml">
+                <object name="title" state="visible">
+                    <text>&lt;b&gt;Enzyme Kinetics&lt;/b&gt;</text>
+                </object>
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="equation1" state="visible"/>
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="sendmessage" name="thegrapher" params="setmyMask=on"/>
+                <action event="sendmessage" name="thegrapher" params="drawCurve=1"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+
+        <step id="interlude">
+            <objects tutor="">
+                <object name="box1" state="hilight"/>
+                <object name="Hline" state="visible"/>
+                <object name="thegrapher" state="visible"/>
+                <object name="equation1" state="visible"/>
+                <object name="castKey1" state="visible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="sendmessage" name="thegrapher" params="setmyMask=on"/>
+                <action event="sendmessage" name="thegrapher" params="drawCurve=1"/>
+                <action event="unload" name="box1"/>
+                <action event="create" name="castKey1" url="tools/castKeyInhibit1.swf" x="600"
+                    y="292" xscale=".55" yscale=".55"/>
+                <action event="settimer" timer="6" advance="yes" resettimer="0"/>
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="prepare to exit">
+
+            <objects tutor=""> </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer="6" advance="yes" resettimer="0"/>
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="exit">
+
+            <objects tutor=""> </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit"/>
+            </actions>
+        </step>
+    </steps>
+</simulation>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p13">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (13 of 13)</title>
+        <objref idref="apply_concepts"/>
+    </head>
+    <body>
+
+        <p>Here is our final point on this subject:</p>
+        <p>When the data provide enough evidence to reject H<sub>o</sub>, we can conclude (depending
+            on the alternative hypothesis) that the population proportion is either less than,
+            greater than or not equal to the null value <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mn>0</m:mn>
+                    </m:msub>
+                </m:mrow>
+            </m:math>. However, we do not get a more informative statement about its actual value.
+            It might be of interest, then, to follow the test with a 95% confidence interval that
+            will give us more insight into the actual value of p.</p>
+        <example>
+
+            <p>In our example 3,</p>
+            <image style="block" src="../webcontent/image277.gif"
+                alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The two hypothesis are H_0: p = .64 and H_a: p &ne; .64 . We take
+a sample of 1000 US Adults, represented by a smaller circle. We find that 675 are in favor. p-hat =
+675/1000 = .675, z = 2.31, and the p-value is .021 , which is small enough to let us reject H_0."/>
+            <p>we concluded that the proportion of U.S. adults who support the death penalty for
+                convicted murderers has changed since 2003, when it was .64. It is probably of
+                interest not only to know that the proportion has changed, but also to estimate what
+                it has changed to. We've calculated the 95% confidence interval for p on the
+                previous page and found that it is (.645, .705).</p>
+            <p>We can combine our conclusions from the test and the confidence interval and say:</p>
+            <p>Data provide evidence that the proportion of U.S. adults who support the death
+                penalty for convicted murderers has changed since 2003, and we are 95% confident
+                that it is now between .645 and .705. (i.e. between 64.5% and 70.5%).</p>
+        </example>
+        <example>
+
+            <p>Let's look at our example 1 to see how a confidence interval following a test might
+                be insightful in a different way.</p>
+            <p>Here is a summary of example 1:</p>
+            <image style="block" src="../webcontent/image275.gif"
+                alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The two hypotheses are H_0: p =
+.20 and H_a: p &lt; .20. We take a sample of 400 products, represented by a smaller circle. We find
+that 64 of these are defective. p-hat = 64/400 = .16, and z = -2 and p-value = .023 . Since the p-value is small we
+conclude that H_0 can be rejected."/>
+            <p>We conclude that as a result of the repair, the proportion of defective products has
+                been reduced to below .20 (which was the proportion prior to the repair). It is
+                probably of great interest to the company not only to know that the proportion of
+                defective has been reduced, but also estimate what it has been reduced to, to get a
+                better sense of how effective the repair was. A 95% confidence interval for p in
+                this case is:</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mo>.</m:mo>
+                        <m:mn>16</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mo>⋅</m:mo>
+                        <m:msqrt>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mo>.</m:mo>
+                                    <m:mn>1</m:mn>
+                                    <m:mn>6</m:mn>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>−</m:mo>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>6</m:mn>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                </m:mrow>
+                                <m:mn>400</m:mn>
+                            </m:mfrac>
+                        </m:msqrt>
+                        <m:mo>≈</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mn>6</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mo>.</m:mo>
+                        <m:mn>037</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mo>.</m:mo>
+                                <m:mn>129</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mo>.</m:mo>
+                                <m:mn>197</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>We can therefore say that the data provide evidence that the proportion of defective
+                products has been reduced, and we are 95% sure that it has been reduced to somewhere
+                between 12.9% and 19.7%. This is very useful information, since it tells us that
+                even though the results were significant (i.e., the repair reduced the number of
+                defective products), the repair might not have been effective enough, if it managed
+                to reduce the number of defective products only to the range provided by the
+                confidence interval. This, of course, ties back in to the idea of statistical
+                significance vs. practical importance that we discussed earlier. Even though the
+                results are significant (H<sub>o</sub> was rejected), practically speaking, the
+                repair might be considered ineffective.</p>
+
+        </example>
+        <activity idref="_u5_m1_lbd11" purpose="learnbydoing"/>
+        <section>
+            <title>Let's summarize</title>
+            <body>
+                <p>Even though this unit is about the z-test for population proportion, it is loaded
+                    with very important ideas that apply to hypothesis testing in general. We've
+                    already summarized the details that are specific to the z-test for proportions,
+                    so the purpose of this summary is to highlight the general ideas.</p>
+                <p>The process of hypothesis testing has four steps:</p>
+                
+                <ol style="upper-roman">
+                    <li>Stating the null and alternative hypotheses (H<sub>o</sub> and
+                        H<sub>a</sub>).</li>
+                    <li>Obtaining a random sample (or at least one that can be considered random)
+                        and collecting data. Using the data: <ol style="upper-alpha">
+                            
+                            
+                            <li>Check that the conditions under which the test can be reliably used
+                                are met.</li>
+                            <li>Summarize the data using a test statistic.</li>
+                            <li><p> The test statistic is a measure of the evidence in the data
+                                against H<sub>o</sub>. The larger the test statistic is in
+                                magnitude, the more evidence the data present against
+                                H<sub>o</sub>.</p></li>
+                        </ol>
+                    </li>
+                    
+                    <li>Finding the p-value of the test. <ol style="upper-alpha">
+                        <li>
+                            <p> The p-value is the probability of getting data like those
+                                observed (or even more extreme) assuming that the null
+                                hypothesis is true, and is calculated using the null
+                                distribution of the test statistic. The p-value is a measure of
+                                the evidence against H<sub>o</sub>. The smaller the p-value, the
+                                more evidence the data present against H<sub>a</sub>.</p>
+                        </li>
+                    </ol>
+                    </li>
+                    <li>Making conclusions. <ol style="upper-alpha">
+                        <li>Conclusions about the <em>significance of the results:</em>
+                            <ol style="decimal">
+                                
+                                <li><p> If the p-value is small, the data present enough
+                                    evidence to reject H<sub>o</sub> (and accept
+                                    H<sub>a</sub>).</p></li>
+                                
+                                <li><p> If the p-value is not small, the data do not provide
+                                    enough evidence to reject H<sub>o</sub>.</p></li>
+                                <li><p> To help guide our decision, we use the significance
+                                    level as a cutoff for what is considered a small
+                                    p-value. The significance cutoff is usually set at .05,
+                                    but should not be considered inviolable.</p></li>
+                                <li><p>Conclusions <em>in the context</em> of the problem.
+                                </p></li>
+                            </ol>
+                        </li>
+                    </ol>
+                    </li>
+                </ol>
+            </body>
+            
+            
+            
+        </section>
+        
+                <p>Results that are based on a larger sample carry more weight, and therefore <em>as
+                        the sample size increases, results become more significant.</em>
+                </p>
+                <p>Even a very small and practically unimportant effect becomes statistically
+                    significant with a large enough sample size. The <em>distinction between
+                        statistical significance and practical importance</em> should therefore
+                    always be considered.</p>
+                <p>For given data, the <em>p-value of the two-sided test is always twice as large as
+                        the p-value of the one-sided test</em>. It is therefore harder to reject
+                        H<sub>o</sub> in the two-sided case than it is in the one-sided case in the
+                    sense that stronger evidence is required. Intuitively, the hunch or information
+                    that leads us to use the one-sided test can be regarded as a head-start toward
+                    the goal of rejecting H<sub>o</sub>.</p>
+                <p><em>Confidence intervals can be used in order to carry out two-sided tests</em>
+                    (at the .05 significance level). If the null value is not included in the
+                    confidence interval (i.e., is not one of the plausible values for the
+                    parameter), we have enough evidence to reject H<sub>o</sub>. Otherwise, we
+                    cannot reject H<sub>o</sub>.</p>
+                <p>If the results are significant, it might be of interest to <em>follow up the
+                        tests with a confidence interval</em> in order to get insight into the
+                    actual value of the parameter of interest.</p>
+          
+        <section>
+            <title>End-of-Lesson Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m01_test_for_p13_feedback"/>
+            </body>
+        </section>
+
+        <activity idref="chkpt_hypo_test_pop_prop_pool" purpose="checkpoint"/>
+    </body>
+</workbook_page>

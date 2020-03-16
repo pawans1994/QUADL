@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_point_estimation2">
+    <head>
+        <title>Point Estimation (2 of 2)</title>
+        <objref idref="determine_point_estimates"/>
+    </head>
+<body>
+    
+        <section>
+            <title>Comment 1</title>
+            <body>
+        <p>You may feel that since it is so
+                    intuitive<?oxy_insert_start author="mmyers" timestamp="20101123T095951-0500"?>,<?oxy_insert_end?>
+                    you could have figured out point
+                    estima<?oxy_delete author="mmyers" timestamp="20101123T102305-0500" content="ta"?>tion
+                    on your own, even without the benefit of an entire course in statistics.
+                    Certainly, our intuition tells us that the best estimator for <m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> should be <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>, and the best estimator for p should be <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>. </p>
+        <p>Probability theory does more than this; it actually gives an explanation (beyond
+                    intuition) <em>why</em>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi> x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> are the good choices as point estimators for <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> and
+                    p<?oxy_insert_start author="mmyers" timestamp="20101123T100014-0500"?>,<?oxy_insert_end?>
+                    respectively. In the
+                    <?oxy_delete author="mmyers" timestamp="20101123T100018-0500" content="&quot;"?>Sampling
+                    Distributions<?oxy_delete author="mmyers" timestamp="20101123T100021-0500" content="&quot;"?>
+                    module of the Probability unit, we learned about the sampling distributions of
+                        <?oxy_comment_start author="mmyers" timestamp="20101123T100059-0500" comment="should this be lowercase?"?><m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math><?oxy_comment_end?> and found that <em>as long as a sample is taken at
+                        random</em>, the distribution of sample means is exactly centered at the
+                    value of population mean.</p>
+        
+        <image style="block" src="../webcontent/image019.gif" alt="A normal distribution curve, in which
+the horizontal axis is labeled &quot;X bar.&quot; The possible values of x-bar are centered at &mu;."/>
+        <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101123T100157-0500" comment="lowercase?"?><m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>X</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math><?oxy_comment_end?> is therefore said to be an <em>unbiased
+                        estimator</em> for <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> . Any particular sample mean might turn out to be less than the actual
+                    population mean, or it might turn out to be more. But in the long run, such
+                    sample means are "on target" in that they will not underestimate any more or
+                    less often than they overestimate. </p>
+        <p>Likewise, we learned that the sampling distribution of the sample proportion, <m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>, is centered at the population proportion p (as long as the sample is taken at
+            random), thus making <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> an <em>unbiased estimator</em> for p. </p>
+        
+        <image style="block" src="../webcontent/image020.gif" alt="A normal distribution curve with
+a horizontal axis labeled &quot;p hat.&quot; The possible values of p-hat are centered at p ."/>
+        <p>As stated in the introduction, probability theory plays an essential role as we establish
+            results for statistical inference. Our assertion above that sample mean and sample
+            proportion are unbiased estimators is the first such instance. </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment 2</title>
+            <body>
+        <p>Notice how important the principles of sampling and design are for our above results: if
+                    the sample of U.S. adults in (example 2 on the previous page)
+                    w<?oxy_insert_start author="mmyers" timestamp="20101123T100418-0500"?>as<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T100416-0500" content="ere"?>
+                    not random, but instead included predominantly college students, then .56 would
+                    be a biased estimate for p, the proportion of all U.S. adults who believe
+                    marijuana should be legalized. If the survey design were flawed, such as loading
+                    the question with a reminder about the dangers of marijuana leading to hard
+                    drugs, or a reminder about the benefits of marijuana for cancer patients, then
+                    .56 would be biased on the low or high side, respectively. Our point estimates
+                    are truly unbiased estimates for the population parameter only if the <em>sample
+                        is random and the study design is not flawed.</em>
+                </p>
+                
+            </body>
+        </section>
+    <wb:inline idref="determine_point_estimates_digt_1" purpose="didigetthis"/>
+        <section>
+            <title>Comment 3</title>
+            <body>
+        <p>Not only are sample mean and sample proportion on target as long as the samples are
+            random, but their accuracy improves as sample size increases. Again, there are two
+            "layers" here for explaining this.</p>
+        <p>Intuitively, larger sample sizes give us more information
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T100617-0500"?>with which
+                    <?oxy_insert_end?>to pin down the true nature of the population. We can
+                    therefore expect the sample mean and sample proportion obtained from a larger
+                    sample to be closer to the population mean and proportion, respectively. In the
+                    extreme, when we sample the whole population (which is called a census), the
+                    sample mean and sample proportion
+                    <?oxy_delete author="mmyers" timestamp="20101123T100646-0500" content="will not only be closer to, but "?>will
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T100704-0500"?>exactly
+                    <?oxy_insert_end?>coincide
+                    with<?oxy_delete author="mmyers" timestamp="20101123T100655-0500" content=","?>
+                    the population mean and population proportion.</p>
+        <p>There is another layer here
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T100716-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T100717-0500" content="which"?>,
+                    again, comes from what we learned about the sampling distributions of the sample
+                    mean and the sample proportion. Let's use the sample mean for the
+                    explanation.</p>
+        <p>Recall that the sampling distribution of the sample mean <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> is, as we mentioned before, centered at the population mean <m:math
+                overflow="scroll">
+                <m:mi>μ</m:mi>
+            </m:math> and has a standard deviation of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>. As a result, as the sample size n increases, the sampling distribution of
+                <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> gets less spread out. This means that values of <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>X</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> that are based on a larger sample are more likely to be closer to <m:math
+                overflow="scroll">
+                <m:mi>μ</m:mi>
+            </m:math> (as the figure below illustrates):</p>
+        
+        <image style="block" src="../webcontent/image022.gif" alt="Two sampling distribution curves
+for x-bar. One is squished down and wider, while the other is much taller and narrower. Both curves
+share the same &mu;. The tall, narrow distribution was based on a larger sample size, which has a
+smaller standard deviation, and so is less spread out. This means that values of x-bar are more
+likely to be closer to &mu; when the sample size is larger."/>
+        <p>Similarly, since the sampling distribution of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is centered at p and has
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T100920-0500"?>a
+                    <?oxy_insert_end?>standard deviation of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>−</m:mo>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mi>n</m:mi>
+                                </m:mfrac>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T100924-0500"?>,<?oxy_insert_end?>
+                    which decreases as the sample size gets larger, values of <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T100929-0500"?>
+                    <?oxy_insert_end?>are more likely to be closer to p when the sample size is
+                    larger.</p></body></section>
+    <wb:inline idref="determine_point_estimates_digt_2" purpose="didigetthis"/>
+        <section>
+            
+            <title>Comment 4</title>
+            <body>
+        <p>Another example of a point estimate is using sample
+                    variance<?oxy_insert_start author="mmyers" timestamp="20101123T100954-0500"?>,
+                        <?oxy_insert_end?><m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>s</m:mi>
+                                <m:mn> 2</m:mn>
+                            </m:msup>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:msup>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mn>1</m:mn>
+                                                </m:msub>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mo>¯</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                    <m:mo>+</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>.</m:mo>
+                                    <m:mo>+</m:mo>
+                                    <m:msup>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mi>n</m:mi>
+                                                </m:msub>
+                                                <m:mo>−</m:mo>
+                                                <m:mover>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mo>¯</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mi>n</m:mi>
+                                    <m:mo>−</m:mo>
+                                    <m:mn>1</m:mn>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T101003-0500"?>,<?oxy_insert_end?>
+                    to estimate population variance<?oxy_insert_start author="mmyers" timestamp="20101123T101010-0500"?>,<?oxy_insert_end?>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> .</p>
+        <p>In this course, we will not be concerned with estimating <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> for its own sake, but since we will often substitute s for <m:math
+                        overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math> when standardizing the sample mean, it is worth pointing out that <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>s</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> is an unbiased estimator for <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math>. If we had divided by n instead of n<?oxy_insert_start author="mmyers" timestamp="20101123T101034-0500"?>
+                    <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101123T101034-0500"?>
+                    <?oxy_insert_end?>1 in our estimator for population variance, then in the long
+                    run our sample variance would be guilty of a slight underestimation. Division by n<?oxy_insert_start author="mmyers" timestamp="20101123T101043-0500"?>
+                    <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101123T101043-0500"?>
+                    <?oxy_insert_end?>1 accomplishes the goal of making this point estimator
+                    unbiased. Making unbiased estimators a top priority
+                    is<?oxy_insert_start author="mmyers" timestamp="20101123T101053-0500"?>,<?oxy_insert_end?>
+                    in
+                    fact<?oxy_insert_start author="mmyers" timestamp="20101123T101054-0500"?>,<?oxy_insert_end?>
+                    the reason that our formula for s, introduced in the Exploratory Data Analysis
+                    unit, involves division by n<?oxy_insert_start author="mmyers" timestamp="20101123T101102-0500"?>
+                    <?oxy_insert_end?>-<?oxy_insert_start author="mmyers" timestamp="20101123T101102-0500"?>
+                    <?oxy_insert_end?>1 instead of by n.</p>
+              
+            </body>
+        </section>
+        <section>
+            <title>Let's Summarize</title>
+            <body>
+        <p>We use <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>p</m:mi>
+                        <m:mo stretchy="true">ˆ</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> (sample proportion) as a point estimator for p (population proportion). It is
+            an unbiased estimator: its long-run distribution is centered at p as long as the sample
+            is random.</p>
+        <p>We use <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math> (sample mean) as a point estimator for <m:math overflow="scroll">
+                <m:mi>μ</m:mi>
+            </m:math> (population mean). It is an unbiased estimator: its long-run distribution is
+            centered at <m:math overflow="scroll">
+                <m:mi>μ</m:mi>
+            </m:math> as long as the sample is random.</p>
+        <p>In both cases, the larger the sample size, the more accurate the point estimator is. In
+            other words, the larger the sample size, the more likely it is that the sample mean
+            (proportion) is close to the unknown population mean (proportion).</p>
+        <!--<activity idref="_u5_m1_dig2" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m1_estimation2_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="determine_point_estimates_digt_3" purpose="didigetthis"/>
+            </body>
+        </section>
+        <section>
+            <title>End<?oxy_insert_start author="mmyers" timestamp="20101123T101536-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T101538-0500" content=" "?>of<?oxy_insert_start author="mmyers" timestamp="20101123T101539-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T101540-0500" content=" "?>Lesson
+                Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m01_point_estimation2_feedback"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

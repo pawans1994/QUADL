@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="boxplot1lbd">
+    <head>
+        <title>Boxplot</title>
+    </head>
+    <body>
+        <p>In this activity, we will use the Best Actor Oscar winners (1970-2013) to:</p>
+        <ul>
+            <li>Learn how to use a statistics package to produce the numerical measures, or
+                "descriptive statistics" of a distribution.</li>
+            <li>Get some information about the distribution from its five-number summary.</li>
+        </ul>
+        <p>Click <activity_link idref="bestactordataset_2013" target="new">here</activity_link> to
+            see the entire dataset.</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/actor_2013.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>actor_age</code>. Enter
+                        the command <code>actor_age</code> to see the data. The only variable
+                        (column title) in the data frame <code>actor_age</code> is
+                        <code>Age</code>.</p>
+                    <p>The following command will show you the five-number summary for the actors’
+                        age data and the mean value of the data as well:</p>
+                    <code style="inline">summary(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">     Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    31.00   37.75   42.50   44.72   48.75   76.00-->
+                    <p>To get specific descriptive statistics from the data set consider the
+                        following commands:</p>
+                    <p>For the Mean:</p>
+                    <code style="inline">mean(actor_age$Age)</code>
+                    <!--<codeblock syntax="text">  [1] 44.71875</codeblock>-->
+                    <p>For the Standard Deviation:</p>
+                    <code style="inline">sd(actor_age$Age)</code>
+                    <!--<codeblock syntax="text">  [1] 10.26499</codeblock>-->
+                    <p>For the Variance:</p>
+                    <code style="inline">var(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 105.37</codeblock>-->
+                    <p>For the Median:</p>
+                    <code style="inline">median(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 42.5</codeblock>-->
+                    <p>For the Inter-quartile range:</p>
+                    <code style="inline">IQR(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 11</codeblock>-->
+                    <p>For the Minimum:</p>
+                    <code style="inline">min(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 31</codeblock>-->
+                    <p>For the Maximum:</p>
+                    <code style="inline">max(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 76</codeblock>-->
+                    <p>For the Sample Size (n):</p>
+                    <code style="inline">length(actor_age$Age)</code>
+                    <!--                    <codeblock syntax="text">  [1] 32</codeblock>-->
+                    <p>For the First Quartile (25th percentile, Q1):</p>
+                    <code style="inline">quantile(actor_age$Age, 0.25)</code>
+                    <!--                    <codeblock syntax="text">    25%
+  37.75</codeblock>-->
+                    <p>For the Third Quartile (75th percentile, Q3):</p>
+                    <code style="inline">quantile(actor_age$Age, 0.75)</code>
+                    <!--                    <codeblock syntax="text">    75%
+  48.75-->
+
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open the file (actor.xls) in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/actor_2013.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link> to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer.</li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on “Load File.”</li>
+                    </ul>
+                    <p>To ask StatCrunch for the descriptive statistics of a distribution:</p>
+                    <ul>
+                        <li>Choose Stat → Summary Stats → Columns</li>
+                        <li>In the Column Statistics window select the column Age</li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open the actor's age dataset, right-click <link
+                            href="../../../webcontent/minitab/actor_2013.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: you will likely see a dialog box appear that says "A copy of
+                        the content of this file will be added to the current project"&#8212;just
+                        click "OK."</p>
+                    <p>To ask Minitab for the descriptive statistics of a distribution: </p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → Display Descriptive Statistics</li>
+                        <li>Under "Variables" type age (or double click on this variable in the left
+                            panel)</li>
+                        <li>Click OK</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/actor_2013.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+                    <p>Now use Excel to calculate the numerical measures of a distribution: </p>
+                    <ul>
+                        <li><em>min</em></li>
+                        <li>Pick a cell outside of column A, and type <em>min</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=min(A2:A33)</em>.</li>
+                        <li><em>IMPORTANT:</em> Instead of typing the <em>A2:A33</em> inside of the
+                            parentheses, it is better to highlight the relevant cells with your
+                            mouse after typing <em>=min(</em> (by holding a left click as you highlight the
+                            cells).</li>
+                    </ul>
+                    <ul>
+
+                        <li><em>Q1</em></li>
+                        <li>In the cell under <em>min</em>, type <em>Q1</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=quartile(A2:A33,1)</em>.</li>
+                        <li>Note: <em>=quartile.inc(A2:A33, 1)</em> will also work.</li>
+                    </ul>
+
+                    <ul>
+                        <li><em>Median</em></li>
+                        <li>In the cell under <em>Q1</em>, type <em>Median</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=median(A2:A33)</em>.</li>
+                        <li>Note: <em>=quartile(A2:A33, 2)</em> will also work.</li>
+                    </ul>
+
+                    <ul>
+                        <li><em>Mean</em></li>
+                        <li>In the cell under <em>Median</em>, type <em>Mean</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=average(A2:A33)</em>.</li>
+                    </ul>
+
+                    <ul>
+                        <li><em>Q3</em></li>
+                        <li>In the cell under <em>Mean</em>, type <em>Q3</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=quartile(A2:A33,3)</em>.</li>
+                    </ul>
+
+                    <ul>
+                        <li><em>Max</em></li>
+                        <li>In the cell under <em>Q3</em>, type <em>Max</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=max(A2:A33)</em>.</li>
+                    </ul>
+                </alternative>
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open the actor's age dataset, right-click <link
+                            href="../../../webcontent/excel/actor.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel.</p>
+                    <p>Now use Excel to calculate the numerical measures of a distribution: </p>
+                    <ul>
+                        <li><?oxy_comment_start author="mmyers" timestamp="20101019T130237-0400" comment="suggest removing bullets from min, Q1, etc."?><em>min</em><?oxy_comment_end?></li>
+                        <li>Pick a cell outside of column A, and type <em>min</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=min(A2:A33)</em>.</li>
+                        <li><em>Q1</em></li>
+                        <li>In the cell under<em>min</em>, type <em>Q1</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=quartile(A2:A33,1)</em>.</li>
+                        <li><em>Median</em></li>
+                        <li>In the cell under<em>Q1</em>, type <em>Median</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=median(A2:A33)</em>.</li>
+                        <li><em>Mean</em></li>
+                        <li>In the cell under<em>Median</em>, type <em>Mean</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=average(A2:A33)</em>.</li>
+                        <li><em>Q3</em></li>
+                        <li>In the cell under<em>Mean</em>, type <em>Q3</em>.</li>
+                        <li>Then, in the next cell to the right, type
+                            <em>=quartile(A2:A33,3)</em>.</li>
+                        <li><em>Max</em></li>
+                        <li>In the cell under<em>Q3</em>, type <em>Max</em>.</li>
+                        <li>Then, in the next cell to the right, type <em>=max(A2:A33)</em>.</li>
+                    </ul>
+                </alternative> -->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a list with the actor's age data loaded, right-click <link
+                            href="../../../webcontent/ti/actor_2013.8xl" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and send it to your calculator. For instructions on how
+                        to connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p>NOTE: This dataset is fairly small (n=32). It may be just as fast to enter
+                        the data yourself directly in L1. </p>
+                    <p>The data for actor’s age are stored in L1.</p>
+                    <p>Now use the TI calculator to calculate the numerical measures of a
+                        distribution:</p>
+                    <p><em>Descriptive Statistics including five-number summary</em></p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/CALC/1:1-Var Stats</code>. Now you have
+                            to specify which list the data are in. Since the age data are in L1,
+                            press <code style="inline">2ND/1</code> to choose L1. Note that if you
+                            don't specify a particular list, the default list that will be used is
+                            L1.</li>
+                        <li>Leave <code>FreqList</code> blank.</li>
+                        <li>Highlight <code>Calculate</code> and Press <code>ENTER</code>.</li>
+
+                        <li>The calculator will display: <table rowstyle="plain">
+                                <tr>
+                                    <td><m:math overflow="scroll">
+                                            <m:mrow>
+                                                <m:mover>
+                                                  <m:mi>x</m:mi>
+                                                  <m:mo>¯</m:mo>
+                                                </m:mover>
+                                            </m:mrow>
+                                        </m:math></td>
+                                    <td>sample mean. This value is also the population mean if the
+                                        data in the list are population data.</td>
+                                </tr>
+                                <tr>
+                                    <td>&#931;x</td>
+                                    <td>sum of the x-values</td>
+                                </tr>
+                                <tr>
+                                    <td>&#931;x<sup>2</sup></td>
+                                    <td>sum of the squared x-values</td>
+                                </tr>
+                                <tr>
+                                    <td>Sx</td>
+                                    <td>sample standard deviation</td>
+                                </tr>
+                                <tr>
+                                    <td>&#963;x</td>
+                                    <td>population standard deviation</td>
+                                </tr>
+                                <tr>
+                                    <td>&#8595;n</td>
+                                    <td>sample size. The down arrow indicates that you can use the
+                                        down arrow to view remaining statistics</td>
+                                </tr>
+                                <tr>
+                                    <td>minX</td>
+                                    <td>minimum data value</td>
+                                </tr>
+                                <tr>
+                                    <td>Q1</td>
+                                    <td>first quartile</td>
+                                </tr>
+                                <tr>
+                                    <td>Med</td>
+                                    <td>median</td>
+                                </tr>
+                                <tr>
+                                    <td>Q3</td>
+                                    <td>third quartile</td>
+                                </tr>
+                                <tr>
+                                    <td>maxX</td>
+                                    <td>maximum data value</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+        <wb:inline idref="u1_m1_boxplot1_lbd_tutor1" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u1_m1_boxplot1_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

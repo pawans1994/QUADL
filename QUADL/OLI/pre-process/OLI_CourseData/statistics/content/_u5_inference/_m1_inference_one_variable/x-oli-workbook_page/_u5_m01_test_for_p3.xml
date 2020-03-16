@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p3">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (3 of 13)</title>
+        <objref idref="carry_out_hypothesis_testing"/>
+    </head>
+<body>
+    
+        <section>
+            <title>2. Collecting and Summarizing the Data
+                (<?oxy_insert_start author="mmyers" timestamp="20101126T212129-0500"?>Using<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212126-0500" content="by"?>
+                a Test Statistic)</title>
+            <body>
+                <p> After the hypotheses have been stated, the next step is to obtain a
+                        <em>sample</em> (on which the inference will be based), <em>collect relevant
+                        data</em>, and <em>summarize</em> them. </p>
+                <p> It is extremely important that our sample is representative of the population
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T212157-0500"?>about<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212157-0500" content="on"?>
+                    which we want to draw conclusions. This is ensured when the sample is chosen at
+                        <em>random.</em> Beyond the practical issue of ensuring representativeness,
+                    choosing a random sample has theoretical importance
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T212209-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212208-0500" content="which"?>
+                    we will mention later.</p>
+                <p> In the case of hypothesis testing for the population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T212227-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T212229-0500"?>)<?oxy_insert_end?>,
+                    we will collect data on the relevant categorical variable from the individuals
+                    in the sample and start by calculating the sample proportion, <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> (the natural quantity to calculate when the parameter of interest is
+                    p).</p>
+                <p> Let's go back to our three examples and add this step to our figures.</p>
+                <example>
+                    <title>1</title>
+                    <image style="block" src="../webcontent/image221.gif" alt="A large circle represents
+the population of products produced by the machine (following the repair). We want to know p about
+this population, or what is the proportion of defective products. The question we wish to answer is
+&quot;is p still .20 or has it been reduced?&quot; We take a sample of 400 products, represented by
+a smaller circle. We find that 64 of these are defective. p-hat = 64/400 = .16"/>
+                </example>
+                <example>
+                    <title>2</title>
+                    <image style="block" src="../webcontent/image222.gif" alt="A large circle represents
+the population Students at the college. We want to know p about this population, or what is the
+population proportion of students using marijuana. The question we wish to answer is &quot;is p
+.157 (like the national figure) or higher?&quot; We take a sample of 100 students, represented by
+a smaller circle. We find that 19 use marijuana. p-hat = 19/100 = .19"/>
+                </example>
+                <example>
+                    <title>3</title>
+                    <image style="block" src="../webcontent/image223.gif" alt="A large circle represents
+the population US Adults. We want to know p about this population, which is population proportion
+which support the death penalty. The question we wish to answer is &quot;has p changed since 2003
+(when it was .64)?&quot; We take a sample of 1000 US Adults, represented by a smaller circle. We
+find that 675 are in favor. p-hat = 675/1000 = .675"/>
+                </example>
+                <p>As we mentioned earlier without going into details, when we summarize the data in
+                    hypothesis testing, we go a step beyond calculating the sample statistic and
+                    summarize the data with a <em>test statistic</em>. Every test has a test
+                    statistic, which to some degree captures the essence of the test. In fact, the
+                    p-value, which so far we have looked upon as "the king" (in the sense that
+                    everything is determined by it), is actually determined by (or derived from) the
+                    test statistic.
+                    <?oxy_delete author="mmyers" timestamp="20101126T212447-0500" content="I guess that with such an introduction, you are all curious to meet this test statistic. "?>We
+                    will now gradually introduce
+                    <?oxy_delete author="mmyers" timestamp="20101126T212500-0500" content="you "?><?oxy_insert_start author="mmyers" timestamp="20101126T212410-0500"?>the
+                    test
+                    statistic<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212415-0500" content="to it"?>.
+                    <?oxy_delete author="mmyers" timestamp="20101126T212508-0500" content="Let&apos;s start."?></p>
+                <p>The test statistic is <em>a measure</em> of how far the sample proportion <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is from the null value <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>, the value that the null hypothesis claims is the value of p. In other
+                    words, since <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is what the data estimates p to be, the test statistic can be viewed
+                    as a measure of the "distance" between what the data tells
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T212536-0500"?>us<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212535-0500" content="me"?>
+                    about p and what the null hypothesis claims p to be.</p>
+                <p>Let's use our examples to understand this:</p>
+                <example>
+                    <title>1</title>
+                    <p>The parameter of interest is p, the proportion of defective products
+                        following the repair.</p>
+                    <p>The data estimate p to be <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>16</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <p>The null hypothesis claims that p = .20</p>
+                    <p>The data are therefore .04 (or
+                        4<?oxy_delete author="mmyers" timestamp="20101126T212610-0500" content="%"?><?oxy_insert_start author="mmyers" timestamp="20101126T212611-0500"?>
+                        percentage<?oxy_insert_end?> points) below the null hypothesis with respect
+                        to what they each tell us about p.</p>
+                    <p>It is hard to evaluate whether this difference of 4% in defective products is
+                        enough evidence to say that the repair was
+                        effective<?oxy_insert_start author="mmyers" timestamp="20101126T212633-0500"?>,<?oxy_insert_end?>
+                        but clearly, the larger the difference, the more evidence it is against the
+                        null hypothesis. So if, for example, our sample proportion of defective
+                        products had been, say, .10 instead of .16, then I think you
+                        <?oxy_delete author="mmyers" timestamp="20101126T212652-0500" content="all "?>would
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T212700-0500"?>all
+                        <?oxy_insert_end?>agree that cutting the proportion of defective
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T212705-0500"?>products
+                        in<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212708-0500" content="by"?>
+                        half (from 20% to 10%)<?oxy_insert_start author="mmyers" timestamp="20101126T212713-0500"?>
+                        <?oxy_insert_end?>would be extremely strong evidence that the repair was
+                        effective.</p>
+                </example>
+                <example>
+                    <title>2</title>
+                    <p>The parameter of interest is p, the proportion of students in
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T212724-0500"?>a<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T212723-0500" content="the"?>
+                        college who use marijuana.</p>
+                    <p>The data estimate p to be <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>19</m:mn>
+                            </m:mrow>
+                        </m:math>.</p>
+                    <p>The null hypothesis claims that p = .157</p>
+                    <p>The data are therefore .033 (or 3.3 percentage points) above the null hypothesis with respect
+                        to what they each tell us about p.</p>
+                </example>
+                <example>
+                    <title>3</title>
+                    <p>The parameter of interest is p, the proportion of U.S. adults who support the
+                        death penalty for convicted murderers.</p>
+                    <p>The data estimate p to be <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>.</m:mo>
+                                <m:mn>675</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <p>The null hypothesis claims that p = .64.</p>
+                    <p>There is a difference of .035 (3.5 percentage points) between the data and the null hypothesis
+                        with respect to what they each tell us about p.</p>
+                </example>
+                <p>There is a problem with just looking at the difference between the sample
+                    proportion <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>p</m:mi>
+                                <m:mo stretchy="true">ˆ</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> and the null value <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>p</m:mi>
+                                <m:mn>o</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>.</p>
+                <p>Examples 2 and 3 illustrate this problem very well.</p>
+                <p>In example 2 we have a difference of 3.3 percentage points between the data and the null
+                    hypothesis, which is approximately the same as the difference in example 3 of 3.5 percentage points. However, the difference in example 3 of 3.5 percentage points is based on a
+                        <em>sample of size
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T212909-0500"?>of
+                        <?oxy_insert_end?>1<?oxy_insert_start author="mmyers" timestamp="20101126T212911-0500"?>,<?oxy_insert_end?>000</em>
+                    and therefore it is much <em>more impressive</em> than the difference of 3.3 percentage points in
+                    example
+                    2<?oxy_insert_start author="mmyers" timestamp="20101126T212917-0500"?>,<?oxy_insert_end?>
+                    which was obtained from a sample of size of only 100.</p>
+                <p> </p>
+            </body>
+        </section>
+    <wb:inline idref="u4_m2_testprop3_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m2_testprop3_tutor2" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item ident="questionid" title="Title">
+  <presentation>
+    <material>
+      <mattext texttype="text/plain">What is the 99% confidence interval for &#x03BC;? Interpret
+        it in context.</mattext>
+    </material>
+    <response_str ident="Short answer 1">
+      <render_fib fibtype="String" prompt="Box">
+        <response_label ident="Res 1"/>
+      </render_fib>
+    </response_str>
+  </presentation>
+  <resprocessing>
+    <outcomes/>
+    <respcondition>
+      <conditionvar>
+        <other/>
+      </conditionvar>
+      <displayfeedback linkrefid="Feedback always"/>
+    </respcondition>
+  </resprocessing>
+  <itemfeedback ident="solution">
+    <solution>
+      <solutionmaterial>
+        <material>
+          <mattext texttype="text/plain">Here is the Minitab output:</mattext>
+          <matimage label="" uri="../../../webcontent/flash/_u5_m1_lbdtutor3a_image1.jpg"/>
+          <mattext texttype="text/plain">We are 99% confident that the mean birth weight of first
+            babies to mothers who are 35 or older is between (rounding) 2996 and 3227 grams.
+            Comments: 1. Note that in the output, Minitab also calculates the sample standard
+            deviation, s, (under StDev) and another quantity denoted by "SE Mean" (which we will
+            discuss in the course shortly). Even though both these quantities are not needed for
+            calculating the confidence interval, it is quite encouraging to see that the sample
+            standard deviation is 501.32 since this means that our assumption of &#x03C3; = 500 is
+            quite reasonable. 2. If you go back for a minute to the dialog box (Stat →
+            Basic statistics → 1 Sample Z) you'll notice that there is also the option
+            to give Minitab "Summarized data" instead of the raw data (i.e., the sample size n and
+            mean x-bar). As we mentioned earlier in this activity, in cases like these, it would be
+            easier to simply use the formula ourselves, but it is noteworthy that the option in
+            Minitab exists. </mattext>
+        </material>
+      </solutionmaterial>
+    </solution>
+  </itemfeedback>
+</item>

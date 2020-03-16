@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop4_tutor1">
+    <title>Tutor</title>
+    <page>
+        <content>
+            <p>We think that the most common color for automobiles is silver and that 24% of all
+                automobiles sold are silver. We take a random sample of 225 cars and find that 63 of
+                them are silver. </p>
+        </content>
+        <question id="q1">
+            <body><p>Calculate the value of the test statistic for this. </p></body>
+            <multiple_choice shuffle="false">
+                <choice value="A">1.34</choice>
+                <choice value="B">−1.40</choice>
+                <choice value="C">1.40</choice>
+                <choice value="D">2.14</choice>
+                <choice value="E">2.50</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect. It appears that you used the sample
+                        proportion instead of the null value in the denominator.</feedback>
+                </response>
+                <response match="B">
+                    <feedback>Incorrect. Are you sure you used <link
+                            href="javascript:loadImage('../../../webcontent/inline_assessment/_u5_m1_digtutor23a.gif')"
+                            >this value</link>? </feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response match="D">
+                    <feedback>Incorrect. Look at the denominator of your calculation. It appears
+                        that you used the sample proportion twice instead of p<sub>0</sub>(1 −
+                            p<sub>0</sub>).</feedback>
+                </response>
+                <response match="E">
+                    <feedback>Incorrect. Look at the denominator of your calculation. It appears
+                        that you used the null value twice instead of: p<sub>0</sub>(1 −
+                            p<sub>0</sub>).</feedback>
+                </response>
+            </part>
+        </question>
+        <question id="q2">
+            <body><p>If we were to find that 72 (instead of 63) of the 225 randomly chosen cars are
+                    silver, would the test statistic increase, decrease, or stay the same? Try
+                    to answer this question without actually calculating the test statistic.
+                </p></body>
+            <multiple_choice shuffle="false">
+                <choice value="A">Increase</choice>
+                <choice value="B">Decrease</choice>
+                <choice value="C">Stay the same</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="10">
+                    <feedback>Correct. With the increased number of silver cars from 63 to 72 (out
+                        of 225), the sample proportion increases (from 0.28 to 0.30) and therefore
+                        will be further away from the assumed (null) value of 0.24. Since the test
+                        statistic measures the difference between the sample proportion and the null
+                        value in standard deviations, the test statistic will increase. </feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. With the increased number of silver cars from 63 to 72 (out
+                        of 225), the sample proportion increases (from 0.28 to 0.30) and therefore
+                        will be further away from the assumed (null) value of 0.24. The test
+                        statistic measures the difference between the sample proportion and the null
+                        value in standard deviations so the test statistic will <em style="italic"
+                            >not decrease</em>. </feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. With the increased number of silver cars from 63 to 72 (out
+                        of 225), the sample proportion increases (from 0.28 to 0.30) and therefore
+                        will be further away from the assumed (null) value of 0.24. The test
+                        statistic measures the difference between the sample proportion and the null
+                        value in standard deviations so the test statistic will <em style="italic"
+                            >not stay the same</em>. </feedback>
+                </response>
+                <hint>With the increased number of silver cars from 63 to 72 (out of 225), is the
+                    sample proportion closer to or further away from the assumed (null) value of
+                    0.24? </hint>
+            </part>
+        </question>
+        <question id="q3">
+            <body><p>If we take a different random sample of 225 cars and find that 20% are silver,
+                    is the test statistic positive or negative or zero? </p></body>
+            <multiple_choice shuffle="false">
+                <choice value="A">Positive</choice>
+                <choice value="B">Negative</choice>
+                <choice value="C">Zero</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect. p-hat in this case is 0.20, which is less than
+                        p<sub>0</sub> (0.24). You chose "positive," which only happens when
+                        p-hat is more than p<sub>o</sub>. </feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. p-hat = 0.20. The test statistic is negative when p-hat is
+                        less than p<sub>0</sub>.</feedback>
+                </response>
+                <response match="C">
+                    <feedback>Incorrect. p-hat = 0.20, which is less than p<sub>0</sub> = 0.24, so
+                        what is the sign of the difference: p-hat &#8209; p<sub>0</sub>?</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+
+</assessment>

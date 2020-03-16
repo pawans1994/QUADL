@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+	xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+	id="_u5_m02_case_one_conc_openfree">
+	<head>
+		<title>Conclusion of Case C→Q</title>
+	</head>
+	<body>
+		<p>We are now done with case C→Q. We learned that this case is further classified into
+			sub-cases, depending on the number of groups that we are comparing (i.e., the number of
+			categories that the explanatory variable has), and the design of the study (independent
+			vs. dependent samples). For each of the three sub-cases that we covered, we learned the
+			appropriate inferential method, and emphasized the idea behind the method, the
+			conditions under which it can be safely used, how to carry it out using software, and
+			the interpretation of the results. </p>
+		<p>The following table summarizes when each of the three sub-cases, covered in this module,
+			are used:</p>
+		
+		<image src="../webcontent/c-q_table.png" alt="A Two-sample test is used in circumstances:
+				* Categorical explanatory variable with two categories
+				* Comparing two population means based on two independent samples
+				* Either normal populations or large sample size
+						A Paired t-test (special case of the one sample t-test) is used when:
+				* Categorical explanatory variable with two categories
+				* Comparing the two population means, when the samples are dependent on each other or
+				&quot;matched pairs.&quot;
+				*Samples are dependent in the sense that every observation in one sample is linked to
+				an observation in another sample. Examples of dependent samples include: -same subjects
+				measured twice, -twins
+						ANOVA is used when
+				* Categorical explanatory variable with more than two categories.
+				* Comparing more than two population means based on independent samples"/>
+		
+		<p>The following summary discusses each of the above named sub-cases of C→Q within the
+			context of the hypothesis testing process.</p>
+		<p><em style="bold">I. Stating the null and alternative hypotheses (H</em><em style="bold"
+			><sub>0</sub></em><em style="bold">and H</em><em style="bold"
+				><sub>a</sub></em><em style="bold">).</em></p>
+		<image src="../webcontent/c-q_table2.png" alt="In a Two-Sample t-test, the hypotheses are:
+H_0: &mu;_1 - &mu;_2 = 0 (or H_0: &mu;_1 = &mu;_2), and one of:
+		* H_a: &mu;_1 - &mu;_2 &lt; 0 (same as H_a: &mu;_1 &lt; &mu;_2)
+		* H_a: &mu;_1 - &mu;_2 &gt; 0 (same as H_a: &mu;_1 &gt; &mu;_2)
+		* H_a: &mu;_1 - &mu;_2 &ne; 0 (same as H_a: &mu;_1 &ne; &mu;_2)
+		For a paired t-test, the hypotheses are H_0: &mu;_d = 0, and one of:
+		* H_a: &mu;_d &lt; 0,
+		* H_a: &mu;_d &gt; 0,
+		* H_0: &mu;_0 &ne; 0.
+		For ANOVA, H_0: &mu;_0 = &mu;_2 = ... = &mu;_k, and H_a:not all &mu;'s are equal"/>
+		<!--  <table>
+			<tr>
+				<td rowspan="2"><em style="bold">Sub-Case of C→Q</em></td>
+				<td colspan="3"><em style="bold">Null Hypothesis</em></td>
+				<td><em style="bold">Alternative Hypothesis</em></td>
+			</tr>
+			<tr>
+				<td>Two-Sample t-test</td>
+				<td align="left">H<sub>o</sub>:μ<sub>1</sub>−μ<sub>2</sub>=0 (or
+						H<sub>o</sub>:μ<sub>1</sub>=μ<sub>2</sub> )</td>
+				<td align="left">H<sub>a</sub>:μ<sub>1</sub>−μ<sub>2</sub>&lt;0(which is the same as
+						H<sub>a</sub>:μ<sub>1</sub>&lt;μ<sub>2</sub>)<em style="bold"
+						>or</em>H<sub>a</sub>:μ<sub>1</sub>−μ<sub>2</sub>&gt;0(which is the same as
+						H<sub>a</sub>:μ<sub>1</sub>&gt;μ<sub>2</sub>)<em style="bold"
+						>or</em>H<sub>a</sub>:μ<sub>1</sub>−μ<sub>2</sub>≠0(which is the same as
+						H<sub>a</sub>:μ<sub>1</sub>≠μ<sub>2</sub>)</td>
+			</tr>
+			<tr>
+				<td>Paired t-test</td>
+				<td>H<sub>o</sub>:μ<sub>d</sub>=0</td>
+				<td>H<sub>0</sub>:μ<sub>d</sub>&lt;0 <em style="bold">or
+						</em>H<sub>0</sub>:μ<sub>d</sub>&gt;0 <em style="bold">or
+						</em>H<sub>0</sub>:μ<sub>d</sub>≠0</td>
+			</tr>
+			<tr>
+				<td>ANOVA</td>
+				<td>H<sub>0</sub>:μ<sub>1</sub>=μ<sub>2</sub>=...=μ<sub>k</sub></td>
+				<td>H<sub>a</sub>: not all µ’s are equal</td>
+			</tr>
+		</table>-->
+		<p><em style="bold">II. Check Conditions, and Summarize the Data Using a Test
+			Statistic</em></p>
+		<p><em style="bold">*Check that the conditions under which the test can be reliably used are
+			met.</em></p>
+		<p>For the Two-Sample t-test, the conditions are:</p>
+		<ol>
+			<li>Two samples are independent and random</li>
+			<li>One of the following two scenarios:</li>
+		</ol>
+		<ul>
+			<li>Both populations are normal</li>
+			<li>Populations are not normal, but large sample size (&gt;30)</li>
+		</ul>
+		<p>For the Paired t-test (as a special case of a one-sample t-test), the conditions are:</p>
+		<ol>
+			<li>The sample of differences is random (or at least can be considered so in
+				context).</li>
+			<li>We are in one of the three situations marked with a green check mark in the
+				following table:</li>
+			
+		</ol>
+		<image src="../webcontent/image074.gif" alt="A table which has two columns
+and two rows. The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size. &quot;
+The row headings are &quot;Variable varies normally&quot; and &quot;Variable doesn't vary normally.&quot;
+Here is the data in the table by cell in &quot;Row, Column: Value&quot; format:
+					Variable varies normally, Small sample size: OK (in this case, we should check normality
+		visually using a histogram of the sample differences);
+					Variable varies normally, Large sample size: OK;
+					Variable doesn't vary normally, Small sample size: NOT OK;
+					Variable doesn't vary normally, Large sample size: OK;"/>
+		<p>For an ANOVA, the conditions are:</p>
+		<ol>
+			<li>The samples drawn from each of the populations being compared are independent.</li>
+			<li>The response variable varies normally within each of the populations being compared.
+				As is often the case, we do not have to worry about this assumption for large sample
+				sizes.</li>
+			<li>The populations all have the same standard deviation.</li>
+		</ol>
+		<p><em style="bold">*Summarize the data using a test statistic.</em></p>
+		<table>
+			<tr>
+				<td align="center"><em style="bold">Special Case of C→Q</em></td>
+				<td align="center"><em style="bold">Test Statistic</em></td>
+			</tr>
+			<tr>
+				<td>Two-Sample t-test</td>
+				<td>
+					<m:math overflow="scroll">
+						<m:mrow>
+							<m:mi>t</m:mi>
+							<m:mo>=</m:mo>
+							<m:mfrac>
+								<m:mrow>
+									<m:mfenced open="(" close=")">
+										<m:mrow>
+											<m:mover>
+												<m:msub>
+													<m:mi>y</m:mi>
+													<m:mn>1</m:mn>
+												</m:msub>
+												<m:mo>¯</m:mo>
+											</m:mover>
+											<m:mo>−</m:mo>
+											<m:mover>
+												<m:msub>
+													<m:mi>y</m:mi>
+													<m:mn>2</m:mn>
+												</m:msub>
+												<m:mo>¯</m:mo>
+											</m:mover>
+										</m:mrow>
+									</m:mfenced>
+									<m:mo>−</m:mo>
+									<m:mn>0</m:mn>
+								</m:mrow>
+								<m:msqrt>
+									<m:mrow>
+										<m:mfrac>
+											<m:msubsup>
+												<m:mi>s</m:mi>
+												<m:mn>1</m:mn>
+												<m:mn>2</m:mn>
+											</m:msubsup>
+											<m:msub>
+												<m:mi>n</m:mi>
+												<m:mn>1</m:mn>
+											</m:msub>
+										</m:mfrac>
+										<m:mo>+</m:mo>
+										<m:mfrac>
+											<m:msubsup>
+												<m:mi>s</m:mi>
+												<m:mn>2</m:mn>
+												<m:mn>2</m:mn>
+											</m:msubsup>
+											<m:msub>
+												<m:mi>n</m:mi>
+												<m:mn>2</m:mn>
+											</m:msub>
+										</m:mfrac>
+									</m:mrow>
+								</m:msqrt>
+							</m:mfrac>
+						</m:mrow>
+					</m:math></td>
+			</tr>
+			<tr>
+				<td>Paired t-test</td>
+				<td><m:math overflow="scroll">
+					<m:mrow>
+						<m:mi>t</m:mi>
+						<m:mo>=</m:mo>
+						<m:mfrac>
+							<m:mrow>
+								<m:mover>
+									<m:msub>
+										<m:mi>x</m:mi>
+										<m:mi>d</m:mi>
+									</m:msub>
+									<m:mo>¯</m:mo>
+								</m:mover>
+								<m:mo>−</m:mo>
+								<m:mn>0</m:mn>
+							</m:mrow>
+							<m:mfrac>
+								<m:msub>
+									<m:mi>s</m:mi>
+									<m:mi>d</m:mi>
+								</m:msub>
+								<m:msqrt>
+									<m:mi>n</m:mi>
+								</m:msqrt>
+							</m:mfrac>
+						</m:mfrac>
+					</m:mrow>
+				</m:math></td>
+			</tr>
+			<tr>
+				<td>ANOVA</td>
+				<td><m:math display="block">
+					<m:mrow>
+						<m:mi>F</m:mi>
+						<m:mo>=</m:mo>
+						<m:mfrac>
+							<m:mrow>
+								<m:mi>Variation</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>Among</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>the</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>Sample</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>Means</m:mi>
+							</m:mrow>
+							<m:mrow>
+								<m:mi>Variation</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>Within</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>the</m:mi>
+								<m:mtext>&nbsp;</m:mtext>
+								<m:mi>Groups</m:mi>
+							</m:mrow>
+						</m:mfrac>
+					</m:mrow>
+				</m:math></td>
+			</tr>
+		</table>
+		<p><em style="bold">III. Finding the p-value of the test</em></p>
+		<p>Use statistical software to determine the p-value. The p-value is the probability of
+			getting data like those observed (or even more extreme) assuming that the null
+			hypothesis is true, and is calculated using the null distribution of the test statistic.
+			The p-value is a measure of the evidence against H<sub>0</sub>. The smaller the p-value,
+			the more evidence the data present against H<sub>0</sub>. The p-values for three C→Q tests are obtained from the
+			output.</p>
+		<p><em style="bold">IV. Making conclusions.</em></p>
+		<p><em style="bold">-Conclusions about the significance of the results:</em></p>
+		<p>If the p-value is small, the data present enough evidence to reject H<sub>o</sub> (and
+			accept H<sub>a</sub>).</p>
+		<p>If the p-value is not small, the data do not provide enough evidence to reject
+			H<sub>0</sub>.</p>
+		<p>To help guide our decision, we use the significance level as a cutoff for what is
+			considered a small p-value. The significance cutoff is usually set at .05, but should
+			not be considered inviolable.</p>
+		<p>Conclusions should always be stated in the context of the problem.</p>
+		<p><em style="bold">Following the test...</em></p>
+		<p>For a two-sample t-test, a <em style="bold">95% confidence interval </em>for
+			μ<sub>1</sub>−μ<sub>2 </sub>can be very insightful after a test has rejected the
+			null hypothesis, and can also be used for testing in the two-sided case.</p>
+		<p>For a paired t-test, a <em style="bold">95% confidence interval </em>for μ<sub>d
+		</sub>can be very insightful after a test has rejected the null hypothesis, and can also
+			be used for testing in the two-sided case.</p>
+		<p>If the ANOVA F-test has rejected the null hypothesis, looking at the <em style="bold"
+			>confidence intervals </em>for the population means that are in the output can
+			provide visual insight into why the H<sub>0</sub>was rejected (i.e., which of the means
+			differ).</p>
+		<p>The following StatTutor exercise will help you practice what you've learned.</p>
+		<!--<activity idref="extra_credit" purpose="lab"/>-->
+		<activity idref="ctat2_m5_stattutor" purpose="lab"/>
+	<!--  <section>
+			<title>Checkpoint</title>
+			<body>
+				<p>This checkpoint will test your understanding of the material you have learned
+					thus far in this module.</p>
+				<p> </p>
+				<activity idref="_u5_m2_checkpoint1" purpose="checkpoint"/>
+			</body>
+		</section>-->	
+		
+	</body>
+</workbook_page>

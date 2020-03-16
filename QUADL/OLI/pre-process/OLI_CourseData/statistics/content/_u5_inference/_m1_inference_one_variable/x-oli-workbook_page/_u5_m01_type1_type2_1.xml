@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/"
+	xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_type1_type2_1">
+
+	<head>
+		<title>Type I and Type II Errors</title>
+		
+		<!-- <objref idref="identify_type_1_2"/>
+		<objref idref="identify_type_1_2_context"/>
+		 <objref idref="reduce_type_1_2"/>-->
+		<objref idref="understand_likehood_type_1_2"/>
+	</head>
+	
+	<body>
+
+		
+
+		<section>
+			<title>What Can Go Wrong: Two Types of Errors</title>
+			<body>
+				<p>Statistical investigations involve making decisions in the face of uncertainty.
+					So there is always some chance of making a wrong decision. In hypothesis
+					testing, the following decisions can occur:</p>
+				<ul>
+					<li>If the null hypothesis is true and we do not reject it, it is a <em
+							style="bold">correct decision.</em></li>
+					<li>If the null hypothesis is false and we reject it, it is a <em style="bold"
+							>correct decision.</em></li>
+					<li>If the null hypothesis is true, but we reject it. This is a <em style="bold"
+							>type I </em>error.</li>
+					<li>If the null hypothesis is false, but we fail to reject it. This is a <em
+							style="bold">type II </em>error.</li>
+				</ul>
+				<p>Type I and type II errors are not caused by mistakes. They are the result of
+					random chance. The <em style="bold">data </em>provide evidence for a conclusion
+					that is false. It’s no one’s fault!</p>
+			</body>
+		</section>
+		<composite_activity>
+			<p>Complete the following table by dragging the appropriate answer into each box:</p>
+		<!--  <wb:inline idref="type_dd_tutor" purpose="learnbydoing"
+			src="/superactivity/assessment2/InlineAssessmentClient4.swf">
+			<param name="interfaceDescription"
+				>../webcontent/dynadrop_type_layout.xml</param>
+		</wb:inline>-->
+			<!--<wb:inline idref="type_dd_tutor" purpose="didigetthis"/>-->
+			<wb:inline idref="type_dd_tutor2" purpose="didigetthis"/>
+		</composite_activity>
+		
+		<example>
+			<title>A Courtroom Analogy for Hypothesis Tests</title>
+
+			<p>Defendants standing trial for a crime are considered innocent until evidence shows
+				they are guilty. It is the job of the prosecution to present evidence that shows the
+				defendant is guilty “beyond a reasonable doubt.” It is the job of the defense to
+				challenge this evidence and establish a reasonable doubt. The jury weighs the
+				evidence and makes a decision.</p>
+			<p>When a jury makes a decision, only two verdicts are possible:</p>
+			<ul>
+				<li><em style="bold">Guilty: </em>The jury concludes that there is enough evidence
+					to convict the defendant. The evidence is so strong that there is not a
+					reasonable doubt of the defendant’s guilt.</li>
+				<li><em style="bold">Not guilty: </em>The jury concludes that there is not enough
+					evidence to conclude beyond a reasonable doubt that the person is guilty.</li>
+			</ul>
+			<p>Notice that a verdict of “not guilty” is not a conclusion that the defendant is
+				innocent. This verdict says only that there is not enough evidence to return a
+				guilty verdict.</p>
+			<p><em style="italic">How is this like a hypothesis test?</em></p>
+			<p>The null hypothesis, <em style="italic">H</em><em style="italic"><sub>0</sub></em>,
+				in American courtrooms is “the defendant is innocent.” The alternative hypothesis,
+					<em style="italic">H</em><em style="italic"><sub>a</sub></em>, is “the defendant
+				is guilty.” The evidence presented in the case is the data on which the verdict is
+				based. In a courtroom, the defendant is assumed to be innocent until proven guilty.
+				In a hypothesis test, we assume the null hypothesis is true until the dataindicates
+				otherwise.</p>
+			<p>The two possible verdicts are similar to the two conclusions that are possible in a
+				hypothesis test.</p>
+			<p><em style="bold">Reject the null hypothesis: </em>When we reject a null hypothesis,
+				we accept the alternative hypothesis. This is equivalent to a guilty verdict in the
+				courtroom. The evidence is strong enough for the jury to reject the initial
+				assumption of innocence. In a hypothesis test, the data is strong enough for us to
+				reject the assumption that the null hypothesis is true.</p>
+			<p><em style="bold">Fail to reject the null hypothesis: </em>When we fail to reject the
+				null hypothesis, we are delivering a “not guilty” verdict. The jury concludes that
+				the evidence is not strong enough to reject the assumption of innocence. So the data
+				is too weak to support a guilty verdict. We conclude the data is not strong enough
+				to reject the null hypothesis. In other words, the data is too weak to accept the
+				alternative hypothesis.</p>
+			<p><em style="italic">How does the courtroom analogy relate to Type I and Type II
+					errors?</em></p>
+			<p><em style="bold">Type I error: </em>The evidence leads the jury to convict an
+				innocent person. By analogy, we reject a true null hypothesis and accept a false
+				alternative hypothesis.</p>
+			<p><em style="bold">Type II error: </em>The evidence leads the jury to declare a
+				defendant not guilty, when he is in fact guilty. By analogy, we fail to reject a
+				null hypothesis that is false. In other words, we do not accept an alternative
+				hypothesis when it is really true.</p>
+			<p>It would be nice to know when each of these errors is happening when we make our
+				decision about the null hypothesis, but statistical decisions are based on evidence
+				gathered through sampling, and our sampling evidence will sometimes fool us. As long
+				as we are making a decision, we will never be able to eliminate the potential for
+				these two types of errors. Thus, we need to learn how to adjust to the consequences
+				of making these types of errors.</p>
+		</example>
+		<section purpose="learnbydoing">
+			<title/>
+			<body>
+				<p>A double-blind experiment is conducted to investigate the side effects of hormone
+					replacement therapy for women with menopausal symptoms. The experiment randomly
+					assigns more than 16,000 American women to either a hormone treatment or a
+					placebo. After five years, the HRT study finds no significant difference in the
+					proportion of women developing breast cancer and heart disease. Researchers
+					decide, based on this finding, to allow the study to continue.</p>
+				<wb:inline idref="type_i_ii_errors_lbd_1" purpose="learnbydoing"/>
+				<p>Suppose that at the end of the five-year study described above, a greater
+					proportion of the hormone-treated group have breast cancer and heart disease.
+					This observed difference is statistically significant. Researchers are so
+					alarmed by the results that the experiment is ended early to prevent further
+					harm to the health of the women participating in the hormone group.</p>
+				<wb:inline idref="type_i_ii_errors_lbd_1a" purpose="learnbydoing"/>
+
+			</body>
+		</section>
+
+		<section purpose="didigetthis">
+			<title/>
+			<body>
+				<p>An NBC News/<em style="italic">Wall Street Journal </em>poll conducted in 2010
+					determined that 61 percent of Americans did not support the Tea Party movement.
+					In a poll of 1,000 Americans this year, 64 percent say they do not support the
+					Tea Party movement. Has opposition to the Tea Party movement increased since
+					2010?</p>
+				<p>We tested the following hypotheses at the 5 percent level of significance:</p>
+				<ul>
+					<li><em style="italic">H</em><em style="italic"><sub>0</sub></em>: The
+						proportion of Americans this year who oppose the Tea Party movement is
+						0.61.</li>
+					<li><em style="italic">H</em><em style="italic"><sub>a</sub></em>: The
+						proportion of Americans this year who oppose the Tea Party movement is
+						greater than 0.61.</li>
+				</ul>
+				<p>The <em style="italic">P</em> value is .026, so we reject the null hypothesis,
+						<em style="italic">H</em><em style="italic"><sub>0</sub></em> , and accept
+					the alternative hypothesis, <em style="italic">H</em><em style="italic"
+							><sub>a</sub></em>. We conclude that public opposition to the Tea Party
+					movement is greater than 61% this year.</p>
+				<wb:inline idref="type_i_ii_errors_digt_1" purpose="didigetthis"/>
+			</body>
+		</section>
+		<wb:inline idref="type_i_ii_errors_digt_2" purpose="didigetthis"/>
+
+		<section>
+			<title>What is the probability that we will make a Type I error?</title>
+			<body>
+				<p>If the significance level is 5 percent (α = .05), then 5 percent of the time, we
+					will reject the null hypothesis, even if it is true. Of course we will not know
+					whether the null hypothesis is true. But if it is, the natural variability that
+					we expect in random samples will produce “rare” results 5 percent of the
+					time.</p>
+				<p>This makes sense, because when we create the sampling distribution, we assume the
+					null hypothesis is true. We look at the variability in random samples selected
+					from the population described by the null hypothesis.</p>
+				<p>Similarly, if the significance level is 1 percent, then we can expect the sample
+					results to lead us to reject the null hypothesis 1 percent of the time. In other
+					words, about one in 100 data sets would show “rare” results that contrast with
+					the other 99 data sets, leading us to reject the null hypothesis. If the null
+					hypothesis is actually true, then by chance alone, we will reject a true null
+					hypothesis 1 percent of the time. So the probability of a type I error in this
+					case is 1 percent.</p>
+				<p>In general, the probability of a type I error is α.</p>
+
+
+			</body>
+		</section>
+		<section>
+			<title>What is the probability that we will make a Type II error?</title>
+			<body>
+				<p>As you have just seen, the probability of a type I error is equal to the
+					significance level, α. The probability of a type II error is much more
+					complicated to calculate, but it is inversely related to the probability of
+					making a type I error. Thus, reducing the chance of making a type II error
+					causes an increase in the likelihood of a type I error.</p>
+			</body>
+		</section>
+		<section>
+			<title>Decreasing the Chance of Type I or Type II Error</title>
+			<body>
+				<p>How can we decrease the chance of a type I or type II error? Well, decreasing the
+					chance of a type I error increases the chance of a type II error, so we must
+					weigh the consequences of these errors before deciding how to proceed.</p>
+				<p>Recall that the probability of committing a type I error is α. Why is this? Well,
+					when we choose a level of significance (α), we are choosing a benchmark for
+					rejecting the null hypothesis. If the null hypothesis is true, then the
+					probability that we will reject a true null hypothesis is α.
+					So the smaller α is, the smaller the probability of a type I error there
+					will be.</p>
+				<p>It is more complicated to calculate the probability of a type II error. The best
+					way to reduce the probability of a type II error is to increase the sample size.
+					But once the sample size is set, larger values of α will decrease the
+					probability of a type II error while increasing the probability of a type I
+					error.</p>
+
+			 	<section purpose="learnbydoing">
+					<title/>
+					<body>
+						<p>A double-blind experiment is conducted to investigate the side effects of
+							hormone replacement therapy for women with menopausal symptoms. The
+							experiment randomly assigns more than 16,000 American women to either a
+							hormone treatment or a placebo. After five years, the HRT study finds no
+							significant difference in the proportion of women developing breast
+							cancer and heart disease. Researchers decide, based on this finding, to
+							allow the study to continue. As the null hypothesis was not rejected,
+							there is a chance that the researchers made a type II error.</p>
+						<wb:inline idref="type_i_ii_errors_tutor" purpose="learnbydoing"/>
+						<p>Suppose that at the end of the five-year study described above, a greater
+							proportion of the hormone-treated group have breast cancer and heart
+							disease. This observed difference is statistically significant.
+							Researchers are so alarmed by the results that the experiment is ended
+							early to prevent further harm to the health of the women participating
+							in the hormone group. Since the null hypothesis was rejected, it is
+							possible researchers made a type I error.</p>
+						<wb:inline idref="type_i_ii_errors_tutor_1" purpose="learnbydoing"/>
+					</body>
+				</section>
+				<section purpose="didigetthis">
+					<title></title>
+					<body><p>An NBC News/<em style="italic">Wall Street Journal </em>poll conducted in 2010
+						determined that 61 percent of Americans did not support the Tea Party movement.
+						In a poll of 1,000 Americans this year, 64 percent say they do not support the
+						Tea Party movement. Has opposition to the Tea Party movement increased since
+						2010?</p>
+						<p>We tested the following hypotheses at the 5 percent level of significance:</p>
+						<ul>
+							<li><em style="italic">H</em><em style="italic"><sub>0</sub></em>: The proportion of
+								Americans this year who oppose the Tea Party movement is 0.61.</li>
+							<li><em style="italic">H</em><em style="italic"><sub>a</sub></em>: The proportion of
+								Americans this year who oppose the Tea Party movement is greater than
+								0.61.</li>
+						</ul>
+						<p>The <em style="italic">P </em>value is .026, so we reject the null hypothesis,
+							<em style="italic">H</em><em style="italic"><sub>0</sub></em>, and accept the
+							alternative hypothesis, <em style="italic">H</em><em style="italic"><sub>a</sub></em>. We
+							conclude that public opposition to the Tea Party movement is greater than 61%
+							this year. Because the null hypothesis has been rejected, it is possible that
+							the researchers made a type I error.</p>
+						<!-- <wb:inline idref="type_i_ii_errors_tutor_2" purpose="didigetthis"/> -->
+						<wb:inline idref="type_i_ii_errors_tutor_3" purpose="didigetthis"/>
+					</body>
+				</section>
+				<wb:inline idref="type_i_ii_errors_tutor_4" purpose="didigetthis"/>
+				
+
+				<p><em style="bold">General guidelines for choosing a level of
+					significance:</em></p>
+				<ul>
+					<li>If the consequences of a type I error are more serious, choose a small level
+						of significance (α).</li>
+					<li>If the consequences of a type II error are more serious, choose a larger
+						level of significance (α). But remember that the level of significance is
+						the probability of committing a type I error.</li>
+					<li>In general, we choose the largest level of significance that we can tolerate
+						as the chance of making a type I error.</li>
+				</ul>
+				<p>Note: It is not always the case that one type of error is worse than the
+					other.</p>
+
+			</body>
+		</section>
+
+
+	</body>
+</workbook_page>

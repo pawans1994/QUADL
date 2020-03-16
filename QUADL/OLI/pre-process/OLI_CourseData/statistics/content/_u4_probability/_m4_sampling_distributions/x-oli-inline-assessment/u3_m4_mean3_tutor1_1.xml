@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m4_mean3_tutor1_1">
+    <title>Tutor</title>
+    <question id="q1">
+        <!--LO:-->
+        <body>
+            <p>If we randomly sample 36 Pell grant recipients, would you be surprised if the
+                mean grant amount for the sample was $2,940? Pick the correct response that
+                gives the best reason.</p>
+        </body>
+        <multiple_choice shuffle="true" select="single">
+            <choice value="A">Yes, $2,940 would be surprising because this sample result is more
+                than 3 standard deviations from the overall mean grant amount of
+                $2,600.</choice>
+            <choice value="B">Yes, $2,940 would be surprising because this sample result is $340
+                greater than the overall mean grant amount of $2,600.</choice>
+            <choice value="C">No, $2,940 would not be surprising because this sample result is
+                within 2 standard deviations of the overall mean grant amount of
+                $2,600.</choice>
+            <choice value="D">No, $2,940 would not be surprising because this sample result is
+                only $340 greater than the overall mean grant amount of $2,600, and we expect
+                there to be variability in sample means.</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. For n=36, sample means are approximately normal, so we can
+                    use the Standard Deviation Rule. Three standard deviations above 2,600 is
+                    2,600 + 3(500/6)) = 2,850). So $2,940 is more than 3 standard deviations
+                    above $2,600, thus this sample mean would be surprising.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Not quite right. It is true that $2,940 is $340 greater than $2,600,
+                    but we have to analyze this difference relative to the standard deviation in
+                    sample means to determine if the sample mean is surprising. The standard
+                    deviation in sample means is 500/(sqrt 36) = $83.33.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Not quite right. It is true that $2,940 is only $340 greater than
+                    $2,600. It is also true that we expect to see variability in sample means.
+                    However, to determine if $2,940 is surprising, verify that the Standard
+                    Deviation Rule applies and then calculate how many standard deviations
+                    $2,940 is from $2,600.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Since n = 36, the sample means will have an
+                    approximately normal distribution. Use the hints.</feedback>
+            </response>
+            <hint>Since n = 36, the sample means will have an approximately normal distribution
+                with mean $2,600 and standard deviation of 500/(sqrt 36). How many standard
+                deviations is $2,940 above $2,600?</hint>
+            <hint>$2,940 is more than 3 standard deviations above $2,600. (Three standard
+                deviations above 2,600 is 2,600 + 3(500/6)) = 2,850.)</hint>
+            <hint>Since the sample means are approximately normal, the Standard Deviation Rule
+                predicts that approximately 99.7% of the sample means will fall within 3
+                standard deviations of µ = 2,600. Samples means outside this range would be very
+                unlikely.</hint>
+        </part>
+    </question>
+</assessment>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dragdrop PUBLIC " -//Carnegie Mellon University//DTD Dynadrop Layout 3.8//EN" "http://oli.cmu.edu/dtd/oli_dynadrop_layout_1_0.dtd">
+<dragdrop>
+    
+    <targetGroup>
+        <!--
+            * Need to make sure the number of items is equal in headerRow and contentRows.
+            * As a HTML reference, think of targetGroup as <table>, headerRow/contentRow as <tr>, and text/target as <td>.
+            * Text can be empty if needed for an empty area.
+            * <img/> source points to the image file RELATIVE to the Workbook Document, NOT this Layout Document
+            * NOTE to course devs: Self-closing tags are identical to empty tags. Example: <text/> is the same thing as <text></text>
+            * <br/> is always a self-closing tag that will never have child elements
+        -->
+        <headerRow>
+            <text/>
+            <text>
+                <span fontWeight="bold">B</span>
+            </text>
+            <text>
+                <span fontWeight="bold">not B</span>
+            </text>
+            <text>
+                <span fontWeight="bold">Total</span>
+            </text>
+        </headerRow>
+        
+        <contentRow>
+            <text>
+                <span fontStyle="italic" fontWeight="bold">A</span>
+            </text>
+            <target assessmentId="dropAreaA"/>
+            <target assessmentId="dropAreaB"/>
+            <target assessmentId="dropAreaC"/>
+        </contentRow>
+        
+        <contentRow>
+            <text>
+                <span fontStyle="italic" fontWeight="bold">not A</span>
+            </text>
+            <target assessmentId="dropAreaD"/>
+            <target assessmentId="dropAreaE"/>
+            <target assessmentId="dropAreaF"/>
+        </contentRow>
+        
+        <contentRow>
+            <text>
+                <span fontStyle="italic" fontWeight="bold">Total</span>
+            </text>
+            <target assessmentId="dropAreaG"/>
+            <target assessmentId="dropAreaH"/>
+            <target assessmentId="dropAreaI"/>
+        </contentRow>
+    </targetGroup>
+    
+    <initiatorGroup shuffle="true">
+        <initiator assessmentId="0.03">0.03</initiator>
+        <initiator assessmentId="0.14">0.14</initiator>
+        <initiator assessmentId="0.17">0.17</initiator>
+        <initiator assessmentId="0.19">0.19</initiator>
+        <initiator assessmentId="0.33">0.33</initiator>
+        <initiator assessmentId="0.64">0.64</initiator>
+        <initiator assessmentId="0.67">0.67</initiator>
+        <initiator assessmentId="0.83">0.83</initiator>
+        <initiator assessmentId="1.0">1.0</initiator>
+    </initiatorGroup>
+    
+</dragdrop>
+

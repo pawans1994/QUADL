@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u5_m01_confidence_interval_mean8">
+<head>
+<title>Confidence Intervals for the Population Mean (8 of 8)</title>
+    <objref idref="explain_confidence_interval"/>
+    <objref idref="find_confidence_intervals"/>
+</head>
+<body>
+    
+    
+<section>
+<title>Let's summarize</title>
+<body>
+<p><?oxy_comment_start author="mmyers" timestamp="20101123T170107-0500" comment="use bullets rather than asterisks"?>*<?oxy_comment_end?>
+                    When the population is normal and/or the sample is large, a confidence interval
+                    for unknown population mean μ when σ is known
+                    is<?oxy_delete author="mmyers" timestamp="20101123T170129-0500" content=" "?>:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:mi>z</m:mi>
+<m:mo>∗</m:mo>
+<m:mfrac>
+<m:mi mathvariant="normal">σ</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>, where z* is 1.645 for 90% confidence, 2 for 95% confidence, and 2.576 for 99% confidence.</p>
+<p>* There is a
+                    trade<?oxy_insert_start author="mmyers" timestamp="20101123T170146-0500"?>-<?oxy_insert_end?>off
+                    between the level of confidence and the precision of the interval estimation.
+                    The price we have to pay for more precision is sacrificing level of
+                    confidence<?oxy_insert_start author="mmyers" timestamp="20101123T170159-0500"?>.<?oxy_insert_end?></p>
+<p>* The general form of confidence intervals is
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170210-0500"?>an
+                    <?oxy_insert_end?>estimate +/-
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170300-0500"?>the
+                    <?oxy_insert_end?>margin of error
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170304-0500"?>(<?oxy_insert_end?>m<?oxy_insert_start author="mmyers" timestamp="20101123T170306-0500"?>)<?oxy_insert_end?>.
+                    In this case<?oxy_insert_start author="mmyers" timestamp="20101123T170309-0500"?>,<?oxy_insert_end?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170316-0500"?>the <?oxy_insert_end?>estimate<?oxy_insert_start author="mmyers" timestamp="20101123T170319-0500"?>
+                    <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101123T170320-0500"?>
+                    <?oxy_insert_end?><m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>x</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>m</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>z</m:mi>
+                            <m:mo>∗</m:mo>
+                            <m:mfrac>
+                                <m:mi mathvariant="normal">σ</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>. The confidence interval is therefore centered at the estimate and its
+                    width is exactly 2m.</p>
+<p>* For a given level of confidence, the width of the interval depends on the sample size. We can therefore do a sample size calculation to figure out what sample size is needed in order to get a confidence interval with a desired margin of error m, and a certain level of confidence (assuming we have some flexibility with the sample size). To do the sample size calculation we use:</p>
+<p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>n</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:msup>
+                                <m:mfenced open="(" close=")">
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:msup>
+                                                <m:mi>z</m:mi>
+                                                <m:mo>*</m:mo>
+                                            </m:msup>
+                                            <m:mi mathvariant="normal">σ</m:mi>
+                                        </m:mrow>
+                                        <m:mi>m</m:mi>
+                                    </m:mfrac>
+                                </m:mfenced>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math><?oxy_delete author="mmyers" timestamp="20101123T170435-0500" content="."?></p>
+<p> (and round <em>up</em> to the next
+                    integer)<?oxy_insert_start author="mmyers" timestamp="20101123T170438-0500"?>.<?oxy_insert_end?></p>
+<p>* When σ is unknown, we use the sample standard deviation, s, instead, but as a result
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170506-0500"?>we also
+                    <?oxy_insert_end?>need to use a different set of confidence multipliers (t*)
+                    associated with the t distribution. The interval is therefore</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:msup>
+<m:mi>t</m:mi>
+<m:mo>*</m:mo>
+</m:msup>
+<m:mo>∗</m:mo>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p>* These new multipliers have the added complexity that they depend not only on the level of
+                    confidence<?oxy_insert_start author="mmyers" timestamp="20101123T170520-0500"?>,<?oxy_insert_end?>
+                    but also on the sample size. Software is therefore very useful for calculating
+                    confidence intervals in this case.</p>
+<p>* For
+                    <?oxy_comment_start author="mmyers" timestamp="20101123T170621-0500" comment="Should &quot;large&quot; be given a standard number definition? "?>large<?oxy_comment_end?>
+                    values of n, the t*
+                    multipliers<?oxy_delete author="mmyers" timestamp="20101123T170529-0500" content=","?>
+                    are not that different from the z* multipliers, and therefore using the
+                    interval<?oxy_insert_start author="mmyers" timestamp="20101123T171143-0500"?>
+                    formula<?oxy_insert_end?>:</p>
+<p>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mover>
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mo>±</m:mo>
+<m:msup>
+<m:mi>z</m:mi>
+<m:mo>∗</m:mo>
+</m:msup>
+<m:mo>∗</m:mo>
+<m:mfrac>
+<m:mi>s</m:mi>
+<m:msqrt>
+<m:mi>n</m:mi>
+</m:msqrt>
+</m:mfrac>
+</m:mrow>
+</m:math>
+</p>
+<p><?oxy_insert_start author="mmyers" timestamp="20101123T171151-0500"?>for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T171148-0500" content="to estimate"?>
+                    μ when σ is unknown
+                    <?oxy_insert_start author="mmyers" timestamp="20101123T170836-0500"?>provides
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T170835-0500" content="is"?>
+                    a pretty good
+                    approximation<?oxy_insert_start author="mmyers" timestamp="20101123T170544-0500"?>.<?oxy_insert_end?></p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

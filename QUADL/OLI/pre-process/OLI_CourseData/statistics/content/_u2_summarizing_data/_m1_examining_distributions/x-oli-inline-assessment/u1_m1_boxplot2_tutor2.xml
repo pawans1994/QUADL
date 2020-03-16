@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+<assessment id="u1_m1_boxplot2_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>The boxplot below displays ratings for TV shows during sweeps week:
+         </p>
+         <image src="../webcontent/boxplot10.gif" alt="boxplot graph for tv show ratings"/>
+         <p>50% of the shows have a rating greater than which value?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">11</choice>
+         <choice value="Res2">15.5</choice>
+         <choice value="Res3">14</choice>
+         <choice value="Res4">17</choice>
+         <!--<choice value="Res5">Impossible to tell</choice>-->
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. 11 is the first quartile (Q1) of the distribution and
+               therefore has 25% of the shows rated below it and 75% of the shows rated
+               above.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. 50% of the shows have a rating greater than the median
+               (M). 15.5 is the middle of the box, halfway between Q1 and Q3, but not the median in
+               this case.</feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. 50% of the shows have a rating greater than the median (M), which,
+               according to the boxplot, is 14.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. 50% of the shows have a rating greater than the median
+               (M). 17 is the middle of the range, halfway between the minimum and the maximum, but
+               not the median in this case.</feedback>
+         </response>
+         <!--<response match="Res5" score="0">
+            <feedback>Incorrect. 50% of the shows have a rating greater than the median
+               (M). Where is the median located according to the boxplot? </feedback>
+         </response>-->
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>What is the percentage of shows that have a rating of less than 20?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">67%</choice>
+         <choice value="Res2">75%</choice>
+         <choice value="Res3">84%</choice>
+         <choice value="Res4">25%</choice>
+         <!--<choice value="Res5">Impossible to tell</choice>-->
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. The boxplot indicates that 20 is the third quartile (Q3) of the rating distribution. What percentage of the observations fall below Q3? </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. The boxplot indicates that 20 is the third quartile (Q3) of the
+               rating distribution, and therefore, by definition, three quarters of the
+               observations, or 75%, of the shows have a rating below it. </feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. The boxplot indicates that 20 is the third quartile (Q3) of the rating distribution. What percentage of the observations fall below Q3? </feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. The boxplot indicates that 20 is the third quartile (Q3) of the rating distribution. What percentage of the observations fall below Q3?</feedback>
+         </response>
+         <!--<response match="Res5" score="0">
+            <feedback>Incorrect. The boxplot indicates that 20 is the third quartile (Q3) of the rating distribution. What percentage of the observations fall below Q3? </feedback>
+         </response>-->
+      </part>
+   </question>
+   <question id="q3">
+      <body>
+         <p>Within which interval of rating would you expect to find the largest number of shows?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">5-10</choice>
+         <choice value="Res2">10-15</choice>
+         <choice value="Res3">15-20</choice>
+         <choice value="Res4">20-25</choice>
+         <choice value="Res5">All are equal</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. When answering this question, it will be useful to
+               remember that 25% of the data fall below Q1 (11), 25% of the data fall between Q1
+               (11) and M (14), 25% of the data fall between M (14) and Q3 (20), and 25% of the data
+               fall above Q3 (20). Note that 10 is below the first quartile, so we expect less than
+               25% of the shows to have a rating in that interval. </feedback>
+         </response>
+         <response match="Res2" score="10">
+            <feedback>Correct. Note that 10 is below Q1, and 15 is above the M, so we expect more
+               than 25% of the shows to have ratings in that interval. Using a similar reasoning, in
+               all the other intervals we would expect to see LESS than 25% of the shows.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Incorrect. When answering this question, it will be useful to
+               remember that 25% of the data fall below Q1 (11), 25% of the data fall between Q1
+               (11) and M (14), 25% of the data fall between M (14) and Q3 (20), and 25% of the data
+               fall above Q3 (20). Note that 15 is above the median, and 20 is Q3, so we expect less
+               than 25% of the shows to have a rating in that interval.</feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. When answering this question, it will be useful to
+               remember that 25% of the data fall below Q1 (11), 25% of the data fall between Q1
+               (11) and M (14), 25% of the data fall between M (14) and Q3 (20), and 25% of the data
+               fall above Q3 (20). Note that 20 is Q3, but 25 is below the largest observation, so
+               we expect less than 25% of the shows to have a rating in that interval.</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>Incorrect. Intervals of equal length do not necessarily have the
+               same number of observations fall in them. When answering this question, it will be
+               useful to remember that 25% of the data fall below Q1 (11), 25% of the data fall
+               between Q1 (11) and M (14), 25% of the data fall between M (14) and Q3 (20), and 25%
+               of the data fall above Q3 (20).</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

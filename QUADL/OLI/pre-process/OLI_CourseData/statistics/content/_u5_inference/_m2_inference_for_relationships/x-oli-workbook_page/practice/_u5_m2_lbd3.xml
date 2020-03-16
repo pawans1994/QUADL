@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd3">
+    <head>
+        <title>Two Independent Samples</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in obtaining and interpreting
+            a 95% confidence interval for μ<sub>1</sub> - μ<sub>2</sub> following a two-sample
+            t-test that rejected H<sub>o</sub>. Recall our second example:</p>
+        <image style="block" src="../../webcontent/image409.gif" alt="Our variable, Age Group (X), has two
+categories: males 20-29 years old and males 75+ years old. These two groups form our two populations.
+For each population we have a separate &mu;, representing the weight (Y) mean of that population.
+For each population we take an SRS. From population 1 of males 20-29 years old, we obtain an SRS of size
+712, and find that it has a mean of 83.4 and SD of 18.7. From population 2 of males 75+ years old, we
+take an SRS of size 1001 and find that it has a mean of 78.5 and SD of 19.0."/>
+        <pullout><alternatives group="statistics.package">
+            <default><pref:value preference="statistics.package"/></default>
+            <alternative value="r">
+                <title>R</title>
+                <p>Recall that we were testing</p>
+                <image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+ H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and we found using R that the test statistic was 5.31 with a p-value of 0.000.
+                        Based on the small p-value, we rejected H<sub>o</sub> and concluded that
+                        males 20-29 years old weigh more, on average, than males 75+ years old. It
+                        would be interesting to follow up this conclusion and estimate how much more
+                        males 20-29 years old weigh, on average. The 95% confidence interval for
+                            μ<sub>1</sub> - μ<sub>2</sub> does exactly that, and is given by the
+                        formula <m:math display="block" overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:mfenced>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>∗</m:mo>
+                                </m:msup>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>. </p>
+                <p>As a reminder, here again is the summary of the study results: <image
+                    style="block" src="../../webcontent/image194.gif" alt="A table describing the following
+data:
+            20-29 yrs old: n = 712, y-bar = 83.4, S = 18.7
+            75+ yrs old: n = 1001, y-bar = 78.5, S = 19.0"/>
+                </p>
+              
+            </alternative>
+            <alternative value="statcrunch">
+                <title>StatCrunch</title>
+                <p>Here is the StatCrunch output:</p>
+                <p>
+                    <em style="bold">Hypothesis Test Results:</em></p>
+                <p>
+                    <m:math display="block">
+                        <m:mtable columnalign="left">
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mtext>Mean of Population 1</m:mtext>
+                                </m:mtd>
+                            </m:mtr>
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mtext>Mean of Population 2</m:mtext>
+                                </m:mtd>
+                            </m:mtr>
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mtext>Difference between two means</m:mtext>
+                                </m:mtd>
+                            </m:mtr>
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>0</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>=</m:mo>
+                                    <m:mn>0</m:mn>
+                                </m:mtd>
+                            </m:mtr>
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mi>a</m:mi>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                    <m:mo>&gt;</m:mo>
+                                    <m:mn>0</m:mn>
+                                </m:mtd>
+                            </m:mtr>
+                            <m:mtr>
+                                <m:mtd>
+                                    <m:mtext>(without pooled variances)</m:mtext>
+                                </m:mtd>
+                            </m:mtr>
+                        </m:mtable>
+                    </m:math>
+                </p>
+                <table>
+                    <tr>
+                        <th align="center">Difference</th>
+                        <th align="center">Sample Mean</th>
+                        <th align="center">Std. Err.</th>
+                        <th align="center">DF</th>
+                        <th align="center">T-Stat</th>
+                        <th align="center">P-value</th>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <m:math display="inline">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>1</m:mn>
+                                    </m:msub>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>&mu;</m:mi>
+                                        <m:mn>2</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>
+                        </td>
+                        <td align="center">4.9</td>
+                        <td align="center">0.92291766</td>
+                        <td align="center">1545.8916</td>
+                        <td align="center">5.3092494</td>
+                        <td align="center"><m:math display="inline">
+                            <m:mrow>
+                                <m:mo>&lt;</m:mo>
+                                <m:mn>0.0001</m:mn>
+                            </m:mrow>
+                        </m:math>
+                        </td>
+                    </tr>
+                </table>
+                <p>As the output mentions, recall that we were testing</p>
+                <formula><m:math display="block">
+                    <m:mtable columnalign="left">
+                        <m:mtr>
+                            <m:mtd>
+                                <m:msub>
+                                    <m:mi>H</m:mi>
+                                    <m:mi>0</m:mi>
+                                </m:msub>
+                                <m:mo>:</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>&minus;</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mn>0</m:mn>
+                            </m:mtd>
+                        </m:mtr>
+                        <m:mtr>
+                            <m:mtd>
+                                <m:msub>
+                                    <m:mi>H</m:mi>
+                                    <m:mi>a</m:mi>
+                                </m:msub>
+                                <m:mo>:</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>&minus;</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>&gt;</m:mo>
+                                <m:mn>0</m:mn>
+                            </m:mtd>
+                        </m:mtr>
+                    </m:mtable>
+                </m:math>
+                </formula>
+                <p>, and based on the small p-value, we rejected <m:math display="inline">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi>H</m:mi>
+                            <m:mi>0</m:mi>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> and concluded that males 20–29 years old weigh more, on average,
+                    than males 75+ years old. It would be interesting to follow up this
+                    conclusion and estimate how much more males 20–29 years old weigh, on
+                    average. The 95% confidence interval does exactly that.</p>
+                <!--<image style="block" src="../../webcontent/image410_statcrunch.gif" alt="Hypothesis
+test results: &mu;_1 : mean of population 1, &mu;_2: mean of population 2, &mu;_1 - &mu;_2: mean
+difference. H_0: &mu;_1 - &mu;_2 = 0, H_a: &mu;_1 - &mu;_2 &gt; 0 (without pooled variances). Difference: &mu;_1 - &mu;_2: Sample Mean = 4.9, Std. Err. = 0.92291766, DF = 1545.8916, T-Stat = 5.3092494, p-value &lt; 0.0001"/>
+                <p>As the output mentions, recall that we were testing</p>
+                <ul>
+                    <li>H<sub>o</sub>: µ<sub>1</sub> - µ<sub>2</sub> = 0</li>
+                    <li>H<sub>a</sub>: µ<sub>1</sub> - µ<sub>2</sub> > 0</li>
+                </ul>
+                <p>and based on the small P-value, we rejected H<sub>o</sub> and concluded that males 20 to 29 years old weigh more, on average, than males 75 years and older. It would be interesting to follow up this conclusion and estimate how much more males 20 to 29 years old weigh, on average. The 95% confidence interval does exactly that.</p>-->
+                <!--<image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+        H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and based on the small p-value, we rejected H<sub>o</sub> and concluded that
+                        males 20-29 years old weigh more, on average, than males 75+ years old. It
+                        would be interesting to follow up this conclusion and estimate how much more
+                        males 20-29 years old weigh, on average. The 95% confidence interval does
+                        exactly that.</p>-->
+                
+            </alternative>
+            <alternative value="minitab">
+                <title>Minitab</title>
+                <p>Here is the Minitab output:</p>
+                <image style="block" src="../../webcontent/image410.gif" alt="Two-Sample T-Test and
+CI.
+            Sample 1: N = 712, Mean = 83.4, StDev = 18.7, SE Mean = 0.70
+            Sample 2: N = 1001, Mean = 78.5, StDev = 19.0, SE Mean = 0.60
+            
+            Difference = &mu; (1) - &mu; (2)
+            Estimate for difference: 4.90000
+            95% lower bound for difference: 3.38102
+            T-Test of difference = 0 (vs &gt;): T-Value = 5.31, P-Value = 0.000, DF = 1545"/>
+                <p>As the output mentions, recall that we were testing</p>
+                <image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+        H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and based on the small p-value, we rejected H<sub>o</sub> and concluded that
+                        males 20-29 years old weigh more, on average, than males 75+ years old. It
+                        would be interesting to follow up this conclusion and estimate how much more
+                        males 20-29 years old weigh, on average. The 95% confidence interval does
+                        exactly that. Note, however, that the output does not contain the 95%
+                        confidence interval for μ<sub>1</sub> - μ<sub>2</sub>. As we've seen in the
+                        previous tests, the confidence interval is provided only as part of the
+                        two-sided test.</p>
+          
+            </alternative>
+            <alternative value="excel">
+                <title>Excel 2013 and 2016 Instructions</title>
+                <p>Recall that we were testing</p>
+                <image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+            H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and we found using Excel that the test statistic was 5.31 with a p-value of
+                        0.000. Based on the small p-value, we rejected H<sub>o</sub> and concluded
+                        that males 20-29 years old weigh more, on average, than males 75+ years old.
+                        It would be interesting to follow up this conclusion and estimate how much
+                        more males 20-29 years old weigh, on average. The 95% confidence interval
+                        for μ<sub>1</sub> - μ<sub>2</sub> does exactly that, and is given by the
+                        formula <m:math display="block" overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:mfenced>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>∗</m:mo>
+                                </m:msup>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math> </p>
+                <p>As a reminder, here again is the summary of the study results: <image
+                    style="block" src="../../webcontent/image194.gif" alt="A table describing the following
+data:
+            20-29 yrs old: n = 712, y-bar = 83.4, S = 18.7
+            75+ yrs old: n = 1001, y-bar = 78.5, S = 19.0"/>
+                </p>
+              
+            </alternative>
+         <!--    <alternative value="excel2003">
+                <title>Excel 2003</title>
+                <p>Recall that we were testing</p>
+                <image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+            H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and we found using Excel that the test statistic was 5.31 with a p-value of
+                        0.000. Based on the small p-value, we rejected H<sub>o</sub> and concluded
+                        that males 20-29 years old weigh more, on average, than males 75+ years old.
+                        It would be interesting to follow up this conclusion and estimate how much
+                        more males 20-29 years old weigh, on average. The 95% confidence interval
+                        for μ<sub>1</sub> - μ<sub>2</sub> does exactly that, and is given by the
+                        formula <m:math display="block" overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:mfenced>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>∗</m:mo>
+                                </m:msup>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>. </p>
+                <p>As a reminder, here again is the summary of the study results: <image
+                    style="block" src="../../webcontent/image194.gif" alt="A table describing the following
+data:
+        20-29 yrs old: n = 712, y-bar = 83.4, S = 18.7
+        75+ yrs old: n = 1001, y-bar = 78.5, S = 19.0"/>
+                </p>
+                
+            </alternative>--> 
+            <alternative value="ti">
+                <title>TI Calculator</title>
+                <p>Recall that we were testing</p>
+                <image style="block" src="../../webcontent/image411.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+            H_a: &mu;_1 - &mu;_2 &gt; 0"/>
+                <p>and we found that the test statistic was 5.31 with a p-value of 0.000. Based on
+                        the small p-value, we rejected H<sub>o</sub> and concluded that males 20-29
+                        years old weigh more, on average, than males 75+ years old. It would be
+                        interesting to follow up this conclusion and estimate how much more males
+                        20-29 years old weigh, on average. The 95% confidence interval for
+                            μ<sub>1</sub>-μ<sub>2</sub> does exactly that, and is given by the
+                        formula <m:math display="block" overflow="scroll">
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mover>
+                                                <m:mi>Y</m:mi>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:mfenced>
+                                <m:mo>±</m:mo>
+                                <m:msup>
+                                    <m:mi>t</m:mi>
+                                    <m:mo>∗</m:mo>
+                                </m:msup>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math></p>
+                <p>As a reminder, here again is the summary of the study results: <image
+                    style="block" src="../../webcontent/image194.gif" alt="A table describing the following
+data:
+                20-29 yrs old: n = 712, y-bar = 83.4, S = 18.7
+                75+ yrs old: n = 1001, y-bar = 78.5, S = 19.0"/>
+                </p>
+                
+            </alternative>
+
+        </alternatives></pullout>
+        <wb:inline idref="u4_m3_twosamples6_lbd_tutor1"
+            purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

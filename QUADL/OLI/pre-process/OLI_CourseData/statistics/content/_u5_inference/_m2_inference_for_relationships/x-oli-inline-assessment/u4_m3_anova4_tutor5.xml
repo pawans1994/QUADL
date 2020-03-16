@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_anova4_tutor5">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>
+            <p>(i) Survey random samples of 40 seniors, 40 juniors, 40 sophomores, and 40 freshmen,
+                and get them to report the number of credits they are taking. Sample standard
+                deviations are 3.1, 3.4, 1.9, and 2.7.</p>
+            <p>(ii) Survey random samples of 20 seniors, 20 juniors, 20 sophomores, and 20 freshmen,
+                and get them to report the number of credits they are taking. Sample standard
+                deviations are 3.1, 5.4, 1.9, and 2.7.</p>
+            <p>Which of the above two designs should not be handled with ANOVA?</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">design (i)</choice>
+            <choice value="B">design (ii)</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. Note that in design (ii) the largest among the sample standard
+                    deviations (5.4) is more than twice as large as the smallest one (1.9). Since
+                    this rule of the thumb is not satisfied, we cannot assume that condition (iii)
+                    of equal population standard deviations is satisfied, and cannot therefore use
+                    ANOVA. In design (i), the rule of thumb is satisfied (3.4<?oxy_insert_start author="mmyers" timestamp="20101129T094509-0500"?>
+                    <?oxy_insert_end?>/<?oxy_insert_start author="mmyers" timestamp="20101129T094510-0500"?>
+                    <?oxy_insert_end?>1.9
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T094506-0500"?>is
+                    <?oxy_insert_end?>less than 2).</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Indeed, the largest among the sample standard deviations (5.4) is
+                    more than twice as large as the smallest one (1.9). Since this rule of thumb is
+                    not satisfied, we cannot assume that condition (iii) of equal population
+                    standard deviations is satisfied, and cannot therefore use ANOVA.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

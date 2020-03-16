@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="param_v_statistic_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_param_v_statistic" select="single">
+        <!-- LO:  -->
+        <body>
+            <p>In June 2015, Gallup conducted a poll of a random sample of 14,683 adults to
+                determine the well-being of people living in the United States. One question asked,
+                “Did you exercise at least 30 minutes for 3 or more days in the past week?” In the
+                survey, 58.9% of males and 52.7% of females responded yes to this question. Which of
+                the following is true about this scenario? </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">58.9% and 52.7% are both parameters. </choice>
+            <choice value="B">58.9% and 52.7% are both statistics. </choice>
+            <choice value="C">If we took another random sample of 14,683 adults, we would expect to
+                get the exact same results.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Parameters are values that refer to a population. We would need
+                    to take a census of all adults in the United States for these values to be
+                    parameters. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since the survey results are obtained from the sample, these are
+                    all statistics. Due to sampling variability, if we were to take a different
+                    sample of the same size we would not expect to get the same sample results.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Due to sampling variability we cannot expect to get the exact
+                    same answers from a new poll. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_param_v_statistic" select="single">
+        <body>
+            <p>In June 2005, a survey was conducted in which a random sample of 1,464 U.S. adults
+                was asked the following question: "In 1973 the Roe versus Wade decision established
+                a woman's constitutional right to an abortion, at least in the first three months of
+                pregnancy. Would you like to see the Supreme Court completely overturn its Roe
+                versus Wade decision, or not?" </p>
+            <p>The results were: Yes—30%, No—63%,
+                Unsure—7% (<em style="italic">Source</em>:
+                www.Pollingreport.com) </p>
+            <p>Which of the following is true about this scenario? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">30%, 63%, and 7% are all parameters. </choice>
+            <choice value="B">30%, 63%, and 7% are all statistics. </choice>
+            <choice value="C">If another random sample of size 1,464 U.S. adults were
+                to be chosen, we would expect to get the exact same distribution of answers.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. When discussing parameters, we are referring to the actual
+                    value of certain variables relating to the population. In this example, if we
+                    were able to poll all U.S. adults and have everyone respond to the poll, then
+                    these numbers would be parameters.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since the survey results are obtained from the sample, these are
+                    all statistics. Due to sampling variability, if we were to take a different
+                    sample of the same size we would not expect to get the same sample results.
+                </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Due to sampling variability, we cannot expect to get the same
+                    sample results from multiple samples.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

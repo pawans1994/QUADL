@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u3_m02_experiments1">
+<head>
+<title>Experiments
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202655-0400"?>W<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202655-0400" content="w"?>ith
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202658-0400"?>M<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202658-0400" content="m"?>ore
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202701-0400"?>T<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202701-0400" content="t"?>han
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202704-0400"?>O<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202704-0400" content="o"?>ne
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202707-0400"?>E<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202706-0400" content="e"?>xplanatory
+            <?oxy_insert_start author="mmyers" timestamp="20101103T202710-0400"?>V<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202709-0400" content="v"?>ariable</title>
+    <objref idref="identify_study_design"/>
+</head>
+<body>
+   
+<section>
+<title>Experiments
+                <?oxy_insert_start author="mmyers" timestamp="20101103T202714-0400"?>W<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202713-0400" content="w"?>ith
+                More
+                <?oxy_insert_start author="mmyers" timestamp="20101103T202719-0400"?>T<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202718-0400" content="t"?>han
+                One Explanatory Variable</title>
+<body>
+<p>It is not uncommon for experiments to feature two or more explanatory variables (called factors).
+                    In this course, we focus on exploratory data analysis and statistical inference
+                    in situations which involve only one explanatory variable. Nevertheless, we will
+                    now consider the design for experiments involving several
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T202814-0400"?>explanatory
+                    <?oxy_insert_end?>variables, in order to familiarize students with their basic
+                    structure.</p>
+<example>
+
+<p>Suppose researchers are not only interested in the effect of diet on blood pressure, but also the
+                        effect of two new drugs. Subjects are assigned to either Control Diet (no
+                        restrictions), Diet #1, or Diet #2, (the variable diet has,
+                        then<?oxy_insert_start author="mmyers" timestamp="20101103T202847-0400"?>,<?oxy_insert_end?>
+                        3
+                        <?oxy_insert_start author="mmyers" timestamp="20101103T202855-0400"?>possible
+                        values<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T202853-0400" content="levels"?>)
+                        <?oxy_insert_start author="mmyers" timestamp="20101103T202919-0400"?>and
+                        <?oxy_insert_end?>are also assigned to receive either Placebo, Drug #1, or
+                        Drug #2 (the variable Drug,
+                        then<?oxy_insert_start author="mmyers" timestamp="20101103T202930-0400"?>,<?oxy_insert_end?>
+                        also has three values). This is an example where the experiment has two
+                        explanatory
+                        variable<?oxy_insert_start author="mmyers" timestamp="20101103T202938-0400"?>s<?oxy_insert_end?>
+                        and a response variable. In order to set up such an
+                        experiment<?oxy_insert_start author="mmyers" timestamp="20101103T203023-0400"?>,<?oxy_insert_end?>
+                        there has to be <em>one treatment group for every combination of categories
+                            of the two explanatory variables</em>. Thus, in this case there are 3<?oxy_insert_start author="mmyers" timestamp="20101103T203120-0400"?>
+                        <?oxy_insert_end?>*<?oxy_insert_start author="mmyers" timestamp="20101103T203120-0400"?>
+                        <?oxy_insert_end?>3<?oxy_insert_start author="mmyers" timestamp="20101103T203122-0400"?>
+                        <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101103T203122-0400"?>
+                        <?oxy_insert_end?>9 combinations of the two variables to which the subjects
+                        are assigned. The treatment groups are illustrated and labeled in the
+                        following table: </p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image009.gif"
+alt="The column headings for the table are for the Diet variable: &quot;No-diet&quot;,
+&quot;Special diet 1&quot; and &quot;Special diet 2.&quot; The Rows are for the drug
+variable: &quot;Placebo,&quot; &quot;Drug 1,&quot; and &quot;Drug 2.&quot; There are 9
+cells in the table, one for every possible combination of row and column. These cells
+are labeled &quot;tttX&quot;, where X is in the range of [1-9], representing each
+combination."/>
+<p>Subjects would be randomly assigned to one of the nine treatment groups. If we find differences
+                        in the proportions of subjects who achieve the lower "moderate zone" blood
+                        pressure among the nine treatment groups, then we have evidence that the
+                        diet<?oxy_insert_start author="mmyers" timestamp="20101103T203234-0400"?>s<?oxy_insert_end?>
+                        and/or drugs may be effective for reducing blood pressure.</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image010.gif"
+alt="From the population we generate a sample. The individuals of the sample are represented
+as a whole visually with a circle. These individuals are then divided by randomly assigning
+them to one of the 9 treatment groups. These treatment groups are &quot;ttt1: no-diet and
+placebo,&quot;, &quot;ttt2: diet 1 and placebo&quot;, &quot;ttt3: diet 2 and placebo&quot;,
+and so on, up to &quot;ttt9: diet 2 and drug 2.&quot; The responses from each of these
+treatment groups are compared."/>
+</example>
+</body>
+</section>
+<section>
+<title>Comments</title>
+<body>
+<p>1. Recall that randomization may be employed at two stages of an experiment: in the selection of
+                    subjects, and in the assignment of treatments. The former may be helpful in
+                    allowing us to generalize what occurs
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T203332-0400"?>among<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T203331-0400" content="for"?>
+                    our subjects to what would occur in the general population, but the reality of
+                    most experimental settings is that a convenience or volunteer sample is used.
+                    Most likely the blood pressure study described above would use volunteer
+                    subjects. The important thing is to make sure these subjects are randomly
+                    assigned to one of the nine treatment combinations.</p>
+<p>2. In order to gain optimal information about individuals in all the various treatment groups, we
+                    would like to make assignments not just randomly, but also evenly. If there are
+                    90 subjects in the blood pressure study described above, and 9 possible
+                    treatment groups, then each group should be filled randomly
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T203431-0400"?>with<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T203430-0400" content="by"?>
+                    10 individuals. A simple random sample of 10 could be taken from the larger
+                    group of 90, and those individuals would be assigned to the first treatment
+                    group. Next, the second treatment
+                    group<?oxy_delete author="mmyers" timestamp="20101103T203458-0400" content="s"?>
+                    would be filled by a simple random sample of 10 taken from the remaining 80
+                    subjects. This process would be repeated until all 9 groups are filled with 10
+                    individuals each.</p>
+<!--<activity idref="_u3_m2_dig3" purpose="didigetthis"/>-->
+    <section>
+        <title>Did I Get This?</title>
+        <body> <p>A university was interested in examining the overall effectiveness of its online statistics
+                            course, along with the effectiveness of particular aspects of the
+                            course. First, the university wanted to see whether the online course
+                            was better than a standard course. Second, the university wanted to know
+                            whether students learned best using Excel, using Minitab, or using no
+                            statistical package at all. The university randomly
+                            <?oxy_comment_start author="mmyers" timestamp="20101103T205943-0400" comment="I changed this because the last question presupposes that there are 30 students total"?>selected
+                            <?oxy_insert_start author="mmyers" timestamp="20101103T205819-0400"?>a
+                            <?oxy_insert_end?>group<?oxy_delete author="mmyers" timestamp="20101103T205822-0400" content="s"?>
+                            of<?oxy_comment_end?> 30 students and administered one of the different
+                            variants of the course
+                            (i<?oxy_insert_start author="mmyers" timestamp="20101103T203720-0400"?>.<?oxy_insert_end?>e<?oxy_insert_start author="mmyers" timestamp="20101103T203721-0400"?>.<?oxy_insert_end?>,
+                            traditional or
+                            online<?oxy_insert_start author="mmyers" timestamp="20101103T203733-0400"?>,<?oxy_insert_end?>
+                            coupled with one of the software options) to each
+                            <?oxy_insert_start author="mmyers" timestamp="20101103T205856-0400"?>student<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T205854-0400" content="group"?>.
+                            The success of each variant was measured by the students' average
+                            improvement between
+                            <?oxy_insert_start author="mmyers" timestamp="20101103T203805-0400"?>a
+                            <?oxy_insert_end?>pre-test and
+                            <?oxy_insert_start author="mmyers" timestamp="20101103T203807-0400"?>a
+                            <?oxy_insert_end?>post-test.</p>
+            <wb:inline idref="u2_m2_experiments_tutor1" purpose="didigetthis"/>
+            <wb:inline idref="u2_m2_experiments_tutor2" purpose="didigetthis"/>
+            <wb:inline idref="u2_m2_experiments_tutor3" purpose="didigetthis"/>
+            <wb:inline idref="u2_m2_experiments_tutor4" purpose="didigetthis"/>
+            <wb:inline idref="u2_m2_experiments_tutor5" purpose="didigetthis"/>
+        </body>
+    </section>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

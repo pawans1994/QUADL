@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_anova4_tutor1">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>
+            <em>Consider Scenario 1 (compared with Scenario 2):</em>
+         </p>
+         <p>Within-group variation is relatively <input_ref input="A"/>, and therefore the F
+            statistic</p>
+         <image src="../../../webcontent/inline_assessment/_u5_m2_digtutor5a_image1.gif" alt="variation among sample means over variation within groups"/>
+         <p>will be relatively <input_ref input="B"/>, indicating that H<sub>o</sub> will probably
+               <input_ref input="C"/>, and we'll conclude that the population means <input_ref
+               input="D"/>.</p>
+      </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">small</choice>
+         <choice value="two">large</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">small</choice>
+         <choice value="two">large</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="C" shuffle="false">
+         <choice value="one">be rejected</choice>
+         <choice value="two">not be rejected</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="D" shuffle="false">
+         <choice value="one">may be equal</choice>
+         <choice value="two">are not all equal</choice>
+      </fill_in_the_blank>
+      <part>
+         <response input="A" name="small" match="one" score="10">
+            <feedback>Correct. Indeed the within-group variation in Scenario 2 is larger than in
+               Scenario 1.</feedback>
+         </response>
+         <response input="A" name="large" match="two">
+            <feedback>Incorrect. Look at the spread within each of the groups in Scenario 1 as
+               opposed to Scenario 2. For example, in Sample 3 in Scenario 1, the data range from
+               roughly 23 to 27.5, while in Scenario 2, the data in Sample 3 range from 1 to
+               48.</feedback>
+         </response>
+      </part>
+      <part>
+         <response input="B" name="small" match="one">
+            <feedback>Incorrect. Note that the within-group variation appears in the denominator of
+               the F statistic, and therefore if the within-group variation is relatively small (as
+               it is for Scenario 1), the F statistic will be relatively large.</feedback>
+         </response>
+         <response input="B" name="large" match="two" score="10">
+            <feedback>Correct. Indeed, the within-group variation appears in the denominator of the
+               F statistic, and therefore if the within-group variation is relatively small (as it
+               is for Scenario 1), the F statistic will be relatively large.</feedback>
+         </response>
+      </part>
+      <part>
+         <response input="C" name="be rejected" match="one" score="10">
+            <feedback>Correct. Indeed, the larger the F statistic (which happens when the variation
+               within groups is relatively small) the more evidence we have against
+               H<sub>o</sub>.</feedback>
+         </response>
+         <response input="C" name="not be rejected" match="two">
+            <feedback>Incorrect. The larger the F statistic (which happens when the variation within
+               groups is relatively small) the more evidence we have against
+               H<sub>o</sub>.</feedback>
+         </response>
+      </part>
+      <part>
+         <response input="D" name="may be equal" match="one">
+            <feedback>Incorrect. When H<sub>o</sub> is rejected, we accept the alternative claim,
+               which in the ANOVA F-test says that the means are not all equal.</feedback>
+         </response>
+         <response input="D" name="are not all equal" match="two" score="10">
+            <feedback>Correct. Indeed, when H<sub>o</sub> is rejected, we accept the alternative
+               claim, which in the ANOVA F-test says that the means are not all equal.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

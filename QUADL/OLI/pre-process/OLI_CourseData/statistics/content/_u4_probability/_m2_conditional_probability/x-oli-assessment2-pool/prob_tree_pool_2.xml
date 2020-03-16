@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment 
+Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd">
+<pool id="prob_tree_pool_2">
+    <title>pool</title>
+    <multiple_choice id="q1_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two methods, <em style="bold">A</em> and <em style="bold">B</em>, are available for
+                teaching a certain industrial skill. There is an 80% chance of successfully learning
+                the skill if method <em style="bold">A</em> is used, and a 95% chance of success if
+                method <em style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more expensive and is therefore used only 25% of the time (method <em
+                    style="bold">A</em> is used the other 75% of the time). The following notations
+                are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold">L</em>&#8212;The skill was learned
+                    successfully. </li>
+            </ul>
+            <p>Which of the following is the correct probability tree for this problem?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"><image style="block"
+                    src="../webcontent/assessment5q8image1.gif"/>
+            </choice>
+            <choice value="B"><image style="block"
+                    src="../webcontent/assessment5q8image2.gif"/>
+            </choice>
+            <choice value="C"><image style="block"
+                    src="../webcontent/assessment5q8image3.gif"/>
+            </choice>
+            <choice value="D"><image style="block"
+                    src="../webcontent/assessment5q8image4.gif"/>
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. In this case, the events occur in stages: first you must choose
+                    which method to use, second you must see whether the person successfully learns
+                    the skill or not. This ordering should be exemplified in the probability tree by
+                    putting the first stage before the second.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that probability trees must have the following
+                    property: the sum of the probabilities of each branch coming from a common point
+                    must be 1. This means that if you have two branches coming out of a single
+                    point, the probability of branch 1 plus the probability of branch 2 must be
+                    1.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The first stage is choosing the method, <em style="bold">A</em>
+                    or <em style="bold">B</em> with P(<em style="bold">A</em>) = 0.75 and P(<em
+                        style="bold">B</em>) = 0.25. The second stage is either learning or not
+                    learning the skill with P(<em style="bold">L</em> | <em style="bold">A</em>) =
+                    0.80) and P(<em style="bold">L</em> | <em style="bold">B</em>) =
+                    0.95.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Because the first stage of the tree starts with <em
+                        style="bold">A</em> on the top branch and <em style="bold">B</em> on the
+                    bottom branch, the second set of branches in the tree must have conditional
+                    probabilities (from top to bottom) of P(<em style="bold">L</em> | <em
+                        style="bold">A</em>), P(not <em style="bold">L</em> | <em style="bold"
+                        >A</em>), P (<em style="bold">L</em> | <em style="bold">B</em>), and P (not
+                        <em style="bold">L</em> | <em style="bold">B</em>). It appears you switched
+                    the conditional probability values for <em style="bold">A</em> and <em
+                        style="bold">B</em>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two methods, <em style="bold">A</em> and <em style="bold">B</em>, are available for
+                teaching a certain industrial skill. There is an 80% chance of successfully learning
+                the skill if method <em style="bold">A</em> is used, and a 95% chance of success if
+                method <em style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more expensive and is therefore used only 25% of the time (method <em
+                    style="bold">A</em> is used the other 75% of the time). The following notations
+                are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold"> L</em>&#8212;The skill was learned
+                    successfully. </li>
+            </ul>
+            <p>What is the probability that a randomly chosen worker will learn the skill
+                successfully?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">P(<em style="bold">L</em>) = 0.75 * 0.80 = 0.60 </choice>
+            <choice value="B">P(<em style="bold">L</em>) = 0.25 * 0.95 = 0.2375 </choice>
+            <choice value="C">P(<em style="bold">L</em>) = 0.75 * 0.25 + 0.80 * 0.95 =
+                0.9475 </choice>
+            <choice value="D">P(<em style="bold">L</em>) = 0.75 * 0.95 + 0.25 * 0.80 =
+                0.9125 </choice>
+            <choice value="E">P(<em style="bold">L</em>) = 0.75 * 0.80 + 0.25 * 0.95 =
+                0.8375 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems that you have calculated P(<em style="bold">A</em> and
+                        <em style="bold">L</em>). However, P(<em style="bold">L</em>) = P(<em
+                        style="bold">A</em> and <em style="bold">L</em>) + P (not <em style="bold"
+                        >A</em> and <em style="bold">L</em>) = P(<em style="bold">A</em> and <em
+                        style="bold">L</em>) + P(<em style="bold">B</em> and <em style="bold"
+                    >L</em>). Recall that you have four pieces of information: P(<em style="bold"
+                        >A</em>) = 0.75, P(<em style="bold">B</em>) = 0.25, P (<em style="bold"
+                        >L</em> | <em style="bold">A</em>) = 0.80, P(<em style="bold">L</em> | <em
+                            style="bold">B</em>) = 0.95. Using these, you can apply the law of total probability to find P (<em style="bold">L</em>).</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have calculated P(<em style="bold">B</em> and
+                        <em style="bold">L</em>). However, P(<em style="bold">L</em>) = P(<em
+                        style="bold">B</em> and <em style="bold">L</em>) + P(not <em style="bold"
+                        >B</em> and <em style="bold">L</em>) = P(<em style="bold">B</em> and <em
+                        style="bold">L</em>) + P(<em style="bold">A</em> and <em style="bold"
+                    >L</em>). Recall that you have four pieces of information: P(<em style="bold"
+                        >A</em>) = 0.75, P(<em style="bold">B</em>) = 0.25, P(<em style="bold"
+                        >L</em> | <em style="bold">A</em>) = 0.80, P(<em style="bold">L</em> | <em
+                            style="bold">B</em>) = 0.95. Using these, you can apply the law of total probability to find P (<em style="bold">L</em>).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall that you have four pieces of information: P(<em
+                        style="bold">A</em>) = 0.75, P(<em style="bold">B</em>) = 0.25, P(<em
+                        style="bold">L</em> | <em style="bold">A</em>) = 0.80, P(<em style="bold"
+                        >L</em> | <em style="bold">B</em>) = 0.95. Using these, you can apply the
+                    law of total probability to find P(<em style="bold">L</em>).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall that you have four pieces of information: P(<em
+                        style="bold">A</em>) = 0.75, P(<em style="bold">B</em>) = 0.25, P(<em
+                        style="bold">L</em> |<em style="bold">A</em>) = 0.80, P(<em style="bold"
+                        >L</em> | <em style="bold">B</em>) = 0.95. Using these, you can apply the
+                    law of total probability to find P(<em style="bold">L</em>).</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. We need to find P(<em style="bold">L</em>). Using the tree, we
+                    need to identify the “paths” in the tree to ‘<em style="bold">L</em>’, multiply
+                    the probabilities along each of those paths, and then add the resulting
+                    probabilities. In this case, <p> P(<em style="bold">L</em>) = 0.75 * 0.80 + 0.25 *
+                    0.95 = 0.60 + 0.2375 = 0.8375. </p>
+                    <image style="block" src="../webcontent/5_formula3.gif"/>
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two methods, <em style="bold">A</em> and <em style="bold">B</em>, are available for
+                teaching a certain industrial skill. There is an 80% chance of successfully learning
+                the skill if method <em style="bold">A</em> is used, and a 95% chance of success if
+                method <em style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more expensive and is therefore used only 25% of the time (method <em
+                    style="bold">A</em> is used the other 75% of the time). The following notations
+                are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold">L</em>&#8212;The skill was learned
+                    successfully. </li>
+            </ul>
+            <p>A worker learned the skill successfully. What is the probability that he was taught
+                by method <em style="bold">A</em>?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.75 * 0.80 = 0.60 </choice>
+            <choice value="B">0.80 </choice>
+            <choice value="C"><image style="block"
+                    src="../webcontent/assessment5q10equation1.gif"/>
+            </choice>
+            <choice value="D"><image style="block"
+                    src="../webcontent/assessment5q10equation2.gif"/>
+            </choice>
+            <choice value="E"><image style="block"
+                    src="../webcontent/assessment5q10equation3.gif"/>
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems that you have calculated P(<em style="bold">A</em> and
+                        <em style="bold">L</em>). Remember that you are interested in finding P(<em
+                        style="bold">A</em> | <em style="bold">L</em>). You may need to apply the
+                    definition of conditional probability more than once to find the correct
+                    answer.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems that you have found P (<em style="bold">L</em> | <em
+                        style="bold">A</em>) rather than P (<em style="bold">A</em> | <em
+                        style="bold">L</em>). You may need to apply the definition of conditional
+                    probability more than once to find the correct answer.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems that you have calculated P (<em style="bold">B</em> |
+                        <em style="bold">L</em>) rather than P (<em style="bold">A</em> | <em
+                        style="bold">L</em>).</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. We need to find P (<em style="bold">A</em> |<em style="bold"
+                        >L</em>). By definition,
+                    <image style="block" src="../webcontent/5_formula4.gif"/>
+                </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. This calculation has no real meaning. Remember that you are
+                    interested in finding P (<em style="bold">A</em> | <em style="bold">L</em>). You
+                    may need to apply the definition of conditional probability more than once to
+                    find the correct answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two methods, <em style="bold">A</em> and <em style="bold">B</em>, are available for
+                teaching Spanish. There is a 70% chance of successfully learning Spanish if method
+                    <em style="bold">A</em> is used, and a 85% chance of success if method <em
+                    style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more time consuming and is therefore used only 20% of the time (method
+                    <em style="bold">A</em> is used the other 80% of the time). The following
+                notations are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold">L</em>&#8212;Spanish was learned
+                    successfully. </li>
+            </ul>
+            <p>Which of the following is the correct probability tree for this problem? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A"><image style="block" src="../webcontent/image018.png"/>
+            </choice>
+            <choice value="B"><image style="block" src="../webcontent/image019.png"/>
+            </choice>
+            <choice value="C"><image style="block" src="../webcontent/image020.png"/>
+            </choice>
+            <choice value="D"><image style="block" src="../webcontent/image021.png"/>
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback> Incorrect. In this case, the events occur in stages: first you must
+                    choose which method to use, second you must see whether the person successfully
+                    learns the Spanish or not. This ordering should be exemplified in the
+                    probability tree by putting the first stage before the second. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Remember that probability trees must have the following
+                    property: the sum of the probabilities of each branch coming from a common point
+                    must be 1. This means that if you have two branches coming out of a single
+                    point, the probability of branch 1 plus the probability of branch 2 must be 1.
+                </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The first stage is choosing the method, <em style="bold">A</em>
+                    or <em style="bold">B</em> with P(<em style="bold">A</em>) = 0.80 and P(<em
+                        style="bold">B</em>) = 0.20. The second stage is either learning or not
+                    learning Spanish with P(<em style="bold">L</em> | <em style="bold">A</em>) =
+                    0.70) and P(<em style="bold">L</em> | <em style="bold">B</em>) = 0.85.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback> Incorrect. Because the first stage of the tree starts with <em
+                        style="bold">A</em> on the top branch and <em style="bold">B</em> on the
+                    bottom branch, the second set of branches in the tree must be have conditional
+                    probabilities (from top to bottom) of: P(<em style="bold">L</em> | <em
+                        style="bold">A</em>), P(not <em style="bold">L</em> | <em style="bold"
+                        >A</em>), P (<em style="bold">L</em> | <em style="bold">B</em>), and P (not
+                        <em style="bold">L</em> | <em style="bold">B</em>). It appears you switched
+                    the conditional probability values for <em style="bold">A</em> and <em
+                        style="bold">B</em>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q5_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two teaching methods, <em style="bold">A</em> and <em style="bold">B</em>, are
+                implemented for learning Spanish. There is a 70% chance of successfully learning
+                Spanish if method <em style="bold">A</em> is used, and a 85% chance of success if
+                method <em style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more time consuming and is therefore used only 20% of the time (method
+                    <em style="bold">A</em> is used the other 80% of the time). The following
+                notations are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold">L</em>&#8212;Spanish was learned
+                    successfully. </li>
+            </ul>
+            <p>What is the probability that a randomly chosen person will learn Spanish
+                successfully? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">P(<em style="bold">L</em>) = 0.20 * 0.85 = 0.1700 </choice>
+            <choice value="B">P(<em style="bold">L</em>) = 0.80 * 0.70 = 0.5600 </choice>
+            <choice value="C">P(<em style="bold">L</em>) = 0.80 * 0.70 + 0.20 * 0.85 =
+                0.7300 </choice>
+            <choice value="D">P(<em style="bold">L</em>) = 0.80 * 0.85 + 0.20 * 0.70 =
+                0.8200 </choice>
+            <choice value="E">P(<em style="bold">L</em>) = 0.80 * 0.20 + 0.70 * 0.85 =
+                0.7550 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems that you have calculated P(<em style="bold">B</em> and
+                        <em style="bold">L</em>). However, P(<em style="bold">L</em>) = P(<em
+                        style="bold">B</em> and <em style="bold">L</em>) + P(not <em style="bold"
+                        >B</em> and <em style="bold">L</em>) = P(<em style="bold">B</em> and <em
+                        style="bold">L</em>) + P(<em style="bold">A</em> and <em style="bold"
+                    >L</em>). Recall that you have four pieces of information: P(<em style="bold"
+                        >A</em>) = 0.80, P(<em style="bold">B</em>) = 0.20, P(<em style="bold"
+                        >L</em> | <em style="bold">A</em>) = 0.70, P(<em style="bold">L</em> | <em
+                        style="bold">B</em>) = 0.85. Using these, you can apply the law of total
+                    probability to find P(<em style="bold">L</em>). </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback> Incorrect. It seems that you have calculated P(<em style="bold">A</em>
+                    and <em style="bold">L</em>). However, P(<em style="bold">L</em>) = P(<em
+                        style="bold">A</em> and <em style="bold">L</em>) + P (not <em style="bold"
+                        >A</em> and <em style="bold">L</em>) = P(<em style="bold">A</em> and <em
+                        style="bold">L</em>) + P(<em style="bold">B</em> and <em style="bold"
+                    >L</em>). Recall that you have four pieces of information: P(<em style="bold"
+                        >A</em>) = 0.80, P(<em style="bold">B</em>) = 0.20, P (<em style="bold"
+                        >L</em> | <em style="bold">A</em>) = 0.70, P(<em style="bold">L</em> | <em
+                            style="bold">B</em>) = 0.85. Using these, you can apply the law of total probability to find P(<em style="bold">L</em>). </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We need to find P(<em style="bold">L</em>). Using the tree, we
+                    need to identify the “paths” in the tree to <em style="bold">L</em>, multiply the probabilities
+                    along each of those paths, and then add the resulting probabilities. In this
+                    case, <p> P(<em style="bold">L</em>) = 0.80 * 0.70 + 0.20 * 0.85 = 0.7300.</p> <image
+                        style="block" src="../webcontent/image022.png"/>
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Recall that you have four pieces of information: P(<em
+                        style="bold">A</em>) = 0.80, P(<em style="bold">B</em>) = 0.20, P(<em
+                        style="bold">L</em> | <em style="bold">A</em>) = 0.70, P(<em style="bold"
+                        >L</em> | <em style="bold">B</em>) = 0.85. Using these, you can apply the
+                    law of total probability to find P(<em style="bold">L</em>). </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Recall that you have four pieces of information: P(<em
+                        style="bold">A</em>) = 0.80, P(<em style="bold">B</em>) = 0.20, P(<em
+                        style="bold">L</em> | <em style="bold">A</em>) = 0.70, P(<em style="bold"
+                        >L</em> | <em style="bold">B</em>) = 0.85. Using these, you can apply the
+                    law of total probability to find P(<em style="bold">L</em>). </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q6_prob_tree_pool_2" select="single">
+        <body>
+            <p>Two teaching methods, <em style="bold">A</em> and <em style="bold">B</em>, are
+                implemented for learning Spanish. There is a 70% chance of successfully learning
+                Spanish if method <em style="bold">A</em> is used, and a 85% chance of success if
+                method <em style="bold">B</em> is used. However, method <em style="bold">B</em> is
+                substantially more time consuming and is therefore used only 15% of the time (method
+                    <em style="bold">A</em> is used the other 85% of the time). The following
+                notations are suggested: </p>
+            <ul>
+                <li><em style="bold">A</em>&#8212;Method <em style="bold">A</em> is used. </li>
+                <li><em style="bold">B</em>&#8212;Method <em style="bold">B</em> is used. </li>
+                <li><em style="bold">L</em>&#8212;Spanish was learned
+                    successfully. </li>
+            </ul>
+            <p>A person learned Spanish successfully. What is the probability that he was taught by
+                method A? </p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.85 * 0.70 = 0.5950 </choice>
+            <choice value="B">0.70 </choice>
+            <choice value="C">(0.15 * 0.85)/(0.85 * 0.70 + 0.15 * 0.85) = 0.1765 </choice>
+            <choice value="D">(0.85 * 0.70)/(0.85 * 0.70 + 0.15 * 0.85) = 0.8235 </choice>
+            <choice value="E">(0.85 * 0.70)/(0.70 + 0.85) = 0.3839 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems that you have calculated P(<em style="bold">A</em> and
+                        <em style="bold">L</em>). Remember that you are interested in finding P(<em
+                        style="bold">A</em> | <em style="bold">L</em>). You may need to apply the
+                    definition of conditional probability more than once to find the correct answer.
+                </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback> Incorrect. It seems that you have found P (<em style="bold">L</em> | <em
+                        style="bold">A</em>) rather than P (<em style="bold">A</em> | <em
+                        style="bold">L</em>). You may need to apply the definition of conditional
+                    probability more than once to find the correct answer. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback> Incorrect. It seems that you have calculated P (<em style="bold">B</em> |
+                        <em style="bold">L</em>) rather than P (<em style="bold">A</em> | <em
+                        style="bold">L</em>). </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. We need to find P (<em style="bold">A</em> | <em style="bold"
+                        >L</em>). By definition, <p>
+                        <m:math display="inline">
+                            <m:mrow>
+                                <m:mi>P</m:mi>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mi style="bold">A</m:mi>
+                                <m:mo>|</m:mo>
+                                <m:mi style="bold">L</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>P</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mi style="bold">A</m:mi>
+                                        <m:mspace/>
+                                        <m:mtext>&#160;and&#160;</m:mtext>
+                                        <m:mspace/>
+                                        <m:mi style="bold">L</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mi>P</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mi style="bold">L</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                    <p>Now, <ul>
+                            <li>P(<em style="bold">A</em> and <em style="bold">L</em>) is obtained
+                                by multiplying the probabalities along the "<em style="bold"
+                                    >A</em>-<em style="bold">L</em>" path. </li>
+                          
+                        </ul></p>
+                    <p>Putting it all together, we get: </p>
+                    <p>
+                        <m:math display="inline">
+                            <m:mrow>
+                                <m:mi>P</m:mi>
+                                <m:mo stretchy="false">(</m:mo>
+                                <m:mi style="bold">A</m:mi>
+                                <m:mo>|</m:mo>
+                                <m:mi style="bold">L</m:mi>
+                                <m:mo stretchy="false">)</m:mo>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>P</m:mi>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mi style="bold">A</m:mi>
+                                        <m:mspace/>
+                                        <m:mtext>&#160;and&#160;</m:mtext>
+                                        <m:mspace/>
+                                        <m:mi style="bold">L</m:mi>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                       <m:mi>P</m:mi>
+                                       <m:mo stretchy="false">(</m:mo>
+                                       <m:mi style="bold">L</m:mi>
+                                       <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>0.85</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>0.70</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mo stretchy="false">(</m:mo>
+                                       <m:mn>0.85</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>0.70</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                        <m:mo>+</m:mo>
+                                        <m:mo stretchy="false">(</m:mo>
+                                       <m:mn>0.15</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                        <m:mo stretchy="false">(</m:mo>
+                                        <m:mn>0.85</m:mn>
+                                        <m:mo stretchy="false">)</m:mo>
+                                    </m:mrow>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mn>0.8235</m:mn>
+                            </m:mrow>
+                        </m:math>
+                    </p>
+                </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. This calculation has no real meaning. Remember that you are
+                    interested in finding P (<em style="bold">A</em> | <em style="bold">L</em>). You
+                    may need to apply the definition of conditional probability more than once to
+                    find the correct answer. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

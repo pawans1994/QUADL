@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean2_tutor4">
+    <title>Tutor</title>
+    <page>
+        <question id="q1">
+            <body>
+                <p>Calculate the test statistic for this sample.</p></body>
+            <multiple_choice shuffle="false">
+                <choice value="A">-.34</choice>
+                <choice value="B">-.57</choice>
+                <choice value="C">-2.39</choice>
+                <choice value="D">-4.04</choice>
+                <choice value="E">4.04</choice>
+            </multiple_choice>
+            <part>
+                <response match="A">
+                    <feedback>Incorrect. Please review the formula and try again.</feedback>
+                </response>
+                <response match="B">
+                    <feedback>Incorrect. Did you remember to use the sample size in your
+                        calculation?</feedback>
+                </response>
+                <response match="C">
+                    <feedback>Incorrect. Did you take the square root of the entire
+                        denominator<?oxy_comment_start author="mmyers" timestamp="20101127T193922-0500" comment="Please double-check to make sure my addition is correct. I am trying to avoid confusion here. It sounded like the feedback could mean that that was what you were *supossed* to do."?>?<?oxy_insert_start author="mmyers" timestamp="20101127T193756-0500"?>
+                        (It is incorrect to do so.)<?oxy_comment_end?><?oxy_insert_end?></feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. The test
+                        statistic<?oxy_delete author="mmyers" timestamp="20101127T193616-0500" content="s"?>
+                        is (98.4 - 98.6) / (.35 / sqrt(50)).</feedback>
+                </response>
+                <response match="E">
+                    <feedback>This is almost correct. Be sure to subtract the null value from the
+                        sample mean.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

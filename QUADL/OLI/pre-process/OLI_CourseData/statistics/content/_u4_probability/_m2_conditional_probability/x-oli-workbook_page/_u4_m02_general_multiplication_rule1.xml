@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_general_multiplication_rule1">
+<head>
+<title>The General Multiplication Rule (1 of 2)</title>
+    <objref idref="use_general_multiplication_rule"/>
+</head>
+<body>
+   
+<p>Now that we have an understanding of conditional probabilities and can express them with concise
+            notation, and have a more formal understanding of what it means for two events to be
+            independent, we can finally establish the General Multiplication Rule, a formal rule for
+            finding P(A and B)
+            <?oxy_insert_start author="mmyers" timestamp="20101111T141347-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T141345-0500" content="which"?>
+            applies to any two events, whether they are independent or dependent.</p>
+<p>We begin with an example that contrasts P(A and B) for
+            <?oxy_delete author="mmyers" timestamp="20101111T141407-0500" content="the "?>independent
+            and
+            <?oxy_delete author="mmyers" timestamp="20101111T141413-0500" content="the "?>dependent
+            case<?oxy_insert_start author="mmyers" timestamp="20101111T141418-0500"?>s<?oxy_insert_end?>.</p>
+<example>
+
+<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club,
+                diamond, heart, and spade, where the first card is replaced before the second card
+                is picked. What is the probability of picking a club and then a diamond? Because the
+                sampling is done with replacement, whether or not a diamond is picked on the second
+                selection is independent of whether or not a club has been picked on the first
+                selection. Rule 5, the multiplication rule for independent events, tells us
+                that<?oxy_insert_start author="mmyers" timestamp="20101111T141447-0500"?>:<?oxy_insert_end?>
+            </p>
+<p>P(C1 and D2) = P(C1) * P(D2) = 1/4 * 1/4 = 1/16. </p>
+<p>[Here we denote the event
+                "club<?oxy_delete author="mmyers" timestamp="20101111T141504-0500" content="s"?>
+                picked on first selection" as C1 and the event
+                "diamond<?oxy_delete author="mmyers" timestamp="20101111T141507-0500" content="s"?>
+                picked on second selection" as D2.] The display below shows that 1/4 of the time
+                we'll pick a club first, and of these times, 1/4 will result in a diamond on the
+                second pick: 1/4 * 1/4 = 1/16 of the selections will have a club first and then a
+                diamond.</p>
+<image style="block" src="../webcontent/image007.gif" alt="All of the suit possibilities of picking
+one card, then replacing it and picking a second card. These possibilities are:
+    SC, SD, SH, SS,
+    HC, HD, HH, HS,
+    DC, DD, DH, DS,
+    CC, CD, CH, CS. Note that 1/4 of these have C picked first (the last 4, out of 16 total). Out of
+these, only one is CD, which is 1/4 of all of the possibilities with C picked first."/>
+</example>
+<example>
+
+<p>Suppose you pick two cards at random from four cards consisting of one of each suit: club,
+                diamond, heart, and spade, without replacing the first card before the second card
+                is picked. What is the probability of picking a club and then a diamond? The
+                probability in this case is not 1/4 * 1/4 = 1/16; because the sampling is done
+                without replacement,
+                <?oxy_insert_start author="mmyers" timestamp="20101111T141630-0500"?>so
+                <?oxy_insert_end?>whether or not a diamond is picked on the second selection
+                    <em>does</em> depend on what was picked on the first selection.
+                <?oxy_insert_start author="mmyers" timestamp="20101111T141645-0500"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T141643-0500" content="["?>For
+                instance, if a diamond was picked on the first selection, the probability of another
+                diamond is
+                zero!<?oxy_insert_start author="mmyers" timestamp="20101111T141650-0500"?>)<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101111T141649-0500" content="]"?>
+                As in the example above, 1/4 of the time we'll pick a club first. But since the club
+                has been removed, 1/3 of these selections with a club first will have a diamond
+                second. The probability of a club and then a diamond is 1/4*1/3=1/12; this is the
+                probability of getting a club first, multiplied by the probability of getting a
+                diamond second, given that a club was picked first. Using the notation of
+                conditional probabilities, we can write</p>
+<p>P(C1 and D2) = P(C1) * P(D2 | C1) = 1/4 * 1/3 = 1/12.</p>
+<image style="block" src="../webcontent/image008.gif" alt="All of the suit possibilities of picking
+one card then a second card, without replacing any cards. These possibilities are:
+        SC, SD, SH,
+        HC, HD, HS,
+        DC, DH, DS,
+        CD, CH, CS. Note that 1/4 of these have C picked first (the last 3, out of 12 total). Out of
+        these, only one is CD. CD is 1/3 of all of the possibilities with C picked first." />
+</example>
+<p>For independent events A and B, we had the rule P(A and B) = P(A) * P(B). Due to independence, to
+            find the probability of both, we could multiply the probability of A by the simple
+            probability of B, because the occurrence of A would have no effect on the probability of
+            B occurring. Now, for events A and B that may be dependent, to find the probability of
+            both, we multiply the probability of A by the conditional probability of B, taking into
+            account that A has occurred. Thus, our general multiplication rule is stated as
+            <?oxy_comment_start author="mmyers" timestamp="20101111T142017-0500" comment="OK to remove &quot;Rule 7&quot; wording below (since intro section of previous unit specified there were five rules, and this one is an extension of one of those five)?"?>follows:<?oxy_comment_end?></p>
+<theorem type="rule"><title><?oxy_delete author="mmyers" timestamp="20101111T141903-0500" content="Rule 7: The General Multiplication Rule"?></title>
+    <statement> <p> 
+<em>The General Multiplication Rule: </em>For any two events A and B, <em>P(A and B) = P(A) * P(B | A)</em>
+</p></statement></theorem>
+</body>
+</workbook_page>

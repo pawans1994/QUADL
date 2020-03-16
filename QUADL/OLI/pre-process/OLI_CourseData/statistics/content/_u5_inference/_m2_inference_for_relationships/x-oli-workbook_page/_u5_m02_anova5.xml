@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova5">
+    <head>
+        <title>ANOVA (5 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Step 3: Finding the p-value</title>
+            <body>
+                <p>The p-value of the ANOVA F-test is the probability of getting an F<?oxy_insert_start author="mmyers" timestamp="20101129T094722-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094722-0500" content="-"?>statistic
+                    as large as we got (or even larger), had <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi>H</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                    <m:mo>:</m:mo>
+                                    <m:mi mathvariant="normal">μ</m:mi>
+                                </m:mrow>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>.</m:mo>
+                            <m:mo>=</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mi>k</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> been true. In other words, it tells us how surprising it is to find
+                    data like those observed, assuming that there is no difference among the
+                    population means μ<sub>1</sub>, μ<sub>2</sub>, ..., μ<sub>k</sub>. </p>
+                <example>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R</title>
+                            <p>As we already noticed before, the p-value in our example is so small
+                                that it is essentially 0, telling us that it would be next to
+                                impossible to get data like those observed had the mean frustration
+                                level of the four majors been the same (as the null hypothesis
+                                claims).</p>
+                            <image style="block" src="../webcontent/image168_r.gif" alt="R output:
+                    > summary (aov(Frustration.Score~Major,frustration))
+                    
+                    Major: Df = 3, Sum Sq = 939.85, Mean Sq = 313.28, F-Value = 46.601, Pr(&gt;F) &lt;2.2e-16 ***
+                    Residuals: Df = 136, Sum Sq = 914.29, Mean Sq = 6.72
+                    
+                    Signif. codes: 0 '***' 0.0001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"/>
+                        </alternative>
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch</title>
+                            <p>As we already noticed before, the p-value in our example is very small ( less than 0.0001 ) telling us that it would be next to impossible to get data like those observed had the mean frustration level of the four majors been the same (as the null hypothesis claims). </p>
+                            <image style="block" src="../webcontent/image168_statcrunch.gif" alt="
+                                StatCrunch output:
+                    Analysis of Variance results:
+                    Data stored in separate columns
+                    Column means
+                    Column: Business: n = 35, mean = 7.314858, Std. Error = 0.48984894
+                    Column: English: n = 35, mean = 11.771428, Std. Error = 0.35286513
+                    Column: Mathematics: n = 35, mean = 13.2, Std. Error = 0.3639189
+                    Column: Psychology: n = 35, mean = 14.028571, Std. Error = 0.52096504
+                    
+                    ANOVA Table:
+                    Treatments: df = 3, SS = 939.85, MS = 313.28333, F-Stat = 46.600895, P-Value &lt; 0.0001
+                    Error: df = 136, SS = 914.2857, MS = 6.722689
+                    Total: df = 139, SS = 1854.1357"/>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab</title>
+                            <p>As we already noticed before, the p-value in our example is so small
+                                that Minitab reports it to be 0.000, telling us that it would be
+                                next to impossible to get data like those observed had the mean
+                                frustration level of the four majors been the same (as the null
+                                hypothesis claims).</p>
+                            <image style="block" src="../webcontent/image168.gif" alt="One-way ANOVA:
+Frustration Score versus Major
+                    Major: DF = 3, SS = 939.85, MS = 313.28, F = 46.60, P = 0.000
+                    Error: DF = 136, SS = 914.29, MS = 6.72
+                    Total: Df = 139, SS = 1854.14
+                    
+                    S = 2.593, R-Sq = 50.69%, R-Sq(adj) = 49.60%
+                    
+                    Level: Business: N = 35, Mean = 7.314, StDev = 2.898
+                    Level: English: N = 35, Mean = 11.771, StDev = 2.088
+                    Level: Mathematics: N = 35, Mean = 13.200, StDev = 2.153
+                    Level: Psychology: N = 35, Mean = 14.029, StDev = 3.082
+                    
+                    Pooled StDev = 2.593.
+                    
+                    Note: not shown are the 95% Confidence Intervals."/>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007</title>
+                            <p>As we already noticed before, the p-value in our example is so small
+                                that it is essentially 0, telling us that it would be next to
+                                impossible to get data like those observed had the mean frustration
+                                level of the four majors been the same (as the null hypothesis
+                                claims).</p>
+                            <image style="block" src="../webcontent/image168_excel.gif" alt="
+Anova: Single Factor
+                    
+                    Summary:
+                    Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319
+                    English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983
+                    Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294
+                    Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916
+                    
+                    ANOVA
+                    Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                    Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                    
+                    Total: SS = 1854.135714, df = 139."/>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003</title>
+                            <p>As we already noticed before, the p-value in our example is so small
+                                that it is essentially 0, telling us that it would be next to
+                                impossible to get data like those observed had the mean frustration
+                                level of the four majors been the same (as the null hypothesis
+                                claims).</p>
+                            <image style="block" src="../webcontent/image168_excel.gif" alt="
+Anova: Single Factor
+                    
+                    Summary:
+                    Business: Count = 35, Sum = 256, Average = 7.31428571, Variance = 8.398319
+                    English: Count = 35, Sum = 412, Average = 11.7714286, Variance = 4.357983
+                    Mathematics: Count = 35, Sum = 462, Average = 13.2, Variance = 4.635294
+                    Psychology: Count = 35, Sum = 491, Average = 14.0285714, Variance = 9.49916
+                    
+                    ANOVA
+                    Between Groups: SS = 939.85, df = 3, MS = 313.283333, F = 46.6009, P-Value = 8.841e-21, Fcrit = 2.6711788
+                    Within Groups: SS = 914.2857143, df = 136, MS = 6.72268908
+                    
+                    Total: SS = 1854.135714, df = 139."/>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Calculator</title>
+                            <p>As we already noticed before, the p-value in our example is so small
+                                that it is essentially 0, telling us that it would be next to
+                                impossible to get data like those observed had the mean frustration
+                                level of the four majors been the same (as the null hypothesis
+                                claims).</p>
+                            <image style="block" src="../webcontent/image168_ti.gif" alt="One-way
+ANOVA:
+F = 46.60089583
+p = 8.841574e-21
+Factor: df = 3, SS = 939.85, MS = 313.283333,
+Error: df = 136, SS = 914.285714, MS = 6.72268908
+Sxp = 2.59281489"/>
+                        </alternative>
+                    </alternatives>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Step 4: <?oxy_insert_start author="mmyers" timestamp="20101129T094846-0500"?>Making<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094849-0500" content="Reach a"?>
+                <?oxy_delete author="mmyers" timestamp="20101129T094851-0500" content="c"?><?oxy_insert_start author="mmyers" timestamp="20101129T094852-0500"?>C<?oxy_insert_end?>onclusion<?oxy_insert_start author="mmyers" timestamp="20101129T094853-0500"?>s<?oxy_insert_end?>
+                in
+                <?oxy_insert_start author="mmyers" timestamp="20101129T094857-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094857-0500" content="c"?>ontext<?oxy_delete author="mmyers" timestamp="20101129T094859-0500" content="."?></title>
+            <body>
+                <p>As usual, we base our conclusion on the p-value. A small p-value tells us that
+                    our data contain a lot of evidence against
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T094921-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094915-0500" content="Ho"?>.
+                    More specifically, a small p-value tells us that the differences between the
+                    sample means are statistically significant (unlikely to have happened by
+                    chance), and therefore we reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T094938-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094936-0500" content="Ho"?>.
+                    If the p-value is not small, the data do not provide enough evidence to reject
+                        <?oxy_insert_start author="mmyers" timestamp="20101129T094952-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T094950-0500" content="Ho"?>,
+                    and so we continue to believe that it may be true. A significance level (cut-off
+                    probability) of .05 can help determine what is considered a small p-value.</p>
+                <example>
+                    <p>In our
+                        example<?oxy_insert_start author="mmyers" timestamp="20101129T095004-0500"?>,<?oxy_insert_end?>
+                        the p-value is extremely
+                        small<?oxy_insert_start author="mmyers" timestamp="20101129T095024-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095021-0500" content=" -- "?>close
+                        to
+                        0<?oxy_insert_start author="mmyers" timestamp="20101129T095028-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095029-0500" content=" -- "?>indicating
+                        that our data provide extremely strong evidence to reject
+                            <?oxy_insert_start author="mmyers" timestamp="20101129T095041-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095039-0500" content="Ho"?>.
+                        We conclude that the frustration level means of the four majors are not all
+                        the same, or in other words, that majors do have an effect on students'
+                        academic frustration
+                        levels<?oxy_insert_start author="mmyers" timestamp="20101129T095330-0500"?>
+                        at the school where the test was conducted<?oxy_insert_end?>.</p>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

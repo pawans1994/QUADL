@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m4_cc3_tutor3">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>What is the contribution of the fourth cell (no pierced males) to the chi-squared test
+            statistic? </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">1.27 </choice>
+            <choice value="B">90.32 </choice>
+            <choice value="C">26.01</choice>
+            <choice value="D">72.25</choice>
+            <choice value="E">73.9</choice>
+            <choice value="F">205.27</choice>
+        </multiple_choice>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It seems like you forgot to square the numerator
+                    (observed-expected). Recall that the formula for the contribution of a cell to a
+                    chi-square test statistic = (Observed - Expected)<sup>2</sup>/Expected.
+                </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It seems like you are dividing by the observed count instead of
+                    the expected count. Recall that the formula for the contribution of a cell to a
+                    chi-square test statistic = (Observed -
+                    Expected)<sup>2</sup>/Expected.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It seems like you are dividing by the table total instead of
+                    the expected count. Recall that the formula for the contribution of a cell to a
+                    chi-square test statistic = (Observed -
+                    Expected)<sup>2</sup>/Expected.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It seems like you are dividing by the row total instead of the
+                    expected count. Recall that the formula for the contribution of a cell to a
+                    chi-square test statistic = (Observed - Expected)<sup>2</sup>/Expected.
+                </feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. It seems like you are dividing by the column total instead of
+                    the expected count. Recall that the formula for the contribution of a cell to a
+                    chi-square test statistic = (Observed - Expected)<sup>2</sup>/Expected.
+                </feedback>
+            </response>
+            <response match="F" score="10">
+                <feedback>Correct. The contribution of the fourth cell (no-pierced males) to the
+                    chi-square statistic is: (Observed -
+                        Expected)<sup>2</sup>/Expected=(288-126.72)<sup>2</sup>/126.72=205.27
+                </feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m01_probability_rules11">
+    <head>
+        <title>Probability Rules (11 of 11)</title>
+        <objref idref="apply_probability_rules"/>
+        <objref idref="use_tools_to_find_probabilities"/>
+    </head>
+    <body>
+        
+        <p>Now that we know how to build a two-way probability table, let's see how we can use
+            information from it to solve problems.</p>
+        <example>
+
+            <p>Let's go back to our delivery example and see how we can "lift" probabilities from
+                the two-way probability table in order to answer the question posed in that example
+                and related questions. Here is the table again:</p>
+            <image style="block" src="../webcontent/image033.gif" alt="The table has 3 columns and 3
+rows. The columns are: &quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;A,&quot;
+&quot;not A,&quot; and &quot;Total.&quot; Here is the cell data in &quot;Row, Column: Value&quot; format.
+            A,B: 0.75;
+            A,not B: .15;
+            A,Total: .90;
+            not A, B: .05;
+            not A, not B: .05;
+            not A, Total: .10;
+            Total, B: .80;
+            Total, not B: .20;
+            Total, Total: 1.00"/>
+            <p>What is the probability of on-time delivery of the document using the two services
+                strategy? </p>
+            <p> In other words, what is P(A or B)?</p>
+            <p> We can use the table in two ways:</p>
+            <p> (i) We can simply lift P(A), P(B) and P(A and B) from the table as shown in the
+                table below and use the General Addition Rule to get 0.95. as we did
+                before:
+                P(A or B) = P(A) + P(B) − P(A and B) = 0.90 + 0.80 − 0.75 = 0.95.</p>
+            <image style="block" src="../webcontent/image034.gif" alt="Cells
+are given in &quot;{Row,Column: Value}&quot; format. The same table as the previous,
+except that the cells {A,B: 0.75}, {A, Total: 0.90}, and {Total, B: 0.80} have been
+highlighted."/>
+            <p> (ii) Another way to use the table is to use the fact that in probability, "A or B"
+                actually means "A or B or both." The corresponding cells for these three options are
+                shaded below and are 0.15 (only A), 0.05 (only B), and 0.75 (both). We can add these up
+                to get P(A or B) = 0.95.</p>
+            <image style="block" src="../webcontent/image035.gif" alt="Cells
+are given in &quot;{Row,Column}&quot; format. The same table as the previous,
+except that the cells {A,B: 0.75}, {A, not B: 0.15}, and {not A, B: 0.05} have been
+highlighted."/>
+        </example>
+        <example>
+
+            <p>What is the probability of on-time delivery by exactly one service? </p>
+            <p> On-time delivery by exactly one service occurs if the document arrives on-time by
+                service A and not B, or by service B and not A. The probabilities of these two
+                possibilities are represented by the shaded cells in the table below, and are 0.15
+                and 0.05 respectively. Therefore, P(on-time delivery by exactly one service) = 0.15 +
+                0.05 = 0.20</p>
+            <image style="block" src="../webcontent/image036.gif" alt="Cells
+are given in &quot;{Row,Column}&quot; format. The same table as the previous,
+except that the cells {A, not B: 0.15} and {not A, B: 0.05} have been highlighted."/>
+        </example>
+        <example>
+
+            <p>What is the probability that the document will <em>not</em> get to its destination on
+                time? This would be the occurrence of the event "not A and not B," whose probability
+                is 0.05, as shown in the table:</p>
+            <image style="block" src="../webcontent/image037.gif" alt="Cells
+are given in &quot;{Row,Column}&quot; format. The same table as the previous,
+except that the cell {not A, not B: 0.05} has been highlighted."/>
+        </example>
+        <!--<activity idref="_u4_m1_dig12" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m1_rules11_tutor1" purpose="didigetthis"/>
+        <p>We are now done with this section, which introduced various probability rules. Let's
+            summarize what we've learned.</p>
+        <p>1. The Complement Rule states that</p>
+        <p>
+            <em>P(not A) = 1 − P(A)</em>
+        </p>
+        <p> or when rearranged</p>
+        <p>
+            <em>P(A) = 1 − P(not A).</em>
+        </p>
+        <!--   <p> The latter representation of the Complement Rule is especially useful when we need to
+            find probabilities of complicated events of the sort "at least one of<?oxy_insert_start author="mmyers" timestamp="20101109T005725-0500"?>
+            <?oxy_insert_end?>..."</p>-->
+        <p>The Complement Rule is very useful when we need to find probabilities of the sort: P(At
+            least one of several events occur) which is hard to calculate. In this case, we apply the Complement Rule:</p>
+        <p><em>P(At least one of several events occur) = 1 − P(None of the events occur)</em>, since P(None of the events occur) is usually much easier to find.</p>
+        <p>2. The General Addition Rule states that for any two events,</p>
+        <p>
+            <em>P(A or B) = P(A) + P(B) − P(A and B),</em>
+        </p>
+        <p>where, by P(A or B) we mean P(A occurs or B occurs or both).</p>
+        <p>In the special case when A and B are <em style="italic">disjoint</em> events (which means that
+            P(A and B) = 0), the general addition rule becomes P(A or B) = P(A) + P(B), which we call the
+            Addition Rule for Disjoint Events.</p>
+        <p>Beware of wrongly using the Addition Rule for Disjoint events when the events are not
+            disjoint.</p>
+        <p>3. When we want to find P(A and B), we can use the Multiplication Rule, but so far we've
+            only learned the restricted version of this rule&#8212;the Multiplication Rule for
+                Independent Events. Events are independent if the occurrence of one of the
+            events has no effect on the probability of the other occurring, in which case:</p>
+        <p>
+            <em>P(A and B) = P(A) * P(B).</em>
+        </p>
+        <p>4. The Additional Rule for Disjoint Events can be naturally extended to more than two
+            events. In other words, if events A, B, and C are disjoint, then</p>
+        <p>P(A or B or C)=P(A)+P(B)+P(C). </p>
+        <p>Similarly, the Multiplication Rule for Independent Events can be naturally extended to
+            more than two independent events. In other words, if events A, B, and C are independent,
+            then P(A and B and C) = P(A) * P(B) * P(C). The same is true for 4, 5, ...,
+            disjoint/independent events.</p>
+
+        <p>5. When there are two categorical variables in the background, each with two possible
+            values, a <em style="italic">two-way probability table</em> is a quick and easy way to display the
+                probabilities associated with the 4 possible combinations.</p>
+    </body>
+</workbook_page>

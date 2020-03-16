@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_matched_pairs4">
+    <head>
+        <title>Matched Pairs (4 of 8)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Step 2: Checking Conditions and Calculating the Test Statistic</title>
+            <body>
+                <p>The paired t-test, as a special case of a one-sample t-test, can be safely used
+                as long as:</p>
+                <ol style= "lower-roman">
+               <li> <p>The sample of differences is random (or at least can be considered so in
+                    context).</p></li>
+              <li>  <p>We are in one of the three situations marked with a green check mark in the
+                    following table</p></li></ol>
+                <image style="block" src="../webcontent/image074.gif" alt="A table which has two columns
+and two rows. The column headings are: &quot;Small Sample Size&quot; and &quot;Large Sample Size. &quot;
+The row headings are &quot;Variable varies normally&quot; and &quot;Variable doesn't vary normally.&quot;
+Here is the data in the table by cell in &quot;Row, Column: Value&quot; format:
+                    Variable varies normally, Small sample size: OK (in this case, we should check normality
+visually using a histogram of the sample differences);
+                    Variable varies normally, Large sample size: OK;
+                    Variable doesn't vary normally, Small sample size: NOT OK;
+                    Variable doesn't vary normally, Large sample size: OK;"/>
+                <p>In other words, in order to use the paired t-test safely, the differences should
+                    vary normally unless the sample size is large, in which case it is safe to use
+                    the paired t-test regardless of whether the differences vary normally or not. As
+                    we indicated in the figure above (and have seen many times already), in
+                    practice, normality is checked by looking at the histogram of differences and as
+                    long as no clear violation of normality (such as extreme skewness and/or
+                    outliers) is apparent, normality is assumed. Assuming that the we can safely use
+                    the paired t-test, the data are summarized by a test statistic:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>t</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:msub>
+                                            <m:mi>x</m:mi>
+                                            <m:mi>d</m:mi>
+                                        </m:msub>
+                                        <m:mo>¯</m:mo>
+                                    </m:mover>
+                                    <m:mo>−</m:mo>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                                <m:mfrac>
+                                    <m:msub>
+                                        <m:mi>s</m:mi>
+                                        <m:mi>d</m:mi>
+                                    </m:msub>
+                                    <m:msqrt>
+                                        <m:mi>n</m:mi>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> where <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>x</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is the sample mean of the differences, and <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>s</m:mi>
+                                <m:mi>d</m:mi>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is the sample standard deviation of the differences. This is the test
+                    statistic we've developed for the one sample t-test (with <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>0</m:mn>
+                            </m:msub>
+                            <m:mo>=</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math> ), and has the same conceptual interpretation; it measures (in
+                    standard errors) how far our data are (represented by the average of the
+                    differences) from the null hypothesis (represented by the null value, 0). </p>
+                <example>
+                    <p>Let's first check whether we can safely proceed with the paired t-test, by
+                    checking the two conditions.</p>
+                    <ol style= "lower-roman">
+                    <li><p>The sample of drivers was chosen at random.</p></li>
+                    <li><p>The sample size is not large enough (n = 20), so in order to proceed, we
+                        need to look at the histogram of the differences and make sure there is no
+                        evidence that the normality assumption is not met. Here is the
+                        histogram:</p></li></ol>                   
+                    <p>
+                        <image style="block" src="../webcontent/image079.gif" alt="A distribution
+histogram titled &quot;Histogram of Differences.&quot; The vertical axis is labeled
+&quot;Frequency,&quot; and the horizontal axis is labeled &quot;Differences.&quot; The histogram is
+roughly normal shape. The data, given in &quot;Difference: Frequency&quot; format:
+        -2.0: 2
+        -1.5: 2
+        -1.0: 4
+        -0.5: 5
+        0.0: 3
+        0.5: 2
+        1.0: 2"/> There is no evidence
+                        of violation of the normality assumption (on the contrary, the histogram
+                        looks quite normal). </p>
+                    <p>Also note that the vast majority of the differences are negative (i.e., the
+                        total reaction times for most of the drivers are larger after the two
+                        beers), suggesting that the data provide evidence against the null
+                        hypothesis.</p>
+                    <p>The question (which the p-value will answer) is whether these data provide
+                        strong enough evidence or not. We can safely proceed to calculate the test
+                        statistic (which in practice we leave to the software to calculate for
+                        us).</p>
+                    <p>Here is the output of the paired t-test for our example:</p>
+
+
+                    <image style="block" src="../webcontent/image173_excel.gif" alt="n = 20, mean
+difference = -0.501500, stdev difference = 0.868600, t-value = -2.58"/>
+                    <p>According to the output, the test statistic is -2.58, indicating that the
+                        data (represented by the sample mean of the differences) are 2.58 standard
+                        errors below the null hypothesis (represented by the null value, 0). Note in
+                        the output, that beyond the test statistic itself, we also highlighted the
+                        part of the output that provides the ingredients needed in order to
+                        calculate it: <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>n</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mn>20</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mover>
+                                    <m:msub>
+                                        <m:mi>x</m:mi>
+                                        <m:mi>d</m:mi>
+                                    </m:msub>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mo>−</m:mo>
+                                <m:mn>0</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>5015</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:msub>
+                                    <m:mi>s</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:mn>0</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>8686</m:mn>
+                            </m:mrow>
+                        </m:math>. Indeed <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>5015</m:mn>
+                                    </m:mrow>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:mn>0</m:mn>
+                                            <m:mo>.</m:mo>
+                                            <m:mn>8686</m:mn>
+                                        </m:mrow>
+                                        <m:msqrt>
+                                            <m:mn>20</m:mn>
+                                        </m:msqrt>
+                                    </m:mfrac>
+                                </m:mfrac>
+                                <m:mo>=</m:mo>
+                                <m:mo>−</m:mo>
+                                <m:mn>2</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>58</m:mn>
+                            </m:mrow>
+                        </m:math>. </p>
+
+
+
+<!--  RS 07/28/10  Generalized to eliminate alternatives
+    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="excel">
+                            <title>Excel 2007 Instructions</title>
+                            <image style="block" src="../webcontent/image173_excel.gif"/>
+                            <p>According to the output the test statistic is -2.58, indicating that
+                                that the data (represented by the sample mean of the differences)
+                                are 2.58 standard errors below the null hypothesis (represented by
+                                the null value, 0). Note in the output, that beyond the test
+                                statistic itself, we also highlighted the part of the output that
+                                provides the ingredients needed in order to calculate it: <m:math
+                                    overflow="scroll">
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mover>
+                                            <m:msub>
+                                                <m:mi>x</m:mi>
+                                                <m:mi>d</m:mi>
+                                            </m:msub>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>5015</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:msub>
+                                            <m:mi>s</m:mi>
+                                            <m:mi>d</m:mi>
+                                        </m:msub>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>8686</m:mn>
+                                    </m:mrow>
+                                </m:math>. Indeed <m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mo>−</m:mo>
+                                                <m:mn>0</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>5015</m:mn>
+                                            </m:mrow>
+                                            <m:mfrac>
+                                                <m:mrow>
+                                                  <m:mn>0</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>8686</m:mn>
+                                                </m:mrow>
+                                                <m:msqrt>
+                                                  <m:mn>20</m:mn>
+                                                </m:msqrt>
+                                            </m:mfrac>
+                                        </m:mfrac>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>58</m:mn>
+                                    </m:mrow>
+                                </m:math> . </p>
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <image style="block" src="../webcontent/image173.gif"/>
+                            <p>According to the output the test statistic is -2.58, indicating that
+                                that the data (represented by the sample mean of the differences)
+                                are 2.58 standard errors below the null hypothesis (represented by
+                                the null value, 0). Note in the output, that beyond the test
+                                statistic itself, we also see the ingredients needed in order to
+                                calculate it: <m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mover>
+                                            <m:msub>
+                                                <m:mi>x</m:mi>
+                                                <m:mi>d</m:mi>
+                                            </m:msub>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>5015</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:msub>
+                                            <m:mi>s</m:mi>
+                                            <m:mi>d</m:mi>
+                                        </m:msub>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>8686</m:mn>
+                                    </m:mrow>
+                                </m:math>. Indeed <m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mo>−</m:mo>
+                                                <m:mn>0</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>5015</m:mn>
+                                            </m:mrow>
+                                            <m:mfrac>
+                                                <m:mrow>
+                                                  <m:mn>0</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>8686</m:mn>
+                                                </m:mrow>
+                                                <m:msqrt>
+                                                  <m:mn>20</m:mn>
+                                                </m:msqrt>
+                                            </m:mfrac>
+                                        </m:mfrac>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>58</m:mn>
+                                    </m:mrow>
+                                </m:math> . </p>
+                        </alternative>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <image style="block" src="../webcontent/image173_excel.gif"/>
+                            <p>According to the output the test statistic is -2.58, indicating that
+                                that the data (represented by the sample mean of the differences)
+                                are 2.58 standard errors below the null hypothesis (represented by
+                                the null value, 0). Note in the output, that beyond the test
+                                statistic itself, we also highlighted the part of the output that
+                                provides the ingredients needed in order to calculate it: <m:math
+                                    overflow="scroll">
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>20</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:mover>
+                                            <m:msub>
+                                                <m:mi>x</m:mi>
+                                                <m:mi>d</m:mi>
+                                            </m:msub>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>5015</m:mn>
+                                        <m:mo>,</m:mo>
+                                        <m:mtext> </m:mtext>
+                                        <m:msub>
+                                            <m:mi>s</m:mi>
+                                            <m:mi>d</m:mi>
+                                        </m:msub>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>0</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>8686</m:mn>
+                                    </m:mrow>
+                                </m:math>. Indeed <m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mo>−</m:mo>
+                                                <m:mn>0</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>5015</m:mn>
+                                            </m:mrow>
+                                            <m:mfrac>
+                                                <m:mrow>
+                                                  <m:mn>0</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>8686</m:mn>
+                                                </m:mrow>
+                                                <m:msqrt>
+                                                  <m:mn>20</m:mn>
+                                                </m:msqrt>
+                                            </m:mfrac>
+                                        </m:mfrac>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>−</m:mo>
+                                        <m:mn>2</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>58</m:mn>
+                                    </m:mrow>
+                                </m:math> . </p>
+                        </alternative>
+                    <alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+                </example>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

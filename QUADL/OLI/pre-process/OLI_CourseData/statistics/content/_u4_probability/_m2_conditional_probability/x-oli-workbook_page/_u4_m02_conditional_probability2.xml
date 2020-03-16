@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m02_conditional_probability2">
+<head>
+<title>Conditional Probability (2 of 2)</title>
+    <objref idref="explain_conditional_probability"/>
+    <objref idref="find_conditional_probabilities"/>
+</head>
+<body>
+   
+    <p>A good visual
+            <?oxy_insert_start author="mmyers" timestamp="20101109T101308-0500"?>illustration<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T101306-0500" content="grasp"?>
+            of this conditional probability is provided by the two-way table:</p>
+<image style="block" src="../webcontent/image002.gif" alt="The same table of the data for piercings.
+The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The
+Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is
+given in &quot;Row, Column:
+    Value&quot; format:
+    Male, Pierced: 36;
+    Male, Not Pierced: 144;
+    Male, Total: 180;
+    Female, Pierced: 288;
+    Female, Not Pierced: 32;
+    Female, Total: 320;
+    Total, Pierced: 324;
+    Total, Not Pierced: 176;
+    Total, Total: 500;
+    In this table, the first row (Male) has been highlighted. The {Male, Pierced: 36} cell is
+in dark green, and the rest is in light green, showing that we can use this row to calculate
+the conditional probability.
+    "/>
+<p>which shows us that conditional probability is not very different from (and actually quite the
+            same as) the conditional percents we calculated back in
+            <?oxy_comment_start author="mmyers" timestamp="20101109T101820-0500" comment="Please be more specific about location of conditional percents. Use name of module used online."?>section
+            1<?oxy_comment_end?>.</p>
+<!--<activity idref="_u4_m2_dig1" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p> Consider the piercing example, where the following two-way table is given,</p>
+            <image src="../webcontent/dig001.gif" alt="The same table of the data for piercings.
+The column headings are &quot;Pierced,&quot; &quot;Not Pierced,&quot; and &quot;Total.&quot; The
+Rows are &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; The data in the cells is
+given in &quot;Row, Column:
+Value&quot; format:
+        Male, Pierced: 36;
+        Male, Not Pierced: 144;
+        Male, Total: 180;
+        Female, Pierced: 288;
+        Female, Not Pierced: 32;
+        Female, Total: 320;
+        Total, Pierced: 324;
+        Total, Not Pierced: 176;
+        Total, Total: 500;"/>
+            <p>Recall also that M represents the event of being a male
+                    (<?oxy_insert_start author="mmyers" timestamp="20101109T101841-0500"?>"<?oxy_insert_end?>not
+                    M<?oxy_insert_start author="mmyers" timestamp="20101109T101844-0500"?>"<?oxy_insert_end?>
+                    represents being a female), and E represents the event of having one or both
+                    ears pierced.</p>
+    <wb:inline idref="u3_m2_condprob2_tutor1" purpose="didigetthis"/>
+        </body>
+    </section>
+    
+<p>Another way to visualize conditional probability is
+            <?oxy_insert_start author="mmyers" timestamp="20101109T103225-0500"?>using<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103223-0500" content="by"?>
+            a Venn diagram:</p>
+<image style="block" src="../webcontent/image003.gif" alt="A Venn Diagram, in which a large rectangle
+represents all of the sample space. There are two circles in the rectangle, labeled M (for Male) and E
+(for Ear Pierced). Circle M and circle E overlap (but not totally). P(M) = 180/500 = .36, so this is
+somewhat like the area of circle M. The overlap is the event M and E. P(M and E) = 36/500 = .072, which
+is also like the area of the overlap area."/>
+<p>In both the two-way table and the Venn diagram, the reduced sample space (comprised of only males) is shaded light green, and within this sample space, the event of interest (having ears pierced) is shaded darker green. The two-way table illustrates the idea via counts, while the Venn diagram converts the counts to probabilities, which are presented as regions rather than cells.</p>
+<p>We may work with counts, as presented in the two-way table, to write</p>
+<p>P(E | M) = 36/180. </p>
+<p>Or we can work with probabilities, as presented in the Venn diagram, by writing</p>
+<p>P(E | M) = (36/500) / (180/500). </p>
+<p>We will want, however, to write our formal expression for conditional probabilities in terms of other, ordinary, probabilities and therefore the definition of conditional probability will grow out of the Venn diagram.</p>
+<p>Notice that</p>
+<p>P(E | M) = (36/500) / (180/500) = P(M and E) / P(M). Generalized, we have a formal definition of conditional probability:</p>
+<!--:WARNING: The syntax of the definition element has changed.-->
+<!--Please verify that the translated output below is correct.-->
+<definition>
+<term>conditional probability</term>
+<meaning>
+<material><p>The <em>conditional probability of event B, given event A,</em> is <em>P(B | A) = P(A and B) / P(A)</em>
+</p></material>
+</meaning>
+</definition>
+<section>
+<title>Comments</title>
+<body>
+<p>1. Note that when we evaluate the conditional probability, we always divide by the probability of the given event. The probability of both goes in the numerator. </p>
+<p>2. The above formula holds as long as P(A) &gt;
+                    0<?oxy_insert_start author="mmyers" timestamp="20101109T103526-0500"?>,<?oxy_insert_end?>
+                    since we cannot divide by 0. In other words, we should not seek the probability
+                    of an event given that an impossible event has occurred.</p>
+<p>Let's see how we can use this formula in practice:</p>
+</body>
+</section>
+<example>
+
+<p>On the "Information for the Patient" label of a certain
+                anti<?oxy_delete author="mmyers" timestamp="20101109T103607-0500" content="-"?>depressant<?oxy_insert_start author="mmyers" timestamp="20101109T103605-0500"?>,<?oxy_insert_end?>
+                it is claimed that based on some clinical trials, there is a 14% chance of
+                experiencing sleeping problems known as insomnia (denote this event by I), there is
+                a 26% chance of experiencing headache (denote this event by<?oxy_comment_start author="mmyers" timestamp="20101109T103707-0500" comment="remove bold -- no emphasis needed"?>
+                <em>H</em>), and there is a 5% chance of experiencing both side effects (<em>I and
+                    H</em>)<?oxy_comment_end?>.</p>
+<p>(a) Suppose that the patient experiences insomnia; what is the probability that the patient will also experience headache?</p>
+<p> Since we know (or it is given) that the patient experienced insomnia, we are looking for P(H<?oxy_insert_start author="mmyers" timestamp="20101109T103723-0500"?>
+                <?oxy_insert_end?>|<?oxy_insert_start author="mmyers" timestamp="20101109T103723-0500"?>
+                <?oxy_insert_end?>I). According to the definition of conditional probability:</p>
+<p> P(H | I) = P(H and I) / P(I) = .05/.14 = .357.</p>
+<p>(b) Suppose the drug induces headache in a patient; what is the probability that it also induces insomnia? </p>
+<p> Here, we are given that the patient experienced headache, so we are looking for P(I | H). </p>
+<p> Using the definition P(I | H) = P(I and H) / P(H) = .05/.26 = .1923.</p>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>Note that the answers to (a) and (b) above are
+                    different<?oxy_insert_start author="mmyers" timestamp="20101109T103833-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103832-0500" content="!"?>
+                    In general, P(A | B) does not equal P(B | A). We'll come back and illustrate
+                    this point later in this module.</p>
+</body>
+</section>
+<!--<activity idref="_u4_m2_lbd1" purpose="learnbydoing"/>-->
+    <p>The purpose of th<?oxy_insert_start author="mmyers" timestamp="20101109T103857-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103856-0500" content="is"?>
+            <?oxy_delete author="mmyers" timestamp="20101109T103859-0500" content="next"?><?oxy_insert_start author="mmyers" timestamp="20101109T103902-0500"?>following<?oxy_insert_end?>
+            activity is to give you guided practice in using the definition of conditional
+            probability, and teach you how the
+            <?oxy_insert_start author="mmyers" timestamp="20101109T103917-0500"?>C<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103916-0500" content="c"?>omplement
+            <?oxy_insert_start author="mmyers" timestamp="20101109T103919-0500"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101109T103918-0500" content="r"?>ule
+            works with conditional probability.</p>
+<section purpose="learnbydoing">
+    <title>Learn By Doing</title>
+    <body>
+        <p>Recall the delivery services example:</p>
+        <p>It is vital that a certain document
+                    reach<?oxy_delete author="mmyers" timestamp="20101109T103933-0500" content="es"?>
+                    its destination within one day. To maximize the chances of on-time delivery, two
+                    copies of the document are sent using two services, service A and service B, and
+                    the following probability table summarizes the chances of on-time delivery:</p>
+        <image src="../webcontent/lbd001.gif" alt="A table. The column headings are &quot;B,&quot;
+&quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;A,&quot; &quot;not A,&quot; and
+&quot;Total.&quot; Here is the cell data in &quot;Row, Column: Value&quot; format:
+        A,B : .75;
+        A, not B: .15;
+        A, Total: .90;
+        not A, B: .05;
+        not A, not B: .05;
+        not A, Total: .10;
+        Total, B: .80;
+        Total, not B: .20;
+        Total, Total: 1.00;"/>
+    <wb:inline idref="u3_m2_condprob2_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u3_m2_condprob2_tutor3" purpose="learnbydoing"/>
+        <wb:inline idref="u3_m2_condprob2_tutor4" purpose="learnbydoing"/>
+    </body>
+</section>
+    <!--<activity idref="_u4_m2_dig2" purpose="didigetthis"/>-->
+    <section purpose="didigetthis">
+        <title>Did I Get This?</title>
+        <body>
+            <p>Recall the smoke alarms example from the previous module. A homeowner has smoke alarms installed in the dining room (adjacent to the kitchen) and an upstairs bedroom (above the kitchen). The two-way table below shows probabilities of smoke in the kitchen triggering the alarm in the dining room (D) or not, and in the bedroom (B) or not. Use this two-way table to answer the following:</p>
+            <image src="../webcontent/dig002.gif" alt="A table, in which the column headings are
+&quot;B,&quot; &quot;not B,&quot; and &quot;Total.&quot; The rows are &quot;D,&quot; &quot;not D,&quot;
+and &quot;Total.&quot; Here is the data in &quot;Row,Column: Value&quot; format:
+        D, B: .38;
+        D, not B: .57;
+        D, Total: .95;
+        not D, B: .02;
+        not D, not B: .03;
+        not D, Total: .05;
+        Total, B: .40;
+        Total, not B: .60;
+        Total, Total: 1.00;"/>
+    <wb:inline idref="u3_m2_condprob2_tutor5" purpose="didigetthis"/>
+            </body>
+    </section>
+</body>
+</workbook_page>

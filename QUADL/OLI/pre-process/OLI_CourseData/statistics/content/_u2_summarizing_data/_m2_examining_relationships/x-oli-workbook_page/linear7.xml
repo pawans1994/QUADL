@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="linear7">
+<head>
+<title>Linear Relationships (7 of 8)</title>
+
+
+ <objref idref="use_least_squares_regression"/>
+
+
+
+
+
+
+</head>
+<body>
+
+<p>Like any other line, the equation of the least-squares regression line for summarizing the linear
+   relationship between the
+   response<?oxy_insert_start author="mmyers" timestamp="20101101T140428-0400"?> variable<?oxy_insert_end?>
+   <?oxy_insert_start author="mmyers" timestamp="20101101T140431-0400"?>(<?oxy_insert_end?>Y<?oxy_insert_start author="mmyers" timestamp="20101101T140432-0400"?>)<?oxy_insert_end?>
+   and the explanatory <?oxy_insert_start author="mmyers" timestamp="20101101T140435-0400"?>variable
+   (<?oxy_insert_end?>X<?oxy_insert_start author="mmyers" timestamp="20101101T140441-0400"?>)<?oxy_insert_end?>
+   has the form: <m:math overflow="scroll">
+    <m:mrow>
+     <m:mi>Y</m:mi>
+     <m:mtext> </m:mtext>
+     <m:mo>=</m:mo>
+     <m:mtext> </m:mtext>
+     <m:mi>a</m:mi>
+     <m:mtext> </m:mtext>
+     <m:mo>+</m:mo>
+     <m:mtext> </m:mtext>
+     <m:mi>b</m:mi>
+     <m:mi>X</m:mi>
+    </m:mrow>
+   </m:math>
+  </p>
+<p>All we need to do is calculate the intercept <em>a</em>, and the slope <em>b</em>, which is easily done if we know:
+		</p>
+<ul>
+<li>
+    <m:math overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+     </m:mrow>
+    </m:math><?oxy_insert_start author="mmyers" timestamp="20101101T140521-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140518-0400" content=" - "?>the
+    mean of the explanatory variable's values</li>
+<li>
+    S<sub>X</sub><?oxy_insert_start author="mmyers" timestamp="20101101T140537-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140534-0400" content=" - "?>the
+    standard deviation of the explanatory variable's values</li>
+<li>
+    <m:math overflow="scroll">
+     <m:mrow>
+      <m:mover>
+       <m:mi>Y</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+     </m:mrow>
+    </m:math><?oxy_insert_start author="mmyers" timestamp="20101101T140544-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140541-0400" content=" - "?>the
+    mean of the response variable's values</li>
+<li>
+    S<sub>Y</sub><?oxy_insert_start author="mmyers" timestamp="20101101T140555-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140551-0400" content=" - "?>the
+    standard deviation of the response variable's values</li>
+<li>
+    r<?oxy_insert_start author="mmyers" timestamp="20101101T140604-0400"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140602-0400" content=" - "?>the
+    correlation coefficient</li>
+</ul>
+
+<p><?oxy_delete author="mmyers" timestamp="20101101T140620-0400" content="It turns out that g"?><?oxy_insert_start author="mmyers" timestamp="20101101T140627-0400"?>G<?oxy_insert_end?>iven
+   the five quantities above, the slope and intercept of the least squares regression line are found
+   using the following formulas: </p>
+<ul>
+<li>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>b</m:mi>
+<m:mtext> </m:mtext>
+<m:mo>=</m:mo>
+<m:mtext> </m:mtext>
+<m:mi>r</m:mi>
+<m:mtext> </m:mtext>
+<m:mfenced open="(" close=")">
+<m:mfrac>
+<m:msub>
+<m:mi>S</m:mi>
+<m:mi>Y</m:mi>
+</m:msub>
+<m:msub>
+<m:mi>S</m:mi>
+<m:mi>X</m:mi>
+</m:msub>
+</m:mfrac>
+</m:mfenced>
+</m:mrow>
+</m:math>
+</li>
+<li>
+<m:math overflow="scroll">
+<m:mrow>
+<m:mi>a</m:mi>
+<m:mtext> </m:mtext>
+<m:mo>=</m:mo>
+<m:mtext> </m:mtext>
+<m:mover>
+<m:mi>Y</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mtext> </m:mtext>
+<m:mo>−</m:mo>
+<m:mi>b</m:mi>
+<m:mover>
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:math>
+</li>
+</ul>
+
+<section>
+<title>Comments</title>
+<body>
+<ol>
+<li>Note that since the formula for the intercept <em>a</em> depends on the value of the slope, <em>b</em>, you need to find <em>b</em> first.</li>
+<li>The slope of the least squares regression line can be interpreted as the average change in the response variable when the explanatory variable increases by 1 unit.</li>
+</ol>
+</body>
+</section>
+<example>
+<title>Age-Distance</title>
+ <p>Let's revisit our age-distance example, and find the <em>least-squares regression
+     line<?oxy_delete author="mmyers" timestamp="20101101T140743-0400" content=" "?></em>. The
+    following output will be helpful in getting the 5
+    <?oxy_insert_start author="mmyers" timestamp="20101101T140830-0400"?>values<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T140827-0400" content="quantities"?>
+    we need:</p>
+  <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+ <alternative value="r">                 <title>R</title>
+   <image style="block" src="../webcontent/linear13r.gif" alt="Example output from R about
+the data. The mean of the Age is 51, and the mean of the Distance is 423. Standard deviation
+for Age is 21.78, and for Distance it is 82.8 . The correlation (r) is -0.793."/>
+  <ul>
+   <li>The <em>slope </em>of the line is: <m:math overflow="scroll">
+        <m:mrow>
+         <m:mi>b</m:mi>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mrow>
+           <m:mo lspace="3px" rspace="3px">−</m:mo>
+           <m:mn>0</m:mn>
+           <m:mo>.</m:mo>
+           <m:mn>793</m:mn>
+          </m:mrow>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="2px" rspace="2px">∗</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mfrac>
+           <m:mrow>
+            <m:mn>82</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>8</m:mn>
+           </m:mrow>
+           <m:mrow>
+            <m:mn>21</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>78</m:mn>
+           </m:mrow>
+          </m:mfrac>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="3px" rspace="3px">−</m:mo>
+         <m:mn>3</m:mn>
+        </m:mrow>
+       </m:math>. This means that for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T143337-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143338-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T141144-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T143340-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143340-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T141148-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T144617-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <em><?oxy_comment_start author="mmyers" timestamp="20101101T143417-0400" comment="use italics rather than bold for emphasis"?>in
+        context</em><?oxy_comment_end?> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T141204-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T141203-0400" content="in"?>
+       which he/she can read a sign decreases,
+        <?oxy_comment_start author="mmyers" timestamp="20101101T141312-0400" comment="use italics instead of bold for emphasis"?><em>on
+        average</em><?oxy_comment_end?>, by 3 feet. </li>
+   <li>The <em>intercept</em> of the line is: <formula style="block"
+        ><?oxy_comment_start author="mmyers" timestamp="20101101T142801-0400" comment="Reason for change in formula style -- I think moving the end parenthesis makes this easier to understand -- it makes it more clear that the -3 * 51 calculation needs to be done before subtracting that value from 423."?>a
+        = 423 - (-3<?oxy_delete author="mmyers" timestamp="20101101T142208-0400" content=")"?> *
+        51<?oxy_insert_start author="mmyers" timestamp="20101101T142211-0400"?>)<?oxy_insert_end?> =
+        576<?oxy_comment_end?></formula> and therefore the <em>least squares regression line
+       </em>for this example is: <formula style="block"
+        ><?oxy_comment_start author="mmyers" timestamp="20101101T143105-0400" comment="reason for change -- I think adding the parnetheses makes the order of the operation clear, and I think saying 576 + (-3 * Age) rather than just 576 - 3 * Age is more clear (even though it gives you the same result) because it corresponds exactly with the least squares regression equation mentioned above."?>Distance
+        = 576 <?oxy_insert_start author="mmyers" timestamp="20101101T142436-0400"?>+
+        (<?oxy_insert_end?>- 3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T142444-0400"?>)<?oxy_comment_end?><?oxy_insert_end?></formula>
+      </li>
+  </ul>
+ </alternative>
+ <alternative value="StatCrunch">                 <title>StatCrunch</title>
+  <image style="block" src="../webcontent/linear13stat.gif" alt="Example output from StatCrunch
+about the data. The mean of the Age is 51, and the mean of the Distance is 423. Standard deviation
+for Age is 21.78, and for Distance it is 82.8 ."/>
+  <ul>
+    <li>Dependent Varialbe: Distance </li>
+    <li>Independent Variable: Age</li>
+    <li>R (correlation coefficient)= -0.7929</li>
+   <li>The <em>slope </em>of the line is: <m:math overflow="scroll">
+        <m:mrow>
+         <m:mi>b</m:mi>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mrow>
+           <m:mo lspace="3px" rspace="3px">−</m:mo>
+           <m:mn>0</m:mn>
+           <m:mo>.</m:mo>
+           <m:mn>793</m:mn>
+          </m:mrow>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="2px" rspace="2px">∗</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mfrac>
+           <m:mrow>
+            <m:mn>82</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>8</m:mn>
+           </m:mrow>
+           <m:mrow>
+            <m:mn>21</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>78</m:mn>
+           </m:mrow>
+          </m:mfrac>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="3px" rspace="3px">−</m:mo>
+         <m:mn>3</m:mn>
+        </m:mrow>
+       </m:math>. This means that for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T143337-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143338-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T141144-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T143340-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143340-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T141148-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T144617-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <em><?oxy_comment_start author="mmyers" timestamp="20101101T143417-0400" comment="use italics rather than bold for emphasis"?>in
+        context</em><?oxy_comment_end?> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T141204-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T141203-0400" content="in"?>
+       which he/she can read a sign decreases,
+        <?oxy_comment_start author="mmyers" timestamp="20101101T141312-0400" comment="use italics instead of bold for emphasis"?><em>on
+        average</em><?oxy_comment_end?>, by 3 feet. </li>
+   <li>The <em>intercept</em> of the line is: <formula style="block"
+        ><?oxy_comment_start author="mmyers" timestamp="20101101T142801-0400" comment="Reason for change in formula style -- I think moving the end parenthesis makes this easier to understand -- it makes it more clear that the -3 * 51 calculation needs to be done before subtracting that value from 423."?>a
+        = 423 - (-3<?oxy_delete author="mmyers" timestamp="20101101T142208-0400" content=")"?> *
+        51<?oxy_insert_start author="mmyers" timestamp="20101101T142211-0400"?>)<?oxy_insert_end?> =
+        576<?oxy_comment_end?></formula> and therefore the <em>least squares regression line
+       </em>for this example is: <formula style="block"
+        ><?oxy_comment_start author="mmyers" timestamp="20101101T143105-0400" comment="reason for change -- I think adding the parnetheses makes the order of the operation clear, and I think saying 576 + (-3 * Age) rather than just 576 - 3 * Age is more clear (even though it gives you the same result) because it corresponds exactly with the least squares regression equation mentioned above."?>Distance
+        = 576 <?oxy_insert_start author="mmyers" timestamp="20101101T142436-0400"?>+
+        (<?oxy_insert_end?>- 3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T142444-0400"?>)<?oxy_comment_end?><?oxy_insert_end?></formula>
+      </li>
+  </ul>
+ </alternative>
+<alternative value="minitab">                 <title>Minitab</title>
+ <image style="block" src="../webcontent/linear13.gif" alt="Example output from Minitab
+about the data. The mean of the Age is 51, and the mean of the Distance is 423. Standard deviation
+for Age is 21.78, and for Distance it is 82.8 . The Pearson correlation for Age and Distance
+is -0.793."/>
+ <ul>
+  <li>The <em>slope </em>of the line is: <m:math overflow="scroll">
+        <m:mrow>
+         <m:mi>b</m:mi>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mrow>
+           <m:mo lspace="3px" rspace="3px">−</m:mo>
+           <m:mn>0</m:mn>
+           <m:mo>.</m:mo>
+           <m:mn>793</m:mn>
+          </m:mrow>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="2px" rspace="2px">∗</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mfrac>
+           <m:mrow>
+            <m:mn>82</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>8</m:mn>
+           </m:mrow>
+           <m:mrow>
+            <m:mn>21</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>78</m:mn>
+           </m:mrow>
+          </m:mfrac>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="3px" rspace="3px">−</m:mo>
+         <m:mn>3</m:mn>
+        </m:mrow>
+       </m:math>. This means that for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T143328-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143328-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T143314-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T143331-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T143331-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T143318-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T144605-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <em><?oxy_comment_start author="mmyers" timestamp="20101101T143819-0400" comment="use italics instead of bold for emphasis"?>in
+        context<?oxy_comment_end?></em> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T144129-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144129-0400" content="in"?>
+       which he/she can read a sign decreases,
+        <?oxy_comment_start author="mmyers" timestamp="20101101T143834-0400" comment="use italics instead of bold for emphasis"?><em>on
+        average</em><?oxy_comment_end?>, by 3 feet. </li>
+  <li>The <em>intercept</em> of the line is: <formula style="block">a = 423 -
+        (-3<?oxy_delete author="mmyers" timestamp="20101101T143909-0400" content=")"?> *
+        51<?oxy_insert_start author="mmyers" timestamp="20101101T143912-0400"?>)<?oxy_insert_end?> =
+        576</formula> and therefore the <em>least squares regression line </em>for this example is:
+        <formula style="block"
+        ><?oxy_comment_start author="mmyers" timestamp="20101101T144216-0400" comment="use italics instead of bold for emphasis"?>Distance<?oxy_comment_end?>
+        = 576 <?oxy_insert_start author="mmyers" timestamp="20101101T143954-0400"?>+
+        (<?oxy_insert_end?>- 3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T143958-0400"?>)<?oxy_insert_end?></formula>
+      </li>
+ </ul>
+</alternative>
+   <alternative value="excel">                 <title>Excel 2007</title>
+    <image style="block" src="../webcontent/linear13excel.gif" alt="Example output from Excel
+about the data. The mean of the Age is 51, and the mean of the Distance is 423. Standard deviation
+for Age is 21.78, and for Distance it is 82.8 . The correlation is -0.793"/>
+    <ul>
+     <li>The <em>slope </em>of the line is: <m:math overflow="scroll">
+        <m:mrow>
+         <m:mi>b</m:mi>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mrow>
+           <m:mo lspace="3px" rspace="3px">−</m:mo>
+           <m:mn>0</m:mn>
+           <m:mo>.</m:mo>
+           <m:mn>793</m:mn>
+          </m:mrow>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="2px" rspace="2px">∗</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mfrac>
+           <m:mrow>
+            <m:mn>82</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>8</m:mn>
+           </m:mrow>
+           <m:mrow>
+            <m:mn>21</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>78</m:mn>
+           </m:mrow>
+          </m:mfrac>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="3px" rspace="3px">−</m:mo>
+         <m:mn>3</m:mn>
+        </m:mrow>
+       </m:math>. This means that for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T144038-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144039-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T144043-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T144046-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144046-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T144048-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T144600-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <?oxy_comment_start author="mmyers" timestamp="20101101T144107-0400" comment="use italics for emphasis instead of bold"?><em>in
+        context</em><?oxy_comment_end?> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T144120-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144119-0400" content="in"?>
+       which he/she can read a sign decreases, <em>on average</em>, by 3 feet. </li>
+     <li>The <em>intercept</em> of the line is: <formula style="block">a = 423 -
+        (-3<?oxy_delete author="mmyers" timestamp="20101101T144240-0400" content=")"?> *
+        51<?oxy_insert_start author="mmyers" timestamp="20101101T144243-0400"?>)<?oxy_insert_end?> =
+        576</formula> and therefore the <em>least squares regression line </em>for this example is:
+        <formula style="block">Distance = 576
+        <?oxy_insert_start author="mmyers" timestamp="20101101T144259-0400"?>+ (<?oxy_insert_end?>-
+        3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T144304-0400"?>)<?oxy_insert_end?></formula>
+      </li>
+    </ul>
+   </alternative>
+   <alternative value="excel2003">                 <title>Excel 2003</title>
+    <image style="block" src="../webcontent/linear13excel.gif" alt="Example output from Excel
+about the data. The mean of the Age is 51, and the mean of the Distance is 423. Standard deviation
+for Age is 21.78, and for Distance it is 82.8 . The correlation is -0.793"/>
+    <ul>
+     <li>The <em>slope </em>of the line is: <m:math overflow="scroll">
+        <m:mrow>
+         <m:mi>b</m:mi>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mrow>
+           <m:mo lspace="3px" rspace="3px">−</m:mo>
+           <m:mn>0</m:mn>
+           <m:mo>.</m:mo>
+           <m:mn>793</m:mn>
+          </m:mrow>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="2px" rspace="2px">∗</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mfenced open="(" close=")">
+          <m:mfrac>
+           <m:mrow>
+            <m:mn>82</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>8</m:mn>
+           </m:mrow>
+           <m:mrow>
+            <m:mn>21</m:mn>
+            <m:mo>.</m:mo>
+            <m:mn>78</m:mn>
+           </m:mrow>
+          </m:mfrac>
+         </m:mfenced>
+         <m:mtext> </m:mtext>
+         <m:mo>=</m:mo>
+         <m:mtext> </m:mtext>
+         <m:mo lspace="3px" rspace="3px">−</m:mo>
+         <m:mn>3</m:mn>
+        </m:mrow>
+       </m:math>. This means that for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T144538-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144539-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T144543-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T144545-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144546-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T144547-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T144553-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <?oxy_comment_start author="mmyers" timestamp="20101101T144705-0400" comment="use italics for emphasis instead of bold"?><em>in
+        context</em><?oxy_comment_end?> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T144735-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T144734-0400" content="in"?>
+       which he/she can read a sign decreases,
+        <?oxy_comment_start author="mmyers" timestamp="20101101T144722-0400" comment="use italics for emphasis instead of bold"?><em>on
+        average</em><?oxy_comment_end?>, by 3 feet. </li>
+     <li>The <em>intercept</em> of the line is: <formula style="block">a = 423 -
+        (-3<?oxy_delete author="mmyers" timestamp="20101101T144748-0400" content=")"?> *
+        51<?oxy_insert_start author="mmyers" timestamp="20101101T144750-0400"?>)<?oxy_insert_end?> =
+        576</formula> and therefore the <em>least squares regression line </em>for this example is:
+        <formula style="block">Distance = 576
+        <?oxy_insert_start author="mmyers" timestamp="20101101T144952-0400"?>+ (<?oxy_insert_end?>-
+        3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T144956-0400"?>)<?oxy_insert_end?></formula>
+      </li>
+    </ul>
+   </alternative>
+   <alternative value="ti">                 <title>TI Calculator</title>
+    <image style="block" src="../webcontent/linear13ti.gif" alt="Sample output from a TI
+Calculator showing the results of using LinReg. The line will be in y=a+bx format.
+a = 576.75
+b = -3.02
+r^2 = .63
+r = -.79"/>
+    <ul>
+     <li>The <em>slope </em>of the line is: <formula style="block">b = -3</formula> This means that
+       for every
+       1<?oxy_insert_start author="mmyers" timestamp="20101101T145206-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T145206-0400" content=" "?>unit
+       increase of the explanatory variable, there is, on
+       average<?oxy_insert_start author="mmyers" timestamp="20101101T145210-0400"?>,<?oxy_insert_end?>
+       a
+       3<?oxy_insert_start author="mmyers" timestamp="20101101T145213-0400"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T145213-0400" content=" "?>unit<?oxy_delete author="mmyers" timestamp="20101101T145215-0400" content="s"?>
+       decrease in the response<?oxy_insert_start author="mmyers" timestamp="20101101T145221-0400"?>
+       variable<?oxy_insert_end?>. The interpretation
+        <?oxy_comment_start author="mmyers" timestamp="20101101T145249-0400" comment="use italics for emphasis rather than bold"?><em>in
+        context</em><?oxy_comment_end?> of the slope being -3 is, therefore: For every year a driver
+       gets older, the maximum distance
+       <?oxy_insert_start author="mmyers" timestamp="20101101T145313-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T145313-0400" content="in"?>
+       which he/she can read a sign decreases,
+        <?oxy_comment_start author="mmyers" timestamp="20101101T145305-0400" comment="use italics for emphasis instead of bold"?><em>on
+        average</em><?oxy_comment_end?>, by 3 feet. </li>
+     <li>The <em>intercept</em> of the line is: <formula style="block">a = 576</formula> and
+       therefore the <em>least squares regression line </em>for this example is: <formula
+        style="block">Distance = 576
+        <?oxy_insert_start author="mmyers" timestamp="20101101T145333-0400"?>+ (<?oxy_insert_end?>-
+        3 *
+        Age<?oxy_insert_start author="mmyers" timestamp="20101101T145337-0400"?>)<?oxy_insert_end?></formula>
+      </li>
+    </ul>
+   </alternative>
+  </alternatives>
+<p>Here is the regression line plotted on the scatterplot:
+			<image style="block" src="../webcontent/linear14.gif" alt="The scatterplot for Driver Age
+and Sign Legibility Distance. The least squares regression line has been drawn. It is a
+negative relationship line."/>
+			As we can see, the regression line fits the  linear pattern of the data quite well.
+		</p>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>As we mentioned before, hand-calculation is not the focus of this course. We wanted you to see
+     one example in which the least squares regression line is
+     <?oxy_insert_start author="mmyers" timestamp="20101101T145529-0400"?>calculated by
+     hand<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T145528-0400" content="found"?>,
+     but in general<?oxy_delete author="mmyers" timestamp="20101101T145516-0400" content=","?> we'll
+     let a statistics package do
+     th<?oxy_insert_start author="mmyers" timestamp="20101101T145541-0400"?>at<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T145541-0400" content="is"?>
+     for us.</p>
+</body>
+</section>
+</body>
+</workbook_page>

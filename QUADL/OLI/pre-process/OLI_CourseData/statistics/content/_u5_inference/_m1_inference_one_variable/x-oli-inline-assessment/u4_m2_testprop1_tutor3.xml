@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop1_tutor3">
+  <title>Tutor</title>
+  <page>
+  <question id="q1">
+    <body><p>Fill in the blanks to formulate a question that fits the scenario: </p>
+      <p>Is p for California <input_ref input="A"/> or is it <input_ref input="B"
+          /><?oxy_insert_start author="mmyers" timestamp="20101126T201417-0500"?> the national
+          number<?oxy_insert_end?>?</p>
+    </body>
+    <fill_in_the_blank id="A" shuffle="false">
+      <choice value="A">23</choice>
+      <choice value="B">0.23</choice>
+      <choice value="C">210</choice>
+      <choice value="D">0.210</choice>
+    </fill_in_the_blank>
+    <fill_in_the_blank id="B" shuffle="false">
+      <choice value="A">larger<?oxy_insert_start author="mmyers" timestamp="20101126T201344-0500"?>
+          than<?oxy_insert_end?></choice>
+      <choice value="B">not equal to</choice>
+      <choice value="C">smaller<?oxy_insert_start author="mmyers" timestamp="20101126T201348-0500"?>
+          than<?oxy_insert_end?></choice>
+    </fill_in_the_blank>
+    <part>
+      <response input="A" match="A">
+        <feedback>Incorrect.  p represents a proportion, not a percentage. </feedback>
+      </response>
+      <response input="A" match="B" score="10">
+        <feedback>Correct. We want to know if the proportion for
+            C<?oxy_insert_start author="mmyers" timestamp="20101126T201432-0500"?>alifornia<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T201431-0500" content="A"?>
+            is the same as the national proportion.</feedback>
+      </response>
+      <response input="A" match="C">
+        <feedback>Incorrect.  p represents the population proportion for California. 210 is the number of students in the sample who received financial aid. 
+        </feedback>
+      </response>
+      <response input="A" match="D">
+        <feedback>Incorrect.  p represents the population proportion for California. 0.210 is the sample proportion. 
+        </feedback>
+      </response>
+    </part>
+    <part>
+      <response input="B" match="A">
+        <feedback>Incorrect. Reread the scenario. How does the
+            C<?oxy_insert_start author="mmyers" timestamp="20101126T201540-0500"?>alifornia<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T201542-0500" content="A"?>
+            Chancellor’s Office think C<?oxy_insert_start author="mmyers" timestamp="20101126T201547-0500"?>alifornia<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T201551-0500" content="A"?>
+            <?oxy_insert_start author="mmyers" timestamp="20101126T201707-0500"?>students
+            <?oxy_insert_end?>will compare to the 23% receiving federal grants
+            nationwide?</feedback>
+      </response>
+      <response input="B" match="B">
+        <feedback>Incorrect. Reread the scenario. How does the
+            C<?oxy_insert_start author="mmyers" timestamp="20101126T201720-0500"?>alifornia<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T201722-0500" content="A"?>
+            Chancellor’s Office think
+            C<?oxy_insert_start author="mmyers" timestamp="20101126T201735-0500"?>alifornia<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T201738-0500" content="A"?><?oxy_insert_start author="mmyers" timestamp="20101126T201738-0500"?>
+            students<?oxy_insert_end?> will compare to the 23% receiving federal grants
+            nationwide?</feedback>
+      </response>
+      <response input="B" match="C" score="10">
+        <feedback>Correct.
+        </feedback>
+      </response>
+    </part>
+  </question></page>
+
+</assessment>

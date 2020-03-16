@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_matched_pairs1">
+    <head>
+        <title>Matched Pairs (1 of 8)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Comparing Two Means&#8212;Matched Pairs (Paired t-Test)</title>
+            <body>
+                <section>
+                    <title>Overview</title>
+                    <body><p>We are still in Case C→Q of inference about relationships, where the explanatory
+                    variable is categorical and the response variable is quantitative. As we
+                    mentioned in the introduction, we introduce three inferential
+                    procedures in this case.</p>
+                <p>So far we have introduced the first procedure&#8212;the two-sample t-test that is
+                    used when we are comparing two means and the samples are independent. We now
+                    move on to the second procedure, where we also compare two means, but
+                    the samples are paired or matched. Every observation in one sample is
+                    linked with an observation in the other sample. In this case, the samples are
+                    <em>dependent</em>.</p>
+                <image style="block" src="../webcontent/image051.gif" alt="The X variable is a
+two-valued categorical explanatory variable. Using the categories we split the population into
+Population 1 and population 2. Each has its own Y mean, &mu;_1 and &mu;_2. For each population
+we generate a matched pair SRS of size n."/>
+
+                <p>One of the most common cases where dependent samples occur is when both samples
+                    have the same subjects and they are "<em>paired by subject</em>." In other words, each
+                    subject is measured twice on the response variable, typically before and then
+                    after some kind of treatment/intervention in order to assess its effectiveness.</p></body></section>
+                    
+                    <example><title>SAT Prep Class</title>
+                   <p>Suppose you want to assess the effectiveness of an SAT prep class. It
+                    would make sense to use the matched pairs design and record each sampled
+                    student's SAT score before and after the SAT prep classes are attended:</p>
+                <image style="block" src="../webcontent/image052.gif" alt="The X variable is whether a student
+has gone to prep class (Yes/No). From this we split the population into two populations: Population 1
+which has Students with no SAT prep class, and Population 2, which has students that take the SAT prep
+class. Each population has its own SAT Score (Y) Mean, which is &mu;_1 for population 1 and &mu;_2 for
+population 2. We use the same subjects in both samples, but when we generate the SRS for population 1,
+we do it before the students take the prep class, and after they take the prep class we generate the SRS
+for population 2."/>
+                        <p>Recall that the two populations represent the two values of the explanatory variable.  In this 
+                        situation, those two values come from <em>a single set of subjects</em>.  In other words, both populations 
+                        really have the <em style="italic">same students</em>. However, each population has a different value of the explanatory variable. 
+                       Those values are:  no prep class,  prep class.                         </p>
+                    </example>
+                <p>This, however, is not the only case where the paired design is used. Other cases
+                    are when the pairs are "natural pairs," such as siblings, twins, or couples. We
+                    will present two examples in this part. The first one will be of the type where
+                    each subject is measured twice, and the second one will be a study involving
+                    twins.</p>
+                <p>This section on matched pairs design will be organized very much like the
+                    previous section on two independent samples. We will first introduce our leading
+                    example, and then present the paired t-test illustrating each step using our
+                    example. We will then look at another example, and finally talk about estimation
+                    using a confidence interval. As usual, you'll be able to check your
+                    understanding along the way, and will learn how to use software to carry out
+                    this test.</p>
+                <example><title>Drunk Drivers</title>
+                    <p>Drunk driving is one the main causes of car accidents. Interviews with drunk
+                        drivers who were involved in accidents and survived revealed that one of the
+                        main problems is that drivers do not realize that they are impaired,
+                        thinking "I only had 1-2 drinks ... I am OK to drive." A sample of 20
+                        drivers was chosen, and their reaction times in an obstacle course were
+                        measured before and after drinking two beers. The purpose of this study was
+                        to check whether drivers are impaired after drinking two beers. Here is a
+                        figure summarizing this study:</p>
+                    <image style="block" src="../webcontent/image053.gif" alt="The X variable is whether
+the driver had 2 beers or no beers. We have two populations, population 1 of sober drivers and population 2
+of drivers who had two beers. For each population we have the Reaction Time (Y) mean, &mu;_1 for population 1
+and &mu;_2 for population 2. We use the same drivers to generate the samples for both populations. The SRS
+of size 20 is created for population 1 before the drivers have had 2 beers, and using the same drivers,
+we generate the SRS of size 20 for population 2 after giving them 2 beers."/>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comments</title>
+            <body>
+                <ol>
+               <li> <p>Note that the categorical explanatory variable here is "drinking 2 beers
+                    (Yes/No)", and the quantitative response variable is the reaction time.</p></li>
+               <li> <p>Note that by using the matched pairs design in this study (i.e., by measuring
+                    each driver twice), the researchers isolated the effect of the two beers on the
+                    drivers and eliminated any other confounding factors that might influence the
+                    reaction times (such as the driver's experience, age, etc.).</p></li>
+               <li><p>For each driver, the two measurements are the total reaction time before
+                    drinking two beers, and after. You can see the data by following these
+                    instructions:</p></li></ol>
+                <alternatives group="statistics.package">
+                    <default><pref:value preference="statistics.package"/></default>
+                    <alternative value="r">
+                        <title>R Instructions</title>
+                        <p>To open R with the dataset preloaded, right-click <link
+                                href="../../webcontent/r/beers.RData" target="self">here</link> and
+                            choose "Save Target As" to download the file to your computer. Then find
+                            the downloaded file and double-click it to open it in R. </p>
+                        <p>The data have been loaded into the variable "beers." Enter the command
+                                <code>beers</code> to see the data.</p>
+                    </alternative>
+                    <alternative value="StatCrunch">
+                        <title>StatCrunch Instructions</title>
+                        <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../webcontent/excel/beers.xls" target="self">here</link> and choose "Save
+                            Target As" to download the file to your computer. Next click <link href="http://www.statcrunch.com/" target="new">here </link>to open StatCrunch in a separate window and login using your username and password.</p>
+                        <ul>
+                            <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page. </li>
+                            <li>To open the data set select the “My computer” link under Load a data set from box on the left side of the page.</li>
+                            <li>Select the "Browse" or “Choose File” (depending on which browser you're using and select the data set you downloaded</li>
+                            <li>Scroll to the bottom of the page and click on “Load File”</li>
+                        </ul>
+                        
+                    </alternative>
+                    <alternative value="minitab">
+                        <title>Minitab Instructions</title>
+                        <p> To open Minitab with the data in the worksheet, right-click <link
+                                href="../../webcontent/minitab/beers.mtw" target="self">here</link>
+                            and choose "Save Target As" to download the file to your computer. Then
+                            find the downloaded file and double-click it to open it in Minitab.
+                            Note: you will likely see a dialog box appear that says "A copy of the
+                            content of this file will be added to the current project"&#8212;just
+                            click "OK." </p>
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2007 Instructions</title>
+                        <p> To open Excel with the data in the worksheet, right-click <link
+                            href="../../webcontent/excel/beers.xls" target="self">here</link>
+                            and choose "Save Target As" to download the file to your computer. Then
+                            find the downloaded file and double-click it to open it in Excel. </p>
+                    </alternative>
+                    <alternative value="excel2003">
+                        <title>Excel 2003 Instructions</title>
+                        <p> To open Excel with the data in the worksheet, right-click <link
+                            href="../../webcontent/excel/beers.xls" target="self">here</link>
+                            and choose "Save Target As" to download the file to your computer. Then
+                            find the downloaded file and double-click it to open it in Excel. </p>
+                    </alternative>
+                    <alternative value="ti">
+                        <title>TI Instructions</title>
+                        <p>To open a group of lists with the beer data loaded, right-click <link href="../../webcontent/ti/beers.8xg"
+                            target="self">here</link> and choose "Save Target As" to download the file to your
+                            computer. Then find the downloaded file and send it to your calculator. For instructions
+                            on how to connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new">here</activity_link>.</p>
+                        <p>L1 contains "Before drinking" data and L2 contains "After drinking" data.
+                            Choose STAT/EDIT/1:Edit to see the data.</p>
+                    </alternative>
+                </alternatives>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

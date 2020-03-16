@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_two_independent_samples1">
+    <head>
+        <title>Two Independent Samples (1 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+  
+        <section>
+            <title>Comparing Two Means&#8212;Two Independent Samples (The Two-Sample t-Test)</title>
+            <body>
+                <section>
+                    <title>Overview</title>
+                    <body>
+                        <p>As we mentioned in the summary of the introduction to Case C→Q, the first case
+                    that we will deal with is comparing two means when the two samples are
+                    independent:</p>
+                <image style="block" src="../webcontent/image014.gif" alt="Sub-Population 1 has a
+Y Mean of &mu;_1, and Sub-Population 2 has a Y Mean of &mu;_2. From Sub-population 1 we take an
+SRS of size n_1, and from Sub-population 2 we take an SRS of size n_2. Both of these samples are
+independent."/>
+                <p>Recall that here we are interested in the effect of a two-valued (k = 2)
+                    categorical variable (X) on a quantitative response (Y). Samples are drawn
+                    independently from the two sub-populations (defined by the two categories of X),
+                    and we need to evaluate whether or not the data provide enough evidence for us
+                    to believe that the two sub-population means are different. </p>
+                <p> In other words, our goal is to test whether the means μ<sub>1</sub> and
+                        μ<sub>2</sub> (which are the means of the variable of interest in the two
+                    sub-populations) are equal or not, and in order to do that we have two samples, one
+                    from each sub-population, which were chosen independently of each other. As the
+                    title of this part suggests, the test that we will learn here is commonly known
+                    as the <em>two-sample t-test</em>. As the name suggests, this is a t-test, which
+                    as we know means that the p-values for this test are calculated under some t
+                    distribution. Here is how this part is organized. </p>
+                <p>We first introduce our leading example, and then go in detail through the four
+                    steps of the two-sample t-test, illustrating each step using our example.</p>
+                    </body>
+                </section>
+                <pullout type="note">
+                    <p>Up until now, we have been dividing our population into <em>sub-populations</em>, then sampling from these sub-populations.</p>
+                <p>From now on, instead of calling them sub-populations, we will usually call the groups we wish to compare <em>population 1, population 2, </em>and so on.  These two 
+                descriptions of the groups we are comparing can be used interchangeably.</p>
+                <!--<p>The number will be determined by the number of values the explanatory categorical variable (X) has.</p>-->
+                </pullout>
+                <example>
+                    <p>What is more important to you &#8212; personality or looks?</p>
+                    <p>This question was asked of a random sample of 239 college students, who were
+                        to answer on a scale of 1 to 25. An answer of 1 means personality has
+                        maximum importance and looks no importance at all, whereas an answer of 25
+                        means looks have maximum importance and personality no importance at all.
+                        The purpose of this survey was to examine whether males and females differ
+                        with respect to the importance of looks vs. personality.</p>
+                    <alternatives group="statistics.package">
+                        <default><pref:value preference="statistics.package"/></default>
+                        <alternative value="r">
+                            <title>R Instructions</title>
+                            <p>To open R with the dataset preloaded, right-click <link
+                                    href="../../webcontent/r/looks.RData" target="self">here</link>
+                                and choose "Save Target As" to download the file to your computer.
+                                Then find the downloaded file and double-click it to open it in
+                                R.</p>
+                            <p>The data have been loaded into the variable "looks." Enter the
+                                command <code>looks</code> to see the data.</p>
+                        </alternative>
+                        
+                        <alternative value="StatCrunch">
+                            <title>StatCrunch Instructions</title>
+                            <p>To open this file in StatCrunch you must first right-click <link
+                                href="../../webcontent/excel/looks.xls" target="self">here</link> and choose "Save
+                                Target As" to download the file to your computer. Next click <link href="http://www.statcrunch.com/" target="new">here </link>to open StatCrunch in a separate window and login using your username and password.</p>
+                            <ul>
+                                <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page. </li>
+                                <li>To open the data set select the “My computer” link under Load a data set from box on the left side of the page.</li>
+                                <li>Select the "Browse" or “Choose File” (depending on which browser you're using and select the data set you downloaded</li>
+                                <li>Scroll to the bottom of the page and click on “Load File”</li>
+                            </ul>
+                           
+                        </alternative>
+                        <alternative value="minitab">
+                            <title>Minitab Instructions</title>
+                            <p>To open Minitab with the data in the worksheet, right-click <link
+                                    href="../../webcontent/minitab/looks.mtw" target="self"
+                                    >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Minitab. Note: a dialog box will likely appear that says
+                                "A copy of the content of this file will be added to the current
+                                project"&#8212;just click "OK."</p>
+                        </alternative>
+                        <alternative value="excel">
+                            <title>Excel 2007 Instructions</title>
+                            <p>To open Excel with the data in the worksheet, right-click <link
+                                href="../../webcontent/excel/looks.xls" target="self"
+                                >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Excel.</p>
+                        </alternative>
+                        <alternative value="excel2003">
+                            <title>Excel 2003 Instructions</title>
+                            <p>To open Excel with the data in the worksheet, right-click <link
+                                href="../../webcontent/excel/looks.xls" target="self"
+                                >here</link> and choose "Save Target As" to download the file to
+                                your computer. Then find the downloaded file and double-click it to
+                                open it in Excel.</p>
+                        </alternative>
+                        <alternative value="ti">
+                            <title>TI Instructions</title>
+                            <p>To open a group of lists with the data loaded, right-click <link href="../../webcontent/ti/looks.8xg"
+                                target="self">here</link> and choose "Save Target As" to download the file to your
+                                computer. Then find the downloaded file and send it to your calculator. For instructions
+                                on how to connect your calculator to your computer and transfer a file, click
+                                <activity_link idref="ti_instructions" target="new">here</activity_link>.</p>
+                            <ul>
+                               <li>L1: Score (Y) (-9999 represents missing data) </li><li>L2: Gender (X) (1 = Female, 2 = Male) </li><li>L3: Score (Y) for females (-9999 represents missing data) </li><li>L4: Score (Y) for males (-9999 represents missing data) </li>
+                            </ul>
+                            <p>NOTE: For the TI, categorical data such as gender must be coded with
+                                numbers. </p>
+                            
+                        </alternative>
+                    </alternatives>
+                    <p>Note that the data have the following format:</p>
+                    <table>
+                        <tr>
+                            <th>Score (Y)</th>
+                            <th>Gender (X)</th>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Female</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Female</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Female</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <td>etc.</td>
+                            <td/>
+                        </tr>
+                    </table>
+                    <p>The format of the data reminds us that we are essentially examining the
+                        relationship between the two-valued categorical variable, gender, and the
+                        quantitative response, score. The two values of the categorical explanatory
+                        variable define the two populations that we are comparing &#8212; males and
+                        females. The comparison is with respect to the response variable score. Here
+                        is a figure that summarizes the example:</p>
+                    <image style="block" src="../webcontent/image018.gif" alt="We have two populations,
+Females and Males. This is our Gender (X) Variable. For each of these populations, there is a Score (Y)
+mean, &mu;_1 for Females and &mu;_2 for Males. For the Female population we generate an SRS of size 150.
+For Males, we generate a SRS of size 85."/>
+                    <p>
+                        <em>Comments:</em>
+                    </p>
+                    <ol><li><p>Note that this figure emphasizes how the fact that our explanatory is a
+                        two-valued categorical variable means that in practice we are comparing two
+                        populations (defined by these two values) with respect to our response
+                        Y.</p></li>
+                 <li>   <p>Note that even though the problem description just says that we had 239
+                        students, the figure tells us that there were 85 males in the sample, and
+                        150 females.</p></li>
+                   <li> <p>Following up on comment 2, note that 85 + 150 = 235 and not 239. In these data (which are
+                                real) there are four "missing observations"&#8212;4 students for
+                                which we do not have the value of the response variable,
+                                "importance." This could be due to a number of reasons, such as
+                                recording error or nonresponse. The bottom line is that even though
+                                data were collected from 239 students, effectively we have data from
+                                only 235. (Recommended: Go through the data file and note that there
+                                are 4 cases of missing observations: students 34, 138, 179, and
+                                183).</p></li></ol>
+                </example>
+                <activity idref="_u5_m2_wonder2" purpose="manystudentswonder"/>
+                <p>We will now introduce the two-sample t-test by going through its four steps.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

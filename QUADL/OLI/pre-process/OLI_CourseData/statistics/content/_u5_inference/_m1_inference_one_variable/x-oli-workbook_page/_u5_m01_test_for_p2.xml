@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_test_for_p2">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p (2 of 13)</title>
+        <objref idref="specify_hypotheses"/>
+    </head>
+    <body>
+       
+        <p>Recall that there are basically 4 steps in the process of hypothesis testing:</p>
+        <p>1. State the null and alternative hypotheses.</p>
+        <p>2. Collect relevant data from a random sample and summarize them
+            (<?oxy_insert_start author="mmyers" timestamp="20101126T202838-0500"?>using<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T202837-0500" content="by"?>
+            a test
+            statistic)<?oxy_insert_start author="mmyers" timestamp="20101126T202841-0500"?>.<?oxy_insert_end?></p>
+        <p>3. Find the p-value, the probability of observing data like
+            th<?oxy_insert_start author="mmyers" timestamp="20101126T202848-0500"?>ose<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T202847-0500" content="at"?>
+            observed assuming that H<sub>o</sub> is true.</p>
+        <p>4. Based on the p-value, decide whether we have enough evidence to reject H<sub>o</sub>
+            (and accept H<sub>a</sub>), and draw our conclusions in context.</p>
+        <p>We are now going to go through these steps as they apply to the hypothesis testing for
+            the population proportion p. It should be noted that even though the details will be
+            specific to this particular test, some of the ideas that we will add apply to hypothesis
+            testing in general.</p>
+        <section>
+            <title>1. Stating the Hypotheses</title>
+            <body>
+                <p>Here again are the three set of hypotheses that are being tested in each of our
+                    three examples:</p>
+                <example>
+                    <title>1</title>
+                    <p>Has the proportion of defective products been reduced as a result of the
+                        repair?</p>
+                    <p>
+                        <em>H<sub>o</sub>:</em> p = .20
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T202942-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T202941-0500" content="n"?>o
+                        change<?oxy_insert_start author="mmyers" timestamp="20101126T202944-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T202944-0500" content=","?>
+                        the repair did not
+                        help)<?oxy_insert_start author="mmyers" timestamp="20101126T202948-0500"?>.<?oxy_insert_end?></p>
+                    <p>
+                        <em>H<sub>a</sub>:</em> p &lt; .20
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T202952-0500"?>The
+                        <?oxy_insert_end?>repair was
+                        effective)<?oxy_insert_start author="mmyers" timestamp="20101126T202949-0500"?>.<?oxy_insert_end?></p>
+                </example>
+                <example>
+                    <title>2</title>
+                    <p>Is the proportion of marijuana users in the college higher than the national
+                        figure?</p>
+                    <p>
+                        <em>H<sub>o</sub>:</em> p = .157
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T202959-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T202957-0500" content="s"?>ame
+                        as among all college students in the
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T203003-0500"?>country<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203003-0500" content="US"?>)<?oxy_insert_start author="mmyers" timestamp="20101126T203007-0500"?>.<?oxy_insert_end?></p>
+                    <p>
+                        <em>H<sub>a</sub>:</em> p &gt; .157
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T203012-0500"?>H<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203011-0500" content="h"?>igher
+                        than the national
+                        figure)<?oxy_insert_start author="mmyers" timestamp="20101126T203016-0500"?>.<?oxy_insert_end?></p>
+                </example>
+                <example>
+                    <title>3</title>
+                    <p><?oxy_insert_start author="mmyers" timestamp="20101126T203042-0500"?>Did<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203041-0500" content="Has"?>
+                        the proportion of U.S. adults who support the death penalty change<?oxy_delete author="mmyers" timestamp="20101126T203048-0500" content="d"?>
+                        <?oxy_insert_start author="mmyers" timestamp="20101126T203027-0500"?>between<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203029-0500" content="since"?>
+                        2003<?oxy_insert_start author="mmyers" timestamp="20101126T203033-0500"?>
+                        and a later poll<?oxy_insert_end?>?</p>
+                    <p>
+                        <em>H<sub>o</sub>:</em> p =.64
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T203053-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203052-0500" content="n"?>o
+                        change from
+                        2003)<?oxy_insert_start author="mmyers" timestamp="20101126T203055-0500"?>.<?oxy_insert_end?></p>
+                    <p>
+                        <em>H<sub>a</sub>:</em> p ≠.64
+                        (<?oxy_insert_start author="mmyers" timestamp="20101126T203100-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203059-0500" content="s"?>ome
+                        change since
+                        2003)<?oxy_insert_start author="mmyers" timestamp="20101126T203103-0500"?>.<?oxy_insert_end?></p>
+                </example>
+                <p>Note that the null hypothesis always takes the form:</p>
+                <p>H<sub>o</sub>: p = some value</p>
+                <p>and the alternative hypothesis takes one of the following three forms:</p>
+                <p> H<sub>a</sub>: p &lt; that value (like in example 1) <em>or</em>
+                </p>
+                <p> H<sub>a</sub>: p &gt; that value (like in example 2) <em>or</em>
+                </p>
+                <p> H<sub>a</sub>: p ≠ that value (like in example
+                    3)<?oxy_insert_start author="mmyers" timestamp="20101126T203129-0500"?>.<?oxy_insert_end?></p>
+                <p>Note that it was quite clear from the context which form of the alternative
+                    hypothesis would be
+                    appropriate<?oxy_delete author="mmyers" timestamp="20101126T211844-0500" content=" (the key words are bolded)"?>.
+                    The value that is specified in the null hypothesis is called the <em>null
+                        value</em>, and is generally denoted by p<sub>o</sub>. We can say,
+                    therefore, that in general the null hypothesis about the population proportion
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T203238-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T203239-0500"?>)<?oxy_insert_end?>
+                    would take the form:</p>
+                <p>H<sub>o</sub>: p = p<sub>o</sub>
+                </p>
+                <p>We write H<sub>o</sub>: p = p<sub>o</sub> to say that we are making the
+                    hypothesis that the population proportion has the value of p<sub>o</sub>. In
+                    other words, p is the unknown population proportion and p<sub>o</sub> is the
+                    number we think p might be for the given situation.</p>
+                <p>The alternative hypothesis takes one of the following three forms (depending on
+                    the context):</p>
+                <p>H<sub>a</sub>: p &lt; p<sub>o</sub>
+                    <em>(one<?oxy_insert_start author="mmyers" timestamp="20101126T203323-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203324-0500" content=" "?>sided)</em>
+                </p>
+                <p>H<sub>a</sub>: p &gt; p<sub>o</sub>
+                    <em>(one<?oxy_insert_start author="mmyers" timestamp="20101126T203329-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203329-0500" content=" "?>sided)</em>
+                </p>
+                <p>H<sub>a</sub>: p ≠ p<sub>o</sub>
+                    <em>(two<?oxy_insert_start author="mmyers" timestamp="20101126T203333-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203333-0500" content=" "?>sided)</em>
+                </p>
+                <p>The first two possible forms of the alternatives (where the = sign in
+                        H<sub>o</sub> is challenged by &lt; or &gt;) are called <em>one-sided
+                        alternatives</em>, and the third form of alternative (where the = sign in
+                        H<sub>o</sub> is challenged by ≠) is
+                    called<?oxy_insert_start author="mmyers" timestamp="20101126T203402-0500"?> a<?oxy_insert_end?>
+                    <em>two-sided alternative.</em> To understand the intuition behind these names
+                    let's go back to our examples.</p>
+                <p>Example 3 (death penalty) is a case where we have a two-sided alternative:</p>
+                <p>
+                    <em>H<sub>o</sub>:</em> p =.64
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203417-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203417-0500" content="n"?>o
+                    change from
+                    2003)<?oxy_insert_start author="mmyers" timestamp="20101126T203420-0500"?>.<?oxy_insert_end?></p>
+                <p>
+                    <em>H<sub>a</sub>:</em> p ≠.64
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203425-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203425-0500" content="s"?>ome
+                    change since
+                    2003)<?oxy_insert_start author="mmyers" timestamp="20101126T203423-0500"?>.<?oxy_insert_end?></p>
+                <p>In this case, in order to reject H<sub>o</sub> and accept H<sub>a</sub> we will
+                    need to get a sample proportion of death penalty supporters which is very
+                    different from .64 <em>in either direction,</em> either much larger or much
+                    smaller than .64. </p>
+                <p>In example 2 (marijuana use) we have a one-sided alternative:</p>
+                <p>
+                    <em>H<sub>o</sub>:</em> p = .157
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203536-0500"?>S<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203536-0500" content="s"?>ame
+                    as among all college students in the
+                    <?oxy_insert_start author="mmyers" timestamp="20101126T203549-0500"?>country<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203517-0500" content="US"?>)<?oxy_insert_start author="mmyers" timestamp="20101126T203533-0500"?>.<?oxy_insert_end?></p>
+                <p>
+                    <em>H<sub>a</sub>:</em> p &gt; .157
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203540-0500"?>H<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203539-0500" content="h"?>igher
+                    than the national
+                    figure)<?oxy_insert_start author="mmyers" timestamp="20101126T203543-0500"?>.<?oxy_insert_end?></p>
+                <p>Here, in order to reject H<sub>o</sub> and accept H<sub>a</sub> we will need to
+                    get a sample proportion of marijuana
+                    user<?oxy_insert_start author="mmyers" timestamp="20101126T203559-0500"?>s<?oxy_insert_end?>
+                    which is much <em>higher</em> than .157. </p>
+                <p>Similarly, in example 1 (defective products), where we are testing:</p>
+                <p>
+                    <em>H<sub>o</sub>:</em> p = .20
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203613-0500"?>N<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203613-0500" content="n"?>o
+                    change<?oxy_insert_start author="mmyers" timestamp="20101126T203616-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203615-0500" content=","?>
+                    the repair did not
+                    help)<?oxy_insert_start author="mmyers" timestamp="20101126T203619-0500"?>.<?oxy_insert_end?></p>
+                <p>
+                    <em>H<sub>a</sub>:</em> p &lt; .20
+                    (<?oxy_insert_start author="mmyers" timestamp="20101126T203624-0500"?>The
+                    <?oxy_insert_end?>repair was
+                    effective)<?oxy_insert_start author="mmyers" timestamp="20101126T203628-0500"?>.<?oxy_insert_end?></p>
+                <p>in order to reject H<sub>o</sub> and accept H<sub>a</sub>, we will need to get a
+                    sample proportion of defective products which is much <em>smaller</em> than
+                    .20.</p>
+                <!--<activity idref="_u5_m1_lbd19" purpose="learnbydoing"/>-->
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>In each of the following examples, a test for the population proportion
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T203642-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T203643-0500"?>)<?oxy_insert_end?>
+                            is called for. You are asked to select the right null and alternative
+                            hypotheses.</p>
+                        <p><em>Scenario 1: </em>The UCLA Internet Report (February 2003) estimated
+                            that roughly 8.7% of
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T203703-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203703-0500" content="i"?>nternet
+                            users are extremely concerned about credit card fraud when buying
+                            online. Has that figure changed since? To test this, a random sample of
+                            100
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T203717-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203717-0500" content="i"?>nternet
+                            users was chosen, and when
+                            interviewed<?oxy_insert_start author="mmyers" timestamp="20101126T203723-0500"?>,<?oxy_insert_end?>
+                            10 said that they were extremely worried about credit card fraud when
+                            buying online. Let p be the proportion of all
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T203734-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T203734-0500" content="i"?>nternet
+                            users who
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T203739-0500"?>are
+                            <?oxy_insert_end?>concerned about credit card fraud. </p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor1" purpose="learnbydoing"/>
+                        <p><em>Scenario 2: </em>The UCLA Internet Report (February 2003) estimated
+                            that
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T204344-0500"?>a
+                            proportion of <?oxy_insert_end?>roughly .75 of online homes are still
+                            using dial-up access, but claimed that the use of dial-up is declining.
+                            Is that really the case? To examine this, a follow-up study was
+                            conducted a year later in which out of a random sample of
+                            1<?oxy_insert_start author="mmyers" timestamp="20101126T204411-0500"?>,<?oxy_insert_end?>308
+                            households that had
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T204416-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T204415-0500" content="i"?>nternet
+                            access, 804 were connecting using a dial-up modem. Let p be the
+                            proportion of all U.S.
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T204427-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T204427-0500" content="i"?>nternet-using
+                            households
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T204706-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T204705-0500" content="who"?>
+                            have dial-up access. </p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor2" purpose="learnbydoing"/>
+                        <p><em>Scenario 3: </em>According to the UCLA Internet Report (February
+                            2003) the use of the
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205006-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205005-0500" content="i"?>nternet
+                            at home is growing steadily and it is estimated that roughly 59.3% of
+                            households in the
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205016-0500"?>United
+                            States<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205019-0500" content="U.S."?>
+                            have
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205023-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205023-0500" content="i"?>nternet
+                            access at home. Has that trend continued since the report was released?
+                            To study this, a random sample of
+                            1<?oxy_insert_start author="mmyers" timestamp="20101126T205030-0500"?>,<?oxy_insert_end?>200
+                            households from a big metropolitan area was
+                            chosen<?oxy_insert_start author="mmyers" timestamp="20101126T205041-0500"?>
+                            for a more recent study<?oxy_insert_end?>, and it was found that 972 had
+                            an
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205051-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205051-0500" content="i"?>nternet
+                            connection. Let p be the proportion of U.S. households that have
+                            internet access.</p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor3" purpose="learnbydoing"/>
+                    </body>
+                </section>
+                <section purpose="didigetthis">
+                    <title>Did I Get This?</title>
+                    <body>
+                        <p>In each of the following
+                            examples<?oxy_insert_start author="mmyers" timestamp="20101126T205232-0500"?>,<?oxy_insert_end?>
+                            a test for the population proportion
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205237-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101126T205238-0500"?>)<?oxy_insert_end?>
+                            is called for. You are asked to select the right null and alternative 
+                            hypotheses.</p>
+                            <p><em>Scenario 1:</em> When shirts are made, there can occasionally be
+                            defects
+                            (<?oxy_insert_start author="mmyers" timestamp="20101126T205312-0500"?>such
+                            as<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205311-0500" content="like"?>
+                            improper stitching). But too many such defective shirts can be a sign of
+                            substandard manufacturing. </p>
+                            <p> Suppose, in the past, your favorite department store has had only one defective shirt per
+                                200 shirts (a prior defective rate of only .005). But you suspect that the store has
+                                recently switched to a substandard manufacturer. So you decide to test to see if their
+                                overall proportion of defective shirts today is higher. </p>
+                            <p> Suppose that, in a random sample of 200 shirts from
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205337-0500"?>the
+                            <?oxy_insert_end?>store, you find that 27 of them are defective, for a
+                            sample proportion
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205348-0500"?>of
+                            <?oxy_insert_end?>defective
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205352-0500"?>shirts
+                            <?oxy_insert_end?>of .135. You want to test whether this is evidence
+                            that the store is
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T205402-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205402-0500" content="‘"?>guilty<?oxy_insert_start author="mmyers" timestamp="20101126T205404-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T205404-0500" content="’"?>
+                            of substandard manufacturing, compared to their
+                            prior<?oxy_delete author="mmyers" timestamp="20101126T205416-0500" content=" defective"?>
+                            rate<?oxy_insert_start author="mmyers" timestamp="20101126T205420-0500"?>
+                            of defective shirts<?oxy_insert_end?>. </p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor4" purpose="didigetthis"/>
+                        <p><em>Scenario 2:</em> It is a known medical fact that just slightly fewer
+                            females than males are born (although the reasons are not completely
+                            understood); the known
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T210206-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T210205-0500" content="‘"?>proper<?oxy_insert_start author="mmyers" timestamp="20101126T210210-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T210209-0500" content="’"?>
+                            baseline female birthrate is about 49% females. </p>
+                            <p> In some cultures, male children are
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T210237-0500"?>traditionally
+                            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T210235-0500" content="often "?>looked
+                            on more favorably than female children, and there is concern that the
+                            increasing availability of ultrasound may lead to pregnant mothers
+                            deciding to abort the fetus if it’s not the culturally
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T210250-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T210250-0500" content="‘"?>desired<?oxy_insert_start author="mmyers" timestamp="20101126T210253-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T210253-0500" content="’"?>
+                            gender. If this is happening, then the proportion of females in those
+                            nations would be significantly lower than the proper baseline rate. </p>
+                            <p> To test whether the proportion of females born in India is lower
+                            than the proper baseline female birthrate, a study investigates a random
+                            sample of
+                            6<?oxy_insert_start author="mmyers" timestamp="20101126T210320-0500"?>,<?oxy_insert_end?>500
+                            births from hospital files in India, and finds 44.8% females born among
+                            the sample. </p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor5" purpose="didigetthis"/>
+                        <p><em>Scenario 3:</em> A properly-balanced
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T211040-0500"?>6<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T211039-0500" content="six"?>-sided
+                            game die should give a
+                            <?oxy_delete author="mmyers" timestamp="20101126T211054-0500" content="‘"?>1<?oxy_delete author="mmyers" timestamp="20101126T211057-0500" content="’"?>
+                            in exactly 1/6 (16.7%) of all rolls. A casino wants to test its game
+                            die. If the die is not properly balanced one way or another, it could
+                            give either too many
+                            <?oxy_delete author="mmyers" timestamp="20101126T211107-0500" content="‘"?>1’s
+                            or too few
+                            <?oxy_delete author="mmyers" timestamp="20101126T211120-0500" content="‘"?>1’s,
+                            either of which could be bad. </p>
+                            <p> The casino wants to use the proportion of
+                            <?oxy_delete author="mmyers" timestamp="20101126T211126-0500" content="‘"?>1’s
+                            to test whether the die is out of balance. So the casino test-rolls the
+                            die 60 times and gets a
+                            <?oxy_delete author="mmyers" timestamp="20101126T211136-0500" content="‘"?>1<?oxy_delete author="mmyers" timestamp="20101126T211139-0500" content="’"?>
+                            in
+                            <?oxy_insert_start author="mmyers" timestamp="20101126T211143-0500"?>9<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101126T211142-0500" content="nine"?>
+                            of the rolls (15%). </p>
+                        <wb:inline
+                            idref="u4_m2_testprop2_tutor6" purpose="didigetthis"/>
+                    </body>
+                </section>
+            </body>
+        </section>
+    </body>
+</workbook_page>

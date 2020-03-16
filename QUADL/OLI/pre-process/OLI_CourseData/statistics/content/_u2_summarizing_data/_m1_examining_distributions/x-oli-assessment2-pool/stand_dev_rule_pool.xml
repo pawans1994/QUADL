@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="stand_dev_rule_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_stand_dev_rule" select="single">
+        <body>The distribution of the amount of money spent by students for textbooks in a semester
+            is approximately normal in shape with a mean of $235 and a standard deviation of $20.
+            According to the standard deviation rule, how much did almost all (99.7%) of the
+            students spend on textbooks in a semester?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Between $215 and $255</choice>
+            <choice value="B">Between $195 and $275</choice>
+            <choice value="C">Between $175 and $295</choice>
+            <choice value="D">Less than $215 or more than $255</choice>
+            <choice value="E">Above $235</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 99.7% of the observations fall within
+                    3 standard deviations of the mean. Note that 215 and 255 are only 1 standard
+                    deviation below and above the mean,
+                    respectively.<!-- (C) is the correct answer. --></feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 99.7% of the observations fall within
+                    3 standard deviations of the mean. Note that 195 and 275 are only 2 standard
+                    deviations below and above the mean,
+                    respectively.<!-- (C) is the correct answer. --></feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 99.7% of the observations fall within 3
+                    standard deviations of the mean. Indeed, 175 = 235 − 3 * 20 and 295 = 235 + 3 *
+                    20 are exactly 3 standard deviations below and above the mean, respectively.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 99.7% of the observations fall within
+                    3 standard deviations of the mean. Note that 215 and 255 are only 1 standard
+                    deviation below and above the mean,
+                    respectively.<!-- (C) is the correct answer. --></feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Since 235 is the mean, roughly 50% of the observations fall
+                    above it. Recall that the standard deviation rule tells us that for
+                    distributions that have the normal shape, approximately 99.7% of the
+                    observations fall within 3 standard deviations of the
+                    mean.<!-- (C) is the correct
+							answer. --></feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_stand_dev_rule" select="single">
+        <body>The distribution of the amount of money spent by students for textbooks in a semester
+            is approximately normal in shape with a mean of $235 and a standard deviation of $20.
+            According to the standard deviation rule, almost 2.5% of the students spent more than
+            what amount of money on textbooks in a semester?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">$195 </choice>
+            <choice value="B">$215 </choice>
+            <choice value="C">$235 </choice>
+            <choice value="D">$275 </choice>
+            <choice value="E">$295 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. The value $195 is the amount of money
+                    that 2.5% of students spent less than, but the question asks for the value that
+                    2.5% of students spent more than.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. The value $215 is 1 standard deviation
+                        <em style="highlight">below</em> the mean. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. In this case, the mean is $235, and
+                    the standard deviation is $20. Can the mean be the end of this
+                    interval?</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 95% of the observations will fall within 2
+                    standard deviations of the mean. In this case the mean is $235, and the standard
+                    deviation is $20; therefore, approximately 95% of the observations (amount of
+                    money spent by students on textbooks) falls between $235 − 2 * $20 and $235 + 2
+                    * $20 or between $195 and $275. Approximately 5% of the observations fall
+                    outside this interval. Since the normal shape is symmetric, approximately 2.5%
+                    of the observations fall above $275.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. The value $295 is 3 standard
+                    deviations above the mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <!--    <multiple_choice id="q3_stand_dev_rule" select="single">
+        <body>The distribution of the amount of money spent by students for textbooks in a semester
+            is approximately normal in shape with a mean of $235 and a standard deviation of $20.
+            According to the standard deviation rule, how much did almost all (99.7%) of the
+            students spend on textbooks in a
+            semester?<!-\-almost all (99.7%)
+					of the students spent on textbooks in a semester: -\-></body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Between $480 and $720</choice>
+            <choice value="B">Between $360 and $840</choice>
+            <choice value="C">Between $175 and $295</choice>
+            <choice value="D">Less than $480 or more than $720</choice>
+            <choice value="E">Above $600</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations fall within
+                    2 standard deviations of the mean. Note that 480 and 720 are only 1 standard
+                    deviation below and above the mean, respectively. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 95% of the observations fall within 2
+                    standard deviations of the mean. Indeed, 360 = 600 − 2 * 120 and 840 = 600 + 2 * 120
+                    are exactly 2 standard deviations below and above the mean,
+                    respectively.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations fall within
+                    2 standard deviations of the mean. Note that 240 and 960 are three standard
+                    deviations below and above the mean, respectively. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations fall within
+                    2 standard deviations of the mean. Note that 480 and 720 are only 1 standard
+                    deviation below and above the mean, respectively.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Since $600 is the mean, roughly 50% of the observations
+                    fall above it. Recall that the standard deviation rule tells us that for
+                    distributions that have the normal shape, approximately 95% of the observations
+                    fall within 2 standard deviations of the mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>-->
+    <multiple_choice id="q3_stand_dev_rule" select="single">
+        <body>The distribution of the IQ (Intelligence Quotient) is approximately normal in shape
+            with a mean of 100 and a standard deviation of 15. According to the standard deviation
+            rule, what range of IQ scores do many (68%) people have?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Between 85 and 115</choice>
+            <choice value="B">Between 70 and 130</choice>
+            <choice value="C">Between 55 and 145</choice>
+            <choice value="D">Less than 85 or more than 115</choice>
+            <choice value="E">Above 100</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 68% of the observations fall within 1
+                    standard deviation of the mean. Indeed, 85 = 100 − 1 * 15 and 115 = 100 + 1 * 15
+                    are exactly 1 standard deviations below and above the mean, respectively.
+                </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 68% of the observations fall within 1
+                    standard deviation of the mean. Note that 70 and 130 are actually 2 standard
+                    deviations below and above the mean, respectively.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 68% of the observations fall within 1
+                    standard deviation of the mean. Note that 55 and 145 are actually 3 standard
+                    deviations below and above the mean, respectively.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 68% of the observations fall within 1
+                    standard deviation of the mean. Note that while 85 and 115 are 1 standard
+                    deviation from the mean, the percent of data below 85 or above 115 would
+                    represent 100% − 68% = 32% of the data.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Since 100 is the mean, roughly 50% of the observations fall
+                    above it. Recall that the standard deviation rule tells us that for
+                    distributions that have the normal shape, approximately 68% of the observations
+                    fall within 1 standard deviation of the mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_stand_dev_rule" select="single">
+        <body>The distribution of the amount of money spent by first-time gamblers at a major casino
+            in Las Vegas is approximately normal in shape with a mean of $600 and a standard
+            deviation of $120. According to the standard deviation rule, almost 84% of gamblers
+            spent more than what amount of money at this casino?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">$360</choice>
+            <choice value="B">$480</choice>
+            <choice value="C">$600</choice>
+            <choice value="D">$720</choice>
+            <choice value="E">$840</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. Including the tail on the right, we
+                    would find that 95% + 2.5% = 97.5% of gamblers spend more than $360. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 68% of the observations will fall within 2
+                    standard deviations of the mean. In this case, the mean is $600, and the
+                    standard deviation is $120; therefore, approximately 68% of the observations
+                    (amount of money spent by gamblers) fall between $600 − 1 * $120 and $600 + 1 *
+                    $120 or between $480 and $720. Approximately 100% − 68% = 32% of the
+                    observations fall outside this interval. Since the normal shape is symmetric,
+                    approximately 16% of the observations fall above $720. Putting this together
+                    with the 68% between $480 and $720, a total of 84% of gamblers spend more than
+                    $480 at this casino.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 68% of the observations will fall
+                    within 2 standard deviations of the mean. In this case, the mean is $600, and
+                    the standard deviation is $120. Can the mean be the end of this
+                    interval?</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 50% of the observations are above the
+                    mean. Since the mean is $600, there must be less than 50% who spent more than
+                    $720.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 50% of the observations are above the
+                    mean. Since the mean is $600, there must be less than 50% who spent more than
+                    $840.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q5_stand_dev_rule" select="single">
+        <body> The distribution of the IQ (Intelligence Quotient) is approximately normal in shape
+            with a mean of 100 and a standard deviation of 15. According to the standard deviation
+            rule, only 0.15% of people have an IQ over what score?</body>
+        <input labels="false" shuffle="false">
+            <choice value="A">55</choice>
+            <choice value="B">100</choice>
+            <choice value="C">115</choice>
+            <choice value="D">130</choice>
+            <choice value="E">145</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 50% of the observations are above the
+                    mean. Since the mean is 100, there must be more than 50% who have an IQ over 55.
+                </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 50% of the observations are above the
+                    mean. Since the mean is 100, we would need a larger IQ score if only 0.15% of
+                    people score above it.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 68% of the observations will fall
+                    within 1 standard deviations of the mean. In this case, the mean is 100, and the
+                    standard deviation is 15, so 68% of people have IQ scores between 85 and 115.
+                    Since a normal distribution is symmetric, this leaves 32%/2 = 16% of people with
+                    scores greater than 115, which is much more than the required 0.15%.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The standard deviation rule tells us that for distributions
+                    that have the normal shape, approximately 95% of the observations will fall
+                    within 2 standard deviations of the mean. In this case, the mean is 100, and the
+                    standard deviation is 15, so 95% of people have IQ scores between 70 and 130.
+                    Since a normal distribution is symmetric, this leaves 5%/2 = 2.5% of people with
+                    scores greater than 130, which is much more than the required 0.15%.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. The standard deviation rule tells us that for distributions that
+                    have the normal shape, approximately 99.7% of the observations will fall within
+                    3 standard deviations of the mean. In this case the mean is 100, and the
+                    standard deviation is 15; therefore, approximately 99.7% of the observations (IQ
+                    scores) fall between 100 − 3 * 15 and 100 + 3 * 15 or between 55 and 145.
+                    Approximately 100% − 99.7% = 0.3% of the observations fall outside this
+                    interval. Since the normal shape is symmetric, approximately 0.15% of the
+                    observations fall above 145.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

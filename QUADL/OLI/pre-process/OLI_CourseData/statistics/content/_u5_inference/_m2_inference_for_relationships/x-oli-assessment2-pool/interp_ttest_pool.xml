@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="interp_ttest_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_interp_ttest">
+        <!-- LO: In a given context, carry out the inferential method for comparing groups and draw 
+            the appropriate conclusions.
+            (interp_ttest) -->
+        <body>
+            <p>Do oddsmakers believe that teams who play at home will have home field advantage?
+                Specifically, do oddsmakers give higher point spreads when the favored team plays
+                home games as compared to when the favored team plays away games?</p>
+            <p>Two samples were randomly selected from three complete National Football League
+                seasons (1989, 1990, and 1991). The first sample consisted of 50 games, where the
+                favored team played in a home game, while the second sample consisted of 50 games,
+                where the favored team played in an away game. The oddsmakers’ point spreads (which
+                are the number of points by which the favored team is predicted to beat the weaker
+                team) were then collected.</p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: µ<sub>1</sub> = µ<sub>2</sub></p>
+            <p>H<sub>a</sub>: μ<sub>1</sub> &gt; μ<sub>2</sub></p>
+            <p>Analyses were run. The following is the (edited) output for the test:</p>
+            <image src="../webcontent/chkpt_two_independent_samples/image2.png" />
+            <image src="../webcontent/chkpt_two_independent_samples/image3.png" width="632" height="197" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence reject the H<sub>0</sub>; thus,
+                we cannot conclude that the mean point spread of home games is higher than that of
+                away games.</choice>
+            <choice value="B">The data do not provide sufficient evidence reject the H<sub>0</sub>;
+                thus, we can conclude that the mean point spread for home games is higher than that
+                of away games.</choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>;
+                thus, we cannot conclude that the mean point spread of home games is higher than
+                that of away games.</choice>
+            <choice value="D">The data provide sufficient evidence to reject H<sub>0</sub>; thus, we
+                can conclude that the mean point spread for home games is higher than that of away
+                games.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Notice that the p-value is greater than 0.05. Therefore, there
+                    is not sufficient evidence to reject H<sub>0</sub>.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While it is correct that the p-value is greater than 0.05 and the
+                    null hypothesis therefore is not rejected, your conclusion is
+                    wrong.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since the p-value is greater than 0.05, we fail to reject the
+                    null hypothesis and therefore cannot conclude that the mean point spread of home
+                    games is higher than that of away games.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Notice that the p-value is greater than 0.05. Therefore, there
+                    is not sufficient evidence to reject H<sub>0</sub>.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_interp_ttest">
+        <!-- LO: In a given context, carry out the inferential method for comparing groups and draw 
+            the appropriate conclusions.
+            (interp_ttest) -->
+        <body>
+            <p>Do college students who are in a fraternity or sorority attend more parties than
+                college students who are not affiliated with a fraternity or sorority? A statistics
+                class randomly selected 50 students who were in a fraternity or sorority and 50
+                students who were not affiliated with a fraternity or sorority and asked them to
+                report how many parties they had attended in the past month.</p>
+            <p>The following hypotheses were tested:</p>
+            <p>H<sub>0</sub>: µ<sub>1</sub> = µ<sub>2</sub></p>
+            <p>H<sub>a</sub>: μ<sub>1</sub> &gt; μ<sub>2</sub></p>
+            <p>Analyses were run. The following is the (edited) output for the test:</p>
+            <image src="../webcontent/hypothesis_test_results.png" />
+            <p>Which of the following is an appropriate conclusion based on the output?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">The data provide sufficient evidence to reject the H<sub>0</sub>; thus,
+                we cannot conclude that the mean number of parties attended by fraternity and
+                sorority members is higher than those attended by unaffiliated students.</choice>
+            <choice value="B">The data do not provide sufficient evidence to reject the H<sub>0</sub>;
+                thus, we can conclude that the mean number of parties attended by fraternity and
+                sorority members is higher than those attended by unaffiliated students.</choice>
+            <choice value="C">The data do not provide sufficient evidence to reject H<sub>0</sub>;
+                thus, we cannot conclude that the mean number of parties attended by fraternity and
+                sorority members is higher than those attended by unaffiliated students.</choice>
+            <choice value="D">The data provide sufficient evidence to reject H<sub>0</sub>; thus, we can conclude that the mean number of parties attended by
+                fraternity and sorority members is higher than those attended by unaffiliated
+                students.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. You are correct that the data provides sufficient evidence to
+                    reject the null hypothesis because the p-value was less than 0.05 however, the
+                    second part of the statement is incorrect—we actually can conclude that there
+                    was a difference because the p-value was less than 0.05 so we reject the null
+                    hypothesis.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The p-value is less than 0.05 and, therefore, we have enough
+                    evidence to reject the null hypothesis. However, you are correct that we can
+                    conclude that there was a difference between the two groups.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. The p-value is less than 0.05 and, therefore, we have enough
+                    evidence to reject the null hypothesis. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since the p-value is less than 0.05, we can reject the null
+                    hypothesis and conclude that the fraternity/sorority students attended
+                    significantly more parties than unaffiliated students.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_confidence_interval_mean5">
+    <head>
+        <title>Confidence Intervals for the Population Mean (5 of 8)</title>
+        <objref idref="explain_confidence_interval"/>
+        <objref idref="find_confidence_intervals"/>
+    </head>
+<body>
+    
+    
+        <p>Let us now go back to the confidence interval for the
+            mean, and more specifically, to the question that we posed at the beginning of the previous page:</p>
+        <p> Is there a way to increase the precision of the confidence interval (i.e., make it
+            narrower) <em style="italic">without</em> compromising on the level of confidence?</p>
+        <p>Since the width of the confidence interval is a function of its margin of error, let's
+            look closely at the margin of error of the confidence interval for the mean and see how
+            it can be reduced:</p>
+        <p>
+            <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msup>
+                        <m:mi>z</m:mi>
+                        <m:mo>∗</m:mo>
+                    </m:msup>
+                    <m:mo>∗</m:mo>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>
+        </p>
+        <p>Since z* controls the level of confidence, we can rephrase our question above in the
+            following way:</p>
+        <p> Is there a way to reduce this margin of error other than
+            <?oxy_insert_start author="mmyers" timestamp="20101123T144748-0500"?>by
+            <?oxy_insert_end?>reducing z*?</p>
+        <p>If you look closely at the margin of
+            error<?oxy_insert_start author="mmyers" timestamp="20101123T144756-0500"?>,<?oxy_insert_end?>
+            you'll see that the answer is yes. We can do that by increasing the sample size n (since it appears in the
+            denominator).</p>
+        <activity idref="_u5_m1_wonder1" purpose="manystudentswonder"/>
+        <p>Let's look at an example first and then explain why increasing the sample size is a way
+            to increase the precision of the confidence interval <em style="italic">without</em>
+            compromising on the level of confidence.</p>
+        <example>
+
+            <p>Recall the IQ example:</p>
+            <p>The IQ level of students at a particular university has an unknown mean
+                <?oxy_insert_start author="mmyers" timestamp="20101123T145433-0500"?>(<?oxy_insert_end?>μ<?oxy_insert_start author="mmyers" timestamp="20101123T145435-0500"?>)<?oxy_insert_end?>
+                and <?oxy_insert_start author="mmyers" timestamp="20101123T145438-0500"?>a
+                <?oxy_insert_end?>known standard deviation
+                <?oxy_insert_start author="mmyers" timestamp="20101123T145452-0500"?>of
+                    <?oxy_insert_end?><m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mn>15</m:mn>
+                    </m:mrow>
+                </m:math>. A simple random sample of 100 students is found to have
+                <?oxy_insert_start author="mmyers" timestamp="20101123T145459-0500"?>the
+                <?oxy_insert_end?>sample mean IQ <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                    </m:mrow>
+                </m:math>. A 95% confidence interval for μ in this case
+                is<?oxy_insert_start author="mmyers" timestamp="20101123T145511-0500"?>:<?oxy_insert_end?></p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mfrac>
+                            <m:mi mathvariant="normal">σ</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mfenced open="(" close=")">
+                            <m:mfrac>
+                                <m:mn>15</m:mn>
+                                <m:msqrt>
+                                    <m:mn>100</m:mn>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfenced>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>3</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>0</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mn>112</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mn>118</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>Note that the margin of error is m<?oxy_insert_start author="mmyers" timestamp="20101123T145516-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101123T145516-0500"?>
+                <?oxy_insert_end?>3<?oxy_insert_start author="mmyers" timestamp="20101123T145530-0500"?>,<?oxy_insert_end?>
+                and therefore the width of the confidence interval is 6.</p>
+            <p>Now, what if we change the problem slightly by increasing the sample size, and assume
+                that it was 400 instead of 100?</p>
+            
+            <image style="block" src="../webcontent/image067.gif"  alt="A large circle represents
+the Population of all Students at SU. We are interested in the variable IQ, and the unknown parameter
+is &mu;, the population mean IQ level. In addition, we know that &sigma; = 15. From this population
+we create a sample of size n=400, represented by a smaller circle. In this sample, we find that x bar =
+115."/>
+            <p>In this
+                case<?oxy_insert_start author="mmyers" timestamp="20101123T145552-0500"?>,<?oxy_insert_end?>
+                the 95% confidence interval for μ is:</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mover>
+                            <m:mi>x</m:mi>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mfrac>
+                            <m:mi mathvariant="normal">σ</m:mi>
+                            <m:msqrt>
+                                <m:mi>n</m:mi>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>2</m:mn>
+                        <m:mfenced open="(" close=")">
+                            <m:mfrac>
+                                <m:mn>15</m:mn>
+                                <m:msqrt>
+                                    <m:mn>400</m:mn>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfenced>
+                        <m:mo>=</m:mo>
+                        <m:mn>115</m:mn>
+                        <m:mo>±</m:mo>
+                        <m:mn>1</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>5</m:mn>
+                        <m:mo>=</m:mo>
+                        <m:mfenced open="(" close=")">
+                            <m:mrow>
+                                <m:mn>113</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>5</m:mn>
+                                <m:mo>,</m:mo>
+                                <m:mtext> </m:mtext>
+                                <m:mn>116</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>5</m:mn>
+                            </m:mrow>
+                        </m:mfenced>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>The margin of error here is only m<?oxy_insert_start author="mmyers" timestamp="20101123T145602-0500"?>
+                <?oxy_insert_end?>=<?oxy_insert_start author="mmyers" timestamp="20101123T145603-0500"?>
+                <?oxy_insert_end?>1.5, and thus the width is only 3.</p>
+            <p>Note that for the same level of confidence (95%) we now have a narrower, and thus
+                more precise, confidence interval.</p>
+        </example>
+        <p>Let's try to understand why <!--is it that -->a larger sample size will reduce the margin of
+            error for a fixed level of confidence. There are three ways to explain it:
+            mathematically, using probability theory, and intuitively.</p>
+        <p>We've already alluded to the mathematical explanation; the margin of error is
+                <m:math overflow="scroll">
+                <m:mrow>
+                    <m:msup>
+                        <m:mi>z</m:mi>
+                        <m:mo>*</m:mo>
+                    </m:msup>
+                    <m:mo>∗</m:mo>
+                    <m:mfrac>
+                        <m:mi mathvariant="normal">σ</m:mi>
+                        <m:msqrt>
+                            <m:mi>n</m:mi>
+                        </m:msqrt>
+                    </m:mfrac>
+                </m:mrow>
+            </m:math>, and since n, the sample size, appears in the denominator, increasing n will
+            reduce the margin of error.</p>
+        <p>As we saw in our discussion about point estimates, probability theory tells us
+            that</p>
+        
+    <image style="block" src="../webcontent/image069.gif" alt="Two sampling distribution curves
+for x-bar. One is squished down and wider, while the other is much taller and narrower. Both curves
+share the same &mu;. The tall, narrow distribution was based on a larger sample size, which has a
+smaller standard deviation, and so is less spread out. This means that values of x-bar are more
+likely to be closer to &mu; when the sample size is larger."/>
+        <p>This explains why with a larger sample size the margin of error (which represents how far
+            apart we believe <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T145703-0500"?>
+            <?oxy_insert_end?>might be from μ for a given level of confidence) is smaller.</p>
+        <p>On an intuitive level, if our estimate <m:math overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math><?oxy_insert_start author="mmyers" timestamp="20101123T145710-0500"?>
+            <?oxy_insert_end?>is based on a larger sample (i.e., a larger fraction of the
+            population), we have more faith in it, or it is more
+            reliable<?oxy_insert_start author="mmyers" timestamp="20101123T145721-0500"?>,<?oxy_insert_end?>
+            and therefore we need to
+            <?oxy_insert_start author="mmyers" timestamp="20101123T145725-0500"?>account
+            for<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T145729-0500" content="put"?>
+            less error around it.</p>
+        <section>
+            <title>Comment</title>
+            <body>
+        <p>While it is true that for a given level of
+                    confidence,
+                    increasing the sample size increases the precision of our interval estimation,
+                    in
+                    practice,
+                    increasing the sample size is not always possible. Consider a study in which
+                    there is a non-negligible cost involved for collecting data from each
+                    participant (an expensive medical procedure, for example). If the study has some
+                    budgetary constraints, which is usually the case, increasing the sample size
+                    from 100 to 400 is just not possible in terms of cost-effectiveness. Another
+                    instance in which increasing the sample size is impossible is when a larger
+                    sample is simply not
+                    available,
+                    even if we had the money to afford it. For example, consider a study on the
+                    effectiveness of a drug on curing a very rare disease among children. Since the
+                    disease is rare, there are a limited number of children who could be
+                    participants. This is the reality of statistics. Sometimes theory collides with
+                    reality,
+                    and you just do the best you can.</p>
+        <!--<activity idref="_u5_m1_dig5" purpose="didigetthis"/>-->
+                <wb:inline idref="u4_m1_confintmean5_tutor1" purpose="didigetthis"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

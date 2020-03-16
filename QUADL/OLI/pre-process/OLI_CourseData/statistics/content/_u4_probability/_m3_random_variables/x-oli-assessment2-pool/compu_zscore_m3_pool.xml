@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="compu_zscore_m3_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_compu_zscore_m3">
+        <body>
+            <p>Suppose the time to complete a 200-meter backstroke swim for female competitive
+                swimmers is normally distributed with a mean μ = 141 seconds and a standard
+                deviation σ = 7 seconds.</p>
+            <p>What is the completion time for the 200-meter backstroke for a female with a z-score
+                of −1.64? (Round answer to 1 decimal place.)</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">130.8</choice>
+            <choice value="B">129.5</choice>
+            <choice value="C">152.5</choice>
+            <choice value="D">141.0</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It looks like you calculated the time for a z-score of −1.46
+                    instead of −1.64. Remember, to find the observation corresponding to a z-score
+                    calculate mean + z-score * SD.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. A z-score of −1.64 means that the actual time is 1.64 standard
+                    deviations below the mean, and therefore the time we are looking for is mean
+                    −1.64 * SD = 141 − 1.64 * 7 = 129.52 or 129.5.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This z-score is negative, so the time should be below the mean
+                    of 141 seconds. It looks like you calculated the time for a z-score of 1.64
+                    instead of −1.64. Remember, to find the observation corresponding to a z-score
+                    calculate mean + z-score * SD. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This is the mean completion time which has a z-score of 0.
+                    Since the z-score is negative, the time associated with this z-score should be
+                    less than the mean completion time. Remember, to find the observation
+                    corresponding to a z-score calculate: MEAN + z-score * SD </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_compu_zscore_m3">
+        <body>
+            <p>Suppose the scores on an exam are normally distributed with a mean μ = 75 points and
+                standard deviation σ = 8 points.</p>
+            <p>What is the exam score for an exam whose z-score is 1.25?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">65</choice>
+            <choice value="B">75</choice>
+            <choice value="C">85</choice>
+            <choice value="D">0.8944</choice>
+            <choice value="E">0.1056</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Since the z-score is positive, the exam score associated with
+                    this z-score should be greater than the mean exam score.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This is the mean exam score, which has a z-score of 0. Since
+                    the z-score is positive, the exam score associated with this z-score should be
+                    greater than the mean exam score. </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. A z-score of 1.25 means that the actual exam score is 1.25
+                    standard deviations above the mean, and therefore the exam score we are looking
+                    for is mean + 1.25 * SD = 75 + 1.25 * 8 = 85. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It seems that you have found the proportion of exams that have
+                    an associated z-score of at most 1.25. However, you should find the exam score
+                    associated with a z-score of 1.25.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. It seems that you have found the proportion of exams that have
+                    an associated z-score of at least 1.25. However, you should find the exam score
+                    associated with a z-score of 1.25.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

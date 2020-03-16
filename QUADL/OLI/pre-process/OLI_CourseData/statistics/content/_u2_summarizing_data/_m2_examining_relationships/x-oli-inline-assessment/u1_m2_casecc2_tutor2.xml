@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<assessment id="u1_m2_casecc2_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+<body> The results suggest that the proportion of males who are happy with their body weight is
+                <input_ref input="A"/> than among female students. Females who are not happy with
+            their body weight more often feel they are <input_ref input="B"/>. Males who are not
+            happy with their body weight feel they are overweight <input_ref input="C"/> they feel
+            they are underweight. </body>
+<fill_in_the_blank id="A" shuffle="false">
+   <choice value="one">slightly greater</choice>
+   <choice value="two">slightly less</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="B" shuffle="false">
+   <choice value="one">about right</choice>
+   <choice value="two">overweight</choice>
+   <choice value="three">underweight</choice>
+</fill_in_the_blank>
+<fill_in_the_blank id="C" shuffle="false">
+   <choice value="one">about as often as</choice>
+   <choice value="two">much more often than</choice>
+   <choice value="three">much less often than</choice>
+</fill_in_the_blank>
+<part>
+   <response input="A" name ="slightly greater" match="one">
+       <feedback>Incorrect. Look at the conditional percentages. What percentage of males feel their body weight is "about right"?  What percentage of females?</feedback>
+   </response>
+   <response input="A" name ="slightly less" match="two" score="1">
+       <feedback>Correct. Students who are happy with their body weight responded "about right."
+                    73.7% of females responded "about right," compared to only 67% of
+                    males.</feedback>
+   </response>
+   <hint>Students that are happy with their body weight responded "about right."</hint>
+   <hint>Compare the conditional percentages for the category "about right" for males and females.</hint>
+</part>
+<part>
+   <response input="B" name ="about right" match="one">
+       <feedback>Incorrect. Females who responded "about right" are happy with their
+                    body weight. We are comparing the responses for females who are <em>not</em>
+                    happy.</feedback>
+   </response>
+   <response input="B" name ="overweight" match="two" score="1">
+       <feedback>Correct. 21.4% of females responded "overweight" compared to only 4.9% of females who responded "underweight."</feedback>
+   </response>
+   <response input="B" name ="underweight" match="three">
+       <feedback>Incorrect. Look at the pattern of the response percentages for
+                    females. In particular, compare the percentages of "overweight" and
+                    "underweight," since these represent females who are unhappy with their body
+                    weight.</feedback>
+   </response>
+   <hint>Compare the conditional percentages within the row for females.</hint>
+</part>
+<part>
+   <response input="C" name ="about as often" match="one" score="1">
+       <feedback>Correct. 16.4% of males responded "overweight," which is roughly the same
+                    as the percentage of males who responded "underweight" (16.6%).</feedback>
+   </response>
+   <response input="C" name ="much more often" match="two">
+       <feedback>Incorrect. Look at the pattern of the response percentages for males.
+                    In particular, compare the percentages of "overweight" and "underweight," since
+                    these are the responses given by those who are unhappy with their body weight.</feedback>
+   </response>
+   <response input="C" name ="much less often" match="three">
+      <feedback>Incorrect. Look at the pattern of the response percentages for males.
+                    In particular, compare the percentages of "overweight" and "underweight," since
+                    these are the responses given by those who are unhappy with their body weight.</feedback>
+   </response>
+   <hint>Compare the conditional percentages within the row for males.</hint>
+</part>
+   </question>
+</assessment>

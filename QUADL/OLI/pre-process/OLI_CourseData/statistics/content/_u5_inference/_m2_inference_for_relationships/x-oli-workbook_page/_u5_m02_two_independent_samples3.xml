@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_two_independent_samples3">
+    <head>
+        <title>Two Independent Samples (3 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+  
+        <section>
+            <title>Step 2: Check Conditions, and Summarize the Data Using a Test Statistic</title>
+            <body>
+                <p>The two-sample t-test can be safely used as long as the following conditions are
+                    met:</p>
+                <ol><li><p>The two samples are indeed independent.</p></li>
+                <li><p>We are in one of the following two scenarios:</p>
+                <ol style="lower-roman"><li><p>Both populations are normal, or more specifically, the distribution of the
+                    response Y in both populations is normal, and both samples are random (or at
+                    least can be considered as such). In practice, checking normality in the
+                    populations is done by looking at each of the samples using a histogram and
+                    checking whether there are any signs that the populations are not normal. Such
+                    signs could be extreme skewness and/or extreme outliers.</p></li>
+               <li><p>The populations are known or discovered not to be normal, but the sample
+                    size of each of the random samples is large enough (we can use the rule of thumb
+                    that &gt; 30 is considered large enough).</p></li></ol></li></ol>
+                <p>Assuming that we can safely use the two-sample t-test, we need to summarize the
+                    data, and in particular, calculate our data summary&#8212;the test
+                    statistic.</p>
+                <p>
+                    <em>The two-sample t-test statistic</em> is:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mi>t</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mfenced open="(" close=")">
+                                        <m:mrow>
+                                            <m:mover>
+                                                <m:msub>
+                                                  <m:mi>y</m:mi>
+                                                  <m:mn>1</m:mn>
+                                                </m:msub>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                            <m:mo>−</m:mo>
+                                            <m:mover>
+                                                <m:msub>
+                                                  <m:mi>y</m:mi>
+                                                  <m:mn>2</m:mn>
+                                                </m:msub>
+                                                <m:mo>¯</m:mo>
+                                            </m:mover>
+                                        </m:mrow>
+                                    </m:mfenced>
+                                    <m:mo>−</m:mo>
+                                    <m:mn>0</m:mn>
+                                </m:mrow>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>1</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msubsup>
+                                                <m:mi>s</m:mi>
+                                                <m:mn>2</m:mn>
+                                                <m:mn>2</m:mn>
+                                            </m:msubsup>
+                                            <m:msub>
+                                                <m:mi>n</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>Where:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>,</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> are the sample means of the samples from population 1 and population 2
+                    respectively. </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>s</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:msub>
+                                <m:mi>s</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> are the sample standard deviations of the samples from population 1
+                    and population 2 respectively. </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi>n</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:msub>
+                                <m:mi>n</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> are the sample sizes of the two samples. </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Let's see why this test statistic makes sense, bearing in mind that our
+                    inference is about <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>. </p>
+                
+<ul><li><p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> estimates μ<sub>1</sub> and
+                        <?oxy_comment_start author="mmyers" timestamp="20101128T150905-0500" comment="the question below calls these y-bar numbers the &quot;sample mean importance scores.&quot; Should that terminology be used here, and explained?"?><m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math><?oxy_comment_end?> estimates μ<sub>2</sub>, and therefore <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math> is what the data tell me about (or, how the data estimate) </p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math>.</p></li>
+            <li><p> 0 is the "null value" &#8212; what the null hypothesis, H<sub>o</sub>, claims
+                    that <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> is. </p></li>
+             <li><p>The denominator <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mfrac>
+                                        <m:msubsup>
+                                            <m:mi>s</m:mi>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>2</m:mn>
+                                        </m:msubsup>
+                                        <m:msub>
+                                            <m:mi>n</m:mi>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                    </m:mfrac>
+                                    <m:mo>+</m:mo>
+                                    <m:mfrac>
+                                        <m:msubsup>
+                                            <m:mi>s</m:mi>
+                                            <m:mn>2</m:mn>
+                                            <m:mn>2</m:mn>
+                                        </m:msubsup>
+                                        <m:msub>
+                                            <m:mi>n</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mfrac>
+                                </m:mrow>
+                            </m:msqrt>
+                        </m:mrow>
+                    </m:math> is the standard error of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>−</m:mo>
+                            <m:mtext> </m:mtext>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>. (We will not go into the details of why this is true.) </p></li></ul>
+                <p>We therefore see that our test statistic, like the previous test statistics we
+                    encountered, has the structure:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mi mathvariant="italic">sample</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">estimate</m:mi>
+                                    <m:mo>−</m:mo>
+                                    <m:mi mathvariant="italic">null</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">value</m:mi>
+                                </m:mrow>
+                                <m:mrow>
+                                    <m:mi mathvariant="italic"> standard</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">error</m:mi>
+                                </m:mrow>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>and therefore, like the previous test statistics, measures (in standard errors)
+                    the difference between what the data tell us about the parameter of interest
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>−</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> (sample estimate) and what the null hypothesis claims the value of the
+                    parameter is (null value). </p>
+            </body>
+        </section>
+    <activity idref="stat_printouts" purpose="manystudentswonder"/>
+        <example>
+            <p>Let's first check whether the conditions that allow us to safely use the two-sample
+            t-test are met.</p>
+            <ol style="lower-roman">
+            <li><p><?oxy_insert_start author="mmyers" timestamp="20101128T150231-0500"?><?oxy_insert_end?>
+                Here, 239 students were chosen and were naturally divided into a sample of females
+                and a sample of males. Since the students were chosen at random, the sample of
+                females is independent of the sample of males.</p></li>
+          <li>  <p>Here we are in the second scenario &#8212; the sample sizes (150 and 85), are definitely large
+                        enough, and so we can proceed regardless of whether the populations are
+                        normal or not.</p></li></ol>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R</title>
+                    <p>In order to avoid tedious calculations, we use R to find the test statistic.
+                        In this case, R gives us a value of -4.66:</p>
+                    <image style="block" src="../webcontent/image192_r.gif" alt="R output:
+        > t.test(looks$Score~looks$Gender)
+                Welch Two Sample t-test
+        data: looks$Score by looks$Gender
+        t = -4.6574, df = 182.973, p-value = 6.143e-06
+        alternative hypothesis: true difference in means is not equal to 0
+        95 percent confidence interval:
+        -3.695865  -1.496292
+        sample estimates:
+        mean in group Female 10.73333
+        mean in group Male 13.32941"/>
+                    <p>Just for this first example, let's make sure that we understand what the
+                        ingredients are that go into the test statistic calculation and how we use
+                        them to find the test statistic. We already know the sample sizes (150 and
+                        85), the means are given in the R output above, and the sample standard
+                        deviations can be found using this command:</p>
+                    <code>tapply(looks$Score,factor(looks$Gender),sd, na.rm=TRUE)</code>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch</title>
+                    <p>In order to avoid tedious calculations, we will lift the test statistic from the output. The StatCrunch output (edited) is shown below:</p>
+                    <image style="block" src="../webcontent/image192_statcrunch.gif" alt="Two
+Sample T - Test and CI: Score(Y),Gender (X)
+        Summary statistics for Score (Y):
+        For Gender(X) = Female: n = 150, Mean = 10.733334, Std. Dev. = 4.254751, Std. Err. = 0.347399
+        For Gender(X) = Male: n = 85, Mean = 13.3294115, Std. Dev. = 4.0189676, Std. Err. = 0.43591824
+        
+        Hypothesis test results: &mu;_1: mean of score (Y) where X = Female. &mu;_2: mean of score (Y)
+where X = Male. &mu;_1 - &mu;_2: mean difference. H_0: &mu;_1 - &mu;_2 = 0, H_A: &mu;_1 - &mu;_2 &ne; 0
+
+        Difference: &mu;_1 - &mu;_2
+        Sample Mean: -2.5960784
+        Std. Err.: 0.55741435
+        DF: 182.97267
+        T-Stat: -4.657358
+        P-Value: &lt; 0.0001
+        
+        95% Confidence Interval Results:
+        Difference: &mu;_1 - &mu;_2
+        Sample Mean: -2.5960784
+        Std. Err.: 0.55741435
+        DF: 182.97267
+        L. Limit: -3.6958647
+        U. Limit: -1.4962921"/>
+                    <p>As you can see we highlighted the “ingredients” needed to calculate the test statistic, as well as the test statistic itself. Just for this first example, let’s make sure that we understand what these ingredients are and how to use them to find the test statistic. </p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab</title>
+                    <p>In order to avoid tedious calculations, we will lift the test statistic from
+                        the output:</p>
+                    <image style="block" src="../webcontent/image192.gif" alt="Two-Sample T-Test and Cl:
+Score(Y), Gender(X)
+                    Two-sample T for Score (Y)
+                    Gender (X) = Female: N = 150, Mean = 10.73, StDev = 4.25, SE Mean = 0.35
+                    Gender (X) = Male: N = 85, Mean = 13.33, StDev = 4.02, SE Mean = 0.44
+                    
+                    Difference = mu (Female) - mu (Male
+                    Estimate for difference: -2.59608
+                    95% CI for difference: (-3.69590, -1.49625)
+                    T-Test of difference = 0 (vs not =): T-Value = -4.66 P-Value = 0.000"/>
+                    <p>As you can see, we highlighted the "ingredients" needed to calculate the test
+                        statistic, as well as the test statistic itself. Just for this first
+                        example, let's make sure that we understand what these ingredients are and
+                        how we use them to find the test statistic.</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>In order to avoid tedious calculations, we use Excel to find the test
+                        statistic. In this case, Excel gives us a t-value of -4.66.</p>
+                    <p>Just for this first example, let's make sure that we understand what the
+                        ingredients are that go into the test statistic calculation and how we use
+                        them to find the test statistic.</p>
+                </alternative>
+                <alternative value="excel2003">
+                    <title>Excel 2003</title>
+                    <p>In order to avoid tedious calculations, we use Excel to find the test
+                        statistic. In this case, Excel gives us a t-value of -4.66.</p>
+                    <p>Just for this first example, let's make sure that we understand what the
+                        ingredients are that go into the test statistic calculation and how we use
+                        them to find the test statistic.</p>
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Calculator</title>
+                    <p>In order to avoid tedious calculations, we use the TI graphing calculator to find the test statistic.
+                        In this case, we get a value of -4.66:</p>
+                    <image style="block" src="../webcontent/image192_ti.gif" alt="2-SampTTest
+        &mu;_1; &ne; &mu;_2
+        t = -4.6574
+        p = 6.1423
+        df = 182.97
+        x-bar_1 = 10.733
+        x-bar_2 = 13.330
+        Sx_1 = 4.2548
+        Sx_2 = 4.0190
+        n_1 = 150
+        n_2 = 85"/>
+                    <p>Just for this first example, let's make sure that we understand what these
+                        ingredients are that go into the test statistic calculation and how we use
+                        them to find the test statistic. </p>
+                </alternative>
+            </alternatives>
+            <wb:inline
+                idref="u4_m3_twosamples3_tutor1" purpose="learnbydoing"/>
+            <!--
+            <flash src="../../webcontent/flash/_u5_m2_inlinetutor1.swf" width="500" height="250" purpose="learnbydoing">
+                <param name="problem_name">_u5_m2_inlinetutor1</param>
+            </flash>-->
+            <p>And when we put it all together we get that indeed,</p>
+            <p>
+                <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:mi>t</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mfenced open="(" close=")">
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:msub>
+                                                <m:mi>y</m:mi>
+                                                <m:mn>1</m:mn>
+                                            </m:msub>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:mover>
+                                            <m:msub>
+                                                <m:mi>y</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msub>
+                                            <m:mo>¯</m:mo>
+                                        </m:mover>
+                                    </m:mrow>
+                                </m:mfenced>
+                                <m:mo>−</m:mo>
+                                <m:mn>0</m:mn>
+                            </m:mrow>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mfrac>
+                                        <m:msubsup>
+                                            <m:mi>s</m:mi>
+                                            <m:mn>1</m:mn>
+                                            <m:mn>2</m:mn>
+                                        </m:msubsup>
+                                        <m:msub>
+                                            <m:mi>n</m:mi>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                    </m:mfrac>
+                                    <m:mo>+</m:mo>
+                                    <m:mfrac>
+                                        <m:msubsup>
+                                            <m:mi>s</m:mi>
+                                            <m:mn>2</m:mn>
+                                            <m:mn>2</m:mn>
+                                        </m:msubsup>
+                                        <m:msub>
+                                            <m:mi>n</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                    </m:mfrac>
+                                </m:mrow>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mn>10</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>73</m:mn>
+                                <m:mo>−</m:mo>
+                                <m:mn>13</m:mn>
+                                <m:mo>.</m:mo>
+                                <m:mn>33</m:mn>
+                            </m:mrow>
+                            <m:msqrt>
+                                <m:mrow>
+                                    <m:mfrac>
+                                        <m:msup>
+                                            <m:mrow>
+                                                <m:mn>4</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>25</m:mn>
+                                            </m:mrow>
+                                            <m:mn>2</m:mn>
+                                        </m:msup>
+                                        <m:mn>150</m:mn>
+                                    </m:mfrac>
+                                    <m:mo>+</m:mo>
+                                    <m:mfrac>
+                                        <m:msup>
+                                            <m:mrow>
+                                                <m:mn>4</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>02</m:mn>
+                                            </m:mrow>
+                                            <m:mn>2</m:mn>
+                                        </m:msup>
+                                        <m:mn>85</m:mn>
+                                    </m:mfrac>
+                                </m:mrow>
+                            </m:msqrt>
+                        </m:mfrac>
+                        <m:mo>=</m:mo>
+                        <m:mo>−</m:mo>
+                        <m:mn>4</m:mn>
+                        <m:mo>.</m:mo>
+                        <m:mn>66</m:mn>
+                    </m:mrow>
+                </m:math>
+            </p>
+            <p>The test statistic tells us what the data tell us about <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math>. In this case that difference (10.73 - 13.33) is 4.66 standard errors
+                below what the null hypothesis claims this difference to be (0). 4.66 standard errors
+                is quite a lot and probably indicates that the data provide evidence against
+                    H<sub>o</sub>. </p>
+        </example>
+        <activity idref="_u5_m2_lbd1" purpose="learnbydoing"/>
+    <p>We <!--are now done talking about-->have completed step 2 and are ready to proceed to step 3, finding<!--we will find-->
+        the p-value of the test.</p>
+    </body>
+</workbook_page>

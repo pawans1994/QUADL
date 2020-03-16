@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="linear6">
+<head>
+<title>Linear Relationships (6 of 8)</title>
+
+    <objref idref="use_least_squares_regression"/>
+
+
+
+
+
+
+
+</head>
+<body>
+   
+<p>The technique that specifies the dependence of the response variable on the explanatory variable
+            is called <em>regression</em>. When that dependence is linear (which is
+            <?oxy_delete author="mmyers" timestamp="20101101T131353-0400" content="our"?><?oxy_insert_start author="mmyers" timestamp="20101101T131355-0400"?>the<?oxy_insert_end?>
+            case<?oxy_insert_start author="mmyers" timestamp="20101101T131358-0400"?> in our
+            examples in this section<?oxy_insert_end?>), the technique is called <em>linear
+                regression</em>. Linear regression is therefore the technique of finding the line
+            that best fits the pattern of the linear relationship (or in other words, the line that
+            best describes how the response variable linearly depends on the explanatory
+            variable).</p>
+<p>To understand how such a line is chosen, consider the following very simplified version of the age-distance example (we left just 6 of the drivers on the scatterplot):
+		<image style="block" src="../webcontent/linear9.gif" alt="The scatterplot of Sign Legibility
+vs. Driver Age with only 6 data points. The data points chosen to be shown roughly make a parallelogram,
+whose top and bottom sides represent negative relationships."/>
+</p>
+<p>There are many lines that
+            <?oxy_insert_start author="mmyers" timestamp="20101101T131859-0400"?>look like they
+            would be
+            <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T131858-0400" content="are"?>
+            good candidates to be the line that best fits the <?oxy_comment_start author="mmyers" timestamp="20101101T132425-0400" comment="Students might wonder why all of the lines intersect at a certain point. If this is always the case, consider explaining why that is the case. If this is not always the case, consider replacing this graphic with one in which the lines don&apos;t all appear to intersect at the same place."?>data:<?oxy_comment_end?>
+            <image style="block" src="../webcontent/linear10.gif" alt="The same scatterplot the
+6 data points. Five different lines have been drawn from the upper left region of the plot to
+the lower right. They all intersect the parallelogram created by the 6 data points in a way
+such that each line is above 3 points and below 3 points. These lines are potential
+candidates. There are many other lines which could be used to fit the data."/>
+        </p>
+<p>It is doubtful that everyone would select the same line in the plot above. We need to agree on
+            what we mean by "best fits the data"; in other words, we need to agree on a criterion by
+            which we would select this line. We want the line we choose to be close to the data
+            points. In other words, whatever criterion we choose, it had better somehow take into
+            account the vertical deviations of the data points from the line, which are marked
+            <?oxy_insert_start author="mmyers" timestamp="20101101T132000-0400"?>with<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101101T131958-0400" content="in"?>
+            blue arrows in the plot below: <image style="block" src="../webcontent/linear11.gif" alt="
+The same scatterplot with 6 points. A potential line has been drawn, and a vertical line from each
+data point to the line has also been drawn. The length of these vertical lines have to be taken into
+acount when choosing a best fit line."/>
+        </p>
+<p>The most commonly used criterion is called the <em>least squares</em> criterion. This criterion
+            says: Among all the lines that look good on your data, choose the one that has the
+            smallest sum of squared vertical deviations. Visually, each squared deviation is
+            represented by the area of one of the squares in the plot below. Therefore, we are
+            looking for the line that will have the smallest total yellow area. <image style="block"
+                src="../webcontent/linear12.gif" alt="The same scatterplot with 6 data points.
+A line has been chosen, and for each of the 6 data points, a vertical line is drawn from the data
+point to the line. A square is then drawn, one side using this line, so that all 4 sides are the
+same length as the vertical line. For all 6 data points we have 6 different vertical lines and thus
+6 different squares. The least squares criterion looks to reduce the total area of these squares."/>
+            This line is called the <em>least-squares regression line</em>,
+            and<?oxy_insert_start author="mmyers" timestamp="20101101T132614-0400"?>,<?oxy_insert_end?>
+            as we'll see, it fits the linear pattern of the data very well. </p>
+<!-- Commented out because link to applet is broken -->
+<!--<p>
+<link href="http://www.duxbury.com/authors/mcclellandg/tiein/johnson/reg.htm" target="new">This applet</link> illustrates the least squares criterion, and  allows you to practice fitting a regression line to describe the relationship between height and weight in some data on a group of college women.  Click in the applet to move the line, and observe the resulting changes to the area of the squares - the squared vertical distances between the line and the data.  Move the line until you believe you have found the <em>least-squares regression line</em>.  Click the button entitled "Find Best Model" to compare your line to the true least-squares regression line.  Note: Don't worry about the unfamiliar word "model" at the top, you can think of it as meaning "line" for our purposes. </p>
+<p>At the top of the applet, notice the equation:
+		<formula style="block">WEIGHT = -186.5 + 4.7 * HEIGHT</formula>
+</p>
+<p>This is the equation for the least-squares regression line. </p>-->
+<p>For the remainder of this lesson, you'll need to feel comfortable with the algebra of a straight
+            line. In particular you'll need to be familiar with the <em>slope </em> and the
+                <em>intercept </em>in the equation of a
+            line<?oxy_insert_start author="mmyers" timestamp="20101101T132631-0400"?>,<?oxy_insert_end?>
+            and their interpretation.</p>
+
+<activity idref="algebra" purpose="learnmore"/>
+</body>
+</workbook_page>

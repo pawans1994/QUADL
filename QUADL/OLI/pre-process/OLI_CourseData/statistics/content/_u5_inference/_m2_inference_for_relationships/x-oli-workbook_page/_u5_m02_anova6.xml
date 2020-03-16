@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova6">
+    <head>
+        <title>ANOVA (6 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+        <objref idref="specify_hypotheses_for_groups"/>
+    </head>
+    <body>
+       
+        <p>Before we give you hands-on practice in carrying out the ANOVA F-test, let's look at
+            another example:</p>
+        <example>
+
+            <p>Do advertisers alter the reading level of their ads based on the target audience of
+                the magazine they advertise in?</p>
+            <p>In 1981, a study of magazine advertisements was conducted (F.K. Shuptrine and D.D.
+                McVicker, "Readability Levels of Magazine Ads," Journal of Advertising Research,
+                21:5, October 1981). Researchers selected random samples of advertisements from each
+                of three groups of magazines:</p>
+            <p>Group
+                1<?oxy_insert_start author="mmyers" timestamp="20101129T095550-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095548-0500" content=" - "?>highest
+                educational level magazines (such as Scientific American, Fortune, The New
+                Yorker)</p>
+            <p>Group
+                2<?oxy_insert_start author="mmyers" timestamp="20101129T095558-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095556-0500" content=" - "?>middle
+                educational level magazines (such as Sports Illustrated, Newsweek, People)</p>
+            <p>Group
+                3<?oxy_insert_start author="mmyers" timestamp="20101129T095607-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095605-0500" content=" - "?>lowest
+                educational level magazines (such as National Enquirer, Grit, True Confessions)</p>
+            <p>The measure that the researchers used to assess the level of the ads was the number
+                of words in the ad. 18 ads were randomly selected from each of the magazine groups,
+                and the number of words per ad were recorded.</p>
+            <p>The following figure summarizes this problem:</p>
+            <image style="block" src="../webcontent/anova/image19.png" alt="The variable Education Level
+(X) has three categories: High, Medium, and Low. From these categories, we form our populations: High
+education level magazines, medium education level magazines, and low education level magazines.
+Each population has its own # of words in ads (Y) mean. From each population we create a sample of size
+18. We find that for High level magazines, Y-bar_1 = 140.0 . For medium level, Y-bar_2 = 121.4, and for
+low level, Y-bar_3 = 106.5"/>
+            <p>Our question of interest is whether the number of words in ads (Y) is related to the
+                educational level of the magazine (X). To answer this
+                question<?oxy_insert_start author="mmyers" timestamp="20101129T095648-0500"?>,<?oxy_insert_end?>
+                we need to compare <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>,</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                        <m:mo>,</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>3</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math>, the mean number of words in ads of the three magazine groups. Note in the
+                figure that the sample means
+                <?oxy_insert_start author="mmyers" timestamp="20101129T095726-0500"?>are<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095724-0500" content="were"?>
+                provided. It seems that what the data suggest makes sense; the magazines in group 1
+                have the largest number of words per ad (on average) followed by group 2, and then
+                group 3. </p>
+            <p>The question is whether these differences between the sample means are significant.
+                In other words, are the differences among the observed sample means due to true
+                differences among the μ's or merely due to sampling
+                variability<?oxy_insert_start author="mmyers" timestamp="20101129T095800-0500"?>?<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095758-0500" content="."?>
+                To answer this question, we need to carry out the ANOVA F-test. </p>
+            <p>Step 1: Stating the
+                hypotheses<?oxy_insert_start author="mmyers" timestamp="20101129T095843-0500"?>.<?oxy_insert_end?></p>
+            <p>We are testing:</p>
+            <image style="block" src="../webcontent/image120.gif" alt="H_0: &mu;_1 = &mu;_2 = &mu;_3.
+  H_a: not all &mu;'s are equal"/>
+            <p>Conceptually, the null hypothesis claims that the number of words in ads is not
+                related to the educational level of the magazine, and the
+                alternative<?oxy_insert_start author="mmyers" timestamp="20101129T095823-0500"?>
+                hypothesis<?oxy_insert_end?> claims that there is a relationship.</p>
+            <p>Step 2: Checking conditions and summarizing the
+                data<?oxy_insert_start author="mmyers" timestamp="20101129T095846-0500"?>.<?oxy_insert_end?></p>
+            <p>(i) The ads were selected at random from each magazine group, so the three samples
+                are independent.</p>
+            <p>In order to check the next two conditions, we'll need to look at the data (condition
+                ii), and calculate the sample standard deviations of the three samples (condition
+                iii). Here are the
+                side<?oxy_insert_start author="mmyers" timestamp="20101129T095911-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095912-0500" content=" "?>by<?oxy_insert_start author="mmyers" timestamp="20101129T095913-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T095914-0500" content=" "?>side
+                boxplots of the data, followed by the standard deviations:</p>
+            <p>
+                <image style="block" src="../webcontent/image121.gif" alt="Three boxplots titled
+&quot;Boxplot of Words vs GROUP.&quot; The vertical axis is labeled &quot;Words,&quot; and the
+horizontal axis is labeled &quot;GROUP.&quot; We see that Group 3 has the smallest Q1 to Q3 interval,
+and that Q2 is far below the mean. Group 2 has a larger Q1 to Q3 interval, and Group 1 has the largest
+Q1 to Q3 interval, and a Q2 above its mean. Since the box plots are all centered at about the same word
+count, the larger Q1 to Q3 intervals cover the smaller ones."/>
+                <image style="block" src="../webcontent/image169_excel.gif" alt="Group 1 StDev: 74.0
+    Group 2 StDev: 64.3
+    Group 3 StDev: 57.6"/>
+            </p>
+            <!--  RS 07/28/10 - Generalized to eliminate alternatives
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>In order to check the next two conditions, we'll need to look at the data (condition ii), and calculate the sample standard deviations of the three samples (condition iii). Here are the side by side boxplots of the data, followed by the standard deviations:</p>
+<p>
+<image style="block" src="../webcontent/image121.gif"/>
+<image style="block" src="../webcontent/image169_excel.gif"/>
+</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>In order to check the next two conditions, we'll need to look at the data (condition ii), and calculate the sample standard deviations of the three samples (condition iii). Here are the side by side boxplots of the data, followed by the descriptive statistics:</p>
+<p>
+<image style="block" src="../webcontent/image121.gif"/>
+<image style="block" src="../webcontent/image169.gif"/>
+</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>In order to check the next two conditions, we'll need to look at the data (condition ii), and calculate the sample standard deviations of the three samples (condition iii). Here are the side by side boxplots of the data, followed by the standard deviations:</p>
+        <p>
+            <image style="block" src="../webcontent/image121.gif"/>
+            <image style="block" src="../webcontent/image169_excel.gif"/>
+        </p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+            <p>(ii) The graph does not display any alarming violations of the normality assumption.
+                It seems like there is some skewness in groups 2 and 3, but not extremely so, and
+                there are no outliers in the data.</p>
+            <p>(iii) We can assume that the equal standard deviation assumption is met since the
+                rule of thumb is satisfied: the largest sample standard deviation of the three is 74
+                (group 1), the smallest one is 57.6 (group 3), and 74/57.6 &lt; 2.</p>
+            <p>Before we move on, let's look again at the graph. It is easy to see the trend of the
+                sample means (indicated by red circles). However, there is so much variation within
+                each of the groups that there is almost a complete overlap between the three
+                boxplots, and the differences between the means are over-shadowed and seem like
+                something that could have happened just by chance. Let's move on and see whether the
+                ANOVA F-test will support this observation.</p>
+            <p>Using statistical software to conduct the ANOVA F-test, we find that the F<?oxy_insert_start author="mmyers" timestamp="20101129T100320-0500"?>
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T100320-0500" content="-"?>statistic
+                is 1.18, which is not very large. We also find that the p-value is 0.317.</p>
+            <!--  RS 07/28/10 - Generalized to eliminate alternatives
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>Using Excel to conduct the ANOVA F-test, we find that the F-statistic is 1.18, which is not very large.  Excel also tells us that the p-value is 0.317.</p>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>Here is the Minitab output of the ANOVA F-test:</p>
+<image style="block" src="../webcontent/image170.gif"/>
+<p>As you can see, the F-statistic is 1.18, which is not very large.</p>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>Using R to conduct the ANOVA F-test, we find that the F-statistic is 1.18, which is not very large.  R also tells us that the p-value is 0.317.</p>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+            <p>Step 3. Finding the
+                p-value<?oxy_insert_start author="mmyers" timestamp="20101129T100329-0500"?>.<?oxy_insert_end?></p>
+            <p>The p-value is
+                0.317<?oxy_insert_start author="mmyers" timestamp="20101129T100333-0500"?>,<?oxy_insert_end?>
+                which tells us that getting data like those observed is not very surprising assuming
+                that there are no differences between the three magazine groups with respect to the
+                mean number of words in ads (which is what
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T100354-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T100352-0500" content="Ho"?>
+                claims).</p>
+            <p>In other words, the large p-value tells us that it is quite reasonable that the
+                differences between the observed sample means could have happened just by chance
+                (i.e., due to sampling variability) and not because of true differences between the
+                means.</p>
+            <p>Step 4: <?oxy_insert_start author="mmyers" timestamp="20101129T100413-0500"?>Making
+                <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T100417-0500" content="C"?><?oxy_insert_start author="mmyers" timestamp="20101129T100417-0500"?>c<?oxy_insert_end?>onclusion<?oxy_insert_start author="mmyers" timestamp="20101129T100419-0500"?>s<?oxy_insert_end?>
+                in
+                context<?oxy_insert_start author="mmyers" timestamp="20101129T100408-0500"?>.<?oxy_insert_end?></p>
+            <p>The large p-value indicates that the results are not significant, and that we cannot
+                reject
+                    <?oxy_insert_start author="mmyers" timestamp="20101129T100428-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101129T100426-0500" content="Ho"?>.</p>
+            <p>We therefore conclude that the study does not provide evidence that the mean number
+                of words in ads is related to the educational level of the magazine. In other words,
+                the study does not provide evidence that advertisers alter the reading level of
+                their ads (as measured by the number of words) based on the educational level of the
+                target audience of the magazine.</p>
+        </example>
+        <activity idref="_u5_m2_lbd6" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

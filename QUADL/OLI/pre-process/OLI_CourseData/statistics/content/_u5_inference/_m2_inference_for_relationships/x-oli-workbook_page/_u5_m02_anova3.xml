@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova3">
+    <head>
+        <title>ANOVA (3 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+    <body>
+       
+        <section>
+            <title>The idea behind the ANOVA F-Test</title>
+            <body>
+                <p>Let's think about how we would go about testing whether the population means
+                        <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>1</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>3</m:mn>
+                            </m:msub>
+                            <m:mo>,</m:mo>
+                            <m:msub>
+                                <m:mi mathvariant="normal">μ</m:mi>
+                                <m:mn>4</m:mn>
+                            </m:msub>
+                        </m:mrow>
+                    </m:math> are equal. It seems as if the best we could do
+                    <?oxy_delete author="mmyers" timestamp="20101128T231348-0500" content="(which also makes sense) "?>is
+                    to calculate their point
+                    estimates<?oxy_insert_start author="mmyers" timestamp="20101128T231407-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231405-0500" content=" -- "?>the
+                    sample mean in each of our 4 samples (denote them by <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>,</m:mo>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>,</m:mo>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>3</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>,</m:mo>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>4</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>), </p>
+                <image style="block" src="../webcontent/anova/image7.png" alt="For each of the four populations
+(Business, English, Math, and Psych majors), we wish to find the level of frustration (Y) mean, so we have taken
+a sample size of 35 for each population. For each sample, we have calculated Y-bar, so we have Y-bar_1,
+Y-bar_2, Y-bar_3, and Y-bar_4."/>
+                <p>and see how far apart these sample means are, or in other words, measure the
+                    variation between the sample means. If we find that the four sample means are
+                    not all close
+                    together<?oxy_insert_start author="mmyers" timestamp="20101128T231441-0500"?>,<?oxy_insert_end?>
+                    we'll say that we have evidence against
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T231457-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231455-0500" content="Ho"?>,
+                    and otherwise, if they are close together, we'll say that we do not have
+                    evidence against
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T231506-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231504-0500" content="Ho"?>.
+                    This seems quite simple, but is this enough? Let's see.</p>
+                <p>It turns out that:</p>
+                <p>
+                    <?oxy_comment_start author="mmyers" timestamp="20101128T231547-0500" comment="use bullets"?>*<?oxy_comment_end?>
+                    The sample mean frustration score of the 35
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T231552-0500"?>b<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231552-0500" content="B"?>usiness
+                    majors is: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mn>7</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>3</m:mn>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> * The sample mean frustration score of the 35 English majors is: <m:math
+                        overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mn>11</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>8</m:mn>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> * The sample mean frustration score of the 35
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T231602-0500"?>m<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231601-0500" content="M"?>ath
+                    majors is: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>3</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mn>13</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>2</m:mn>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> * The sample mean frustration score of the 35
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T231610-0500"?>p<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231609-0500" content="P"?>sychology
+                    majors is: <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:msub>
+                                    <m:mi>y</m:mi>
+                                    <m:mn>4</m:mn>
+                                </m:msub>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                            <m:mo>=</m:mo>
+                            <m:mn>14</m:mn>
+                            <m:mo>.</m:mo>
+                            <m:mn>0</m:mn>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p>Below we present two possible scenarios for our example. In both cases, we
+                    construct side-by-side boxplots for four groups of frustration levels
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T231631-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231634-0500" content="which"?>
+                    have the same variation among their means. Thus, Scenario #1 and Scenario #2
+                    both show data for four groups with the sample means 7.3, 11.8, 13.2, and 14.0
+                    (<?oxy_insert_start author="mmyers" timestamp="20101128T231727-0500"?>indicated
+                    with red
+                    <?oxy_insert_end?>mark<?oxy_insert_start author="mmyers" timestamp="20101128T231735-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T231736-0500" content="ed with red circles"?>)<?oxy_insert_start author="mmyers" timestamp="20101128T231739-0500"?>.<?oxy_insert_end?></p>
+                <image style="block" src="../webcontent/image111.gif" alt="In this set of box plots, we
+see that for each population, the interval between the first and third quartile is very large - for
+Business majors, the first quartile is at about 2, and the third quartile is at about 17. The rest
+of the majors have smaller ranges, but they are still large, covering 10 or more frustration points. 
+The mean for business is about 9, for English 12, mathematics 13, and psychology about a 13. Every majors'
+mean is in the interval of every other major's first and third quartiles."/>
+                <image style="block" src="../webcontent/image112.gif" alt="In this set of box plots,
+the interval between the first and third quartile for each major is much narrower - the worse case is about 7.
+In addition, we also see that while the means for each major are the same as in the first set of box plots,
+the box plot for business does not contain any other major's mean in its first and third quartile interval.
+We also see that no other majors' first and third quartile interval includes business's mean. In fact,
+they don't even include its third quartile."/>
+                <wb:inline idref="u4_m3_anova2_tutor2" purpose="learnbydoing"/>
+                <!--
+    <flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="246" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u5_m2_anovatutor2.xml</param>
+<param name="problem_name">_u5_m2_anovatutor2</param>
+</flash>-->
+                <p>The important difference between the two scenarios is that the first represents
+                    data with a large amount of variation within each of the four groups; the second
+                    represents data with a small amount of variation within each of the four
+                    groups.</p>
+                <p>Scenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232325-0500" content="#"?>1,
+                    because of the large amount of spread within the groups, shows boxplots with
+                    plenty of overlap. One could imagine the data arising from 4 random samples
+                    taken from 4 populations, all having the same mean of about 11 or 12. The first
+                    group of values may have been a bit on the low side, and the other three a bit
+                    on the high side, but such differences could conceivably have come about by
+                    chance. This would be the case if the null hypothesis, claiming equal population
+                    means, were true. Scenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232316-0500" content="#"?>2,
+                    because of the small amount of spread within the groups, shows boxplots with
+                    very little overlap. It would be very hard to believe that we are sampling from
+                    four groups
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232151-0500"?>that
+                    <?oxy_insert_end?>hav<?oxy_insert_start author="mmyers" timestamp="20101128T232155-0500"?>e<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232154-0500" content="ing"?>
+                    equal population means. This would be the case if the null hypothesis, claiming
+                    equal population means, were false.</p>
+                <p>Thus, in the language of hypothesis tests, we would say that if the data were
+                    configured as
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232303-0500"?>they are
+                    <?oxy_insert_end?>in
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232307-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232307-0500" content="S"?>cenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232310-0500" content="#"?>1, we
+                    would not reject the null hypothesis that population mean frustration levels
+                    were equal for the four majors. If the data were configured as
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232356-0500"?>they are
+                    <?oxy_insert_end?>in
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232400-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232400-0500" content="S"?>cenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232404-0500" content="#"?>2, we
+                    would reject the null hypothesis, and we would conclude that mean frustration
+                    levels differ, depending on major.</p>
+                <p>Let's summarize what we learned from this. The question we need to answer is: Are
+                    the differences among the sample means (<m:math overflow="scroll">
+                        <m:mrow>
+                            <m:mover>
+                                <m:mi>Y</m:mi>
+                                <m:mo>¯</m:mo>
+                            </m:mover>
+                        </m:mrow>
+                    </m:math>'s) due to true differences among the μ's (alternative hypothesis), or
+                    merely due to sampling variability (null hypothesis)? </p>
+                <p>In order to answer this question using our data, we obviously need to look at the
+                    variation among the sample means, but this alone is not enough. We need to look
+                    at the variation among the sample means relative to the variation within the
+                    groups. In other
+                    words<?oxy_insert_start author="mmyers" timestamp="20101128T232447-0500"?>,<?oxy_insert_end?>
+                    we need to look at the quantity:</p>
+                <image style="block" src="../webcontent/image163.gif" alt="variation among sample means /
+variation within groups"/>
+                <p>which measures to what extent the difference among the sampled groups' means
+                    dominates over the usual variation within sampled groups (which reflects
+                    differences in individuals that
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232524-0500"?>are<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232524-0500" content="is"?>
+                    typical in random samples).</p>
+                <p>When the variation within groups is large (like in
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232535-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232534-0500" content="S"?>cenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232623-0500" content="#"?>1),
+                    the variation (differences) among the sample means could become negligible and
+                    the data
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232547-0500"?>provide<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232545-0500" content="have"?>
+                    very little evidence against
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T232605-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232603-0500" content="Ho"?>.
+                    When the variation within groups is small (like in
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T232615-0500"?>s<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232614-0500" content="S"?>cenario
+                    <?oxy_delete author="mmyers" timestamp="20101128T232619-0500" content="#"?>2),
+                    the variation among the sample means dominates over it, and the data have
+                    stronger evidence
+                    against<?oxy_insert_start author="mmyers" timestamp="20101128T232756-0500"?>
+                        H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T232630-0500" content=" Ho"?>.</p>
+                <p>Looking at this ratio of variations is the idea behind the comparing more than
+                    two means; hence the name analysis of variance (ANOVA).</p>
+                <p>Now that we understand the idea behind the ANOVA F-test, let's move on to step 2.
+                    We'll start by talking about the test statistic, since it will be a natural
+                    continuation of what we've just discussed, and then move on to talk about the
+                    conditions under which the ANOVA F-test can be used. In practice, however, the
+                    conditions need to be checked first, as we did before.</p>
+                <p> </p>
+            </body>
+        </section>
+    </body>
+</workbook_page>

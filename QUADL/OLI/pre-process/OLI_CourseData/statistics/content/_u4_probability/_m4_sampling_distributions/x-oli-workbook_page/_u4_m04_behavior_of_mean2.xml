@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m04_behavior_of_mean2">
+    <head>
+        <title>Behavior of Sample Mean (2 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_mean"/>
+    </head>
+    <body>
+
+        <p>The results we got in our simulations are not surprising. Advanced probability theory
+            confirms that by asserting the following:</p>
+        <section>
+            <title>The Sampling Distribution of the Sample Mean</title>
+            <body>
+                <p>If repeated random samples of a given size n are taken from a population of
+                    values for a quantitative variable, where the population mean is <m:math
+                        overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math> and the population standard deviation is <m:math overflow="scroll">
+                        <m:mi>σ</m:mi>
+                    </m:math>, then the mean of all sample means (<m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>) is population mean <m:math overflow="scroll">
+                        <m:mi>μ</m:mi>
+                    </m:math>. As for the spread of all sample means, theory dictates the behavior
+                    much more precisely than saying that there is less spread for larger samples. In
+                    fact, the standard deviation of all sample means (<m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>x</m:mi>
+                            </m:mrow>
+                            <m:mo>¯</m:mo>
+                        </m:mover>
+                    </m:math>) is exactly <m:math overflow="scroll">
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mi>σ</m:mi>
+                            </m:mrow>
+                            <m:mrow>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:mfrac>
+                    </m:math>. Since the square root of sample size n appears in the denominator,
+                    the standard deviation does decrease as sample size increases. </p>
+
+                <section purpose="learnbydoing">
+                    <title>Learn By Doing</title>
+                    <body>
+                        <p>The Federal Pell Grant Program provides need-based grants to low-income
+                            undergraduate and certain postbaccalaureate students to promote access
+                            to postsecondary education. According to the National Postsecondary
+                            Student Aid Study conducted by the U.S. Department of Education in 2008,
+                            the average Pell grant award for 2007-2008 was $2,600. Assume that the
+                            standard deviation in Pell grant awards was $500.</p>
+                        <wb:inline idref="u3_m4_mean2_tutor1" purpose="learnbydoing"/>
+                    </body>
+                </section>
+                <wb:inline idref="u3_m4_mean2_tutor1_1" purpose="didigetthis"/>
+                <p>Let's compare and contrast what we now know about the sampling distributions for
+                    sample means and sample proportions. </p>
+
+
+                <table>
+                    <tr>
+                        <th/>
+                        <th/>
+                        <th/>
+                        <th colspan="3">Sampling Distribution</th>
+                    </tr>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Parameter</th>
+                        <th>Statistic</th>
+                        <th>Center</th>
+                        <th>Spread</th>
+                        <th>Shape</th>
+                    </tr>
+                    <tr>
+                        <td>Categorical (example: left-handed or not)</td>
+                        <td>p = population proportion</td>
+                        <td><m:math overflow="scroll">
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:math> = sample proportion</td>
+                        <td>p</td>
+                        <td><m:math overflow="scroll">
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mi>p</m:mi>
+                                                <m:mo>(</m:mo>
+                                                <m:mn>1</m:mn>
+                                                <m:mo>-</m:mo>
+                                                <m:mi>p</m:mi>
+                                                <m:mo>)</m:mo>
+                                            </m:mrow>
+                                            <m:mrow>
+                                                <m:mi>n</m:mi>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:math></td>
+                        <td>Normal IF np ≥ 10 and n(1 - p) ≥ 10</td>
+                    </tr>
+                    <tr>
+                        <td>Quantitative (example: age)</td>
+                        <td>&#956; = population mean, &#963; = population standard deviation</td>
+                        <td><m:math overflow="scroll">
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>x</m:mi>
+                                    </m:mrow>
+                                    <m:mo>¯</m:mo>
+                                </m:mover>
+                            </m:math> = sample mean</td>
+                        <td>&#956;</td>
+                        <td><m:math overflow="scroll">
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mi>σ</m:mi>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:msqrt>
+                                            <m:mrow>
+                                                <m:mi>n</m:mi>
+                                            </m:mrow>
+                                        </m:msqrt>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:math></td>
+                        <td><em>When will the distribution of sample means be approximately normal
+                                ?</em></td>
+                    </tr>
+                </table>
+
+
+
+                <p>Now we will investigate the shape of the sampling distribution of sample means.
+                    When we were discussing the sampling distribution of sample proportions, we said
+                    that this distribution is approximately normal if np ≥ 10 and n(1 - p) ≥ 10. In
+                    other words, we had a guideline based on sample size for determining the
+                    conditions under which we could use normal probability calculations for sample
+                    proportions. </p>
+                <p> When will the distribution of sample means be approximately normal? Does this
+                    depend on the size of the sample? </p>
+                <p> It seems reasonable that a population with a normal distribution will have
+                    sample means that are normally distributed even for very small samples. We saw
+                    this illustrated in the previous simulation with samples of size 9. </p>
+                <p> What happens if the distribution of the variable in the population is heavily
+                    skewed? Do sample means have a skewed distribution also? If we take really large
+                    samples, will the sample means become more normally distributed? </p>
+                <p> In the next simulation, we will investigate these questions. </p>
+             
+                <youtube src="cyNqdostWzk"></youtube>
+                <!--  <flash src="../../../webcontent/OLICamtasiaController.swf" width="592" height="552"
+                    purpose="simulation">
+                    <param name="movieURL">../../webcontent/flash/walkthrough4.swf</param>
+                    <param name="movieFPS">15</param>
+                    <param name="LoggingLibraryPath"
+                        >../../../webcontent/OLILoggingLibrary.swf</param>
+                </flash>-->
+                <wb:inline idref="u3_m4_mean2_tutor2" purpose="didigetthis"/>
+
+            </body>
+        </section>
+        <p> To summarize, the distribution of sample means will be approximately normal as long as
+            the sample size is large enough. This discovery is probably the single most important
+            result presented in introductory statistics courses. It is stated formally as the
+            <?oxy_comment_start author="mmyers" timestamp="20101122T192936-0500" comment="Make bold to indicate new terminology"?>Central
+            Limit Theorem.<?oxy_comment_end?>
+        </p>
+        <p> We will depend on the Central Limit Theorem again and again in order to do normal
+            probability calculations when we use sample means to draw conclusions about a population
+            mean. We now know that we can do this even if the population distribution is not normal. </p>
+        <p> How large a sample size do we need in order to assume that sample means will be normally
+            distributed? Well, it really depends on the population distribution, as we saw in the
+            simulation. The general rule of thumb is that samples of size 30 or greater will have a
+            fairly normal distribution regardless of the shape of the distribution of the variable
+            in the population. </p>
+        <p> Comment: For categorical variables, our claim that sample proportions are approximately
+            normal for large enough n is actually a special case of the Central Limit Theorem. </p>
+
+
+    </body>
+</workbook_page>

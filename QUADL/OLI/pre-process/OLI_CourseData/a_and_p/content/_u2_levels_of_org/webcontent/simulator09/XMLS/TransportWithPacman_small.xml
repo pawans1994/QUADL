@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation id="GlucoseTransportChannel2" version="1" date="11/28/07">
+    <name>&lt;b&gt; &lt;/b&gt;</name>
+
+    <debugger state="off"/>
+    <blueback state="off"/>
+    <steps>
+        <step id="create">
+
+            <actions>
+                <action event="record light"/>
+
+                <action event="create" name="bilayer" url="swfs/bilayer.jpg" x="0" y="200" xscale="1.2" yscale="1"/>
+                <action event="create" name="box1" url="tools/ligandBoxKDNEW.swf" x="0" y="0" xscale="1" yscale="1"/>
+                <action event="create" name="button" url="tools/buttonLIGHT.swf"  x="25" y="450" xscale="1"  yscale="1"/>
+                <action event="settimer" timer="6" advance="yes" resettimer="0"/>
+            </actions>
+            <objects tutor="">
+                <object name="button" state="invisible"/>
+                <object name="button" state="invisible"/>
+            </objects>
+            <nextbutton text="Begin Simulation"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+
+        <step id="startmolecules">
+            <objects tutor="">
+                <object name="bilayer" state="visible"/>
+                <object name="box1" state="visible"/>
+                <object name="button" state="visible"/>
+            </objects>
+            <actions>
+                <action event="reset" name="box1" params="4"/>
+                <action event="initialize"  name="button" params="object=box1,action=reset"  data="Reset"/>  
+                <action event="initialize" name="box1" params="leftBorder=0,rightBorder=750,topBorder=0,bottomBorder=500,leftBorder2=0,rightBorder2=750,topBorder2=200,bottomBorder2=300">
+                    <molecules>
+                        <molecule numMolecules="0" myID="0"/>
+                        <!--This is a fudge if only one molecule seems to need to be here-->
+                        <molecule numMolecules="1" injectionforce="0" velocity="0" cast="transportMolecule" eq1="500" eq2="200" angle1="30" angle2="355" x="250" y="150" Xoffset="0" Yoffset="0" rotationVelocity="0" rotation="0" transporter="1" polarity="0,0,0,0,0,0,0,0" mytype="molecule" myID="1" mybounce="true"/>
+                        <molecule numMolecules="1" injectionforce="0" velocity="40" cast="MoleculePacman" eq1="500" eq2="200" angle1="250" angle2="250" x="450" y="380" Xoffset="0" Yoffset="0" rotationVelocity="10" rotation="260" polarity="0,0,0,0,0,1,1,0" mytype="molecule" myID="2" mybounce="true"/>
+                        <molecule numMolecules="30" injectionforce="0" velocity="50" cast="glucose" bindswith="molecule2.pocket1.bound.bound,Kd?5,k?250,Kcat?.8,productidl?4&molecule1.pocket1.bound.bound1,Kd?5,k?250,Kcat?0&molecule1.pocket2.bound.boundr,Kd?5,k?250,Kcat?0" eq1="500" eq2="200" angle1="30" angle2="315" x="250" y="80" Xoffset="30" Yoffset="30" brownian=".05" polarity="0,0,0,0,0,1,1,0" mytype="ligand" myID="3"   mybounce="true"/>                       
+                        <molecule numMolecules="0" injectionforce="0" velocity="50" cast="glucose_6P" eq1="500" eq2="200" angle1="0" angle2="360" x="250" y="80" Xoffset="30" Yoffset="30" rotationVelocity="60" rotation="0" brownian=".05" polarity="0,0,0,0,0,1,1,0" mytype="ligand" myID="4" isproduct="1" mybounce="true"/>
+                    </molecules>
+                </action>
+                <action event="continue"/>
+                <action event="record all"/>
+            </actions>
+            <nextbutton text="Done" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="interlude">
+            <objects tutor="">
+                <object name="box1" state="visible"/>
+                <object name="Hline" state="invisible"/>
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="1"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        <step id="prepare to exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="unload" name="box1"/>
+                <action event="settimer" timer='6' advance='yes' resettimer='0' />
+            </actions>
+            <nextbutton text="Next" state="0"/>
+            <prevbutton text="Back" state="0"/>
+        </step>
+        
+        <step id="exit">
+            
+            <objects tutor="">
+                
+            </objects>
+            <actions>
+                <action event="record light"/>
+                <action event="exit" />
+            </actions>
+        </step>
+
+    </steps>
+</simulation>

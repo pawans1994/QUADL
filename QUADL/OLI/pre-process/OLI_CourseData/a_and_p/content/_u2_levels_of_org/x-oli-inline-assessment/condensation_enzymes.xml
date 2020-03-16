@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<assessment id="condensation_enzymes">
+    <title>Linking Glucose and Galactose</title>
+    <page>
+        <question id="link_gandg">
+            <body>
+                <p>Assuming that all possible enzymes exist, how many different structures can be formed by linking a molecule of glucose with a molecule of galactose?</p>
+                <p><input_ref input="q1"/></p>
+            </body>
+            <fill_in_the_blank id="q1" shuffle="false">
+                <choice value="A">5</choice>
+                <choice value="B">10</choice>
+                <choice value="C">20</choice>
+            </fill_in_the_blank>
+            <part>
+                <response input="q1" match="A" name="5">
+                    <feedback>Have you considered galactose at the beginning and at the end of the structure AND have you considered the alpha and beta configuration at the Anomeric Carbon?</feedback>
+                </response>
+                <response input="q1" match="B" name="10">
+                    <feedback>Have you considered galactose at the beginning and at the end of the structure AND have you considered the alpha and beta configuration at the Anomeric Carbon?</feedback>
+                </response>
+                <response input="q1" match="C" name="20" score="1">
+                    <feedback>You have them all.</feedback>
+                </response>
+                <hint>The Anomeric Carbon can bond in the alpha or beta position</hint>
+                <hint>Bond must involve the Anomeric Carbon</hint>
+            </part>
+        </question>
+    </page>
+</assessment>
+

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd1">
+    <head>
+        <title>Two Independent Samples</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in checking whether the
+            conditions that allow us to use the two-sample t-test are met.</p>
+        <section>
+            <title>Background</title>
+            <body>
+                <p>A researcher wanted to study whether or not men and women differ in the amount of
+                    time they watch TV during a week. In each of the following cases, you'll have to
+                    decide whether we can use the two-sample t-test to test this claim or not.</p>
+            </body>
+        </section>
+        <p>1. A random sample of 40 adults was chosen (22 of whom were women and 18 of whom were
+            men). At the end of the week, each of the 40 subjects reported the total amount of time
+            (in minutes) that he/she watched TV during that week. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file ( lbd1-1.xls) in StatCrunch you must first right-click
+                            <link href="../../../webcontent/excel/lbd1-1.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <p>As a reminder, to construct a histogram of the data: </p>
+                    <ul>
+                        <li>Choose Graph → Histogram.</li>
+                        <li>In the Histogram window select the columns corresponding to the two
+                            variables by using (Shift + click) or (Ctrl + click).</li>
+                        <li>Select the "Browse" or "Choose File" (depending on which browser you're
+                            using and select the data set you downloaded.</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <!--<p><!-\-If you feel that you need to look at the two samples using
+                    histograms, you can open the file in StatCrunch by right-clicking-\->To
+                        open this file (lbd1-1.xls) in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/lbd1-1.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next,
+                        click <link href="http://www.statcrunch.com/" target="new">here</link> to
+                        open StatCrunch in a separate window, and login using your username and
+                        password.</p>
+                    <p>As a reminder, to construct a histogram of the data:</p>
+                    <ul>
+                        <li>Choose Graph → Histogram</li>
+                        <li>In the Histogram window, select the columns corresponding to the two
+                            variables by using (Shift + click) or (Ctrl + click)</li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>The window displays the first histogram. To view the second histogram, press
+                        the > button</p>-->
+                </alternative>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>If you feel that you need to look at the two samples using histograms, you
+                        can open R with the data set preloaded by right-clicking <link
+                            href="../../../webcontent/r/lbd1-1.RData" target="self">here</link> and
+                        choosing "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>tv1</code>. The two
+                        variables in the data frame are <code>time.men</code> and
+                            <code>time.women</code>.</p>
+                    <p>Create two histograms to view the men's and women's data by modifying the
+                        following commands to add appropriate labels/titles.</p>
+                    <ul style="none">
+                        <li><code>hist(tv1$time.men)</code></li>
+                        <li><code>hist(tv1$time.women)</code></li>
+                    </ul>
+
+                    <!--<p>
+                    If you feel that you need to look at the two samples using
+                    histograms, you can open R with the dataset preloaded by right-clicking <link
+                        href="../../../webcontent/r/lbd1-1.RData" target="self">here</link> and
+                    choosing "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable "tv1," and you can view histograms of
+                        the men's and women's data by entering the commands
+                            <code>hist(tv1$time.men)</code> and
+                        <code>hist(tv1$time.women)</code>.</p>-->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p> If you feel that you need to look at the two samples using histograms,
+                        launch Minitab with the data in the worksheet by right-clicking <link
+                            href="../../../webcontent/minitab/lbd1-1.mtw" target="self">here</link>
+                        and choosing "Save Target As" to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <p>Reminder: To construct histograms of the data:</p>
+                    <ol>
+                        <li>Choose: Graph → Histogram. Choose "Simple" and click "OK."</li>
+                        <li>Under "Graph Variables" enter the columns where the data from the two
+                            samples are.</li>
+                        <li>Click "OK."</li>
+                    </ol>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/lbd1-1.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>Reminder: To construct histograms of the data:</p>
+                    <ul>
+                        <li>First we need to define the bins that Excel will use to create the
+                            histogram. In this case, our minimum data point is 120, and our max is
+                            2700. We'll use a bin width of 250, and make bins from 100 to 2849:</li>
+                        <li>In an empty cell type Bin and in the cell to the right type
+                            Frequency.</li>
+                        <li>In the cell under Bin put the different bins based on the bin width of
+                            250. Here the first bin would be 100-349. Continue adding bins by typing
+                            350-599, 600-849, 850-1099, etc. When finished you should have 11
+                            bins.</li>
+                        <li>Next sort the data by first highlighting a column and then selecting
+                                <em>sort smallest to largest</em> from the pop-up menu that appears
+                            by pressing the <em>Sort and Filter button</em> from the
+                                <em>Editing</em> group on the <em>Home</em> tab. Make sure to select
+                                <em>Continue with the current selection</em> so Excel does not
+                            adjust the other columns.</li>
+                        <li>With the data sorted, you can count the number that would fit into each
+                            bin and put those counts in the column under Frequency.</li>
+                        <li>Now highlight the Bin and Frequency columns. Then navigate to the
+                                <em>Insert</em> tab, find the <em>Chart</em> group and click on the
+                                <em>insert column</em> button (the picture of an upright bar graph).
+                            From there select <em>clustered column</em> under <em>2-D
+                            column.</em></li>
+                        <li>Histograms shouldn't have spaces between the bars, so right-click on one
+                            of the bars and choose <code style="inline">Format Data Series</code>.
+                            Then set the gap width to 0% (no gap).</li>
+                        <li>Before closing the Format Data Series window, click on <code
+                                style="inline">Border under Fill and Line</code> on the left, choose
+                                <code style="inline">Solid line</code>, and set the color to
+                            black.</li>
+                    </ul>
+                    <!--  <ul>
+                        <li>Click the <code style="inline">Data Analysis</code> button in the <code
+                                style="inline">Analysis</code> group on the <code style="inline"
+                                >Data</code> tab. Then choose <code style="inline">Histogram</code>
+                            in the resulting pop-up window and click <code style="inline"
+                            >OK</code>.</li>
+                        <li>In the next window, enter the range of data that you want to graph next
+                            to <code style="inline">Input Range</code>. If there is anything next to
+                                <code style="inline">Bin Range</code>, delete it (we will let Excel
+                            choose the bins for us). Make sure that <code style="inline">Chart
+                                Output</code> is selected and click "OK."</li>
+                        <li>Excel will create a new worksheet with a histogram as well as a table
+                            with the underlying bins and frequency distribution. The histogram is
+                            usually pretty small; you can click on it and then drag one of the
+                            handles on the outside to enlarge it.</li>
+                        <li>Histograms shouldn't have spaces between the bars, so right-click on one
+                            of the bars and choose <code style="inline">Format Data Series</code>.
+                            Then set the gap width to 0% (no gap).</li>
+                        <li>Before closing the Format Data Series window, click on <code
+                                style="inline">Border Color</code> on the left, choose <code
+                                style="inline">Solid line</code>, and set the color to black.</li>
+                    </ul>-->
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p> If you feel that you need to look at the two samples using histograms, you
+                        can launch Excel with the data in the worksheet by right-clicking <link
+                            href="../../../webcontent/excel/lbd1-1.xls" target="self">here</link>
+                        and choosing "Save Target As" to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel.</p>
+                    <p>Reminder: To construct histograms of the data:</p>
+                    <ul>
+                        <li>Choose <code style="inline">Tools → Data Analysis</code> from the menu
+                            bar. In the pop-up window, choose <code style="inline"
+                            >Histogram</code>.</li>
+                        <li>In the next window, enter the range of data that you want to graph next
+                            to <code style="inline">Input Range</code>. If there is anything next to
+                                <code style="inline">Bin Range</code>, delete it (we will let Excel
+                            choose the bins for us). Make sure that <code style="inline">Chart
+                                Output</code> is selected and click "OK."</li>
+                        <li>Excel will create a new worksheet with a histogram as well as a table
+                            with the underlying bins and frequency distribution. You can click and
+                            drag the lower right hand corner of the graph to enlarge it.</li>
+                        <li>Finally, to get rid of the spaces that Excel leaves between the bars,
+                            you can right-click on any of the bars and choose <code style="inline"
+                                >Format Data Series</code>. In the pop-up window, click on the <code
+                                style="inline">Options</code> tab and change the gap width to
+                            0.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>If you feel that you need to look at the two samples using histograms,
+                        construct a histogram for each sample using your TI graphing calculator.</p>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/lbd1-1.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <ul>
+                        <li>UNGROUP LBD11 </li>
+                        <li>L1: Time (women) </li>
+                        <li>L2: Time (men) </li>
+                    </ul>
+                    <p>NOTE: There are 22 times for women and 18 times for men. It may be just as
+                        easy to enter the values directly into your TI calculator.</p>
+                    <p><em>Histogram</em></p>
+                    <ul>
+                        <li>Either clear any equations you may have in your calculator by choosing
+                                <code style="inline">Y=/CLEAR</code>, or else toggle them off by
+                            choosing <code style="inline">Y=</code> and then pressing the left arrow
+                            until <code style="inline">=</code> is selected and pressing <code
+                                style="inline">ENTER</code>.</li>
+                        <li>Choose <code style="inline">STAT PLOT (2ND/Y=)</code>.</li>
+                        <li>Choose 4:PlotsOff. Hit <code style="inline">ENTER</code>.</li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image517.jpg" alt="PlotsOff    Done"/></li>
+                        <li>Again, choose <code style="inline">STAT PLOT (2ND/Y=)</code>.</li>
+                        <li>Choose one of the available plots. For example, choose <code
+                                style="inline">1:Plot1…Off</code></li>
+                        <li>Turn the plot ON by using arrows to highlight the word <code
+                                style="inline">ON</code>, then press <code style="inline"
+                                >ENTER</code>.</li>
+                        <li>Choose the <code style="inline">Type:</code> in the first row, the third
+                            graph is a histogram.</li>
+                        <li>Choose the correct <code style="inline">Xlist: L1 (2ND/1)</code>.</li>
+                        <li>Choose <code style="inline">Freq: 1</code> (the number one).</li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image518.jpg"
+                                alt="TI Calculator Output:
+        Plot1   Plot2   Plot3,  On  Off, Type: (scatterplot), (line plot), (histogram), (boxplot 1),
+(boxplot 2), (line plot 2), Xlist: L_1, Freq: 1 A"
+                            /></li>
+                        <li>To view the histogram, choose <code style="inline">ZOOM/9:
+                                ZoomStat</code>. </li>
+                        <li>Change the viewing window by choosing <code style="inline">WINDOW</code>
+                            and setting <code style="inline">Xmin</code>, <code style="inline"
+                                >Xmax</code>, <code style="inline">Xscl</code> (distance between
+                            tick marks on x-scale; this determines how wide each class is), <code
+                                style="inline">Ymin</code>, <code style="inline">Ymax</code>, <code
+                                style="inline">Yscl</code> (distance between tick marks on y-scale),
+                                <code style="inline">Xres</code> (leave <code style="inline"
+                                >Xres</code> at 1).</li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_twosamples3_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="406">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor1a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor1a</param>
+                </flash>
+            -->
+        <p>2. A random sample of 400 adults was chosen (191 women and 209 men). At the end of the
+            week, each of the 400 subjects reported the total amount of time (in minutes) that he or
+            she watched TV during that week. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file ( lbd1-2.xls) in StatCrunch you must first right-click
+                            <link href="../../../webcontent/excel/lbd1-2.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <!--<p><!-\-If you need to, you can download the data and open StatCrunch by right-clicking-\->To
+                        open this file (lbd1-3.xls) in StatCrunch, you must first right-click <link
+                            href="../../../webcontent/excel/lbd1-2.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next,
+                        click <link href="http://www.statcrunch.com/" target="new">here</link> to
+                        open StatCrunch in a separate window, and login using your username and
+                        password.</p>-->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/lbd1-2.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/lbd1-2.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>If you need to, you can launch Minitab with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/lbd1-2.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                </alternative>-->
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <code>If you feel that you need to look at the two samples using histograms, you
+                        can open R with the data set preloaded by right-clicking <link
+                            href="../../../webcontent/r/lbd1-2.RData" target="self">here</link> and
+                        choosing "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</code>
+                    <p>The data have been loaded into the data frame <code>tv2</code>. The two
+                        variables in the data frame are <code>time.men</code> and
+                            <code>time.women</code>.</p>
+                    <p>Create two histograms to view the men's and women's data by modifying the
+                        following commands to add appropriate labels/titles.</p>
+                    <ul style="none">
+                        <li><code>hist(tv2$time.men)</code></li>
+                        <li><code>hist(tv2$time.women)</code></li>
+                    </ul>
+
+                    <!--<p>If you feel that you need to look at the two samples using histograms, you can
+                    open R with the dataset preloaded by right-clicking <link
+                        href="../../../webcontent/r/lbd1-2.RData" target="self">here</link> and
+                    choosing "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable "tv2," and you can view histograms of
+                        the men's and women's data by entering the commands
+                            <code>hist(tv2$time.men)</code> and
+                        <code>hist(tv2$time.women)</code>.</p>-->
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/lbd1-2.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <ul>
+
+                        <li>L1: Time (women) </li>
+                        <li>L2: Time (men) </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_twosamples3_lbd_tutor2" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="370">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor1b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor1b</param>
+                </flash>
+            -->
+        <p>3. A random sample of 25 women and another random sample of 25 men was chosen. At the end
+            of the week, each of the 50 subjects reported the total amount of time (in minutes) that
+            he or she watched TV during that week. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file ( lbd1-3.xls) in StatCrunch you must first right-click
+                            <link href="../../../webcontent/excel/lbd1-3.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <!--<p>To open this file (lbd1-4.xls) in StatCrunch, you must first right-click
+                            <link href="../../../webcontent/excel/lbd1-3.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next, click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link> to open StatCrunch in a separate window, and login using
+                        your username and password.</p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/lbd1-3.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>-->
+                </alternative>
+                <!--    <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/lbd1-3.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>If you need to, you can launch Minitab with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/lbd1-3.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                </alternative>-->
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>If you feel that you need to look at the two samples using histograms, you
+                        can open R with the data set preloaded by right-clicking <link
+                            href="../../../webcontent/r/lbd1-3.RData" target="self">here</link> and
+                        choosing "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>tv3</code>. The two
+                        variables in the data frame are <code>time.men</code> and
+                            <code>time.women</code>.</p>
+                    <p>Create two histograms to view the men's and women's data by modifying the
+                        following commands to add appropriate labels/titles.</p>
+                    <ul style="none">
+                        <li><code>hist(tv3$time.men)</code></li>
+                        <li><code>hist(tv3$time.women)</code></li>
+                    </ul>
+
+
+
+                    <!--<p>If you feel that you need to look at the two samples using histograms, you can
+                    open R with the dataset preloaded by right-clicking <link
+                        href="../../../webcontent/r/lbd1-3.RData" target="self">here</link> and
+                    choosing "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable "tv3," and you can view histograms of
+                        the men's and women's data by entering the commands
+                            <code>hist(tv3$time.men)</code> and
+                        <code>hist(tv3$time.women)</code>.</p>-->
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/lbd1-3.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <ul>
+                        <li>UNGROUP LBD13 </li>
+                        <li>L1: Time (women) </li>
+                        <li>L2: Time (men) </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_twosamples3_lbd_tutor3" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="391">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor1c.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor1c</param>
+                </flash>
+            -->
+        <p>4. A random sample of 50 married couples was chosen, which was split into a sample of 50
+            men and a sample of 50 women. At the end of the week, each of the 100 subjects reported
+            the total amount of time (in minutes) that he or she watched TV during that week. </p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file ( lbd1-4.xls) in StatCrunch you must first right-click
+                            <link href="../../webcontent/excel/lbd1-4.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Next
+                        click <link href="http://www.statcrunch.com/" target="new">here </link>to
+                        open StatCrunch in a separate window and login using your username and
+                        password.</p>
+                    <!--<p> If you need to, you can download the data and open StatCrunch by
+                        right-clicking <link href="../../../webcontent/excel/lbd1-4.xls"
+                            target="self">here</link> and choosing "Save Target As" to download the
+                        file to your computer. Next click <link href="http://www.statcrunch.com/"
+                            target="new">here</link>to open StatCrunch in a separate window and
+                        login using your username and password.</p>-->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+
+                    <p>To open the dataset, click <link href="../../../webcontent/excel/lbd1-4.xls"
+                            target="self">here</link> to download the file to your computer. Then
+                        find the downloaded file and double-click it to open it in Excel. When Excel
+                        opens you may have to enable editing.</p>
+                    <p>Proceed just as before to make a histogram. However, you may want to change
+                        the bin length. In this case, our minimum data point is 220, and our max is
+                        700. We'll use a bin width of 50, and make bins from 200 to 749 for a total
+                        of 11 bins.</p>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>If you need to, you can launch Excel with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/lbd1-4.xls" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Excel.</p>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>If you need to, you can launch Minitab with the data in the worksheet by
+                        following these instructions: </p>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/lbd1-4.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                </alternative>-->
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <code>If you feel that you need to look at the two samples using histograms, you
+                        can open R with the data set preloaded by right-clicking <link
+                            href="../../../webcontent/r/lbd1-4.RData" target="self">here</link> and
+                        choosing "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</code>
+                    <p>The data have been loaded into the data frame <code>tv4</code>. The two
+                        variables in the data frame are <code>time.men</code> and
+                            <code>time.women</code>.</p>
+                    <p>Create two histograms to view the men's and women's data by modifying the
+                        following commands to add appropriate labels/titles.</p>
+                    <ul style="none">
+                        <li><code>hist(tv4$time.men)</code></li>
+                        <li><code>hist(tv4$time.women)</code></li>
+                    </ul>
+
+                    <!--<p>If you feel that you need to look at the two samples using histograms, you can
+                    open R with the dataset preloaded by right-clicking <link
+                        href="../../../webcontent/r/lbd1-4.RData" target="self">here</link> and
+                    choosing "Save Target As" to download the file to your computer. Then find the
+                    downloaded file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable "tv4", and you can view histograms of
+                        the men's and women's data by entering the commands
+                            <code>hist(tv4$time.men)</code> and
+                        <code>hist(tv4$time.women)</code>.</p>-->
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the survey data loaded, right-click <link
+                            href="../../../webcontent/ti/lbd1-4.8xg" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and send it to your calculator. For instructions on how to
+                        connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <ul>
+
+                        <li>L1: Time (women) </li>
+                        <li>L2: Time (men) </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_twosamples3_lbd_tutor4" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="301">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor1d.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor1d</param>
+                </flash>
+            -->
+    </body>
+</workbook_page>

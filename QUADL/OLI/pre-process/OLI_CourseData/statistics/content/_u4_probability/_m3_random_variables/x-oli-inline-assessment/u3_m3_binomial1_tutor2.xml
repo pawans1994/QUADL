@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_binomial1_tutor2">
+   <title>Tutor</title>
+   <page>
+      <content>
+         <p> A Department of Transportation report about air travel found that, nationwide, 78% of
+            all flights are on time. Suppose a random sample of 50 flights is selected from all
+            nationwide flights that were completed in the past 30 days (over 1000 flights). Let the
+            random variable X be defined as the number of sampled flights that arrived on time. </p>
+      </content>
+      <question id="q1">
+         <body>
+            <p> What is the value of the <em style="italic">n</em> parameter of the binomial random
+               variable X?</p>
+         </body>
+         <multiple_choice shuffle="false">
+            <choice value="A">78</choice>
+            <choice value="B">50</choice>
+            <choice value="C">39</choice>
+            <choice value="D">30</choice>
+         </multiple_choice>
+         <part>
+            <response match="A" score="0">
+               <feedback>Incorrect. This is the probability that the flight is on time. </feedback>
+            </response>
+            <response match="B" score="10">
+               <feedback>Correct. X is a binomial random variable resulting from an experiment of 50
+                  independent trials (n), in this case the number of flights sampled. </feedback>
+            </response>
+            <response match="C" score="0">
+               <feedback>Incorrect. This is 78% of the number of flights sampled. The n parameter is
+                  the number of trials in the experiment. </feedback>
+            </response>
+            <response match="D" score="0">
+               <feedback>Incorrect. This is the number of days over which a flight was completed.
+                  The n parameter is the number of trials in the experiment. </feedback>
+            </response>
+            <hint>Recall a binomial random variable has two parameters, n and p, where n is the
+               fixed number of trials.</hint>
+         </part>
+      </question>
+      <question id="q2">
+         <body>
+            <p> What is the value of the <em style="italic">p</em> parameter of the binomial random
+               variable X? </p>
+         </body>
+         <multiple_choice shuffle="false">
+            <choice value="A">0.78</choice>
+            <choice value="B">0.22</choice>
+            <choice value="C">0.05</choice>
+         </multiple_choice>
+         <part>
+            <response match="A" score="10">
+               <feedback>Correct. X is a binomial random variable with a probability of “success”
+                  (p)&#160;=&#160;“flight&#160;on&#8209;time”&#160;=&#160;0.78.</feedback>
+            </response>
+            <response match="B" score="0">
+               <feedback>Incorrect. This is the probability of “failure”
+                     (1&#160;&#8209;&#160;p&#160;=&#160;“flight&#160;<em style="bold"
+                  >not</em>&#160;on&#8209;time.” </feedback>
+            </response>
+            <response match="C" score="0">
+               <feedback>Incorrect. This is the sample divided by the total number of flights.
+               </feedback>
+            </response>
+            <hint>Recall a binomial random variable has two parameters, n and p, where p is the
+               probability of “success”.</hint>
+            <hint>“Success” is defined as flights arriving “on-time”.</hint>
+         </part>
+      </question>
+   </page>
+</assessment>

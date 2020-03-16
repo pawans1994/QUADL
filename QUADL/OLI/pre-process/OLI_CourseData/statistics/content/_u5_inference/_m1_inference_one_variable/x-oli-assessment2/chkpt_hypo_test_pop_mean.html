@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<link
+    href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css" 
+    type="text/css" rel="stylesheet">
+
+<assessment id="chkpt_hypo_test_pop_mean" max_attempts="3" recommended_attempts="1">
+
+    <title>Hypothesis Testing for a Population Mean Checkpoint</title>
+
+
+    <!--<introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you are
+            finished working, click on <em style="bold">Submit and Finish</em>, a pop up window will
+            ask "This will submit your answers and finish this assignment. Are you sure?", click
+            "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/checkpoint_topic_11_1.pdf">Solution Set</link>.</p>
+    </content>-->
+    <multiple_choice id="q1" select="single">
+        <!--LO:Selecting Appropriate Hypothesis-->
+        <body><p>According to Facebook&apos;s self-reported statistics the average Facebook user has 130
+                Facebook friends. For a statistics project a student at Contra Costa College tests
+                the hypothesis that CCC students will average more than 130 Facebook friends. She
+                randomly selects 3 classes from the schedule of classes and distributes a survey in
+                these classes. Her sample contains 45 students.</p><p>Here are the null and
+                alternative hypotheses for her study: H<sub>0</sub>:  &#956; = 130, H<sub>a</sub>:  &#956; &gt;
+                130. What does  &#956; represent in these hypotheses?</p></body>
+        <input shuffle="false">
+            <choice value="A">mean number of Facebook friends for the average user</choice>
+            <choice value="B">mean number of Facebook friends for the CCC students in her
+                sample</choice>
+            <choice value="C">mean number of Facebook friends for CCC students</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Not quite right: You are right that Facebook claims that the mean number
+                    of Facebook friends is 130 for the average user. But in this study the
+                    population of interest is CCC students. The correct answer is C.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect: We never make a hypothesis about a sample. We don’t need to
+                    because we can always calculate the mean of a sample. The correct answer is
+                    C.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The population of interest is CCC students, so  &#956; is the mean
+                    number of Facebook friends for this population.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.-->
+        <body>From her survey data, the statistics student calculates that the mean number of
+            Facebook friends for her sample is 138.7 with a standard deviation of 79.3. She analyzed
+            her data using a t-test and obtained a p-value of .23. What conclusion can she draw from
+            her data?</body>
+        <input shuffle="false">
+            <choice value="A">Nothing. The conditions for use of a t-test were not met. She cannot
+                trust that the P-value is accurate for this reason.</choice>
+            <choice value="B">Even though 138.7 is larger than 130, it is not significantly larger
+                than 130. In other words, the data do not provide enough evidence to conclude that
+                the mean number of Facebook friends of all CCC college students is higher than
+                130.</choice>
+            <choice value="C">138.7 is significantly larger than 130. In other words the data
+                provide provide enough evidence to conclude that the mean number of Facebook friends
+                of all CCC college students is higher than 130.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect: The conditions for use of a T-test are met because the sample
+                    size is greater than 30. The correct answer is B.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since the p-value is 0.23, the difference of 8.7 friends
+                    (138.7–130) is not statistically significant.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect: Since the p-value is 0.23, the difference of 8.7 friends
+                    (138.7–130) is not statistically significant. The correct answer is
+                    B.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.-->
+        <body><p>According to Facebook&apos;s self-reported statistics, the average Facebook user is
+                connected to 80 community pages, groups and events. For a statistics project a
+                student at Contra Costa College tests the hypothesis that CCC students will average
+                less than 80 such connections. She posts a survey on her Facebook page. Her sample
+                contains 45 responses.</p><p>She chooses a 5% level of significance. From her data
+                she calculates a t-test statistic of approximately -1.74 with a P-value of about
+                0.04. What can she conclude?</p></body>
+        <input shuffle="false">
+            <choice value="A">Nothing. The conditions for use of a T-model are not met. She cannot
+                trust that the P-value is accurate for this reason.</choice>
+            <choice value="B">The data is not statistically significant. In other words, the data do
+                not provide enough evidence to conclude that the mean number of Facebook connections
+                to community pages, groups and events of all CCC college students is less the 80. </choice>
+            <choice value="C">The data is statistically significant. In other words, the data do provide
+                enough evidence to conclude that the mean number of Facebook connections 
+                to community pages, groups and events of all
+                all CCC college students is less the 80.
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback> Correct. We do not know if the 45 responses are from CCC students. Also,
+                    this is not a <em style="bold">random</em> sample of CCC students. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback> Incorrect: She did not take a <em style="bold">random</em> sample of CCC
+                    students. The correct answer is A. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback> Not quite right: She did not take a <em style="bold">random</em> sample
+                    of CCC students, so she should not conduct the test. However, if the sample was
+                    random, you have the right conclusion based on the P-value. The correct answer
+                    is A. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+        <body><p>The Food and Drug Administration (FDA) is a U.S. government agency that regulates
+                (you guessed it) food and drugs for consumer safety. One thing the FDA regulates is
+                the allowable insect parts in various foods. You may be surprised to know that much
+                of the processed food we eat contains insect parts. An example is flour. When wheat
+                is ground into flour, insects that were in the wheat are ground up as well. The mean
+                number of insect parts allowed in 100 grams (about 3 ounces) of wheat flour is 75.
+                If the FDA finds more than this number, they conduct further tests to determine if
+                the flour is too contaminated by insect parts to be fit for human
+                consumption.</p><p>The FDA takes a random sample of 35 bags of flour for evaluation
+                and finds that they contain an average of 80 insect parts per 100 grams, with a
+                standard deviation of 6.3. </p><p>What hypothesis test should be used to determine
+                whether the sample contains more than the allowed 75 insect parts per 100
+            grams?</p></body>
+        <input shuffle="false">
+            <choice value="A">z-test for the population mean</choice>
+            <choice value="B">t-test for the population mean</choice>
+            <choice value="C">z-test for the population proportion</choice>
+            <choice value="D">t-test for the population proportion</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>That is incorrect. While a population mean is being assessed, since the
+                    population standard deviation is unknown, the appropriate hypothesis test would
+                    be the t-test for the population mean. Thus the correct answer is B.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct! Since the population mean is being assessed and the population
+                    standard deviation is unknown, the appropriate hypothesis test would be the
+                    t-test for the population mean.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>That is incorrect. A population mean (population average of 75 insect
+                    parts per 100 grams), rather than population proportion is being assessed. In
+                    addition, the population standard deviation is unknown. Thus, the appropriate
+                    hypothesis test would be the t-test for the population mean. Therefore, the
+                    correct answer is B.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>That is incorrect. While the population standard deviation is unknown, a
+                    population mean (population average of 75 insect parts per 100 grams), rather
+                    than population proportion is being assessed. Thus, the appropriate hypothesis
+                    test would be the t-test for the population mean. Therefore, the correct answer
+                    is B.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <section id="iq_test">
+        <content>
+            <p>Use the following content for questions 5,6,7 and 8.</p>
+            <p>The Wechsler Adult Intelligence Scale (IQ test) is constructed so that Full Scale IQ
+                scores follow a normal distribution, with a mean of 100, and a standard deviation of
+                15. The mayor of Smart Town believes the county&apos;s residents are smarter than the
+                national average and wants to use it (the intelligence of the residents) as a
+                marketing tool to bring industries to the area. A researcher is hired to conduct a
+                study to determine whether Smart County&apos;s residents have, on average, higher Full
+                Scale IQs than the population. A random sample of 100 people from Smart County were
+                given the IQ test and were found to have an average Full Scale IQ of 105.</p>
+        </content>
+    </section>
+    <multiple_choice id="q5" select="single">
+        <!--LO:Selecting Appropriate Hypothesis-->
+        <body>What hypothesis test should be used to determine whether the mean Full Scale IQ score
+            of the Smart County residents is higher than the national average?</body>
+        <input shuffle="false">
+            <choice value="A">z-test for the population mean</choice>
+            <choice value="B">t-test for the population mean</choice>
+            <choice value="C">z-test for the population proportion</choice>
+            <choice value="D">t-test for the population proportion</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct! Since the population mean is being assessed and the population
+                    standard deviation is known, the appropriate hypothesis test would be the z-test
+                    for the population mean.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>That is incorrect. While a population mean is being assessed, since the
+                    population standard deviation is known, the appropriate hypothesis test would be
+                    the z-test for the population mean. Thus the correct answer is A.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>That is incorrect. While the population standard deviation is known, a
+                    population mean (population average Full Scale IQ score is 100), rather than
+                    population proportion is being assessed. Thus, the appropriate hypothesis test
+                    would be the z-test for the population mean. Therefore, the correct answer is
+                    A.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>That is incorrect. A population mean (population average Full Scale IQ
+                    score is 100), rather than population proportion is being assessed. In addition,
+                    the population standard deviation is known. Thus, the appropriate hypothesis
+                    test would be the z-test for the population mean. Therefore, the correct answer
+                    is A.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q6" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+        <body>What are the null and alternative hypotheses?</body>
+        <input shuffle="false">
+            <choice value="A"> H <sub>0</sub> : &#956; = 105; H <sub>a</sub> : &#956; &#8800; 105 </choice>
+            <choice value="B"> H <sub>0</sub> : &#956; = 105; H <sub>a</sub> : &#956; &gt; 105 </choice>
+            <choice value="C"> H <sub>0</sub> : &#956; = 100; H <sub>a</sub> : &#956; &#8800; 100 </choice>
+            <choice value="D"> H <sub>0</sub> : &#956; = 100; H <sub>a</sub> : &#956; &gt; 100 </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback> That&#8242;s not quite right. 105 is the sample mean Full Scale IQ score and
+                    not the null value. Also, note that the researcher wants to test whether the
+                    mean Full Scale IQ score of the Smart County residents is <em style="bold"
+                        >higher</em> than the population mean. The correct answer is D. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While the sign of the alternative hypothesis is
+                    correct, note that 105 is the sample mean, and not the null value. The correct
+                    answer is D.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback> Incorrect. While it is true that the null value is 100,
+                    note that the researcher wants to test whether the mean Full Scale IQ score of
+                    the Smart County residents is <em style="bold">higher</em> than the population
+                    mean. The correct answer is D. </feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback> Correct! The researcher wants to test whether the mean Full Scale IQ
+                    score of the Smart County residents is <em style="bold">higher</em> than the
+                    population mean. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q7" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+        <body>What is the value of the test statistic used to determine whether the mean Full Scale
+            IQ score of the Smart County residents is higher than the national average?</body>
+        <input shuffle="false">
+            <choice value="A">.333</choice>
+            <choice value="B">-.333</choice>
+            <choice value="C">3.33</choice>
+            <choice value="D">-3.33</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>That&#8242;s not quite right. While the population mean was correctly subtracted
+                    from the sample mean (105 - 100), it looks like the population standard
+                    deviation was used in the denominator, rather than the standard deviation of the
+                    sample means. The correct test statistic is: (105 - 100) / (15/squareroot 100)
+                    or (105-100)/(15/10) = 5/1.5 or 3.33. Thus, C is the correct answer.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>That&#8242;s not quite right. It looks like the sample mean was subtracted from
+                    the population mean. In addition, it looks like the population standard
+                    deviation was used in the denominator, rather than the standard deviation of the
+                    sample means. The correct test statistic is: (105 - 100) / (15/squareroot 100)
+                    or (105-100)/(15/10) = 5/1.5 or 3.33. Thus, C is the correct answer.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct! The correct test statistic is: (105 - 100) / (15/squareroot 100)
+                    or (105-100)/(15/10) = 5/1.5 or 3.33.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>That&#8242;s not quite right. It looks like the sample mean was subtracted from
+                    the population mean. The correct test statistic is: (105 - 100) / (15/squareroot
+                    100) or (105-100)/(15/10) = 5/1.5 or 3.33. Thus, C is the correct
+                    answer.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q8" select="single">
+        <!--LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+-->
+        <body>After analyzing the data to determine whether the mean Full Scale IQ score of the
+            Smart County residents is higher than the national average, the P-value of .0004 was
+            obtained. Using a .05 significance level, what conclusion can be drawn from the
+            data?</body>
+        <input shuffle="false">
+            <choice value="A">Do not reject the null hypothesis. The average Full Scale IQ of Smart
+                County residents is not higher than the population average.</choice>
+            <choice value="B">Do not reject the null hypothesis. The average Full Scale IQ of Smart
+                County residents is higher than the population average.</choice>
+            <choice value="C">Reject the null hypothesis. The average Full Scale IQ of Smart County
+                residents is not higher than the population average.</choice>
+            <choice value="D">Reject the null hypothesis. The average Full Scale IQ of Smart County
+                residents is higher than the population average.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>That&#8242;s not quite right. Since the P-Value of .0004 is less than .05, we
+                    would reject the null hypothesis and conclude that the mean Full Scale IQ score
+                    of residents of Smart County (105) is higher than the population
+                    average.Therefore, the correct answer is D.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>That&#8242;s not quite right. Since the P-Value of .0004 is less than .05, we
+                    would reject the null hypothesis and conclude that the mean Full Scale IQ score
+                    of residents of Smart County (105) is higher than the population
+                    average.Therefore, the correct answer is D.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>That&#8242;s not quite right. While we would reject the null hypothesis, because
+                    the P-Value of .0004 is less than .05, we would conclude that the mean Full
+                    Scale IQ score of residents of Smart County (105) is higher than the population
+                    average. Therefore, the correct answer is D.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. Since the P-Value of .0004 is less than .05, we would reject the
+                    null hypothesis and conclude that the mean Full Scale IQ score of residents of
+                    Smart County (105) is higher than the population average.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</assessment>

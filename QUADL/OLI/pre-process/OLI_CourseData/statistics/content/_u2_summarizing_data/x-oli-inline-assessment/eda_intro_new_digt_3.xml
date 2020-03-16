@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<assessment id="eda_intro_new_digt_3">
+    <title>Tutor</title>
+   
+    <question id="q1">
+        <body><p>Which of the following variables is categorical? Check all that apply.</p>
+        </body>
+        <multiple_choice select="multiple" shuffle="false">
+            <choice value="iia">Treat</choice>
+            <choice value="iib">AcuteT</choice>
+            <choice value="iic">Outcome</choice>
+
+        </multiple_choice>
+
+        <part>
+
+            <response match="iia" score="0">
+                <feedback>Incorrect. You are correct that Treat is a categorical variable because
+                    the treatment received by the patients is in the form of categories (Lithium,
+                    Imipramine, or Placebo). However, there is at least one other variable that is
+                    also categorical.</feedback>
+            </response>
+            <response match="iib" score="0">
+                <feedback>Incorrect. AcuteT is not a categorical variable; rather, it is a
+                    quantitative variable because it can take on multiple numerical values to
+                    represent a characteristic of the patient.</feedback>
+            </response>
+            <response match="iic" score="0">
+                <feedback>Incorrect. You are correct that Outcome is a categorical variable, since recurrence is in the form of two categories (Recurrence or No Recurrence). However, there is at least one other variable that is also categorical.<!--You are correct that Gender is a categorical variable because
+                    patients are placed into two distinct categories (1 = Female; 2 = Male) and the
+                    numbers have no arithmetic meaning. However, there is at least one other
+                    variable that is also categorical.--></feedback>
+
+            </response>
+            <response match="iia,iib" score="0">
+                <feedback>Incorrect. Treat is a categorical variable because the treatment received
+                    by the patients is in the form of categories (Lithium, Imipramine, or Placebo).
+                    However, AcuteT is not a categorical variable; rather, it is a quantitative
+                    variable because it can take on multiple numerical values to represent a
+                    characteristic of the patient.</feedback>
+            </response>
+            <response match="iia,iic" score="10">
+                <feedback>Correct. Treat is a categorical variable because the treatment received by
+                    the patients is in the form of categories (Lithium, Imipramine, or Placebo).
+                    Outcome is also a categorical variable, since recurrence is in the form of two categories (Recurrence or No Recurrence).<!--Gender is also a categorical variable because patients are placed into two
+                    distinct categories (1 = Female; 2 = Male) and the numbers have no arithmetic
+                    meaning.--></feedback>
+            </response>
+            <response match="iib,iic" score="0">
+                <feedback>Incorrect. <!--You are correct that Gender is a categorical variable, because
+                    patients are placed into two distinct categories (1 = Female; 2 = Male) and the
+                    numbers have no arithmetic meaning. -->You are correct that Outcome is a categorical variable, since recurrence is in the form of two categories (Recurrence or No Recurrence). However, there is at least one other variable that is also categorical. However, AcuteT is not a categorical
+                    variable; rather, it is a quantitative variable because it can take on multiple
+                    numerical values to represent a characteristic of the patient.</feedback>
+            </response>
+            <response match="iia,iib,iic" score="0">
+                <feedback>Incorrect. You are correct that that both Treat and Outcome are categorical
+                    variables. Treat is a categorical variable because the treatment received by the
+                    patients is in the form of categories (Lithium, Imipramine, or Placebo). Outcome is also a categorical variable, since recurrence is in the form of two categories (Recurrence or No Recurrence).<!--Gender
+                    is a categorical variable, because patients are placed into two distinct
+                    categories (1 = Female; 2 = Male) and the numbers have no arithmetic meaning.-->
+                    However, AcuteT is not a categorical variable; rather, it is a quantitative
+                    variable because it can take on multiple numerical values to represent a
+                    characteristic of the patient.</feedback>
+            </response>
+            <response match="*">
+                <feedback>Incorrect. There is at least one variable that is categorical. </feedback>
+            </response>
+        </part>
+    </question>
+  
+</assessment>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+<!--Created by OLI Author v2.0-->
+<assessment id="u3_m1_rules9_tutor3_1">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:When appropriate, use tools such as Venn diagrams or probability tables as aids for finding probabilities.Sub-objective: probtools        Probability tools  
+-->
+            <body>What is the probability that Jim will be admitted to at least one of the two
+                colleges?</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">0.90</choice>
+                <choice value="B">0.85</choice>
+                <choice value="C">0.80</choice>
+                <choice value="D">0.775</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. The event “admitted to at least one of the two
+                        colleges” means admitted to College A or College B or both. You may have
+                        interpreted all of these “or” statements as meaning “addition” and
+                        calculated P(A) + P(B) + P(A and B), but this is incorrect because P(A and
+                        B) is included in P(A), as well as P(B). So P(A and B) is subtracted from
+                        P(A) + P(B) as shown in the General Addition Rule.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Not quite right. P(admitted to at least one college) = P(A or B), but
+                        the events are not disjoint. So P(A or B) is not equal to P(A) + P(B). You
+                        need to use the General Addition Rule.</feedback>
+                </response>
+                <response match="C" score="10">
+                    <feedback>Correct. P(admitted to at least one college) = P(A or B). Since the
+                        events are not disjoint, we must use the General Addition Rule. P(A or B) =
+                        0.10 + 0.75 − 0.05 = 0.80</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. You may have used the General Addition Rule P(A or B)
+                        = P(A) + P(B) − P(A and B) but calculated P(A and B) incorrectly by
+                        multiplying P(A) * P(B). This is incorrect because A and B are not independent
+                        in this situation. P(A and B) is given as 0.05, which is not equal to
+                        P(A) * P(B) = 0.10 * 0.75 = 0.075.</feedback>
+                </response>
+            </part>
+        </question>
+    </page>
+</assessment>

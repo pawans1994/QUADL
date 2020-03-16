@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd9">
+    <head>
+        <title>Hypothesis Testing for the Population Proportion p</title>
+    </head>
+    <body>
+        <p>The objectives of this activity are: </p>
+        <p>1. To give you guided practice in carrying out the z-test for the population proportion
+            (p).</p>
+        <p>2. To learn how to use statistical software to help you carry out the test.</p>
+        <p>
+            <em>Background:</em> This activity is based on the results of a recent study on the
+            safety of airplane drinking water that was conducted by the U.S. Environmental
+            Protection Agency (EPA). A study found that out of a random sample of 316 airplanes
+            tested, 40 had coliform bacteria in the drinking water drawn from restrooms and
+            kitchens. As a benchmark comparison, in 2003 the EPA found that about 3.5% of the U.S.
+            population have coliform bacteria-infected drinking water. The question of interest is
+            whether, based on the results of this study, we can conclude that drinking water on
+            airplanes is more contaminated than drinking water in general.</p>
+        <wb:inline idref="u4_m2_testprop9_lbd_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m2_testprop9_lbd_tutor2" purpose="learnbydoing"/>
+        <p>Use the following instructions to conduct the z-test for the population proportion:</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>In R, the default command for inference for proportions,
+                            <code>prop.test()</code> does not use the traditional z-test, but
+                        instead uses a related test called a chi-square (χ<sup>2</sup>) test.
+                        Therefore, to conduct the z-test for the population proportion
+                            (<code>p</code>) using R, we must modify the output to acquire the
+                        z-test statistic. </p>
+                    <p>From the background, we know that there are <code>n=316</code> total
+                        airplanes, <code>x=40</code> contaminate samples, and the baseline
+                        comparison (null value) is <code>p=0.035</code>. Here are the basic
+                        commands: </p>
+                    <ul style="none">
+                        <li><code>p =
+                                prop.test(x=40,n=316,p=0.035,alternative="greater",conf.level=0.95,
+                                correct=FALSE);p </code></li>
+
+                    </ul>
+                    <p>The parameter <code>alternative=</code> may take on the values
+                            <code>"greater"</code>, <code>"less"</code>, or <code>"two.sided"</code>
+                        depending on the alternative hypothesis. </p>
+                    <p>Notice that <code>X-squared</code> can be pulled from the output by entering
+                        the command <code>p$statistic</code>, referred to as the chi-square
+                            (χ<sup>2</sup>) test statistic. The χ<sup>2</sup> test statistic is
+                        equivalent to z<sup>2</sup>, so we can determine the z-test statistic by
+                        calculating <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:msup>
+                                            <m:mi>X</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msup>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>).</p>
+                    <ul style="none">
+                        <li><code>z = sqrt(p$statistic);z </code></li>
+
+                    </ul>
+                    <p>The provided p-value is equivalent to the p-value we might find from the
+                        z-test we hand calculate for proportions.</p>
+                    <p><em>Note:</em> The χ<sup>2</sup>-test statistic will always be positive so
+                        its square root will be positive in calculation, but that does not mean that
+                        the z-test statistic is positive. If the sample proportion is greater than
+                        the null proportion then the z-test statistic is positive. If the sample
+                        proportion is less than the null proportion then the z-test statistic is
+                        negative. </p>
+                </alternative>
+                <!--<p>To conduct the z-test for the population proportion
+                        <?oxy_insert_start author="mmyers" timestamp="20101127T133557-0500"?>(<?oxy_insert_end?>p<?oxy_insert_start author="mmyers" timestamp="20101127T133558-0500"?>)<?oxy_insert_end?>
+                        using R, enter the commands:</p>
+                <code>p = prop.test(40,316,0.035,alternative="greater",conf.level=0.95,
+                    correct=FALSE); p</code>
+                <code>z = sqrt(p$statistic); z</code>
+                <p><em>Note: Using
+                            R<?oxy_delete author="mmyers" timestamp="20101127T133605-0500" content=" - "?></em><?oxy_insert_start author="mmyers" timestamp="20101127T133630-0500"?>&#8212;<?oxy_insert_end?>the
+                        command <code>prop.test</code> returns <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi mathvariant="normal">X</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mrow>
+                        </m:math> = 78.9, and it turns out that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi mathvariant="normal">X</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mrow>
+                        </m:math> = <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi mathvariant="normal">z</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mrow>
+                        </m:math>. Since the sample proportion p is larger than the hypothesized
+                        proportion <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>p</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math>, we know that z is positive. Thus <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:msqrt>
+                                    <m:mrow>
+                                        <m:msup>
+                                            <m:mi>X</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msup>
+                                    </m:mrow>
+                                </m:msqrt>
+                            </m:mrow>
+                        </m:math>. The value of <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:msup>
+                                    <m:mi mathvariant="normal">X</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msup>
+                            </m:mrow>
+                        </m:math> is recovered with the command <code>p$statistic</code>. </p>
+            </alternative>-->
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p> Here is how you conduct the z-test for the population proportion (p) in
+                        StatCrunch.</p>
+                    <p>There are two ways to perform the test, depending on whether you have
+                        summarized values or the raw data.</p>
+                    <p>If the data are summarized, as they are in our case (out of a random sample
+                        of 316 airplanes, 40 were found to have contaminated water), then follow the
+                        steps below.</p>
+                    <ul>
+                        <li>Choose: Stat → Proportions → One Sample → with summary </li>
+
+                        <li>Enter the number of successes and observations</li>
+                        <li>Select Hypothesis Test for p</li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than </li>
+                        <li>Press Compute!</li>
+                    </ul>
+                    <p>If you have raw data which consists of outcomes of individual trials, then
+                        follow the steps below. </p>
+                    <ul>
+                        <li>Choose: Stat → Proportions → One Sample → with data </li>
+                        <li>Values in: select column with sample data</li>
+                        <li>Success: specify the value that denotes success.</li>
+                        <li>Perform: select Hypothesis Test for p </li>
+                        <li>Enter a null value and choose the form of the alternative hypothesis
+                            from the options not equal, less than, and greater than</li>
+                        <li>Choose from the options of not equal, less than and greater than for the
+                            alternative hypothesis. </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Here is how you conduct the z-test for the population proportion (p) in
+                        Minitab:</p>
+                    <ul>
+                        <li>Choose: Stat → Basic Statistics → 1 Proportion</li>
+                        <li>Enter the data. There are two ways to perform the test, depending on
+                            whether you have the raw data, or summarized values: <ul>
+                                <li>If you have the raw data in a Minitab worksheet, choose the
+                                    "Samples in columns" option, and enter the column containing the
+                                    data.</li>
+                                <li>If the data are summarized, as they are in our case (out of a
+                                    random sample of 316 airplanes, 40 were found to have
+                                    contaminated water), enter the sample size, and how many of the
+                                    subjects have the characteristic of interest.</li>
+                            </ul>
+                        </li>
+                        <li>Click on "Options" <ul>
+                                <li>Next to "Test proportion," enter the null value, <m:math
+                                        overflow="scroll">
+                                        <m:mrow>
+                                            <m:msub>
+                                                <m:mi>p</m:mi>
+                                                <m:mn>0</m:mn>
+                                            </m:msub>
+                                        </m:mrow>
+                                    </m:math>. </li>
+                                <li>Choose the relevant alternative.</li>
+                                <li>Check "Use this....normal distribution."</li>
+                            </ul>
+                        </li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                    <p><em>Comment:</em> As we mentioned above, if the raw data are given we can
+                        (instead of giving the summarized values) tell Minitab what column the raw
+                        data are in. Click <link href="../../../webcontent/minitab/water-raw.mtw"
+                            >here</link> to open Minitab with the raw data of this study, and verify
+                        that when you run the test, you get the same output. </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To conduct the z-test for the population proportion (p) in Excel, we first
+                        need to calculate <m:math display="inline">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math>, and to do this, we remember that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Now we can calculate the test statistic using <m:math
+                            display="inline">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi>p</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:msqrt>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                </m:msub>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                  </m:msub>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                            </m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mfrac>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. </p>
+                    <ul>
+                        <li>Once we have calculated our test statistic (z), we find the probability
+                            that p is less than or equal to the test statistic (z) using the Excel
+                            formula <code style="inline">=NORM.S.DIST(z, cumulative)</code> Remember
+                            to put TRUE for cumulative when using this function.</li>
+                        <li>Since our alternative hypothesis is that p is <code style="inline"
+                                >greater than</code> z, we then find the p-value that we want by
+                            subtracting the value we just calculated from 1.</li>
+                    </ul>
+                </alternative>
+                <!--     <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To conduct the z-test for the population proportion (p) in Excel, we first
+                        need to calculate <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                            </m:mrow>
+                        </m:math>, and to do this, we remember that <m:math overflow="scroll">
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>p</m:mi>
+                                    <m:mo stretchy="true">ˆ</m:mo>
+                                </m:mover>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mn>X</m:mn>
+                                    <m:mn>n</m:mn>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. Now we can calculate the test statistic using <m:math
+                            overflow="scroll">
+                            <m:mrow>
+                                <m:mi>z</m:mi>
+                                <m:mo>=</m:mo>
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mover>
+                                            <m:mi>p</m:mi>
+                                            <m:mo stretchy="true">ˆ</m:mo>
+                                        </m:mover>
+                                        <m:mo>−</m:mo>
+                                        <m:msub>
+                                            <m:mi>p</m:mi>
+                                            <m:mn>0</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                    <m:msqrt>
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                </m:msub>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>1</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:msub>
+                                                  <m:mi>p</m:mi>
+                                                  <m:mn>0</m:mn>
+                                                  </m:msub>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                            </m:mrow>
+                                            <m:mi>n</m:mi>
+                                        </m:mfrac>
+                                    </m:msqrt>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:math>. </p>
+                    <ul>
+                        <li>Once we have calculated our test statistic z, we find the probability
+                            that p is less than or equal to the test statistic (z) using the Excel
+                            formula <code style="inline">=NORMSDIST(z)</code>.</li>
+                        <li>Since our alternative hypothesis is that p is <code style="inline"
+                                >greater than</code> z, we then find the p-value that we want by
+                            subtracting the value we just calculated from 1.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>One Sample z-test for the proportion (p)</em>
+                    </p>
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/5:1-PropZTest</code>. </li>
+                        <li>Note: Use arrows to navigate through the menu. </li>
+                        <li>1-PropZTest </li>
+                        <li>p<sub>o</sub>: Enter the null value from the null hypothesis. </li>
+                        <li>x: Enter number of airplanes with coliform bacteria in the drinking
+                            water. </li>
+                        <li>n: Enter the sample size. </li>
+                        <li>prop &#8800; p<sub>o</sub> &lt; p<sub>o</sub> &gt; p<sub>o</sub>: Choose
+                            the relevant form of the alternative hypothesis. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image505.jpg"
+                                alt="TI calculator output: 1-PropZTest
+            p_0: .035
+            x: 40
+            n: 316
+            prop&ne;p_0  &lt;p_0  &gt;p_0
+            Calculate    Draw"
+                            />
+                        </li>
+                        <li>Arrow down and choose CALCULATE, then press ENTER. </li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m2_testprop9_lbd_tutor3" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+        <wb:inline idref="u4_m2_testprop9_lbd_tutor4" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m2_testprop9_lbd_tutor5" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

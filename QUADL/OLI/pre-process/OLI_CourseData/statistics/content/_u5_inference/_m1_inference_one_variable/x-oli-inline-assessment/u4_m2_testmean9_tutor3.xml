@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean9_tutor3">
+    <title>Tutor</title>
+    <question id="q1">
+        <body><p>Which of the following would have made the z-test appropriate in the preceding
+                scenario?</p>
+        </body>
+        <multiple_choice shuffle="false">
+            <choice value="A">If the sample size had been 15 instead of 5, but the standard
+                deviation of 1.11 had still been computed for the sample (with the rest of the
+                scenario unchanged).</choice>
+            <choice value="B">If the sample size had still been 5, but the standard deviation of
+                1.11 had been for the population of all circuit boards produced by the process (with
+                the rest of the scenario unchanged).</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. If the standard deviation was still only for the
+                    sample, so that sigma is still unknown, then the z-test would still not be
+                    justified. Furthermore, the z-test might not even be a good approximation, since
+                    a sample size of 15 is only of relatively
+                    <?oxy_insert_start author="mmyers" timestamp="20101128T103922-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103921-0500" content="&apos;"?>moderate<?oxy_insert_start author="mmyers" timestamp="20101128T103927-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T103926-0500" content="’"?>
+                    size, not relatively large.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct.  If the standard deviation had been for the population (so that sigma had been known), then a z-test would be justified despite the small sample size.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

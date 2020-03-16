@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m2_lbd4">
+    <head>
+        <title>Matched Pairs</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to give you guided practice in carrying out the paired
+            t-test and to teach you how to obtain the paired t-test output using statistical
+            software. Here is some background for the historically important data that we are going
+            to work with in this activity.</p>
+        <section>
+            <title>Background: Gosset's Seed Plot Data</title>
+            <body>
+                <image style="block" src="../../webcontent/image412.gif" alt="William S. Gosset"/>
+                <p>William S. Gosset was employed by the Guinness brewing company of Dublin. Sample
+                    sizes available for experimentation in brewing were necessarily small, and new
+                    techniques for handling the resulting data were needed. Gosset consulted Karl
+                    Pearson (1857-1936) of University College in London, who told him that the
+                    current state of knowledge was unsatisfactory. Gosset undertook a course of
+                    study under Pearson and the outcome of his study was perhaps the most famous
+                    paper in statistical literature, "The Probable Error of a Mean" (1908), which
+                    introduced the t distribution.</p>
+                <p>Since Gosset was contractually bound by Guinness, he published under a pseudonym,
+                    "Student"; hence, the t distribution is often referred to as <em style="italic"
+                        >Student's t distribution</em>. </p>
+                <p>As an example to illustrate his analysis, Gosset reported in his paper on the
+                    results of seeding 11 different plots of land with two different types of seed:
+                    regular and kiln-dried. There is reason to believe that drying seeds before
+                    planting will increase plant yield. Since different plots of soil may be
+                    naturally more fertile, this confounding variable was eliminated by using the
+                    matched pairs design and planting both types of seed in all 11 plots.</p>
+                <p>The resulting data (corn yield in pounds per acre) are as follows:</p>
+                <image style="block" src="../../webcontent/image413.gif"
+                    alt="A table with three columns,
+labeled &quot;Plot,&quot; &quot;Regular seed,&quot; and &quot;Kiln-dried seed.&quot; Here is the data
+in rows (Plot: Regular Seed, Kiln-dried Seed):
+        1: 1903, 2009;
+        2: 1935, 1915;
+        3: 1910, 2011;
+        4: 2496, 2463;
+        5: 2108, 2180;
+        6: 1961, 1925;
+        7: 2060, 2122;
+        8: 1444, 1482;
+        9: 1612, 1542;
+        10: 1316, 1443;
+        11: 1511, 1535;"/>
+                <p>We use these data to test the hypothesis that kiln-dried seed yields more corn
+                    than regular seed. Here is a figure that summarizes this problem:</p>
+                <image style="block" src="../../webcontent/image414.gif"
+                    alt="Our categorical explanatory
+variable is Seed Type (X), with categories regular and kiln dried. Using this, we create Population 1: plots
+planted with regular seeds, and Population 2: plots planted with kiln-dried seeds. For each population,
+there is a corn yield (Y) mean &mu;_1 and &mu;_2. When we create an SRS for each population, we are using
+the same plots in both samples, thus using a matched pair design. Each SRS has a size 11."/>
+                <p>Because of the nature of the experimental design (matched pairs), we are testing
+                    the difference in yield.</p>
+                <image style="block" src="../../webcontent/image415.gif"
+                    alt="A table with three columns,
+labeled &quot;Plot,&quot; &quot;Regular seed,&quot; &quot;Kiln-dried seed,&quot; and &quot;Difference.&quot;
+Here is the data in rows (Plot: Regular Seed, Kiln-dried Seed, Difference):
+                    1: 1903, 2009, -106;
+                    2: 1935, 1915, 20;
+                    3: 1910, 2011, -101;
+                    4: 2496, 2463, 33;
+                    5: 2108, 2180, -72;
+                    6: 1961, 1925, 36;
+                    7: 2060, 2122, -62;
+                    8: 1444, 1482, -38;
+                    9: 1612, 1542, 70;
+                    10: 1316, 1443, -127;
+                    11: 1511, 1535, -24;"/>
+                <p>Note that the differences were calculated: regular − kiln-dried.</p>
+            </body>
+        </section>
+        <wb:inline idref="u4_m3_matchedpairs6_lbd_tutor1" purpose="learnbydoing"/>
+        <!--
+                <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="331">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor4a.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor4a</param>
+                </flash>
+            -->
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the data set preloaded, right-click <link
+                            href="../../../webcontent/r/seed.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>seed</code>. Enter the
+                        command <code>seed</code> to see the data. The variables in the data frame
+                        are <code>regular.seed</code> and <code>kiln.dried.seed</code>.</p>
+                    <p>To carry out the paired t-test, use the following command:</p>
+                    <ul style="none">
+                        <li><code>t.test(seed$regular.seed, seed$kiln.dried.seed,
+                                alternative="less", paired=TRUE)</code></li>
+                    </ul>
+                    <p>The mean of the differences is provided in the output in addition to the
+                        other pertinent information. Notice that the order of the variables
+                        indicates the order of the difference calculation (<code>position 1 −
+                            position 2</code>).</p>
+                    <!--<p>To open R with the dataset preloaded, right-click <link
+                        href="../../../webcontent/r/seed.RData" target="self">here</link> and choose
+                    "Save Target As" to download the file to your computer. Then find the downloaded
+                    file and double-click it to open it in R.</p>
+                <p>The data have been loaded into the variable
+                        <?oxy_insert_start author="mmyers" timestamp="20101128T215521-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T215521-0500" content="&apos;"?>seed<?oxy_delete author="mmyers" timestamp="20101128T215523-0500" content="&apos;"?>.<?oxy_insert_start author="mmyers" timestamp="20101128T215525-0500"?>"<?oxy_insert_end?>
+                        Enter the command <code>seed</code> to see the data.</p>
+                <p>
+                    <em>Carrying out the paired t-test</em>
+                </p>
+                <p>Enter the following command into R:</p>
+                <code>t.test(seed$regular.seed-seed$kiln.dried.seed, mu=0,
+                    alternative="less")</code>
+                <p>Basically we are just carrying out a single-variable t-test on the differences of
+                    the two columns with a null hypothesis that the difference is 0 and an alternate
+                    hypothesis that the difference is less than 0 or that the first column is
+                    smaller than the second.</p>-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                        href="../../../webcontent/m10_hypo_test_pop_mean_4/seed.xls" target="self"
+                        >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here </link>to open StatCrunch in a separate window and login using
+                        your username and password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, click on the Data button in the top row and select
+                            Load → From file → on my computer. </li>
+                        <li>Under File, press the Browse button and select the data set you
+                            downloaded. </li>
+                        <li>Scroll to the bottom of the page and click on "Load File." </li>
+                    </ul>
+                    <p> Please use the following StatCrunch commands to answer the next set of
+                        questions:</p>
+                    <ul>
+                        <li>Choose: Stat → T Stats → Paired. </li>
+                        <li>Select Regular seed for Sample 1. </li>
+                        <li>Select Kiln-dried seed for Sample 2. </li>
+                        <li>For Save, check "Differences." </li>
+                        <li>In Perform, select Hypothesis test for <m:math display="inline">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                                <m:mo>=</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>1</m:mn>
+                                </m:msub>
+                                <m:mo>&minus;</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>2</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math>.</li>
+                        <li>Enter a null value for <m:math display="inline">
+                            <m:mrow>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mi>d</m:mi>
+                                </m:msub>
+                            </m:mrow>
+                        </m:math>.</li>
+                        <li>For the alternative hypothesis, choose from the options of not equal,
+                            less than and greater than (be sure to consider how the differences were
+                            calculated).</li>
+                        <li>Press Compute! </li>
+                    </ul>
+                    <p>Note that the computed differences appear in a new column called
+                        Differences.</p>
+                    <!--<p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/seed.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Next, click
+                            <link href="http://www.statcrunch.com/" target="new">here </link>to open
+                        StatCrunch in a separate window, and login using your username and
+                        password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page </li>
+                        <li>To open the data set, select the “My computer” link under Load a data
+                            set from box on the left side of the page</li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're
+                            using) and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page, and click on “Load File”</li>
+                    </ul>
+                    <p>Please use the following StatCrunch commands to answer the next set of
+                        questions:</p>
+                    <ul>
+                        <li>Choose Stat → T statistics → Paired</li>
+                        <li>Select Regular seed for Sample 1</li>
+                        <li>Select Kiln-dried seed for Sample 2 </li>
+                        <li>For Save, check “Differences” </li>
+                        <li>In Perform, select Hypothesis test for µ<sub><em style="italic"
+                                >d</em></sub> = µ<sub>1</sub> − µ<sub>2</sub></li>
+                        <li>Enter a null value for µ<sub><em style="italic">d</em></sub></li>
+                        <li>For the alternative hypothesis, choose from the options not equal, less
+                            than, and greater than (be sure to consider how the differences were
+                            calculated) </li>
+                        <li>Press Compute! </li>
+                    </ul>
+                    <p>Note that the computed differences appear in a new column called
+                        Differences.</p>-->
+                </alternative>
+
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/seed.mtw" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in Minitab. Note: a
+                        dialog box will likely appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK."</p>
+                    <p>The following Minitab commands will be needed for the next questions:</p>
+                    <p>
+                        <em>I. Creating a column of differences</em>
+                    </p>
+                    <ul>
+                        <li>Choose Calc → Calculator.</li>
+                        <li>Ask Minitab to store the result in the next available column.</li>
+                        <li>Under "Expression," type c1-c2 (the expression that will create the
+                            desired differences).</li>
+                        <li>Click "OK."</li>
+                        <li>Name the newly created column "Differences."</li>
+                    </ul>
+                    <p>
+                        <em>II. Carrying out the paired t-test</em>
+                    </p>
+                    <ul>
+                        <li>Choose Stat → Basic Statistics → Paired t.</li>
+                        <li>Choose "Samples in column" and enter the columns where the samples
+                            are.</li>
+                        <li>Under "Options," set the appropriate alternative.</li>
+                        <li>Click "OK" twice.</li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/seed.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                    <p>The following Excel commands will be needed for the next questions:</p>
+                    <p>
+                        <code style="inline">Creating a column of differences:</code>
+                    </p>
+                    <ul>
+                        <li>In column C, type the following formula in each of the cells in rows
+                            2-12: <code style="inline">=A1-B1</code>, adjusting the row numbers
+                            accordingly.</li>
+                        <li>Name the newly created column <code style="inline"
+                            >Differences</code>.</li>
+                    </ul>
+                    <p>
+                        <code style="inline">Carrying out the paired t-test:</code>
+                    </p>
+                    <ul>
+                        <li>Choose <code style="inline">Data Analysis</code> from the <code
+                                style="inline">Analysis</code> group in the <code style="inline"
+                                >Data</code> tab. In the pop-up window, choose <code style="inline"
+                                >t-Test: Paired Two Sample for Means</code>.</li>
+                        <li>In the next window, enter the data for column A next to <code
+                                style="inline">Variable 1 Range</code> and the data for column B
+                            next to <code style="inline">Variable 2 Range</code>.</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                </alternative>
+          <!--       <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/seed.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                    <p>The following Excel commands will be needed for the next questions:</p>
+                    <p>
+                        <code style="inline">Creating a column of differences:</code>
+                    </p>
+                    <ul>
+                        <li>In column C, type the following formula in each of the cells in rows
+                            2-12: <code style="inline">=A1-B1</code>, adjusting the row numbers
+                            accordingly.</li>
+                        <li>Name the newly created column <code style="inline"
+                            >Differences</code>.</li>
+                    </ul>
+                    <p>
+                        <code style="inline">Carrying out the paired t-test:</code>
+                    </p>
+                    <ul>
+                        <li>Choose <code style="inline">Tools → Data Analysis</code> from the menu
+                            bar. In the pop-up window, choose <code style="inline">t-Test: Paired
+                                Two Sample for Means</code>.</li>
+                        <li>In the next window, enter the data for column A next to <code
+                                style="inline">Variable 1 Range</code> and the data for column B
+                            next to <code style="inline">Variable 2 Range</code>.</li>
+                        <li>Click "OK."</li>
+                    </ul>
+                </alternative>--> 
+
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Paired t-test</em>
+                    </p>
+                    <p>Enter the Regular seed data in L1. </p>
+                    <p>Enter the Kiln-dried seed data in L2. </p>
+                    <p>Create a list of differences: </p>
+
+                    <ul>
+                        <li>Calculate the difference between each pair of values. </li>
+                        <li>Store these differences in a list. </li>
+                        <li>Go to the Home Screen by pressing <code style="inline">QUIT
+                                (2ND/MODE)</code>. </li>
+                        <li>Enter <code style="inline">L1-L2 STO> L3</code>, using these steps: </li>
+                        <li>Choose <code style="inline">L1 (2ND/1)</code>. </li>
+                        <li>Press – (the subtraction key). </li>
+                        <li>Choose <code style="inline">L2 (2ND/2)</code>. </li>
+                        <li>Press <code style="inline">STO></code> (the store key above the <code
+                                style="inline">ON</code> key). </li>
+                        <li>Choose <code style="inline">L3 (2ND/3)</code>. </li>
+                        <li>Press <code style="inline">ENTER</code>. </li>
+                    </ul>
+
+                    <p>Carry out the paired t-test: </p>
+
+                    <ul>
+                        <li>Choose <code style="inline">STAT/TESTS/2:T-Test</code>. </li>
+                    
+                        <li>Choose <code style="inline">Data</code>. </li>
+                        <li>Enter 0 for the null value for the difference in means (used in null
+                            hypothesis). </li>
+                        <li>Then enter the <code style="inline">List:</code> where the differences
+                            are stored. </li>
+                        <li><code style="inline">List:L3 (2ND/ 3)</code>. </li>
+                        <li><code style="inline">Freq:1</code> (The number 1). </li>
+                        <li>Choose the appropriate form of the alternative hypothesis (&#8800;,
+                            &lt;, &gt;). </li>
+                        <li>Choose <code style="inline">Calculate</code>, then press <code
+                                style="inline">ENTER</code>.</li>
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m3_matchedpairs6_lbd_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m3_matchedpairs6_lbd_tutor3" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m3_matchedpairs6_lbd_tutor4" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+    </body>
+</workbook_page>

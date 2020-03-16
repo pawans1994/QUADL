@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_anova1">
+    <head>
+        <title>ANOVA (1 of 7)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+    </head>
+<body>
+   
+        <section>
+            <title>Comparing More Than Two Means&#8212;ANOVA</title>
+            <body>
+                <section>
+                    <title>Overview<!--Introduction--></title>
+                    <body>
+                        <p>In this part, we continue to handle situations involving one categorical
+                            explanatory variable and one quantitative response variable, which is
+                            case C→Q in our role/type classification table:</p>
+                        <image style="block" src="../webcontent/image093.gif" alt="It is possible
+for any type of explanatory variable to be paired with any type of response variable.
+The possible pairings are:
+Categorical Explanatory → Categorical Response (C→C),
+Categorical Explanatory → Quantitative Response (C→Q),
+Quantitative Explanatory → Categorical Response (Q→C), and
+Quantitative Explanatory → Quantitative Response (Q→Q)."/>
+                        <p>So far we have discussed the two samples and matched pairs designs, in
+                            which the categorical explanatory variable is two-valued. As we saw, in
+                            these cases, examining the relationship between the explanatory and the
+                            response variables amounts to comparing the mean of the response
+                            variable (Y) in two populations, which are defined by the two values of
+                            the explanatory variable (X). The difference between the two samples and
+                            matched pairs designs is that in the former, the two samples are
+                            independent, and in the latter, the samples are dependent.</p>
+                        <p>We are now moving on to cases in which the categorical explanatory
+                            variable takes more than two values. Here, as in the two-valued case,
+                            making inferences about the relationship between the explanatory (X) and
+                            the response (Y) variables amounts to comparing the means of the
+                            response variable in the populations defined by the values of the
+                            explanatory variable, where the number of means we are comparing
+                            depends, of course, on the number of values of X. Unlike the two-valued
+                            case, where we looked at two sub-cases (1) when the samples are
+                            independent (two samples design) and (2) when the samples are dependent
+                            (matched pairs design, here, we are just going to discuss the case where
+                            the samples are independent. In other words, we are just going to extend
+                            the two samples design to more than two independent samples.</p>
+                        <image style="block" src="../webcontent/image094.gif" alt="The Explanatory (X):
+has k values. This means we have k populations, and for each population a Y mean &mu;. Each of these
+populations also has a sample, each with its own size. We end up with k independent samples."/>
+                        <p> </p>
+                    </body>
+                </section>
+                <section>
+                    <title>Comment</title>
+                    <body>
+                        <p>The extension of the matched pairs design to more than two dependent
+                            samples is called "Repeated Measures" and is beyond the scope of this
+                            course. </p><p>The inferential method for comparing more than two means that we will introduce in this part is
+                            called Analysis Of Variance (abbreviated as ANOVA), and the test
+                            associated with this method is called the ANOVA F-test. The structure of
+                            this part will be very similar to that of the previous two. We will
+                            first present our leading example, and then introduce the ANOVA F-test
+                            by going through its 4 steps, illustrating each one using the example.
+                            (It will become clear as we explain the idea behind the test where the
+                            name "Analysis of Variance" comes from.) We will then present another
+                            complete example, and conclude with some comments about possible
+                            follow-ups to the test. As usual, you'll have activities along the way
+                            to check your understanding, and learn how to use software to carry out
+                            the test.</p>
+                        <p>Let's start by introducing our leading example.</p>
+                        <example>
+                            <p>Is "academic frustration" related to major?</p>
+                            <p>A college dean believes that students with different majors may
+                                experience different levels of academic frustration. Random samples
+                                of size 35 of Business, English, Mathematics, and Psychology
+                                major<?oxy_comment_start author="mmyers" timestamp="20101129T095313-0500" comment="addition OK? (This point was unclear, and important to the conclusion, so I added this here and in the conclusion)"?>s
+                                a<?oxy_comment_end?>re asked to rate their level of academic
+                                frustration on a scale of 1 (lowest) to 20 (highest).</p>
+                            <image style="block" src="../webcontent/image095.gif" alt="The X variable is major,
+and it has four categories, which are Business, English, Mathematics, and Psychology. We have four populations,
+one for each of these categories. We are interested in the level of frustration (Y) mean for each population, so
+we have 4 &mu;, one for each population. For each population we take a sample of size 35, resulting in 4 separate
+samples."/>
+                            <p>The figure highlights what we have already mentioned: examining the
+                                relationship between major (X) and frustration level (Y) amounts to
+                                comparing the mean frustration levels (<m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>1</m:mn>
+                                        </m:msub>
+                                        <m:mo>,</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>2</m:mn>
+                                        </m:msub>
+                                        <m:mo>,</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>3</m:mn>
+                                        </m:msub>
+                                        <m:mo>,</m:mo>
+                                        <m:msub>
+                                            <m:mi mathvariant="normal">μ</m:mi>
+                                            <m:mn>4</m:mn>
+                                        </m:msub>
+                                    </m:mrow>
+                                </m:math> ) among the four majors defined by X. Also, the figure
+                                reminds us that we are dealing with a case where the samples are
+                                independent. </p>
+                        </example>
+                        <p> </p>
+                    </body>
+                </section>
+                <section>
+                    <title>Comment</title>
+                    <body>
+                        <p>There are two ways to record data in the ANOVA setting:</p>
+                        <ul>
+                            <li>Unstacked: One column for each of the four majors, with each column
+                                listing the frustration levels reported by all sampled students in
+                                that major: <table>
+                                    <tr>
+                                        <th>Business</th>
+                                        <th>English</th>
+                                        <th>Math</th>
+                                        <th>Psychology</th>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>11</td>
+                                        <td>9</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>9</td>
+                                        <td>16</td>
+                                        <td>19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>14</td>
+                                        <td>11</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>etc.</td>
+                                        <td/>
+                                        <td/>
+                                        <td/>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>Stacked: one column for all the frustration levels, and next to it a
+                                column to keep track of which major a student is in: <table>
+                                    <tr>
+                                        <th>Frustration(Y)</th>
+                                        <th>Major(X)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Business</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Business</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Business</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>English</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Psychology</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>English</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Psychology</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Math</td>
+                                    </tr>
+                                    <tr>
+                                        <td>etc.</td>
+                                        <td/>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                        <p>The "unstacked" format helps us to look at the four groups separately,
+                            while the "stacked" format helps us remember that there are, in fact,
+                            two variables involved: frustration level (the quantitative response
+                            variable) and major (the categorical explanatory variable).</p>
+                        <alternatives group="statistics.package">
+                            <default><pref:value preference="statistics.package"/></default>
+                            <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                    href="../../webcontent/excel/frustration.xls" target="self">here</link> and choose "Save
+                    Target As" to download the file to your computer. Next click <link href="http://www.statcrunch.com/" target="new">here </link>to open StatCrunch in a separate window and login using your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page. </li>
+                        <li>To open the data set select the “My computer” link under Load a data set from box on the left side of the page.</li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                    <p>Note that in the first 4 columns, the data are in unstacked format, and in the next two columns the data are stacked.</p>
+                </alternative>
+
+                            <alternative value="excel">
+                                <title>Excel 2007 Instructions</title>
+                                <p>To open Excel with the data in the worksheet, right-click <link
+                                        href="../../webcontent/excel/frustration.xls" target="self"
+                                        >here</link> and choose "Save Target As" to download the
+                                    file to your computer. Then find the downloaded file and
+                                    double-click it to open it in Excel. </p>
+                                <p>Note that in the first 4 columns (A-D), the data are in unstacked
+                                    format, and in the next two columns (E-F) the data are
+                                    stacked.</p>
+                            </alternative>
+                            <alternative value="minitab">
+                                <title>Minitab Instructions</title>
+                                <p>To open Minitab with the data in the worksheet, right-click <link
+                                        href="../../webcontent/minitab/frustration.mtw"
+                                        target="self">here</link> and choose "Save Target As" to
+                                    download the file to your computer. Then find the downloaded
+                                    file and double-click it to open it in Minitab. Note: you will
+                                    likely see a dialog box appear that says "A copy of the content
+                                    of this file will be added to the current project"&#8212;just
+                                    click "OK." </p>
+                                <p>Note that in the first 4 columns (c1-c4), the data are in
+                                    unstacked format, and in the next two columns (c5-c6) the data
+                                    are stacked.</p>
+                            </alternative>
+                            <alternative value="r">
+                                <title>R Instructions</title>
+                                <p>To open R with the dataset preloaded, right-click <link
+                                        href="../../webcontent/r/frustration.RData" target="self"
+                                        >here</link> and choose "Save Target As" to download the
+                                    file to your computer. Then find the downloaded file and
+                                    double-click it to open it in R. </p>
+                                <p>The data have been loaded into the variable "frustration." Enter
+                                    the command <code>frustration</code> to see the data.</p>
+                                <p>Note that in the first 4 columns, the data are in unstacked
+                                    format, and in the next two columns the data are stacked.</p>
+                            </alternative>
+                            <alternative value="ti">
+                                <title>TI Instructions</title>
+                                <p>To open a group of lists with the data, right-click <link href="../../webcontent/ti/frustration.8xg"
+                                    target="self">here</link> and choose "Save Target As" to download the file to your
+                                    computer. Then find the downloaded file and send it to your calculator. For instructions
+                                    on how to connect your calculator to your computer and transfer a file, click
+                                    <activity_link idref="ti_instructions" target="new">here</activity_link>.</p>
+                                <ul>
+                                    <li>UNGROUP frustration.8xg</li>
+                                    <li>L1 frustration (for Business) </li><li>L2 frustration (for English)
+                                    </li><li>L3 frustration (for Mathematics) </li><li>L4 frustration (for Psychology) </li><li>L5 Frustration (Y)
+                                    </li><li>L6 Major (X) (1=Business, 2=English, 3=Mathematics, 4=Psychology). </li>
+                                </ul>
+                                <p>Note that in the first 4 lists (L1-L4), the data are in unstacked
+                                    format: L1 (Business), L2 (English) , L3 (Mathematics), L4
+                                    (Psychology); and in the next two lists (L5-L6) the data are
+                                    stacked: L5 (Frustration(Y)), L6 (Major(X) with 1=Business,
+                                    2=English, 3=Mathematics, 4=Psychology).</p>
+                            </alternative>
+                        </alternatives>
+                        <p> </p>
+                    </body>
+                </section>
+            </body>
+        </section>
+    </body>
+</workbook_page>

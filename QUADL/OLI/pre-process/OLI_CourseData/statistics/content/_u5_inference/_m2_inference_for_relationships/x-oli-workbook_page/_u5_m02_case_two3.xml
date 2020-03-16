@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_case_two3">
+    <head>
+        <title>Case C→C (3 of 5)</title>
+        <objref idref="carry_out_inferential_method_relationships"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Step 2: Checking the Conditions and Calculating the Test Statistic</title>
+            <body>
+                <p>Given our discussion on the previous page, it would be natural to present the
+                    test statistic, and then come back to the conditions that allow us to safely use
+                    the chi-square test, although in practice this is done the other way around.</p>
+                <p>The single number that summarizes the overall difference between observed and
+                    expected counts is the chi-square statistic <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> , which tells us in a standardized way how far what we observed (data)
+                    is from what would be expected if H<sub>o</sub> were true. </p>
+                <p>Here it is:</p>
+                <p>
+                    <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                            <m:mo>=</m:mo>
+                            <m:munder>
+                                <m:mo>∑</m:mo>
+                                <m:mrow>
+                                    <m:mi mathvariant="italic">all</m:mi>
+                                    <m:mtext> </m:mtext>
+                                    <m:mi mathvariant="italic">cells</m:mi>
+                                </m:mrow>
+                            </m:munder>
+                            <m:mrow>
+                                <m:mfrac>
+                                    <m:msup>
+                                        <m:mfenced open="(" close=")">
+                                            <m:mrow>
+                                                <m:mi mathvariant="italic">Observed</m:mi>
+                                                <m:mtext> </m:mtext>
+                                                <m:mi mathvariant="italic">Count</m:mi>
+                                                <m:mo>−</m:mo>
+                                                <m:mi mathvariant="italic">ExpectedCount</m:mi>
+                                            </m:mrow>
+                                        </m:mfenced>
+                                        <m:mn>2</m:mn>
+                                    </m:msup>
+                                    <m:mrow>
+                                        <m:mi mathvariant="italic">Expected</m:mi>
+                                        <m:mtext> </m:mtext>
+                                        <m:mi mathvariant="italic">Count</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:mrow>
+                    </m:math>
+                </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>As we expected, <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> is based on each of the differences: observed count - expected count
+                    (one such difference for each cell), but why is it squared? Why do we divide
+                    each square difference by the expected count? The reason we do that is so that
+                    the null distribution of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> will have a known null distribution (under which p-values can be
+                    easily calculated). The details are really beyond the scope of this course, but
+                    we will just say that the null distribution of <m:math overflow="scroll">
+                        <m:mrow>
+                            <m:msup>
+                                <m:mi>&chi;</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> is called chi-square (which is not very surprising given that the test
+                    is called the chi-square test), and like the t-distributions there are many
+                    chi-square distributions distinguished by the number of degrees of freedom
+                    associated with them. </p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Conditions under Which the Chi-Square Test Can Safely Be Used</title>
+            <body>
+                <ol style="lower-roman">
+                    <li><p> The sample should be random.</p></li>
+                    <li>
+                        <p> In general, the larger the sample, the more accurate and reliable the
+                            test results are. There are different versions of what the conditions
+                            are that will ensure reliable use of the test, all of which involve the
+                            expected counts. One version of the conditions says that all expected
+                            counts need to be greater than 1, and at least 80% of expected counts
+                            need to be greater than 5. A more conservative version requires that all
+                            expected counts are larger than 5.</p></li>
+                </ol>
+                <example>
+
+                    <p>Here, again, are the observed and expected counts.</p>
+
+                    <image style="block" src="../webcontent/image141.gif"
+                        alt="A two-way table for observed
+and expected counts, in which the columns are labeled &quot;Yes,&quot; &quot;No,&quot; and &quot;Total.&quot;
+The rows are labeled &quot;Male,&quot; &quot;Female,&quot; and &quot;Total.&quot; Here is the data in the table,
+given in cell format (&quot;Row, Column: Value&quot;):
+                Male, Yes: observed: 77 expected: 72.3
+                Male, No: observed: 404 expected: 408.7
+                Male, Total: 481
+                Female, Yes: observed: 16, expected: 20.7
+                Female, No: observed: 122, expected: 117.3
+                Female, Total: 138
+                Total, Yes: 93,
+                Total, No: 526
+                Total, Total: 619"/>
+                    <p>Checking the conditions:</p>
+                    <ol style="lower-roman">
+                        <li><p>The roadside survey is known to have been random.</p></li>
+                        <li><p>All the expected counts are above 5.</p>
+                            <p>We can therefore safely proceed with the chi-square test, and the
+                                chi-square test statistic is:</p>
+                            <p>
+                                <m:math overflow="scroll">
+                                    <m:mrow>
+                                        <m:mfrac>
+                                            <m:msup>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>77</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mn>72</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>3</m:mn>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mrow>
+                                                <m:mn>72</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>3</m:mn>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msup>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>404</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mn>408</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>7</m:mn>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mrow>
+                                                <m:mn>408</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>7</m:mn>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msup>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>16</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mn>20</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>7</m:mn>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mrow>
+                                                <m:mn>20</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>7</m:mn>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                        <m:mo>+</m:mo>
+                                        <m:mfrac>
+                                            <m:msup>
+                                                <m:mfenced open="(" close=")">
+                                                  <m:mrow>
+                                                  <m:mn>122</m:mn>
+                                                  <m:mo>−</m:mo>
+                                                  <m:mn>117</m:mn>
+                                                  <m:mo>.</m:mo>
+                                                  <m:mn>3</m:mn>
+                                                  </m:mrow>
+                                                </m:mfenced>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mrow>
+                                                <m:mn>117</m:mn>
+                                                <m:mo>.</m:mo>
+                                                <m:mn>3</m:mn>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                        <m:mo>=</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>306</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>054</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>067</m:mn>
+                                        <m:mo>+</m:mo>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>188</m:mn>
+                                        <m:mo>=</m:mo>
+                                        <m:mn>1</m:mn>
+                                        <m:mo>.</m:mo>
+                                        <m:mn>62</m:mn>
+                                    </m:mrow>
+                                </m:math>
+                            </p></li>
+                    </ol>
+                </example>
+                <pref:choose preference="statistics.package">
+
+                    <pref:when value="excel"/>
+                    <pref:when value="minitab">
+                        <p>Here is the Minitab output of the chi-square test (note: 1 = M, 2 = F).
+                            Look at it carefully. Can you identify the three numbers in each
+                            cell?</p>
+                        <p>Actually, the output explains the content of each cell (explanation is
+                            highlighted).</p>
+
+                        <image style="block" src="../webcontent/image185.gif"
+                            alt="Chi-Square Test:
+Drunk, Not-Drunk.
+            Male, Drunk: Observed: 77, Expected: 72.27, Chi-Square contribution: 0.310
+            Male, Not-Drunk: Observed: 404, Expected: 408.73, Chi-Square contribution: 0.055
+            Male, Total: 481
+            Female, Drunk: Observed: 16, Expected: 20.73, Chi-Square contribution: 1.081
+            Female, Not-Drunk: Observed: 122, Expected: 117.27, Chi-Square contribution: 0.191
+            Female, Total: 138
+            
+            Total: Drunk: 93, Not-Drunk: 526, Total: 619
+            Chi-Sq: 1.637, DF = 1, P-Value = 0.201"/>
+                        <p>As usual, the software can do all the work for us; however, in this test,
+                            the calculations are simple enough that you should know how the test
+                            statistic was calculated.</p>
+                    </pref:when>
+                    <pref:when value="r"/>
+                </pref:choose>
+
+            </body>
+        </section>
+        <!--<activity idref="_u5_m2_dig8" purpose="didigetthis"/>-->
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <alternatives group="statistics.package">
+                    <default><pref:value preference="statistics.package"/></default>
+                    <alternative value="r">
+                        <title>R</title>
+                        <p>A study was done on the relationship between gender and ear piercing
+                            among high-school students. A sample of 1,000 students was chosen, then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following information is available:</p>
+                        <image style="block" src="../webcontent/image426_excel.gif"
+                            alt="Chi-Squared
+Test: Pierced, No Pierced
+            Observed Counts:
+            Female, Pierced: 576, No Pierced: 64, Total: 640;
+            Male, Pierced: 72, No Pierced: 288, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Expected Counts:
+            Female, Pierced: 414.72, No Pierced: 225.28, Total: 640;
+            Male, Pierced: 233.28, No Pierced: 126.72, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Chi-Square contribution:
+            Female, Pierced: (blank), No Pierced: 115.462
+            Male, Pierced: 111.502, No Pierced: "
+                        />
+                    </alternative>
+                    <alternative value="StatCrunch">
+                        <title>StatCrunch</title>
+                        <p>A study was done on the relationship between gender and piercing among
+                            high-school students. A sample of 1,000 students was chosen, and then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following (edited) StatCrunch output is
+                            available:</p>
+                        <image style="block" src="../webcontent/image426_statcrunch.gif"
+                            alt="
+            Female, Pierced: Count: 576, Expected Count: 414.7
+            Female, No Pierced: Count: 64, Expected Count: 225.3
+            Female, Total: 640
+            Male, Pierced: Count: 72, Expected Count: 233.3
+            Male, No Pierced: Count: 288, Expected Count: 126.7
+            Male, Total: 360
+            Total, Pierced: 648, No Pierced: 252, Total: 1000
+            
+            Chi-Squared test:
+            Chi-Square: DF = 1, P-value &lt; 0.0001"
+                        />
+                    </alternative>
+                    <alternative value="minitab">
+                        <title>Minitab</title>
+                        <p>A study was done on the relationship between gender and piercing among
+                            high-school students. A sample of 1,000 students was chosen, then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following (edited) Minitab is available:</p>
+                        <image style="block" src="../webcontent/image426.gif"
+                            alt="Chi-Square Test:
+Pierced, No Pierced
+            F, Pierced: Observed: 576, Expected: 414.72, Chi-Square contribution: (blank);
+            F, No Pierced: Observed: 64, Expected: 225.28, Chi-Square contribution: 115.462;
+            F, Total: 640;
+            M, Pierced: Observed: 72, Expected: 233.28, Chi-Square contribution: 111.502;
+            M, No Pierced: Observed: 288, Expected: 126.72, Chi-Square contribution: ;
+            M, Total: 360;
+            
+            Total: Pierced: 648, No Pierced: 352, Total: 1000
+            Chi-Sq: (blank), DF = 1, P-Value = 0.000"
+                        />
+                    </alternative>
+                    <alternative value="excel">
+                        <title>Excel 2013 and 2016 Instructions</title>
+                        <p>A study was done on the relationship between gender and piercing among
+                            high-school students. A sample of 1,000 students was chosen, then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following information is available:</p>
+                        <image style="block" src="../webcontent/image426_excel.gif"
+                            alt="Chi-Squared
+Test: Pierced, No Pierced
+            Observed Counts:
+            Female, Pierced: 576, No Pierced: 64, Total: 640;
+            Male, Pierced: 72, No Pierced: 288, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Expected Counts:
+            Female, Pierced: 414.72, No Pierced: 225.28, Total: 640;
+            Male, Pierced: 233.28, No Pierced: 126.72, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Chi-Square contribution:
+            Female, Pierced: (blank), No Pierced: 115.462
+            Male, Pierced: 111.502, No Pierced: "
+                        />
+                    </alternative>
+                    <!--       <alternative value="excel2003">
+                        <title>Excel 2003</title>
+                        <p>A study was done on the relationship between gender and piercing among
+                            high-school students. A sample of 1,000 students was chosen, then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following information is available:</p>
+                        <image style="block" src="../webcontent/image426_excel.gif"
+                            alt="Chi-Squared
+Test: Pierced, No Pierced
+            Observed Counts:
+            Female, Pierced: 576, No Pierced: 64, Total: 640;
+            Male, Pierced: 72, No Pierced: 288, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Expected Counts:
+            Female, Pierced: 414.72, No Pierced: 225.28, Total: 640;
+            Male, Pierced: 233.28, No Pierced: 126.72, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Chi-Square contribution:
+            Female, Pierced: (blank), No Pierced: 115.462
+            Male, Pierced: 111.502, No Pierced: "
+                        />
+                    </alternative>-->
+                    <alternative value="ti">
+                        <title>TI Calculator</title>
+                        <p>A study was done on the relationship between gender and piercing among
+                            high-school students. A sample of 1,000 students was chosen, then
+                            classified according to both gender and whether or not they had either
+                            of their ears pierced. The following information is available:</p>
+                        <image style="block" src="../webcontent/image426_excel.gif"
+                            alt="Chi-Squared
+Test: Pierced, No Pierced
+            Observed Counts:
+            Female, Pierced: 576, No Pierced: 64, Total: 640;
+            Male, Pierced: 72, No Pierced: 288, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Expected Counts:
+            Female, Pierced: 414.72, No Pierced: 225.28, Total: 640;
+            Male, Pierced: 233.28, No Pierced: 126.72, Total: 360;
+            Total, Pierced: 648, No Pierced: 352, Total: 1000
+            
+            Chi-Square contribution:
+            Female, Pierced: (blank), No Pierced: 115.462
+            Male, Pierced: 111.502, No Pierced: "
+                        />
+                    </alternative>
+                </alternatives>
+                <wb:inline idref="u4_m4_cc3_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u4_m4_cc3_tutor3" purpose="didigetthis"/>
+                <wb:inline idref="u4_m4_cc3_tutor2" purpose="didigetthis"/>
+            </body>
+        </section>
+
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>Once the chi-square statistic has been calculated, we can get a feel for its
+                    size: is there a relatively large difference between what we observed and what
+                    the null hypothesis claims, or a relatively small one? It turns out that for a
+                    2-by-2 case like ours, we are inclined to call the chi-square statistic "large"
+                    if it is larger than 3.84. Therefore, our test statistic is not large,
+                    indicating that the data are not different enough from the null hypothesis for
+                    us to reject it (we will also see that in the p-value not being small). For
+                    other cases (other than 2-by-2) there are different cut-offs for what is
+                    considered large, which are determined by the null distribution in that case. We
+                    are therefore going to rely only on the p-value to draw our conclusions. Even
+                    though we cannot really use the chi-square statistic, it was important to learn
+                    about it, since it encompasses the idea behind the test.</p>
+            </body>
+        </section>
+        <section purpose="didigetthis">
+            <title>Did I Get This?</title>
+            <body>
+                <p>The purpose of this activity is to continue to explore whether the risk of
+                    alcohol problems among New York firefighters and first responders is related to
+                    participation in the 911 rescue. In particular, in this activity, we will state
+                    the hypotheses that are being tested, learn how to carry out the chi-square test
+                    for independence using statistical software, and check whether the conditions
+                    under which this test can be safely used are met.</p>
+                <table>
+
+                    <title>Observed data</title>
+                    <caption>New York Firefighters and first responders</caption>
+                    <tr>
+                        <th/>
+                        <th>No risk for alchohol problems</th>
+                        <th>Moderate to Servere risk for alcohol problems</th>
+                        <th>Total</th>
+
+                    </tr>
+                    <tr>
+
+                        <th>Participated in 911 rescue</th>
+                        <td>793</td>
+                        <td>309</td>
+                        <td><em style="bold">1102</em></td>
+
+                    </tr>
+                    <tr>
+                        <th>Did Not Participate in 911 rescue</th>
+                        <td>441</td>
+                        <td>110</td>
+                        <td><em style="bold">551</em></td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td><em style="bold">1234</em></td>
+                        <td><em style="bold">419</em></td>
+                        <td><em style="bold">1653</em></td>
+
+                    </tr>
+                </table>
+                <wb:inline idref="u5_m2_cc3_digt" purpose="didigetthis"/>
+            </body>
+
+        </section>
+
+        <p><!--Now you will-->In this activity, we check whether the conditions under which the
+            chi-square test can be safely used are met. In order to do this, you'll need to first
+            launch the actual <link href="../../webcontent/FirefighterStress.pdf" target="new"
+                >research report</link> and read the last paragraph on page iii of the introduction
+            (starting with "The study was fully funded...").</p>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default>
+                    <pref:value preference="statistics.package"/>
+                </default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                                target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+                    <p>To enter the actual (observed) counts into R, open R. Then, use the following
+                        command:</p>
+                    <ul style="none">
+                        <li><code>data=data.frame(no.risk=c(793,441),moderate.to.severe.risk=c(309,110),row.names=</code></li>
+                        <li><code>c("participated","did.not.participate"));data</code></li>
+                    </ul>
+                    <p>Then use this command to calculate the expected counts:</p>
+                    <ul style="none">
+                        <li><code>chisq.test(data)$expected</code></li>
+                    </ul>
+                    <!--<p>Next we will use R to calculate the expected counts, since we do not have the
+                    raw data to have R construct a table using the <code>data.frame()</code> command.</p>
+                <p>Use the following command (on one line, with no spaces) to create a data frame of the actual counts in R:</p>
+                <ul style="none">
+                    <li><code>data=data.frame(no.risk=c(793,441), moderate.to.severe.risk=c(309,110), row.names=c("participated","did.not.participate"));</code></li>
+                    <li><code>data</code></li>
+                </ul>
+                <p>Then use this command to calculate the expected counts:</p>
+                <ul style="none">
+                    <li><code>chisq.test(data)$expected</code></li>
+                </ul>-->
+
+                    <!--<wb:inline idref="_u5_m2_lbdtutor9b_r"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="480">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor9b_r.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor9b_r</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                                target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+                    <p>To enter the actual (observed) counts into Minitab, open Minitab. Then, use
+                        the following command:</p>
+                    <ul>
+                        <li>Enter the observed counts as they appear in the table above (not
+                            including the totals) into columns C1 and C2.</li>
+                        <li>Name C1 "No Risk" and C2 "M to S Risk."</li>
+                        <li>Choose Stat → Tables → Chi-Square Test (Table in Worksheet).</li>
+                        <li>Under "Columns containing the table," enter C1 and C2.</li>
+                        <li>Click OK.</li>
+                    </ul>
+
+                    <!--<p>Next we will use Minitab to calculate the expected counts: </p>
+                <ul>
+                    <li>Enter the observed counts as they appear in the table above (not
+                        including the totals) into columns C1 and C2.</li>
+                    <li>Name C1 "No Risk," and C2 "M to S Risk."</li>
+                    <li>Choose Stat → Tables → Chi-Square Test (Table in Worksheet).</li>
+                    <li>Under "Columns containing the table," enter C1 and C2.</li>
+                    <li>Click "OK."</li>
+                </ul>-->
+                    <!--<wb:inline idref="u4_m4_cc3_lbd_tutor2"/>-->
+                    <!--
+                    <flash src="../../../webcontent/flash/ShortAnswerTutor.swf" width="505" height="451">
+                    <param name="question_file">../../../webcontent/flash/_u5_m2_lbdtutor9b.xml</param>
+                    <param name="problem_name">_u5_m2_lbdtutor9b</param>
+                    </flash>
+                -->
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions Instructions</title>
+                    <!--<p>Next we will use Excel to calculate the expected counts: </p>-->
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                                target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+                    <p>To use Excel to calculate the expected counts:</p>
+                    <ul>
+                        <li>Open Excel and create a table for expected counts with the same row and
+                            column headings as in the above observed data table.</li>
+                        <li>Use the formula <code style="inline">Expected Count = (Column Total *
+                                Row Total)/Table Total</code> in each cell to complete the table of
+                            expected counts.</li>
+                        <!--<li>Create a table for expected counts with the same row and column headings
+                            as the one above, and use the formula <code style="inline">Expected
+                                Count = (Column Total * Row Total)/Table Total</code>. </li>-->
+                    </ul>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <!--<p>Next we will use StatCrunch to calculate the expected counts:</p>-->
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                                target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+                    <p>To enter the actual (observed) counts into StatCrunch, open StatCrunch and
+                        complete the following steps:</p>
+                    <ul>
+                        <li>Enter Yes and No in column var1</li>
+                        <li>Enter the observed counts as they appear in the table above (not
+                            including the totals) into columns var2 and var3</li>
+                        <li>Rename var1 as “911,” var2 as “No Risk,” and var3 as “M to S Risk” </li>
+                        <li>Choose Stat → Tables → Contingency → with summary</li>
+                        <li>Select the columns “No Risk” and “M to S Risk”</li>
+                        <li>Select Row labels in “911”</li>
+                        <li>Press “Next”</li>
+                        <li>Check “Expected Count” and “Chi-Square”</li>
+                    </ul>
+                </alternative>
+
+                <!--  <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                            target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+                    <p>To use Excel to calculate the expected counts:</p>
+                    <ul>
+                        <li>Open Excel and create a table for expected counts with the same row and
+                            column headings as in the above observed data table.</li>
+                        <li>Use the formula <code style="inline">Expected Count = (Column Total * Row Total)/Table
+                            Total</code> in each cell to complete the table of expected
+                            counts.</li>
+                    </ul>
+                   
+                    </alternative> -->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>Now you will check whether the conditions under which the chi-square test can
+                        be safely used are met. In order to do this, you will need to do the
+                        following two things:</p>
+                    <ol style="decimal">
+                        <li>Launch the actual <link href="../../webcontent/FirefighterStress.pdf"
+                                target="new">research report</link> and read the last paragraph on
+                            page iii of the introduction (starting with "The study was fully
+                            funded...").</li>
+                        <li>Use the observed data from the above table to calculate the expected
+                            counts.</li>
+                    </ol>
+
+                    <p>To enter the actual (observed) counts into your TI Calculator, use the
+                        following
+                        steps:<!--Next use your TI Calculator to calculate the expected counts: --></p>
+                    <p><em>Chi-square test for independence </em></p>
+                    <ul>
+                        <li>Enter the data in Matrix A: </li>
+                        <li>Press <code style="inline">MATRIX (2ND/x<sup>-1</sup></code> on TI 84;
+                                <code style="inline">MATRIX</code> button on old TI83) </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image508.jpg"
+                                alt="NAMES  MATH  EDIT
+                        1: [A], 2: [B], 3: [C], 4: [D], 5: [E], 6: [F] ..."
+                            /></li>
+                        <li>Press the right arrow twice to choose <code style="inline">EDIT</code>. </li>
+                        <li>Choose 1:[A]. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image509.jpg"
+                                alt="MATRIX[A]
+                        1 x 1:   [ 0                     ]"
+                            /></li>
+                        <li>NOTE: Your screen may be different if another matrix was previously
+                            entered in [A]. </li>
+                        <li>You need to enter: number of rows X number of columns. </li>
+                        <li>The rows entry will be highlighted. Enter the number of categories for
+                            the explanatory variable. </li>
+                        <li>Use the right arrow (or <code style="inline">ENTER</code>) to move to
+                            the columns entry. </li>
+                        <li>Note that the correct number of rows is now displayed. </li>
+                        <li>Enter the number of categories for the response variable. </li>
+                        <li>Use the down arrow (or <code style="inline">ENTER</code>) to move to the
+                            entry for the first row, first column. </li>
+                        <li>Note that the correct number of columns is now displayed. </li>
+                        <li>Enter counts (no totals) from your two-way table. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image510.jpg"
+                                alt="MATRIX[A] 2x2
+                        [ 793 309 ] [ 441 110 ]"
+                            /></li>
+                        <li>Choose <code style="inline">STAT/TESTS/C: X<sup>2</sup>-Test</code>. </li>
+                        <li>Enter the correct matrix for the observed values (the values you just
+                            entered from the two-way table) and any matrix for the expected values
+                            calculated by the TI. </li>
+                        <li>Note:You can always use the default values of [A] for observed and [B]
+                            for expected. </li>
+                        <li>To use matrices other than [A] or [B], position the cursor to the right
+                            of observed: (or expected) and press <code style="inline"
+                                >MATRIX/NAMES/</code> choose a matrix name. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image511.jpg"
+                                alt="&chi;&sup2; Test
+                        Observed: [A]
+                        Expected: [B]
+                        Calculate Draw"
+                            /></li>
+                        <li>Choose <code style="inline">Calculate</code>, then <code style="inline"
+                                >ENTER</code>. </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image512.jpg"
+                                alt="&chi;&sup2;-Test
+                        &chi;&sup2; = 12.66174866
+                        p = 3.7321299e-4
+                        df = 1"
+                            /></li>
+                        <li>Note: degrees of freedom df = (number of rows - 1)(number of columns -
+                            1)</li>
+                        <li>To see the expected values calculated by your TI: </li>
+                        <li>Choose <code style="inline">MATRIX (2ND/x<sup>-1</sup></code> on TI 84;
+                                <code style="inline">MATRIX</code> button on old TI83) </li>
+                        <li>You should see: <image style="inline"
+                                src="../../webcontent/image513.jpg"
+                                alt="NAMES   MATH   EDIT
+                        1: [A] 2x2
+                        2: [B] 2x2
+                        3: [C]
+                        4: [D]
+                        5: [E]
+                        ...."
+                            /></li>
+                        <li>Press the right arrow twice to choose <code style="inline">EDIT</code>. </li>
+                        <li>Choose 2:[B]. </li>
+                        <!--<li>You should see: <image style="inline" src="../../webcontent/image514.jpg"/></li>-->
+                    </ul>
+                </alternative>
+            </alternatives>
+        </pullout>
+        <wb:inline idref="u4_m4_cc3_lbd_tutor2" purpose="learnbydoing">
+            <param name="tabPreference"><pref:value preference="statistics.package"/></param>
+        </wb:inline>
+
+
+
+    </body>
+</workbook_page>

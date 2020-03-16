@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_matched_pairs8_openfree">
+    <head>
+        <title>Matched Pairs (8 of 8)</title>
+
+    </head>
+    <body>
+        <section>
+            <title>Let's summarize</title>
+            <body>
+                <ul>
+                    <li><p>The paired t-test is used to compare two population means when the two
+                            samples (drawn from the two populations) are dependent in the sense that
+                            every observation in one sample can be linked to an observation in the
+                            other sample. Such a design is called "matched pairs."</p></li>
+                    <li><p>The most common case in which the matched pairs design is used is when
+                            the same subjects are measured twice, usually before and then after some
+                            kind of treatment and/or intervention. Another classic case are studies
+                            involving twins.</p></li>
+                    <li><p>As in the "two independent samples" case, in the background, we have a
+                            two-valued categorical explanatory whose categories define the two
+                            populations we are comparing and whose effect on the response variable
+                            we are trying to assess.</p></li>
+                    <li><p>The idea behind the paired t-test is to reduce the data from two samples
+                            to just one sample of the differences, and use these observed
+                            differences as data for inference about a single mean &#8212; the mean
+                            of the differences, <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mi>d</m:mi>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>. </p>
+                    </li>
+                    <li><p>The paired t-test is therefore simply a one-sample t-test for the mean of
+                            the differences <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mi>d</m:mi>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math>, where the null value is 0. </p></li>
+                    <li><p>Once we verify that we can safely proceed with the paired t-test, we use
+                            software output to carry it out.</p></li>
+                    <li><p>A 95% confidence interval for <m:math overflow="scroll">
+                                <m:mrow>
+                                    <m:msub>
+                                        <m:mi mathvariant="normal">μ</m:mi>
+                                        <m:mi>d</m:mi>
+                                    </m:msub>
+                                </m:mrow>
+                            </m:math> can be very insightful after a test has rejected the null
+                            hypothesis, and can also be used for testing in the two-sided case. </p>
+                    </li>
+                </ul>
+                <p> </p>
+            </body>
+       </section>
+        
+        <!--  <activity idref="_u5_m2_matched_pairs_checkpoint1" purpose="checkpoint"/>-->
+        <section>
+            <title>End-of-Lesson Questions</title>
+            <body>
+                <activity purpose="myresponse" idref="_u5_m02_matched_pairs8_feedback"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

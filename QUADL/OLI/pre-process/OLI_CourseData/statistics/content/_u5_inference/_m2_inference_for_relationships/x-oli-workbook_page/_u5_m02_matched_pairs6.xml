@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m02_matched_pairs6">
+    <head>
+        <title>Matched Pairs (6 of 8)</title>
+        <objref idref="carry_out_inferential_method_groups"/>
+        <objref idref="specify_hypotheses_for_groups"/>
+    </head>
+<body>
+   
+        <p>The "driving after having 2 beers" example is a case in which observations are paired by
+            subject. In other words, both samples have the same subject, so that each subject is
+            measured twice. Typically, as in our example, one of the measurements occurs before a
+            treatment/intervention (2 beers in our case), and the other measurement after the
+            treatment/intervention. Our next example is another typical type of study where the
+            matched pairs design is used&#8212;it is a study involving twins.</p>
+        <example>
+            <p>Researchers have long been interested in the extent to which intelligence, as
+                measured by IQ score, is affected by "nurture" as opposed to "nature": that is, are
+                people's IQ scores mainly a result of their upbringing and environment, or are they
+                mainly an inherited trait? A study was designed to measure the effect of home
+                environment on intelligence, or more specifically, the study was designed to address
+                the question: "Are there significant differences in IQ scores between people who
+                were raised by their birth parents, and those who were raised by someone else?"</p>
+            <p>In order to be able to answer this question, the researchers needed to get two groups
+                of subjects (one from the population of people who were raised by their birth
+                parents, and one from the population of people who were raised by someone else) who
+                are as similar as possible in all other respects. In particular, since genetic
+                differences may also affect intelligence, the researchers wanted to control for this
+                confounding factor.</p>
+            <p>We know from our discussion on study design (in the Producing Data unit of the
+                course) that one way to (at least theoretically) control for all confounding factors
+                is randomization&#8212;randomizing subjects to the different treatment groups. In
+                this case, however, this is not possible. This is an observational study; you cannot
+                randomize children to either be raised by their birth parents or to be raised by
+                someone else. How else can we eliminate the genetics factor? We can conduct a "twin
+                study."</p>
+            <p>Because identical twins are genetically the same, a good design for obtaining
+                information to answer this question would be to compare IQ scores for identical
+                twins, one of whom is raised by birth parents and the other by someone else. Such a
+                design (matched pairs) is an excellent way of making a comparison between
+                individuals who only differ with respect to the explanatory variable of interest
+                (upbringing) but are as alike as they can possibly be in all other important aspects
+                (inborn intelligence). Identical twins raised apart were studied by Susan Farber,
+                who published her studies in the book "Identical Twins Reared Apart" (1981, Basic
+                Books). In this problem, we are going to use the data that appear in Farber's book
+                in table E6, of the IQ scores of 32 pairs of identical twins who were reared
+                apart.</p>
+            <p>Here is a figure that will help you understand this study:</p>
+            <image style="block" src="../webcontent/image083.gif" alt="The variable X takes on two
+categories: Upbringing by birth parents or someone else. These two categories form population 1
+and population 2. For each population, we have a IQ (Y) mean, &mu;_1 for population 1 and &mu;_2
+for population 2. We generate the samples in matched pairs by using the relationship of twins separated
+at birth. So, we generate an SRS of size 32 for population 1 and also one of size 32 for population 2
+using this relationship, paired by twins."/>
+            <p>Here are the important things to note in the figure:</p>
+            <ol>
+           <li> <p>We are essentially comparing the mean IQ scores in two populations that are
+                defined by our (two-valued categorical) explanatory variable &#8212; upbringing (X),
+                whose two values are: raised by birth parents, raised by someone else.</p></li>
+          <li><p>This is a matched pairs design (as opposed to a two independent samples design),
+                since each observation in one sample is linked (matched) with an observation in the
+                second sample. The observations are paired by twins.</p></li></ol>
+            <p>To look at the data set, follow these instructions:</p>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../webcontent/r/twins.RData" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in R. </p>
+                    <p>The data have been loaded into the variable "twins." Enter the command
+                            <code>twins</code> to see the data.</p>
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                    href="../../webcontent/excel/twins.xls" target="self">here</link> and choose "Save
+                    Target As" to download the file to your computer. Next click <link href="http://www.statcrunch.com/" target="new">here </link>to open StatCrunch in a separate window and login using your username and password.</p>
+                    <ul>
+                        <li>Click on the link “Open StatCrunch” at the top of the My StatCrunch page. </li>
+                        <li>To open the data set select the “My computer” link under Load a data set from box on the left side of the page.</li>
+                        <li>Select the "Browse" or “Choose File” (depending on which browser you're using and select the data set you downloaded</li>
+                        <li>Scroll to the bottom of the page and click on “Load File”</li>
+                    </ul>
+                </alternative>
+               <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../webcontent/minitab/twins.mtw" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Minitab. Note: you will
+                        likely see a dialog box appear that says "A copy of the content of this file
+                        will be added to the current project"&#8212;just click "OK." </p>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2007 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                        href="../../webcontent/excel/twins.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                </alternative>
+                <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                        href="../../webcontent/excel/twins.xls" target="self">here</link> and
+                        choose "Save Target As" to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. </p>
+                </alternative>
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p>To open a group of lists with the twins data loaded, right-click <link href="../../webcontent/ti/twins.8xg"
+                        target="self">here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and send it to your calculator. For instructions
+                        on how to connect your calculator to your computer and transfer a file, click
+                        <activity_link idref="ti_instructions" target="new">here</activity_link>.</p>
+                    <p>The data have been loaded into L1 (Twin 1) and L2 (Twin 2). Choose STAT/EDIT/1:Edit to see the data.</p>
+                </alternative>
+            </alternatives>
+            <p>Each of the 32 rows represents one pair of twins. Keeping the notation that we used
+                above, twin 1 is the twin that was raised by his/her birth parents, and twin 2 is
+                the twin that was raised by someone else. Let's carry out the analysis.</p>
+            <ol>
+         <li>   <p><em>Stating the hypotheses.</em></p>
+            <p>Recall that in matched pairs, we reduce the data from two samples to one sample of
+                differences:</p>
+            <image style="block" src="../webcontent/image084.gif" alt="A table with 4 rows describing
+each matched pair. The rows are &quot;Pair,&quot; &quot;TWIN 1 (raised by birth parents),&quot; 
+&quot;TWIN 2 (someone else),&quot; and &quot;Differences (twin1 - twin2).&quot; We only care about
+the pair and its difference."/>
+            <p>and we state our hypotheses in terms of the mean of the differences, <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                    </m:mrow>
+                </m:math>. </p>
+            <p>Since we would like to test whether there are differences in IQ scores between people
+                who were raised by their birth parents and those who weren't, we are carrying out
+                the two-sided test:</p>
+            <image style="block" src="../webcontent/image085.gif" alt="H_0 = &mu;_d = 0,  H_a: &mu;_d
+&ne; 0"/>
+            <p>
+                <em>Comment:</em>
+            </p>
+            <p>Again, some students find it easier to first think about the hypotheses in terms of
+                    μ<sub>1</sub> and μ<sub>2</sub>, and then write them in terms of <m:math
+                    overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                    </m:mrow>
+                </m:math>. In this case, since we are testing for differences between the two
+                populations, the hypotheses will be: </p>
+            <image style="block" src="../webcontent/image030.gif" alt="H_0: &mu;_1 - &mu;_2 = 0,
+  H_a: &mu;_1 - &mu;_2 &ne; 0"/>
+            <p>and since <m:math overflow="scroll">
+                    <m:mrow>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mi>d</m:mi>
+                        </m:msub>
+                        <m:mo>=</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>1</m:mn>
+                        </m:msub>
+                        <m:mo>−</m:mo>
+                        <m:msub>
+                            <m:mi mathvariant="normal">μ</m:mi>
+                            <m:mn>2</m:mn>
+                        </m:msub>
+                    </m:mrow>
+                </m:math> we get back to the hypotheses above. </p></li>
+           <li><p><em>Checking conditions and summarizing the data with a test statistic.</em></p>
+            <p>Is it safe to use the paired t-test in this case?</p>
+               <ol style="lower-roman">
+            <li><p>Clearly, the samples of twins are not random samples from the two populations.
+                However, in this context, they can be considered as random, assuming that there is
+                nothing special about the IQ of a person just because he/she has an identical
+                twin.</p></li>
+           <li> <p>The sample size here is n = 32. Even though it's the case that if we use the n
+                &gt; 30 rule of thumb our sample can be considered large, it is sort of a borderline
+                case, so just to be on the safe side, we should look at the histogram of the
+                differences just to make sure that we do not see anything extreme. (Comment: Looking
+                at the histogram of differences in every case is useful even if the sample is very
+                large, just in order to get a sense of the data. Recall: "Always look at the
+                data.")</p></li></ol>
+            <p>
+                <image style="block" src="../webcontent/image086.gif" alt="A histogram of differences,
+on which the vertical axis is labeled &quot;Frequency&quot; and the horizontal axis is labeled
+&quot;Differences.&quot; The data, given in &quot;Difference: Frequency&quot; format:
+            -20: 1
+            -16: 3
+            -12: 5
+            -8: 0
+            -4: 7
+            0: 7
+            4: 4
+            8: 2
+            12: 3"/> </p>
+               <p>The data don't reveal
+                anything that we should be worried about (like very extreme skewness or outliers),
+                so we can safely proceed. Looking at the histogram, we note that most of the
+                differences are negative, indicating that in most of the 32 pairs of twins, twin 2
+                (raised by someone else) has a higher IQ. </p>
+            <p>From this point we rely on statistical software, and find that:</p>
+            <ul>
+                <li>t-value = -1.85</li>
+                <li>p-value = 0.074</li>
+            </ul>
+            <!-- RS 07/28/10  Generalized to eliminate alternatives
+        <alternatives group="statistics.package"><default><pref:value preference="statistics.package"/></default>
+<alternative value="excel">                 <title>Excel 2007 Instructions</title>
+<p>From this point we rely on Excel, and find that:</p>
+<image style="block" src="../webcontent/image198_excel.gif"/>
+</alternative>
+<alternative value="minitab">                 <title>Minitab Instructions</title>
+<p>From this point we rely on output:</p>
+<image style="block" src="../webcontent/image198.gif"/>
+</alternative>
+    <alternative value="r">                 <title>R Instructions</title>
+        <p>From this point we rely on R, and find that:</p>
+        <image style="block" src="../webcontent/image198_excel.gif"/>
+    </alternative>
+<alternative value="ti">         <title>TI Instructions</title>         <p></p>       </alternative>     </alternatives>-->
+            <p>Our test statistic is -1.85. Our data (represented by the average of the differences)
+                are 1.85 standard errors below the null hypothesis (represented by the null value
+                0).</p></li>
+           <li><p><em>Finding the p-value.</em></p>
+            <p>The p-value is 0.074, indicating that there is a 7.4% chance of obtaining data like
+                those observed (or even more extreme) assuming that H<sub>o</sub> is true (i.e.,
+                assuming that there are no significant differences in IQ scores between people who
+                were raised by their natural parents and those who weren't).</p></li>
+            <li><p><em>Making conclusions.</em></p>
+            <p>Using the conventional significance level (cut-off probability) of .05, our p-value
+                is not small enough, and we therefore cannot reject H<sub>o</sub>. In other words,
+                our data do not provide enough evidence to conclude that whether a person was raised
+                by his/her natural parents has an impact on the person's intelligence (as measured
+                by IQ scores).</p></li></ol>
+           </example>
+            <wb:inline
+                idref="u4_m3_matchedpairs6_tutor1" purpose="learnbydoing"/>
+            <!--
+    <flash src="../../webcontent/flash/MultipleChoiceTutor.swf" width="505" height="290" purpose="learnbydoing">
+<param name="question_file">../../webcontent/flash/_u5_m2_inlinetutor2.xml</param>
+<param name="problem_name">_u5_m2_inlinetutor2</param>
+</flash>--> <section>
+                <title>Comment:</title>
+            <body>
+            <p>This means that if, based on prior knowledge, prior research, or just a hunch, we had
+                wanted to test the hypothesis that the IQ level of people raised by their birth
+                parents is lower, on average, than the IQ level of people who were raised by someone
+                else, we would have rejected H<sub>o</sub> and accepted that hypothesis (at the .05
+                significance level, since .037 &lt; .05).</p>
+            <p>It should be stressed, though, that one should set the hypotheses before looking at
+                the data. It would be ethically wrong to look at the histogram of differences, note
+                that most of the differences are negative, and then decide to carry out the
+                one-sided test that the data seem to support. This is known as "data snooping," and
+                is considered to be a very bad statistical practice.</p></body></section>
+        
+        <activity idref="_u5_m2_lbd4" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

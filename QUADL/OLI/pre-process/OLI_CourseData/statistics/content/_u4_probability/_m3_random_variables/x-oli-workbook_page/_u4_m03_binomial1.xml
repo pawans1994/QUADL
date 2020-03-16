@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u4_m03_binomial1">
+    <head>
+        <title>Binomial Random Variables (1 of 4)</title>
+        <objref idref="fit_binomial_model"/>
+    </head>
+    <body>
+
+        <section>
+            <title>Binomial Random Variables</title>
+            <body>
+                <p>So far, in our discussion about discrete random variables, we have been
+                    introduced to:</p>
+                <ol>
+                    <li><p>The probability distribution, which tells us which values a variable
+                            takes, and how often it takes them.</p></li>
+                    <li><p>The mean of the random variable, which tells us the long-run average
+                            value that the random variable takes.</p></li>
+                    <li><p>The standard deviation of the random variable, which tells us a typical
+                            (or long-run average) distance between the mean of the random variable
+                            and the values it takes.</p></li>
+                </ol>
+                <p>We now introduce a special class of discrete random variables that are very
+                    common because, as you'll see, they come up in many situations: <em>binomial
+                        random variables.</em>
+                </p>
+                <p>Here's how we'll present this material. First, we'll explain what kind of random
+                    experiments give rise to a binomial random variable and how the binomial random
+                    variable is defined in those types of experiments.</p>
+                <p>We'll then present the probability distribution of the binomial random variable,
+                    which will be presented as a formula (which, as you remember, is one of the
+                    three ways in which a probability distribution of a discrete random variable can
+                    be presented), and explain why the formula makes sense. We'll conclude our
+                    discussion by presenting the mean and standard deviation of the binomial random
+                    variable.</p>
+                <p>As we just mentioned, we'll start by describing what kind of random experiments
+                    give rise to a binomial random variable. We'll call this type of random
+                    experiment a "binomial experiment."</p>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Binomial Experiment</title>
+            <body>
+                <p>Binomial experiments are random experiments that consist of a fixed number of
+                    repeated trials, like tossing a coin 10 times, randomly choosing 10 people,
+                    rolling a die 5 times, etc. These trials, however, need to be independent in the
+                    sense that the outcome in one trial has no effect on the outcome in other
+                    trials. In each of these repeated trials there is one outcome that is of
+                    interest to us (we call this outcome "success"), and each of the trials is
+                    identical in the sense that the probability that the trial will end in a
+                    "success" is the same in each of the trials. So for example, if our experiment
+                    is tossing a coin 10 times, and we are interested in the outcome "heads" (our
+                    "success"), then this will be a binomial experiment, since the 10 trials are
+                    independent, and the probability of success is 1/2 in each of the 10 trials.
+                    Let's summarize and give more examples.</p>
+                <p>To summarize, the requirements for a random experiment to be a binomial
+                    experiment are as follows:</p>
+                <ul>
+                    <li>A fixed number (n) of trials</li>
+                    <li>Each trial must be independent of the others</li>
+                    <li>Each trial has just two possible outcomes, called <em>success</em> (the
+                            outcome of interest) and <em>failure</em></li>
+                    <li>There is a constant <em>probability (p) of success</em> for each trial, the complement of which
+                            is the <em>probability (1 - p) of failure</em></li>
+                </ul>
+                <p>In binomial random experiments, the number of successes in n trials is random. It
+                    can be as low as 0, if all the trials end up in failure, or as high as n, if all
+                    n trials end in success.</p>
+                <p>The random variable X that represents the number of successes in those n trials
+                    is called <em>binomial</em>, and is determined by the values of n and p. We say,
+                    "X is binomial with n = ... and p = ..." </p>
+                <example>
+                    <title>Random Experiments (Binomial or Not?)</title>
+
+                    <p>Let's consider a few random experiments.</p>
+                    <p>In each of them, we'll decide whether the random variable is binomial. If it
+                        is, we'll determine the values for n and p. If it isn't, we'll explain why
+                        not.</p>
+
+                    <ol style="upper-alpha">
+                        <li><p>A fair coin is flipped 20 times; X represents the number of heads.</p>
+                            <p>
+                                <em>X is binomial with n = 20 and p = 0.5</em>.</p>
+                            <p> </p>
+                            <p/>
+                        </li>
+                        <li><p>You roll a fair die 50 times; X is the number of times you get a
+                                six.</p>
+                            <p><em>X is binomial with n = 50 and p = 1/6</em>.</p>
+                            <p/><p/></li>
+                        <li><p>Roll a fair die repeatedly; X is the number of rolls it takes to get
+                                a six.</p>
+                            <p><em>X is not binomial, because the number of trials is not
+                                fixed</em>.</p>
+                            <p/><p/></li>
+                        <li><p>Draw 3 cards at
+                                random,
+                                one after the other, <em>without replacement</em>, from a set of 4
+                                cards consisting of one club, one diamond, one heart, and one spade;
+                                X is the number of diamonds selected.</p>
+                            <p><em>X is not binomial, because the selections are not
+                                    independent</em>. (The probability (p) of success is not
+                                constant, because it is affected by previous selections.)</p>
+                            <p/><p/></li>
+                        <li><p>Draw 3 cards at random, one after the other, <em>with replacement</em>, from a set of 4 cards
+                                consisting of one club, one diamond, one heart, and one spade; X is
+                                the number of diamonds selected. Sampling with replacement ensures
+                                independence.</p>
+                            <p><em>X is binomial with n = 3 and p = 1/4</em>.</p>
+                            <p/><p/></li>
+                        <li><p> Approximately 1 in every 20 children has a certain disease. Let X be the number of children with
+                                the disease out of a random sample of 100 children. Although the
+                                children are sampled without replacement, it is assumed that we are
+                                sampling from such a vast population that the selections are
+                                virtually independent.</p>
+                            <p><em>X is binomial with n = 100 and p = 1/20 = 0.05</em>.</p>
+                            <p/><p/></li>
+                        <li><p> The probability of having blood type B is 0.1. Choose 4 people at
+                                random; X is the number with blood type B. </p>
+                            <p><em>X is binomial with n = 4 and p = 0.1</em>. </p>
+                            <p/>
+                            <p/></li>
+                        <!--   The experiment is not binomial because there are more than two possible outcomes for each trial.</p>-->
+                        <li>
+                            <p> A student answers 10 quiz questions completely at random; the first
+                                five are true/false, the second five are multiple choice, with four
+                                options each. X represents the number of correct answers.</p>
+                            <p><em>X is not binomial, because p changes from 1/2 to 1/4</em>.</p>
+                        </li>
+                    </ol>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comments</title>
+            <body>
+                <p><em>Example D</em> above was not binomial because sampling without replacement
+                    resulted in dependent selections. In particular, the probability of the second
+                    card being a diamond is very dependent on whether or not the first card was a
+                    diamond: the probability is 0 if the first card was a diamond, 1/3 if the first
+                    card was not a diamond.</p>
+                <p>In contrast, <em>Example E</em> was binomial because sampling with replacement
+                    resulted in independent selections: the probability of any of the 3 cards being
+                    a diamond is 1/4 no matter what the previous selections have been. </p>
+                <p>On the other hand, when you take a relatively small random sample of subjects
+                    from a large population, even though the sampling is without replacement, we can
+                    assume independence because the mathematical effect of removing one individual
+                    from a very large population on the next selection is negligible. For example,
+                    in <em>Example F</em>, we sampled 100 children out of the population of all
+                    children. Even though we sampled the children without replacement, whether one
+                    child has the disease or not really has no effect on whether another child has
+                    the disease or not. The same is true for <em>Example G</em>.</p>
+                <p>The convention is to "fudge" the requirement of independence as long as the
+                    population is at least 10 times the sample size.</p>
+                <p/>
+            </body>
+        </section>
+        <theorem type="rule">
+            <title>Rule of Thumb</title>
+            <statement>
+                <p> The number (X) of successes in a sample of size n taken without replacement from
+                    a population with proportion (p) of successes is approximately binomial with n
+                    and p as long as the sample size (n) is at most 10% of the population size
+                    (N).</p>
+                <p>In symbols, this would be: <em>n ≤ .10N</em>. </p>
+                <p>This is the same as saying the population size is greater than or equal to 10
+                    times the sample size. In symbols this is: <em> N ≥ 10n</em>. </p>
+            </statement>
+        </theorem>
+        <!--<activity idref="_u4_m3_dig8" purpose="didigetthis"/>-->
+        <wb:inline idref="u3_m3_binomial1_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u3_m3_binomial1_tutor1" purpose="didigetthis"/>
+        <wb:inline idref="u3_m3_binomial1_tutor3" purpose="didigetthis"/>
+        <p> </p>
+
+    </body>
+</workbook_page>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="identify_inference_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_identify_inference">
+        <!-- LO: identify_inference -->
+        <body>
+            <p>A random sample of 35 two-year colleges in 2008–2009 collected data on the in-state
+                tuition costs and enrollment totals. Based on the sample, the researchers estimated
+                the mean in-state tuition for all two-year colleges to be $2,380. Which form of
+                statistical inference does this conclusion represent?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Point estimation</choice>
+            <choice value="B">Interval estimation</choice>
+            <choice value="C">Hypothesis testing</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. $2,380 is a single value estimating the population mean in-state
+                    tuition for all two-year colleges. In point estimation we estimate an unknown
+                    parameter using a single number that is calculated from the sample
+                    data.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. We are using a single value to estimate the population mean
+                    in-state tuition. In interval estimation, we estimate an unknown parameter using
+                    an interval of values that is likely to contain the true value of that parameter
+                    (and state how confident we are that this interval indeed captures the true
+                    value of the parameter). For example, "We are 95% confident that the mean
+                    in-state tuition for all two-year colleges is between $2,000 and $3,000" is an
+                    interval estimation.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. We are using a single value to estimate the population mean
+                    in-state tuition. We are not testing any claim using the sample data as evidence
+                    against the claim. In hypothesis testing, we have some claim about the
+                    population, and we check whether or not the data obtained from the sample
+                    provide evidence against this claim.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_identify_inference">
+        <!-- LO: identify_inference -->
+        <body>
+            <p>A local fast food company sells a 16-oz soft drink. To determine if the soft drinks
+                served contain less than the advertised 16 oz, a random sample of 20 drinks is
+                chosen and the amount of drink in each cup is measured (without ice). The mean
+                amount of soft drink was found to be 15.5 oz with a standard deviation of 0.4 oz.
+                Based on the sample results we cannot claim that the soft drink contains less than
+                16 oz. Which form of statistical inference does this conclusion represent?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Point estimation</choice>
+            <choice value="B">Interval estimation</choice>
+            <choice value="C">Hypothesis testing</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. We are using the sample data to test a claim about the
+                    population. In point estimation we estimate an unknown parameter using a single
+                    number that is calculated from the sample data.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. We are using the sample data to test a claim about the
+                    population (that the amount of drink is 16 oz). In interval estimation, we
+                    estimate an unknown parameter using an interval of values that is likely to
+                    contain the true value of that parameter (and state how confident we are that
+                    this interval indeed captures the true value of the parameter).</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. We are testing a claim about the population (that the amount of
+                    drink is 16 oz) using the sample data as evidence against the claim. In this
+                    case, we were unable to reject the claim about the population. In hypothesis
+                    testing, we have some claim about the population, and we check whether or not
+                    the data obtained from the sample provide evidence against this
+                    claim.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

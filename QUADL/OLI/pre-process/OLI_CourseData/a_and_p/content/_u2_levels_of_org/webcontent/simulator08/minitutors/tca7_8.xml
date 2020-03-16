@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+       <item ident="tca7_8">
+         <presentation>
+           <material>
+             <mattext texttype="text/plain">The next two steps of the TCA cycle result in generation of oxaloacetate.  The first of these two steps is the addition of water to the double bond.
+               
+&lt;b&gt;This step is followed by an __________ of a ___________ group, producing a  _______ group and _______.&lt;/b&gt;
+             </mattext></material>
+           <response_lid rcardinality="Single" ident="tca78_01">
+             <render_choice>
+               <response_label ident="Res1">
+                 <material>
+                   <mattext texttype="text/plain">reduction, alcohol, alkane, NAD+</mattext></material></response_label>
+               <response_label ident="Res2">
+                 <material>
+                   <mattext texttype="text/plain">oxidation, alcohol, ketone, NADH</mattext></material></response_label>
+               <response_label ident="Res3">
+               <material>
+                 <mattext texttype="text/plain">oxidation, ketone, alcohol, FADH2</mattext></material></response_label>
+               <response_label ident="Res4">
+                 <material>
+                   <mattext texttype="text/plain">oxidation, carboxylic acid, aldehyde, NADH</mattext></material></response_label>
+               </render_choice>
+           </response_lid>
+         </presentation>
+         <resprocessing>
+           <outcomes>
+             <decvar varname="SCORE" vartype="integer"/></outcomes>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="tca78_01">Res1</varequal>
+             </conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"/>
+           </respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="tca78_02">Res2</varequal></conditionvar>
+             <setvar varname="SCORE">10</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"/></respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="tca78_03">Res3</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"/></respcondition>
+           <respcondition>
+             <conditionvar>
+               <varequal respident="tca78_04">Res4</varequal></conditionvar>
+             <setvar varname="SCORE">0</setvar>
+             <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"/></respcondition>
+        </resprocessing>
+         <itemfeedback ident="hint">
+           <hint>
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">Review the number of FADH2 and NADH molecules that are produced by one turn of the TCA cycle.</mattext></material>
+             </hintmaterial> 
+             <hintmaterial>
+               <material>
+                 <mattext texttype="text/plain">It is not possible to oxidize an -OH group to a carboxylic acid at this position.</mattext></material>
+             </hintmaterial> 
+            </hint>
+         </itemfeedback>
+         <itemfeedback ident="FeedBack0">
+           <material>
+             <mattext texttype="text/plain">Incorrect, this is actually the reverse reaction.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack1">
+           <material>
+             <mattext texttype="text/plain">Correct!</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack2">
+           <material>
+             <mattext texttype="text/plain">Almost correct, wrong electron carrier, NADH is produced.</mattext></material></itemfeedback>
+         <itemfeedback ident="FeedBack3">
+         <material>
+           <mattext texttype="text/plain">This can't occur because the oxidized carbon would have too many bonds and the conversion of an -OH to an acid is a four electron oxidation.</mattext></material></itemfeedback>
+        </item>
+     </questestinterop>

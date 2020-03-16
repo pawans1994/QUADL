@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+ xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+ id="_u5_m01_test_for_mu6">
+ <head>
+  <title>Hypothesis Testing for the Population Mean (6 of <!--9-->9)</title>
+  <objref idref="carry_out_hypothesis_testing"/>
+ </head>
+ <body>
+
+  <section>
+   <title>Tests About μ When σ is Unknown&#8212;The t-test for the Population Mean</title>
+   <body>
+    <p>As we mentioned earlier, only in a few cases is it reasonable to assume that the population
+     standard deviation, σ, is known. The case where σ is unknown is much more common in practice.
+     What can we use to replace σ? If you don't know the population standard deviation, the best you
+     can do is find the sample standard deviation, S, and use it instead of σ. (Note that this is
+     exactly what we did when we discussed confidence intervals).</p>
+    <image style="block" src="../webcontent/image355.gif"
+     alt="A large circle represents the population
+of interest. &mu; is unknown and &sigma; is unknown. From the population we create a SRS of size n, 
+represented by a smaller circle. We can find x-bar for this SRS, and we can also obtain S. We use this
+instead of the unknown &sigma;."/>
+    <p>Is that it? <?oxy_insert_start author="mmyers" timestamp="20101127T235535-0500"?>Can
+     <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T235539-0500" content="Is all "?>we
+     <?oxy_insert_start author="mmyers" timestamp="20101127T235545-0500"?>just<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T235547-0500" content="have to do is"?>
+     use S instead of σ, and the rest is the same as the previous case? Unfortunately, it's not that
+     simple, but not very complicated either.</p>
+    <p>We will first go through the four steps of the t-test for the population mean and explain in
+     what way this test is different from the z-test in the previous case. For comparison purposes,
+     we will then apply the t-test to a variation of the two examples we used in the previous case,
+     and end with an activity where you'll get to carry out the t-test yourself.</p>
+    <p>Let's start by describing the four steps for the t-test:</p>
+    <p>
+     <em>I. </em>Stating the
+     hypotheses<?oxy_insert_start author="mmyers" timestamp="20101127T235734-0500"?>.<?oxy_insert_end?></p>
+    <p> In this step there are no
+     changes<?oxy_insert_start author="mmyers" timestamp="20101127T235629-0500"?>:<?oxy_insert_end?></p>
+    <p><?oxy_comment_start author="mmyers" timestamp="20101127T235646-0500" comment="use bullets"?>
+     *<?oxy_comment_end?> The null hypothesis has the form:</p>
+    <p>
+     <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mrow>
+         <m:msub>
+          <m:mi>H</m:mi>
+          <m:mn>0</m:mn>
+         </m:msub>
+         <m:mo>:</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+         <m:mo>=</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+        </m:mrow>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math>
+    </p>
+    <p> (where <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mrow>
+         <m:mi mathvariant="normal">μ</m:mi>
+        </m:mrow>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math> is the null value).</p>
+    <p> * The alternative hypothesis takes one of the following three forms (depending on the
+     context):</p>
+    <p>
+     <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mi>H</m:mi>
+        <m:mi>a</m:mi>
+       </m:msub>
+       <m:mo>:</m:mo>
+       <m:mi mathvariant="normal">μ</m:mi>
+       <m:mo>&lt;</m:mo>
+       <m:msub>
+        <m:mi mathvariant="normal">μ</m:mi>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math>(one-sided)</p>
+    <p>
+     <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mrow>
+         <m:msub>
+          <m:mi>H</m:mi>
+          <m:mi>a</m:mi>
+         </m:msub>
+         <m:mo>:</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+         <m:mo>&gt;</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+        </m:mrow>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math>
+     (one-sided)</p>
+    <p>
+     <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mrow>
+         <m:msub>
+          <m:mi>H</m:mi>
+          <m:mi>a</m:mi>
+         </m:msub>
+         <m:mo>:</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+         <m:mo>≠</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+        </m:mrow>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math>
+     (two-sided)</p>
+    <p>
+     <em>II.</em> Checking the conditions under which the t-test can be safely
+     <?oxy_insert_start author="mmyers" timestamp="20101127T235743-0500"?>used<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T235741-0500" content="carried"?>
+     and summarizing <?oxy_insert_start author="mmyers" timestamp="20101127T235749-0500"?>the
+     <?oxy_insert_end?>data.</p>
+    <p> Technically, this step only changes slightly compared to what we do in the z-test. However,
+     as you'll see, this small change has important implications. The conditions under which the
+     t-test can be safely carried out are exactly the same as those for the z-test:</p>
+    <p> (i) The sample is random (or at least can be considered random in context).</p>
+    <p> (ii) We are in one of the three situations marked with a green check mark in the following
+     table (which ensure that <m:math overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math> is at least approximately normal):</p>
+    <image style="block" src="../webcontent/image325.gif"
+     alt="A table which has two columns and two rows,
+and is titled &quot;Conditions: z-test for a population mean.&quot; The column headings are: &quot;Small
+Sample Size&quot; and &quot;Large Sample Size. &quot; The row headings are &quot;Variable varies normally
+in the population&quot; and &quot;Variable doesn't vary normally in the population.&quot; Here is the data
+in the table by cell in &quot;Row, Column: Value&quot; format:
+         Variable varies normally in the population, Small sample size: OK;
+         Variable varies normally in the population, Large sample size: OK;
+         Variable doesn't vary normally in the population, Small sample size: NOT OK;
+         Variable doesn't vary normally in the population, Large sample size: OK;"/>
+    <p> Assuming that the conditions are
+     met<?oxy_insert_start author="mmyers" timestamp="20101127T235903-0500"?>,<?oxy_insert_end?> we
+     calculate the sample mean <m:math overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math> and the sample standard deviation, S (which replaces σ), and summarize the data with
+     a test statistic. As in the z-test, our test statistic will be the standardized score of
+      <m:math overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math><?oxy_insert_start author="mmyers" timestamp="20101127T235913-0500"?>
+     <?oxy_insert_end?>assuming that <m:math overflow="scroll">
+      <m:mrow>
+       <m:msub>
+        <m:mrow>
+         <m:mi mathvariant="normal">μ</m:mi>
+         <m:mo>=</m:mo>
+         <m:mi mathvariant="normal">μ</m:mi>
+        </m:mrow>
+        <m:mn>0</m:mn>
+       </m:msub>
+      </m:mrow>
+     </m:math>
+     (<?oxy_insert_start author="mmyers" timestamp="20101127T235928-0500"?>H<sub>o</sub><?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T235926-0500" content="Ho"?>
+     is true). The difference here is that we don't know
+     σ<?oxy_insert_start author="mmyers" timestamp="20101127T235932-0500"?>,<?oxy_insert_end?> so we
+     use S instead. The test statistic for the t-test for the population mean is therefore:</p>
+    <p>
+     <m:math display="block">
+      <m:mrow>
+       <m:mi>t</m:mi>
+       <m:mo>=</m:mo>
+       <m:mfrac>
+        <m:mrow>
+         <m:mover>
+          <m:mi>x</m:mi>
+          <m:mo>&macr;</m:mo>
+         </m:mover>
+         <m:mo>&minus;</m:mo>
+         <m:msub>
+          <m:mi>&mu;</m:mi>
+          <m:mn>0</m:mn>
+         </m:msub>
+        </m:mrow>
+        <m:mfrac>
+         <m:mi>s</m:mi>
+         <m:msqrt>
+          <m:mi>n</m:mi>
+         </m:msqrt>
+        </m:mfrac>
+       </m:mfrac>
+      </m:mrow>
+     </m:math>
+    </p>
+    <p>The change is in the denominator: while in the z-test we divided by the standard
+      <em>deviation</em> of <m:math overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math>, namely <m:math overflow="scroll">
+      <m:mrow>
+       <m:mfrac>
+        <m:mi mathvariant="normal">σ</m:mi>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+       </m:mfrac>
+      </m:mrow>
+     </m:math>, here we divide by the standard <em>error</em> of <m:math overflow="scroll">
+      <m:mrow>
+       <m:mover>
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+      </m:mrow>
+     </m:math>, namely <m:math overflow="scroll">
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>s</m:mi>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+       </m:mfrac>
+      </m:mrow>
+     </m:math>. Does this have an effect on the rest of the test?
+     Y<?oxy_insert_start author="mmyers" timestamp="20101128T000001-0500"?>es.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T235958-0500" content="ES!"?>
+     The t-test statistic in the test for the mean does not follow a standard normal distribution.
+     Rather, it follows another bell-shaped distribution called the t distribution. So we first need
+     to introduce you to this new distribution as a general object. Then, we’ll come back to our
+     discussion of the t-test for the mean and how the t-distribution arises in that context.</p>
+    <p> </p>
+   </body>
+  </section>
+  <section>
+   <title>The t
+    <?oxy_insert_start author="mmyers" timestamp="20101128T000027-0500"?>D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000027-0500" content="d"?>istribution</title>
+   <body>
+    <p>We have seen that variables can be visually modeled by many different sorts of shapes, and we
+     call these shapes distributions. Several distributions arise so frequently that they have been
+     given special
+     names<?oxy_insert_start author="mmyers" timestamp="20101128T000103-0500"?>,<?oxy_insert_end?>
+     and they <?oxy_insert_start author="mmyers" timestamp="20101128T000109-0500"?>have
+     <?oxy_insert_end?>been studied mathematically. So far in the course, the only one we’ve named
+     is the normal distribution, but there are others. One of them is called the t distribution. </p>
+    <p>The t distribution is another bell-shaped (unimodal and symmetric) distribution, like the
+     normal distribution; and the center of the t distribution is standardized at zero, like the
+     center of the normal distribution. </p>
+    <p> Like all distributions that are used as probability models, the normal and the t
+     distribution are both
+     scaled<?oxy_insert_start author="mmyers" timestamp="20101128T000134-0500"?>,<?oxy_insert_end?>
+     so the total area under each of them is 1. </p>
+    <p>So how is the t distribution fundamentally <em>different</em> from the normal distribution? </p>
+    <p>The <em>spread</em>. </p>
+    <p>The following picture illustrates the fundamental difference between the normal distribution
+     and the t distribution: </p>
+    <image style="block" src="../webcontent/image363.gif"
+     alt="A standard normal curve modeling the
+Z-distribution and a curve modeling the t-distribution. Both have been scaled so that the area under
+the curve is 1. The standard normal curve has less spread than the t-distribution curve. This means
+that the left and right tails are closer to each other than in the t-distribution, and that it is taller
+than the t-distribution. The t-distribution is narrower than the standard normal distribution when
+close to the center. Because of this, the curves intersect once on each side of the center."/>
+    <p>You can see in the picture that the t distribution has <em>slightly less area near the
+      expected central value</em> than the normal distribution does, and you can see that the t
+     distribution has correspondingly <em>more area in the
+      <?oxy_insert_start author="mmyers" timestamp="20101128T000224-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000223-0500" content="‘"?>tails<?oxy_insert_start author="mmyers" timestamp="20101128T000226-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000226-0500" content="’"?></em>
+     than the normal distribution does. (It’s often said that the t distribution has
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000235-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000234-0500" content="‘"?>fatter
+     tails<?oxy_insert_start author="mmyers" timestamp="20101128T000238-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000237-0500" content="’"?>
+     or
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000240-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000239-0500" content="‘"?>heavier
+     tails<?oxy_insert_start author="mmyers" timestamp="20101128T000243-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000242-0500" content="’"?>
+     than the normal distribution.) </p>
+    <p>This reflects the fact that the t distribution <em>has
+      <?oxy_insert_start author="mmyers" timestamp="20101128T000249-0500"?>a
+      <?oxy_insert_end?>larger spread</em> than the normal distribution. The same total area of 1 is
+     spread out over a slightly wider range on the t distribution, making it a bit lower near the
+     center compared to the normal distribution, and giving the t distribution slightly more
+     probability in the ‘tails’ compared to the normal distribution. </p>
+    <p>Therefore, the t distribution ends up being the appropriate model in certain cases where
+     there is <em>more variability</em> than would be predicted by the normal distribution. One of
+     these cases is stock values, which have more variability (or
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000313-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000313-0500" content="‘"?>volatility,<?oxy_insert_start author="mmyers" timestamp="20101128T000316-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000316-0500" content="’"?>
+     to use the economic term) than would be predicted by the normal distribution. </p>
+    <p>There’s actually an entire family of t distributions. They all have similar formulas (but the
+     math is beyond the scope of this introductory course in statistics), and they all have slightly
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000328-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000328-0500" content="‘"?>fatter
+     tails<?oxy_insert_start author="mmyers" timestamp="20101128T000331-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000331-0500" content="’"?>
+     than the normal distribution. But some are closer to normal than others. The t distributions
+     that are closer to normal are said to have higher
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000340-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000339-0500" content="‘"?>degrees
+     of
+     freedom<?oxy_insert_start author="mmyers" timestamp="20101128T000345-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000345-0500" content="’"?>
+     (that’s a mathematical concept that we won’t use in this course, beyond merely mentioning it
+     here). So, there’s a t distribution
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000351-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000351-0500" content="‘"?>with
+     one degree of
+     freedom,<?oxy_insert_start author="mmyers" timestamp="20101128T000354-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000354-0500" content="’"?>
+     another t distribution
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000357-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000357-0500" content="‘"?>with
+     2 degrees of
+     freedom<?oxy_insert_start author="mmyers" timestamp="20101128T000402-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000402-0500" content="’"?>
+     which is slightly closer to normal, another t distribution
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000408-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000408-0500" content="‘"?>with
+     3 degrees of
+     freedom<?oxy_insert_start author="mmyers" timestamp="20101128T000412-0500"?>."<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000411-0500" content="’"?>
+     which is a bit closer to normal than the previous ones, and so on. </p>
+    <p>The following picture illustrates this idea with just a couple
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000500-0500"?>of <?oxy_insert_end?>t
+     distributions (note that “degrees of freedom” is abbreviated
+     <?oxy_insert_start author="mmyers" timestamp="20101128T000450-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000450-0500" content="‘"?>d.f.<?oxy_insert_start author="mmyers" timestamp="20101128T000453-0500"?>"<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T000453-0500" content="’"?>
+     on the picture): </p>
+    <image style="block" src="../webcontent/image417.gif"
+     alt="The standard normal z-distribution curve
+overlaid with a t-distribution with 5 d.f., and a t-distribution with 2 d.f. The distribution with 2 t.f.
+is shorter and has more spread than the t-distribution with 5 d.f., which in turn is shorter and wider
+than the standard normal distribution."/>
+
+
+    <section purpose="learnbydoing">
+     <title>Learn By Doing</title>
+     <body>
+      <p>The following figure of the standard normal distribution together with a t distribution
+       will visually help you answer the following questions.</p>
+      <image src="../webcontent/image395.gif"
+       alt="The standard normal Z distribution curve and the
+t-distribution curve overlaid on top of each other, centered at a z-score of 0. At z-score = 3, a blue
+vertical line has been drawn. Here, the t distribution's wider spread causes it to be higher than
+the standard normal curve. Going right, we see that the standard normal curve reaches zero much sooner
+compared to the t distribution curve."/>
+      <wb:inline idref="u4_m2_testmean6_tutor1" purpose="learnbydoing"/>
+     </body>
+    </section>
+    <section purpose="didigetthis">
+     <title>Did I Get This?</title>
+     <body>
+      <p>The following figure of the standard normal distribution together with a t distribution
+       will visually help you answer the following questions.</p>
+      <image src="../webcontent/image418.gif"
+       alt="The standard normal Z distribution curve and the
+t distribution curve overlaid on top of each other, centered at a z-score of 0. At z-score = -2, a blue
+vertical line has been drawn. Here, the t distribution and standard normal curve intersect.
+Going left, we see that the standard normal curve reaches zero much sooner compared to the t distribution
+curve, and that the t distribution is above the standard normal distribution. Going right from the
+vertical blue line, we see that the t distribution is under the standard normal distribution and
+ultimately will have a lower peak value compared to the standard normal distribution."/>
+      <wb:inline idref="u4_m2_testmean6_tutor2" purpose="didigetthis"/>
+     </body>
+    </section>
+    <p>Now let’s return to our discussion of the test for the mean, and let’s see how and why the t
+     distribution arises in that context.</p>
+   </body>
+  </section>
+ </body>
+</workbook_page>

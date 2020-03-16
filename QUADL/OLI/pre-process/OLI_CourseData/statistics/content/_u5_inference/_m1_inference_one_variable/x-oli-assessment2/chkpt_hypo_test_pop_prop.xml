@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Assessment MathML 2.3//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_3.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.cmu.edu/authoring/oxy-author/oli_assessment_2_3.css"?>
+<assessment id="chkpt_hypo_test_pop_prop" max_attempts="3" recommended_attempts="1">
+    <title>Hypothesis Testing for a Population Proportion Checkpoint</title>
+    <introduction>
+        <p>You may save your work at any time by clicking on <em style="bold">Save</em>. When you
+            are finished working, click on <em style="bold">Submit and Finish</em>, a pop up window
+            will ask "This will submit your answers and finish this assignment. Are you sure?",
+            click "OK" if you are ready to submit your answers for final grading. </p>
+        <p>If you close this window without having saved or submitted, your changes will be lost.
+            After pressing <em style="bold">Submit and Finish</em>, please wait for your answers to
+            be scored. <em style="bold">Do NOT</em> click on it more than once.</p>
+    </introduction>
+    <!--<content available="instructor_only">
+        <p><em>Instructors: you can download the solution set for this checkpoint by clicking on the
+                following link:</em>
+            <link href="../webcontent/chkpt_hypo_test_pop_prop.pdf">Solution Set</link>.</p>
+    </content>-->
+    <!--  <multiple_choice id="q1" select="single">
+        LO:Explain the logic behind and the process of hypotheses testing. In particular, explain what the p-value is and how it is used to draw conclusions.
+        <body>Which of the following situations involves testing a claim about a single population
+            proportion?</body>
+        <input shuffle="false">
+            <choice value="A">A recent study estimated that 20% of all college students in the
+                United States smoke. The head of Health Services at Goodheart University suspects
+                that the proportion of smokers may be lower there.</choice>
+            <choice value="B">A certain prescription allergy medicine is supposed to contain an
+                average of 245 parts per million (ppm) of a certain chemical. The manufacturer takes
+                a sample to check whether the mean concentration is the required 245 ppm or
+                not.</choice>
+            <choice value="C">According to the College Board, which administers the SAT exam, the
+                average score for females is lower than for males among graduating seniors in 2011.
+                An educational researcher wants to test whether this is also true in her school
+                district.</choice>
+            <choice value="D">A Statistics student at Tacoma Community Colleges wants to determine
+                whether there is a difference in the proportion of class meetings that male students
+                and female students attend.</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The head of health services is testing a claim about the
+                    proportion of students who are smokers at Goodheart University.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect: This question involves testing a claim about a single
+                    population mean. The correct answer is (A).</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect: This question involves testing a claim that compares two
+                    population means. The correct answer is (A).</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Not quite right: While this question is about proportions, it involves
+                    testing a claim that compares two population proportions. The correct answer is
+                    (A).</feedback>
+            </response>
+        </part>
+        </multiple_choice>-->
+    <multiple_choice id="q2" select="single">
+        <!--LO:Specifying hypotheses-->
+        <body>
+            <p>Does secondhand smoke increase the risk of a low birthweight? A baby is considered
+                have low birthweight if he/she weighs less than 5.5 pounds at birth. According to
+                the National Center of Health Statistics, about 7.8% of all babies born in the U.S.
+                are categorized as low birthweight.</p>
+            <p>Suspecting that the national percentage is higher than 7.8%, researchers randomly
+                select 1,200 babies whose mothers had extensive exposure to secondhand smoke during
+                pregnancy and find that 10.4% of the sampled babies are categorized as low birth
+                weight.</p>
+            <p>Let p be the proportion of all babies in the United States who are categorized as low birth
+                weight. What are the appropriate null and alternative hypotheses for this research
+                question?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">
+                <p>H<sub>0</sub>: p = 0.078 </p>
+                <p>H<sub>a</sub>: p ≠ 0.078 </p>
+            </choice>
+            <choice value="B">
+                <p>H<sub>0</sub>: p = 0.078 </p>
+                <p>H<sub>a</sub>: p &gt; 0.078 </p>
+            </choice>
+            <choice value="C">
+                <p>H<sub>0</sub>: p = 0.104 </p>
+                <p>H<sub>a</sub>: p ≠ 0.104 </p>
+            </choice>
+            <choice value="D">
+                <p>H<sub>0</sub>: μ = 0.078 </p>
+                <p>H<sub>a</sub>: μ &gt; 0.078 </p>
+            </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The null hypothesis is correct. The researchers want to compare
+                    the proportion of low weight births for women exposed to secondhand smoke during
+                    their pregnancies to 0.078. However, they want to know if this proportion is
+                    greater than 0.078.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The researchers want know if the proportion of low weight births
+                    for women exposed to secondhand smoke during their pregnancies is greater than
+                    0.078.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You used the sample proportion to create the hypotheses. We do
+                    not use sample data to create the hypotheses.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You used the population mean to create the hypotheses. However,
+                    this research is dealing with proportions, not means.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3" select="single">
+        <!--LO: Carry out hypothesis testing for the population proportion and mean (when 
+            appropriate), and draw conclusions in context.-->
+        <body>
+            <p>A quality control engineer at a potato chip company tests the bag-filling machine by
+                weighing bags of potato chips. Not every bag contains exactly the same weight. But
+                if more than 15% of bags are overfilled, then they stop production to fix the
+                machine.</p>
+            <p>They define overfilled to be more than 1 ounce above the weight on the package. The
+                engineer weighs 100 bags and finds that 21 of them are overfilled.</p>
+            <p>He plans to test the hypotheses: H<sub>0</sub>: p = 0.15 versus H<sub>a</sub>: p &gt;
+                0.15 (where p is the true proportion of overfilled bags). </p><p>What is the test
+                statistic?</p></body>
+        <input shuffle="false">
+            <choice value="A">z = 1.68</choice>
+            <choice value="B">z = −1.68</choice>
+            <choice value="C">z = 4</choice>
+            <choice value="D">z = −1.47</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The sample proportion is about 1.68 standard errors above the p =
+                    0.15 using the formula z = (p-hat − p)/√[(p(1 − p)/n].</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like you switched the order of the sample proportion
+                    and the population proportion in the numerator.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks like you calculated p(p) rather than p(1 − p) in the
+                    denominator of the formula z = (p hat − p)/√[(p(1 − p)/n].</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It looks like you switched the value of the sample proportion
+                    and the population proportion in the formula. You should use 0.15 for p and 0.21
+                    for p-hat in the formula z = (p-hat − p)/√[(p(1 − p)/n].</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4" select="single">
+        <!--LO: Carry out hypothesis testing for the population proportion and mean (when 
+            appropriate), and draw conclusions in context. -->
+        <body>
+            <p>According to a Pew Research Center, in May 2011, 35% of all American adults had a
+                smartphone (one which the user can use to read email and surf the Internet). A
+                communications professor at a university believes this percentage is higher among
+                community college students.</p>
+            <p>She selects 300 community college students at random and finds that 120 of them have
+                a smartphone. In testing the hypotheses H<sub>0</sub>, p = 0.35, versus
+                    H<sub>a</sub>, p &gt; 0.35, she calculates the test statistic as z = 1.82.</p>
+            <p>Use the normal table to identify the appropriate p-value for this z-score.</p>
+            <p>Click <activity_link idref="normal_table" target="new">here</activity_link> to access
+                the normal table.</p>
+            <p>Given these results, which of the following is an appropriate conclusion?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">There is enough evidence to show that more than 35% of community
+                college students own a smartphone (p-value = 0.034).</choice>
+            <choice value="B">There is enough evidence to show that more than 35% of community
+                college students own a smartphone (p-value = 0.068).</choice>
+            <choice value="C">There is not enough evidence to show that more than 35% of community
+                college students own a smartphone (p-value = 0.966).</choice>
+            <choice value="D">There is not enough evidence to show that more than 35% of community
+                college students own a smartphone (p-value = 0.034).</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. The area to the right of z = 1.82 on the standard normal curve is
+                    about 0.034. This is smaller than α = 0.10 so we reject the null hypothesis and
+                    accept the alternative.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. You doubled the correct p-value. We double the p-value when the
+                    test is two-sided. The test is two-sided when the alternative hypothesis uses
+                    the inequality ≠. The conclusion is correct.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You used the area to the left of z = 1.82 as your p-value.
+                    Because the alternative hypothesis is p &gt; 0.35, we use the area to the right
+                    of the test statistic as the p-value.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Not quite right. Although your p-value is correct, your conclusion is not
+                    correct. The p-value is smaller than α = 0.10 so we reject the null hypothesis
+                    and accept the alternative.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <!--  <multiple_choice id="q5" select="single">
+         LO:Carry out hypothesis testing for the population proportion and mean (when appropriate), and draw conclusions in context.
+         
+            <body>In the 2010 General Election, the proportion of national voter turnout was .616.
+                The proportion of New Hampshire voters, who turned out for the 2010 General Election
+                was .725. The 95% confidence interval is (.724, .726). From these results, we can
+                draw the following conclusion:</body>
+            <input shuffle="false">
+                <choice value="A">Do not reject the null hypothesis. The proportion of voter turnout
+                    in New Hampshire was not higher than the national voter turnout.</choice>
+                <choice value="B">Do not reject the null hypothesis. The proportion of voter turnout
+                    in New Hampshire was higher than the national voter turnout.</choice>
+                <choice value="C">Reject the null hypothesis. The proportion of voter turnout in New
+                    Hampshire was not higher than the national voter turnout.</choice>
+                <choice value="D">Reject the null hypothesis. The proportion of voter turnout in New
+                    Hampshire was higher than the national voter turnout.</choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>That’s not quite right. Since .616 falls outside the 95% confidence
+                        interval for p, we are 95% confidence that .087 is not a
+                        plausible value for p. Thus, the null hypothesis would be rejected at a .05
+                        level and we can conclude that voter turnout was higher in New Hampshire as
+                        compared to the national average. The correct answer is (D).</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>That’s not quite right.Since .616 falls outside the 95% confidence
+                        interval for p, we are 95% confidence that .087 is not a
+                        plausible value for p. Thus, the null hypothesis would be rejected at a .05
+                        level and we can conclude that voter turnout was higher in New Hampshire as
+                        compared to the national average. The correct answer is (D).</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>That’s not quite right. While you are correct that the null hypothesis
+                        should be rejected, your conclusion was incorrect. The correct answer is
+                        (D).</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct! Indeed, since .616 falls outside the 95% confidence interval
+                        for p, we are 95% confidence that .087 is not a plausible
+                        value for p. This is equivalent to rejecting the Ho: p = .616 at the .05
+                        significance level. We would conclude that the voter turnout was higher in
+                        New Hampshire as compared to the national average. </feedback>
+                </response>
+            </part>
+        </multiple_choice>-->
+
+</assessment>

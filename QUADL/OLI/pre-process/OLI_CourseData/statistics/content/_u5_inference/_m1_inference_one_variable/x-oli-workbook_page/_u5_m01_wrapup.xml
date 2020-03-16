@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m01_wrapup">
+    <head>
+        <title>Wrap-Up (Hypothesis Testing)</title>
+    </head>
+    <body>
+
+        <p>This module covered the z-test for population proportion and both the z-test and t-test
+            for the population mean. The following table summarizes when each of the tests are
+            used:</p>
+        <image src="../webcontent/tests.png" alt="A table of types of hypothesis tests and the
+circumstances in which they are used. Here is the data in the table:
+A z-test for the Population Proportion is used when:
+        * testing the population proportion(p)
+        * variable of interest is categorical
+        * population proportion is unknown
+        A z-test for the Population Mean is used when:
+        * testing the Population Mean (&mu;)
+        * Variable of interest is Quantitative
+        * Population standard deviation is known (&sigma;)
+        A t-test for the Population mean is used when:
+        * Testing the Population Mean (&mu;)
+        * Response Variable is Quantitative
+        * Population standard deviation is unknown, so sample standard deviation is used (s) instead."/>
+        <p>The module is also loaded with very important ideas that apply to the general process of
+            hypothesis testing. Thus, the following summary discusses each of the above named
+            hypothesis tests within the context of the hypothesis testing process.</p>
+        <p>The process of hypothesis testing has four steps:</p>
+        <p><em style="bold">I. Stating the null and alternative hypotheses (Ho and Ha).</em></p>
+        <table>
+            <tr>
+                <td><em style="bold">Type of Hypothesis Test</em></td>
+                <td><em style="bold">Null Hypothesis</em></td>
+                <td><em style="bold">Alternative Hypothesis</em></td>
+            </tr>
+            <tr>
+                <td>z-test for the Population Proportion</td>
+                <td>H<sub>0</sub>:<em style="italic">p</em>=<em style="italic"
+                    >p</em><sub>0</sub></td>
+                <td>H<sub>a</sub>:<em style="italic">p</em>≠<em style="italic">p</em><sub>0
+                        </sub><em style="bold">or </em>H<sub>a</sub>:<em style="italic"
+                        >p</em>&lt;<em style="italic">p</em><sub>0 </sub><em style="bold">or
+                        </em>Ha<em style="italic">:p</em>&gt;<em style="italic"
+                    >p</em><sub>0</sub></td>
+            </tr>
+            <tr>
+                <td>z-test for the Population Mean</td>
+                <td>H<sub>0</sub>:μ=μ<sub>0</sub></td>
+                <td>H<sub>a</sub>:μ≠μ<sub>0 </sub><em style="bold">or
+                        </em>H<sub>a</sub>:μ&lt;μ<sub>0 </sub><em style="bold">or
+                        </em>H<sub>a</sub>:μ&gt;μ<sub>0</sub></td>
+            </tr>
+            <tr>
+                <td>t-test for the Population Mean</td>
+                <td>H<sub>0</sub>:μ=μ<sub>0</sub></td>
+                <td>H<sub>a</sub>:μ≠μ<sub>0 </sub><em style="bold">or
+                        </em>H<sub>a</sub>:μ&lt;μ<sub>0 </sub><em style="bold">or
+                        </em>H<sub>a</sub>:μ&gt;μ<sub>0</sub></td>
+            </tr>
+        </table>
+        <p><em style="bold">II. Obtaining a random sample (or at least one that can be considered
+                random) and collecting data. Using the data:</em></p>
+        <p><em style="italic"><em style="bold">*Check that the conditions under which the test can
+                    be reliably used are met.</em></em></p>
+        <p>For the <em style="bold">z-test for the Population Proportion</em>, we can reliably use
+            the test is if the following conditions holds: <em style="italic">np</em><em
+                style="italic"><sub>0</sub></em>&#8805; 10<em style="italic"> and n(1-p</em><em
+                style="italic"><sub>0</sub></em><em style="italic">)</em>&#8805; 10</p>
+        <p>For the <em style="bold">z-test for the Population Mean </em>and the <em style="bold"
+                >t-test for the Population Mean</em>, the following table is a summary the
+            conditions under which they can be reliably used, and which test to use when:</p>
+        <image src="../webcontent/image387.png" alt="A table. Here is the data
+in the table:
+With large sample size (regardless of whether the population is normal or not), we use the
+z-test if sigma is known, otherwise we use the t-test, keeping in mind that the z-test is a good
+approximation. With a small sample size, and normal population(* footnote), the z-test is used when
+we know sigma, and when we don't, we use the t-test. With a small sample size which has a population shape
+which is not normal or is unknown, we can't use the z-test or t-test. (*)Footnote: by &quot;Population
+normal&quot; we mean that either the population is known to be normal, or else that the population can
+be reasonably assumed to be normal as judged by the shape of the data histogram."/>
+        <p><em style="italic"><em style="bold">*Summarize the data using a test
+            statistic.</em></em></p>
+        <p>The test statistic is a measure of the evidence in the data against the H<sub>o</sub>.
+            The larger the test statistic is in magnitude, the more evidence the data present
+            against the H<sub>o</sub>.</p>
+        <table>
+            <tr>
+                <td><em style="bold">Hypothesis </em><em style="bold">Test</em></td>
+
+                <td><em style="bold">Test Statistic</em></td>
+            </tr>
+            <tr>
+                <td>z-test for the Population Proportion</td>
+                <td>
+                    <m:math display = 'scroll'>
+                        <m:mrow>
+                            <m:mi>z</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mfrac>
+                                <m:mrow>
+                                    <m:mover>
+                                        <m:mi>p</m:mi>
+                                        <m:mo stretchy='true'>&circ;</m:mo>
+                                    </m:mover>
+                                    <m:mo>&minus;</m:mo>
+                                    <m:msub>
+                                        <m:mi>p</m:mi>
+                                        <m:mn>0</m:mn>
+                                    </m:msub>
+                                </m:mrow>
+                                <m:msqrt>
+                                    <m:mfrac>
+                                        <m:mrow>
+                                            <m:msub>
+                                                <m:mi>p</m:mi>
+                                                <m:mn>0</m:mn>
+                                            </m:msub>
+                                            <m:mo stretchy='false'>(</m:mo>
+                                            <m:mn>1</m:mn>
+                                            <m:mo>&minus;</m:mo>
+                                            <m:msub>
+                                                <m:mi>p</m:mi>
+                                                <m:mn>0</m:mn>
+                                            </m:msub>
+                                            <m:mo stretchy='false'>)</m:mo>
+                                        </m:mrow>
+                                        <m:mi>n</m:mi>
+                                    </m:mfrac>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mrow>
+                    </m:math>
+                </td> 
+            </tr>
+            <tr>
+                <td>z-test for the Population Mean</td>
+                <td><m:math display = 'scroll'>
+                    <m:mrow>
+                        <m:mi>z</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>&macr;</m:mo>
+                                </m:mover>
+                                <m:mo>&minus;</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                            <m:mfrac>
+                                <m:mi>&sigma;</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfrac>
+                    </m:mrow>
+                </m:math></td>
+            </tr>
+            <tr>
+                <td>t-test for the Population Mean</td>
+                <td><m:math display = 'scroll'>
+                    <m:mrow>
+                        <m:mi>t</m:mi>
+                        <m:mo>=</m:mo>
+                        <m:mfrac>
+                            <m:mrow>
+                                <m:mover>
+                                    <m:mi>x</m:mi>
+                                    <m:mo>&macr;</m:mo>
+                                </m:mover>
+                                <m:mo>&minus;</m:mo>
+                                <m:msub>
+                                    <m:mi>&mu;</m:mi>
+                                    <m:mn>0</m:mn>
+                                </m:msub>
+                            </m:mrow>
+                            <m:mfrac>
+                                <m:mi>s</m:mi>
+                                <m:msqrt>
+                                    <m:mi>n</m:mi>
+                                </m:msqrt>
+                            </m:mfrac>
+                        </m:mfrac>
+                    </m:mrow>
+                </m:math>
+                </td>
+            </tr>
+        </table>
+        <p><em style="bold">III. Finding the p-value of the test.</em></p>
+        <p>The p-value is the probability of getting data like those observed (or even more extreme)
+            assuming that the null hypothesis is true, and is calculated using the null distribution
+            of the test statistic. The p-value is a measure of the evidence against H<sub>o</sub>.
+            The smaller the p-value, the more evidence the data present against H<sub>o</sub>.</p>
+        <p>In this module, we learned how to compute the p-value for the two z-tests (z-test for the
+            population proportion and the z-test for the population mean). However, for the t-test
+            (and, actually, from this point on in the course), we will use software to find the
+            p-value for us.</p>
+        <p><em style="bold">IV. Making conclusions.</em></p>
+        <p><em style="italic"><em style="bold">-Conclusions about the significance of the
+                    results:</em></em></p>
+        <p>If the p-value is small, the data present enough evidence to reject H<sub>0</sub> (and
+            accept H<sub>a</sub>).</p>
+        <p>If the p-value is not small, the data do not provide enough evidence to reject
+                H<sub>0</sub>.</p>
+        <p>To help guide our decision, we use the significance level as a cutoff for what is
+            considered a small p-value. The significance cutoff is usually set at .05, but should
+            not be considered inviolable.</p>
+        <p>Conclusions should always be made in the context of the problem.</p>
+        <p><em style="bold">Additional ‘Big Ideas’ about hypothesis Testing.</em></p>
+        <p><em style="italic"><em style="bold">Note:</em> These ideas were already mentioned in the
+                summary for hypothesis testing for the population proportion p, however it is worth
+                repeating them and thus stress that these idea apply to hypothesis testing in
+                general!</em></p>
+        <p>Results that are based on a larger sample carry more weight, and therefore results that
+            are not significant (do not provide evidence to reject H<sub>0</sub>) may become
+            significant if based on a larger sample size. As a result...</p>
+        <p>Even a very small and practically unimportant effect becomes statistically significant
+            with a large enough sample size. The distinction between statistical significance and
+            practical importance should therefore always be considered.</p>
+        <p>For given data, the p-value of the two-sided test is always twice as large as the p-value
+            of the one-sided test. It is therefore harder to reject H<sub>0</sub>in the two-sided
+            case than it is in the one-sided case in the sense that stronger evidence is required.
+            Intuitively, the hunch or information that leads us to use the one-sided test can be
+            regarded as a head-start toward the goal of rejecting H<sub>0</sub>.</p>
+        <p><em style="bold">95% confidence intervals </em>can be used in order to carry out <em
+                style="bold">two-sided tests</em> (at the .05 significance level). If the null value
+            is not included in the confidence interval (i.e., is not one of the plausible values for
+            the parameter), we have enough evidence to reject H<sub>0</sub>. Otherwise, we cannot
+            reject H<sub>0</sub>.</p>
+        <p>If the results are significant, it might be of interest to follow up the tests with a
+            confidence interval in order to get insight into the actual value of the parameter of
+            interest.</p>
+
+        <p>The following StatTutor exercise is the first one in which the "More Formal Analysis"
+            (i.e., "inference") node is active. This exercise will therefore give you a chance to
+            practice some of the methods you learned, but most importantly, will give you a sense of
+            how inference fits into and completes the big picture of statistics.</p>
+        <!--<activity idref="cell_phones" purpose="lab"/>-->
+        
+        <activity idref="ctat2_m4_stattutor"  purpose="lab"/>
+
+
+        <section>
+            <title>End of Section Questions</title>
+            <body>
+                <p>Before you do the checkpoint activity, please evaluate your understanding of the
+                    learning objectives of module 12 by clicking on the My Response link below. This
+                    will help you assess whether there are any topics that you might want to review
+                    before attempting the checkpoint. (You might also want to review the previous
+                    checkpoints in module 12). The My Response link below will also give you an
+                    opportunity to ask any questions you might have about the material that you
+                    would like the instructor to address. Your questions can be for clarification of
+                    the material or further insight. Your self-evaluation and questions may also
+                    shape the discussions in class.</p>
+                <activity idref="_u5_m01_wrapup_feedback" purpose="myresponse"/>
+            </body>
+        </section>
+        <section>
+            <title>Checkpoint</title>
+            <body>
+                <p>This checkpoint will test your understanding of the material you have learned in
+                    this module.</p>
+                <p> </p>
+                <activity idref="_u5_m1_checkpoint2_pool" purpose="checkpoint"/>
+            </body>
+        </section>
+        <p>After you complete the checkpoint, if additional questions arise that you would like to
+            discuss in class, please click on the <em>My Response</em> link below and submit the
+            additional questions.</p>
+
+        <activity idref="_u5_m01_wrapup_feedback_post_quiz" purpose="myresponse"/>
+
+    </body>
+</workbook_page>

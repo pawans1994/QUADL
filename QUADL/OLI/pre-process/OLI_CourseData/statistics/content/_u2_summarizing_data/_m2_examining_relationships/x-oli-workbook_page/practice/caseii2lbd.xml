@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="caseii2lbd">
+    <head>
+        <title>Case C→C</title>
+    </head>
+    <body>
+        <p>An Associated Press article captured the attention of readers with the headline "Night
+            lights bad for kids?" The article was based on a 1999 study at the University of
+            Pennsylvania and Children's Hospital of Philadelphia, in which parents were surveyed
+            about the lighting conditions under which their children slept between birth and age 2
+            (lamp, night light, or no light) and whether or not their children developed
+            nearsightedness (myopia). The purpose of the study was to explore the effect of a young
+            child's nighttime exposure to light on later nearsightedness. </p>
+        <p>In this activity, we use the collected data to:</p>
+        <ul>
+            <li>Learn how to build a two-way table and compute conditional percentages.</li>
+            <li>Interpret the data in terms of the relationship between a young child's nighttime
+                exposure to light and later nearsightedness.</li>
+        </ul>
+        <pullout>
+            <alternatives group="statistics.package">
+                <default><pref:value preference="statistics.package"/></default>
+                <alternative value="r">
+                    <title>R Instructions</title>
+                    <p>To open R with the dataset preloaded, right-click <link
+                            href="../../../webcontent/r/nightlight.RData" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and double-click it to open it in R.</p>
+                    <p>The data have been loaded into the data frame <code>nightlight</code>. Enter
+                        the command <code>nightlight</code> to see the data. There are two
+                        variables: <code>Light</code> and <code>Nearsightedness</code>.</p>
+                    <p>You should see a report about 479 subjects with two columns. The first column
+                        records what kind of light, if any, was used in the subjects’ bedrooms while
+                        they slept, and the second column indicates whether or not the subjects
+                        later became nearsighted.</p>
+                    <p>Since there are only two variables in the data frame, we can obtain a summary
+                        of the data in a two-way table by using the <code>table()</code> command on
+                        data frame name:</p>
+                    <code style="inline">t = table(nightlight);t</code>
+
+                    <!--                    <codeblock syntax="text">               Nearsightedness
+  Light          No Yes
+    lamp         34  41
+    night light 153  79
+    no light    155  17-->
+                    <p>If the data frame had more than two variables then specific variables must be
+                        identified within the <code>table()</code> command, with the first entry
+                        representing the row values and the second entry representing the column
+                        values.</p>
+                    <code style="inline">tt =
+                        table(nightlight$Light,nightlight$Nearsightedness);tt</code>
+
+                    <!--                    <codeblock syntax="text">                 No Yes
+    lamp         34  41
+    night light 153  79
+    no light    155  17-->
+                    <p>To create a table of conditional proportions showing which proportion of
+                        children in each treatment group became nearsighted, we must divide each
+                        table entry by the total number of entries in its row. To do this, copy the
+                        following command to R:</p>
+                    <code style="inline">prop.table(t,1)</code>
+                    <!--                    <codeblock syntax="text">               Nearsightedness
+  Light                 No        Yes
+    lamp        0.45333333 0.54666667
+    night light 0.65948276 0.34051724
+    no light    0.90116279 0.09883721-->
+                    <p>To create a table of conditional proportions showing which proportion of
+                        children who are nearsighted or not were in each treatment group, we must
+                        divide each table entry by the column totals. To do this, copy the following
+                        command to R:</p>
+                    <code style="inline">prop.table(t,2)</code>
+                    <!--                    <codeblock syntax="text">               Nearsightedness
+  Light                No       Yes
+    lamp        0.0994152 0.2992701
+    night light 0.4473684 0.5766423
+    no light    0.4532164 0.1240876-->
+                    <p>To create a table of conditional percentages, simply muliply the above
+                        commands by 100, like so:</p>
+                    <code style="inline">prop.table(t,1)*100</code>
+                    <!--                    <codeblock syntax="text">               Nearsightedness
+  Light                No       Yes
+    lamp        45.333333 54.666667
+    night light 65.948276 34.051724
+    no light    90.116279  9.883721-->
+                </alternative>
+                <alternative value="StatCrunch">
+                    <title>StatCrunch Instructions</title>
+                    <p>To open this file in StatCrunch you must first right-click <link
+                            href="../../../webcontent/excel/nightlight.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Next click <link href="http://www.statcrunch.com/" target="new"
+                            >here</link>to open StatCrunch in a separate window and login using your
+                        username and password.</p>
+                    <ul>
+                        <li>Click on the link "Open StatCrunch" at the top of the My StatCrunch
+                            page. </li>
+                        <li>To open the data set, select the "My computer" link under "Load a data
+                            set" from box on the left side of the page.</li>
+                        <li>Select the "Browse" or "Choose File" (depending on which browser you're
+                            using) and select the data set you downloaded.</li>
+                        <li>Scroll to the bottom of the page and click on "Load File."</li>
+                    </ul>
+                    <p>To ask StatCrunch for a two-way table that contains both the counts and
+                        conditional percentages:</p>
+                    <ul>
+                        <li>Choose: Stat → Tables → Contingency → with data.</li>
+                        <li>Row variable: Light, Column Variable: Nearsightedness.</li>
+                        <li>Press Next.</li>
+                        <li>Check: Row percent. Uncheck all other options.</li>
+                        <li>Press Calculate.</li>
+                    </ul>
+                </alternative>
+                <alternative value="minitab">
+                    <title>Minitab Instructions</title>
+                    <p>To open Minitab with the data in the worksheet, right-click <link
+                            href="../../../webcontent/minitab/nightlight.mtw" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Minitab. Note: you will likely see a dialog box appear that says "A copy of
+                        the content of this file will be added to the current project"&#8212;just
+                        click OK.</p>
+                    <p>To ask Minitab for a two-way table that contains both the counts and
+                        conditional percentages:</p>
+                    <ul>
+                        <li>Choose: Stat → Tables → Cross Tabulation and Chi-Square.</li>
+                        <li>Under "Categorical Variables": <ul>
+                                <li>Next to "For rows" enter the explanatory variable ("Light" in
+                                    this case).</li>
+                                <li>Next to "For columns" enter the response variable
+                                    ("Nearsightedness" in this case).</li>
+                            </ul>
+                        </li>
+                        <li>Under "Display" check "Counts" and "Row percents."</li>
+                        <li>Click OK. (A two-way table will appear in the session (upper) window.
+                            Note the "Cell Contents" below the table, which tells you what the two
+                            entries in each cell in the table are.) </li>
+                    </ul>
+                </alternative>
+                <alternative value="excel">
+                    <title>Excel 2013 and 2016 Instructions</title>
+                    <p>To open the dataset, click <link
+                            href="../../../webcontent/excel/nightlight.xls" target="self"
+                            >here</link> to download the file to your computer. Then find the
+                        downloaded file and double-click it to open it in Excel. When Excel opens
+                        you may have to enable editing.</p>
+
+                    <p>To create a two-way table in Excel:</p>
+                    <p>First we need to sort our data to make it easier to tabulate:</p>
+                    <ul>
+                        <li>Type Control-A twice to select all of the data in the worksheet.</li>
+                        <li>Choose <em>Sort &amp; Filter → Custom Sort</em> from the
+                                <em>Editing</em> group in the <em>Home</em> tab.</li>
+                        <li>In the pop-up window, make sure that <em>My data has headers</em> is
+                            checked and then choose <em>light</em> from the pull-down menu next to
+                                <em>Sort by</em>.</li>
+                        <li>Click the <em>Add Level</em> button and then choose
+                                <em>nearsightedness</em> from the pull-down menu next to <em>Sort
+                                by</em> in the new row that was just added. Click <em>OK</em>.</li>
+                    </ul>
+                    <p>Now we'll create our two-way table. First we'll make the row and column
+                        headings and then use Excel formulas to get the counts:</p>
+                    <ul>
+                        <li>Pick a cell outside of the two columns of data, and type
+                                <em>Statistic</em>. Then move to the right one cell and type
+                                <em>No</em>, move right and type <em>Yes</em>, and move right and
+                            type <em>Total</em> for our column headings.</li>
+                        <li>For the row headings, start in the cell under <em>Statistic</em> and
+                            type <em>lamp</em>, then move down one cell and type
+                                <em>night-light</em>, move down and type <em>no light</em>, and move
+                            down and type <em>Total</em>.</li>
+                        <li>Now select the cell under <em>No</em> and to the right of <em>lamp</em>,
+                            and type <em>=counta(B2:B35)</em>.</li>
+                        <li>Move one cell to the right (under <em>Yes</em> and to the right of
+                                <em>lamp</em>) and type <em>=counta(B36:B76)</em>. Repeat this for
+                            each cell in the table, adjusting the data range appropriately.</li>
+                        <li>To fill in the Total column you can use the <em>sum function</em>. For example,
+                            to fill in the cell under Total and to the right of Lamp you could type
+                            <em>=sum(F3,G3)</em> where F3 and G3 refer to the counts you calculated for Lamp
+                            from before (your cell locations may be different based on where you put
+                            your table in Excel).</li>
+                    </ul>
+                    <p>To create a table of conditional percentages, we'll make a new table
+                        underneath the two way-table, and use the same row and column labels as the
+                        two-way table.</p>
+                    <ul>
+                        <li>Pick a cell underneath the two-way table, and type the same row and
+                            column labels in that we used for the two-way table.</li>
+                        <li>Now select the cell under <em>No</em> and to the right of <em>lamp</em>.
+                            In this cell, we want the percentage of children who slept with a lamp
+                            and did not develop nearsightedness. Thus, we want to divide the number
+                            of children who slept with a lamp and did not develop nearsightedness by
+                            the total number of children who slept with a lamp, and then multiply by
+                            100 to convert to a percentage. The specific cell references depend on
+                            where exactly you created your two-way table, but if cell location D2
+                            represents the number of children who slept with a lamp and did not
+                            develop nearsightedness, and cell location F2 represents the total
+                            number of children who slept with a lamp, the formula would be
+                                <em>=(D2/F2)*100</em>.</li>
+                        <li>Calculate the percentages for the other cells in the same manner.</li>
+                    </ul>
+                </alternative>
+                <!--   <alternative value="excel2003">
+                    <title>Excel 2003 Instructions</title>
+                    <p>To open Excel with the data in the worksheet, right-click <link
+                            href="../../../webcontent/excel/nightlight.xls" target="self"
+                            >here</link> and choose "Save Target As" to download the file to your
+                        computer. Then find the downloaded file and double-click it to open it in
+                        Excel.</p>
+                    <p>To create a two-way table in Excel:</p>
+                    <p>First we need to sort our data to make it easier to tabulate:</p>
+                    <ul>
+                        <li>Type Control-A to select all of the data in the worksheet.</li>
+                        <li>Choose <em>Data → Sort</em> from the menu bar.</li>
+                        <li>In the pop-up window, under <em>Sort by</em> choose <em>light</em>,
+                            under <em>Then by</em> choose <em>nearsightedness</em>, make sure
+                                <em>Header row</em> is selected towards the bottom of the window,
+                            and click <em>OK</em>.</li>
+                    </ul>
+                    <p>Now we'll create our two-way table. First we'll make the row and column
+                        headings and then use Excel formulas to get the counts:</p>
+                    <ul>
+                        <li>Pick a cell outside of the two columns of data, and type
+                                <em>Statistic</em>. Then move to the right one cell and type
+                                <em>No</em>, move right and type <em>Yes</em>, and move right and
+                            type <em>Total</em> for our column headings.</li>
+                        <li>For the row headings, start in the cell under <em>Statistic</em> and
+                            type <em>lamp</em>, then move down one cell and type
+                                <em>night-light</em>, move down and type <em>no light</em>, and move
+                            down and type <em>Total</em>.</li>
+                        <li>Now select the cell under <em>No</em> and to the right of <em>lamp</em>,
+                            and type <em>=counta(B2:B35)</em>.</li>
+                        <li>Move one cell to the right (under <em>Yes</em> and to the right of
+                                <em>lamp</em>) and type <em>=counta(B36:B76)</em>. Repeat this for
+                            each cell in the table, adjusting the data range appropriately.</li>
+                    </ul>
+                    <p>To create a table of conditional percentages, we'll make a new table
+                        underneath the two way-table, and use the same row and column labels as the
+                        two-way table.</p>
+                    <ul>
+                        <li>Pick a cell underneath the two-way table, and type the same row and
+                            column labels in that we used for the two-way table.</li>
+                        <li>Now select the cell under <em>No</em> and to the right of <em>lamp</em>.
+                            In this cell, we want the percentage of children who slept with a lamp
+                            and did not develop nearsightedness. Thus, we want to divide the number
+                            of children who slept with a lamp and did not develop nearsightedness by
+                            the total number of children who slept with a lamp, and then multiply by
+                            100 to convert to a percentage. The specific cell references depend on
+                            where exactly you created your two-way table, but if cell location D2
+                            represents the number of children who slept with a lamp and did not
+                            develop nearsightedness, and cell location F2 represents the total
+                            number of children who slept with a lamp, the formula would be
+                                <em>=(D2/F2)*100</em>.</li>
+                        <li>Calculate the percentages for the other cells in the same manner.</li>
+                    </ul>
+                </alternative>-->
+                <alternative value="ti">
+                    <title>TI Instructions</title>
+                    <p><em>Important Note!</em> TI 83/84 calculators do not have the built-in
+                        capability to create a table of counts and percents or to construct a pie
+                        chart. Thus, for this activity, we suggest trying one of the other
+                        technologies available in OLI Statistics. <link
+                            href="http://cran.r-project.org/">R</link> is an excellent statistical
+                        package that is free to download and that is available for both Windows and
+                        Mac OS X.</p>
+                    <p>If you want to continue with the TI Calculator, you can produce a two-way
+                        table by hand using your TI to help. </p>
+                    <p>To open a group of lists with the night-light data loaded, right-click <link
+                            href="../../../webcontent/ti/nightlight.8xg" target="self">here</link>
+                        and choose "Save Target As" to download the file to your computer. Then find
+                        the downloaded file and send it to your calculator. For instructions on how
+                        to connect your calculator to your computer and transfer a file, click
+                            <activity_link idref="ti_instructions" target="new"
+                        >here</activity_link>.</p>
+                    <p>You have stacked data in two lists: one for the explanatory variable <code
+                            style="inline">Light</code>and one for the response variable <code
+                            style="inline">Nearsightedness</code>. The explanatory variable is
+                        sorted by category, and then the response variable has been sorted for each
+                        category of the explanatory variable:</p>
+                    <ul style="none">
+                        <li>L1: Light (0 = no light, 1 = night-light, 2 = lamp). This list is
+                            sorted.</li>
+                        <li>L2: Nearsightedness (0 = No, 1 = Yes). This list is sorted separately
+                            for each category of the explanatory variable <code style="inline"
+                                >Light</code>.</li>
+
+                    </ul>
+                    <ul>
+                        <li>To access one of the built-in lists, press <code>2ND</code> and then the
+                            number of the list, followed by <code>ENTER</code>. For example, to
+                            access L1, you would press <code>2ND/1/ENTER</code>.</li>
+                        <li>Use the right and left arrows to scroll through the list.</li>
+                        <li>You can also choose <code>Stat/Edit/1:Edit</code> to see the lists in
+                            table form. You can scroll through the table using the arrow keys.</li>
+                    </ul>
+
+
+                    <p> For each category of the explanatory variable, count the data values in each
+                        category of the response variable. </p>
+                    <p>The page <activity_link target="new" idref="caseii2">Module 2, Case C → C (2
+                            of 2)</activity_link> describes how to create a two-way table with
+                        counts and with percentages. </p>
+                </alternative>
+            </alternatives>
+
+        </pullout>
+        <wb:inline idref="u1_m2_casecc2_lbd_tutor1" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m2_casecc2_lbd_tutor2" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m2_casecc2_lbd_tutor3" purpose="learnbydoing"/>
+        <wb:inline idref="u1_m2_casecc2_lbd_tutor4" purpose="learnbydoing"/>
+
+    </body>
+</workbook_page>

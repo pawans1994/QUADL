@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_summary_bridge">
+<head>
+<title>Summary (Probability)</title>
+</head>
+<body>
+<p>This summary provides a quick recap of the material you've learned in the probability unit. Please note that this summary does not provide 
+  complete coverage of the material, but just lists the main points. We therefore recommend that you use this summary only as a check list 
+  or a review before going on to the next unit, or before an exam. </p>
+  <section><title>General Remarks</title>
+  <body>
+    <ul style="disc">
+<li><p> Probability is a discipline by itself. In the context of the big picture of this course, probability is used to quantify the imperfection 
+  associated with drawing conclusions about the entire population based only on a random sample drawn from it.</p></li>
+<li><p>We talk about the probability of an event, which is a statement about the outcome of a random experiment. 
+  In practice, each event corresponds to a subset of outcomes from the sample space.</p></li>
+<li><p> Probability of an event can be as low as 0 (when the event is impossible) and as high as 1 (when the event is certain).</p></li>
+<li><p> In some cases the only way to find the probability of an event of interest is by repeating the random experiment many times
+and using the relative frequency approach.</p></li>
+<li><p> When all the possible outcomes of an random experiment are equally likely, the probability of an event is the fraction of outcomes which 
+satisfy it.</p></li>
+    </ul></body></section>
+  
+      
+  <section>
+        <title>Random Variables</title>
+        <body>
+     
+      <p>A random variable is a variable whose values are numerical results of a random experiment.</p>
+         <ul style="disc">
+<li><p> A <em>discrete random variable</em> is summarized by its probability distribution -- a list of its possible values and their corresponding
+probabilities. </p>
+        <ul style="circle">
+<li><p>The sum of the probabilities of all possible values must sum to 1.</p></li>
+<li><p>The probability distribution can be represented by a table, histogram, or a formula.</p></li>
+        </ul>
+</li>
+        
+<li><p> The <em>probability distribution</em> of a random variable can be supplemented by numerical measures of center and spread of the random variable.</p>
+  <ul style="circle">
+<li><p><em>Center:</em> The center of a random variable is measured by its mean. </p>
+<p>     -- The mean of a random variable can be interpreted as  its long run average.</p>
+<p>     -- The mean is a weighted average of the possible values of the random variable weighted by their corresponding probabilities. </p>
+</li>
+<li><p><em>Spread:</em> The spread of a random variable is measured by its variance, or more typically by its standard deviation  (the square root of the variance). </p>
+<p>    -- The standard deviation of a random variable can be interpreted as the typical (or long run average) distance
+between the value that the random variable assumes and the mean of X.</p></li>
+    </ul></li>
+
+  
+      </ul></body></section>
+ 
+  
+  <section>
+    <title>Continuous Random Variables</title>
+    <body>
+ 
+  <p>The probability distribution of a continuous random variable is represented by a probability density curve. The probability that the
+random variable takes a value in any interval of interest is the area above this interval and below the density curve.</p>
+  
+  <p>An important example of a continuous random variable is the <em>normal random variable</em>, whose probability density curve is 
+  symmetric (bell-shaped), bulging in the middle and tapering at the ends.</p>
+      <ul style="disc">
+<li><p>There are "many" normal random variables, each determined by its mean <m:math overflow="scroll">
+<m:mi>μ</m:mi>
+</m:math> (which determines where the density curve is centered) and standard deviation
+    <m:math overflow="scroll">
+<m:mi>σ</m:mi>
+    </m:math>,   (which determines how spread out (wide)  the the normal density curve is).</p></li>
+  
+<li><p> Any normal random variable follows the Standard Deviation Rule which can help us find probabilities associated with the 
+  normal random variable.</p></li>
+<li><p>Another way to find probabilities associated with the normal random variable is using the standard normal table. 
+  This process involves finding the z-score of values, which tells us how many standard deviations below or above the mean the value is.</p></li>
+<li><p>An important application of the normal random variable is that it can be used as an approximation to the binomial random variable 
+  (under certain conditions). A continuity correction can improve this approximation.</p></li>
+   </ul>
+  </body></section>
+  
+  <section>
+    <title>Sampling Distributions</title>
+    <body>
+     <p> A <em>parameter</em> is a number that describes the population, and a <em>statistic</em> is a number that describes the sample.</p> 
+      <ul style="disc">
+<li><p>Parameters are fixed, and in practice, usually unknown.</p></li>
+
+<li><p>Statistics change from sample to sample due to sampling variability.</p></li>
+<li><p>The behavior of the possible values the statistic can take in repeated samples is called the <em>sampling distribution</em> of that statistic.</p></li>
+ </ul>
+  
+  
+  <p>The <em>sampling distribution of the sample proportion</em>,  <m:math overflow="scroll">
+<m:mover accent="true">
+<m:mrow>
+<m:mi>p</m:mi>
+</m:mrow>
+<m:mo>ˆ</m:mo>
+</m:mover>
+  </m:math>,  (under certain conditions): </p>
+      <ul style="disc">
+        <li><p>is centered around p, the proportion in the entire population from which the sample is drawn.</p></li>
+
+<li><p>has standard deviation of <m:math overflow="scroll">
+<m:msqrt>
+<m:mrow>
+<m:mfrac>
+<m:mrow>
+<m:mi>p</m:mi>
+<m:mo>(</m:mo>
+<m:mn>1</m:mn>
+<m:mo>-</m:mo>
+<m:mi>p</m:mi>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:mfrac>
+</m:mrow>
+</m:msqrt>
+</m:math>
+</p>.</li>
+<li><p>is approximately normal (under certain condtions).</p></li>
+        </ul>
+<p>According to the <em>Central Limit Theorem</em>, the <em>sampling distribution of the sample mean</em>, <m:math overflow="scroll">
+<m:mover accent="true">
+<m:mrow>
+<m:mi>X</m:mi>
+</m:mrow>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:math>:</p>
+        <ul style="disc">
+<li><p>is centered around <m:math overflow="scroll">
+<m:mi>μ</m:mi>
+</m:math> the mean in the entire population from which the sample is drawn.</p></li>
+<li><p>has a standard deviation of  <m:math overflow="scroll">
+<m:mfrac>
+<m:mrow>
+<m:mi>σ</m:mi>
+</m:mrow>
+<m:mrow>
+<m:msqrt>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+</m:msqrt>
+</m:mrow>
+</m:mfrac>
+</m:math>
+</p>.</li>
+<li><p>for large enough sample size n, is approximately normal (regardless of the shape of the population distribution).</p></li>
+  </ul>
+      </body></section>
+</body>
+</workbook_page>

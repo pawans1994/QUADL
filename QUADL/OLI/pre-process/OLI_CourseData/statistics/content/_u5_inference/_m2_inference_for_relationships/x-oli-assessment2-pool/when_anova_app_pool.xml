@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="when_anova_app_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_when_anova_app">
+        <body>
+            <p>To determine the relative effectiveness of different study strategies for the SAT,
+                suppose three groups of students are randomly selected: One group took the SAT
+                without any prior studying; the second group took the SAT after studying on their
+                own from a common study booklet available in the bookstore; and the third group took
+                the SAT after completing a paid summer study session from a private test-prep
+                company.</p>
+            <p>The means and standard deviations of the resulting SAT scores from this hypothetical
+                study are summarized below: <image style="block" src="../webcontent/assessment9q15image1.gif" /> Since we are comparing more than
+                2 groups, we will use ANOVA to test whether the data provide evidence that SAT score
+                is related to study strategy. </p>
+            <p>One of the conditions that allows us to use ANOVA safely is that of equal
+                (population) standard deviations. Can we assume that this condition is met in this
+                case?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">No, since the three sample standard deviations are not
+                all equal.</choice>
+            <choice value="B">No, since the population standard deviations are not
+                given, so we cannot check this condition.</choice>
+            <choice value="C">Yes, since 5.7 − 4.9 &lt; 2.</choice>
+            <choice value="D">Yes, since 5.7/4.9 &lt; 2.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. We consider the three sample standard deviations to be equal if
+                    the ratio of the largest sample standard deviation to the smallest sample
+                    standard deviation.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Although the population standard deviations are not given, we
+                    can approximate them using the sample standard deviations.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. We consider the three sample standard deviations to be equal if
+                    the ratio of the largest sample standard deviation to the smallest sample
+                    standard deviation is less than 2.</feedback>
+            </response>
+            <response match="D" score="10">
+                <feedback>Correct. The rule of thumb for meeting the condition of equal standard
+                    deviations is: largest SD/smallest SD &lt; 2. In this case, we can assume that
+                    the condition is met, since the largest sample SD is 5.7, the smallest SD is 4.9
+                    and 5.7/4.9 &lt; 2.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q2_when_anova_app">
+        <body>
+            <p>Using four methods to teach ANOVA, do these four samples differ enough from each
+                other to reject the null hypothesis that type of instruction has no effect on mean
+                test performance?</p>
+            <table>
+
+
+                <tr>
+                    <th>Method to teach ANOVA</th>
+                    <th>Mean</th>
+                    <th>SD</th>
+                    <th>N</th>
+                </tr>
+
+
+                <tr>
+                    <td>method 1 (single teacher)</td>
+                    <td>4.85</td>
+                    <td>0.360</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>method 2 (co-teachers)</td>
+                    <td>4.61</td>
+                    <td>0.715</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>method 3 (computer)</td>
+                    <td>4.61</td>
+                    <td>0.688</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>method 4 (lab)</td>
+                    <td>4.38</td>
+                    <td>0.793</td>
+                    <td>32</td>
+                </tr>
+            </table>
+            <p>Since we are comparing more than 2 groups, we will use ANOVA to test whether the data
+                provide evidence that test score is related to teaching method.</p>
+            <p>One of the conditions that allows us to use ANOVA safely is that of equal
+                (population) standard deviations. Can we assume that this condition is met in this
+                case?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Yes, since 0.793 − 0.360 &lt; 2.</choice>
+            <choice value="B">No, since 0.793/0.360 &gt; 2</choice>
+            <choice value="C">No, since the four sample standard deviations are not all
+                equal.</choice>
+            <choice value="D">No, since the population standard deviations are not
+                given, so we cannot check this condition.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. We consider the three sample standard deviations to be equal if
+                    the ratio of the largest sample standard deviation to the smallest sample
+                    standard deviation.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. The rule of thumb for meeting the condition of equal standard
+                    deviations is: largest SD/smallest SD &lt; 2. In this case, we cannot assume
+                    that the condition is met, since the largest sample SD is 0.793, the smallest SD
+                    is 0.360 and 0.793/0.360 &gt; 2.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. We consider the four sample standard deviations to be equal by
+                    looking at the ratio of the largest sample standard deviation to the smallest
+                    sample standard deviation.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Although the population standard deviations are not given, we
+                    can approximate them using the sample standard deviations.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+
+
+
+</pool>

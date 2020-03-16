@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_anova4_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>
+            <em>Now consider Scenario 2 (compared to Scenario 1):</em>
+         </p>
+         <p>Within-group variation is relatively <input_ref input="A"/>, and therefore the F
+            statistic</p>
+         <image src="../../../webcontent/inline_assessment/_u5_m2_digtutor5b_image1.gif" alt="variation among sample means over variation within groups"/>
+         <p>will be relatively <input_ref input="B"/>, indicating that H<sub>o</sub> will probably
+               <input_ref input="C"/>, and we'll conclude that the population means <input_ref
+               input="D"/>.</p>
+      </body>
+      <fill_in_the_blank id="A" shuffle="false">
+         <choice value="one">small</choice>
+         <choice value="two">large</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="B" shuffle="false">
+         <choice value="one">small</choice>
+         <choice value="two">large</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="C" shuffle="false">
+         <choice value="one">be rejected</choice>
+         <choice value="two">not be rejected</choice>
+      </fill_in_the_blank>
+      <fill_in_the_blank id="D" shuffle="false">
+         <choice value="one">may be equal</choice>
+         <choice value="two">are not all equal</choice>
+      </fill_in_the_blank>
+      <part>
+         <response input="A" name="small" match="one">
+            <feedback>Incorrect. Look at the spread within each of the groups in Scenario 2 as
+               opposed to Scenario 1. For example, in Sample 3 in Scenario 2 the data range from 1
+               to 48, while in Scenario 1, the data in Sample 3 range only from roughly 23 to
+               27.5.</feedback>
+         </response>
+         <response input="A" name="large" match="two" score="10">
+            <feedback>Correct. Indeed, the within-group variation in Scenario 1 is smaller than in
+               Scenario 2.</feedback>
+         </response>
+      </part>
+      <part>
+         <response input="B" name="small" match="one" score="10">
+            <feedback>Correct. Indeed, the within-group variation appears in the denominator of the
+               F statistic, and therefore if the within-group variation is relatively large (as it
+               is for Scenario 2), the F statistic will be relatively small. </feedback>
+         </response>
+         <response input="B" name="large" match="two">
+            <feedback>Incorrect. Note that the within-group variation appears in the denominator of
+               the F statistic, and therefore if the within-group variation is relatively large (as
+               it is for Scenario 2), the F statistic will be relatively small. </feedback>
+         </response>
+      </part>
+      <part>
+         <response input="C" name="be rejected" match="one">
+            <feedback>Incorrect. The smaller the F statistic (which happens when the variation
+               within groups is relatively large) the less evidence we have against
+               H<sub>o</sub>.</feedback>
+         </response>
+         <response input="C" name="not be rejected" match="two" score="10">
+            <feedback>Correct. Indeed, the smaller the F statistic (which happens when the variation
+               within groups is relatively large) the less evidence we have against
+               H<sub>o</sub>.</feedback>
+         </response>
+      </part>
+      <part>
+         <response input="D" name="may be equal" match="one" score="10">
+            <feedback>Correct. Indeed, when we cannot reject H<sub>o</sub>, we're essentially saying
+               that it is possible that the means are equal. Recall, however, that not rejecting
+                  H<sub>o</sub> does not mean that we accept it. In hypothesis testing, we never
+               accept H<sub>o</sub>.</feedback>
+         </response>
+         <response input="D" name="are not all equal" match="two">
+            <feedback>Incorrect. When we cannot reject H<sub>o</sub>, we're essentially saying that
+               it could be that the means are equal. Recall, however, that not rejecting
+                  H<sub>o</sub> does not mean that we accept it. In hypothesis testing, we never
+               accept H<sub>o</sub>.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

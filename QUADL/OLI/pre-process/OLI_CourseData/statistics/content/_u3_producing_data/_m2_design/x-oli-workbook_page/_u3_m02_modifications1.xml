@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u3_m02_modifications1">
+<head>
+<title>Modifications to
+            <?oxy_insert_start author="mmyers" timestamp="20101103T210817-0400"?>R<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T210817-0400" content="r"?>andomization</title>
+    <objref idref="identify_study_design"/>
+</head>
+<body>
+   
+<section>
+<title>Modifications to Randomization</title>
+<body>
+<p>In some cases, an experiment's design may be enhanced by relaxing the requirement of total randomization and <em>blocking</em> the subjects first, dividing them into groups of individuals who are similar with respect to an outside variable that may be important in the relationship being studied. This can help ensure that the effect of treatments, as well as background variables, are most accurately measured. In blocking, we simply split the sampled subjects into blocks based upon the different values of the background variable, and then randomly allocate treatments within each block. Thus, blocking in the assignment of subjects is analogous to stratification in sampling.</p>
+<p>For example, consider again our experiment examining the differences between three versions of
+                    software from the last
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T210953-0400"?>L<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T210953-0400" content="l"?>earn
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T210956-0400"?>B<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T210955-0400" content="b"?>y
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T210958-0400"?>D<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T210957-0400" content="d"?>oing
+                    activity. If we suspected that gender
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T211318-0400"?>might
+                    affect<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T211315-0400" content="was tied in with"?>
+                    individuals' software
+                    preference<?oxy_insert_start author="mmyers" timestamp="20101103T211305-0400"?>s<?oxy_insert_end?>,
+                    we might choose to allocate subjects to separate blocks, one for males and one
+                    for females. Within each block, subjects are randomly assigned to treatments and
+                    the treatment proceeds as usual. A diagram of blocking in this situation is
+                    below:</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image011.gif"
+alt="We have 2 blocks, 3 treatment groups each (by random assignment). From the population we generate
+a sample. This sample of individuals is then split into two blocks, Males and Females. Each block is
+then randomly split further into the three treatment groups: &quot;tt1: existing software,&quot;
+&quot;ttt2 new software 1,&quot; and &quot;ttt3 new software 2.&quot; So, we end up with 6 total
+groups. Within each group the responses from the treatment groups are compared to each other,
+generating results separately for each block."/>
+<example>
+
+<p>Suppose producers of gasoline want to compare which of two types of gas results in better mileage
+                        for automobiles. In case the size of the vehicle plays a role in
+                        <?oxy_insert_start author="mmyers" timestamp="20101103T211414-0400"?>the<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T211428-0400" content="gasoline"?>
+                        effectiveness<?oxy_insert_start author="mmyers" timestamp="20101103T211439-0400"?>
+                        of different types of gasoline<?oxy_insert_end?>, they could first block by
+                        vehicle size, then randomly assign some cars
+                        <?oxy_insert_start author="mmyers" timestamp="20101103T211505-0400"?>within
+                        each block <?oxy_insert_end?>to Gasoline A and others to Gasoline B:</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image012.gif"
+alt="This example consists of 2 blocks, 2 treatment groups each (by random assignment). From the
+population we generate a sample, then separate it into two blocks, &quot;Small&quot; and
+&quot;Large,&quot; according to the vehicle size.; Within these blocks we randomly assign
+vehicles to use either Gasoline A or Gasoline B (So, each block is split into two treatment
+groups, &quot;ttt1: Gasoline A&quot;, and &quot;ttt2: Gasoline B&quot;), resulting in 4
+total groups. Then, within each block, we compare the responses, so we obtain results for
+each block individually."/>
+</example>
+<p>In the extreme, researchers may examine a relationship for a sample of blocks of just two individuals who are similar in many important respects, or even the same individual whose responses are compared for two explanatory values. </p>
+<example>
+
+<p><?oxy_insert_start author="mmyers" timestamp="20101103T211641-0400"?>For
+                        example<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T211638-0400" content="Alternatively"?>,
+                        researchers could compare the effects of Gasoline A and Gasoline B when both
+                        are used on the same car, for a sample of many cars of various sizes and
+                        <?oxy_comment_start author="mmyers" timestamp="20101103T211900-0400" comment="in the daigram, add the words &quot;of treatment order&quot; after &quot;random assignment&quot;"?>models.<?oxy_comment_end?></p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image013.gif"
+alt="In this Matched Pairs Design we have n blocks of individual cars, with 2 treatment groups each,
+done by random assignment. From the population we generate the sample group. The sample group is then
+placed into n blocks for each individual car. Each of these blocks is subjected to two treatments by
+random assignment. These treatments are &quot;ttt1 Gasoline A&quot; and &quot;ttt2 Gasoline B.&quot; For
+each car, the responses to each treatment are compared, resulting in a treatment for each "/>
+</example>
+<p>Such a study design, called <em>matched pairs</em>, may enable us to pinpoint the effects of the
+                    explanatory variable by comparing responses for the same individual under two
+                    explanatory values, or for two individuals who are as similar as possible except
+                    that the first gets one treatment, and the second gets another (or serves as the
+                    control). Treatments should usually be assigned at random within each pair, or
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T211952-0400"?>the
+                    <?oxy_insert_end?>order of treatments
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212001-0400"?>should be
+                    <?oxy_insert_end?>randomized for
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212018-0400"?>each<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T212016-0400" content="the same"?>
+                    individual. In our gasoline example, for each car the order of testing
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212217-0400"?>(<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T212218-0400" content="with "?>Gasoline
+                    A <?oxy_insert_start author="mmyers" timestamp="20101103T212236-0400"?>first,
+                    <?oxy_insert_end?>or Gasoline B
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212240-0400"?>first)
+                    <?oxy_insert_end?>should be randomized.</p>
+<example>
+
+<p>Suppose researchers want to compare the relative merits of toothpastes with and without tartar
+                        control ingredients. In order to make the comparison between individuals who
+                        are as similar as possible with respect to background and diet, they could
+                        obtain a sample of identical twins. One of each pair would randomly be
+                        assigned to brush with the tartar control toothpaste, while the other would
+                        brush with regular toothpaste of the same brand. These would be provided in
+                        unmarked
+                        tubes<?oxy_insert_start author="mmyers" timestamp="20101103T212414-0400"?>,<?oxy_insert_end?>
+                        so that the subjects would be blind. To make the experiment double-blind,
+                        dentists who evaluate the results would not know
+                        <?oxy_delete author="mmyers" timestamp="20101103T212439-0400" content="until afterwards "?>who
+                        used which toothpaste.</p>
+<!--:WARNING: Removed paragraph enclosing image element.--><image style="block" src="../webcontent/image014.gif"
+alt="Paired Design. There are n blocks, each represented by a circle with two identical twins in them. Randomly,
+the treatment of tartar or regular toothpaste is given to each twin. So, each circle has two twins,
+two types of toothpaste, and each twin randomly gets assigned one type of toothpaste."/>
+</example>
+<p>"Before-and-after" studies are another common type of matched pairs design. For each individual,
+                    the response variable of interest is measured twice: first before the treatment,
+                    then <?oxy_insert_start author="mmyers" timestamp="20101103T212525-0400"?>again
+                    <?oxy_insert_end?>after the treatment. The categorical explanatory variable is
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212842-0400"?>which
+                    treatment was applied, or <?oxy_insert_end?>whether
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T212901-0400"?>a treatment
+                    was applied, to
+                    that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101103T212922-0400" content="the"?>
+                    participant<?oxy_delete author="mmyers" timestamp="20101103T212927-0400" content=" has had the treatment applied"?>.</p>
+
+</body>
+</section>
+<section>
+<title>Comment</title>
+<body>
+<p>We have explained data production as a two-stage process: first obtain the sample, then evaluate
+                    the variables of interest via an appropriate
+                    <?oxy_insert_start author="mmyers" timestamp="20101103T213046-0400"?>study
+                    <?oxy_insert_end?>design. Even though the steps are carried out in this order
+                    chronologically, it is generally best for researchers to decide on a study
+                    design before they actually obtain the sample. For the toothpaste example above,
+                    researchers would first decide to use the matched pairs design, then obtain a
+                    sample of identical twins, then carry out the experiment and assess the
+                    results.</p>
+<!--<activity idref="_u3_m2_dig4" purpose="didigetthis"/>-->
+    <wb:inline idref="u2_m2_modifications_tutor1" purpose="didigetthis"/>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

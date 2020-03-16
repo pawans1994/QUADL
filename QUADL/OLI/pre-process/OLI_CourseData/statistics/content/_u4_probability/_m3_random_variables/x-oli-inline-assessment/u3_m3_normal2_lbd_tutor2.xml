@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal2_lbd_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>Using the applet, how many standard deviations above and below the mean do the quartiles of any normal distribution lie? Use the closest available values (the applet can't hit every value exactly). 
+         </p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <hint>What is the probability that X gets a value between Q1 and Q3?
+         </hint>
+         <explanation>
+            <p>By the definition of Q1 and Q3, P(Q1 &lt; X &lt; Q3) = 0.5. Setting the flags so that
+               there is a probability of 0.5 between them (or the closest we can get to 0.5 using the
+               applet, which is <!--0.5034-->0.5011), we see that Q1 and Q3 of any normal distribution lie
+               approximately 0.68 standard deviations below and above the mean, respectively. </p>
+         </explanation>
+      </part>
+   </question>
+</assessment>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="_u4_m03_rules1">
+<head>
+<title>Rules for Means and Variances of Random Variables (1 of 3)</title>
+    <objref idref="apply_rules_means_variances"/>
+</head>
+<body>
+   
+<section>
+<title>Rules for Means and Variances of Random Variables</title>
+<body>
+<p>So far we've learned how to calculate the mean and standard deviation of a random variable, and
+                    how to interpret these numerical measures.
+                    <?oxy_delete author="mmyers" timestamp="20101121T171334-0500" content="We&apos;ll start with"?><?oxy_insert_start author="mmyers" timestamp="20101121T171334-0500"?>Let's
+                    look at<?oxy_insert_end?> a motivating example
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171342-0500"?>that<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T171340-0500" content="which"?>
+                    will show us
+                    <?oxy_delete author="mmyers" timestamp="20101121T171348-0500" content="in "?>what
+                    kind<?oxy_insert_start author="mmyers" timestamp="20101121T171352-0500"?>s<?oxy_insert_end?>
+                    of situations we may find these rules
+                    useful<?oxy_insert_start author="mmyers" timestamp="20101121T171403-0500"?>
+                    in<?oxy_insert_end?>.</p>
+</body>
+</section>
+<example><title>Xavier's Production Line</title>
+
+<p>Assume that operating Xavier's production line costs $50 per hour, and that the repair cost of one defective part is $5. 
+    If X is the number of defective parts produced per hour, then the hourly cost would be <em>50 + 5X</em>. Note that since X is a random variable, 
+    so is the cost, 50 + 5X, and we might be interested in the mean and standard deviation of the hourly cost of operation for Xavier's production line. </p>
+<p>If we know the mean and standard deviation for
+                <?oxy_insert_start author="mmyers" timestamp="20101121T171435-0500"?>the
+                <?oxy_insert_end?>number of defective parts
+                <?oxy_insert_start author="mmyers" timestamp="20101121T171443-0500"?>(<?oxy_insert_end?>X<?oxy_insert_start author="mmyers" timestamp="20101121T171444-0500"?>)<?oxy_insert_end?>,
+                is there an easy way to find the mean and standard deviation for
+                <?oxy_insert_start author="mmyers" timestamp="20101121T171453-0500"?>the
+                <?oxy_insert_end?>hourly cost
+                <?oxy_insert_start author="mmyers" timestamp="20101121T171457-0500"?>(<?oxy_insert_end?>50
+                +
+                5X<?oxy_insert_start author="mmyers" timestamp="20101121T171500-0500"?>)<?oxy_insert_end?>?</p>
+</example>
+<section>
+<title>In General</title>
+<body>
+<p>Sometimes a new random variable of interest arises when we take an existing random variable and multiply by a constant and/or add a constant to its values. In the example above, we both multiplied X by 5 and added 50.  
+    We will return to the above example after exploring how such changes affect the center (mean) and spread (standard deviation) of random variables in general.</p>
+<p>Consider the random variable X with
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171549-0500"?>a
+                    <?oxy_insert_end?>probability distribution as shown in the histogram below:</p>
+<image style="block" src="../webcontent/image055.gif" alt="A histogram in which the vertical axis
+is labeled &quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot; Here is the
+data represented by the histogram:
+        P(X = -2) = 0.1;
+        P(X = -1) = 0.1;
+        P(X = 0) = 0.6;
+        P(X = 1) = 0.1;
+        P(X = 2) = 0.1;
+        So, the histogram is entire flat with probability = 0.1, except at X=0, where probability
+is 0.6"/>
+<p>It can easily be shown that X has
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171556-0500"?>a
+                    <?oxy_insert_end?>mean
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171559-0500"?>of
+                    <?oxy_insert_end?>0,
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171603-0500"?>and a
+                    <?oxy_insert_end?>standard
+                    deviation<?oxy_insert_start author="mmyers" timestamp="20101121T171642-0500"?>
+                    of<?oxy_insert_end?> 1.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Adding a Constant to X</title>
+<body>
+<p>What would the mean and standard deviation be if we shifted the entire histogram over 6 units to
+                    the
+                    right<?oxy_insert_start author="mmyers" timestamp="20101121T171706-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T171656-0500" content="---"?>in
+                    other words, what are the mean and standard deviation of X + 6?</p>
+<image style="block" src="../webcontent/image056.gif" alt="The same histogram, except that the bars
+have been shifted over 6 units. This that the data now represented is:
+        P(X = 4) = 0.1;
+        P(X = 5) = 0.1;
+        P(X = 6) = 0.6;
+        P(X = 7) = 0.1;
+        P(X = 8) = 0.1;"/>
+<p>We observe that shifting the distribution over to the right 6 units also shifts the center over 6 units: in other words, the mean of (X + 6) should equal the (mean of X) + 6. 
+    However, the spread of the distribution is unchanged: in other words, the standard deviation of (X + 6) should equal the standard deviation of X.</p>
+<p>Again consider the random variable X with
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T171740-0500"?>the
+                    <?oxy_insert_end?>probability distribution
+                    <?oxy_delete author="mmyers" timestamp="20101121T171744-0500" content="as "?>shown
+                    in the histogram below:</p>
+<image style="block" src="../webcontent/image055.gif" alt="The original histogram we began with.
+The vertical axis is labeled &quot;Probability&quot; and the horizontal axis is labeled &quot;X.&quot;
+Here is the data represented by the histogram:
+        P(X = -2) = 0.1;
+        P(X = -1) = 0.1;
+        P(X = 0) = 0.6;
+        P(X = 1) = 0.1;
+        P(X = 2) = 0.1;
+        So, the histogram is entire flat with probability = 0.1, except at X=0, where probability
+is 0.6"/>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Subtracting a Constant from X</title>
+<body>
+<p>What would the mean and standard deviation be if we shifted the entire histogram over 7 units to
+                    the
+                    left<?oxy_insert_start author="mmyers" timestamp="20101121T171813-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T171811-0500" content="---"?>in
+                    other words, what are the mean and standard deviation of X - 7?</p>
+<image style="block" src="../webcontent/image057.gif" alt="The same histogram, except that the bars
+have been shifted over -7 units. This that the data now represented is:
+        P(X = -9) = 0.1;
+        P(X = -8) = 0.1;
+        P(X = -7) = 0.6;
+        P(X = -6) = 0.1;
+        P(X = -5) = 0.1;"/>
+<p>The mean also shifts to the left by 7, from 0 to -7. The standard deviation remains unchanged at 1.</p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Multiplying X by a Constant
+                <?oxy_delete author="mmyers" timestamp="20101121T172043-0500" content="(t"?><?oxy_insert_start author="mmyers" timestamp="20101121T172117-0500"?>T<?oxy_insert_end?>hat
+                <?oxy_insert_start author="mmyers" timestamp="20101121T172114-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172111-0500" content="i"?>s
+                &gt;
+                1<?oxy_delete author="mmyers" timestamp="20101121T172046-0500" content=")"?></title>
+<body>
+<p>What would the mean and standard deviation be if we stretched the entire histogram by 4
+                    units<?oxy_insert_start author="mmyers" timestamp="20101121T171855-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T171852-0500" content="---"?>in
+                    other words, what are the mean and standard deviation of 4X?</p>
+<image style="block" src="../webcontent/image058.gif" alt="The histogram has been stretched by 4 times
+(but has not moved because the mean is at X=0). The data the histogram represents now is:
+        P(X = -8) = 0.1;
+        P(X = -4) = 0.1;
+        P(X = 0) = 0.6;
+        P(X = 4) = 0.1;
+        P(X = 8) = 0.1;"/>
+    <p>Multiplying X by 4 results in a mean that is 4 times the original mean. In this case, the
+                    mean transforms from 0 to 4(0) = 0. Multiplying X by 4 is tantamount to
+                    stretching the distribution by 4 units, and so the standard deviation will be 4
+                    times the original standard deviation. In other words, the mean of 4X is 4 times
+                    the mean of X; the standard deviation of 4X is 4 times the standard deviation of
+                    X. The variance, or squared standard deviation, would be 4<?oxy_insert_start author="mmyers" timestamp="20101121T172006-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172006-0500" content="-"?>squared
+                    times the original variance<?oxy_insert_start author="mmyers" timestamp="20101121T172018-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172018-0500" content=":"?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T172020-0500"?>the
+                    <?oxy_insert_end?>variance of 4X is 16 times the variance of X. </p>
+<p> </p>
+</body>
+</section>
+<section>
+<title>Multiplying X by a Constant
+                <?oxy_delete author="mmyers" timestamp="20101121T172058-0500" content="(t"?><?oxy_insert_start author="mmyers" timestamp="20101121T172102-0500"?>T<?oxy_insert_end?>hat
+                <?oxy_insert_start author="mmyers" timestamp="20101121T172104-0500"?>I<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172104-0500" content="i"?>s
+                &lt;
+                1<?oxy_delete author="mmyers" timestamp="20101121T172056-0500" content=")"?></title>
+<body>
+<p>Finally, what would the mean and standard deviation be if we shrunk the entire histogram by a
+                    fourth<?oxy_insert_start author="mmyers" timestamp="20101121T172136-0500"?>&#8212;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172134-0500" content="---"?>in
+                    other words, what are the mean and standard deviation of (1/4) X?</p>
+<image style="block" src="../webcontent/image059.gif" alt="The histogram has been shrunk by 4 times
+(but has not moved because the mean is at X=0). The data the histogram represents now is:
+        P(X = -&frac12;) = 0.1;
+        P(X = -&frac14;) = 0.1;
+        P(X = 0) = 0.6;
+        P(X = &frac14;) = 0.1;
+        P(X = &frac12;) = 0.1;"/>
+<p>Dividing X by 4 results in a mean that is 1/4 the original mean. In this case, the mean
+                    transforms from 0 to (1/4)(0) = 0. Dividing X by 4 is tantamount to shrinking
+                    the distribution by 4 units, and so the standard deviation will be 1/4 of the
+                    original standard deviation. In other words, the mean of
+                    (1/4)<?oxy_delete author="mmyers" timestamp="20101121T172240-0500" content=" "?>X
+                    is 1/4 times the mean of X; the standard deviation of
+                    (1/4)<?oxy_delete author="mmyers" timestamp="20101121T172247-0500" content=" "?>X
+                    is 1/4 times the standard deviation of X. The variance, or squared standard
+                    deviation, would be 1/4<?oxy_insert_start author="mmyers" timestamp="20101121T172301-0500"?>
+                    <?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172301-0500" content="-"?>squared
+                    times the original variance<?oxy_insert_start author="mmyers" timestamp="20101121T172307-0500"?>;<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101121T172307-0500" content=":"?>
+                    <?oxy_insert_start author="mmyers" timestamp="20101121T172311-0500"?>the
+                    <?oxy_insert_end?>variance of
+                    (1/4)<?oxy_delete author="mmyers" timestamp="20101121T172314-0500" content=" "?>X
+                    is 1/16 times the variance of X. </p>
+<p> </p>
+</body>
+</section>
+</body>
+</workbook_page>

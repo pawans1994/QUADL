@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="mean_vs_median_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_mean_vs_median" select="single">
+            <body>
+                <p>The histogram below displays the distribution of 50 ages at death due to
+                    trauma (accidents and homicides) that were observed in a certain
+                    hospital during a week. </p>
+                <image style="block" src="../webcontent/assessment1q2.gif" />
+                <p>For the data described by the above histogram, which of the following is
+                    a correct statement about the median?</p>
+            </body>
+            <input labels="false" shuffle="false">
+                <choice value="A">The median will be bigger than the mean. </choice>
+                <choice value="B">The median will be smaller than the mean. </choice>
+                <choice value="C">The median and the mean will be about the
+                    same. </choice>
+                <choice value="D">The median and the range will be about the
+                    same. </choice>
+            </input>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Notice this distribution is skewed to the right
+                        (the tail is towardthe right), and we also see a suspected outlier
+                        on the right side. Remember that both of these shape features will
+                        tend to “pull” the <em style="italic">mean</em> more than they would pull the
+                        median.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. The mean is more sensitive than the median to the
+                        “tail” of a distribution, and also to outliers. We see that this
+                        distribution is skewed to the right (the tail is towards the right)
+                        and we also see a suspected outlier on the right side. Both of these
+                        shape features will tend to “pull” the mean toward the tail more
+                        than they would pull the median, meaning that the median will be
+                        smaller than the mean.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. Remember that we would expect the mean and the median
+                        to be nearly the same only if the distribution was nearly symmetric.
+                        But notice this distribution is skewed to the right (the tail is
+                        towards the right) and we also see a suspected outlier on the right
+                        side. Remember that both of these shape features will tend to “pull”
+                        the mean more than they would pull the median.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. Remember that the <em style="italic">range</em> is the length from
+                        lowest value to highest value. So, for this distribution, the range
+                        is approximately 80. But remember that the <em>median</em> is the
+                        middle value. Half the people must be older than the median, so the
+                        median will be much less than 80, because all but one of the people
+                        were younger than 80.</feedback>
+                </response>
+            </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_mean_vs_median" select="single">
+        <body>
+            <p>The histogram below displays the distribution of 50 ages at death due to
+                trauma (accidents and homicides) that were observed in a certain
+                hospital during a week. </p>
+            <image style="block" src="../webcontent/assessment1q2.gif" />
+            <p>Assume that the largest observation in this dataset is 90. If this
+                observation were wrongly recorded as 900, then what would happen to the
+                mean and median?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">Neither the mean nor the median would change.</choice>
+            <choice value="B">Both the mean and the median would change. </choice>
+            <choice value="C">The mean would stay the same, but the median
+                would change. </choice>
+            <choice value="D">The mean would decrease, but the median would not
+                change. </choice>
+            <choice value="E">The mean would increase, but the median would not
+                change. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. It is true that the median would not change, because
+                    pulling 90 to 900 would not change the 25th or the 26th value in the
+                    data. But remember that the <em style="italic">mean</em> tends to be “pulled” by an
+                    outlier. So moving the largest value, 90, farther to the right, to
+                    900, would tend to pull the mean to the right, making it
+                    larger.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It is true that the mean would change, because mean
+                    tends to be “pulled” by outliers. But remember that the
+                    <em style="italic">median</em> is the middle value. Moving 90 to 900 would not
+                    change the 25th or the 26th value in the data, so the median would
+                    be the same.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Remember that the <em style="italic">mean</em> tends to be
+                    “pulled” by an outlier. So moving the largest value, 90, farther to
+                    the right, to 900, would tend to pull the mean to the right. So
+                    the mean would change. But the <em style="italic">median</em> is the middle
+                    value. Pulling 90 to 900 would not change the 25th or the 26th value
+                    in the data, so the median would be the same.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It is true that the median would not change, because
+                    moving 90 to 900 would not change the 25th or the 26th value in the
+                    data. But remember that the <em style="italic">mean</em> tends to be “pulled” by an
+                    outlier. Moving the largest value, 90, farther to the right, to 900,
+                    would tend to pull the mean to the right, making it increase, not
+                    decrease.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>Correct. The mean will increase, because the mean tends to be
+                    “pulled” by an outlier. So moving the largest value, 90, farther to
+                    the right, to 900, would tend to pull the mean to the right. The
+                    <em style="italic">median</em> would not be affected, because moving 90 to 900
+                    would not change the 25th or the 26th value in the data. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    
+    <multiple_choice id="q3_mean_vs_median" select="single">
+        <body>
+            <p>This histogram shows the times, in minutes, required for 25 rats in an
+                animal behavior experiment to successfully navigate a maze.</p>
+            <image style="block" src="../webcontent/image500.png" />
+            <p>For the data described by the above histogram, which of the following is
+                a correct statement about the median?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">The median will be smaller than the mean. </choice>
+            <choice value="B">The median will be larger than the mean. </choice>
+            <choice value="C">The median and the mean will be about the
+                same. </choice>
+            <choice value="D">The median and the range will be about the
+                same. </choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. When the distribution is skewed right, the mean is
+                    “pulled up” by the large observations in the “tail” of the
+                    distribution. The median, on the other hand, is only determined by
+                    the order of the observations, and is not affected by their
+                    magnitude. Therefore, in this case, the median is smaller than the mean.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. When the distribution is skewed right, the mean is
+                    “pulled up” by the large observations in the “tail” of the
+                    distribution. The median, on the other hand, is only determined by
+                    the order of the observations, and is not affected by their
+                    magnitude.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. When the distribution is skewed right, the mean is
+                    “pulled up” by the large observations in the “tail” of the
+                    distribution. The median, on the other hand, is only determined by
+                    the order of the observations, and is not affected by their
+                    magnitude.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Remember that the <em style="italic">range</em> is the length from
+                    lowest value to highest value. So, for this distribution, the range
+                    is approximately 7. But remember that the <em style="italic">median</em> is the
+                    middle value. Half of the times must be greater than the median, so
+                    the median will be much less than 7, because all but two of the
+                    times were less than 7.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    
+    <multiple_choice id="q4_mean_vs_median" select="single">
+        <body>
+            <p>This histogram shows the times, in minutes, required for 25 rats in an
+                animal behavior experiment to successfully navigate a maze.</p>
+            <image style="block" src="../webcontent/image500.png" />
+            <p>Assume that the largest observation in this dataset is 8.6 minutes. If
+                this observation were wrongly recorded as 86, then what would happen to
+                the mean and median?</p></body>
+        <input labels="false" shuffle="false">
+            <choice value="A"><!--Both the mean and the median will not
+                            change. -->Neither the mean nor the median would change.</choice>
+            <choice value="B">Both the mean and the median would change. </choice>
+            <choice value="C">The mean would stay the same, but the median
+                would change. </choice>
+            <choice value="D">The mean would decrease, but the median would not
+                change. </choice>
+            <choice value="E">The mean would increase, but the median would not
+                change. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The mean is affected by the actual values of the
+                    observations, whereas the median is determined by their order. While
+                    the median would stay the same, changing the largest observation from
+                    8.6 to 86 would have an impact on the mean.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. The mean is affected by the actual values of the
+                    observations, whereas the median is determined by their order.
+                    Therefore, changing the largest observation from 8.6 to 86 would have
+                    an impact on the mean. However, the median would stay the
+                    same.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It appears you confused the impact of an outlier on
+                    the mean and median. The mean is affected by the actual values of
+                    the observations, whereas the median is determined by their order.
+                    Therefore, changing the largest observation from 8.6 to 86 would have
+                    an impact on the mean, while the median would stay the
+                    same.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The mean is affected by the actual values of the
+                    observations, whereas the median is determined by their order.
+                    While the median would stay the same, changing the largest
+                    observation from 8.6 to 86 would have an impact on the mean. But
+                    remember that the mean tends to be “pulled” by an outlier. Moving
+                    the largest value, 8.6, farther to the right, to 86, would tend to
+                    pull the mean to the right, making it increase, not
+                    decrease.</feedback>
+            </response>
+            <response match="E" score="10">
+                <feedback>
+                    <p>Correct. The mean is affected by the actual values of the
+                        observations, whereas the median is determined by their order.
+                        Therefore, changing the largest observation from 8.6 to 86 would
+                        have an impact on the mean, while the median would stay the same.
+                        So moving the largest value, 8.6, farther to the right, to 86,
+                        would tend to pull the mean to the right. The median would not
+                        be affected, because moving 8.6 to 86 would not change the 13th
+                        value in the data.</p>
+                    <p>Actually, we can figure out the <em style="italic">exact</em>
+                        impact that the change will have on the mean: By changing 8.6 to
+                        86, the sum of all the observations is increased by 86 - 8.6 =
+                        77.4, and therefore the mean of the 25 observations is increased
+                        by 77.4/25 = 3.1 minutes.</p>
+                </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+</pool>

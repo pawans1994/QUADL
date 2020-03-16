@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="boxplot2">
+    <head>
+        <title>Boxplot (2 of 3)</title>
+        <objref idref="interpret_graphical_displays"/>
+    </head>
+    <body>
+
+        <p>Now that you understand what each of the five numbers means, you can appreciate how much
+            information about the distribution is packed into the five-number summary. All this
+            information can also be represented visually by using the boxplot. </p>
+        <section>
+            <title>The Boxplot</title>
+            <body>
+                <p>The boxplot graphically represents the distribution of a quantitative variable by
+                    visually displaying the five-number summary and any observation that was
+                    classified as a suspected outlier using the 1.5(IQR) criterion. </p>
+                <!-- This is new, added 07-01-2016 -->
+                <p>There are several ways to plot the whiskers on a boxplot. One convention is to
+                    plot whiskers down to the minimum and up to the maximum value. We use the
+                    1.5(IQR criterion), also known as the Tukey method for plotting whiskers. First,
+                    calculate the IQR, the difference between the 75th and 25th percentiles (or Q3 –
+                    Q1). Multiply the IQR by 1.5. Add this value to the 75th percentile. If the
+                    value is greater than (or equal to) the maximum value in the dataset, draw the
+                    upper whisker to the maximum value. Otherwise, stop the whisker at the largest
+                    value that is less than 75th percentile + 1.5 * IQR. Plot any values that are
+                    greater than this as individual points that are outliers. Similarly, subtract
+                    1.5 * IQR from the 25th percentile. If this value is smaller than the minimum
+                    value in the dataset, draw the lower whisker to the minimum value. Otherwise,
+                    stop the whisker at the lowest value that is greater than 25th percentile – 1.5
+                    * IQR. Plot any values that are smaller than this as individual points that are
+                    outliers.</p>
+                <p>Using the Best Actress dataset, here is how we determine where to draw the
+                    whiskers:</p>
+                <ul>
+                    <li>Q3 = 42</li>
+                    <li>Q1 = 30.5</li>
+                    <li>IQR: 42 – 30.5 = 11.5</li>
+                    <li>1.5 * IQR = 1.5 * 11.5 = 17.25</li>
+                    <li>Q3 + 1.5 * IQR = 42 + 17.25 = 59.25</li>
+                </ul>
+                <p>The largest observation that is less than or equal to 59.25 is 49 so we draw the
+                    upper whisker up to 49. All points above 49 are considered outliers (61, 61, 62,
+                    74, 80).</p>
+                <p>Q1 – 1.5 * IQR = 30.5 – 17.25 = 13.25</p>
+                <p>The smallest observation that is greater than or equal to 13.5 is 21 so we draw
+                    the lower whisker down to 21, which is also the minimum. There are no
+                    outliers.</p>
+
+                <p>Here is how a boxplot is constructed: (this is for the "Best Actress"
+                    dataset&#8212;to see the dataset, <activity_link idref="bestactressdataset_2013"
+                        target="new">click here</activity_link>.)</p>
+                <youtube src="S50-WYpOm4I" title="Constructing a Boxplot"/>
+                <!--   <flash src="../../../webcontent/OLICamtasiaController.swf" width="500" height="320"
+                    purpose="walkthrough">
+                    <param name="movieURL">../../webcontent/flash/boxplot_movie.swf</param>
+                    <param name="movieFPS">5</param>
+                    <param name="LoggingLibraryPath"
+                        >../../../webcontent/OLILoggingLibrary.swf</param>
+                </flash>
+                <p>To see a static version of this movie, <activity_link idref="boxplot2altflash"
+                        target="new">click here</activity_link>.</p>-->
+                <section>
+                    <title/>
+                    <body>
+                        <p>The boxplot below displays the ages of Best Actor Oscar winners
+                            (1970-2013). Here is how a boxplot is constructed: (this is for the
+                            "Best Actress" dataset, to see the dataset <activity_link
+                                idref="bestactressdataset_2013" target="new">click
+                                here</activity_link>.)</p>
+                      <!--  <p>Now try this drag-and-drop exercise. Label the different numerical
+                            measures as they are depicted in the boxplot. Then try the learn by doing below</p>
+                        <iframe src="../webcontent/eda_examining_distributions_matching_best_actor.html"
+                            title="Best Actor Boxplot Matching Activity" height="600" width="650"/>-->  
+                     
+                    </body>
+                </section>
+                <example>
+                    <title>Best Actor Oscar Winners</title>
+                    <p>The boxplot below displays the ages of Best Actor Oscar winners (1970-2013).
+                        Click <activity_link idref="bestactordataset_2013" target="new"
+                            >here</activity_link> for the data. In the last activity, you found
+                        numerical measures for this distribution.</p>
+                    <p>Label the different numerical measures as they are depicted in the
+                        boxplot.</p>
+                    <wb:inline idref="u1_m1_boxplot2_tutor1" purpose="learnbydoing"/>
+                    <!--<flash src="../../webcontent/flash/boxplot2.swf" width="505" height="440" purpose="learnbydoing">
+<param name="problem_name">boxplot2</param>
+</flash>-->
+                </example>
+                
+                <p>GeoGebra Group offers a simulation activity where you can
+                    practice calculating the median, Q1, Q3, IQR, and outliers and drawing a
+                    boxplot. Note that you can edit the data in the chart to see different
+                    results.</p>
+                <p>To view this interactive simulation in a separate window click <link
+                    href="http://ggbtu.be/m11008" target="new">here</link>.</p>
+                <iframe src="https://tube.geogebra.org/student/m13347" height="800"
+                    width="800"> </iframe>
+                
+                <p/>
+                <p><link href="https://creativecommons.org/licenses/by-sa/3.0/" target="new"
+                    >CC BY-SA 3.0</link> by <link href="http://www.geogebra.org/"
+                        target="new">GeoGebra Group</link></p>
+                
+                
+               <!--   <p>The <link href="http://www.geogebra.org/">GeoGebra Group</link> offers a <link
+                        href="http://ggbtu.be/m11008">simulation activity</link> where you can
+                    practice calculating the median, Q1, Q3, IQR, and outliers and drawing a
+                    boxplot. Note that you can edit the data in the chart to see different
+                    results.</p>-->
+            </body>
+        </section>
+        <!--<activity idref="boxplot2selfassess" purpose="didigetthis"/>-->
+        <wb:inline idref="u1_m1_boxplot2_tutor2" purpose="didigetthis"/>
+        <p><em>Did You Get It?</em> If so, then go ahead and move on to the next page. If not, then
+            click the link below for some additional practice.</p>
+        <activity idref="boxplot2selfassess_02" purpose="didigetthis"/>
+        <!--<section purpose="didigetthis"><title>Did I Get This?</title><body><wb:inline idref="u1_m1_boxplot2_tutor2" purpose="didigetthis" />
+   <p><em>Did You Get It?</em>  If so, then go ahead and move on to the next page.  If not yet, then click the link below for some additional practice.</p>
+    <activity idref="boxplot2selfassess_02" purpose="didigetthis"/></body></section>-->
+    </body>
+</workbook_page>

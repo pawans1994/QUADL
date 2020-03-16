@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+ xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+ id="linear4">
+ <head>
+  <title>Linear Relationships (4 of 8)</title>
+
+
+  <objref idref="interpret_correlation_coefficient"/>
+
+
+ </head>
+ <body>
+
+  <section>
+   <title>Properties of r</title>
+   <body>
+    <p>We now discuss and illustrate several important properties of the correlation coefficient as
+     a numerical measure of the strength of a linear relationship. </p>
+    <ol>
+     <li>
+      <p>The correlation does not change when the units of measurement of either one of the
+       variables change. In other words, if we change the units of measurement of the explanatory
+       variable and/or the response variable, the change has <em style="italic">no effect on the
+        correlation (r)</em>.</p>
+      <p>To illustrate, following are two versions of the scatterplot of the relationship between
+       sign legibility distance and driver's age: </p>
+      <image style="block" src="../webcontent/linear5.gif"
+       alt="Two scatterplots showing the
+data for Driver Age vs. Sign Legibility. The first scatterplot's vertical axis is labeled
+&quot;Sign Legibility Distance (feet)&quot; and the axis ranges from a little less than 300
+to 600 feet. The horizontal axis is labeled &quot;Driver Age (years)&quot; and it
+ranges from 15 to 85. The second scatterplot has the same horizontal axis but the
+vertical axis is labeled &quot;Sign Legibility Distance (meters)&quot; and it ranges
+from 80 to 180."/>
+      <p>The top scatterplot displays the original data where the maximum distances is measured in
+        <em style="italic">feet</em>. The bottom scatterplot displays the same relationship but with
+       maximum distances changed to <em style="italic">meters</em>. Notice that the Y-values have
+       changed, but the correlations are the same. This example illustrates haw changing the units
+       of measurement of the response variable has no effect on r, but as we indicated above, the
+       same is true for changing the units of the explanatory variable, or of both variables. </p>
+      <p>This might be a good place to comment that the correlation (r) is <em style="italic"
+        >unitless</em>. It is just a number. </p>
+     </li>
+     <li>
+      <p>The correlation measures only the <em style="italic">strength</em> of a linear relationship
+       between two variables. It <em>ignores</em> any other type of relationship, no matter how
+       strong it is. For example, consider the relationship between the average fuel usage of
+       driving a fixed distance in a car, and the speed at which the car drives: </p>
+      <image style="block" src="../webcontent/linear6.gif"
+       alt="A scatterplot in which the vertical axis
+ is labeled &quot;Fuel Used (liter/100km)&quot; and the horizontal axis is labeled &quot;Speed
+ (km/h).&quot; The amount of fuel used rapidly decreases from speed=0 to about speed=60, where
+ fuel used reaches its minimum value, then fuel used slowly increases linearly as speed increases."/>
+      <p>Our data describe a fairly simple curvilinear relationship: the amount of fuel consumed
+       decreases rapidly to a minimum for a car driving 60 kilometers per hour, and then increases
+       gradually for speeds exceeding 60 kilometers per hour. The relationship is very strong, as
+       the observations seem to perfectly fit the curve. </p>
+      <p>Although the relationship is strong, the correlation r = -0.172 indicates a weak <em
+        style="italic">linear</em> relationship. This makes sense considering that the data fails to
+       adhere closely to a linear form: </p>
+      <image style="block" src="../webcontent/linear7.gif"
+       alt="The same scatterplot, except a blue line
+ with arrow has been draw over the plot, in the direction of a negative relationship. The data plotted
+ does not align at all with this arrow."/>
+      <p>The correlation is useless for assessing the strength of any type of relationship that is
+       not linear (including relationships that are curvilinear, such as the one in our example).
+       Beware, then, of interpreting the fact that r is close to 0 as an indicator of a weak
+       relationship rather than a weak <em style="italic">linear</em> relationship. This example
+       also illustrates how important it is to <em style="italic">always look at the data in the
+        scatterplot</em> because, as in our example, there might be a strong nonlinear relationship
+       that r does not indicate.</p>
+      <p>Since the correlation was nearly zero when the form of the relationship was not linear, we
+       might ask if the correlation can be used to determine whether or not a relationship is
+       linear.</p>
+     </li>
+     <li>
+      <p>The correlation by itself is <em style="italic">not</em> sufficient to determine whether a
+       relationship is linear. To see this, let's consider the study that examined the effect of
+       monetary incentives on the return rate of questionnaires. Below is the scatterplot relating
+       the percentage of participants who completed a survey to the monetary incentive that
+       researchers promised to participants, in which we find a <em style="italic">trong curvilinear
+        relationship</em>:</p>
+      <image style="block" src="../webcontent/linear8.gif"
+       alt="A scatterplot in which the vertical
+axis shows &quot;Percentage Returned&quot; and the horizontal axis shows &quot;Incentive (dollars).
+&quot; The data plotted shows a strong curvilinear relationship which roughly approximates a square
+root function."/>
+      <p>The relationship is curvilinear, yet the correlation r = 0.876 is quite close to 1.</p>
+      <p>In the last two examples, we have seen two very strong curvilinear relationships, one with
+       a correlation close to 0 and one with a correlation close to 1. Therefore, the correlation
+       alone does not indicate whether a relationship is linear. The important principle here is: </p>
+      <p>
+       <em style="italic">Always look at the data!</em>
+      </p>
+     </li>
+     <li>
+      <p>The correlation is heavily influenced by outliers. As you will learn in the next two
+       activities, the way in which the outlier influences the correlation depends on whether the
+       outlier is consistent with the pattern of the linear relationship. </p>
+      <p>Using the applet below, we explore how an outlier affects the correlation. </p>
+      <iframe
+       src="../../../webcontent/html_activities/linear_relationships_scatterplot/linear_relationships_scatterplot.html"
+       height="700" width="750"/>
+      <!--   <applet archive="../../webcontent/correlationregression.jar" code="CorrelationRegression.class" width="500" height="400" logging="true"/>-->
+      <p>To see how an outlier affects the correlation, do the following: </p>
+      <ol>
+       <li>
+        <p>Fill the scatterplot with a hypothetical positive linear relationship between X and Y (by
+         clicking on the graph about a dozen times starting at lower left and going up diagonally to
+         the top right). Pay attention to the correlation coefficient calculated at the top right of
+         the applet. (Clicking on the garbage can will let you start over.) </p>
+       </li>
+       <li>
+        <p>Once you are satisfied with your hypothetical data, create an outlier by clicking on one
+         of the data points in the upper right of the graph, and dragging it down along the right
+         side of the graph. Again, pay attention to what happens to the value of the correlation.
+        </p>
+       </li>
+      </ol>
+     </li>
+    </ol>
+    <p>Hopefully, you've noticed the correlation decreasing when you created this kind of outlier,
+     which <em style="italic">is not consistent</em> with the pattern of the relationship. </p>
+    <p>The next activity will show you how an outlier that <em style="italic">is consistent</em>
+     with the direction of the linear relationship actually strengthens it. </p>
+    <activity idref="linear4lbd" purpose="learnbydoing"/>
+   </body>
+  </section>
+ </body>
+</workbook_page>

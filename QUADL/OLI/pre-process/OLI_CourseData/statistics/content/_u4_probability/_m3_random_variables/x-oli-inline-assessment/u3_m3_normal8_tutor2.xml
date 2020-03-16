@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.3//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_3.dtd">
+<!--Created by OLI Author v2.0-->
+<assessment id="u3_m3_normal8_tutor2">
+    <title>tutor</title>
+    <page>
+        <question id="q1">
+            <!--LO:-->
+            <body>
+                <p>What value of x do we need to use with the <em style="bold">normal table</em> in
+                    order to solve this problem? </p>
+            </body>
+            <multiple_choice shuffle="false" select="single">
+                <choice value="A">P(X &lt;x) = 0.02</choice>
+                <choice value="B">P(X &lt;x) = 0.98</choice>
+                <choice value="C">Unable to determine</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. Remember, we are looking for the probability that will
+                        allow us to determine the score for the top 2% of the SAT-M scores. This
+                        value will give us the probability to get a score that reflects where 98% of
+                        the scores fall above, rather than below. Please try again.</feedback>
+                </response>
+                <response match="B" score="10">
+                    <feedback>Correct. We are looking for the value x, so that P(X &gt; x) = 0.02.
+                        The same value also satisfies P(X &lt; x) = 0.98. This way of posing the
+                        problem works best for us, since our table is set up to work with "less
+                        than" rather than "greater than."</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It is possible to determine, from the problem, the value
+                        needed to use with the normal table, in order to solve this problem. Recall
+                        that our normal table only works with "less than" probabilities, so we need
+                        to rephrase our problem accordingly. Remember, looking for the SAT-M score
+                        that 2% of students scored higher than is the same as looking for the SAT-M
+                        score that 98% of the students scored lower than. Please try
+                        again.</feedback>
+                </response>
+                <hint>Recall that our normal table only works with "less than" probabilities, so we
+                    need to rephrase our problem accordingly.</hint>
+                <hint>Remember, looking for the SAT-M score that 2% of students scored higher than
+                    is the same as looking for the SAT-M score that 98% of the students scored lower
+                    than.</hint>
+            </part>
+        </question>
+    </page>
+    <page>
+        <question id="q2">
+            <!--LO:-->
+            <body>What z-score is associated with a value x that satisfies P(X &lt;
+                x) = 0.98?</body>
+            <multiple_choice shuffle="true" select="single">
+                <choice value="A">−2.05</choice>
+                <choice value="B">0.8365</choice>
+                <choice value="C">−1.29</choice>
+                <choice value="D">+2.05</choice>
+                <choice value="E">0.9798</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="0">
+                    <feedback>Incorrect. −2.05 is the z-score associated with a
+                        probability of 0.02 and therefore is the z-score of the value that marks the
+                        bottom 2%. You are looking for the z-score associated with a probability of
+                        0.98 (which marks the top 2%)</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. 0.8365 is the table probability associated
+                        with a a z-score of 0.98. You need to work with the table in the reverse
+                        order in this case. You are looking for the z-score that is associated with
+                        a table probability of 0.98.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It seems you found the z-score
+                        associated with the probability closest to 0.098. You are looking for a
+                        probability closest to 0.98</feedback>
+                </response>
+                <response match="D" score="10">
+                    <feedback>Correct. The closest probability of 0.98 is 0.9798. Looking at the
+                        margins, we see that this probability corresponds to a z-score of 2.05. This
+                        means that in order to be in the top 2% of SAT-M scores (and thus be
+                        considered for the engineering school) a student must score more than 2.05
+                        standard deviations above the mean.</feedback>
+                </response>
+                <response match="E" score="0">
+                    <feedback>Incorrect. 0.9798 is the closest probability to
+                        0.98 in the body of the table, however you are asked to find the z-score
+                        associated with this probability. The z-score is obtained by looking at the
+                        margins of the table that correspond to this probability value. Please try
+                        again</feedback>
+                </response>
+                <hint>You are looking for the z-score (in the margins of the table) that is
+                    associated with a probability of 0.98 (or closest to it) in the body of the
+                    table. </hint>
+            </part>
+        </question>
+    </page>
+    <page>
+        <question id="q3">
+            <!--LO:-->
+            <body>What score (after rounding) must a student have in order to be in considered for
+                the engineering school?</body>
+            <multiple_choice shuffle="false" select="single">
+                <choice value="A">735</choice>
+                <choice value="B">280</choice>
+                <choice value="C">616</choice>
+                <choice value="D">1150</choice>
+            </multiple_choice>
+            <part>
+                <response match="A" score="10">
+                    <feedback>Correct. In order to be in the top 2% of SAT-M scores (and thus be
+                        considered for the engineering school) a student must score more than 2.05
+                        standard deviations above the mean. 2.05 standard deviations above the mean
+                        is a score of 507 + 2.05(111) = 734.55. Since SAT-M scores are whole
+                        numbers, we conclude that in order to be considered for the engineering
+                        school a student must have an SAT-M score of at least 735.</feedback>
+                </response>
+                <response match="B" score="0">
+                    <feedback>Incorrect. It looks like you calculated the value with the incorrect z
+                        score (−2.05 instead of +2.05). Please try again.</feedback>
+                </response>
+                <response match="C" score="0">
+                    <feedback>Incorrect. It looks like you used the probability (0.9798), instead of
+                        the z score in the formula. Remember, the standard deviation needs to be
+                        multiplied by the z-score, before it is added to the mean. Please try
+                        again.</feedback>
+                </response>
+                <response match="D" score="0">
+                    <feedback>Incorrect. You are looking for the score that is 2.05
+                        standard deviations above the mean. It seems like used 111 as the mean and
+                        507 as the mean, but mistake.</feedback>
+                </response>
+                <hint>You are looking for the SAT-M score that has the z-score you found in the
+                    previous question.</hint>
+                <hint>In question 2, you found that the SAT-M score that marks the top 2% is 2.05
+                    standard deviations above the mean. Recall that in this case the mean is 507 and
+                    standard deviation is 111.</hint>
+            </part>
+        </question>
+    </page>
+</assessment>

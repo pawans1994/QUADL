@@ -1,0 +1,70 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="_u4_m3_digtutor2a">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">What is the probability that the salesperson makes at least one sale in an hour?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">12/50</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">22/50</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">28/50</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">40/50</mattext></material></response_label>
+				  <response_label ident="Res5">
+                <material>
+                  <mattext texttype="text/plain">10/50</mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+         <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res5</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack4"></displayfeedback></respcondition>
+         </resprocessing>
+
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 12/50 is P(X = 1), the probability of exactly 1 sale. We are looking for the probability of at least one sale which is P(X &#x2265; 1). </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 22/50 is P(X &#x2264; 1),  the probability of no more than 1 sale. We are looking for the probability of at least one sale, which is P(X &#x2265; 1). </mattext></material></itemfeedback>
+<itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 28/50 is P(X &gt; 1) the probability of more than one sale. We are looking for the probability of at least one sale, which is P(X &#x2265; 1). </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Correct. The probability of at least one sale, P(X &#x2265; 1) = P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4) = (12 + 12 + 10 + 6)/50 = 40/50 (using the Addition Rule). Alternatively (and more efficiently), you can use the Complement Rule and the fact that the complement event of X &#x2265; 1 is X = 0. Therefore, P(X &#x2265; 1) = 1 − P(X = 0) = 1 − 10/50 = 40/50.</mattext></material></itemfeedback>
+       <itemfeedback ident="FeedBack4">
+          <material>
+            <mattext texttype="text/plain">Incorrect. 10/50 is P(X &lt; 1) which in this case is P(X = 0), the probability of less than one sale. We are looking for the probability of at least one sale, which is P(X &#x2265; 1). </mattext></material></itemfeedback>
+       </item></questestinterop>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/"
+    xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/"
+    id="_u5_m1_lbd17">
+    <head>
+        <title>Visualizing the Relationship between Confidence and Width</title>
+    </head>
+    <body>
+        <p>The purpose of this activity is to use computer simulation to visually explore and
+            reinforce the relationship between confidence and width, for confidence intervals. We
+            <!--will use a Java applet-->use an HTML activity to explore this concept.</p>
+        <!-- replacement below <p>Click <link target="new"
+            href="http://oli.cmu.edu/applets/confidenceinterval.html"
+                >here</link> to launch the applet in a separate window.</p>
+        
+        <p>Click <link target="new"
+            href="http://bcs.whfreeman.com/tps4e/#628644__925296__"
+            >here</link> to launch the applet in a separate window.</p>-->
+        
+        
+        <iframe src="../../../../webcontent/html_activities/conf_intervals_pop_mean/new_interval.html"
+            height="800" width="800" id="_i_2"/>
+        
+        
+        
+        
+        <p>As you will remember from a previous activity, the applet shows a normal-shaped
+            distribution, which represents the <em>sampling distribution of the mean</em> (<m:math
+                overflow="scroll">
+                <m:mrow>
+                    <m:mover>
+                        <m:mi>x</m:mi>
+                        <m:mo>¯</m:mo>
+                    </m:mover>
+                </m:mrow>
+            </m:math>) for random samples of a particular fixed sample size, from a population with
+            a fixed standard deviation (&sigma;). The green line marks the value of the population
+            mean (&mu;). </p>
+        <!--<p> To begin the simulation, click the very top <em>Sample 50</em> button at the right of
+            the applet. You have used the simulation to select 50 samples from the population; the
+            applet has automatically computed the sample means and the corresponding confidence
+            intervals.</p>
+        <p>Notice, along the left of the applet, that you can change the confidence level. Do this,
+            and watch what happens to the intervals as the confidence is changed among all the
+            levels available.</p>-->
+        <p>To begin the simulation, make sure that the confidence level (on the very top) is set to 80%, and right below, click about 5 times on the <em style="bold">Sample</em> button. You have used the simulation to select 5 samples from the population; the applet has automatically computed the sample means (indicated by the <!--red -->dot in the center of intervals) and the corresponding 80% confidence intervals.</p>
+        <p>Now, change the confidence level to 90% and click on the <em style="bold">Sample</em> button 5 more times
+            to simulate five 90% confidence intervals. Notice the change in the width of the confidence intervals compared to the 80% confidence intervals.</p>
+        <p>Now, change the confidence level to 95% and click on the <em style="bold">Sample</em> button 5 more times
+            to simulate five 95% confidence intervals. Notice the change in the width of the confidence intervals compared to the 90% confidence intervals.</p>
+        <p>Finally, change the confidence level to 99% and click on the <em style="bold">Sample</em> button 5 more times
+            to simulate five 99% confidence intervals. Notice the change in the width of the confidence intervals compared to the 95% confidence intervals.</p>
+        
+        <wb:inline idref="u4_m1_confintmean3_lbd_tutor1" purpose="learnbydoing"/>
+        <!--<wb:inline idref="u4_m1_confintmean3_lbd_tutor2" purpose="learnbydoing"/>-->
+        <p>To continue the simulation, click on <em style="bold">Reset</em> and change the confidence level back to 80%.
+            Click on the <em style="bold">Sample 50</em> button. You have used the simulation to simulate 50 samples from the population; the applet has automatically computed the sample means (indicated by the <!--red -->dot in the center of intervals) and the corresponding 80% confidence intervals.</p> 
+        <p>Note that under the <em style="bold">Reset</em> button, you are told how many hits you have out of the 50 intervals. Recall from the applet activity on the previous page that <em style="italic">hits</em> means how many out of the 50 confidence intervals covered the unknown mean.</p> 
+        <p>Click on <em style="bold">Sample 50</em> again for a total of 100 confidence intervals.</p> 
+        <p>What percentage of the 100 confidence intervals covered? Write down this percentage in the textbox below.</p> 
+        <p>Note that since we simulated 100 80% confidence intervals, the percentage of hits should be close to 80%.</p>
+        <p>Now change the confidence level to 90%, simulate 100 confidence intervals, and write the percentage of confidence intervals that cover in the textbox below.</p>
+        <p>Repeat for the 95% and 99% confidence levels.</p>
+        <wb:inline idref="u4_m1_confintmean3_lbd_tutor3" purpose="learnbydoing"/>
+        <wb:inline idref="u4_m1_confintmean3_lbd_tutor4" purpose="learnbydoing"/>
+    </body>
+</workbook_page>

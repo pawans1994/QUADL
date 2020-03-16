@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+
+<workbook_page id="_u4_m04_behavior_of_proportion1">
+
+    <head>
+        <title>Behavior of Sample Proportion (1 of 3)</title>
+        <objref idref="apply_sampling_distribution_of_sample_proportion"/>
+    </head>
+    <body>
+
+        <p>The first step to drawing conclusions about parameters based on the accompanying
+            statistics is to understand how sample statistics behave relative to the parameter that
+            summarizes the entire population. We begin with the behavior of sample proportion
+            relative to population proportion (when the variable of interest is categorical). After
+            that, we will explore the behavior of sample mean relative to population mean (when the
+            variable of interest is quantitative).</p>
+        <section>
+            <title>Behavior of Sample Proportion p&#770;
+                <!--  <formula><m:math overflow="scroll">
+                <m:mover accent="true">
+                    <m:mrow>
+                        <m:mi>p</m:mi>
+                    </m:mrow>
+                    <m:mo>ˆ</m:mo>
+                </m:mover>
+            </m:math></formula> -->
+            </title>
+            <body>
+                <example>
+                    <p>Approximately 60% of all part-time college students in the United States are
+                        female. (In other words, the population proportion of females among
+                        part-time college students is p = .6.) What would you expect to see in terms
+                        of the behavior of sample proportion of females (<m:math overflow="scroll">
+                            <m:mover accent="true">
+                                <m:mrow>
+                                    <m:mi>p</m:mi>
+                                </m:mrow>
+                                <m:mo>ˆ</m:mo>
+                            </m:mover>
+                        </m:math>) if random samples of size 100 were taken from the population of
+                        all part-time college students?</p>
+                    <p>As we saw before, due to sampling variability, sample proportion in random
+                        samples of size 100 will take numerical values which vary according to the
+                        laws of chance: in other words, sample proportion is a<em> random
+                            variable</em>. To summarize the behavior of any random variable, we
+                        focus on three features of its distribution: the center, the spread, and the
+                        shape.</p>
+                    <p>Based only on our intuition, we would expect the following:
+                        <!--  (<em>Comment</em>:  obviously, we know what to expect, so it's not really
+                             fair, but Read along and try to see if the following makes intuitive sense
+                        to you.)--></p>
+                    <p><em>Center</em>: Some sample proportions will be on the low sidesay, .55 or
+                        .58&#8212; while others will be on the high side&#8212; say, .61 or .66. It
+                        is reasonable to expect all the sample proportions in repeated random
+                        samples to average out to the underlying population proportion, .6. In other
+                        words, the mean of the distribution of 
+                            <m:math overflow="scroll">
+                                <m:mover accent="true">
+                                    <m:mrow>
+                                        <m:mi>p</m:mi>
+                                    </m:mrow>
+                                    <m:mo>ˆ</m:mo>
+                                </m:mover>
+                            </m:math> should be p.</p>
+                    <p><em>Spread</em>: For samples of 100, we would expect sample proportions of
+                        females not to stray too far from the population proportion .6. Sample
+                        proportions lower than .5 or higher than .7 would be rather surprising. On
+                        the other hand, if we were only taking samples of size 10, we would not be
+                        at all surprised by a sample proportion of females even as low as 4/10 = .4,
+                        or as high as 8/10 = .8. Thus, sample size plays a role in the spread of the
+                        distribution of sample proportion: there should be less spread for larger
+                        samples, more spread for smaller samples.</p>
+                    <p><em>Shape</em>: Sample proportions closest to .6 would be most common, and
+                        sample proportions far from .6 in either direction would be progressively
+                        less likely. In other words, the shape of the distribution of sample
+                        proportion should bulge in the middle and taper at the ends: it should be
+                        somewhat <em>normal.</em>
+                    </p>
+                </example>
+                <p> </p>
+            </body>
+        </section>
+        <section>
+            <title>Comment</title>
+            <body>
+                <p>The <em>distribution</em> of the values of the sample proportions (<m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math>) in repeated <em>samples</em> is called the <em>sampling distribution
+                        of </em>
+                    <m:math overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math>. </p>
+                <!--<activity idref="_u4_m4_lbd1" purpose="learnbydoing"/>-->
+                <p>The purpose of the next activity is to check whether our intuition about the
+                    center, spread and shape of the sampling distribution of <m:math
+                        overflow="scroll">
+                        <m:mover accent="true">
+                            <m:mrow>
+                                <m:mi>p</m:mi>
+                            </m:mrow>
+                            <m:mo>ˆ</m:mo>
+                        </m:mover>
+                    </m:math> was right via simulations.</p>
+                <youtube src="2bIC4EmejkQ"/>
+                <!--     <flash src="../../../webcontent/OLICamtasiaController.swf" width="552" height="472"
+                    purpose="simulation">
+                    <param name="movieURL">../../webcontent/flash/walkthrough1.swf</param>
+                    <param name="movieFPS">15</param>
+                    <param name="LoggingLibraryPath"
+                        >../../../webcontent/OLILoggingLibrary.swf</param>
+                </flash>-->
+                <wb:inline idref="u3_m4_proportion1_tutor1" purpose="didigetthis"/>
+                <wb:inline idref="u3_m4_proportion1_tutor2" purpose="didigetthis"/>
+                <p>At this point, we have a good sense of what happens as we take random samples
+                    from a population. Our simulation suggests that our initial intuition about the
+                    shape and center of the sampling distribution is correct. If the population has
+                    a proportion of p, then random samples of the same size drawn from the
+                    population will have sample proportions close to p. More specifically, the
+                    distribution of sample proportions will have a mean of p. We also observed that
+                    for this situation, the sample proportions are approximately normal. We will see
+                    later that this is not always the case. But if sample proportions are normally
+                    distributed, then the distribution is centered at p. Now we want to use
+                    simulation to help us think more about the variability we expect to see in the
+                    sample proportions. Our intuition tells us that larger samples will better
+                    approximate the population, so we might expect less variability in large
+                    samples. In the next walk-through we will use simulations to investigate this
+                    idea. After that walk-through, we will tie these ideas to more formal theory. </p>
+
+                <youtube src="tUvXeJ3A3_s"/>
+
+                <!--  <flash src="../../../webcontent/OLICamtasiaController.swf" width="596" height="508"
+                    purpose="simulation">
+                    <param name="movieURL">../../webcontent/flash/walkthrough2.swf</param>
+                    <param name="movieFPS">15</param>
+                    <param name="LoggingLibraryPath"
+                        >../../../webcontent/OLILoggingLibrary.swf</param>
+                </flash>-->
+                <wb:inline idref="u3_m4_proportion1_tutor3" purpose="didigetthis"/>
+
+            </body>
+        </section>
+    </body>
+</workbook_page>

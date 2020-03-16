@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testmean5_tutor1">
+  <title>Tutor</title>
+  <question id="q1">
+    <body>
+      <p>Which of the following is the correct complete output? Use the relationship between the
+        two<?oxy_insert_start author="mmyers" timestamp="20101127T225015-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101127T225015-0500" content=" "?>sided
+        z-test and the 95% confidence interval for &#956; to guide your thinking. </p></body>
+    <multiple_choice shuffle="false">
+      <choice value="A">A</choice>
+      <choice value="B">B</choice>
+      <choice value="C">C</choice>
+    </multiple_choice>
+    <part>
+      <response match="A">
+        <feedback>Incorrect. We are testing H<sub>o</sub>: &#956; = 264
+          vs<?oxy_insert_start author="mmyers" timestamp="20101127T225031-0500"?>.<?oxy_insert_end?>
+            H<sub>a</sub>: &#956; &#8800; 264. The 95% confidence interval covers the null value,
+          264<?oxy_insert_start author="mmyers" timestamp="20101127T225043-0500"?>,<?oxy_insert_end?>
+          which means that at the .05 level H<sub>o</sub> cannot be rejected. However, the p-value
+          is
+          0.047<?oxy_insert_start author="mmyers" timestamp="20101127T225052-0500"?>,<?oxy_insert_end?>
+          which at the .05 level indicates that H<sub>o</sub> can be rejected. For this to be a
+          correct output, the p-value should be greater than .05 so that the conclusion agrees with
+          the conclusion we make using the confidence interval. </feedback>
+      </response>
+      <response match="B">
+        <feedback>Incorrect. We are testing H<sub>o</sub>: &#956; = 267
+          vs<?oxy_insert_start author="mmyers" timestamp="20101127T225107-0500"?>.<?oxy_insert_end?>
+            H<sub>a</sub>: &#956; &#8800; 267. The 95% confidence interval does not cover the null
+          value,
+          267<?oxy_insert_start author="mmyers" timestamp="20101127T225114-0500"?>,<?oxy_insert_end?>
+          which means that at the .05 level H<sub>o</sub> can be rejected. However, the p-value is
+          0.087<?oxy_insert_start author="mmyers" timestamp="20101127T225118-0500"?>,<?oxy_insert_end?>
+          which at the .05 level indicates that H<sub>o</sub> cannot be rejected. For this to be a
+          correct output, the p-value should be less than .05 so that the conclusion agrees with the
+          conclusion we make using the confidence interval. </feedback>
+      </response>
+      <response match="C" score="10">
+        <feedback><?oxy_insert_start author="mmyers" timestamp="20101127T225134-0500"?>Correct.
+          <?oxy_insert_end?>We are testing H<sub>o</sub>: &#956; = 266
+          vs<?oxy_insert_start author="mmyers" timestamp="20101127T225144-0500"?>.<?oxy_insert_end?>
+            H<sub>a</sub>: &#956; &#8800; 266. The 95% confidence interval does not cover the null
+          value,
+          266<?oxy_insert_start author="mmyers" timestamp="20101127T225154-0500"?>,<?oxy_insert_end?>
+          which means that at the .05 level H<sub>o</sub> can be rejected. This is also confirmed by
+          the p-value being
+          0.027<?oxy_insert_start author="mmyers" timestamp="20101127T225237-0500"?>,<?oxy_insert_end?>
+          which at the .05 level indicates that H<sub>o</sub> can be rejected. This is the correct
+          answer, because this is the only output out of the three where the conclusion we make
+          using the confidence interval and the conclusion we make using the p-value agree. </feedback>
+      </response>
+    </part>
+  </question>
+</assessment>

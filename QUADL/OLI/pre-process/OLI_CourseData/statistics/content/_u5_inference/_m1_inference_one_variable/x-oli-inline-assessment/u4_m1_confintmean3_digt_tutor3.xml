@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m1_confintmean3_digt_tutor3">
+    <title>Tutor</title>
+    <question id="q1">
+        <body>If we were to estimate the mean time with a 93% confidence interval, which of these
+            could be that interval?</body>
+        <multiple_choice shuffle="false">
+            <choice value="A">(7.45, 8.55)</choice>
+            <choice value="B">(7.55, 8.45)</choice>
+            <choice value="C">(7.65, 8.35)</choice>
+            <choice value="D">(7.625, 8.475)</choice>
+            <choice value="E">(7.75, 8.25)</choice>
+        </multiple_choice>
+        <part>
+            <response match="A">
+                <feedback>Incorrect. A 93% confidence interval must be wider than a
+                    90%<?oxy_insert_start author="mmyers" timestamp="20101123T142206-0500"?>
+                    interval<?oxy_insert_end?>, but narrower than a 95% confidence interval. The
+                    interval you chose is wider than the 99% confidence interval (7.5, 8.5) and thus
+                    has a confidence level higher than 99%.</feedback>
+            </response>
+            <response match="B">
+                <feedback>Incorrect. A 93% confidence interval must be wider than a
+                    90%<?oxy_insert_start author="mmyers" timestamp="20101123T142223-0500"?>
+                    interval<?oxy_insert_end?>, but narrower than a 95% confidence interval. The
+                    interval you chose is wider than the 95% confidence interval (7.6, 8.4) and thus
+                    has a confidence level higher than 95%.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The 93% confidence interval should be wider than the 90%
+                    confidence interval (7.7, 8.3), but narrower than the 95% confidence interval
+                    <?oxy_comment_start author="mmyers" timestamp="20101123T142408-0500" comment="addition OK?"?>(7.6,
+                    8.4)<?oxy_insert_start author="mmyers" timestamp="20101123T142345-0500"?>, and
+                    should be centered around 8<?oxy_insert_end?>.<?oxy_comment_end?></feedback>
+            </response>
+            <response match="D">
+                <feedback>Incorrect. Although the interval you chose is wider than the
+                    90% confidence interval (7.7,
+                    8.3)<?oxy_delete author="mmyers" timestamp="20101123T142303-0500" content=","?><?oxy_insert_start author="mmyers" timestamp="20101123T142300-0500"?>
+                    and<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T142258-0500" content=" but"?>
+                    narrower than the 95% confidence interval (7.6, 8.4), it is not centered around
+                    8. Note that all of the original intervals are centered
+                    a<?oxy_insert_start author="mmyers" timestamp="20101123T142317-0500"?>round<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101123T142315-0500" content="bout"?>
+                    8, which is x-bar.</feedback>
+            </response>
+            <response match="E">
+                <feedback>Incorrect. A 93% confidence interval must be wider than a
+                    90%<?oxy_insert_start author="mmyers" timestamp="20101123T142414-0500"?>
+                    interval<?oxy_insert_end?>, but narrower than a 95% confidence interval. The
+                    interval you chose is narrower than the 90% confidence interval (7.7, 8.3) and
+                    thus has a confidence level lower than 90%.</feedback>
+            </response>
+        </part>
+    </question>
+</assessment>

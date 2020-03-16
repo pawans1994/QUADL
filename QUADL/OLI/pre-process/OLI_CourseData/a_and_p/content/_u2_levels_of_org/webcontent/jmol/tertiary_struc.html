@@ -1,0 +1,132 @@
+<HTML>
+<HEAD><TITLE>
+Tertiary Structure of Proteins
+</TITLE>
+<script src="./jmol/Jmol.js" type="text/javascript"></script>
+</HEAD>
+<BODY BGCOLOR="#B0C4DE" TEXT="#000000">
+
+<script type="text/javascript">
+jmolInitialize("./jmol");
+jmolSetAppletColor("black");
+</script>
+
+<A NAME="top">
+
+<TABLE BORDER=0 WIDTH=800 CELLPADDING=0 CELLSPACING=0>
+
+<TH colspan=2 align=left>Biochemistry I</TH>
+    <TH colspan=2 align=right>Tertiary Structure</TH>
+
+<TR>
+
+<TD>&nbsp;</TD>
+
+<TD bgcolor="#eeeeee" width=500>
+<script type="text/javascript">
+jmolApplet([495,495],
+"load ./jmol/pdbs/pstruc/ProtG.pdb;rotate z 49;rotate y 77;rotate z -136;select hetero;wireframe off;spacefill off;select all","left");
+</script><BR>
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolRadioGroup([
+["background white;color labels black","white",true],
+["background gray;color labels black","gray",false],
+["background [100,100,255];color labels black","Lt blue",false],
+["background black;color labels yellow","black",false]]," ","Background color")
+</script>
+<script type="text/javascript">
+jmolSetTarget("left")
+jmolCheckbox("spin on","spin off", "Spin", false)
+</script>
+</TD>
+
+    <TD bgcolor="#eeeeee" >&nbsp;</TD>
+   
+    <TD valign=top bgcolor="#eeeeee" ><B>Protein G</b><br><br><B>Secondary structure:</B><BR>
+    <!--Buttons here-->
+    <font color="#000000">
+        <script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all; color cpk;dots off;wireframe off;spacefill off;select mainchain;wireframe 100;select helix and mainchain;hbonds calculate;color hbonds yellow;hbonds 80;select all","","","Helix");  
+        </script>&nbsp;Helix + Hbonds<br>
+                  
+        <script type="text/javascript">
+                jmolSetTarget("left") 
+                jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all; color cpk;dots off;hbonds off;wireframe off;spacefill off;select mainchain;wireframe 100;Select 2-8 and mainchain;dots 100;color dots yellow;select all","","","B-strand");  
+        </script>&nbsp;b-strand<br>
+            
+            <script type="text/javascript">
+                jmolSetTarget("left") 
+                jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all; color cpk;dots off;hbonds off;wireframe off;spacefill off;select mainchain;wireframe 100;Select (3-9 or 50-55) and mainchain;dots 100;color dots yellow;select all","","","B-strand");  
+            </script>&nbsp;||-beta strand<br>
+                
+                <script type="text/javascript">
+                    jmolSetTarget("left") 
+                    jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all; color cpk;dots off;hbonds off;wireframe off;select mainchain;wireframe 100;Select (42-46 or 50-55) and mainchain;dots 100;color dots yellow;select all","","","B-strand");  
+                </script>&nbsp;anti ||-beta strand<br>
+                    
+                    <script type="text/javascript">
+                        jmolSetTarget("left") 
+                        jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all; color cpk;dots off;hbonds off;wireframe off;select mainchain;wireframe 100;Select sheet and mainchain;hbonds calculate;color hbond yellow;hbonds 80;select all","","","B-strand");  
+                    </script>&nbsp;beta-sheet + Hbonds<br><br>
+                        
+                        <b>Distribution of amino acids:</b><br>
+
+                            <script type="text/javascript">
+                                jmolSetTarget("left") 
+                                jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;color cpk;dots off;hbonds off;wireframe off;wireframe 40;Select (Asp or Lys or Arg or Glu) and sidechain;dots 100;color dots red;select all","","","Charged Residues");  
+                            </script>&nbsp;Charged (red)<br>
+                             
+                              <script type="text/javascript">
+                                    jmolSetTarget("left") 
+                                    jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;dots off;select (polar and sidechain) and not charged;dots 100; color dots yellow","","","Charged Residues");</script>&nbsp;Polar (yellow)<br>  
+                                  
+                               <script type="text/javascript">
+                                      jmolSetTarget("left") 
+                                      jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;dots off;select hydrophobic and sidechain;dots 100;color dots cyan","","","Charged Residues");                                    </script>&nbsp;Hydrophobic (cyan)<br><br>
+                                          
+                                          <b>Energetics:</b><br>
+                                              
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;dots off;select hydrophobic and sidechain;dots 100;color dots cyan","","","Non-polar Residues");</script>&nbsp;Hydrophobic (cyan)<br>
+
+<script type="text/javascript">
+jmolSetTarget("left") 
+jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;center atomno=330;select all;dots off;wireframe off;spacefill off;select mainchain;wireframe 50;Select (5,7,30,52,54,43);wireframe 70;color cpk;select (5,7,30,52,54,43) and sidechain;dots on;color dots lightblue","","","Packing");  
+</script>&nbsp;Packing (blue)
+    
+<script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("reset;select all;dots off;rotate z 49;rotate y 77;rotate z -136;set windowCentered off;center atomno=330;set windowCentered on;zoomto 1.0 200;select all;wireframe off;spacefill off;select mainchain;wireframe 50;dots off;Select (5,7,30,52,54,43);wireframe 70;color cpk;select (5,7,30,52,54,43) and sidechain;dots on;color dots lightblue","","","Packing");  
+</script>&nbsp;zoom<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<script type="text/javascript">
+jmolRadioGroup([
+["select all;dots off;wireframe off;spacefill off;select mainchain;wireframe 50;dots off;Select (5,7,30,52,54,43);wireframe 70;color cpk;select 5 and sidechain;define pack5 selected;select 7 and sidechain;define pack7 selected;select 30 and sidechain;define pack30 selected;select 52 and sidechain;define pack52 selected;select 54 and sidechain;define pack54 selected;select 43 and sidechain;define pack43 selected;isoSurface surf1 select(pack5) ignore(not pack5) molecular;isoSurface surf2 select(pack7) ignore(not pack7) molecular;isoSurface surf3 select(pack30) ignore(not pack30) molecular;isoSurface surf4 select(pack52) ignore(not pack52) molecular;isoSurface surf5 select(pack54) ignore(not pack54) molecular;isoSurface surf6 select(pack43) ignore(not pack43) molecular;color $surf1 grey;color $surf1 translucent;color $surf2 grey;color $surf2 translucent;color $surf3 grey;color $surf3 translucent;color $surf4 grey;color $surf4 translucent;color $surf5 grey;color $surf5 translucent;color $surf6 grey;color $surf6 translucent","surface",false],
+["select all;dots off;isoSurface surf1 off","Leu5 off",false],
+["select all;dots off;isoSurface surf1 off;isoSurface surf2 off;isoSurface surf3 off;isoSurface surf4 off;isoSurface surf5 off;isoSurface surf6 off","all off",false]]," ","Background color")   
+</script>  
+   <br>    
+<script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;wireframe off;dots off;spacefill off;select mainchain;wireframe 50; select (helix or sheet) and (mainchain);wireframe 100;color cpk;hbonds calculate;color hbonds yellow;hbond 70;select all;","","","Mainchain hydrogen bonds");  
+    </script>&nbsp;Mainchain H-bonds<br>           
+                                                      
+<script type="text/javascript">
+            jmolSetTarget("left") 
+            jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;wireframe off;spacefill off;dots off;hbonds off;backbone 50;select (44 or 53);wireframe 100;color cpk;select all;center 44;set windowCentered off;center atomno=410;set windowCentered on;zoomto 1.0 200;move 0 -90 0 0 0 0 0 0 1;monitor 337 411;set monitor 0.2;color monitor yellow;select all","","","Mainchain hydrogen bonds");  
+</script>&nbsp;Sidechain H-bonds<br>
+    
+<script type="text/javascript">
+        jmolSetTarget("left") 
+        jmolButton("reset;rotate z 49;rotate y 77;rotate z -136;select all;wireframe off;dots off;spacefill off;backbone 50;select (lys or arg);wireframe 100;color blue;select (asp or glu);wireframe 100;color red;select all","","","Mainchain hydrogen bonds");  
+    </script>&nbsp;Charged groups (- red, + blue)<br>
+</TABLE>
+<HR>
+
+<TT>Last modified December 14, 2007.</TT>
+
+</BODY>
+</HTML>

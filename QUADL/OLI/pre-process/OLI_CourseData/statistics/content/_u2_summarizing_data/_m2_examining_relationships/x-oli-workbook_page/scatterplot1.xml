@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page MathML 3.7//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_mathml_3_7.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page xmlns:pref="http://oli.web.cmu.edu/preferences/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:theme="http://oli.web.cmu.edu/presentation/" id="scatterplot1">
+<head>
+<title>Scatterplot (1 of 5)</title>
+
+    <objref idref="graph_quantitative_variables"/>
+
+
+
+
+
+
+
+</head>
+<body>
+    
+<p>In the previous two cases we had a categorical explanatory variable, and therefore exploring the
+                                                relationship between the two variables was done by
+                                                comparing the distribution of the response variable
+                                                for each category of the explanatory variable:</p>
+<ul>
+<li>In case C→Q we compared distributions of the quantitative response.</li>
+<li>In case C→C we compared distributions of the categorical response.</li>
+</ul>
+<p>Case Q→Q is different in the sense that both variables (in particular the explanatory variable) are quantitative, and therefore, as you'll discover, this case will require a different kind of treatment and tools. Let's start with an example:</p>
+<example>
+<title>Highway Signs</title>
+<p>A Pennsylvania research firm conducted a study in which 30 drivers (of ages 18 to 82 years old)
+                                                  were sampled, and for each one, the maximum
+                                                  distance (in feet) at which he/she could read a
+                                                  newly designed sign was determined. The goal of
+                                                  this study was to explore the relationship between
+                                                  a driver's <em>age</em> and the <em>maximum
+                                                  distance</em> at which signs were legible, and
+                                                  then use the study's findings to improve safety
+                                                  for older drivers. (Reference: Utts and Heckard,
+                                                  <em style="italic">Mind on Statistics</em> (2002).
+                                                  Originally source: Data collected by Last
+                                                  Resource, Inc, Bellfonte, PA.)</p>
+<p>Since the purpose of this study is to explore the effect of age on maximum legibility distance,
+</p>
+<ul>
+<li>the <em>explanatory</em> variable is <em>Age</em>, and</li>
+<li>the <em>response</em> variable is <em>Distance</em>.</li>
+</ul>
+<p>Here is what the raw data look like:
+
+
+<image style="block" src="../webcontent/scatterplot2.gif"  alt="A table of the data. There are
+three columns, &quot;Driver&quot;, &quot;Age&quot;, and &quot;Distance&quot;. &quot;Age&quot; is the
+Explanatory variable, and &quot;Distance&quot; is the Response variable.
+Some example data:
+Driver 1, 18, 510;
+Driver 2, 32, 410;
+Driver 3, 55, 420;
+Driver 4, 23, 510;
+... (abbreviated) ...
+Driver 30, 82, 360;"/>
+</p>
+<p>Note that the data structure is such that for each individual (in this case driver 1....driver
+                                                  30) we have a pair of values (in this case
+                                                  representing the driver's age and distance). We
+                                                  can therefore think about these data as 30 pairs
+                                                  of values: (18, 510), (32, 410),
+                                                  (55, 420), ... , (82, 360).</p>
+<p>The first step in exploring the relationship between driver age and sign legibility distance is to create an appropriate and informative graphical display.  
+The appropriate graphical display for examining the relationship between two quantitative variables is the <em>scatterplot</em>. 
+Here is how a scatterplot is constructed for our example:</p>
+<p>To create a scatterplot, each pair of values is plotted, so that the value of the explanatory
+                                                  variable (X) is plotted on the horizontal axis,
+                                                  and the value of the response variable (Y) is
+                                                  plotted on the vertical axis. In other words, each
+                                                  individual (driver, in our example) appears on the
+                                                  scatterplot as a single point whose X-coordinate
+                                                  is the value of the explanatory variable for that
+                                                  individual, and whose Y-coordinate is the value of
+                                                  the response variable. Here is an illustration:
+                                                  <image style="block"
+                                                  src="../webcontent/scatterplot3.gif" alt="A
+scatterplot. The Y-Axis is labeled &quot;Sign Legibility Distance (feet)&quot;, and the X-axis is labeled
+&quot;Driver Age (years)&quot; Already plotted is Driver 1's data point. It is located at x=18,y=510. Also,
+Driver 2's data point has been ploted, at x=32,y=410."/> And here is
+                                                  the completed scatterplot: <image style="block"
+                                                  src="../webcontent/scatterplot4.gif" alt="The completed
+scatterplot. There are 30 data points, shown as black dots scattered about."/>
+                                                </p>
+</example>
+<section>
+<title>Comment</title>
+<body>
+<p>It is important to mention again that when creating a scatterplot, the explanatory variable
+                                                  should always be plotted on the horizontal X-axis,
+                                                  and the response variable should be plotted on the
+                                                  vertical Y-axis.
+                                                  <?oxy_comment_start author="mmyers" timestamp="20101021T132310-0400" comment="Consider rethinking this sentence. Isn&apos;t it true that by the time you get to the graphical display phase of your study, you should already have chosen which variable was explanatory? That choice must remain consistent throughout the study, so you cannot really just choose at random which way to plot the data -- you must follow your previous decision. Or. if THIS is thefirst &quot;decision time, when you must choose which is explanatory and which is response, perhaps that should be mentioned here, and it should be pointed out again that the choice you make at this point must remain consistent throughout the study."?>If
+                                                  in a specific example we do not have a clear
+                                                  distinction between explanatory and response
+                                                  variables, each of the variables can be plotted on
+                                                  either axis.<?oxy_comment_end?>
+                                                  </p>
+</body>
+</section>
+</body>
+</workbook_page>

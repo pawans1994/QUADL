@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="estimate_prob_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_estimate_prob" select="single">
+        <body>
+            <p>Suppose that P(A) = 0.99. Which of the following is the best interpretation of this
+                statement?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Event A will always occur. </choice>
+            <choice value="B">Event A will occur more often than not, but it is not extremely
+                likely. </choice>
+            <choice value="C">Event A is extremely likely, but in a long sequence of trials, it occasionally will not occur.<!--Event A is extremely likely, but it will not occur once in awhile in
+                a long sequence of trials.--></choice>
+            <choice value="D">Event A will never occur. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. An event will always occur only if its probability is 1. Here,
+                    P(A) = 0.99, which means that the event will almost always occur, but after
+                    numerous repetitions, the event occasionally will not occur.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It is true that if P(A) = 0.99, then it will occur more often
+                    than not. However, it is incorrect that it is not extremely likely. P(A) = 0.99
+                    is very close to 1, which indicates that event A is extremely likely, but after
+                    numerous repetitions, the event occasionally will not occur. </feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Since P(A) = 0.99 is very close to 1, then event A is extremely
+                    likely. In other words, event A will almost always occur, but occasionally, in a long sequence of trials, it will not occur.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. An event will never occur if its probability is 0. Here,
+                    P(A) = 0.99 which is means that the event will almost always occur, but after
+                    numerous repetitions, the event occasionally will not occur. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q2_estimate_prob" select="single">
+        <body>
+            <p>Suppose that P(A) = 0.30. Which of the following is the best interpretation of this
+                statement?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">Event A will always occur. </choice>
+            <choice value="B">Event A will occur less often than not, but it is not extremely
+                unlikely. </choice>
+            <choice value="C">Event A is extremely unlikely, but it will occur once in awhile in a
+                long sequence of trials.</choice>
+            <choice value="D">Event A will never occur. </choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. An event will always occur only if its probability is 1. Here,
+                    P(A) = 0.30 which is means that event A will not frequently occur. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. Since P(A) = 0.30 is less the 0.50, event A will occur less often
+                    than not. Since the probability of 0.30 is not very close to 0, event A is not
+                    extremely unlikely. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It is true that since P(A) = 0.30 is less than 0.50, it will
+                    not frequently occur. However, an event that occurs 30% of the time is not
+                    highly unlikely.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. An event will never occur only if its probability is 0. Here,
+                    P(A) = 0.30 which means that event A will not frequently occur. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q3_estimate_prob" select="single">
+        <body>
+            <p>Which of the following valid probabilities represents an event that is
+                impossible?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">−1 </choice>
+            <choice value="B">0 </choice>
+            <choice value="C">0.0001</choice>
+            <choice value="D">1</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. By definition probabilities can not be less than zero or more
+                    than one so this is not a <em style="italic">valid</em> probability. </feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. An event with a probability of 0 is impossible: it cannot
+                    happen! </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. You may have selected this choice because the probability is
+                    very small. However, the event is still possible (while very unlikely) if the
+                    probability is 0.0001. Note that the event described is <em style="italic">impossible</em>. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. An event with probability 1 is an event that is certain, that
+                    is, it <em style="italic">always</em> happens. Note that the event described is
+                        <em style="italic">impossible</em>. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+    <multiple_choice id="q4_estimate_prob" select="single">
+        <body>
+            <p>Which of the following probabilities could describe an event that is likely but not
+                certain?</p>
+        </body>
+        <input labels="false" shuffle="false">
+            <choice value="A">0.2 </choice>
+            <choice value="B">0.5 </choice>
+            <choice value="C">0.8</choice>
+            <choice value="D">1</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. An event with a probability of 0.2 is less likely to happen
+                    than one with an even chance (50-50), so it could not describe a likely
+                    event.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. An event with a probability of 0.5 is equally likely to happen
+                    or not happen, so it would not be a good way to describe an event which is
+                    likely.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. An event with probability more than 0.5 and less than 1 is
+                    considered to be likely. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. You may have selected this answer because an event with
+                    probability 1 is certain, but the question specifies that the event is not
+                    certain. There is a better answer. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

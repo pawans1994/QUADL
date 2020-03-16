@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m3_twosamples7_tutor1">
+  <title>Tutor</title>
+  <question id="q1">
+    <body>Which of the following is the correct output? </body>
+    <multiple_choice shuffle="false">
+      <choice value="A">A</choice>
+      <choice value="B">B</choice>
+      <choice value="C">C</choice>
+    </multiple_choice>
+    <part>
+      <response match="A">
+        <feedback>Incorrect. Note that 0 falls outside the 95% confidence interval for
+            &#956;<sub>1</sub> - &#956;<sub>2</sub>, which means that H<sub>o</sub> can be rejected
+          in favor of the
+          two<?oxy_insert_start author="mmyers" timestamp="20101128T173837-0500"?>-<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T173837-0500" content=" "?>sided
+          alternative<?oxy_insert_start author="mmyers" timestamp="20101128T173846-0500"?>
+          hypothesis<?oxy_insert_end?>. On the other hand, the p-value is large (.289) indicating
+          that H<sub>o</sub> cannot be rejected.<?oxy_insert_start author="mmyers" timestamp="20101128T173901-0500"?>
+          <?oxy_insert_end?>... Something is wrong
+          here<?oxy_insert_start author="mmyers" timestamp="20101128T173906-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T173906-0500" content="!"?>
+        </feedback>
+      </response>
+      <response match="B">
+        <feedback>Incorrect. Note that 0 falls inside the 95% confidence interval for
+            &#956;<sub>1</sub> - &#956;<sub>2</sub>, which means that H<sub>o</sub> cannot be
+          rejected. On the other
+          hand<?oxy_insert_start author="mmyers" timestamp="20101128T173919-0500"?>,<?oxy_insert_end?>
+          the p-value is
+          small<?oxy_insert_start author="mmyers" timestamp="20101128T173933-0500"?>,<?oxy_insert_end?>
+          (.003) indicating that H<sub>o</sub> can be rejected.<?oxy_insert_start author="mmyers" timestamp="20101128T173941-0500"?>
+          <?oxy_insert_end?>... Something is wrong
+          here<?oxy_insert_start author="mmyers" timestamp="20101128T173945-0500"?>.<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T173945-0500" content="!"?>
+           </feedback>
+      </response>
+      <response match="C" score="10">
+        <feedback>Good
+          <?oxy_insert_start author="mmyers" timestamp="20101128T173949-0500"?>j<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T173948-0500" content="J"?>ob!
+          Indeed, this is the correct output, since it is the only one out of the three
+          <?oxy_insert_start author="mmyers" timestamp="20101128T173958-0500"?>in
+          which<?oxy_insert_end?><?oxy_delete author="mmyers" timestamp="20101128T173957-0500" content="where"?>
+          both the confidence interval and p-value lead us to the same conclusion (as it should be).
+          Note that 0 falls inside the 95% confidence interval for &#956;<sub>1</sub> -
+            &#956;<sub>2</sub>, which means that H<sub>o</sub> cannot be rejected. Also, the p-value
+          is large (.223) indicating that H<sub>o</sub> cannot be rejected. </feedback>
+      </response>
+    </part>
+  </question>
+</assessment>

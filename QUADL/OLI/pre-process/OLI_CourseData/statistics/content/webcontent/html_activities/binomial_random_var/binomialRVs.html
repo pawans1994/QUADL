@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body{
+				float: left;
+				clear: both;
+			}
+			label{
+				display: block;
+				/*width: 240px;*/
+				/*text-align: right;*/
+			}
+			#x-axis-label{
+				/*float: right;*/
+				/*display: block;*/
+				text-align: right;
+			}
+			#highlighed-value-display{
+				text-align: center;
+			}
+		</style> 
+		<script src='jquery-1.11.3.min.js'>
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8">
+		</script>
+		<script src='binomialRVs.js'>
+		</script>
+	</head>
+	<body>
+		<div class="sliders">
+			<label for='n'>
+         		n = <span id="n-value"></span>
+			</label>
+			<input type='range' class='horizontal' id='n' type='range' min='10' max='60' step='1'/>
+			
+			<label for='p'>
+				<label for='p'>
+         		p = <span id="p-value"></span>
+			</label>
+			</label>
+			<input type='range' class='horizontal' id='p' type='range' min='0.00' max='1.00' step='.01'/>
+		</div>
+
+	 	<div id='display'>
+	  		<svg class='Applet'/>
+	  		<p id='x-axis-label'>x = # successes</p>
+	  		<h2 id='highlighed-value-display'></h2>
+		</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<html lang="en">
+	<head>
+<script src="jquery-1.3.2.min.js"></script>
+<!--<script src="jquery-1.11.3.min.js"></script>-->
+<script src="d3.js"></script>
+<script type="text/javascript" src="new_interval_no_interval.js"></script>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="new_interval_no_interval.css"></style>
+
+		<meta charset="UTF-8">
+		<title>TEST</title>
+	</head>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Normal Plot</title>
+    <meta name="description" content="">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style type="text/css">
+    body {
+        font: 10px sans-serif;
+    }
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+    /*.x.axis path {
+        display: none;
+    }*/
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+    </style>
+</head>
+  <style>
+      .Graph
+    {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+      div
+    {
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+<body>
+
+<form align="center">
+<h1>95% Confidence Interval</h1>
+</form>
+
+<div align="center">
+
+</div>
+<form align="center"><input id="samplebutton" type = "button" value = "Sample"><input id="sample50button" type = "button" value = "Sample 50"></form>
+<form align="center"><input id="reset" type = "button" value = "Reset"></form>
+<p align="center" id="total">0 hit(s)<p>
+<p align="center" id="hit">0 total intervals<p>
+<p align="center" id="percent">  <p>
+<p id="phat" hidden>p&#770;</p>
+</body>
+
+
+
+
+<body>
+
+<div align="center">	
+<svg align="center" height="750" width="500" id="canvas">
+      <svg align = "center" class='Graph'/>
+      <text x="244" y="228" style="font-size:17px">&mu;</text>
+	 <line x1="250" y1="230" x2="250" y2="490" style="stroke:green;stroke-width:2" />
+</svg>
+</div>
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+

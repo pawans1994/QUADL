@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u3_m3_normal7_tutor2">
+   <title>Tutor</title>
+<page>   
+   <question id="q1">
+      <body>
+         <p>What proportion of students score between  400 and 600 on the SAT-M? In other words, find P(400 &lt; X &lt; 600).</p>
+      </body>
+      <short_answer id="A"/>
+      <part>
+         <response input="A" match="*" score="1"/>
+         <explanation>
+            <p>We need to find P(400 &lt; X &lt; 600), where X is a normal random variable
+                  with a mean of 507 and a standard deviation of 111.</p>
+            <p>The z-score of 400 is (400 − 507)/111 = −0.96 (rounded).</p>
+            <p>The z-score of 600 is (600 − 507)/111 = 0.84 (rounded), and therefore,</p>
+            <p>P(400 &lt; X &lt; 600) = P(−0.96 &lt; Z &lt; 0.84) = P(Z &lt; 0.84) − P(Z &lt; −0.96) = (table) 0.7995 − 0.1685 = 0.6310.</p>
+            <p>We conclude that roughly 63.1% of the students score between 400 and 600.</p>
+         </explanation>
+      </part>
+   </question>
+</page></assessment>

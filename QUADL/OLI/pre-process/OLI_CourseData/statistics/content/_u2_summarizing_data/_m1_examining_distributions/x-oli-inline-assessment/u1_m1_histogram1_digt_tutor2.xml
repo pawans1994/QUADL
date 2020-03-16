@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!DOCTYPE assessment
+  PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.4//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_4.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+
+
+<assessment id="u1_m1_histogram1_digt_tutor2">
+   <title>Tutor</title>
+   <question id="q1">
+      <body>
+         <p>A survey was conducted to see how many phone calls people made daily. The results are displayed in the table below:</p>
+         <image src="../webcontent/didigetthis_histogram1_ep2.gif" alt="table of calls made daily"/>
+         <p>How many of the people surveyed make less than 9 phone calls daily?</p>
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">3</choice>
+         <choice value="Res2">8</choice>
+         <choice value="Res3">9</choice>
+         <choice value="Res4">27</choice>
+         <choice value="Res5">32</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>There are 3 frequencies that are less than 9. However, we want the number of
+               people, not the number of frequencies.</feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>There are 8 numbers that are less than 9. However, we want the number of
+               people who made less than 9 calls daily.</feedback>
+         </response>
+         <response match="Res3" score="0">
+            <feedback>Nine represents the number of people who made 9 or more (at least 9) calls
+               daily. We want the number of people who made less than 9 calls daily.</feedback>
+         </response>
+         <response match="Res4" score="10">
+            <feedback>Correct. The frequencies between 1 and 8 calls add up to 27, 16 + 11 = 27.</feedback>
+         </response>
+         <response match="Res5" score="0">
+            <feedback>You have counted the number of people who made 9 or less calls daily. We want
+               strictly the number of people who made less than 9 calls daily.</feedback>
+         </response>
+      </part>
+   </question>
+   <question id="q2">
+      <body>
+         <p>How many people were surveyed?</p>
+         
+      </body>
+      <multiple_choice shuffle="false">
+         <choice value="Res1">20</choice>
+         <choice value="Res2">7.2</choice>
+         <choice value="Res3">36</choice>
+         <choice value="Res4">226</choice>
+      </multiple_choice>
+      <part>
+         <response match="Res1" score="0">
+            <feedback>Incorrect. Look at the frequencies instead of the number of phone calls made.<!--Count the frequencies instead of the phone calls.--></feedback>
+         </response>
+         <response match="Res2" score="0">
+            <feedback>Incorrect. This is the average number of people surveyed across the five categories. You want the <em style="italic">total</em> number of people.<!--Are you looking at the histogram instead of the table?--></feedback>
+         </response>
+         <response match="Res3" score="10">
+            <feedback>Correct. The total number of people surveyed is found by adding up all the frequencies: 16 + 11 + 5 + 3 + 1 = 36 people.<!--If we add the frequencies, we get 36 people.--></feedback>
+         </response>
+         <response match="Res4" score="0">
+            <feedback>Incorrect. If you multiplied the average number of calls by the
+               frequencies and added them together, you found the total average number of
+               calls instead of the total number of people.</feedback>
+         </response>
+      </part>
+   </question>
+</assessment>

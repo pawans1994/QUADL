@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assessment PUBLIC "-//Carnegie Mellon University//DTD Inline Assessment 1.0//EN" "http://oli.web.cmu.edu/dtd/oli_inline_assessment_1_0.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_inline_assessment_1_1.css"?>
+
+<assessment id="u4_m2_testprop7_tutor3">
+    <title>Tutor</title>
+    <page>
+        
+        <question id="q1">
+            <body>
+                <p>The p-value is the probability of observing a sample proportion that is
+                        <input_ref input="G"/> </p> <p>standard deviations or more <input_ref input="H"/>
+                        p<sub>0</sub> = <input_ref input="I"/>,</p> <p>assuming that the true population
+                    proportion is <input_ref input="J"/>.</p>
+            </body>
+            <numeric id="G" size="small"/>
+            <fill_in_the_blank id="H">
+                <choice value="one">above</choice>
+                <choice value="two">below</choice>
+                <choice value="three">away from</choice>
+            </fill_in_the_blank>
+            <numeric id="I" size="small"/>
+            <numeric id="J" size="small"/>
+            <part>
+                <response input="G" match="1.21" score="1">
+                    <feedback>Correct. The z-value tells us the number of standard deviations p-hat is from p<sub>0</sub>.</feedback>
+                </response>
+                <response input="G" match="-1.21">
+                    <feedback>Not quite right. You are right that the z-value is −1.21. That means the sample
+                        proportion is 1.21 standard deviations below p<sub>0</sub>.</feedback>
+                </response>
+                <response input="G" match="*">
+                    <feedback>Incorrect. The z-value is the number of standard
+                        deviations p-hat is from p<sub>0</sub>.</feedback>
+                </response>
+                <hint>The z-value is the number of standard
+                    deviations p-hat is from p<sub>0</sub>.</hint>
+                <hint>The z-value is −1.21, so the sample
+                    proportion is 1.21 standard deviations below p<sub>0</sub>.</hint>
+            </part>
+            <part>
+                <response input="H" match="one">
+                    <feedback>Incorrect. Look at H<sub>a</sub>.</feedback>
+                </response>
+                <response input="H" match="two" score="1">
+                    <feedback>Correct. The "&lt;" in H<sub>a</sub> tells us to look at sample
+                        proportions below the observed p-hat from the data.</feedback>
+                </response>
+                <response input="H" match="three">
+                    <feedback>Incorrect. Look at H<sub>a</sub>.</feedback>
+                </response>
+                <hint>The "&lt;" in H<sub>a</sub> tells us to look at sample
+                    proportions below the observed p-hat from the data.</hint>
+            </part>
+            <part>
+                <response input="I" match="0.45" score="1">
+                    <feedback>Correct. The null hypothesis states the value of p<sub>0</sub>.</feedback>
+                </response>
+                <response input="I" match="*">
+                    <feedback>Incorrect. What is the null hypothesis?</feedback>
+                </response>
+                <hint>Look at the null hypothesis.</hint>
+                <hint>The null hypothesis states that p<sub>0</sub> = 0.45.</hint>
+            </part>
+            <part>
+                <response input="J" match="0.45" score="1">
+                    <feedback>Correct.</feedback>
+                </response>
+                <response input="J" match="*">
+                    <feedback>Incorrect. The assumption about the true population
+                    proportion is the null hypothesis.</feedback>
+                </response>
+                    <hint>The assumption about the true population
+                    proportion is the null hypothesis.</hint>
+                    <hint>The assumption is that the true population
+                        proportion is 0.45.</hint>
+            </part>
+        </question>
+    </page>
+   
+
+</assessment>

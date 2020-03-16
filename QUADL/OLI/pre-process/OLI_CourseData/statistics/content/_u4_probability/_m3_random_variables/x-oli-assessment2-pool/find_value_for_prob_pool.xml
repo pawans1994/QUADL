@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="find_value_for_prob_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_find_value_for_prob">
+        <body>
+            <p>The time it takes a surgeon to complete a laproscopic surgery to remove the gall
+                bladder is normally distributed with a mean of 132.4 minutes and a standard
+                deviation of 15.7 minutes. A patient’s risk of complications is increased the longer
+                he is in surgery. An unusually risky surgery is one that is in the top 4% of all
+                surgery lengths.</p>
+            <p>What is the minimum surgery length (in minutes) that would be considered unusually
+                risky? Note: Answers are rounded to 1 decimal place.</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">159.9 minutes</choice>
+            <choice value="B">104.9 minutes</choice>
+            <choice value="C">147.5 minutes</choice>
+            <choice value="D">247.4 minutes</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In order to be in the top 4% of surgery times, a surgery must be
+                    1.75 standard deviations above the mean. The surgery time is calculated as x =
+                    1.75 * 15.7 + 132.4 = 159.9 minutes (rounded) </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like you calculated using the wrong z-score (−1.75
+                    instead of 1.75). You want the z-score that corresponds to the <em style="emphasis">top</em> 4% of all surgery lengths.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks like you used the probability 0.9599 in your
+                    calculation. Remember, we need to find the z-score that corresponds to the
+                    probability to calculate x = z * SD + mean.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback> Incorrect. It looks like you switched values by using 15.7 for the mean
+                    and 132.4 for the standard deviation.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_find_value_for_prob">
+        <body>
+            <p>The lifetime in miles for a certain brand of tire is normally distributed with a mean
+                of 22,000 miles and a standard deviation of 3,100 miles The tire manufacturer wants
+                to offer a money-back guarantee so that no more than 3% of tires will qualify for a
+                refund. What is the minimum number of miles the manufacturer should guarantee that
+                the tires will last?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">16,172 miles</choice>
+            <choice value="B">27,828 miles</choice>
+            <choice value="C">25,007 miles</choice>
+            <choice value="D">15,800 miles</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. In order to be in the bottom 3% of tire lifetimes a tire must be
+                    1.88 standard deviations below the mean (z = −1.88). The mileage is calculated
+                    as x = −1.88 * 3,100 + 22,000 = 16,172. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. It looks like you calculated your answer using the wrong
+                    z-score (1.88 instead of −1.88). You want the z-score that corresponds to the
+                    <em style="emphasis">bottom</em> 3% of all tire miles.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. It looks like you used the probability 0.97 in your
+                    calculation. Remember, we need to find the z-score that corresponds to the
+                    probability to calculate x = z * SD + mean. </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. It looks like you calculated a value 2 standard deviations
+                    below the mean. Remember, we need to find the z-score that corresponds to the
+                    probability to calculate x = z * SD + mean.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+</pool>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pool PUBLIC "-//Carnegie Mellon University//DTD Assessment Pool MathML 2.4//EN" "http://oli.web.cmu.edu/dtd/oli_assessment_mathml_2_4.dtd"><pool xmlns:cmd="http://oli.web.cmu.edu/content/metadata/2.1/" id="normal_dist_prob_values_pool">
+    <title>pool</title>
+    <multiple_choice id="q1_normal_dist_prob_values">
+        <body>
+            <p>The number of days (X) after mailout it takes a utility company to receive payment
+                for a customer’s bill is a normal random variable with a mean of 31 days and a
+                standard deviation of 6 days.</p>
+            <p>The latest 2.5% of bills will be received <em style="bold">more than</em> how many
+                days after mailout?</p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">13</choice>
+            <choice value="B">19</choice>
+            <choice value="C">25</choice>
+            <choice value="D">31</choice>
+            <choice value="E">37</choice>
+            <choice value="F">43</choice>
+            <choice value="G">49</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations below the mean of 31 days,
+                    so the percent of bills paid after 13 days is much greater than 2.5%. Recall
+                    that for a normal random variable 99.7% of observations will lie within 3
+                    standard deviations of the mean, and 0.3% will lie outside this range. This
+                    amount is split equally between the upper and lower tails of the
+                    distribution.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. This value is 2 standard deviations below the mean of 31 days,
+                    so the percent of bills paid after 19 days is much greater than 2.5%. Recall
+                    that for a normal random variable 95% of observations will lie within 2 standard
+                    deviations of the mean, and 5% will lie outside this range. This amount is split
+                    equally between the upper and lower tails of the distribution.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. This value is 1 standard deviations below the mean of 31 days,
+                    so the percent of bills paid after 25 days is much greater than 2.5%. Recall
+                    that for a normal random variable 68% of observations will lie within 1 standard
+                    deviations of the mean, and 32% will lie outside this range. This amount is
+                    split equally between the upper and lower tails of the distribution.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. This value is the mean, so the percent of bills paid after 31
+                    days is 50%.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. This value is 1 standard deviations above the mean of 31 days,
+                    so the percent of bills paid after 37 days is 16%. Recall that for a normal
+                    random variable 68% of observations will lie within 1 standard deviations of the
+                    mean, and 32% will lie outside this range. This amount is split equally between
+                    the upper and lower tails of the distribution.</feedback>
+            </response>
+            <response match="F" score="10">
+                <feedback>Correct. This value is 2 standard deviations above the mean of 31 days, so
+                    the percent of bills paid after 43 days is 2.5%. Recall that for a normal random
+                    variable 95% of observations will lie within 2 standard deviations of the mean,
+                    and 5% will lie outside this range.This amount is split equally between the
+                    upper and lower tails of the distribution.</feedback>
+            </response>
+            <response match="G" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations above the mean of 31 days,
+                    so the percent of bills paid after 13 days is only 0.15%. Recall that for a
+                    normal random variable 99.7% of observations will lie within 3 standard
+                    deviations of the mean, and 0.3% will lie outside this range. This amount is
+                    split equally between the upper and lower tails of the distribution.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+    <multiple_choice id="q2_normal_dist_prob_values">
+        <body>
+           
+            <p>The number of days (X) after mailout it takes a utility company to receive payment
+                for a customer’s bill is a normal random variable with a mean of 31 days and a
+                standard deviation of 6 days.</p>
+            <p>The probability is 0.997 that a bill will be received between which of the following number of days?
+            </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">(13, 49)</choice>
+            <choice value="B">(19, 43)</choice>
+            <choice value="C">(25, 37)</choice>
+        </input>
+        <part>
+            <response match="A" score="10">
+                <feedback>Correct. Recall that for a normal random variable 99.7% of observations
+                    will lie within <em style="italic">three</em> standard deviations of the mean (MEAN ± 3 * SD). So, 31 − 3 (6) =
+                    13 and 31 + 3(6) = 49 is the correct range.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Recall that for a normal random variable 99.7% of observations
+                    will lie within <em style="italic">three</em> standard deviations of the mean. It appears you calculated
+                    the values two standard deviations from the mean.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Recall that for a normal random variable 99.7% of observations
+                    will lie within three standard deviations of the mean. It appears you calculated
+                    the values one standard deviation from the mean. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+
+    <fill_in_the_blank id="q3_normal_dist_prob_values">
+
+        <body><p>The number of days (X) after mailout it takes a utility company to receive payment
+                for a customer’s bill is a normal random variable with a mean of 31 days and a
+                standard deviation of 6 days. </p>
+            <p>There is a probability of 0.50 that a bill will be received <em style="bold">later
+                    than</em> <input_ref input="A" /> days after mailout.</p>
+        </body>
+
+        <input id="A" shuffle="false">
+            <choice value="one">13</choice>
+            <choice value="two">19</choice>
+            <choice value="three">25</choice>
+            <choice value="four">31</choice>
+            <choice value="five">37</choice>
+            <choice value="six">43</choice>
+            <choice value="seven">49</choice>
+
+        </input>
+
+
+
+        <part>
+            <response input="A" name="13" match="one" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations below the mean of 31 days,
+                    so the probability of bills paid after 13 days is <em style="italic">much
+                        greater than</em> than 0.50. Recall that a normal random variable is
+                    symmetric about its mean.</feedback>
+            </response>
+            <response input="A" name="19" match="two" score="0">
+                <feedback>Incorrect. This value is 2 standard deviations below the mean of 31 days,
+                    so the probability of bills paid after 19 days is <em style="italic">much
+                        greater than</em> 0.50. Recall that a normal random variable is symmetric
+                    about its mean.</feedback>
+            </response>
+            <response input="A" name="25" match="three" score="0">
+                <feedback>Incorrect. This value is 1 standard deviations below the mean of 31 days,
+                    so the probability of bills paid after 13 days is greater than 0.50. Recall that
+                    a normal random variable is symmetric about its mean.</feedback>
+            </response>
+            <response input="A" name="31" match="four" score="10">
+                <feedback>Correct. This value is the mean, so the percent of bills paid after 31
+                    days is 50%. Recall that a normal random variable is symmetric about its
+                    mean.</feedback>
+            </response>
+            <response input="A" name="37" match="five" score="0">
+                <feedback>Incorrect. This value is 1 standard deviations above the mean of 31 days,
+                    so the probability of bills paid after 37 days is less than 0.50. Recall that a
+                    normal random variable is symmetric about its mean.</feedback>
+            </response>
+            <response input="A" name="43" match="six" score="0">
+                <feedback>Incorrect. This value is 2 standard deviations above the mean of 31 days,
+                    so the probability of bills paid after 43 days is <em style="italic">much less
+                        than</em> 0.50. Recall that a normal random variable is symmetric about its
+                    mean.</feedback>
+            </response>
+            <response input="A" name="49" match="seven" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations above the mean of 31 days,
+                    so the probability of bills paid after 49 days is <em style="italic">much less
+                        than</em> 0.50. Recall that a normal random variable is symmetric about its
+                    mean.</feedback>
+            </response>
+
+        </part>
+
+    </fill_in_the_blank>
+
+
+
+    <fill_in_the_blank id="q4_normal_dist_prob_values">
+
+        <body><p>The number of days (X) after mailout it takes a utility company to receive payment
+                for a customer’s bill is a normal random variable with a mean of 31 days and a
+                standard deviation of 6 days. </p>
+            <p>About 16% of bills will be received earlier than <input_ref input="A" /> days after mailout.</p>
+        </body>
+
+        <input id="A" shuffle="false">
+            <choice value="one">13</choice>
+            <choice value="two">19</choice>
+            <choice value="three">25</choice>
+            <choice value="four">31</choice>
+            <choice value="five">37</choice>
+            <choice value="six">43</choice>
+            <choice value="seven">49</choice>
+
+        </input>
+
+
+
+        <part>
+            <response input="A" name="13" match="one" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations below the mean of 31 days,
+                    so the percent of bills paid earlier than 13 days is <em style="italic">much
+                        less than</em> 16%. Recall that for a normal random variable 99.7% of
+                    observations will lie within 3 standard deviations of the mean, and 0.3% will
+                    lie outside this range. This amount is split equally between the upper and lower
+                    tails of the distribution.</feedback>
+            </response>
+            <response input="A" name="19" match="two" score="0">
+                <feedback>Incorrect. This value is 2 standard deviations below the mean of 31 days,
+                    so the percent of bills paid earlier than 19 days is <em style="italic">much
+                        less than</em> 16%. Recall that for a normal random variable 95% of
+                    observations will lie within 2 standard deviations of the mean, and 5% will lie
+                    outside this range. This amount is split equally between the upper and lower
+                    tails of the distribution.</feedback>
+            </response>
+            <response input="A" name="25" match="three" score="10">
+                <feedback>Correct. This value is 1 standard deviations below the mean of 31 days, so
+                    the percent of bills paid earlier than 25 days is 16%. Recall that for a normal
+                    random variable 68% of observations will lie within 1 standard deviations of the
+                    mean, and 32% will lie outside this range. This amount is split equally between
+                    the upper and lower tails of the distribution.</feedback>
+            </response>
+            <response input="A" name="31" match="four" score="0">
+                <feedback>Incorrect. This value is the mean, so the percent of bills paid in less
+                    than 31 days is 50%. Recall that a normal random variable is symmetric about its
+                    mean.</feedback>
+            </response>
+            <response input="A" name="37" match="five" score="0">
+                <feedback>Incorrect. This value is 1 standard deviations above the mean of 31 days,
+                    so the percent of bills paid earlier than 37 days is <em style="italic">much
+                        greater than</em> 16%. Recall that for a normal random variable 68% of
+                    observations will lie within 1 standard deviations of the mean, and 32% will lie
+                    outside this range. This amount is split equally between the upper and lower
+                    tails of the distribution.</feedback>
+            </response>
+            <response input="A" name="43" match="six" score="0">
+                <feedback>Incorrect. This value is 2 standard deviations above the mean of 31 days,
+                    so the percent of bills paid earlier than 43 days is <em style="italic">much
+                        greater than</em> 16%. Recall that for a normal random variable 95% of
+                    observations will lie within 2 standard deviations of the mean, and 5% will lie
+                    outside this range. This amount is split equally between the upper and lower
+                    tails of the distribution.</feedback>
+            </response>
+            <response input="A" name="49" match="seven" score="0">
+                <feedback>Incorrect. This value is 3 standard deviations above the mean of 31 days,
+                    so the percent of bills paid earlier than 13 days is <em style="italic">much
+                        greater than</em> 16%. Recall that for a normal random variable 99.7% of
+                    observations will lie within 3 standard deviations of the mean, and 0.3% will
+                    lie outside this range. This amount is split equally between the upper and lower
+                    tails of the distribution.</feedback>
+            </response>
+
+        </part>
+
+    </fill_in_the_blank>
+
+
+
+</pool>

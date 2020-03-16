@@ -1,0 +1,60 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+     <questestinterop>
+     <item ident="stats_item_001.2" title="_u4_m3_digtutor15">
+        <presentation>
+          <material>
+            <mattext texttype="text/plain">The probability is 0.015 that a standardized normal variable takes a value above what particular value of z? In other words, what is the value z that satisfies 
+P(Z &gt; z) = 0.015?</mattext></material>
+          <response_lid rcardinality="Single" ident="LID_01">
+            <render_choice>
+              <response_label ident="Res1">
+                <material>
+                  <mattext texttype="text/plain">1.04</mattext></material></response_label>
+              <response_label ident="Res2">
+                <material>
+                  <mattext texttype="text/plain">−2.17</mattext></material></response_label>
+              <response_label ident="Res3">
+                <material>
+                  <mattext texttype="text/plain">2.17</mattext></material></response_label>
+              <response_label ident="Res4">
+                <material>
+                  <mattext texttype="text/plain">0.5060 </mattext></material></response_label>
+              </render_choice></response_lid></presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="integer"></decvar></outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res1</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack0"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res2</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack1"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res3</varequal></conditionvar>
+            <setvar varname="SCORE">10</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack2"></displayfeedback></respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="LID_01">Res4</varequal></conditionvar>
+            <setvar varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="FeedBack3"></displayfeedback></respcondition>
+         </resprocessing>
+
+        <itemfeedback ident="FeedBack0">
+          <material>
+            <mattext texttype="text/plain">Incorrect. It seems you were working with 0.15 instead of 0.015.</mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack1">
+          <material>
+            <mattext texttype="text/plain">Incorrect. −2.17 satisfies P(Z &lt; −2.17) = 0.015, and we are looking for the value z that satisfies P(Z &gt; z) = 0.015. Review part (b) of the last example, and try again.  </mattext></material></itemfeedback>
+<itemfeedback ident="FeedBack2">
+          <material>
+            <mattext texttype="text/plain">Correct. P(Z &gt; 2.17) = 0.015. </mattext></material></itemfeedback>
+        <itemfeedback ident="FeedBack3">
+          <material>
+            <mattext texttype="text/plain">Incorrect. It seems your approach is wrong. Note that, in this question, you are given the probability and are asked to provide a value, so you start by looking in the body of the table, and find your answer in the margins. It would be very useful for you to review the last example, and then try again.</mattext></material></itemfeedback>
+       </item></questestinterop>
