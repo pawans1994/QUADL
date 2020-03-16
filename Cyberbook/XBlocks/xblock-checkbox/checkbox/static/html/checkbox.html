@@ -1,0 +1,39 @@
+<div class="checkbox_block">
+<!--p>CheckboxXBlock: count is now
+    <span class='count'>{self.count}</span> (click me to increment).
+</p-->
+<br/>
+<h3 class="hd hd2 problem-header">Checkbox Question</h3>
+<br/>
+<form id="question-block">
+    <p>{{ self.question }}</p>
+    <div id="choices">
+    <fieldset role="contorlgroup" aira-label>
+        {% for choice in self.choices %}
+        <div>
+        <!-- label class:{% if forloop.counter == self.user_choice %}user-choice{% endif %}
+        {% if self.user_choice and forloop.counter == self.correct_choice %} correct-choice{% endif %} -->
+            
+                <label class="">
+                <input type="checkbox" name="choice" value="{{ forloop.counter }}"
+                    {% ifequal self.user_choice forloop.counter %}checked="checked"{% endifequal %} />
+                {{ choice }}
+                    <!-- <i class="tick">&nbsp;&nbsp;&nbsp;  &#x2713;</i>
+                    <i class="ballot">&nbsp;&nbsp;&nbsp; &#10006;</i> -->
+                </label>
+        </div>
+        {% endfor %}
+        </fieldset>
+    </div>
+    <br/>
+    <div class="hint-block">
+        <span title="Get Hint"></span>
+        <span id='hint'></span>
+    </div>
+    <br/>
+    <input type="button" id="submit" value="Check"  /> 
+    &nbsp; &nbsp; 
+    <input type="button" id="getHint" value="Hint" />
+</form>
+
+</div>
