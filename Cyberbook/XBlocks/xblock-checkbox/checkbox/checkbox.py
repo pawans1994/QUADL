@@ -78,6 +78,8 @@ class CheckboxXBlock(XBlock):
     hint_numbers = Integer(default=0, scope=Scope.user_state)
     # When student refresh the page, countTimes will increase one
     count_times = Integer(default=0, scope=Scope.user_state)
+    hasBeenSent = String(default = "false", scope = Scope.user_state)
+    pastel_student_id = String(scope=Scope.user_state)
     setBorderColor = Integer(default=0, scope=Scope.content, help='Help studio view to see if there is any skillname missing')
 
     def resource_string(self, path):
@@ -204,13 +206,14 @@ class CheckboxXBlock(XBlock):
         
     @XBlock.json_handler
     def get_status_when_refresh(self, data, suffix=''):
-        return {"countTimes": self.count_times, "correctness": self.correct, "userChoice": self.user_choice}
+        return {"countTimes": self.count_times, "correctness": self.correct, "userChoice": self.user_choice, "hasBeenSent":self.hasBeenSent}
     
     @XBlock.json_handler
     def set_status_when_refresh(self, data, suffix=''):
         self.user_choice = str(data.get('userChoice'))
         self.count_times = self.count_times + 1
-    
+        self.hasBeenSent = str(data.get('hasBeenSent'))
+
     #Get anonymous student id
     @XBlock.json_handler
     def get_student_id(self, data, suffix=''):
@@ -398,7 +401,7 @@ class CheckboxXBlock(XBlock):
         sql = """INSERT INTO edxapp_csmh.module_skillname(xblock_id, type, skillname, location) VALUES (%s, %s, %s, %s)"""
 
         try:
-            cursor.execute(sql,(xblock_id, "mcqs", skillname, location_id))
+            cursor.execute(sql,(xblock_id, "checkbox", skillname, location_id))
             db.commit()
                 
             print("Skillname has been saved in module_skillname table.")
@@ -469,6 +472,89 @@ class CheckboxXBlock(XBlock):
             db.close()
         
         return {'course_id': course_id, "location_id": location_id, "paragraph_id": paragraph_id}
+
+
+
+
+    #For problem hiding
+    @XBlock.json_handler
+    def get_pastel_student_id(self, data, suffix=''):
+        if self.pastel_student_id == '' or self.pastel_student_id is None:
+            db = MySQLdb.connect(self.ip, "root", "", "edxapp", charset='utf8');
+            cursor = db.cursor();
+            username = ""
+            email = ""
+
+            sql = """SELECT * FROM edxapp.auth_user where id = %s"""
+
+            try:
+                cursor.execute(sql ,(str(self.runtime.user_id)))
+                result = cursor.fetchone()
+                if not cursor.rowcount:
+                    print("No any results(auth_student) found.")
+                    return
+                username = str(result[4])
+                email = str(result[7])
+                print("Get username and email from DB: ", str(result[4]) + ", " + str(result[7]))
+
+                db.commit()
+            except Exception as e:
+                print(e)
+                db.rollback()
+            finally:
+                db.close()
+
+            db1 = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+            cursor1 = db1.cursor();
+            
+            sql1 = """SELECT * FROM edxapp_csmh.pastel where name = %s and email = %s"""
+            try:
+                if email != "":
+                    cursor1.execute(sql1, (str(username), str(email)))
+                    result1 = cursor1.fetchone()
+                    if not cursor1.rowcount:
+                        print("No any results(pastel_student_id) found.")
+                        return
+                    print("Get pastel_student_id from DB: ", str(result1[3]))
+                    self.pastel_student_id = str(result1[3])
+                    db1.commit()
+            except Exception as e:
+                print(e)
+                db1.rollback()
+            finally:
+                db1.close()
+            
+        return {'pastel_student_id': self.pastel_student_id, 'hasBeenSent': self.hasBeenSent}
+    
+
+    #Problem Hiding    
+    @XBlock.json_handler
+    def get_studentId_and_skillname(self, data, suffix=''):
+        return {"student_id": str(self.pastel_student_id), "skillname": self.kc, "question_id": self.problemId, "correctness": self.correct, "course" : str(self.scope_ids.usage_id.course_key)}
+
+
+    #Problem Hiding
+    @XBlock.json_handler
+    def get_probability(self, data, suffix=''):
+        db = MySQLdb.connect(self.ip, "root", "", "edxapp_csmh", charset='utf8');
+        cursor = db.cursor();
+        sql = """SELECT * FROM edxapp_csmh.temporary_probability where lower(skillname) = lower(%s) and student_pastel_id = %s order by id DESC limit 1;"""
+
+        try:
+            cursor.execute(sql ,(str(data.get('skillname')), str(data.get('student_id'))))
+            result = cursor.fetchone()
+            if not cursor.rowcount:
+                print("No any results(get_probability) found.")
+            
+            return {'probability': str(result[5])}
+
+            db.commit()
+        except Exception as e:
+            print(e)
+            db.rollback()
+        finally:
+            db.close()
+
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
