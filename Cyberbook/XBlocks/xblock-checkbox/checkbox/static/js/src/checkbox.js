@@ -33,6 +33,8 @@ function CheckboxXBlockInitView(runtime, element) {
     var countTimes = 0;
     var correctOrNot = false;
     var userChoice = '';
+    var hasBeenSent = false;
+
     $(function ($) {
         var xblockIdUrl = runtime.handlerUrl(element, 'get_xblock_id');
         $.ajax({
@@ -57,6 +59,7 @@ function CheckboxXBlockInitView(runtime, element) {
                 console.log(xblock_id + "nan??");
                 countTimes = data.countTimes;
                 correctOrNot = data.correctness;
+                hasBeenSent = self.hasBeenSent;
                 userChoice = data.userChoice.replace(",", "");
                 var checkboxes = $("div[data-usage-id='" + xblock_id + "'] input[type='checkbox']");
                 console.log("User choices: " + userChoice);
@@ -103,40 +106,39 @@ function CheckboxXBlockInitView(runtime, element) {
 
     });
     
-    //This is to mark the correct answer
-    /*
-    function addBorderColor() {
-        $("label").not($("label input[name='choice']:checked").parent()).hover(function() {
-            $(this).addClass("addBorder");
-        }, function() {
-            $(this).removeClass("addBorder");
-        });
-    }
-    
-    function removeBorderColor() {
-        $("label").hover(function() {
-            $(this).removeClass("addBorder");
-        }, function() {
-            $(this).removeClass("addBorder");
-        });
-    }
-     After page refreshed..
-    jQuery(window).load(function () {
-        //alert($("div[data-usage-id='" + xblock_id + "'] input[name='choice']:checked").val());
-        // which means user refresh the page:
-        if(countTimes > 0 && userChoice > 0) {
-            var selectedCheck = $("div[data-usage-id='" + xblock_id + "'] input[name='choice']:checked");
-            //alert(selectedCheck.val());
-            if(correctOrNot) {
-                selectedCheck.parent().addClass('correct');
-                selectedCheck.parent().append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
-            } else {
-                selectedCheck.parent().addClass('incorrect');
-                selectedCheck.parent().append("<i class='ballot'>&nbsp;&nbsp;&nbsp; &#10006;</i>");
+    // Problem hiding with Adaptive lesson planner
+    $.ajax({
+        url: runtime.handlerUrl(element, 'get_pastel_student_id'),
+        type: "POST",
+        data: JSON.stringify({"get_pastel_student_id": true}),
+        success: function(data){
+            if(data['hasBeenSent'] == 'false') {
+                $.ajax({
+                    url: runtime.handlerUrl(element, "get_studentId_and_skillname"),
+                    type: "POST",
+                    data: JSON.stringify({"getStudent_id": true}),
+                    success: function(data) {
+                        var student_id = data['student_id'];
+                        var skillname = data['skillname'];
+                        $.ajax({
+                            url: runtime.handlerUrl(element, 'get_probability'),
+                            type: "POST",
+                            data: JSON.stringify({"skillname": skillname, "student_id": student_id}),
+                            success: function(data) {
+                                if(data != null) {
+                                   var probability = data['probability'];
+                                   if(parseFloat(probability) > 0.95) {
+                                         $("div[data-usage-id='" + xblock_id + "']").remove();
+                                   }
+                                }
+
+                            }
+                        });
+                    }
+                });
             }
         }
     });
-    */
     
     
     
@@ -194,7 +196,7 @@ function CheckboxXBlockInitView(runtime, element) {
         var setStatusWhenRefresh = runtime.handlerUrl(element, 'set_status_when_refresh');
         $.ajax({
             type: "POST",
-            data: JSON.stringify({'setStatus': true, 'userChoice': selectedCheck}),
+            data: JSON.stringify({'setStatus': true, 'userChoice': selectedCheck, 'hasBeenSent': "true"}),
             url: setStatusWhenRefresh,
             success: function(data) {
                 // do nothing.
@@ -222,6 +224,13 @@ function CheckboxXBlockInitView(runtime, element) {
                     $("div[data-usage-id='" + xblock_id + "'] div[id='choices'] i[class='ballot']").remove();
                     $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").append("<i class='tick'>&nbsp;&nbsp;&nbsp;  &#x2713;</i>");
                     console.log("The answer is correct");
+
+                    if(!hasBeenSent) {
+                        saveStudentDataForProbability(1);
+                        hasBeenSent = true;
+                    }
+
+
                 }else{
                     // indicate correct and incorrect
                     $("div[data-usage-id='" + xblock_id + "'] div[id='choices']").removeClass('correct');
@@ -254,6 +263,11 @@ function CheckboxXBlockInitView(runtime, element) {
                         }
                     });
                 
+                    if(!hasBeenSent) {
+                        saveStudentDataForProbability(0);
+                        hasBeenSent = true;
+                    }
+
                 
                 }
                 // start to store all the user activities:
@@ -278,6 +292,37 @@ function CheckboxXBlockInitView(runtime, element) {
         });
         
         
+        //For Problem Hiding
+            function saveStudentDataForProbability(correctness) {
+                $.ajax({
+                    url: runtime.handlerUrl(element, "get_studentId_and_skillname"),
+                    type: "POST",
+                    data: JSON.stringify({"getStudent_id": true}),
+                    success: function(data) {
+                        var course = data['course'];
+                        var student_id = data['student_id'];
+                        var skillname = data['skillname'];
+                        var question_id = data['question_id'];
+
+                        $.ajax({
+                            url: "http://10.153.52.138:8080/callandsaveBKT", //IP address of the ALP running machine
+                            type: "GET",
+                            data: "student_id=" + student_id + "&skillname=" + skillname.split(' ').join('_') + "&correctness=" + correctness + "&question_id=" + question_id+"&course="+course,
+                            dataType: 'jsonp',
+                            jsonp: 'callback',
+                            //jsonpCallback: "callback",
+                            anysc: false,
+                            crossDomain:true,
+                            success: function(data) {
+
+                            }
+                        });
+                    }
+                });
+            }
+        
+
+
         
         /*
         
