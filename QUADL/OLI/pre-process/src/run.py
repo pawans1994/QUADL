@@ -5,6 +5,22 @@ import nltk
 import csv
 import time
 
+
+# class Parser(object):
+#
+#     def __init__(self, output_directory):
+#         self.output_directory = output_directory
+#         self._create_output_files()
+#
+#     def _create_output_files(self):
+#
+#         multiple_choice_file = "{}/multiple_choice.csv".format(self.output_directory)
+#         with open(multiple_choice_file, 'w') as f:
+#             pass
+#
+#     def parse_csv(self, filename):
+#         pass
+
 def parse_csv(filename):
     try:
         #option = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5}
@@ -28,7 +44,7 @@ def parse_csv(filename):
                                             para=para+k.text+" "
                                             stri=' '.join(para.split())
                                     table_row.append(stri)
-                                    with open('//Output_Data/Output Files_QUADL/paragraph.csv', 'a', encoding="utf-8-sig") as fp:
+                                    with open('../Output_Data/Output Files_QUADL/paragraph.csv', 'a', encoding="utf-8-sig") as fp:
                                         wr=csv.writer(fp,dialect='excel')
                                         wr.writerow(table_row)
                                         table_row.pop()
@@ -39,7 +55,7 @@ def parse_csv(filename):
                                     stri = stri + tags.text + tags.tail
                             text = re.sub('\s+', ' ', stri)
                             new_text = nltk.sent_tokenize(text)
-                            with open('//Output_Data/Output Files_QUADL/paragraph.csv', 'a', encoding="utf-8-sig") as fp:
+                            with open('../Output_Data/Output Files_QUADL/paragraph.csv', 'a', encoding="utf-8-sig") as fp:
                                 wr = csv.writer(fp, dialect='excel')
                                 text_list = []
                                 text_list.append(unit)
@@ -112,8 +128,7 @@ def parse_csv(filename):
                                             answer_text = answer_text + ch[cc] + "\n"
                                         mc.insert(5, answer_text)
                         # print(mc)
-                        with open(f'//Output_Data/Output Files_QUADL/multiple_choice.csv', "a",
-                                  encoding="utf-8-sig") as fp:
+                        with open('../Output_Data/Output Files_QUADL/multiple_choice.csv', "a", encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
                     elif type_ques == 'fib':
@@ -183,9 +198,7 @@ def parse_csv(filename):
                             else:
                                 mc.insert(6, 'No Options')
                             mc.insert(7, v)
-                            with open(f'//Output_Data/Output Files_QUADL/fill_in_the_blanks.csv',
-                                      "a",
-                                      encoding="utf-8-sig") as fp:
+                            with open('../Output_Data/Output Files_QUADL/fill_in_the_blanks.csv', "a", encoding="utf-8-sig") as fp:
                                 wr = csv.writer(fp, dialect='excel')
                                 wr.writerow(mc)
                             mc.pop(7)
@@ -217,7 +230,7 @@ def parse_csv(filename):
                                     if et.text is not None and et.tail is not None:
                                         explain = explain + ' '.join(' '.join([et.text + et.tail]).split())
                         mc.insert(4, ' '.join(explain.split()))
-                        with open(f'//Output_Data/Output Files_QUADL/short_answer.csv', "a",
+                        with open(f'../Output_Data/Output Files_QUADL/short_answer.csv', "a",
                                   encoding="utf-8-sig") as fp:
                             wr = csv.writer(fp, dialect='excel')
                             wr.writerow(mc)
@@ -255,7 +268,7 @@ def parse_csv(filename):
                                     if choices[cr] not in correct_ans:
                                         correct_ans.append(choices[cr])
                     mc.insert(5, correct_ans)
-                    with open("//Output_Data/Output Files_QUADL/multiple_choice.csv", "a", encoding="utf-8-sig") as fp:
+                    with open("../Output_Data/Output Files_QUADL/multiple_choice.csv", "a", encoding="utf-8-sig") as fp:
                          wr=csv.writer(fp, dialect='excel')
                          wr.writerow(mc)
 
@@ -271,7 +284,7 @@ def parse_csv(filename):
                         if obj.tag == "objective":
                             ob=ob+obj.text+'\n'
                             lo.append(' '.join(ob.split()))
-                            with open("//Output_Data/Output Files_QUADL/learning_objectives.csv", "a", newline='\n', encoding="utf-8-sig") as fp:
+                            with open("../Output_Data/Output Files_QUADL/learning_objectives.csv", "a", newline='\n', encoding="utf-8-sig") as fp:
                                 lo = [val.replace(',', ';') for val in lo]
                                 print(','.join(lo), file=fp)
                             lo.pop()
